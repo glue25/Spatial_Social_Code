@@ -21,7 +21,8 @@ The main model is **Qwen3-4B**. Qwen3-VL and other VLMs are external raw-video b
 - **MMToM-QA** — primary code-understanding and belief/goal QA benchmark.
 - **MA-EgoQA** — held-out evaluation for long-horizon, multi-agent evidence aggregation.
 - **EnactToM** — functional ToM transfer through messages and actions.
-- **HoloAssist, CoMind, EgoTaskQA** — later perception and task-understanding extensions.
+- **HoloAssist** — two people collaboratively complete physical manipulation tasks.
+- **CoMind, EgoTaskQA** — later perception and task-understanding extensions.
 
 The implemented E0 experiment compiles all 300 public EnactToM tasks into query-independent oracle state, replays golden trajectories, and evaluates message deletion/redirection interventions. It is a representation and reducer test, not learned-agent performance.
 
