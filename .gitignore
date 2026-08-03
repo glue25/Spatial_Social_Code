@@ -1,0 +1,20 @@
+.DS_Store
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+node_modules/
+.env
+tmp/
+
+# Local third-party code and datasets are prepared by scripts/prepare_datasets.sh.
+external/
+external_datasets/
+data/
+output/
+
+# Generated full experiment payloads; concise Markdown reports stay tracked.
+reports/*.json

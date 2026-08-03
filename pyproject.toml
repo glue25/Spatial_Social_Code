@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "spatial-social-code"
+version = "0.1.0"
+description = "Explicit spatial and agent-indexed state for multi-agent reasoning"
+requires-python = ">=3.9"
+dependencies = []
+
+[project.optional-dependencies]
+docs = ["reportlab>=4"]
+test = ["pytest>=7"]
+
+[tool.setuptools.packages.find]
+include = ["spatial_social_code*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+norecursedirs = [
+  "external",
+  "external_datasets",
+  "tmp",
+  "output",
+  "outputs",
+]
+addopts = "-ra"
