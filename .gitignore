@@ -1,0 +1,36 @@
+# Credentials and local configuration
+.env
+.env.*
+credentials.env
+*credentials*
+*.pem
+*.key
+.github_ssh/
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.venv*/
+
+# Data, media, checkpoints, and generated outputs
+*.mp4
+*.avi
+*.mov
+*.pkl
+*.pt
+*.pth
+*.ckpt
+*.zip
+*.jsonl
+*.log
+*.status
+data/egolife_raw/
+data/egolife_proxy_384p/
+MMToM-QA-data/
+
+# Editors and OS
+.DS_Store
+.vscode/
+.idea/
