@@ -1,0 +1,149 @@
+version: "2026-07-30"
+project: spatial_social_code
+
+# status:
+#   ready_metadata   = code and benchmark annotations are locally usable
+#   ready_text_env   = task definitions are locally usable without the 3D simulator
+#   ready_transcript_pilot = annotations and a frozen transcript pilot are locally usable
+#   access_required  = the official license/request step must be completed by a person
+#
+# Large raw videos and simulator assets are intentionally excluded from the
+# default preparation step. They should be selected after the pilot subset is
+# fixed so that the experiment remains reproducible and fits local storage.
+
+environments:
+  holoassist:
+    role:
+      - physical_signal_and_trace_reasoning
+      - instructor_performer_interaction
+      - mistake_and_intervention_analysis
+    status: ready_metadata
+    project_url: https://holoassist.github.io/
+    license: CDLA-Permissive-2.0
+    code:
+      annotation_tools:
+        path: external/holoassist-release
+        source: https://github.com/Ember-HoloAssist/holoassist-release
+        revision: f53ad2b5c3889784ef068e11fea10ba4ecf99970
+      hand_eye_projection:
+        path: external/PyHoloAssist
+        source: https://github.com/taeinkwon/PyHoloAssist
+        revision: 9d0dfe238ff6ac99c510f8ce8a8c0e125317dbae
+    data:
+      annotations:
+        path: external_datasets/holoassist/annotations/data-annotation-trainval-v1_1.json
+        source: https://hl2data.z5.web.core.windows.net/holoassist-data-release/data-annotation-trainval-v1_1.json
+        sha256: cc7898b49958a62fe021ae2ffa53a709c3fd6f45fd3f893960b8aac6d13dfe9c
+        records: 1758
+        labeled_events: 195945
+      splits:
+        archive: external_datasets/holoassist/splits/data-splits-v1_2.zip
+        source: https://holoassist.github.io/label_files/data-splits-v1_2.zip
+        sha256: e10674e7ac32957386d5e88afa60acf3335251b92ba2f8cfb97a736dc85e1621
+        train: external_datasets/holoassist/splits/train-v1_2.txt
+        validation: external_datasets/holoassist/splits/val-v1_2.txt
+        test: external_datasets/holoassist/splits/test-v1_2.txt
+    raw_media:
+      status: not_downloaded_by_design
+      official_sizes:
+        compressed_video_gb: 144.62
+        full_video_gb: 184.20
+        depth_gb: 560.46
+      policy: download_only_the_frozen_pilot_subset
+
+  ma_egoqa:
+    role:
+      - multi_agent_egocentric_qa
+      - distributed_evidence_and_memory
+      - belief_and_task_coordination
+    status: ready_metadata
+    project_url: https://ma-egoqa.github.io/
+    license: Apache-2.0
+    code:
+      path: external/MA-EgoQA
+      source: https://github.com/KangsanKim07/MA-EgoQA
+      revision: 67ae23ccfed90994aa532a65d4a0545c436f27be
+    data:
+      path: external_datasets/ma_egoqa
+      source: https://huggingface.co/datasets/KangsanKim71/MA-EgoQA
+      revision: eaae32138dee6ce21127a5148b97962f9c62fa2e
+      questions: 1741
+      captions_json_files: 127
+      shared_memory: external_datasets/ma_egoqa/10min_shared_memory.json
+    raw_media:
+      status: not_downloaded_by_design
+      source_dataset: EgoLife
+      approximate_size_gb: 512
+      policy: resolve_video_ids_from_the_frozen_question_subset_first
+
+  enacttom:
+    role:
+      - functional_theory_of_mind
+      - executable_multi_agent_tasks
+      - counterfactual_and_intervention_evaluation
+    status: ready_text_env
+    project_url: https://enact-tom.github.io/
+    license: MIT
+    code:
+      path: external/EnactTom
+      source: https://github.com/UCSB-AI/EnactTom
+      revision: 093c4a11b622c8f0b50070e51ae9461b2b1db2f8
+    data:
+      path: external_datasets/enacttom
+      source: https://huggingface.co/datasets/ucsbai/enact_tom_300_public
+      revision: d3c61ab96cfa46e2c2fd88ed9b3da34b9c3a2c36
+      standard_tasks: 150
+      hard_tasks: 150
+    simulator:
+      status: linux_cuda_required
+      note: Full Habitat/HSSD execution requires a separate Linux GPU environment and assets.
+      entrypoint: ./enacttom/run.sh
+
+  egotaskqa:
+    role:
+      - physical_causal_chain
+      - task_state_and_counterfactual_qa
+    status: access_required
+    project_url: https://sites.google.com/view/egotaskqa/
+    request_url: https://sites.google.com/view/egotaskqa/download
+    code:
+      path: external/EgoTaskQA
+      source: https://github.com/Buzz-Beater/EgoTaskQA
+      revision: 807a34d77dd6dc1286a2d77b29036e948741bc82
+    data:
+      status: pending_license_agreement
+
+  comind:
+    role:
+      - joint_attention
+      - multi_view_collaboration
+      - shared_physical_field
+    status: ready_transcript_pilot
+    project_url: https://comind.ethz.ch/
+    alternative_url: https://comind-data.org/
+    license: CC-BY-4.0
+    downloader:
+      path: external/CoMind/comind_download.py
+      source: https://comind.ethz.ch/scripts/comind_download.py
+      version: 20260626-01
+      sha256: ef9fa39c5f0b39c47b8790278df211e6e354b1cf8026bdbd5e1f442a06f1ea49
+    data:
+      path: external_datasets/comind
+      pilot_ids: experiments/configs/comind_pilot_ids.txt
+      recording_id: f0b49334-565a-4d30-a010-15d92e511c9a
+      official_split: test
+      selected_parts:
+        - transcripts
+        - annotations
+      downloaded_bytes: 9140162
+      transcript_files: 8
+      annotation_files: 3
+      full_recording_manifest_bytes: 193973681528
+      policy: add_video_or_mps_only_after_text_representation_go_no_go
+
+recommended_first_pass:
+  - enacttom_oracle_state_and_reducer_experiments
+  - ma_egoqa_caption_and_shared_memory_baselines
+  - holoassist_annotation_only_physical_trace_experiments
+  - comind_transcript_and_social_annotation_pilot
+  - freeze_video_ids_then_download_small_raw_media_subset

@@ -7,12 +7,15 @@ credentials.env
 *.key
 .github_ssh/
 
-# Python
+# Python and tooling
 __pycache__/
 *.py[cod]
 .pytest_cache/
 .mypy_cache/
+.ruff_cache/
 .venv*/
+venv/
+node_modules/
 
 # Data, media, checkpoints, and generated outputs
 *.mp4
@@ -26,9 +29,15 @@ __pycache__/
 *.jsonl
 *.log
 *.status
-data/egolife_raw/
-data/egolife_proxy_384p/
+external/
+external_datasets/
+data/
+output/
+tmp/
 MMToM-QA-data/
+
+# Concise Markdown and selected aggregate JSON summaries may be tracked.
+reports/*.json
 
 # Editors and OS
 .DS_Store
