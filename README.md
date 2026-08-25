@@ -32,6 +32,19 @@ The method and paired baseline use the same model and the same visual inputs.
 McNemar's exact test gives `p = 0.00388` on MA-EgoQA and `p = 3.17e-05`
 on MMToM. Aggregate machine-readable summaries are included with the code.
 
+## Exploratory CoMind paired result
+
+A deterministic 300-example CoMind train subset (100 examples per task) was
+also evaluated with `gpt-5.6-sol`, using matched inputs for Direct and
+Spatial-Social inference. All 300 pairs completed. Across 14 reported fields,
+Spatial-Social was higher on 4, lower on 7, and tied on 3; it did not uniformly
+improve over Direct. The only significant paired difference was a regression
+on handover category L1 (0% versus 14%, exact McNemar `p = 0.000122`).
+
+This is an exploratory train-subset comparison, not an official CoMind hidden
+test result. See the [full report](reports/comind_gpt56_300_results_zh.md) and
+[aggregate JSON](reports/comind_gpt56_300_summary.json).
+
 ## Adopted visual pipeline
 
 1. Retrieve or sample visual evidence without consulting a baseline answer.
