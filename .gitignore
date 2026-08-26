@@ -16,6 +16,7 @@ __pycache__/
 .venv*/
 venv/
 node_modules/
+.spatial_social_public_git/
 
 # Data, media, checkpoints, and generated outputs
 *.mp4
@@ -33,11 +34,19 @@ external/
 external_datasets/
 data/
 output/
+workdirs/
 tmp/
 MMToM-QA-data/
 
+# Independently versioned or vendored research repositories
+AutoToM/
+MA-EgoQA/
+MMToM-QA/
+cap-x/
+
 # Concise Markdown and selected aggregate JSON summaries may be tracked.
 reports/*.json
+!reports/comind_grounding_oof_summary.json
 
 # Editors and OS
 .DS_Store

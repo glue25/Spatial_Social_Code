@@ -45,6 +45,19 @@ This is an exploratory train-subset comparison, not an official CoMind hidden
 test result. See the [full report](reports/comind_gpt56_300_results_zh.md) and
 [aggregate JSON](reports/comind_gpt56_300_summary.json).
 
+A subsequent train-only mechanism study processed all 6,877 labeled samples
+with explicit visual grounding and recording-heldout policy selection. On the
+6,673-sample strict common set, bbox IoU@0.5 improved from near zero to
+6.47%--23.15% across the three tasks, without using held-out-recording labels
+to select each fold's policy. This remains an OOF analysis of the labeled
+training corpus, not an official hidden-test result. See the
+[grounding/OOF report](reports/comind_grounding_oof_results_zh.md) and
+[machine-readable summary](reports/comind_grounding_oof_summary.json).
+
+The current MMToM, MA-EgoQA, and CoMind ablation matrix and resumable launch
+commands are recorded in the
+[three-environment ablation status](reports/three_environment_ablation_status_zh.md).
+
 ## Adopted visual pipeline
 
 1. Retrieve or sample visual evidence without consulting a baseline answer.
