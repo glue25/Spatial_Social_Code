@@ -11,10 +11,14 @@ grounded physical evidence from social and mental-state inference:
 - A restricted AST runtime validates generated programs before executing them
   into canonical JSON traces.
 
-The repository contains two complementary evaluation tracks:
+The repository contains two complementary evaluation tracks. The primary
+visual formulation is task/question-conditioned: the compiler may read the
+task, question, and answer choices, but never gold labels, correctness
+feedback, or a baseline answer.
 
-1. deterministic/oracle-state compilation and counterfactual replay on
-   EnactToM with Qwen3-4B;
+1. task-conditioned agent-indexed state compilation and closed-loop planning
+   on EnactToM/Habitat, with deterministic oracle execution retained only as
+   an upper-bound diagnostic;
 2. grounded visual Spatial-Social Code evaluation on MMToM and MA-EgoQA.
 
 Direct-answer baselines are stored only for paired evaluation. They never
@@ -61,7 +65,7 @@ commands are recorded in the
 ## Adopted visual pipeline
 
 1. Retrieve or sample visual evidence without consulting a baseline answer.
-2. Compile choice-blind grounded Spatial Code with clip/time provenance.
+2. Compile question-conditioned grounded Spatial Code with clip/time provenance.
 3. Execute the Spatial program in the restricted runtime.
 4. Compile Social Code using only validated Spatial evidence references.
 5. Infer beliefs, goals, intents, roles, and answer-aligned likelihoods while
@@ -87,6 +91,14 @@ The E0 experiment compiles all 300 public EnactToM tasks into query-independent
 oracle state, replays golden trajectories, and evaluates message
 deletion/redirection interventions. It tests the representation and reducer,
 not learned-agent performance.
+
+The current learned-agent Habitat experiment is separate: a deterministic
+compiler gives each Qwen3-VL-8B agent either Spatial Code, Social Code, or both,
+then the model plans through the normal private-observation runtime. The
+compiler never reads `golden_trajectory`, does not emit action schedules, and
+does not reveal another agent's private facts. Direct, Spatial-only,
+Social-only, and Spatial+Social use the same tasks and 20-turn budget. See the
+[live Habitat status](reports/habitat_spatial_social_status_zh.md).
 
 ```bash
 python3 -m pip install -e '.[test]'
