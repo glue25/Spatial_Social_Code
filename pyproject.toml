@@ -6,12 +6,32 @@ build-backend = "setuptools.build_meta"
 name = "spatial-social-code"
 version = "0.1.0"
 description = "Explicit spatial and agent-indexed state for multi-agent reasoning"
-requires-python = ">=3.9"
-dependencies = []
+requires-python = ">=3.10"
+dependencies = [
+  "requests>=2.31",
+  "urllib3>=2.0",
+]
 
 [project.optional-dependencies]
 docs = ["reportlab>=4"]
-test = ["pytest>=7"]
+video = [
+  "av>=12.0",
+  "numpy>=1.24",
+  "Pillow>=10.0",
+  "tqdm>=4.66",
+]
+analysis = [
+  "pandas>=2.0",
+  "pyarrow>=14.0",
+  "rank-bm25>=0.2.2",
+]
+local-model = [
+  "torch>=2.1",
+  "transformers>=4.57",
+]
+test = [
+  "pytest>=7",
+]
 
 [tool.setuptools.packages.find]
 include = ["spatial_social_code*"]

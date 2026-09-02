@@ -7,8 +7,6 @@ import json
 from pathlib import Path
 from typing import Iterable
 
-import av
-
 from spatial_social_code.comind import TASK_FILES, iter_labeled_samples
 from spatial_social_code.http_range_reader import HTTPRangeReader
 
@@ -35,6 +33,13 @@ def uniformly_select(rows: list[tuple[str, str, dict]], limit: int) -> list:
 
 class VideoFrames:
     def __init__(self, path: Path, remote_url: str | None = None, size: int = 0) -> None:
+        try:
+            import av
+        except ModuleNotFoundError as exc:
+            raise RuntimeError(
+                "PyAV is required for video extraction; install with "
+                "`pip install -e '.[video]'`."
+            ) from exc
         self.path = path
         self.reader = None
         if path.is_file():

@@ -15,6 +15,7 @@ __pycache__/
 .ruff_cache/
 .venv*/
 venv/
+*.egg-info/
 node_modules/
 .spatial_social_public_git/
 
@@ -47,6 +48,7 @@ cap-x/
 # Concise Markdown and selected aggregate JSON summaries may be tracked.
 reports/*.json
 !reports/comind_grounding_oof_summary.json
+!reports/submission_results_summary.json
 
 # Editors and OS
 .DS_Store

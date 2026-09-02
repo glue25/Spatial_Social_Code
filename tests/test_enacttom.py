@@ -166,6 +166,10 @@ class EnactToME0Test(unittest.TestCase):
         state = compile_oracle_state(sample_task(), "test")
         self.assertTrue(goal_holds(state, Literal("is_closed", ("cabinet_0",))))
 
+    @unittest.skipUnless(
+        (ROOT / "external_datasets/enacttom/standard.jsonl").is_file(),
+        "requires optional EnactToM dataset",
+    )
     def test_real_public_task_replays(self) -> None:
         path = ROOT / "external_datasets/enacttom/standard.jsonl"
         with path.open(encoding="utf-8") as handle:

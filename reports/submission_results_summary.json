@@ -1,0 +1,102 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-09-02",
+  "method_scope": "task_or_question_conditioned_spatial_social_code",
+  "paired_results": [
+    {
+      "benchmark": "MMToM",
+      "split": "official_600_questions",
+      "method_correct": 470,
+      "direct_correct": 406,
+      "total": 600,
+      "method_accuracy": 0.7833333333333333,
+      "direct_accuracy": 0.6766666666666666,
+      "delta_pp": 10.666666666666668,
+      "mcnemar_exact_p": 0.00003172,
+      "same_model": true,
+      "same_visual_input": true,
+      "compute_matched": false,
+      "source": "reports/mmtom_iclr_ablation_summary.json"
+    },
+    {
+      "benchmark": "MA-EgoQA",
+      "split": "official_1741_questions",
+      "method_correct": 904,
+      "direct_correct": 848,
+      "total": 1741,
+      "method_accuracy": 0.5192418150488225,
+      "direct_accuracy": 0.4870763928776565,
+      "delta_pp": 3.216542217116603,
+      "mcnemar_exact_p": 0.00388,
+      "same_model": true,
+      "same_visual_input": true,
+      "compute_matched": false,
+      "source": "aggregate_only; full prediction JSONL is not redistributed"
+    }
+  ],
+  "habitat": {
+    "benchmark": "EnactToM/Habitat frozen-12",
+    "runs_per_condition": 36,
+    "seeds": 3,
+    "direct": {
+      "successes": 1,
+      "success_rate": 0.027777777777777776,
+      "mean_goal_completion": 0.4583333333333333
+    },
+    "spatial_only": {
+      "successes": 1,
+      "success_rate": 0.027777777777777776,
+      "mean_goal_completion": 0.4305555555555556
+    },
+    "social_only": {
+      "successes": 7,
+      "success_rate": 0.19444444444444445,
+      "mean_goal_completion": 0.5995370370370371
+    },
+    "spatial_social": {
+      "successes": 4,
+      "success_rate": 0.1111111111111111,
+      "mean_goal_completion": 0.5347222222222222
+    },
+    "spatial_social_minus_direct_completion_pp": 7.63888888888889,
+    "task_cluster_bootstrap_95ci_pp": [0.69, 15.74],
+    "strongest_condition": "social_only",
+    "source": "reports/habitat_spatial_social_status_zh.md"
+  },
+  "external_references": [
+    {
+      "benchmark": "MMToM multimodal",
+      "method": "AutoToM + Model Specification / GPT-4o",
+      "metric": "accuracy",
+      "value": 0.798,
+      "strictly_comparable": false
+    },
+    {
+      "benchmark": "MMToM multimodal",
+      "method": "BIP-ALM / LLaMA 2",
+      "metric": "accuracy",
+      "value": 0.767,
+      "strictly_comparable": false
+    },
+    {
+      "benchmark": "MA-EgoQA",
+      "method": "EgoMAS / Gemini-2.5-Flash",
+      "metric": "average_accuracy",
+      "value": 0.4141,
+      "strictly_comparable": false
+    },
+    {
+      "benchmark": "EnactToM Standard functional",
+      "method": "Gemini-Flash",
+      "metric": "average_score",
+      "value": 0.425,
+      "strictly_comparable": false
+    }
+  ],
+  "limitations": [
+    "The visual compiler is task/question-conditioned.",
+    "The paired visual comparisons match model and visual evidence, but not calls, tokens, latency, or FLOPs.",
+    "Habitat Social-only is stronger than Spatial+Social; Habitat does not establish component complementarity.",
+    "CoMind grounding results are recording-heldout OOF on labeled train data, not official hidden-test results."
+  ]
+}

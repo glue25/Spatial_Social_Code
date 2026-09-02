@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import unittest
 import io
+from pathlib import Path
 
 from spatial_social_code.comind import box_iou, evaluate_paired_rows, score_sample
 from spatial_social_code.prepare_comind_pilot import sample_times, uniformly_select
@@ -11,6 +12,10 @@ from spatial_social_code.run_comind_codex_pilot import (
     prediction_schema,
 )
 from spatial_social_code.http_range_reader import HTTPRangeReader
+
+
+ROOT = Path(__file__).resolve().parents[1]
+COMIND_ANNOTATIONS = ROOT / "external_datasets/comind/annotations"
 
 
 class MemoryRangeReader(HTTPRangeReader):
@@ -118,13 +123,16 @@ class CoMindMetricsTest(unittest.TestCase):
         }
         self.assertTrue(all(score_sample("handover", truth, prediction).values()))
 
+    @unittest.skipUnless(
+        (COMIND_ANNOTATIONS / "dataset_joint_attention_consolidated.json").is_file(),
+        "requires optional CoMind annotations",
+    )
     def test_paired_evaluation_excludes_unpaired_failures(self) -> None:
-        annotation_root = "external_datasets/comind/annotations"
+        annotation_root = COMIND_ANNOTATIONS
         import json
-        from pathlib import Path
 
         data = json.loads(
-            (Path(annotation_root) / "dataset_joint_attention_consolidated.json").read_text()
+            (annotation_root / "dataset_joint_attention_consolidated.json").read_text()
         )["data"]
         recording_id = next(
             rid for rid, samples in data.items() if any(isinstance(v, dict) for v in samples.values())

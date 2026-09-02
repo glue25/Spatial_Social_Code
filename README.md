@@ -27,6 +27,7 @@ select, switch, fuse, gate, or overwrite a Spatial-Social answer.
 ## Current visual results
 
 The method and paired baseline use the same model and the same visual inputs.
+They are not call-, token-, latency-, or FLOP-matched unless explicitly noted.
 
 | Benchmark | Spatial-Social Code | Direct baseline | Difference |
 |---|---:|---:|---:|
@@ -35,6 +36,9 @@ The method and paired baseline use the same model and the same visual inputs.
 
 McNemar's exact test gives `p = 0.00388` on MA-EgoQA and `p = 3.17e-05`
 on MMToM. Aggregate machine-readable summaries are included with the code.
+See the [submission results and baseline policy](reports/submission_results_and_baselines_zh.md)
+for the component evidence, Habitat results, official published references,
+and the strict comparability boundary.
 
 ## Exploratory CoMind paired result
 
@@ -100,11 +104,22 @@ does not reveal another agent's private facts. Direct, Spatial-only,
 Social-only, and Spatial+Social use the same tasks and 20-turn budget. See the
 [live Habitat status](reports/habitat_spatial_social_status_zh.md).
 
+The lightweight public artifact does not require datasets or API credentials:
+
 ```bash
-python3 -m pip install -e '.[test]'
-python3 -m pytest -q
-python3 scripts/validate_datasets.py
-python3 scripts/run_enacttom_e0.py
+python3.10 -m venv .venv
+source .venv/bin/activate
+python -m pip install -e '.[test]'
+bash scripts/verify_artifact.sh
+```
+
+Dataset-dependent tests are automatically skipped when their optional public
+data are absent. After preparing EnactToM data, the deterministic E0 track can
+be reproduced with:
+
+```bash
+python scripts/validate_datasets.py
+python scripts/run_enacttom_e0.py
 ```
 
 See the [method formulation](docs/method_zh.md),
@@ -134,13 +149,19 @@ not part of the reported best method.
 
 ## Visual setup
 
-Python 3.10+ is recommended.
+Python 3.10+ is required because the implementation uses
+`zip(..., strict=True)`. For all visual, analysis, and local-model dependencies:
 
 ```bash
 python -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
 ```
+
+Smaller editable-install extras are also available: `video`, `analysis`,
+`local-model`, `docs`, and `test`. The `test` extra is sufficient for the
+lightweight artifact verifier; `requirements.txt` installs the complete
+research environment.
 
 Obtain MA-EgoQA/EgoLife and MMToM from their respective authors. Pass explicit
 `--benchmark`, `--video-root`, `--questions`, and `--frames` paths to the
@@ -162,15 +183,11 @@ checkpoint or Hugging Face model ID. Set
 ## Tests
 
 ```bash
-python spatial_social_code/test_spatial_social.py
-cd MA-EgoQA
-python -m unittest \
-  egomas.src.test_jdcloud_baseline \
-  egomas.src.test_spatial_social_jdcloud \
-  egomas.src.test_video_spatial_social_jdcloud \
-  egomas.src.test_video_grounded_v2_jdcloud \
-  egomas.src.test_video_provenance_v3_jdcloud
+bash scripts/verify_artifact.sh
 ```
+
+The MA-EgoQA integration tests additionally require that repository's optional
+dependencies and are intentionally not part of the lightweight check.
 
 ## Visual evaluation
 
