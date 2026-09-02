@@ -1,6 +1,6 @@
 # Habitat Spatial-Social Code 实验状态
 
-更新时间：2026-09-01。
+更新时间：2026-09-02。
 
 ## 论文主实验
 
@@ -16,8 +16,28 @@ Habitat 主实验只比较四个直接相关的条件：
 反馈或 baseline 输出；生成内容不包含物理动作序列。Qwen 仍通过 Habitat
 标准运行时自主选择并执行每一步动作。
 
-冻结 12 题用于开发和消融选择。只有 Spatial+Social 明确超过 Direct、
-Spatial-only 和 Social-only 后，才扩展到更大的正式集合。
+冻结 12 题使用三个 Habitat seed 重复评测，共 36 个 run/条件、144 个配对
+run。模型保持 greedy decoding；seed 只改变 Habitat 运行状态，四个条件在每轮
+使用相同 seed。
+
+## 三轮合并结果
+
+| 条件 | Task success | 平均目标完成度 |
+|---|---:|---:|
+| Direct | 1/36（2.78%） | 45.83% |
+| Spatial-only | 1/36（2.78%） | 43.06% |
+| Social-only | **7/36（19.44%）** | **59.95%** |
+| Spatial+Social | 4/36（11.11%） | 53.47% |
+
+Spatial+Social 相对 Direct 的平均完成度提升 **7.64 pp**，36 个 paired run
+为 13 胜、17 平、6 负。按任务聚类、保留三个 seed 的 bootstrap 95% CI 为
+`[+0.69, +15.74]` pp，因此支持“P+S 改善部分目标完成度”。严格 task
+success 提升 8.33 pp，但样本仍小，只作为辅助结果。
+
+组件归因并不支持互补性：P+S 比 Spatial-only 高 10.42 pp，但比 Social-only
+低 6.48 pp；Spatial-only 还比 Direct 低 2.78 pp。当前最强 Habitat 条件是
+Social-only，而不是 P+S。论文可以报告 P+S 相对 Direct 的稳定完成度增益，
+但不能声称 Spatial Code 在 Habitat 中带来额外增益。
 
 ## 已有对照与边界
 
@@ -44,6 +64,6 @@ Spatial-Social Code 的主结果。
 - Social Code 显式编码受限通信的有向路径和单消息中继策略；Spatial Code
   显式编码交互前置条件，避免把家具当作可拿物、未导航就 Open/Place 等错误。
 
-实验输出位于 `workdirs/habitat_enacttom/frozen12/benchmark_qwen8b_task_conditioned_v2/`，
-该目录是本地运行产物，不提交 GitHub。最终完成后应在本报告加入逐条件成功率、
-平均目标完成度、paired win/loss 和代表性 case。
+首轮输出位于 `workdirs/habitat_enacttom/frozen12/benchmark_qwen8b_task_conditioned_v2/`，
+新增 seed 位于 `workdirs/habitat_enacttom/frozen12/benchmark_qwen8b_task_conditioned_repeats/`。
+这些目录是本地运行产物，不提交 GitHub。
