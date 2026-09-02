@@ -66,6 +66,13 @@
   "external_references": [
     {
       "benchmark": "MMToM multimodal",
+      "method": "AutoToM / GPT-4o",
+      "metric": "accuracy",
+      "value": 0.755,
+      "strictly_comparable": false
+    },
+    {
+      "benchmark": "MMToM multimodal",
       "method": "AutoToM + Model Specification / GPT-4o",
       "metric": "accuracy",
       "value": 0.798,

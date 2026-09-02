@@ -51,6 +51,7 @@ MMToM 的 equal-call direct diagnostic 使用约 1,550 个逻辑调用，得到
 
 | 环境/协议 | 官方或论文公开方法 | 公开结果 | 严格可比 | 主要差异 |
 |---|---|---:|:---:|---|
+| MMToM multimodal | AutoToM / GPT-4o | 75.5% | 否 | 我们 78.33%，高 2.83 pp；不同模型与实现 |
 | MMToM multimodal | AutoToM + Model Specification / GPT-4o | 79.8% | 否 | 不同模型与方法实现 |
 | MMToM multimodal | BIP-ALM / LLaMA 2 | 76.7% | 否 | 不同模型与方法实现 |
 | MMToM video-only | BIP-ALM / LLaMA 2 | 61.2% | 否 | 输入协议不同 |
