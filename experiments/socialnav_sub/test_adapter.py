@@ -12,6 +12,10 @@ from socialnav_sub import canonicalize_official_scene, compile_scene  # noqa: E4
 from experiments.socialnav_sub.run_pilot_jdcloud import (  # noqa: E402
     condition_uses_raw_frames,
 )
+from experiments.socialnav_sub.run_grounded_contactsheet_v5 import (  # noqa: E402
+    compiler_prompt,
+    execute_code,
+)
 
 
 SCENE = {
@@ -110,3 +114,22 @@ def test_fair_code_condition_keeps_the_same_raw_frames_as_direct() -> None:
     assert condition_uses_raw_frames("visual_predicted_ps_plus_frames")
     assert not condition_uses_raw_frames("visual_predicted_ps")
     assert not condition_uses_raw_frames("oracle_code")
+
+
+def test_grounded_compiler_is_query_independent_and_runtime_is_deterministic() -> None:
+    prompt = compiler_prompt("scene_01")
+    assert "Possible answers" not in prompt
+    assert "At the end" not in prompt
+
+    record = {
+        "question_key": "q_person_spatial_position_end_p1",
+        "choices": ["ahead of", "to the left of", "to the right of", "behind"],
+    }
+    representation = {
+        "people": {
+            "person_1": {
+                "end_position": {"value": "to the left of", "confidence": 0.9}
+            }
+        }
+    }
+    assert execute_code(record, representation) == "to the left of"
