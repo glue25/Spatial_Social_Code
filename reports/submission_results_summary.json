@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-09-02",
+  "updated_at": "2026-09-03",
   "method_scope": "task_or_question_conditioned_spatial_social_code",
   "paired_results": [
     {
@@ -62,6 +62,90 @@
     "task_cluster_bootstrap_95ci_pp": [0.69, 15.74],
     "strongest_condition": "social_only",
     "source": "reports/habitat_spatial_social_status_zh.md"
+  },
+  "comind": {
+    "benchmark": "CoMind labeled-train recording-heldout OOF",
+    "folds": 5,
+    "strict_common_samples": 6673,
+    "official_hidden_test": false,
+    "leaderboard_submission": false,
+    "metrics": {
+      "joint_attention.left_iou_at_0_5": {
+        "direct": 0.0017,
+        "spatial_social": 0.0019,
+        "grounding_oof": 0.2033
+      },
+      "joint_attention.right_iou_at_0_5": {
+        "direct": 0.0011,
+        "spatial_social": 0.0019,
+        "grounding_oof": 0.2127
+      },
+      "scoia.iou_at_0_5": {
+        "direct": 0.0021,
+        "spatial_social": 0.001,
+        "grounding_oof": 0.0647
+      },
+      "handover.iou_at_0_5": {
+        "direct": 0.0034,
+        "spatial_social": 0.0,
+        "grounding_oof": 0.2315
+      },
+      "handover.category_l1": {
+        "direct": 0.2282,
+        "spatial_social": 0.2416,
+        "grounding_oof": 0.3188
+      }
+    },
+    "source": "reports/comind_grounding_oof_summary.json"
+  },
+  "ablations": {
+    "maegoqa_frozen100": {
+      "option_decomposition": 0.43,
+      "natural_language_scratchpad": 0.51,
+      "three_call_natural_language": 0.43,
+      "raw_only_rerun": 0.4444,
+      "spatial_only": 0.51,
+      "social_only": 0.48,
+      "spatial_social": 0.5,
+      "executed_trace_only": 0.4646,
+      "boundary": "test-set diagnostic; not used for model selection"
+    },
+    "mmtom_sam_frozen70": {
+      "vlm_only": 0.7428571428571429,
+      "vlm_sam": 0.7571428571428571,
+      "delta_pp": 1.4285714285714286,
+      "vlm_only_only_correct": 5,
+      "vlm_sam_only_correct": 6,
+      "mcnemar_exact_p": 1.0,
+      "target_term_coverage": 0.9533333333333334
+    },
+    "habitat_spatial_v2_seed891003": {
+      "tasks": 12,
+      "direct_completion": 0.4444,
+      "spatial_v1_completion": 0.3819,
+      "spatial_v2_completion": 0.4444,
+      "social_completion": 0.6389,
+      "spatial_social_v1_completion": 0.5694,
+      "spatial_social_v2_completion": 0.5486,
+      "boundary": "development diagnostic; does not replace three-seed main result"
+    }
+  },
+  "extended_benchmarks": {
+    "socialnav_sub_heldout120": {
+      "metric": "human_probability_agreement",
+      "direct": 0.5776663382913383,
+      "visual_spatial_social": 0.5192014929514928,
+      "frozen_router": 0.5738784595034595,
+      "positive_gain": false
+    },
+    "storyvideoqa_caption_heldout240": {
+      "direct_correct": 224,
+      "code_correct": 217,
+      "total": 240,
+      "direct_accuracy": 0.9333333333333333,
+      "code_accuracy": 0.9041666666666667,
+      "positive_gain": false
+    }
   },
   "external_references": [
     {

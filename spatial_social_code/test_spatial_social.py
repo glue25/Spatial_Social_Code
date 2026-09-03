@@ -451,6 +451,18 @@ class SocialCodeTests(unittest.TestCase):
         bridge = compile_spatial_bridge(question, trace)
         self.assertNotIn("plate is not inside cabinet", bridge.code)
 
+    def test_missing_spatial_fact_is_unknown_not_negative(self) -> None:
+        question = (
+            "Actions taken by Jessica: Jessica opens the cabinet and closes it. "
+            "Question: If Jessica has been trying to get a plate, which is more likely? "
+            "(a) Jessica thinks that the plate is inside the cabinet. "
+            "(b) Jessica thinks that the plate is not inside the cabinet. "
+            "Please respond with either a or b."
+        )
+        bridge = compile_spatial_bridge(question, "")
+        self.assertNotIn("M.query_evidence", bridge.code)
+        self.assertNotIn("plate is not inside cabinet", bridge.code)
+
     def test_completed_search_penalizes_an_unretrieved_goal_candidate(self) -> None:
         question = (
             "Actions taken by John: John approaches the microwave, opens it, and closes it. "

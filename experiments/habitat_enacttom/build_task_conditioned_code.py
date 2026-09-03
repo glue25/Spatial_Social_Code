@@ -152,7 +152,7 @@ def _known_entities(task: dict[str, Any], agent: str) -> set[str]:
     return set(ENTITY_RE.findall(own + " " + public)) | {agent}
 
 
-def _render_spatial(task: dict[str, Any], agent: str) -> str:
+def _render_spatial(task: dict[str, Any], agent: str, version: str = "v1") -> str:
     goals = _functional_atoms(task)
     init = _init_atoms(task)
     known = _known_entities(task, agent)
@@ -178,6 +178,21 @@ def _render_spatial(task: dict[str, Any], agent: str) -> str:
 
     if not relation_lines:
         relation_lines.append("  - UNKNOWN (use FindObjectTool/FindReceptacleTool; never guess an ID)")
+    policy_lines = [
+        " type_safety: Pick only movable objects; Open/Close only articulated furniture.",
+        " interaction_precondition: Navigate to the exact object before Pick/Open/Close; Navigate to the exact destination before Place; after distance/occlusion failure, Navigate and retry.",
+        " completion_rule: a goal changes only after a successful runtime observation.",
+    ]
+    if version == "v2":
+        policy_lines = [
+            " evidence_gate: UNKNOWN_* denotes a type-level unknown, never an executable target ID; do not let an UNKNOWN record override an exact observation.",
+            " access_guard: before moving toward an entity, join its observed room with your own access restrictions; if that room is denied, delegate instead of attempting navigation.",
+            " interaction_precondition: Navigate to the exact object before Pick/Open/Close and to the exact destination before Place.",
+            " bounded_recovery: never repeat an identical failed or unconfirmed action unchanged; after one distance/occlusion failure, Navigate to the exact entity once and retry once, then Find or delegate.",
+            " completion_rule: update the goal checklist only after a successful runtime observation; preserve already satisfied final-state relations.",
+        ]
+    elif version != "v1":
+        raise ValueError(f"unknown spatial compiler version: {version}")
     return "\n".join(
         [
             "SPATIAL_STATE {",
@@ -185,9 +200,7 @@ def _render_spatial(task: dict[str, Any], agent: str) -> str:
             *goal_lines,
             " known_current_relations:",
             *relation_lines,
-            " type_safety: Pick only movable objects; Open/Close only articulated furniture.",
-            " interaction_precondition: Navigate to the exact object before Pick/Open/Close; Navigate to the exact destination before Place; after distance/occlusion failure, Navigate and retry.",
-            " completion_rule: a goal changes only after a successful runtime observation.",
+            *policy_lines,
             "}",
         ]
     )
@@ -234,13 +247,15 @@ def _render_social(task: dict[str, Any], agent: str, agents: list[str]) -> str:
     )
 
 
-def compile_task(task: dict[str, Any], condition: str) -> dict[str, Any]:
+def compile_task(
+    task: dict[str, Any], condition: str, spatial_version: str = "v1"
+) -> dict[str, Any]:
     agents = _agents(task)
     codes: dict[str, dict[str, str]] = {}
     for agent in agents:
         code: dict[str, str] = {}
         if condition in {"physical_only", "physical_social"}:
-            code["spatial"] = _render_spatial(task, agent)
+            code["spatial"] = _render_spatial(task, agent, spatial_version)
         if condition in {"social_only", "physical_social"}:
             code["social"] = _render_social(task, agent, agents)
         codes[agent] = code
@@ -258,6 +273,7 @@ def compile_task(task: dict[str, Any], condition: str) -> dict[str, Any]:
             entries.append("[Task-Conditioned Social Code]\n" + codes[agent]["social"])
         result["agent_secrets"][agent] = entries
     result["spatial_social_condition"] = condition
+    result["spatial_compiler_version"] = spatial_version
     # The benchmark copy intentionally does not even carry the oracle plan.
     result.pop("golden_trajectory", None)
     # Guard against accidentally inheriting any oracle execution switches.
@@ -277,6 +293,9 @@ def main() -> None:
         choices=("physical_only", "social_only", "physical_social"),
         required=True,
     )
+    parser.add_argument(
+        "--spatial-version", choices=("v1", "v2"), default="v1"
+    )
     parser.add_argument("tasks", nargs="*")
     args = parser.parse_args()
     args.output_dir.mkdir(parents=True, exist_ok=True)
@@ -285,7 +304,7 @@ def main() -> None:
     for name in names:
         source = args.input_dir / name
         task = json.loads(source.read_text(encoding="utf-8"))
-        compiled = compile_task(task, args.condition)
+        compiled = compile_task(task, args.condition, args.spatial_version)
         destination = args.output_dir / name
         destination.write_text(json.dumps(compiled, indent=2) + "\n", encoding="utf-8")
         manifest.append({"task": name, "task_id": task.get("task_id")})
@@ -293,7 +312,7 @@ def main() -> None:
         json.dumps(
             {
                 "condition": args.condition,
-                "compiler": "task_conditioned_spatial_social_v1",
+                "compiler": f"task_conditioned_spatial_social_{args.spatial_version}",
                 "uses_golden_trajectory": False,
                 "runtime_execution": False,
                 "privacy": "public task + mechanics + current agent private facts only",

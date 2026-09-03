@@ -46,3 +46,12 @@ def test_conditions_keep_spatial_and_social_separable() -> None:
     assert "[Task-Conditioned Social Code]" not in physical
     assert "[Task-Conditioned Social Code]" in social
     assert "[Task-Conditioned Spatial Code]" not in social
+
+
+def test_v2_spatial_code_gates_unknowns_and_bounds_failed_retries() -> None:
+    result = compile_task(_task(), "physical_social", spatial_version="v2")
+    agent_0 = "\n".join(result["agent_secrets"]["agent_0"])
+    assert "UNKNOWN_* denotes a type-level unknown" in agent_0
+    assert "never repeat an identical failed or unconfirmed action" in agent_0
+    assert "if that room is denied, delegate" in agent_0
+    assert "golden_trajectory" not in result

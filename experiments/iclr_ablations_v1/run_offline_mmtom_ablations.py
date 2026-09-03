@@ -38,12 +38,42 @@ from social_code import (  # noqa: E402
 )
 
 
-CONDITIONS = (
+STRICT_CONDITIONS = (
     "spatial_only_executed",
     "social_only_executed",
     "spatial_social_executed_recomputed",
-    "spatial_social_executed_saved",
 )
+
+SHARED_BASE_CONDITIONS = (
+    "shared_scaffold",
+    "shared_plus_physical",
+    "shared_plus_social",
+    "shared_plus_physical_social",
+)
+
+ROUTED_CONDITION = "oof_physical_social_router"
+
+
+def recover_neural_evidence(raw_code: str, rules_code: str) -> str:
+    """Recover only the cached neural extractor output from a fused raw program.
+
+    Historical checkpoints stored ``SocialCodeResult.raw_code`` under the
+    misleading key ``social_raw_evidence``.  That value concatenates neural,
+    rules, query, spatial-bridge, and posterior programs in that order.  Using
+    it directly leaks the saved full-method posterior into every ablation.
+    The deterministic rules program is therefore the stable boundary after
+    the neural prefix.
+    """
+    marker = "\n" + rules_code
+    boundary = raw_code.find(marker)
+    if boundary < 0:
+        raise ValueError("cannot locate deterministic-rules boundary in cached Social Code")
+    neural_code = raw_code[:boundary].strip()
+    forbidden = ("M.candidate(", "M.query_evidence(", "M.posterior(")
+    if not neural_code or any(token in neural_code for token in forbidden):
+        raise ValueError("recovered neural evidence is empty or answer-contaminated")
+    execute_social(neural_code)
+    return neural_code
 
 
 def load_jsonl(path: Path) -> dict[int, dict]:
@@ -105,6 +135,26 @@ def paired_bootstrap_ci(
     return [estimates[int(0.025 * draws)], estimates[int(0.975 * draws) - 1]]
 
 
+def episode_cluster_bootstrap_ci(
+    rows: list[dict], left: str, right: str, *, seed: int = 20260825, draws: int = 20000
+) -> list[float]:
+    rng = random.Random(seed)
+    clustered: dict[str, list[int]] = defaultdict(list)
+    for row in rows:
+        clustered[str(row["episode"])].append(
+            int(row["predictions"][right] == row["answer"])
+            - int(row["predictions"][left] == row["answer"])
+        )
+    episodes = sorted(clustered)
+    estimates = []
+    for _ in range(draws):
+        sampled = [episodes[rng.randrange(len(episodes))] for _ in episodes]
+        values = [value for episode in sampled for value in clustered[episode]]
+        estimates.append(sum(values) / len(values))
+    estimates.sort()
+    return [estimates[int(0.025 * draws)], estimates[int(0.975 * draws) - 1]]
+
+
 def metrics(rows: list[dict], condition: str) -> dict:
     correct = sum(row["predictions"][condition] == row["answer"] for row in rows)
     return {
@@ -113,6 +163,71 @@ def metrics(rows: list[dict], condition: str) -> dict:
         "accuracy": correct / len(rows),
         "wilson_95_ci": wilson(correct, len(rows)),
     }
+
+
+def episode_fold(episode: str, folds: int = 5) -> int:
+    """Assign every episode, and therefore all its questions, to one fold."""
+    digest = hashlib.sha256(str(episode).encode("utf-8")).hexdigest()
+    return int(digest[:8], 16) % folds
+
+
+def add_oof_source_router(
+    rows: list[dict],
+    *,
+    physical: str = "shared_plus_physical",
+    social: str = "shared_plus_social",
+    output: str = ROUTED_CONDITION,
+    folds: int = 5,
+) -> list[dict]:
+    """Route by question type using labels from other episode folds only.
+
+    This is a diagnostic cross-validated policy, not a hidden-test result.  A
+    deterministic Physical tie-break keeps the fitting rule fully specified.
+    """
+    policies: list[dict] = []
+    for fold in range(folds):
+        train = [row for row in rows if row["fold"] != fold]
+        test = [row for row in rows if row["fold"] == fold]
+        policy: dict[str, str] = {}
+        evidence: dict[str, dict] = {}
+        for question_type in sorted({row["question_type"] for row in rows}):
+            group = [row for row in train if row["question_type"] == question_type]
+            physical_correct = sum(
+                row["predictions"][physical] == row["answer"] for row in group
+            )
+            social_correct = sum(
+                row["predictions"][social] == row["answer"] for row in group
+            )
+            source = "social" if social_correct > physical_correct else "physical"
+            policy[question_type] = source
+            evidence[question_type] = {
+                "training_examples": len(group),
+                "physical_correct": physical_correct,
+                "social_correct": social_correct,
+                "selected": source,
+            }
+        for row in test:
+            source = policy[row["question_type"]]
+            source_key = social if source == "social" else physical
+            row["predictions"][output] = row["predictions"][source_key]
+            row["probabilities"][output] = row["probabilities"][source_key]
+            row["routing"] = {
+                "fold": fold,
+                "source": source,
+                "source_condition": source_key,
+            }
+        policies.append(
+            {
+                "fold": fold,
+                "held_out_examples": len(test),
+                "held_out_episodes": len({row["episode"] for row in test}),
+                "policy": policy,
+                "training_evidence": evidence,
+            }
+        )
+    if any(output not in row["predictions"] for row in rows):
+        raise RuntimeError("OOF router did not assign every example")
+    return policies
 
 
 def compare(rows: list[dict], left: str, right: str) -> dict:
@@ -135,6 +250,10 @@ def compare(rows: list[dict], left: str, right: str) -> dict:
             metrics(rows, right)["accuracy"] - metrics(rows, left)["accuracy"]
         ),
         "paired_bootstrap_95_ci": paired_bootstrap_ci(rows, left, right),
+        "episode_cluster_bootstrap_95_ci": episode_cluster_bootstrap_ci(
+            rows, left, right
+        ),
+        "episode_clusters": len({str(row["episode"]) for row in rows}),
         "mcnemar_exact_p": exact_mcnemar(left_only, right_only),
     }
 
@@ -167,46 +286,64 @@ def main() -> None:
 
     # Prediction phase: no access to answer, correctness, or question_type.
     prediction_rows: list[dict] = []
-    reconstruction_mismatches: list[int] = []
-    maximum_reconstruction_probability_error = 0.0
     for index in sorted(cached):
         saved = cached[index]
         question = str(questions[index]["question"])
-        neural_code = str(saved["codes"]["social_raw_evidence"])
+        rules = compile_rules(question)
+        neural_code = recover_neural_evidence(
+            str(saved["codes"]["social_raw_evidence"]), rules.code
+        )
         neural = SocialCodeResult(
             "neural", neural_code, execute_social(neural_code), ("neural",), raw_code=neural_code
         )
-        rules = compile_rules(question)
-        query = compile_query_candidates(question)
+        # The strict matrix removes the common question-reasoning scaffold to
+        # inspect the raw evidence sources.  It is intentionally not compared
+        # directly with the historical shared-scaffold component ablation.
+        strict_query = compile_query_candidates(question, include_heuristic_evidence=False)
+
+        # In the comparable matrix every condition receives the same
+        # question/rule reasoning floor; only Physical and Social evidence is
+        # added or removed.  This restores the protocol used by the ~75%
+        # component results while retaining the cache-contamination fixes.
+        shared_query = compile_query_candidates(question)
         bridge = compile_spatial_bridge(question, str(saved["traces"]["spatial"]))
 
-        spatial_prediction, spatial_probs = prediction_from([rules, query, bridge], question)
-        social_prediction, social_probs = prediction_from([neural, rules, query], question)
-        full_prediction, full_probs = prediction_from([neural, rules, query, bridge], question)
-        saved_prediction = str(saved["predictions"]["spatial_social"]["prediction"]).lower()
-        saved_probs = saved["predictions"]["spatial_social"]
-        probability_error = max(
-            abs(full_probs["A"] - float(saved_probs["prob_a"])),
-            abs(full_probs["B"] - float(saved_probs["prob_b"])),
+        spatial_prediction, spatial_probs = prediction_from([strict_query, bridge], question)
+        social_prediction, social_probs = prediction_from([neural, rules, strict_query], question)
+        full_prediction, full_probs = prediction_from(
+            [neural, rules, strict_query, bridge], question
         )
-        maximum_reconstruction_probability_error = max(
-            maximum_reconstruction_probability_error, probability_error
+        scaffold_prediction, scaffold_probs = prediction_from([shared_query, rules], question)
+        shared_physical_prediction, shared_physical_probs = prediction_from(
+            [shared_query, rules, bridge], question
         )
-        if full_prediction != saved_prediction:
-            reconstruction_mismatches.append(index)
+        shared_social_prediction, shared_social_probs = prediction_from(
+            [shared_query, rules, neural], question
+        )
+        shared_full_prediction, shared_full_probs = prediction_from(
+            [shared_query, rules, neural, bridge], question
+        )
         prediction_rows.append(
             {
                 "index": index,
+                "episode": str(questions[index]["episode"]),
                 "predictions": {
                     "spatial_only_executed": spatial_prediction,
                     "social_only_executed": social_prediction,
                     "spatial_social_executed_recomputed": full_prediction,
-                    "spatial_social_executed_saved": saved_prediction,
+                    "shared_scaffold": scaffold_prediction,
+                    "shared_plus_physical": shared_physical_prediction,
+                    "shared_plus_social": shared_social_prediction,
+                    "shared_plus_physical_social": shared_full_prediction,
                 },
                 "probabilities": {
                     "spatial_only_executed": spatial_probs,
                     "social_only_executed": social_probs,
                     "spatial_social_executed_recomputed": full_probs,
+                    "shared_scaffold": scaffold_probs,
+                    "shared_plus_physical": shared_physical_probs,
+                    "shared_plus_social": shared_social_probs,
+                    "shared_plus_physical_social": shared_full_probs,
                 },
             }
         )
@@ -216,13 +353,16 @@ def main() -> None:
         index = row["index"]
         row["answer"] = str(questions[index]["answer"]).lower()
         row["question_type"] = str(questions[index]["question_type"])
+        row["fold"] = episode_fold(row["episode"])
+
+    router_policies = add_oof_source_router(prediction_rows)
 
     by_type: dict[str, list[dict]] = defaultdict(list)
     for row in prediction_rows:
         by_type[row["question_type"]].append(row)
 
     condition_metrics = {}
-    for condition in CONDITIONS:
+    for condition in (*STRICT_CONDITIONS, *SHARED_BASE_CONDITIONS, ROUTED_CONDITION):
         condition_metrics[condition] = {
             **metrics(prediction_rows, condition),
             "by_question_type": {
@@ -236,6 +376,7 @@ def main() -> None:
         primary_rows.append(
             {
                 "index": index,
+                "episode": str(saved["episode"]),
                 "question_type": str(saved["question_type"]),
                 "answer": str(saved["answer"]).lower(),
                 "predictions": {
@@ -261,13 +402,17 @@ def main() -> None:
     uncertainty_count = sum(bool(row.get("uncertainty_triggered")) for row in primary.values())
     direct_retries = sum(bool(row.get("direct_retry_used")) for row in primary.values())
     summary = {
-        "schema_version": 1,
+        "schema_version": 2,
         "status": "complete_offline; equal-budget direct pending",
         "scientific_boundary": {
             "prediction_function_used_gold": False,
-            "question_type_used_for_routing": False,
+            "question_type_used_for_routing": True,
             "mmtom_previously_inspected": True,
             "interpretation": "diagnostic ablation, not clean held-out validation",
+            "cached_social_recovery": (
+                "neural prefix recovered before deterministic-rules boundary; saved candidate, "
+                "query-evidence, spatial-bridge, and posterior records excluded"
+            ),
         },
         "inputs": {
             "cached_trace_path": str(args.cached_traces.relative_to(ROOT)),
@@ -278,13 +423,42 @@ def main() -> None:
         "strict_cached_trace_ablation": {
             "backbone": "Qwen3-VL-8B-Instruct (cache-producing local backend default)",
             "examples": len(prediction_rows),
-            "reconstruction_mismatches_vs_saved_full": reconstruction_mismatches,
-            "maximum_reconstruction_probability_error": maximum_reconstruction_probability_error,
+            "reconstruction_mismatches_vs_saved_full": "not comparable: corrected strict ablation removes shared answer heuristics and cached posteriors",
+            "maximum_reconstruction_probability_error": None,
             "conditions": condition_metrics,
             "paired_comparisons": [
                 compare(prediction_rows, "spatial_only_executed", "spatial_social_executed_recomputed"),
                 compare(prediction_rows, "social_only_executed", "spatial_social_executed_recomputed"),
                 compare(prediction_rows, "spatial_only_executed", "social_only_executed"),
+            ],
+        },
+        "shared_scaffold_ablation": {
+            "backbone": "Qwen3-VL-8B-Instruct (cache-producing local backend default)",
+            "examples": len(prediction_rows),
+            "protocol": (
+                "Every condition receives the identical question-derived candidate/rule "
+                "scaffold; clean Physical and neural Social evidence are then added or removed."
+            ),
+            "conditions": {
+                condition: condition_metrics[condition]
+                for condition in (*SHARED_BASE_CONDITIONS, ROUTED_CONDITION)
+            },
+            "oof_router": {
+                "protocol": (
+                    "five-fold episode-held-out diagnostic; source selected per question type "
+                    "using only the other four folds; no held-out episode label used"
+                ),
+                "fold_assignment": "int(sha256(str(episode))[:8], 16) % 5",
+                "tie_break": "physical",
+                "policies": router_policies,
+            },
+            "paired_comparisons": [
+                compare(prediction_rows, "shared_scaffold", "shared_plus_physical"),
+                compare(prediction_rows, "shared_scaffold", "shared_plus_social"),
+                compare(prediction_rows, "shared_plus_physical", "shared_plus_physical_social"),
+                compare(prediction_rows, "shared_plus_social", "shared_plus_physical_social"),
+                compare(prediction_rows, "shared_plus_physical", ROUTED_CONDITION),
+                compare(prediction_rows, "shared_plus_physical_social", ROUTED_CONDITION),
             ],
         },
         "frozen_primary_same_model_comparison": {
@@ -299,7 +473,9 @@ def main() -> None:
             "direct": "available on frozen primary",
             "spatial_only": "strictly recomputed from frozen spatial trace with no neural Social evidence",
             "social_only": "strictly recomputed from frozen candidate-hidden neural Social evidence with no Spatial bridge",
-            "spatial_social_executed": "strictly recomputed and exactly checked against cached saved prediction",
+            "spatial_social_executed": "strictly recomputed from the union of clean Physical and Social evidence",
+            "shared_scaffold_conditions": "same query/rule scaffold in all four comparable component conditions",
+            "oof_router": "episode-held-out diagnostic fitted on labeled folds; not a frozen hidden-test result",
             "spatial_social_unexecuted": (
                 "not identifiable from cached outputs: no final-answer prediction over raw Spatial+Social code "
                 "without executed traces was saved; must be generated by a new model call"
@@ -343,7 +519,7 @@ def main() -> None:
     (args.output_dir / "summary.json").write_text(
         json.dumps(summary, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
     )
-    print(json.dumps({"conditions": condition_metrics, "reconstruction_mismatches": len(reconstruction_mismatches)}, indent=2))
+    print(json.dumps({"conditions": condition_metrics}, indent=2))
 
 
 if __name__ == "__main__":

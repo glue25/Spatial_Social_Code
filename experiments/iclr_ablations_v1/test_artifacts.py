@@ -24,6 +24,15 @@ def load_execution_runner():
     return module
 
 
+def load_offline_runner():
+    path = ROOT / "experiments" / "iclr_ablations_v1" / "run_offline_mmtom_ablations.py"
+    spec = importlib.util.spec_from_file_location("offline_ablation_runner", path)
+    module = importlib.util.module_from_spec(spec)
+    assert spec.loader is not None
+    spec.loader.exec_module(module)
+    return module
+
+
 def test_equal_call_schedule_is_fixed_and_exact():
     schedule = load_runner().call_schedule(list(range(600)))
     assert len(schedule) == 600
@@ -45,12 +54,55 @@ def test_offline_reconstruction_and_counts():
     summary = json.loads(path.read_text(encoding="utf-8"))
     ablation = summary["strict_cached_trace_ablation"]
     assert ablation["examples"] == 600
-    assert ablation["reconstruction_mismatches_vs_saved_full"] == []
-    assert ablation["maximum_reconstruction_probability_error"] == 0.0
-    assert ablation["conditions"]["spatial_only_executed"]["correct"] == 444
-    assert ablation["conditions"]["social_only_executed"]["correct"] == 450
+    assert "not comparable" in ablation["reconstruction_mismatches_vs_saved_full"]
+    assert ablation["maximum_reconstruction_probability_error"] is None
+    assert ablation["conditions"]["spatial_only_executed"]["correct"] == 313
+    assert ablation["conditions"]["social_only_executed"]["correct"] == 298
+    assert ablation["conditions"]["spatial_social_executed_recomputed"]["correct"] == 319
+    shared = summary["shared_scaffold_ablation"]
+    assert shared["conditions"]["shared_scaffold"]["correct"] == 418
+    assert shared["conditions"]["shared_plus_physical"]["correct"] == 452
+    assert shared["conditions"]["shared_plus_social"]["correct"] == 415
+    assert shared["conditions"]["shared_plus_physical_social"]["correct"] == 450
+    assert shared["conditions"]["oof_physical_social_router"]["correct"] == 464
+    assert len(shared["oof_router"]["policies"]) == 5
+    assert all(
+        policy["policy"]
+        == {
+            "1.1": "social",
+            "1.2": "social",
+            "1.3": "physical",
+            "2.1": "social",
+            "2.2": "physical",
+            "2.3": "physical",
+            "2.4": "physical",
+        }
+        for policy in shared["oof_router"]["policies"]
+    )
     assert summary["frozen_primary_same_model_comparison"]["conditions"]["direct"]["correct"] == 406
     assert summary["frozen_primary_same_model_comparison"]["conditions"]["frozen_spatial_social"]["correct"] == 470
+
+
+def test_episode_fold_keeps_questions_from_one_episode_together():
+    runner = load_offline_runner()
+    assert runner.episode_fold("12") == runner.episode_fold("12")
+    assert 0 <= runner.episode_fold("12") < 5
+
+
+def test_cached_neural_recovery_removes_saved_answer_state():
+    runner = load_offline_runner()
+    raw = "\n".join(
+        [
+            "M.belief(1, 'A', 'cup is in box', 0.8, 'neural evidence')",
+            "M.intent(1, 'A', 'inspect box', 0.7, 'deterministic action rule')",
+            "M.candidate('A', 'answer_belief', 'A', 'cup is in box')",
+            "M.posterior(-1, 'A', 'answer_belief', 'cup is in box', 0.9, 'saved', label='A')",
+        ]
+    )
+    rules = "M.intent(1, 'A', 'inspect box', 0.7, 'deterministic action rule')"
+    recovered = runner.recover_neural_evidence(raw, rules)
+    assert recovered == "M.belief(1, 'A', 'cup is in box', 0.8, 'neural evidence')"
+    assert "posterior" not in recovered
 
 
 def test_execution_effect_changes_only_trace_slots():

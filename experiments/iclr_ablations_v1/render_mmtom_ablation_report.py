@@ -74,6 +74,8 @@ def main() -> None:
     main_conditions = component["conditions"]
     paired_comparisons = component["paired_comparisons"]
     strict_conditions = strict["strict_cached_trace_ablation"]["conditions"]
+    shared = strict["shared_scaffold_ablation"]
+    shared_conditions = shared["conditions"]
     method = main_conditions["full_hybrid_dense_authoritative"]
     direct = main_conditions["direct"]
     direct_vs_method = next(
@@ -89,8 +91,12 @@ def main() -> None:
     if equal_score_path.is_file() and equal_predictions_path.is_file():
         equal_score = load_json(equal_score_path)
         equal_rows = load_jsonl(equal_predictions_path)
-        if equal_score.get("valid") != 600 or equal_score.get("total") != 600 or len(equal_rows) != 600:
-            raise ValueError("equal-call Direct must contain 600 valid paired predictions")
+        if (
+            equal_score.get("total") != 600
+            or equal_score.get("valid", 0) + equal_score.get("invalid", 0) != 600
+            or len(equal_rows) != 600
+        ):
+            raise ValueError("equal-call Direct must contain 600 completed paired predictions")
         equal_by_index = {int(row["index"]): row for row in equal_rows}
         if set(equal_by_index) != set(range(600)):
             raise ValueError("equal-call Direct index set must be exactly 0..599")
@@ -118,6 +124,7 @@ def main() -> None:
         "main_component_ablation": main_conditions,
         "main_component_paired_comparisons": paired_comparisons,
         "strict_cached_trace_ablation": strict_conditions,
+        "corrected_shared_scaffold_ablation": shared,
         "execution_ablation": execution,
         "equal_call_direct": equal_call,
         "equal_call_direct_vs_method": equal_comparison,
@@ -148,7 +155,7 @@ def main() -> None:
     lines = [
         "# MMToM ICLR 消融结果",
         "",
-        "## 主组件消融",
+        "## 已发布系统路径（历史结果）",
         "",
         "| 条件 | 正确数 | 准确率 |",
         "|---|---:|---:|",
@@ -159,7 +166,39 @@ def main() -> None:
 
     lines.extend([
         "",
-        "## 冻结 trace 表示消融",
+        "上表混合了不同阶段的系统配置，用于记录最终系统演进，不再作为干净的组件互补性证据。",
+        "",
+        "## 修复后的同口径组件消融",
+        "",
+        "| 条件 | 正确数 | 准确率 |",
+        "|---|---:|---:|",
+    ])
+    for key, label in [
+        ("shared_scaffold", "公共读题/规则底座"),
+        ("shared_plus_physical", "底座 + Physical"),
+        ("shared_plus_social", "底座 + Social"),
+        ("shared_plus_physical_social", "底座 + Physical + Social（直接合并）"),
+        ("oof_physical_social_router", "底座 + P/S episode-OOF 路由"),
+    ]:
+        row = shared_conditions[key]
+        lines.append(f"| {label} | {row['correct']}/{row['total']} | {pct(row['accuracy'])} |")
+
+    router_comparison = next(
+        row
+        for row in shared["paired_comparisons"]
+        if row["left"] == "shared_plus_physical"
+        and row["right"] == "oof_physical_social_router"
+    )
+    router_ci = router_comparison["episode_cluster_bootstrap_95_ci"]
+    lines.extend([
+        "",
+        "这里才是与原 74–75% 表同口径的比较。直接把两种证据混在一起仍比 Physical 低 0.33 pp；原因是 Social 在 1.1/1.2/2.1 类问题更好，而 Physical 在 1.3/2.2/2.3/2.4 更好，统一权重会互相覆盖。",
+        f"按 episode 分成五折、只用另外四折选择每类问题的数据源后，路由结果为 464/600（77.33%），比 Physical 高 2.00 pp；episode-cluster bootstrap 95% CI [{100.0 * router_ci[0]:.2f}, {100.0 * router_ci[1]:.2f}] pp，McNemar p={router_comparison['mcnemar_exact_p']:.4g}。这是交叉验证诊断，不是独立隐藏测试。",
+    ])
+
+    lines.extend([
+        "",
+        "## 裸证据诊断（不可与上一表直接比较）",
         "",
         "| 条件 | 正确数 | 准确率 |",
         "|---|---:|---:|",
@@ -171,6 +210,14 @@ def main() -> None:
     ]:
         row = strict_conditions[key]
         lines.append(f"| {label} | {row['correct']}/{row['total']} | {pct(row['accuracy'])} |")
+
+    strict_comparison = strict["strict_cached_trace_ablation"]["paired_comparisons"][0]
+    cluster_ci = strict_comparison["episode_cluster_bootstrap_95_ci"]
+    lines.extend([
+        "",
+        "该表还移除了公共读题/规则底座，因此分数降到约 50%；它只检查裸证据，不代表系统性能。表内已修复历史缓存污染：旧 `social_raw_evidence` 实际包含完整方法的 candidate、bridge 与 posterior，不能直接作为 Social-only 输入。",
+        f"Full 比 Spatial-only 高 {100.0 * strict_comparison['accuracy_delta_right_minus_left']:.2f} pp；episode-cluster bootstrap 95% CI [{100.0 * cluster_ci[0]:.2f}, {100.0 * cluster_ci[1]:.2f}] pp，McNemar p={strict_comparison['mcnemar_exact_p']:.4g}。方向为正但不显著。",
+    ])
 
     raw = execution["conditions"]["raw_code_only"]
     executed = execution["conditions"]["executed_trace"]
@@ -190,7 +237,8 @@ def main() -> None:
     ])
     if equal_comparison is not None:
         lines[-2] = (
-            f"等调用 Direct 为 {equal_call['correct']}/{equal_call['valid']}（{pct(equal_call['accuracy'])}），"
+            f"等调用 Direct 为 {equal_call['correct']}/{equal_call['total']}（{pct(equal_call['accuracy'])}；"
+            f"invalid={equal_call['invalid']}），"
             f"完整方法高 {100.0 * equal_comparison['delta_method_minus_equal_call']:.2f} pp，"
             f"McNemar p={equal_comparison['mcnemar_exact_p']:.4g}。组件条件使用冻结输出做离线重算；"
             "MMToM 已在开发过程中被查看，因此属于诊断性全量评测。"

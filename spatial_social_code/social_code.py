@@ -288,8 +288,15 @@ def _completed_inspection(sentence: str) -> bool:
     )
 
 
-def compile_query_candidates(question: str) -> SocialCodeResult:
-    """Add A/B-aligned hypotheses only after candidate-hidden extraction."""
+def compile_query_candidates(
+    question: str, *, include_heuristic_evidence: bool = True
+) -> SocialCodeResult:
+    """Register A/B hypotheses, optionally adding question-derived heuristics.
+
+    Component ablations set ``include_heuristic_evidence=False`` so the shared
+    query adapter cannot itself answer the question and mask the contribution
+    of Physical or Social evidence.
+    """
     options = answer_options(question)
     agent, _ = action_history(question)
     if len(options) != 2:
@@ -308,6 +315,16 @@ def compile_query_candidates(question: str) -> SocialCodeResult:
         calls.append(
             f"M.candidate({_literal(agent)}, {_literal(answer_variable)}, {label!r}, "
             f"{_literal(hypothesis)}, 0.5, 'MMToM answer option')"
+        )
+
+    if not include_heuristic_evidence:
+        code = "\n".join(calls)
+        return SocialCodeResult(
+            "query_candidates",
+            code,
+            execute_social(code),
+            ("query_candidates",),
+            diagnostics={"variable": answer_variable, "candidates": len(options)},
         )
 
     sentences = _action_sentences(question)
@@ -539,18 +556,20 @@ def compile_spatial_bridge(question: str, spatial_trace: str) -> SocialCodeResul
                     _entity_match(fact_container, container) and _entity_match(fact_item, item)
                     for fact_container, fact_item, _ in contains
                 )
+                # Spatial Code is open-world: an omitted containment fact is
+                # unknown, not evidence that the item is absent.  Only emit
+                # answer evidence when a matching positive fact was actually
+                # compiled.  Negative evidence requires an explicit negative
+                # or complete-inventory record, neither of which this schema
+                # currently provides.
+                if not present:
+                    continue
                 likelihood = 0.92 if negated != present else 0.08
                 calls.append(
                     f"M.query_evidence({t}, {_literal(agent)}, {_literal(answer_variable)}, "
                     f"{_literal(hypothesis)}, {likelihood!r}, 0.9, "
                     f"{_literal('opened-container observation grounded in Spatial Code: ' + sentence)})"
                 )
-                if not present:
-                    calls.append(
-                        f"M.observe({t}, {_literal(agent)}, "
-                        f"{_literal(item + ' is not inside ' + container)}, "
-                        f"'closed-world result of completed container inspection', 0.86)"
-                    )
 
     if variable == "goal" and contains:
         for _, hypothesis in options:
@@ -708,6 +727,20 @@ def _compatibility(evidence: str, hypothesis: str) -> float:
     return min(0.92, max(0.08, 0.30 + 0.50 * overlap + verb_match))
 
 
+def _explicit_belief_likelihood(evidence: str, hypothesis: str) -> float | None:
+    """Match an explicit belief to an answer belief without lexical guessing."""
+    evidence_claim = _belief_claim(evidence)
+    hypothesis_claim = _belief_claim(hypothesis)
+    if evidence_claim is None or hypothesis_claim is None:
+        return None
+    same_relation = _entity_match(evidence_claim[0], hypothesis_claim[0]) and _entity_match(
+        evidence_claim[1], hypothesis_claim[1]
+    )
+    if not same_relation:
+        return None
+    return 0.9 if evidence_claim[2] == hypothesis_claim[2] else 0.1
+
+
 def _noisy_or(left: float, right: float) -> float:
     return 1.0 - (1.0 - min(max(left, 0.0), 1.0)) * (
         1.0 - min(max(right, 0.0), 1.0)
@@ -734,6 +767,7 @@ def compile_native_bayesian(
     candidates: dict[tuple[str, str, int, str], dict[str, Any]] = {}
     actions: list[dict[str, Any]] = []
     observations: list[dict[str, Any]] = []
+    beliefs: list[dict[str, Any]] = []
     query_evidence: list[dict[str, Any]] = []
 
     for record in records:
@@ -746,6 +780,7 @@ def compile_native_bayesian(
         prior = float(values.get("confidence", values.get("prior", 0.5)))
         if kind == "belief":
             variable, hypothesis = "belief", str(values["fact"])
+            beliefs.append(values)
         elif kind == "goal":
             variable, hypothesis = "goal", str(values["goal"])
         elif kind == "intent":
@@ -829,7 +864,24 @@ def compile_native_bayesian(
                 weight = float(evidence.get("confidence", 0.5))
                 score += weight * math.log(likelihood / (1.0 - likelihood))
                 used += 1
-        if base_variable == "belief":
+        if base_variable == "belief" and candidate["variable"].startswith("answer_"):
+            # Answer candidates use t=-1 as a sentinel, so the ordinary
+            # temporal filter below would reject every explicit belief.  Only
+            # semantically matching belief records are admitted here; generic
+            # observations remain excluded to avoid treating visibility or
+            # motion as a belief about an answer choice.
+            for belief in beliefs:
+                if str(belief.get("agent")) != candidate["agent"]:
+                    continue
+                likelihood = _explicit_belief_likelihood(
+                    str(belief.get("fact", "")), candidate["hypothesis"]
+                )
+                if likelihood is None:
+                    continue
+                weight = float(belief.get("confidence", 0.5))
+                score += weight * math.log(likelihood / (1.0 - likelihood))
+                used += 1
+        elif base_variable == "belief":
             for observation in observations:
                 if str(observation.get("agent")) != candidate["agent"]:
                     continue

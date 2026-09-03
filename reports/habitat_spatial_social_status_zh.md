@@ -1,6 +1,6 @@
 # Habitat Spatial-Social Code 实验状态
 
-更新时间：2026-09-02。
+更新时间：2026-09-03。
 
 ## 论文主实验
 
@@ -38,6 +38,24 @@ success 提升 8.33 pp，但样本仍小，只作为辅助结果。
 低 6.48 pp；Spatial-only 还比 Direct 低 2.78 pp。当前最强 Habitat 条件是
 Social-only，而不是 P+S。论文可以报告 P+S 相对 Direct 的稳定完成度增益，
 但不能声称 Spatial Code 在 Habitat 中带来额外增益。
+
+## Spatial v2 诊断
+
+根据旧版 trace 中重复执行同一失败 Navigate/Place 的错误，v2 加入 UNKNOWN
+证据门控、房间权限检查、禁止原样重复失败动作和有限重试后 Find/委派。该版本
+在 seed 891003 的同一12题上完成24个新 run：
+
+| 条件 | Task success | 平均目标完成度 |
+|---|---:|---:|
+| Direct（同 seed 既有对照） | 0/12 | 44.44% |
+| Spatial-only v1 | 0/12 | 38.19% |
+| Spatial-only v2 | 0/12 | **44.44%** |
+| Social-only（同 seed 既有对照） | **3/12** | **63.89%** |
+| P+S v1 | 2/12 | 56.94% |
+| P+S v2 | 1/12 | 54.86% |
+
+因此 v2 修复了 Spatial-only 的平均退化，但没有改善 P+S 融合。它是开发诊断，
+不替代三 seed 主结果，也不能据此选择后再在同一12题上宣称泛化提升。
 
 ## 已有对照与边界
 

@@ -23,22 +23,56 @@ load_service_config(Path(os.environ["CREDENTIALS_FILE"]))
 PY
 }
 
-cd "$ROOT/MA-EgoQA"
-while ! credentials_ready; do
-  printf 'state=waiting_for_gemini_credentials\ncredentials_file=%s\n' "$CREDENTIALS_FILE" > "$STATUS"
-  echo "[$(date -u '+%Y-%m-%dT%H:%M:%SZ')] waiting for frozen Gemini endpoint credentials at $CREDENTIALS_FILE"
-  sleep 60
-done
+wait_for_credentials() {
+  cd "$ROOT/MA-EgoQA"
+  while ! credentials_ready; do
+    printf 'state=waiting_for_gemini_credentials\ncredentials_file=%s\n' "$CREDENTIALS_FILE" > "$STATUS"
+    echo "[$(date -u '+%Y-%m-%dT%H:%M:%SZ')] waiting for frozen Gemini endpoint credentials at $CREDENTIALS_FILE"
+    sleep 60
+  done
+  cd "$ROOT"
+}
+
+ma_complete() {
+  "$MA_PYTHON" -c 'import json, pathlib, sys; p=pathlib.Path(sys.argv[1]); d=json.loads(p.read_text()) if p.is_file() else {}; raise SystemExit(0 if d.get("successful") == 100 and d.get("errors") == 0 else 1)' \
+    "$ROOT/MA-EgoQA/data/baselines/video_component_ablation_balanced100_summary.json"
+}
+
+equal_call_complete() {
+  "$MA_PYTHON" -c 'import json, pathlib, sys; p=pathlib.Path(sys.argv[1]); d=json.loads(p.read_text()) if p.is_file() else {}; raise SystemExit(0 if d.get("total") == 600 and d.get("valid", 0) + d.get("invalid", 0) == 600 else 1)' \
+    "$ROOT/workdirs/iclr_ablations_v1/equal_call_direct_score.json"
+}
 
 cd "$ROOT"
-printf 'state=running_mmtom_equal_call\ncredentials_file=%s\n' "$CREDENTIALS_FILE" > "$STATUS"
-"$MA_PYTHON" experiments/iclr_ablations_v1/run_equal_call_direct.py \
-  --credentials-file "$CREDENTIALS_FILE" --workers 4
-"$MA_PYTHON" experiments/iclr_ablations_v1/run_equal_call_direct.py --score
 
-printf 'state=running_ma_component_ablation\ncredentials_file=%s\n' "$CREDENTIALS_FILE" > "$STATUS"
-"$MA_PYTHON" MA-EgoQA/egomas/src/evaluate_video_component_ablation_jdcloud.py \
-  --credentials-file "$CREDENTIALS_FILE" --workers 4
+# MA-EgoQA is the requested priority job.  Keep retrying only missing/error
+# rows so the queue survives unavailable or temporarily failing endpoints.
+until ma_complete; do
+  wait_for_credentials
+  printf 'state=running_ma_component_ablation\ncredentials_file=%s\n' "$CREDENTIALS_FILE" > "$STATUS"
+  if ! "$MA_PYTHON" MA-EgoQA/egomas/src/evaluate_video_component_ablation_jdcloud.py \
+    --credentials-file "$CREDENTIALS_FILE" --workers 4; then
+    echo "[$(date -u '+%Y-%m-%dT%H:%M:%SZ')] MA runner failed; retrying in 60 seconds"
+  fi
+  ma_complete || sleep 60
+done
+
+# Then finish the registered call-count control.  The Python runner also
+# retries saved error rows while preserving successful checkpoints.
+until equal_call_complete; do
+  wait_for_credentials
+  printf 'state=running_mmtom_equal_call\ncredentials_file=%s\n' "$CREDENTIALS_FILE" > "$STATUS"
+  if ! "$MA_PYTHON" experiments/iclr_ablations_v1/run_equal_call_direct.py \
+    --credentials-file "$CREDENTIALS_FILE" --workers 4; then
+    echo "[$(date -u '+%Y-%m-%dT%H:%M:%SZ')] equal-call runner failed; retrying in 60 seconds"
+  fi
+  if ! "$MA_PYTHON" experiments/iclr_ablations_v1/run_equal_call_direct.py --score; then
+    echo "[$(date -u '+%Y-%m-%dT%H:%M:%SZ')] equal-call output incomplete; retrying in 60 seconds"
+    sleep 60
+  fi
+done
+
+"$MA_PYTHON" experiments/iclr_ablations_v1/render_mmtom_ablation_report.py
 
 printf 'state=complete\ncompleted=%s\n' "$(date -u '+%Y-%m-%dT%H:%M:%SZ')" > "$STATUS"
 touch "$OUT/GEMINI_ABLATIONS_COMPLETE"

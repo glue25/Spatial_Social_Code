@@ -33,6 +33,8 @@ They are not call-, token-, latency-, or FLOP-matched unless explicitly noted.
 |---|---:|---:|---:|
 | MA-EgoQA (video) | **904/1741 (51.92%)** | 848/1741 (48.71%) | **+3.22 pp** |
 | MMToM | **470/600 (78.33%)** | 406/600 (67.67%) | **+10.67 pp** |
+| EnactToM/Habitat frozen-12 (goal completion) | **53.47%** | 45.83% | **+7.64 pp** |
+| CoMind train recording-heldout OOF (bbox IoU@0.5) | **6.47%--23.15%** | 0.11%--0.34% | metric-dependent |
 
 McNemar's exact test gives `p = 0.00388` on MA-EgoQA and `p = 3.17e-05`
 on MMToM. Aggregate machine-readable summaries are included with the code.
@@ -40,7 +42,7 @@ See the [submission results and baseline policy](reports/submission_results_and_
 for the component evidence, Habitat results, official published references,
 and the strict comparability boundary.
 
-## Exploratory CoMind paired result
+## CoMind real-world grounding track
 
 A deterministic 300-example CoMind train subset (100 examples per task) was
 also evaluated with `gpt-5.6-sol`, using matched inputs for Direct and
@@ -57,8 +59,11 @@ A subsequent train-only mechanism study processed all 6,877 labeled samples
 with explicit visual grounding and recording-heldout policy selection. On the
 6,673-sample strict common set, bbox IoU@0.5 improved from near zero to
 6.47%--23.15% across the three tasks, without using held-out-recording labels
-to select each fold's policy. This remains an OOF analysis of the labeled
-training corpus, not an official hidden-test result. See the
+to select each fold's policy; handover category also improved from 22.82%
+(Direct) / 24.16% (raw Spatial-Social) to 31.88%. We report this as the fourth
+main environment because it directly tests Spatial grounding in real
+multi-view interactions. It remains an OOF analysis of the labeled training
+corpus, not an official hidden-test or leaderboard result. See the
 [grounding/OOF report](reports/comind_grounding_oof_results_zh.md) and
 [machine-readable summary](reports/comind_grounding_oof_summary.json).
 

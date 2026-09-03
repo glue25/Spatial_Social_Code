@@ -114,7 +114,11 @@ def infer_one(index: int, row: dict, calls: int, frames_root: Path, client: JDCl
     for replicate in range(calls):
         response = client.generate_parts(
             media + [{"text": PROMPT.format(replicate=replicate + 1, question=row["question"])}],
-            max_output_tokens=64,
+            # Gemini 3 Pro may spend most of a very small budget on internal
+            # reasoning and return MAX_TOKENS with no visible A/B token.  The
+            # answer contract is still one character; this larger ceiling
+            # prevents empty responses and does not add logical calls.
+            max_output_tokens=512,
         )
         raw.append(response)
         predictions.append(parse_ab(response))
@@ -173,14 +177,26 @@ def main() -> None:
             raise ValueError("scoring requires all 600 predictions")
         valid = [index for index in indices if existing[index].get("prediction") in {"a", "b"}]
         correct = sum(existing[index]["prediction"] == str(rows[index]["answer"]).lower() for index in valid)
-        score = {"valid": len(valid), "total": 600, "correct": correct, "accuracy": correct / len(valid) if valid else None}
+        score = {
+            "valid": len(valid),
+            "invalid": 600 - len(valid),
+            "total": 600,
+            "correct": correct,
+            # Invalid contract outputs count as wrong in the benchmark result.
+            "accuracy": correct / 600,
+            "valid_only_accuracy": correct / len(valid) if valid else None,
+        }
         args.output.with_name("equal_call_direct_score.json").write_text(json.dumps(score, indent=2) + "\n")
         print(json.dumps(score))
         return
 
     config = load_service_config(args.credentials_file, args.model)
     client = JDCloudGeminiClient(config, timeout_seconds=600, max_attempts=5)
-    pending = [index for index in indices if index not in existing]
+    # Retry saved error rows on a resumed unattended run; successful rows are
+    # never called again.
+    pending = [
+        index for index in indices if index not in existing or "error" in existing[index]
+    ]
     with ThreadPoolExecutor(max_workers=args.workers) as executor:
         futures = {
             executor.submit(infer_one, index, rows[index], schedule[index], args.frames, client): index
