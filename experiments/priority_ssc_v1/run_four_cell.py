@@ -116,9 +116,13 @@ def main() -> None:
         for cell, (physical, social) in states.items():
             if int(predictions.get(cell, -1)) >= 0:
                 continue
-            response, metric = one_call(client, FINAL_TEMPLATE.format(physical=physical, social=social, labels=", ".join(labels), question=question))
-            predictions[cell] = parse_choice(response, labels)
-            responses[cell], costs[cell] = response, metric
+            try:
+                response, metric = one_call(client, FINAL_TEMPLATE.format(physical=physical, social=social, labels=", ".join(labels), question=question))
+                predictions[cell] = parse_choice(response, labels)
+                responses[cell], costs[cell] = response, metric
+            except Exception as error:
+                predictions[cell] = -1
+                responses[cell] = f"ERROR: {type(error).__name__}: {error}"
         existing[index] = {"schema_version": 1, "dataset": args.dataset, "model": model_name, "index": index, "answer_index": answer_index, "predicted_physical_confirmed_correct": bool(human["predicted_physical_confirmed_correct"]), "predictions": predictions, "correct": {cell: int(predictions.get(cell, -1)) == answer_index for cell in FOUR_CELLS}, "responses": responses, "call_metrics": costs}
         atomic_jsonl(output, (existing[i] for i in sorted(existing)))
         atomic_json(output.with_name(output.stem + "_summary.json"), summary([existing[int(row["index"])] for row in verified if int(row["index"]) in existing], model_name))

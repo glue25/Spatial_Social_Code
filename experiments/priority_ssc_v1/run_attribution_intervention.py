@@ -110,9 +110,13 @@ def main() -> None:
         correct = {}
         for name, variant in example["variants"].items():
             if int(predictions.get(name, -1)) < 0:
-                prompt = TEMPLATE.format(physical=example["physical"], social=variant["social"], target=example["target"], object_name=example["object_name"], location=example["location"])
-                responses[name], metrics[name] = one_call(client, prompt)
-                predictions[name] = parse_choice(responses[name], "AB")
+                try:
+                    prompt = TEMPLATE.format(physical=example["physical"], social=variant["social"], target=example["target"], object_name=example["object_name"], location=example["location"])
+                    responses[name], metrics[name] = one_call(client, prompt)
+                    predictions[name] = parse_choice(responses[name], "AB")
+                except Exception as error:
+                    responses[name] = f"ERROR: {type(error).__name__}: {error}"
+                    predictions[name] = -1
             correct[name] = int(predictions[name]) == int(variant["answer_index"])
         existing[pair_id] = {"schema_version": 1, "pair_id": pair_id, "intervention_type": example["intervention_type"], "model": model, "physical_digest": example["physical_digest"], "physical_digest_equal": len({example["physical_digest"] for _ in example["variants"]}) == 1, "predictions": predictions, "correct": correct, "responses": responses, "call_metrics": metrics}
         atomic_jsonl(output, (existing[i] for i in sorted(existing)))

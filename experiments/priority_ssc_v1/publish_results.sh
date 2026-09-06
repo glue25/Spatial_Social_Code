@@ -17,7 +17,9 @@ for source in \
   "$OUT/mmtom_local-qwen32b_four_cell_summary.json" \
   "$OUT/maegoqa_local-qwen32b_four_cell_summary.json"; do
   if [[ -f "$source" ]]; then
-    cp "$source" "$ROOT/reports/priority_ssc_$(basename "$source")"
+    if python -c 'import json,sys; d=json.load(open(sys.argv[1])); ok=(d.get("fully_complete") in (d.get("selected"), 100) and d.get("fully_complete") is not None) or (d.get("complete_pairs")==d.get("selected_pairs") and d.get("complete_pairs") is not None) or d.get("status")=="complete"; raise SystemExit(0 if ok else 1)' "$source"; then
+      cp "$source" "$ROOT/reports/priority_ssc_$(basename "$source")"
+    fi
   fi
 done
 
