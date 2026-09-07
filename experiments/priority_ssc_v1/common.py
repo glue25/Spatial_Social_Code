@@ -80,7 +80,7 @@ def parse_choice(text: str, labels: str) -> int:
     except json.JSONDecodeError:
         payload = {}
     answer = str(payload.get("answer", "")).strip().upper() if isinstance(payload, dict) else ""
-    if answer[:1] in labels:
+    if answer and answer[0] in labels:
         return labels.index(answer[0])
     match = re.search(r"(?i)[\"']?answer[\"']?\s*[:=]\s*[\"']?([A-E])\b", text)
     return labels.index(match.group(1).upper()) if match and match.group(1).upper() in labels else -1

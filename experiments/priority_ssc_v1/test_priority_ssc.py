@@ -28,6 +28,8 @@ def test_target_key_guard_is_recursive() -> None:
 
 def test_choice_parser_and_paired_direction() -> None:
     assert parse_choice('{"answer":"B"}', "AB") == 1
+    assert parse_choice('{"answer":"A","reasoning":"truncated', "AB") == 0
+    assert parse_choice("", "AB") == -1
     rows = [
         {"correct": {"left": False, "right": True}},
         {"correct": {"left": True, "right": True}},
