@@ -347,11 +347,17 @@ def main() -> None:
     parser.add_argument("--credentials-file", type=Path, default=DEFAULT_CREDENTIALS_FILE)
     parser.add_argument("--model")
     parser.add_argument("--workers", type=int, default=16)
+    parser.add_argument("--min-request-interval", type=float, default=0.0)
     parser.add_argument("--keep-errors", action="store_true")
     args = parser.parse_args()
 
     config = load_service_config(args.credentials_file, args.model)
-    client = JDCloudGeminiClient(config, timeout_seconds=600, max_attempts=5)
+    client = JDCloudGeminiClient(
+        config,
+        timeout_seconds=600,
+        max_attempts=5,
+        min_request_interval_seconds=args.min_request_interval,
+    )
     rows = load_questions(args.questions)
     selected = args.indices if args.indices else select_indices(rows, args.samples_per_type)
     existing = load_jsonl(args.output)
