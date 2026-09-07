@@ -1,5 +1,7 @@
 # Spatial-Social Code：投稿结果与 baseline 口径
 
+> **2026-09-07 方法审计更正：** 本文中的 MMToM 470/600（78.33%）使用了现已移出正式方法的答案定向 `query_evidence` 启发式，只能作为 legacy 结果，不能再表述为干净 SSC 主结果。无该字段的固定状态贝叶斯开发重算见 `mmtom_clean_bayesian_rescore_summary.json`；正式替代数字须在冻结方案后重新评测。
+
 更新日期：2026-09-03。
 
 ## 结论

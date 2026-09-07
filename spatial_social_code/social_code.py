@@ -1,11 +1,10 @@
-"""Compilers and inference for the Social Code intermediate representation.
+"""Compilers and state inference for the Social Code representation.
 
-Social Code is an independent social-state model.  Neural extraction,
-deterministic action rules, and Bayesian inference are evidence components;
-none of them defines the method by itself.  The default ``hybrid`` path uses
-all three native components and does not depend on AutoToM.  An AutoToM
-posterior can be admitted explicitly as one additional external evidence
-source.
+The default paths emit answer-independent observations, beliefs, goals, and
+intents.  Answer choices are hidden from the neural state compiler.  Final
+option comparison lives in :mod:`clean_bayesian`.  Historical answer-directed
+``query_evidence`` behavior is quarantined behind explicit ``legacy_*`` source
+names and is not accepted by the public runtime.
 """
 
 from __future__ import annotations
@@ -18,14 +17,38 @@ from collections import OrderedDict, defaultdict
 from dataclasses import dataclass, field
 from typing import Any, Callable, Iterable
 
-from runtime import UnsafeProgram, execute_social
+from runtime import UnsafeProgram, execute_social, execute_social_legacy
 
 
-SOCIAL_SOURCES = ("neural", "rules", "bayesian", "neural_rules", "hybrid")
+SOCIAL_SOURCES = (
+    "neural",
+    "rules",
+    "bayesian",
+    "neural_rules",
+    "hybrid",
+    "legacy_bayesian",
+    "legacy_hybrid",
+)
 
 
-NEURAL_SOCIAL_PROMPT = """You are the Social Code evidence compiler in a video understanding system.
-Infer only socially relevant mental-state evidence from the action history and ordered RGB frames. Use both answer choices only to identify the social distinctions that need evidence; never choose, rank, copy, or encode an answer. Separate observation, belief, goal, and immediate intent. A world fact is not automatically an agent belief: only attribute a belief when the agent could observe supporting evidence. Treat the question and choices as query context, not as observed facts. Missing evidence means unknown, not false.
+NEURAL_SOCIAL_PROMPT = """You are the Social Code state compiler in a video understanding system.
+Infer only socially relevant mental state from the question premise, action history, and ordered RGB frames. Answer choices are hidden from you. Separate observation, belief, goal, and immediate intent. A world fact is not automatically an agent belief: only attribute a belief when the agent could observe supporting evidence. Missing evidence means unknown, not false. Never choose, rank, or encode an answer.
+
+The runtime object M already exists. Use ONLY literal calls in these forms:
+M.observe(t, agent, fact, source="video_or_action", confidence=0.8)
+M.belief(t, agent, fact, confidence=0.7, evidence="...")
+M.goal(agent, goal, confidence=0.7, evidence="...")
+M.intent(t, agent, intent, confidence=0.7, evidence="...")
+M.unknown(agent, variable)
+
+Use timestamps in action order. Emit 3-12 complete calls. No assignments, variables, imports, loops, markdown, comments, answer labels, or repeated calls.
+
+Evidence and complete query context:
+{evidence}
+"""
+
+LEGACY_NEURAL_SOCIAL_PROMPT = """You are the Social Code evidence compiler in a video understanding system.
+Infer socially relevant mental-state evidence from the action history and ordered RGB frames. Use both answer choices to identify relevant distinctions, but do not output an A/B label.
 
 The runtime object M already exists. Use ONLY literal calls in these forms:
 M.observe(t, agent, fact, source="video_or_action", confidence=0.8)
@@ -35,7 +58,7 @@ M.intent(t, agent, intent, confidence=0.7, evidence="...")
 M.action_evidence(t, agent, action, hypothesis, confidence=0.7, evidence="...")
 M.unknown(agent, variable)
 
-Use timestamps in action order. Emit 3-12 complete calls. No assignments, variables, imports, loops, markdown, comments, answer labels, or repeated calls.
+Use timestamps in action order. Emit 3-12 complete calls and no prose.
 
 Evidence and complete query context:
 {evidence}
@@ -52,7 +75,9 @@ class SocialCodeResult:
     diagnostics: dict[str, Any] = field(default_factory=dict)
 
 
-def normalize_social_code(text: str, max_lines: int = 16) -> str:
+def normalize_social_code(
+    text: str, max_lines: int = 16, *, allow_legacy_answer_evidence: bool = False
+) -> str:
     """Keep unique, syntactically valid calls to the Social Code runtime."""
     text = text.strip()
     if text.startswith("```"):
@@ -63,7 +88,6 @@ def normalize_social_code(text: str, max_lines: int = 16) -> str:
 
     allowed = {
         "candidate",
-        "query_evidence",
         "observe",
         "belief",
         "goal",
@@ -74,6 +98,8 @@ def normalize_social_code(text: str, max_lines: int = 16) -> str:
         "likelihood",  # External Bayesian evidence compatibility.
         "posterior",  # Native Social Code Bayesian inference.
     }
+    if allow_legacy_answer_evidence:
+        allowed.add("query_evidence")
     kept: list[str] = []
     seen: set[str] = set()
     for raw_line in text.splitlines():
@@ -94,7 +120,8 @@ def normalize_social_code(text: str, max_lines: int = 16) -> str:
         if call.func.attr not in allowed:
             continue
         try:
-            execute_social(line)
+            executor = execute_social_legacy if allow_legacy_answer_evidence else execute_social
+            executor(line)
         except UnsafeProgram:
             continue
         seen.add(line)
@@ -130,10 +157,18 @@ _ORDINALS = {
     "2nd": "second",
     "3rd": "third",
     "4th": "fourth",
+    "5th": "fifth",
+    "6th": "sixth",
+    "7th": "seventh",
+    "8th": "eighth",
     "one": "first",
     "two": "second",
     "three": "third",
     "four": "fourth",
+    "five": "fifth",
+    "six": "sixth",
+    "seven": "seventh",
+    "eight": "eighth",
 }
 
 
@@ -165,6 +200,42 @@ def _entity_match(left: str, right: str) -> bool:
     left_tokens = _content_tokens(left)
     right_tokens = _content_tokens(right)
     return bool(left_tokens and right_tokens and (left_tokens <= right_tokens or right_tokens <= left_tokens))
+
+
+def _location_match(left: str, right: str) -> bool:
+    """Match locations without collapsing distinct cabinets.
+
+    The older generic token-subset matcher treated ``cabinet`` as equal to
+    every numbered kitchen cabinet.  In MMToM descriptions, an unqualified
+    cabinet denotes the living-room cabinet, while kitchen and bathroom
+    cabinets are explicitly qualified.
+    """
+    ordinal_words = {
+        "1": "first", "1st": "first", "one": "first",
+        "2": "second", "2nd": "second", "two": "second",
+        "3": "third", "3rd": "third", "three": "third",
+        "4": "fourth", "4th": "fourth", "four": "fourth",
+        "5": "fifth", "5th": "fifth", "five": "fifth",
+        "6": "sixth", "6th": "sixth", "six": "sixth",
+        "7": "seventh", "7th": "seventh", "seven": "seventh",
+        "8": "eighth", "8th": "eighth", "eight": "eighth",
+    }
+
+    def normalized(value: str) -> tuple[str, ...]:
+        value = value.lower().replace("refrigerator", "fridge")
+        raw = re.findall(r"[a-z0-9]+", value)
+        tokens = [ordinal_words.get(token, token) for token in raw]
+        tokens = [token for token in tokens if token not in {"a", "an", "the", "from", "left", "right", "to"}]
+        if "cabinet" in tokens:
+            has_room = any(token in {"kitchen", "bathroom", "living", "bedroom"} for token in tokens)
+            has_ordinal = any(token in set(ordinal_words.values()) for token in tokens)
+            if has_ordinal and "kitchen" not in tokens:
+                tokens.append("kitchen")
+            elif not has_room and not has_ordinal:
+                tokens.extend(["living", "room"])
+        return tuple(sorted(set(tokens)))
+
+    return normalized(left) == normalized(right)
 
 
 def _belief_claim(text: str) -> tuple[str, str, bool] | None:
@@ -228,6 +299,12 @@ def _action_target(sentence: str) -> str | None:
 
 def _sentence_location_steps(sentence: str) -> list[tuple[str, bool]]:
     """Split a sentence containing several locations into ordered search steps."""
+    scan_sentence = re.sub(
+        r"\band\s+(?=(?:(?:then|finally|subsequently)\s+)?(?:advances?|moves?|walks?|approaches?|heads?|strides?|proceeds?|navigates?)\b)",
+        ". ",
+        sentence,
+        flags=re.IGNORECASE,
+    )
     patterns = (
         (
             r"(?:towards?|toward|approaches?|approach|heads? (?:towards?|to)|moves? (?:towards?|to)|advances? (?:towards?|to)|walks? (?:towards?|to)|strides? (?:towards?|to)|proceeds? (?:towards?|to))\s+(?:the\s+)?([^,.]+)",
@@ -240,7 +317,7 @@ def _sentence_location_steps(sentence: str) -> list[tuple[str, bool]]:
     )
     matches: list[dict[str, Any]] = []
     for pattern, direct_inspection in patterns:
-        for found in re.finditer(pattern, sentence, flags=re.IGNORECASE):
+        for found in re.finditer(pattern, scan_sentence, flags=re.IGNORECASE):
             target = re.split(
                 r"\b(?:which|and then|and is|and (?:opens?|closes?|checks?|inspects?|searches?)|before|then)\b",
                 found.group(1),
@@ -267,9 +344,22 @@ def _sentence_location_steps(sentence: str) -> list[tuple[str, bool]]:
             merged.append(item)
     steps: list[tuple[str, bool]] = []
     for offset, item in enumerate(merged):
-        end = merged[offset + 1]["start"] if offset + 1 < len(merged) else len(sentence)
-        segment = sentence[item["start"] : end]
-        steps.append((item["target"], bool(item["direct"] or _completed_inspection(segment))))
+        end = merged[offset + 1]["start"] if offset + 1 < len(merged) else len(scan_sentence)
+        segment = scan_sentence[item["start"] : end]
+        action_window = scan_sentence[max(0, int(item["start"]) - 40) : int(item["end"]) + 1]
+        pending = bool(
+            re.search(
+                r"\b(?:about to|preparing to|on the verge of|poised to|ready to)\s+open",
+                action_window,
+                flags=re.IGNORECASE,
+            )
+        )
+        steps.append(
+            (
+                item["target"],
+                bool((item["direct"] or _completed_inspection(segment)) and not pending),
+            )
+        )
     return steps
 
 
@@ -284,18 +374,21 @@ def _action_location_steps(question: str) -> list[tuple[int, str, bool, str]]:
 def _completed_inspection(sentence: str) -> bool:
     lower = sentence.lower()
     return bool(re.search(r"\b(?:open(?:s|ed)?|check(?:s|ed)?|inspect(?:s|ed)?|search(?:es|ed)?)\b", lower)) and not bool(
-        re.search(r"\b(?:about to|preparing to|on the verge of)\s+open", lower)
+        re.search(
+            r"\b(?:about to|preparing to|on the verge of|poised to|ready to)\s+open",
+            lower,
+        )
     )
 
 
 def compile_query_candidates(
     question: str, *, include_heuristic_evidence: bool = True
 ) -> SocialCodeResult:
-    """Register A/B hypotheses, optionally adding question-derived heuristics.
+    """Legacy A/B adapter retained only for reproducibility.
 
-    Component ablations set ``include_heuristic_evidence=False`` so the shared
-    query adapter cannot itself answer the question and mask the contribution
-    of Physical or Social evidence.
+    New SSC paths must not call this function.  With heuristic evidence enabled
+    it reproduces the removed ``query_evidence`` mechanism; with it disabled it
+    only registers answer candidates for historical ablations.
     """
     options = answer_options(question)
     agent, _ = action_history(question)
@@ -322,7 +415,7 @@ def compile_query_candidates(
         return SocialCodeResult(
             "query_candidates",
             code,
-            execute_social(code),
+            execute_social_legacy(code),
             ("query_candidates",),
             diagnostics={"variable": answer_variable, "candidates": len(options)},
         )
@@ -396,7 +489,7 @@ def compile_query_candidates(
     return SocialCodeResult(
         "query",
         code,
-        execute_social(code),
+        execute_social_legacy(code),
         ("query",),
         diagnostics={"variable": answer_variable, "candidates": len(options)},
     )
@@ -417,8 +510,8 @@ def _literal(value: object) -> str:
     return repr(value)
 
 
-def compile_rules(question: str) -> SocialCodeResult:
-    """Compile conservative action-to-intent evidence without another model."""
+def compile_rules(question: str, *, legacy: bool = False) -> SocialCodeResult:
+    """Compile answer-independent goals, beliefs, and intents from actions."""
     agent, history = action_history(question)
     sentences = [
         part.strip()
@@ -461,39 +554,88 @@ def compile_rules(question: str) -> SocialCodeResult:
             f"M.intent({t}, {_literal(agent)}, {_literal(hypothesis)}, {confidence!r}, "
             f"{_literal(normalized)})"
         )
+        if legacy:
+            calls.append(
+                f"M.action_evidence({t}, {_literal(agent)}, {_literal(normalized)}, "
+                f"{_literal(hypothesis)}, {confidence!r}, "
+                f"{_literal('deterministic action rule')})"
+            )
+
+    known_goal, _ = _query_context(question, agent)
+    goal_object = _goal_object(known_goal) if known_goal else None
+    if known_goal:
         calls.append(
-            f"M.action_evidence({t}, {_literal(agent)}, {_literal(normalized)}, "
-            f"{_literal(hypothesis)}, {confidence!r}, "
-            f"{_literal('deterministic action rule')})"
+            f"M.goal({_literal(agent)}, {_literal(known_goal)}, 1.0, "
+            f"'given question premise')"
         )
+    # In this search domain, opening and closing a container without taking the
+    # sought object updates the agent's belief toward absence.  Merely moving
+    # to the next unopened container supports a tentative presence belief.
+    # These are agent-state transitions, never scores for an answer option.
+    if not legacy and goal_object and not re.search(
+        rf"\b(?:takes?|picks? up|grabs?|gets?)\b[^.]*\b{re.escape(goal_object)}\b",
+        history,
+        flags=re.IGNORECASE,
+    ):
+        location_steps = _action_location_steps(question)
+        for t, target, inspected, sentence in location_steps:
+            if inspected:
+                fact = f"{goal_object} is not inside {target}"
+                confidence = 0.72
+                evidence = "completed inspection without retrieving the sought object"
+            elif (t, target, inspected, sentence) == location_steps[-1]:
+                fact = f"{goal_object} is inside {target}"
+                confidence = 0.65
+                evidence = "next goal-directed search location; not yet inspected"
+            else:
+                continue
+            calls.append(
+                f"M.belief({t}, {_literal(agent)}, {_literal(fact)}, "
+                f"{confidence!r}, {_literal(evidence + ': ' + sentence)})"
+            )
 
     if not calls:
         calls.append(f"M.unknown({_literal(agent)}, 'goal_or_intent')")
-    code = "\n".join(calls[:16])
+    # Long searches can contain eight inspected locations plus a final pending
+    # target.  Keep the terminal belief update instead of truncating it behind
+    # earlier intents.
+    code = "\n".join(calls[:32])
     return SocialCodeResult("rules", code, execute_social(code), ("rules",))
 
 
 def compile_neural(
     question: str,
     generate: Callable[..., str],
+    *,
+    legacy: bool = False,
 ) -> SocialCodeResult:
-    prompt = NEURAL_SOCIAL_PROMPT.format(evidence=question)
-    code = normalize_social_code(generate(prompt, max_new_tokens=384))
+    template = LEGACY_NEURAL_SOCIAL_PROMPT if legacy else NEURAL_SOCIAL_PROMPT
+    evidence = question if legacy else question_without_options(question)
+    prompt = template.format(evidence=evidence)
+    code = normalize_social_code(
+        generate(prompt, max_new_tokens=384),
+        allow_legacy_answer_evidence=legacy,
+    )
     if not code:
         agent, _ = action_history(question)
         code = f"M.unknown({_literal(agent)}, 'social_state')"
     return SocialCodeResult("neural", code, execute_social(code), ("neural",))
 
 
-def compile_spatial_bridge(question: str, spatial_trace: str) -> SocialCodeResult:
+def compile_spatial_bridge(
+    question: str,
+    spatial_trace: str,
+    *,
+    include_legacy_query_evidence: bool = False,
+) -> SocialCodeResult:
     """Turn physically observable Spatial records into Social observations.
 
     Static world facts are never copied directly into an agent belief. Container
     contents become observations only after an explicit open/check/search action.
     """
     agent, _ = action_history(question)
-    options = answer_options(question)
-    variable = _query_variable(options) if options else "belief"
+    options = answer_options(question) if include_legacy_query_evidence else []
+    variable = _query_variable(options) if options else "state"
     answer_variable = f"answer_{variable}"
     records = _trace_records(spatial_trace) if spatial_trace else []
     contains: list[tuple[str, str, float]] = []
@@ -531,7 +673,7 @@ def compile_spatial_bridge(question: str, spatial_trace: str) -> SocialCodeResul
     observed_pairs: set[tuple[int, str, str]] = set()
     for t, container, sentence in inspected:
         for fact_container, item, confidence in contains:
-            if not _entity_match(container, fact_container):
+            if not _location_match(container, fact_container):
                 continue
             key = (t, _canonical_text(item), _canonical_text(fact_container))
             if key in observed_pairs:
@@ -543,17 +685,17 @@ def compile_spatial_bridge(question: str, spatial_trace: str) -> SocialCodeResul
                 f"'opened-container spatial bridge', {min(0.95, confidence * 0.9)!r})"
             )
 
-    if variable == "belief":
+    if include_legacy_query_evidence and variable == "belief":
         for _, hypothesis in options:
             claim = _belief_claim(hypothesis)
             if claim is None:
                 continue
             item, container, negated = claim
-            relevant_inspections = [entry for entry in inspected if _entity_match(entry[1], container)]
+            relevant_inspections = [entry for entry in inspected if _location_match(entry[1], container)]
             if relevant_inspections:
                 t, _, sentence = relevant_inspections[-1]
                 present = any(
-                    _entity_match(fact_container, container) and _entity_match(fact_item, item)
+                    _location_match(fact_container, container) and _entity_match(fact_item, item)
                     for fact_container, fact_item, _ in contains
                 )
                 # Spatial Code is open-world: an omitted containment fact is
@@ -571,7 +713,7 @@ def compile_spatial_bridge(question: str, spatial_trace: str) -> SocialCodeResul
                     f"{_literal('opened-container observation grounded in Spatial Code: ' + sentence)})"
                 )
 
-    if variable == "goal" and contains:
+    if include_legacy_query_evidence and variable == "goal" and contains:
         for _, hypothesis in options:
             item = _goal_object(hypothesis)
             if item is None:
@@ -580,7 +722,7 @@ def compile_spatial_bridge(question: str, spatial_trace: str) -> SocialCodeResul
             if not known_in_world or not inspected:
                 continue
             found_during_search = any(
-                _entity_match(fact_container, searched_container) and _entity_match(fact_item, item)
+                _location_match(fact_container, searched_container) and _entity_match(fact_item, item)
                 for _, searched_container, _ in inspected
                 for fact_container, fact_item, _ in contains
             )
@@ -599,7 +741,7 @@ def compile_spatial_bridge(question: str, spatial_trace: str) -> SocialCodeResul
                 if item is None:
                     continue
                 present = any(
-                    _entity_match(fact_container, container) and _entity_match(fact_item, item)
+                    _location_match(fact_container, container) and _entity_match(fact_item, item)
                     for fact_container, fact_item, _ in contains
                 )
                 likelihood = 0.76 if present else 0.34
@@ -615,7 +757,11 @@ def compile_spatial_bridge(question: str, spatial_trace: str) -> SocialCodeResul
     return SocialCodeResult(
         "spatial_bridge",
         code,
-        execute_social(code),
+        (
+            execute_social_legacy(code)
+            if include_legacy_query_evidence
+            else execute_social(code)
+        ),
         ("spatial_bridge",),
         diagnostics={
             "spatial_records": len(records),
@@ -700,7 +846,7 @@ def _compatibility(evidence: str, hypothesis: str) -> float:
     evidence_claim = _belief_claim(evidence)
     hypothesis_claim = _belief_claim(hypothesis)
     if evidence_claim and hypothesis_claim:
-        same_relation = _entity_match(evidence_claim[0], hypothesis_claim[0]) and _entity_match(
+        same_relation = _entity_match(evidence_claim[0], hypothesis_claim[0]) and _location_match(
             evidence_claim[1], hypothesis_claim[1]
         )
         if same_relation:
@@ -733,7 +879,7 @@ def _explicit_belief_likelihood(evidence: str, hypothesis: str) -> float | None:
     hypothesis_claim = _belief_claim(hypothesis)
     if evidence_claim is None or hypothesis_claim is None:
         return None
-    same_relation = _entity_match(evidence_claim[0], hypothesis_claim[0]) and _entity_match(
+    same_relation = _entity_match(evidence_claim[0], hypothesis_claim[0]) and _location_match(
         evidence_claim[1], hypothesis_claim[1]
     )
     if not same_relation:
@@ -750,13 +896,14 @@ def _noisy_or(left: float, right: float) -> float:
 def compile_native_bayesian(
     question: str,
     evidence_results: Iterable[SocialCodeResult],
+    *,
+    allow_legacy_query_evidence: bool = False,
 ) -> SocialCodeResult:
     """Score Social Code hypotheses with a small native Bayesian reasoner.
 
-    Free-form hypotheses come from candidate-hidden evidence. Answer-aligned
-    hypotheses are registered only after that extraction step. Priors and
-    calibrated action/observation/query evidence are normalized within each
-    agent-variable-timestep hypothesis set, using no future evidence.
+    The public path updates only answer-independent state hypotheses.  The
+    legacy compatibility path may additionally replay removed answer-directed
+    ``query_evidence`` records.
     """
     evidence_parts = list(evidence_results)
     records = [
@@ -795,7 +942,7 @@ def compile_native_bayesian(
         elif kind == "query_candidate":
             variable = str(values["variable"])
             hypothesis = str(values["hypothesis"])
-        elif kind == "query_evidence":
+        elif kind == "query_evidence" and allow_legacy_query_evidence:
             query_evidence.append(values)
         if variable is None or hypothesis is None:
             continue
@@ -850,7 +997,11 @@ def compile_native_bayesian(
                     weight *= 0.7 ** max(0, candidate["t"] - action_t)
                 score += weight * math.log(likelihood / (1.0 - likelihood))
                 used += 1
-        if base_variable in {"goal", "belief"} and candidate["variable"].startswith("answer_"):
+        if (
+            allow_legacy_query_evidence
+            and base_variable in {"goal", "belief"}
+            and candidate["variable"].startswith("answer_")
+        ):
             for evidence in query_evidence:
                 if str(evidence.get("agent")) != candidate["agent"]:
                     continue
@@ -935,6 +1086,7 @@ def compile_native_bayesian(
             "hypotheses": len(candidates),
             "evidence_records": len(actions) + len(observations) + len(query_evidence),
             "query_evidence_records": len(query_evidence),
+            "legacy_query_evidence_enabled": allow_legacy_query_evidence,
         },
     )
 
@@ -1202,10 +1354,11 @@ def fuse_social_results(
         code = "M.unknown('agent', 'social_state')"
     components = tuple(component for part in parts for component in part.components)
     raw_code = "\n".join(part.code for part in parts if part.code)
+    executor = execute_social_legacy if source.startswith("legacy_") else execute_social
     return SocialCodeResult(
         source,
         code,
-        execute_social(code),
+        executor(code),
         components,
         raw_code=raw_code,
         diagnostics={
@@ -1240,23 +1393,48 @@ def compile_social_code(
 ) -> SocialCodeResult:
     """Compile one Social Code state from the selected native components.
 
-    ``bayesian_loader`` is exclusively an adapter for optional external
-    evidence.  Native Bayesian inference is always performed locally for the
-    ``bayesian`` and ``hybrid`` configurations.
+    ``hybrid`` is the clean default: answer choices are hidden from the neural
+    compiler, and the result contains agent state rather than answer-option
+    evidence.  ``legacy_bayesian`` and ``legacy_hybrid`` exist only to replay
+    historical experiments that used ``query_evidence``.
     """
     if source not in SOCIAL_SOURCES:
         raise ValueError(f"unknown Social Code source: {source}")
 
     external_requested = include_external_bayesian or hybrid_include_bayesian
+    legacy = source.startswith("legacy_")
     parts: list[SocialCodeResult] = []
-    if source in {"neural", "neural_rules", "hybrid"}:
+    if source in {"neural", "neural_rules", "hybrid", "legacy_hybrid"}:
         if generate is None:
             raise ValueError(f"{source} Social Code requires a generation function")
-        parts.append(compile_neural(question, generate))
-    if source in {"rules", "bayesian", "neural_rules", "hybrid"}:
-        parts.append(compile_rules(question))
-    if source in {"bayesian", "hybrid"}:
+        parts.append(compile_neural(question, generate, legacy=legacy))
+    if source in {
+        "rules",
+        "bayesian",
+        "neural_rules",
+        "hybrid",
+        "legacy_bayesian",
+        "legacy_hybrid",
+    }:
+        parts.append(compile_rules(question, legacy=legacy))
+    if legacy:
         parts.append(compile_query_candidates(question))
+        if spatial_trace:
+            parts.append(
+                compile_spatial_bridge(
+                    question,
+                    spatial_trace,
+                    include_legacy_query_evidence=True,
+                )
+            )
+        parts.append(
+            compile_native_bayesian(
+                question,
+                parts,
+                allow_legacy_query_evidence=True,
+            )
+        )
+    elif source in {"bayesian", "hybrid"}:
         if spatial_trace:
             parts.append(compile_spatial_bridge(question, spatial_trace))
         parts.append(compile_native_bayesian(question, parts))
@@ -1265,7 +1443,10 @@ def compile_social_code(
         if bayesian_loader is None:
             raise ValueError("external Bayesian evidence requires a loader")
         code, _ = bayesian_loader()
-        code = normalize_social_code(code)
+        code = normalize_social_code(
+            code,
+            allow_legacy_answer_evidence=legacy,
+        )
         if code:
             parts.append(
                 SocialCodeResult(

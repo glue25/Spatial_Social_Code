@@ -34,10 +34,11 @@ from evaluate_spatial_social import (  # noqa: E402
     normalize_spatial_code,
 )
 from mmtom_visual import load_questions, sample_rgb_frames  # noqa: E402
-from social_code import answer_posterior_probs, compile_social_code  # noqa: E402
+from clean_bayesian import score_clean_answers  # noqa: E402
+from social_code import compile_social_code  # noqa: E402
 
 
-SCHEMA_VERSION = 3
+SCHEMA_VERSION = 4
 DEFAULT_OUTPUT = ROOT / "spatial_social_code" / "mmtom_robust_gemini3pro.jsonl"
 DIRECT_PROMPT = """Answer the MMToM multiple-choice question from the initial
 state, action history, and ordered RGB frames. Compare both choices against the
@@ -203,10 +204,9 @@ def process_one(
         spatial_trace=spatial_trace,
         include_external_bayesian=False,
     )
-    posterior = answer_posterior_probs(social.trace)
-    if posterior is None:
-        raise RuntimeError("native Spatial-Social trace contains no A/B posterior")
-    method_prediction = "a" if posterior["A"] >= posterior["B"] else "b"
+    decision = score_clean_answers(question, spatial_trace, social.trace)
+    posterior = decision.probabilities
+    method_prediction = decision.choice.lower()
     answer = str(row["answer"]).lower()
     return {
         "schema_version": SCHEMA_VERSION,
@@ -228,6 +228,11 @@ def process_one(
         "social_trace": social.trace,
         "social_components": list(social.components),
         "social_reasoning": social.diagnostics,
+        "answer_reasoning": {
+            "name": "clean_fixed_bayesian_v1",
+            "scores": decision.scores,
+            "terms": decision.terms,
+        },
         "prediction": method_prediction,
         "correct": method_prediction == answer,
         "prob_a": posterior["A"],

@@ -68,8 +68,10 @@ def refine_one(
             max_output_tokens=max(2048, max_new_tokens),
         )
 
+    # This script reproduces the historical uncertainty-gated result.  New
+    # evaluations use the clean state compiler and clean_bayesian reasoner.
     social = compile_social_code(
-        "hybrid",
+        "legacy_hybrid",
         question,
         generate=generate_dense,
         spatial_trace=spatial_trace,

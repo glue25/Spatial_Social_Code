@@ -26,7 +26,7 @@ from runtime import UnsafeProgram, execute_spatial  # noqa: E402
 from social_code import SOCIAL_SOURCES, answer_posterior_probs, compile_social_code
 
 
-SCHEMA_VERSION = 5
+SCHEMA_VERSION = 6
 CONDITIONS = ("direct", "spatial", "social", "spatial_social")
 
 
@@ -46,7 +46,7 @@ MMToM problem:
 
 ANSWER_PROMPT = """Answer the MMToM question using the raw evidence and supplied executable understanding code. Compare both choices against the raw evidence before deciding. Treat unknown, omitted, or low-confidence records as uncertain; absence from code is not evidence that something did not happen. Raw evidence overrides intermediate code. Return exactly one uppercase letter: A or B.
 
-In a Social Trace, observations are perceptual evidence and beliefs are the agent's persistent updated state. Query candidates are introduced only after candidate-hidden evidence extraction. For answer_goal or answer_belief posterior records, use the explicit label field to map the higher posterior back to A or B. Explicit contradictions mean that the weaker or older claim was discounted. External action_likelihood records, when present, are supporting evidence rather than answer labels.
+In a Social Trace, observations are perceptual evidence and beliefs are the agent's persistent updated state. The trace is answer-independent: do not look for option scores inside it. Explicit contradictions mean that the weaker or older claim was discounted. External action_likelihood records, when present, are supporting evidence rather than answer labels.
 
 {code_context}
 
@@ -132,7 +132,7 @@ def summarize(records: Iterable[dict]) -> dict:
     summary: dict[str, object] = {
         "schema_version": SCHEMA_VERSION,
         "method": "Spatial-Social Code",
-        "social_design": "contrastive_evidence_state_fusion_v3",
+        "social_design": "choice_hidden_clean_state_v1",
         "completed_examples": len(rows),
         "conditions": {},
     }
@@ -269,7 +269,7 @@ def main() -> None:
             {
                 "schema_version": SCHEMA_VERSION,
                 "method": "Spatial-Social Code",
-                "social_design": "contrastive_evidence_state_fusion_v3",
+                "social_design": "choice_hidden_clean_state_v1",
                 "social_source": args.social_source,
                 "social_components": [],
                 "social_reasoning": {},

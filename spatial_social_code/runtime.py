@@ -702,6 +702,47 @@ def execute_social(
     valid_evidence_ids: set[str] | None = None,
     require_evidence: bool = False,
 ) -> str:
+    """Execute the public Social Code state language.
+
+    ``query_evidence`` is intentionally absent: it was a legacy, answer-option
+    scoring primitive rather than an agent state.  Historical artifacts can be
+    replayed only through :func:`execute_social_legacy`.
+    """
+    return execute_program(
+        code,
+        "M",
+        SocialMemory(valid_evidence_ids, require_evidence),
+        {
+            "candidate",
+            "clause",
+            "constraint",
+            "support",
+            "contradict",
+            "clause_unknown",
+            "observe",
+            "belief",
+            "goal",
+            "intent",
+            "action_evidence",
+            "contradiction",
+            "social_goal",
+            "likelihood",
+            "posterior",
+            "unknown",
+        },
+    )
+
+
+def execute_social_legacy(
+    code: str,
+    valid_evidence_ids: set[str] | None = None,
+    require_evidence: bool = False,
+) -> str:
+    """Replay pre-cleanup traces that used answer-directed query evidence.
+
+    This entry point is deliberately named and separated so new method code
+    cannot accidentally admit ``M.query_evidence``.
+    """
     return execute_program(
         code,
         "M",

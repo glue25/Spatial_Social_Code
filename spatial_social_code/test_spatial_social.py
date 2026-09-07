@@ -3,7 +3,8 @@ from __future__ import annotations
 import json
 import unittest
 
-from runtime import UnsafeProgram, execute_social, execute_spatial
+from runtime import UnsafeProgram, execute_social, execute_social_legacy, execute_spatial
+from clean_bayesian import score_clean_answers
 from executable_hypothesis import (
     compile_payload,
     ensure_spatial_evidence_ids,
@@ -11,6 +12,7 @@ from executable_hypothesis import (
     score_hypotheses,
 )
 from social_code import (
+    _location_match,
     answer_posterior_probs,
     answer_options,
     compile_rules,
@@ -30,6 +32,10 @@ QUESTION = (
 
 
 class SocialCodeTests(unittest.TestCase):
+    def test_location_matching_keeps_cabinets_distinct(self) -> None:
+        self.assertFalse(_location_match("cabinet", "second kitchen cabinet"))
+        self.assertTrue(_location_match("7th cabinet", "kitchen cabinet 7"))
+
     def test_executable_query_variable_typing_uses_general_semantics(self) -> None:
         self.assertEqual(
             infer_query_variable_type("What did Mia believe was in the box?"),
@@ -298,7 +304,7 @@ class SocialCodeTests(unittest.TestCase):
         )
         self.assertEqual(answer_posterior_probs(context), {"A": 0.7, "B": 0.3})
 
-    def test_options_are_visible_only_as_neural_evidence_context(self) -> None:
+    def test_options_are_hidden_from_neural_state_compiler(self) -> None:
         evidence = question_without_options(QUESTION)
         self.assertNotIn("SECRET_A", evidence)
         self.assertNotIn("SECRET_B", evidence)
@@ -309,8 +315,9 @@ class SocialCodeTests(unittest.TestCase):
             return 'M.goal("Jessica", "find plate", 0.7, "search actions")'
 
         result = compile_social_code("neural", QUESTION, generate=fake_generate)
-        self.assertIn("SECRET_A", seen["prompt"])
-        self.assertIn("never choose", seen["prompt"])
+        self.assertNotIn("SECRET_A", seen["prompt"])
+        self.assertNotIn("SECRET_B", seen["prompt"])
+        self.assertIn("Never choose", seen["prompt"])
         self.assertIn('"kind": "goal"', result.trace)
 
     def test_rule_compiler_is_standalone(self) -> None:
@@ -318,11 +325,11 @@ class SocialCodeTests(unittest.TestCase):
         records = [json.loads(line) for line in result.trace.splitlines()]
         kinds = {record["kind"] for record in records}
         self.assertIn("intent", kinds)
-        self.assertIn("action_evidence", kinds)
+        self.assertNotIn("action_evidence", kinds)
         self.assertIn("goal", kinds)
         self.assertNotIn("SECRET_A", result.code)
 
-    def test_default_hybrid_uses_native_bayesian_not_autotom(self) -> None:
+    def test_default_hybrid_contains_state_not_answer_evidence(self) -> None:
         result = compile_social_code(
             "hybrid",
             QUESTION,
@@ -330,12 +337,12 @@ class SocialCodeTests(unittest.TestCase):
                 'M.intent(0, "Jessica", "inspect cabinet", 0.6, "approach")'
             ),
         )
-        self.assertEqual(result.components, ("neural", "rules", "query", "bayesian"))
+        self.assertEqual(result.components, ("neural", "rules", "bayesian"))
         self.assertNotIn("external_bayesian", result.components)
         self.assertIn('"kind": "posterior"', result.trace)
-        self.assertIn("SECRET_A", result.code)
-        self.assertIn("SECRET_B", result.code)
-        self.assertNotIn("SECRET_A", result.raw_code.split("M.candidate", 1)[0])
+        self.assertNotIn("SECRET_A", result.code)
+        self.assertNotIn("SECRET_B", result.code)
+        self.assertNotIn('"variable": "answer_', result.trace)
 
     def test_neural_rules_ablation_has_fusion_without_posterior(self) -> None:
         result = compile_social_code(
@@ -353,12 +360,12 @@ class SocialCodeTests(unittest.TestCase):
             "bayesian",
             QUESTION,
         )
-        self.assertEqual(result.components, ("rules", "query", "bayesian"))
+        self.assertEqual(result.components, ("rules", "bayesian"))
         self.assertIn('"kind": "posterior"', result.trace)
 
-    def test_answer_candidates_are_labeled_and_normalized(self) -> None:
+    def test_answer_candidates_exist_only_in_explicit_legacy_mode(self) -> None:
         result = compile_social_code(
-            "hybrid",
+            "legacy_hybrid",
             QUESTION,
             generate=lambda prompt, max_new_tokens: 'M.unknown("Jessica", "social_state")',
         )
@@ -382,7 +389,7 @@ class SocialCodeTests(unittest.TestCase):
         )
         self.assertEqual(len(answer_options(question)), 2)
         result = compile_social_code(
-            "hybrid",
+            "legacy_hybrid",
             question,
             generate=lambda prompt, max_new_tokens: 'M.unknown("Mark", "social_state")',
         )
@@ -414,19 +421,14 @@ class SocialCodeTests(unittest.TestCase):
         )
         bridge = compile_spatial_bridge(question, trace)
         self.assertIn("plate is inside cabinet", bridge.code)
-        result = compile_social_code(
+        social = compile_social_code(
             "hybrid",
             question,
             spatial_trace=trace,
             generate=lambda prompt, max_new_tokens: 'M.unknown("Jessica", "social_state")',
         )
-        records = [json.loads(line) for line in result.trace.splitlines()]
-        answer_posteriors = {
-            r["values"]["label"]: r["values"]["value"]
-            for r in records
-            if r["kind"] == "posterior" and r["values"]["variable"] == "answer_belief"
-        }
-        self.assertGreater(answer_posteriors["A"], answer_posteriors["B"])
+        decision = score_clean_answers(question, trace, social.trace)
+        self.assertEqual(decision.choice, "A")
 
     def test_unopened_container_does_not_reveal_world_contents(self) -> None:
         question = (
@@ -496,18 +498,10 @@ class SocialCodeTests(unittest.TestCase):
                 },
             ]
         )
-        result = compile_social_code(
-            "bayesian",
-            question,
-            spatial_trace=trace,
-        )
-        records = [json.loads(line) for line in result.trace.splitlines()]
-        posteriors = {
-            r["values"]["label"]: r["values"]["value"]
-            for r in records
-            if r["kind"] == "posterior" and r["values"]["variable"] == "answer_goal"
-        }
-        self.assertGreater(posteriors["B"], posteriors["A"])
+        social = compile_social_code("bayesian", question, spatial_trace=trace)
+        decision = score_clean_answers(question, trace, social.trace)
+        self.assertEqual(decision.choice, "B")
+        self.assertGreater(decision.probabilities["B"], decision.probabilities["A"])
 
     def test_belief_is_carried_when_no_contradictory_observation_arrives(self) -> None:
         result = compile_social_code(
@@ -596,7 +590,7 @@ class SocialCodeTests(unittest.TestCase):
         self.assertGreater(len(posteriors), 1)
         self.assertAlmostEqual(sum(posteriors), 1.0)
         self.assertTrue(
-            all("1 action/observation evidence" in record["evidence"] for record in posterior_records)
+            all("0 action/observation evidence" in record["evidence"] for record in posterior_records)
         )
 
     def test_duplicate_unit_confidence_prior_is_clipped_before_log_odds(self) -> None:
@@ -622,6 +616,13 @@ class SocialCodeTests(unittest.TestCase):
         )
         self.assertNotIn("open", code)
         self.assertIn("M.goal", code)
+
+    def test_query_evidence_is_rejected_outside_legacy_runtime(self) -> None:
+        code = 'M.query_evidence(0, "A", "answer", "x", 0.9, 0.9, "rule")'
+        self.assertEqual(normalize_social_code(code), "")
+        with self.assertRaises(UnsafeProgram):
+            execute_social(code)
+        self.assertIn('"kind": "query_evidence"', execute_social_legacy(code))
 
     def test_normalizer_rejects_runtime_calls_with_wrong_signature(self) -> None:
         code = normalize_social_code(

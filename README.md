@@ -6,8 +6,8 @@ grounded physical evidence from social and mental-state inference:
 
 - **Spatial Code** records facts, visibility, events, roles, temporal phases,
   and provenance.
-- **Social Code** records observations, beliefs, goals, intents, action
-  evidence, contradictions, and calibrated hypothesis posteriors.
+- **Social Code** records answer-independent observations, beliefs, goals,
+  intents, and contradictions.
 - A restricted AST runtime validates generated programs before executing them
   into canonical JSON traces.
 
@@ -32,12 +32,12 @@ They are not call-, token-, latency-, or FLOP-matched unless explicitly noted.
 | Benchmark | Spatial-Social Code | Direct baseline | Difference |
 |---|---:|---:|---:|
 | MA-EgoQA (video) | **904/1741 (51.92%)** | 848/1741 (48.71%) | **+3.22 pp** |
-| MMToM | **470/600 (78.33%)** | 406/600 (67.67%) | **+10.67 pp** |
+| MMToM (legacy answer-directed heuristic; withdrawn as a clean SSC claim) | 470/600 (78.33%) | 406/600 (67.67%) | +10.67 pp |
 | EnactToM/Habitat frozen-12 (goal completion) | **53.47%** | 45.83% | **+7.64 pp** |
 | CoMind train recording-heldout OOF (bbox IoU@0.5) | **6.47%--23.15%** | 0.11%--0.34% | metric-dependent |
 
 McNemar's exact test gives `p = 0.00388` on MA-EgoQA and `p = 3.17e-05`
-on MMToM. Aggregate machine-readable summaries are included with the code.
+on the legacy MMToM result. Aggregate machine-readable summaries are included with the code.
 See the [submission results and baseline policy](reports/submission_results_and_baselines_zh.md)
 for the component evidence, Habitat results, official published references,
 and the strict comparability boundary.
@@ -77,9 +77,10 @@ commands are recorded in the
 2. Compile question-conditioned grounded Spatial Code with clip/time provenance.
 3. Execute the Spatial program in the restricted runtime.
 4. Compile Social Code using only validated Spatial evidence references.
-5. Infer beliefs, goals, intents, roles, and answer-aligned likelihoods while
+5. Infer answer-independent beliefs, goals, intents, and roles while
    preserving unknowns and contradictions.
-6. Answer from raw visual evidence plus validated executable traces.
+6. Compare every answer option with one fixed state likelihood model or one
+   shared final reasoner.
 7. On uncertain MMToM items, use an independent denser visual pass as the
    authoritative method prediction instead of averaging it with sparse
    evidence.
@@ -91,8 +92,15 @@ Important constraints include:
 - execution or observation does not imply initiation, responsibility, intent,
   or causality;
 - Social records can be required to cite valid Spatial evidence IDs;
-- answer choices are introduced only after candidate-hidden extraction in the
-  native Bayesian path.
+- `query_evidence` is rejected by the normal runtime; historical replay is
+  isolated behind explicitly named `legacy_*` entry points.
+
+The current post-hoc MMToM cleanup audit scores 508/600 (84.67%) with a
+choice-hidden deterministic Social state and the fixed clean Bayesian layer.
+Because that layer was developed after inspection of this benchmark, this is a
+development diagnostic, not yet a publishable replacement result. See
+`reports/mmtom_clean_bayesian_rescore_summary.json`; a fresh frozen evaluation
+is required.
 
 ## EnactToM track
 
