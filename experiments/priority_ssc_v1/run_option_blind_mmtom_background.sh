@@ -22,12 +22,28 @@ printf 'state=running\nstarted=%s\noutput=%s\n' \
   "$(date -u '+%Y-%m-%dT%H:%M:%SZ')" "$OUTPUT" >"$STATUS"
 
 cd "$ROOT"
-"$PYTHON" -u spatial_social_code/evaluate_mmtom_jdcloud.py \
-  --samples-per-type 100 \
-  --workers 1 \
-  --min-request-interval 65 \
-  --credentials-file "$CREDENTIALS" \
-  --output "$OUTPUT"
+complete() {
+  "$PYTHON" -c \
+    'import json,pathlib,sys; p=pathlib.Path(sys.argv[1]); d=json.loads(p.read_text()) if p.is_file() else {}; raise SystemExit(0 if d.get("successful")==600 and d.get("errors")==0 else 1)' \
+    "$SUMMARY"
+}
+
+until complete; do
+  printf 'state=running_or_retrying\nupdated=%s\noutput=%s\n' \
+    "$(date -u '+%Y-%m-%dT%H:%M:%SZ')" "$OUTPUT" >"$STATUS"
+  "$PYTHON" -u spatial_social_code/evaluate_mmtom_jdcloud.py \
+    --samples-per-type 100 \
+    --workers 1 \
+    --min-request-interval 65 \
+    --stop-on-error \
+    --credentials-file "$CREDENTIALS" \
+    --output "$OUTPUT" || true
+  complete || {
+    printf 'state=waiting_after_api_error\nupdated=%s\nretry_in_seconds=600\noutput=%s\n' \
+      "$(date -u '+%Y-%m-%dT%H:%M:%SZ')" "$OUTPUT" >"$STATUS"
+    sleep 600
+  }
+done
 
 git --git-dir=.spatial_social_public_git --work-tree=. add -f -- "$OUTPUT" "$SUMMARY"
 if ! git --git-dir=.spatial_social_public_git --work-tree=. diff --cached --quiet -- "$OUTPUT" "$SUMMARY"; then

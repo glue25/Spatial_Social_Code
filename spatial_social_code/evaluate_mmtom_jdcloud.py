@@ -349,6 +349,11 @@ def main() -> None:
     parser.add_argument("--workers", type=int, default=16)
     parser.add_argument("--min-request-interval", type=float, default=0.0)
     parser.add_argument("--keep-errors", action="store_true")
+    parser.add_argument(
+        "--stop-on-error",
+        action="store_true",
+        help="Checkpoint the first failed item and stop instead of consuming the batch.",
+    )
     args = parser.parse_args()
 
     config = load_service_config(args.credentials_file, args.model)
@@ -402,6 +407,10 @@ def main() -> None:
                 f"done={report['completed']}/{len(selected)}",
                 flush=True,
             )
+            if state == "error" and args.stop_on_error:
+                for pending_future in futures:
+                    pending_future.cancel()
+                break
 
 
 if __name__ == "__main__":
