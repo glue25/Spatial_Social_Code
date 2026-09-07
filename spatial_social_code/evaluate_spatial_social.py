@@ -23,15 +23,19 @@ if str(SHARED_MODEL_CODE) not in sys.path:
 from local_backend import choice_probabilities, generate, set_image_context  # noqa: E402
 from mmtom_visual import load_questions, sample_rgb_frames  # noqa: E402
 from runtime import UnsafeProgram, execute_spatial  # noqa: E402
-from social_code import SOCIAL_SOURCES, answer_posterior_probs, compile_social_code
+from social_code import (
+    SOCIAL_SOURCES,
+    compile_social_code,
+    question_without_options,
+)
 
 
-SCHEMA_VERSION = 6
+SCHEMA_VERSION = 7
 CONDITIONS = ("direct", "spatial", "social", "spatial_social")
 
 
 SPATIAL_PROMPT = """You are the Spatial Code compiler in a video understanding system.
-Transcribe physically grounded facts from the initial-state text and ordered RGB frames into an executable program. Use both answer choices only to identify the concrete facts and observations that distinguish them. Seek evidence for each alternative without selecting, copying, or encoding an answer. Identify relevant objects and locations, their stated initial locations, and observed actions. Keep world state separate from visibility. Never infer beliefs, goals, intentions, or an A/B answer. Missing records mean unknown, not false.
+Transcribe physically grounded facts from the option-free initial-state text, action history, and ordered RGB frames into an executable program. Record relevant objects, locations, stated initial locations, and observed actions. Keep world state separate from visibility. Never infer beliefs, goals, intentions, answer options, or an A/B answer. Missing records mean unknown, not false.
 The runtime object S already exists. Use ONLY literal calls in these forms:
 S.fact(t, relation, subject, object, source="text", confidence=1.0)
 S.event(t, actor, action, target, source="text", confidence=1.0)
@@ -42,6 +46,11 @@ No assignments, variables, imports, loops, markdown, comments, or repeated calls
 MMToM problem:
 {question}
 """
+
+
+def option_blind_spatial_prompt(question: str) -> str:
+    """Build the Physical compiler prompt with all answer options removed."""
+    return SPATIAL_PROMPT.format(question=question_without_options(question))
 
 
 ANSWER_PROMPT = """Answer the MMToM question using the raw evidence and supplied executable understanding code. Compare both choices against the raw evidence before deciding. Treat unknown, omitted, or low-confidence records as uncertain; absence from code is not evidence that something did not happen. Raw evidence overrides intermediate code. Return exactly one uppercase letter: A or B.
@@ -113,9 +122,6 @@ def select_indices(rows: list[dict], samples_per_type: int) -> list[int]:
 
 
 def answer_probs(question: str, code_context: str) -> dict[str, float]:
-    posterior = answer_posterior_probs(code_context)
-    if posterior is not None:
-        return posterior
     prompt = ANSWER_PROMPT.format(
         question=question,
         code_context=code_context or "Intermediate code: NONE (direct baseline)",
@@ -132,7 +138,7 @@ def summarize(records: Iterable[dict]) -> dict:
     summary: dict[str, object] = {
         "schema_version": SCHEMA_VERSION,
         "method": "Spatial-Social Code",
-        "social_design": "choice_hidden_clean_state_v1",
+        "social_design": "option_blind_unweighted_state_v2",
         "completed_examples": len(rows),
         "conditions": {},
     }
@@ -197,7 +203,7 @@ def main() -> None:
     parser.add_argument(
         "--include-autotom-evidence",
         action="store_true",
-        help="Admit an AutoToM posterior as optional external evidence. Native Bayesian inference is already part of hybrid.",
+        help="Legacy/ablation-only external evidence; rejected by clean neural and hybrid paths.",
     )
     parser.add_argument(
         "--hybrid-include-bayesian",
@@ -269,7 +275,7 @@ def main() -> None:
             {
                 "schema_version": SCHEMA_VERSION,
                 "method": "Spatial-Social Code",
-                "social_design": "choice_hidden_clean_state_v1",
+                "social_design": "option_blind_unweighted_state_v2",
                 "social_source": args.social_source,
                 "social_components": [],
                 "social_reasoning": {},
@@ -298,7 +304,7 @@ def main() -> None:
         needs_spatial = any(name in needed for name in ("spatial", "spatial_social"))
         if needs_spatial and "spatial" not in record["codes"]:
             record["codes"]["spatial"] = normalize_spatial_code(
-                generate(SPATIAL_PROMPT.format(question=question), max_new_tokens=320)
+                generate(option_blind_spatial_prompt(question), max_new_tokens=320)
             )
             record["traces"]["spatial"] = execute_spatial_or_error(
                 record["codes"]["spatial"]
@@ -317,7 +323,7 @@ def main() -> None:
 
             result = compile_social_code(
                 args.social_source,
-                question,
+                question_without_options(question),
                 generate=generate,
                 spatial_trace=record["traces"].get("spatial", ""),
                 bayesian_loader=bayesian_loader,

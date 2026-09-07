@@ -1,10 +1,9 @@
 """Compilers and state inference for the Social Code representation.
 
 The default paths emit answer-independent observations, beliefs, goals, and
-intents.  Answer choices are hidden from the neural state compiler.  Final
-option comparison lives in :mod:`clean_bayesian`.  Historical answer-directed
-``query_evidence`` behavior is quarantined behind explicit ``legacy_*`` source
-names and is not accepted by the public runtime.
+intents.  Answer choices are hidden from the neural state compiler. Historical
+answer-directed ``query_evidence`` behavior is quarantined behind explicit
+``legacy_*`` source names and is not accepted by the public runtime.
 """
 
 from __future__ import annotations
@@ -562,44 +561,14 @@ def compile_rules(question: str, *, legacy: bool = False) -> SocialCodeResult:
             )
 
     known_goal, _ = _query_context(question, agent)
-    goal_object = _goal_object(known_goal) if known_goal else None
     if known_goal:
         calls.append(
             f"M.goal({_literal(agent)}, {_literal(known_goal)}, 1.0, "
             f"'given question premise')"
         )
-    # In this search domain, opening and closing a container without taking the
-    # sought object updates the agent's belief toward absence.  Merely moving
-    # to the next unopened container supports a tentative presence belief.
-    # These are agent-state transitions, never scores for an answer option.
-    if not legacy and goal_object and not re.search(
-        rf"\b(?:takes?|picks? up|grabs?|gets?)\b[^.]*\b{re.escape(goal_object)}\b",
-        history,
-        flags=re.IGNORECASE,
-    ):
-        location_steps = _action_location_steps(question)
-        for t, target, inspected, sentence in location_steps:
-            if inspected:
-                fact = f"{goal_object} is not inside {target}"
-                confidence = 0.72
-                evidence = "completed inspection without retrieving the sought object"
-            elif (t, target, inspected, sentence) == location_steps[-1]:
-                fact = f"{goal_object} is inside {target}"
-                confidence = 0.65
-                evidence = "next goal-directed search location; not yet inspected"
-            else:
-                continue
-            calls.append(
-                f"M.belief({t}, {_literal(agent)}, {_literal(fact)}, "
-                f"{confidence!r}, {_literal(evidence + ': ' + sentence)})"
-            )
-
     if not calls:
         calls.append(f"M.unknown({_literal(agent)}, 'goal_or_intent')")
-    # Long searches can contain eight inspected locations plus a final pending
-    # target.  Keep the terminal belief update instead of truncating it behind
-    # earlier intents.
-    code = "\n".join(calls[:32])
+    code = "\n".join(calls[:16])
     return SocialCodeResult("rules", code, execute_social(code), ("rules",))
 
 
@@ -1382,6 +1351,36 @@ def combine_results(source: str, results: Iterable[SocialCodeResult]) -> SocialC
     return fuse_social_results(source, results)
 
 
+def merge_option_blind_states(
+    source: str,
+    results: Iterable[SocialCodeResult],
+) -> SocialCodeResult:
+    """Merge compiler outputs without rules, confidence arithmetic, or scoring."""
+    parts = list(results)
+    lines: list[str] = []
+    seen: set[str] = set()
+    for part in parts:
+        for raw_line in part.code.splitlines():
+            line = raw_line.strip()
+            if line and line not in seen:
+                seen.add(line)
+                lines.append(line)
+    code = "\n".join(lines) or "M.unknown('agent', 'social_state')"
+    return SocialCodeResult(
+        source,
+        code,
+        execute_social(code),
+        tuple(component for part in parts for component in part.components),
+        raw_code=code,
+        diagnostics={
+            "merge": "option_blind_state_concatenation",
+            "records": len(lines),
+            "answer_scoring": False,
+            "hand_weighting": False,
+        },
+    )
+
+
 def compile_social_code(
     source: str,
     question: str,
@@ -1393,10 +1392,10 @@ def compile_social_code(
 ) -> SocialCodeResult:
     """Compile one Social Code state from the selected native components.
 
-    ``hybrid`` is the clean default: answer choices are hidden from the neural
-    compiler, and the result contains agent state rather than answer-option
-    evidence.  ``legacy_bayesian`` and ``legacy_hybrid`` exist only to replay
-    historical experiments that used ``query_evidence``.
+    ``hybrid`` is the clean default: answer choices are hidden from both state
+    compilers, and their records are concatenated without rules, confidence
+    arithmetic, Bayesian scoring, or answer-option evidence. ``legacy_*``
+    exists only to replay withdrawn historical experiments.
     """
     if source not in SOCIAL_SOURCES:
         raise ValueError(f"unknown Social Code source: {source}")
@@ -1412,7 +1411,6 @@ def compile_social_code(
         "rules",
         "bayesian",
         "neural_rules",
-        "hybrid",
         "legacy_bayesian",
         "legacy_hybrid",
     }:
@@ -1434,12 +1432,19 @@ def compile_social_code(
                 allow_legacy_query_evidence=True,
             )
         )
-    elif source in {"bayesian", "hybrid"}:
+    elif source == "hybrid":
+        if spatial_trace:
+            parts.append(compile_spatial_bridge(question, spatial_trace))
+    elif source == "bayesian":
         if spatial_trace:
             parts.append(compile_spatial_bridge(question, spatial_trace))
         parts.append(compile_native_bayesian(question, parts))
 
     if external_requested:
+        if source in {"neural", "hybrid"}:
+            raise ValueError(
+                "option-blind neural/hybrid paths do not admit external answer evidence"
+            )
         if bayesian_loader is None:
             raise ValueError("external Bayesian evidence requires a loader")
         code, _ = bayesian_loader()
@@ -1457,4 +1462,6 @@ def compile_social_code(
                 )
             )
 
+    if source in {"neural", "hybrid"}:
+        return merge_option_blind_states(source, parts)
     return fuse_social_results(source, parts)

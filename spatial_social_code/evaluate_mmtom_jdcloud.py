@@ -29,17 +29,16 @@ from egomas.src.jdcloud_gemini import (  # noqa: E402
     load_service_config,
 )
 from evaluate_spatial_social import (  # noqa: E402
-    SPATIAL_PROMPT,
     execute_spatial_or_error,
     normalize_spatial_code,
+    option_blind_spatial_prompt,
 )
 from mmtom_visual import load_questions, sample_rgb_frames  # noqa: E402
-from clean_bayesian import score_clean_answers  # noqa: E402
-from social_code import compile_social_code  # noqa: E402
+from social_code import compile_social_code, question_without_options  # noqa: E402
 
 
-SCHEMA_VERSION = 4
-DEFAULT_OUTPUT = ROOT / "spatial_social_code" / "mmtom_robust_gemini3pro.jsonl"
+SCHEMA_VERSION = 5
+DEFAULT_OUTPUT = ROOT / "spatial_social_code" / "mmtom_option_blind_gemini3pro.jsonl"
 DIRECT_PROMPT = """Answer the MMToM multiple-choice question from the initial
 state, action history, and ordered RGB frames. Compare both choices against the
 evidence. Return exactly one uppercase letter: A or B.
@@ -72,14 +71,10 @@ MMToM problem:
 {question}
 """
 
-FINAL_PROMPT = """Independently answer the MMToM question from the ordered RGB
-frames and executed Spatial-Social traces. Raw evidence overrides code, and a
-missing code record means unknown rather than false. Check both options before
-choosing. Return JSON only:
-{{"checks":[{{"option":"A","status":"supported|contradicted|unknown"}},{{"option":"B","status":"supported|contradicted|unknown"}}],"answer":"A","reason":"short"}}
-
-Neutral evidence checklist:
-{claim_plan}
+FINAL_PROMPT = """Answer the MMToM multiple-choice question from the ordered RGB
+frames and the option-blind Spatial and Social traces. Raw evidence overrides
+code, and a missing record means unknown rather than false. Compare both
+choices. Return exactly one uppercase letter: A or B.
 
 Spatial trace:
 {spatial_trace}
@@ -89,6 +84,23 @@ Social trace:
 
 MMToM problem:
 {question}
+
+Answer:
+"""
+
+FINAL_REPAIR_PROMPT = """Return exactly one character, A or B, for the MMToM
+question below. Do not explain your answer.
+
+Spatial trace:
+{spatial_trace}
+
+Social trace:
+{social_trace}
+
+MMToM problem:
+{question}
+
+Answer:
 """
 
 
@@ -168,6 +180,7 @@ def process_one(
     paths, image_details = sample_rgb_frames(frames_root, row, num_frames=num_frames)
     media = image_parts(paths)
     question = str(row["question"])
+    option_blind_question = question_without_options(question)
 
     direct_raw = client.generate_parts(
         media + [{"text": DIRECT_PROMPT.format(question=question)}],
@@ -185,7 +198,7 @@ def process_one(
         raise RuntimeError("direct baseline did not return A or B after retry")
 
     spatial_raw = client.generate_parts(
-        media + [{"text": SPATIAL_PROMPT.format(question=question)}],
+        media + [{"text": option_blind_spatial_prompt(question)}],
         max_output_tokens=4096,
     )
     spatial_code = normalize_spatial_code(spatial_raw)
@@ -199,18 +212,47 @@ def process_one(
 
     social = compile_social_code(
         "hybrid",
-        question,
+        option_blind_question,
         generate=generate_with_frames,
         spatial_trace=spatial_trace,
         include_external_bayesian=False,
     )
-    decision = score_clean_answers(question, spatial_trace, social.trace)
-    posterior = decision.probabilities
-    method_prediction = decision.choice.lower()
+    final_raw = client.generate_parts(
+        media
+        + [
+            {
+                "text": FINAL_PROMPT.format(
+                    spatial_trace=spatial_trace,
+                    social_trace=social.trace,
+                    question=question,
+                )
+            }
+        ],
+        max_output_tokens=1024,
+    )
+    method_prediction = parse_ab(final_raw)
+    final_retry_used = not method_prediction
+    if final_retry_used:
+        final_raw = client.generate_parts(
+            media
+            + [
+                {
+                    "text": FINAL_REPAIR_PROMPT.format(
+                        spatial_trace=spatial_trace,
+                        social_trace=social.trace,
+                        question=question,
+                    )
+                }
+            ],
+            max_output_tokens=1024,
+        )
+        method_prediction = parse_ab(final_raw)
+    if not method_prediction:
+        raise RuntimeError("final reasoner did not return A or B after retry")
     answer = str(row["answer"]).lower()
     return {
         "schema_version": SCHEMA_VERSION,
-        "method": "Contrastive Spatial-Social Code",
+        "method": "Option-blind Spatial-Social Code",
         "model": client.config.model,
         "index": index,
         "episode": row["episode"],
@@ -228,15 +270,11 @@ def process_one(
         "social_trace": social.trace,
         "social_components": list(social.components),
         "social_reasoning": social.diagnostics,
-        "answer_reasoning": {
-            "name": "clean_fixed_bayesian_v1",
-            "scores": decision.scores,
-            "terms": decision.terms,
-        },
+        "final_raw": final_raw,
+        "final_retry_used": final_retry_used,
+        "answer_reasoning": {"name": "same_backbone_final_reasoner"},
         "prediction": method_prediction,
         "correct": method_prediction == answer,
-        "prob_a": posterior["A"],
-        "prob_b": posterior["B"],
         "elapsed_seconds": time.monotonic() - started,
     }
 

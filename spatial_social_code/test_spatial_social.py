@@ -4,7 +4,6 @@ import json
 import unittest
 
 from runtime import UnsafeProgram, execute_social, execute_social_legacy, execute_spatial
-from clean_bayesian import score_clean_answers
 from executable_hypothesis import (
     compile_payload,
     ensure_spatial_evidence_ids,
@@ -337,9 +336,9 @@ class SocialCodeTests(unittest.TestCase):
                 'M.intent(0, "Jessica", "inspect cabinet", 0.6, "approach")'
             ),
         )
-        self.assertEqual(result.components, ("neural", "rules", "bayesian"))
+        self.assertEqual(result.components, ("neural",))
         self.assertNotIn("external_bayesian", result.components)
-        self.assertIn('"kind": "posterior"', result.trace)
+        self.assertNotIn('"kind": "posterior"', result.trace)
         self.assertNotIn("SECRET_A", result.code)
         self.assertNotIn("SECRET_B", result.code)
         self.assertNotIn('"variable": "answer_', result.trace)
@@ -427,8 +426,10 @@ class SocialCodeTests(unittest.TestCase):
             spatial_trace=trace,
             generate=lambda prompt, max_new_tokens: 'M.unknown("Jessica", "social_state")',
         )
-        decision = score_clean_answers(question, trace, social.trace)
-        self.assertEqual(decision.choice, "A")
+        self.assertEqual(social.components, ("neural", "spatial_bridge"))
+        self.assertNotIn("(a)", social.code.lower())
+        self.assertNotIn("(b)", social.code.lower())
+        self.assertNotIn('"kind": "posterior"', social.trace)
 
     def test_unopened_container_does_not_reveal_world_contents(self) -> None:
         question = (
@@ -465,7 +466,7 @@ class SocialCodeTests(unittest.TestCase):
         self.assertNotIn("M.query_evidence", bridge.code)
         self.assertNotIn("plate is not inside cabinet", bridge.code)
 
-    def test_completed_search_penalizes_an_unretrieved_goal_candidate(self) -> None:
+    def test_clean_hybrid_does_not_score_goal_candidates(self) -> None:
         question = (
             "Actions taken by John: John approaches the microwave, opens it, and closes it. "
             "Question: Which is more likely? "
@@ -498,12 +499,16 @@ class SocialCodeTests(unittest.TestCase):
                 },
             ]
         )
-        social = compile_social_code("bayesian", question, spatial_trace=trace)
-        decision = score_clean_answers(question, trace, social.trace)
-        self.assertEqual(decision.choice, "B")
-        self.assertGreater(decision.probabilities["B"], decision.probabilities["A"])
+        social = compile_social_code(
+            "hybrid",
+            question,
+            spatial_trace=trace,
+            generate=lambda prompt, max_new_tokens: 'M.unknown("John", "social_state")',
+        )
+        self.assertNotIn('"kind": "posterior"', social.trace)
+        self.assertNotIn('"kind": "query_candidate"', social.trace)
 
-    def test_belief_is_carried_when_no_contradictory_observation_arrives(self) -> None:
+    def test_clean_neural_path_does_not_invent_carried_beliefs(self) -> None:
         result = compile_social_code(
             "neural",
             QUESTION,
@@ -515,27 +520,26 @@ class SocialCodeTests(unittest.TestCase):
             ),
         )
         records = [json.loads(line) for line in result.trace.splitlines()]
-        belief = next(r for r in records if r["kind"] == "belief")
-        self.assertEqual(belief["values"]["t"], 3)
-        self.assertIn("carried to t=3", belief["values"]["evidence"])
-        self.assertEqual(result.diagnostics["carried_beliefs"], 1)
+        self.assertEqual(sum(r["kind"] == "observation" for r in records), 1)
+        self.assertEqual(sum(r["kind"] == "belief" for r in records), 0)
+        self.assertFalse(result.diagnostics["hand_weighting"])
 
-    def test_autotom_is_only_explicit_external_evidence(self) -> None:
-        result = compile_social_code(
-            "neural",
-            QUESTION,
-            generate=lambda prompt, max_new_tokens: (
-                'M.intent(0, "Jessica", "inspect cabinet", 0.6, "approach")'
-            ),
-            bayesian_loader=lambda: (
-                'M.likelihood("Jessica", "open cabinet", "inspect cabinet", 0.8)',
-                "unused trace",
-            ),
-            include_external_bayesian=True,
-        )
-        self.assertEqual(result.components, ("neural", "external_bayesian"))
+    def test_clean_neural_path_rejects_external_answer_evidence(self) -> None:
+        with self.assertRaises(ValueError):
+            compile_social_code(
+                "neural",
+                QUESTION,
+                generate=lambda prompt, max_new_tokens: (
+                    'M.intent(0, "Jessica", "inspect cabinet", 0.6, "approach")'
+                ),
+                bayesian_loader=lambda: (
+                    'M.likelihood("Jessica", "open cabinet", "inspect cabinet", 0.8)',
+                    "unused trace",
+                ),
+                include_external_bayesian=True,
+            )
 
-    def test_observation_updates_belief_and_duplicate_evidence_is_fused(self) -> None:
+    def test_clean_neural_path_preserves_records_without_weight_fusion(self) -> None:
         result = compile_social_code(
             "neural",
             QUESTION,
@@ -549,10 +553,10 @@ class SocialCodeTests(unittest.TestCase):
         records = [json.loads(line) for line in result.trace.splitlines()]
         beliefs = [record for record in records if record["kind"] == "belief"]
         self.assertEqual(len(beliefs), 1)
-        self.assertGreater(beliefs[0]["values"]["confidence"], 0.8)
-        self.assertEqual(result.diagnostics["derived_beliefs"], 1)
+        self.assertEqual(beliefs[0]["values"]["confidence"], 0.6)
+        self.assertFalse(result.diagnostics["hand_weighting"])
 
-    def test_conflicting_beliefs_are_explicit_and_weaker_one_is_discounted(self) -> None:
+    def test_clean_neural_path_does_not_hand_discount_conflicts(self) -> None:
         result = compile_social_code(
             "neural",
             QUESTION,
@@ -564,13 +568,13 @@ class SocialCodeTests(unittest.TestCase):
             ),
         )
         records = [json.loads(line) for line in result.trace.splitlines()]
-        self.assertEqual(sum(r["kind"] == "contradiction" for r in records), 1)
+        self.assertEqual(sum(r["kind"] == "contradiction" for r in records), 0)
         positive = next(
             r for r in records if r["kind"] == "belief" and "not" not in r["values"]["fact"]
         )
-        self.assertAlmostEqual(positive["values"]["confidence"], 0.28)
+        self.assertAlmostEqual(positive["values"]["confidence"], 0.8)
 
-    def test_native_posteriors_normalize_competing_intents(self) -> None:
+    def test_clean_hybrid_has_no_native_posteriors(self) -> None:
         result = compile_social_code(
             "hybrid",
             QUESTION,
@@ -579,21 +583,10 @@ class SocialCodeTests(unittest.TestCase):
             ),
         )
         records = [json.loads(line) for line in result.trace.splitlines()]
-        posterior_records = [
-            r["values"]
-            for r in records
-            if r["kind"] == "posterior"
-            and r["values"]["variable"] == "intent"
-            and r["values"]["t"] == 0
-        ]
-        posteriors = [record["value"] for record in posterior_records]
-        self.assertGreater(len(posteriors), 1)
-        self.assertAlmostEqual(sum(posteriors), 1.0)
-        self.assertTrue(
-            all("0 action/observation evidence" in record["evidence"] for record in posterior_records)
-        )
+        self.assertFalse(any(r["kind"] == "posterior" for r in records))
+        self.assertFalse(result.diagnostics["answer_scoring"])
 
-    def test_duplicate_unit_confidence_prior_is_clipped_before_log_odds(self) -> None:
+    def test_clean_hybrid_does_not_convert_confidence_to_log_odds(self) -> None:
         question = (
             "Actions taken by Jessica: Jessica takes the plate. "
             "Question: If Jessica has been trying to get a plate, which is more likely? "
@@ -608,7 +601,8 @@ class SocialCodeTests(unittest.TestCase):
                 'M.goal("Jessica", "get plate", 1.0, "strong duplicate evidence")'
             ),
         )
-        self.assertIn('"kind": "posterior"', result.trace)
+        self.assertNotIn('"kind": "posterior"', result.trace)
+        self.assertFalse(result.diagnostics["hand_weighting"])
 
     def test_normalizer_rejects_arbitrary_calls(self) -> None:
         code = normalize_social_code(

@@ -1,22 +1,22 @@
 # Spatial-Social Code：投稿结果与 baseline 口径
 
-> **2026-09-07 方法审计更正：** 本文中的 MMToM 470/600（78.33%）使用了现已移出正式方法的答案定向 `query_evidence` 启发式，只能作为 legacy 结果，不能再表述为干净 SSC 主结果。无该字段的固定状态贝叶斯开发重算见 `mmtom_clean_bayesian_rescore_summary.json`；正式替代数字须在冻结方案后重新评测。
+> **2026-09-07 方法审计更正：** 本文中的 MMToM 470/600（78.33%）使用了答案定向 `query_evidence` 启发式，只能作为已撤回的 legacy 结果。随后得到的 508/600 与 525/600 又使用了看过测试错误/标签后设计的规则和权重，同样全部作废。正式替代数字须在冻结、选项盲的 Physical/Social 编译协议下重新评测。
 
-更新日期：2026-09-03。
+更新日期：2026-09-07。
 
 ## 结论
 
 当前最稳妥的论文主张是：
 
-> 在同模型、同视觉证据的 paired protocol 下，task/question-conditioned、
-> agent-indexed Spatial-Social Code 在 MMToM 和 MA-EgoQA 上提高回答准确率，
-> 在 EnactToM/Habitat 的冻结子集上提高平均目标完成度，并在 CoMind
-> recording-heldout OOF 上显著改善真实多视角定位；真正有效的组件随 benchmark
-> 而变化。
+> 在同模型、同视觉证据的 paired protocol 下，agent-indexed
+> Spatial-Social Code 在 MA-EgoQA 上提高回答准确率，在 EnactToM/Habitat 的
+> 冻结子集上提高平均目标完成度，并在 CoMind recording-heldout OOF 上改善真实
+> 多视角定位。MMToM 尚无可报告的干净 SSC 数字。
 
-这里的 compiler 可以读取任务、问题和选项，但不能读取 gold label、正确性
-反馈或 baseline answer。视觉主实验匹配模型和视觉输入，但不匹配调用数、token、
-延迟或 FLOPs。
+正式协议中，Physical/Social compiler 只能读取任务证据和去除选项后的问题前提，
+不能读取 A/B 选项、gold label、正确性反馈或 baseline answer。只有最终统一答题器
+可以读取选项。视觉主实验匹配模型和视觉输入，但不匹配调用数、token、延迟或
+FLOPs。
 
 ## 1. 同协议主结果
 
@@ -24,7 +24,7 @@
 
 | 环境 | Direct | Spatial-Social | 差值 | 统计与边界 |
 |---|---:|---:|---:|---|
-| MMToM，600 题 | 406/600，67.67% | **470/600，78.33%** | **+10.67 pp** | McNemar `p=3.17e-05`；同模型/同帧，不同计算量 |
+| MMToM，600 题 | 406/600，67.67% | 无有效干净结果 | — | 470/600、508/600、525/600 均已撤回；待选项盲协议重跑 |
 | MA-EgoQA，1,741 题 | 848/1741，48.71% | **904/1741，51.92%** | **+3.22 pp** | McNemar `p=0.00388`；同模型/同 clips，不同计算量 |
 | Habitat frozen-12，36 run/条件 | success 2.78%，完成度 45.83% | success 11.11%，完成度 **53.47%** | 完成度 **+7.64 pp** | task-cluster bootstrap 95% CI `[+0.69,+15.74]`；仅 12 个任务 |
 
@@ -44,15 +44,14 @@ CoMind 支持的是“显式 detector/SAM grounding 修复文本式 Spatial bbox
 它不是官方 hidden-test 或 leaderboard 成绩，也不证明所有社会字段都提升。
 
 MMToM 的 equal-call direct diagnostic 使用约 1,550 个逻辑调用，得到
-372/600（62.00%），仍低于完整方法 470/600。它缓解了“只是因为调用次数更多”
-这一解释，但不等于 token、延迟或 FLOP 完全匹配，而且是在已经迭代过的 benchmark
-上运行，应作为诊断而非独立 held-out 证据。
+372/600（62.00%）。由于原完整方法结果已撤回，这一数字不能再用于证明 SSC 增益，
+只保留为历史诊断。
 
 ## 2. 组件归因
 
 | 环境 | 当前能支持的组件结论 | 当前不能支持的结论 |
 |---|---|---|
-| MMToM | `rules -> rules + Spatial bridge` 从 69.67% 到 75.33%，`p=1.16e-6`；dense/refined 完整路线达到 78.33% | sparse Social 从 75.33% 降到 74.17%，不能说任意 Social Code 都有增益 |
+| MMToM | 暂无可报告的干净组件结论，须按选项盲协议重跑 | 旧 rules、Bayesian、dense/refined 数字均不能作为正式归因 |
 | MA-EgoQA | 冻结100题诊断中 Raw 44.44%、Spatial-only **51.00%**、Social-only 48.00%、P+S 50.00%；Spatial 有独立信号 | P+S 没超过 Spatial-only；自然语言 scratchpad 也是 51.00%，不能把完整增益只归因于代码格式 |
 | Habitat | P+S 完成度比 Direct 高 7.64 pp；Social-only 达到最高的 59.95% | P+S 低于 Social-only 6.48 pp，不能声称 Habitat 上 P/S 互补或 Spatial 独立有效 |
 | CoMind | recording-heldout OOF grounding 在三项 bbox IoU@0.5 上由近零提高到 6.47%--23.15%，handover category 达 31.88% | 这是 labeled train OOF，不是 hidden test；原始300题 paired SSC 也没有整体领先 |
@@ -64,8 +63,8 @@ Habitat Spatial v2 在同 seed 的12题上把 Spatial-only 从38.19%修复到44.
 但当前融合仍不是稳定增益来源。
 
 因此论文不应写“每个环境都由 Spatial 和 Social 同时贡献”。更准确的发现是：
-结构化、主体化状态在不同任务上有效，但瓶颈不同；MMToM 有清晰 Spatial bridge
-贡献，Habitat 的主要增益来自 Social 协调信息。
+结构化、主体化状态在不同任务上有效，但瓶颈不同；MMToM 的机制结论须重跑，
+Habitat 的主要增益来自 Social 协调信息。
 
 ## 3. 官方公开结果：外部参考表
 
@@ -75,7 +74,7 @@ Habitat Spatial v2 在同 seed 的12题上把 Spatial-only 从38.19%修复到44.
 
 | 环境/协议 | 官方或论文公开方法 | 公开结果 | 严格可比 | 主要差异 |
 |---|---|---:|:---:|---|
-| MMToM multimodal | AutoToM / GPT-4o | 75.5% | 否 | 我们 78.33%，高 2.83 pp；不同模型与实现 |
+| MMToM multimodal | AutoToM / GPT-4o | 75.5% | 否 | 我们暂无有效干净结果；不同模型与实现 |
 | MMToM multimodal | AutoToM + Model Specification / GPT-4o | 79.8% | 否 | 人工预先指定变量结构；不同模型与实现 |
 | MMToM multimodal | BIP-ALM / LLaMA 2 | 76.7% | 否 | 不同模型与方法实现 |
 | MMToM video-only | BIP-ALM / LLaMA 2 | 61.2% | 否 | 输入协议不同 |

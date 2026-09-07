@@ -68,8 +68,8 @@ def refine_one(
             max_output_tokens=max(2048, max_new_tokens),
         )
 
-    # This script reproduces the historical uncertainty-gated result.  New
-    # evaluations use the clean state compiler and clean_bayesian reasoner.
+    # This script reproduces a withdrawn historical answer-directed result.
+    # It is not part of the clean SSC evaluation path.
     social = compile_social_code(
         "legacy_hybrid",
         question,

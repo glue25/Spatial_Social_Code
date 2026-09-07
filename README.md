@@ -11,10 +11,11 @@ grounded physical evidence from social and mental-state inference:
 - A restricted AST runtime validates generated programs before executing them
   into canonical JSON traces.
 
-The repository contains two complementary evaluation tracks. The primary
-visual formulation is task/question-conditioned: the compiler may read the
-task, question, and answer choices, but never gold labels, correctness
-feedback, or a baseline answer.
+The repository contains two complementary evaluation tracks. In the primary
+visual formulation, Physical and Social compilers may read the task evidence
+and option-free question premise, but never answer choices, gold labels,
+correctness feedback, or a baseline answer. Only the shared final answerer sees
+the answer choices.
 
 1. task-conditioned agent-indexed state compilation and closed-loop planning
    on EnactToM/Habitat, with deterministic oracle execution retained only as
@@ -74,13 +75,12 @@ commands are recorded in the
 ## Adopted visual pipeline
 
 1. Retrieve or sample visual evidence without consulting a baseline answer.
-2. Compile question-conditioned grounded Spatial Code with clip/time provenance.
+2. Compile option-blind grounded Spatial Code with clip/time provenance.
 3. Execute the Spatial program in the restricted runtime.
 4. Compile Social Code using only validated Spatial evidence references.
 5. Infer answer-independent beliefs, goals, intents, and roles while
    preserving unknowns and contradictions.
-6. Compare every answer option with one fixed state likelihood model or one
-   shared final reasoner.
+6. Give the frozen traces and answer choices to one shared final reasoner.
 7. On uncertain MMToM items, use an independent denser visual pass as the
    authoritative method prediction instead of averaging it with sparse
    evidence.
@@ -94,13 +94,6 @@ Important constraints include:
 - Social records can be required to cite valid Spatial evidence IDs;
 - `query_evidence` is rejected by the normal runtime; historical replay is
   isolated behind explicitly named `legacy_*` entry points.
-
-The current post-hoc MMToM cleanup audit scores 508/600 (84.67%) with a
-choice-hidden deterministic Social state and the fixed clean Bayesian layer.
-Because that layer was developed after inspection of this benchmark, this is a
-development diagnostic, not yet a publishable replacement result. See
-`reports/mmtom_clean_bayesian_rescore_summary.json`; a fresh frozen evaluation
-is required.
 
 ## EnactToM track
 
