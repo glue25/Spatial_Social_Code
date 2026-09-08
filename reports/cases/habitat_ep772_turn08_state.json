@@ -1,0 +1,24 @@
+{
+  "turn": 8,
+  "target": "chest_of_drawers_30",
+  "support": null,
+  "handles": {
+    "chest_of_drawers_30": "5f7fe56c41db43b1673d70acd0079e9a7ad9c3eb_:0001"
+  },
+  "translations": {
+    "chest_of_drawers_30": [
+      -4.7404961585998535,
+      3.5762786865234375e-07,
+      -5.997125625610352
+    ]
+  },
+  "grasped_objects": [
+    {
+      "agent_id": "agent_2",
+      "object_handle": "7f4208d306cfb2f43162195c46f59058525d9933_:0000"
+    }
+  ],
+  "joint_positions": [
+    0.38270077109336853
+  ]
+}

@@ -1,4 +1,4 @@
-# Habitat episode 772：真实 Physical+Social 成功案例
+# Habitat episode 772：Physical+Social 回放与物理状态审计
 
 本案例来自 `repeat_3 / physical_social` 的实际 learned-agent 运行，不是 episode
 1013，也不是 Oracle action schedule。
@@ -13,7 +13,8 @@
 | Repeat / 实际 seed | `3` / `891003` |
 | 模型 | `qwen3-vl-8b-instruct` |
 | 运行模式 | `standard`，非 Oracle |
-| Physical+Social | **100%**，4/4 子任务，14 turns，success=true |
+| Physical+Social（评估器记录） | **100%**，4/4 子任务，14 turns，success=true |
+| Physical+Social（回放审计） | **最终物理成功不成立**：相框仍被 Agent 2 抓取，未执行 Place |
 | 同 seed Direct | 75%，3/4 子任务，20 turns 超时，success=false |
 
 任务要求把正确玻璃杯放到洗衣房桌子、花瓶放到客厅桌子、相框放到餐厅
@@ -48,25 +49,57 @@ Code 通过每个 agent 的 private context 注入；它给出当前 agent 已�
 | 10 | agent_2 成功将 `glass_2` 放到 `table_22` |
 | 11 | agent_0 成功将 `vase_1` 放到 `table_12` |
 | 13 | agent_2 成功拿起 `picture_frame_0` |
-| 14 | agent_2 `Navigate[counter_25]`；同一步评估记录相框目标完成，4/4 完成 |
+| 14 | agent_2 `Navigate[counter_25]`；评估器记录相框目标完成，但没有 `Place` |
 
-原始高层日志在第 14 步没有单独记录 `Place[picture_frame_0, ...]`，但同一日志的
-subtask-completion 事件和最终评估都判定 `(is_on_top picture_frame_0 counter_25)`
-完成。导出文件忠实保留这一现象；在有画面的回放完成前，不额外推断未记录动作。
+原始高层日志在第 14 步没有 `Place[picture_frame_0, ...]`。严格回放显示，
+`picture_frame_0` 在回合结束后仍连接到 Agent 2 的 gripper。评估器的 `above()`
+同时返回机器人与 `counter_25`，从而把“机器人手持相框位于柜台上方”计成了
+`is_on_top`。因此应报告为“benchmark-reported 100%”，不能把它表述成经物理
+审计确认的真实 100% 成功。
 
-## 画面状态
+## 真实回放画面与状态
 
-该历史运行使用 `benchmark_observation_mode=text`：42 条动作的
-`selected_frame_paths` 全为空，运行目录中也没有 PNG、JPEG、MP4 或 WebM。
+CUDA/EGL 已恢复。以下画面来自同一任务、同一 seed，严格执行历史日志中的 42 条
+动作；没有重新调用模型生成轨迹，没有使用 episode 1013，也没有补相框 Place
+动作。`Find*` 查询按历史响应无状态重放。图片顶部均明确标注
+`Replay visualization`。
 
-已检查回放环境，但当前主机 `nvidia-smi` 无法连接 NVIDIA driver，Habitat 渲染
-无法启动。因此本次没有上传图片，也没有用示意图冒充模拟器画面。恢复 GPU 后应
-按原动作轨迹补以下三张，并标注为“回放画面”：
+### 第 8 步之后：Agent 1 打开抽屉柜
 
-1. 动作步 8：`chest_of_drawers_30` 打开；
-2. 动作步 11：`vase_1` 已放到 `table_12`；
-3. 动作步 14：agent_2 到达 `counter_25`，重点核对相框最终关系。
+[完整 PNG](cases/habitat_ep772_turn08_agent1_replay.png) ·
+[状态 JSON](cases/habitat_ep772_turn08_state.json)
 
-案例 JSON 的 `visual_artifacts.replay` 记录了当前阻断状态。图片缺失不影响
-100% 指标是历史结果文件中的真实记录，但意味着目前还不能用视觉证据独立核查
-最后一步的状态变化。
+![第 8 步回放](cases/habitat_ep772_turn08_agent1_replay.png)
+
+物理状态中的 joint position 为 `0.38270077109336853`，确认
+`chest_of_drawers_30` 已打开。
+
+### 第 11 步之后：Agent 0 放置花瓶
+
+[完整 PNG](cases/habitat_ep772_turn11_agent0_replay.png) ·
+[状态 JSON](cases/habitat_ep772_turn11_state.json)
+
+![第 11 步回放](cases/habitat_ep772_turn11_agent0_replay.png)
+
+`vase_1` 不在任何 agent 的抓取状态中；`above()` 返回的支撑物 handle 与
+`table_12` 完全一致，确认该项真实完成。
+
+### 第 14 步之后：Agent 2 与相框
+
+[完整 PNG（含同帧局部放大）](cases/habitat_ep772_turn14_agent2_replay.png) ·
+[状态 JSON](cases/habitat_ep772_turn14_state.json)
+
+![第 14 步回放](cases/habitat_ep772_turn14_agent2_replay.png)
+
+左侧保留完整的回合后审计画面，右侧仅放大同一画面中的 Agent 2。相框仍附着在
+gripper；状态 JSON 也记录其 object handle 正由 `agent_2` 抓取。图中没有补动作，
+如实呈现了最终目标未真正完成。
+
+## 可复现性
+
+- 图片导出脚本：
+  [`export_episode772_replay_frames.py`](../experiments/habitat_enacttom/export_episode772_replay_frames.py)
+- 回放任务来自历史 learned-agent `action_history`，使用 seed `891003`；
+  `uses_model_generation=false`，`uses_golden_trajectory=false`。
+- 案例 JSON 同时保存原 benchmark 判定和回放物理审计，避免混淆“评估器记分”与
+  “真实状态正确”。

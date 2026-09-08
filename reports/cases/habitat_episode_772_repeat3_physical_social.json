@@ -25,6 +25,10 @@
   "success": true,
   "functional_success": true,
   "completion_rate": 1.0,
+  "result_semantics": "The three fields above reproduce the historical benchmark evaluator output. Replay audit found that the final picture-frame subtask was a false positive, so this run is not a physically verified 4/4 success.",
+  "benchmark_reported_success": true,
+  "benchmark_reported_completion_rate": 1.0,
+  "audited_physical_success": false,
   "completed_subtasks": [
     0,
     1,
@@ -904,9 +908,53 @@
     "historical_frames_saved": false,
     "action_records_checked": 42,
     "replay": {
-      "performed": false,
-      "status": "blocked_before_simulator_start",
-      "reason": "NVIDIA driver unavailable on the export host; no replay frames are claimed or fabricated."
+      "performed": true,
+      "status": "completed",
+      "actual_seed": 891003,
+      "turns": 14,
+      "actions_replayed": 42,
+      "uses_model_generation": false,
+      "uses_golden_trajectory": false,
+      "extra_place_action_added": false,
+      "query_actions": "Find-tool responses were replayed from the saved log without mutating simulator state.",
+      "evaluator_result": "4/4 (100%)",
+      "physical_audit_result": "The picture-frame goal is a false positive: picture_frame_0 remains grasped by agent_2 after turn 14.",
+      "frames": [
+        {
+          "turn": 8,
+          "agent": "agent_1",
+          "path": "habitat_ep772_turn08_agent1_replay.png",
+          "sha256": "a7bcdacb1f476223508e28615efe109ee113b1b2a178dfc0adce627320abb6ac",
+          "state_path": "habitat_ep772_turn08_state.json",
+          "state_sha256": "e3cc4245519655bbf100cb6e34cc21337b9b24d1d500cee19ff094ac4e9b7eb5",
+          "audit": "chest_of_drawers_30 joint position is 0.38270077109336853 (open)."
+        },
+        {
+          "turn": 11,
+          "agent": "agent_0",
+          "path": "habitat_ep772_turn11_agent0_replay.png",
+          "sha256": "db5aed48cc3056b4546a72c0e2f0c19251d969854e2f6e0fe1c63b373f52f4a1",
+          "state_path": "habitat_ep772_turn11_state.json",
+          "state_sha256": "f6ecc9ca04490f14214d073cf3ebfda20cc33c517ecbcf408e54eb4fdd3ca766",
+          "audit": "vase_1 is released; above() returns the exact table_12 handle."
+        },
+        {
+          "turn": 14,
+          "agent": "agent_2",
+          "path": "habitat_ep772_turn14_agent2_replay.png",
+          "sha256": "94b228a7df2fe13243e2ce1af1048bfec9be67f0997fbcb42bb5369ab7387c0d",
+          "state_path": "habitat_ep772_turn14_state.json",
+          "state_sha256": "5add44bbbf15d636edf676e5ac744b4905bca60d61ba5677cc3814a2903165a8",
+          "audit": "Post-turn audit: picture_frame_0 is still grasped by agent_2. above() also returns counter_25, explaining the evaluator false positive."
+        }
+      ]
+    },
+    "physical_state_audit": {
+      "turn_8_chest_open": true,
+      "turn_11_vase_on_table": true,
+      "turn_14_picture_frame_released_on_counter": false,
+      "turn_14_grasped_by": "agent_2",
+      "conclusion": "Benchmark-reported 100%; not a physically verified 100% success."
     }
   },
   "spatial_social_code_file": "habitat_episode_772_repeat3_spatial_social_code.json",
