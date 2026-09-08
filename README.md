@@ -54,7 +54,11 @@ on handover category L1 (0% versus 14%, exact McNemar `p = 0.000122`).
 
 This is an exploratory train-subset comparison, not an official CoMind hidden
 test result. See the [full report](reports/comind_gpt56_300_results_zh.md) and
-[aggregate JSON](reports/comind_gpt56_300_summary.json).
+[aggregate JSON](reports/comind_gpt56_300_summary.json). One audited
+[SCOIA positive-flip case](reports/comind_success_case_zh.md) pairs the exact
+Direct and Spatial-Social outputs, ground truth, executable Code, and all six
+original input frames. It is an illustrative field-level success, not a claim
+that the 300-example result improves overall.
 
 A subsequent train-only mechanism study processed all 6,877 labeled samples
 with explicit visual grounding and recording-heldout policy selection. On the
@@ -234,8 +238,9 @@ python egomas/src/run_video_provenance_v3_jdcloud.py \
 
 ## Reproducibility boundary
 
-- Raw media, downloaded datasets, model weights, and full prediction JSONL
-  files are not redistributed.
+- Bulk raw media, downloaded datasets, model weights, and full prediction JSONL
+  files are not redistributed. Six explicitly identified CoMind train frames
+  are included only to make one paired case auditable.
 - Included result summaries contain aggregate metrics only.
 - Failed variants are retained for transparency but never replace a better
   official result.

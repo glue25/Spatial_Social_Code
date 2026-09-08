@@ -1,0 +1,245 @@
+{
+  "schema_version": "comind_paired_case_v1",
+  "case_scope": "illustrative labeled-train per-field positive flip",
+  "model": "gpt-5.6-sol",
+  "task": "scoia",
+  "recording_id": "3ef7356e-3b75-4eab-add9-363b0cdc2b99",
+  "sample_id": "032159",
+  "prediction_time_seconds": 1069.0666666666666,
+  "query": {
+    "description": "Predict the upcoming SCOIA object interaction at the prediction timestamp.",
+    "shared_evidence_prompt": "Task: scoia\nFrom the helper's observations up to the prediction frame,\nanticipate the socially conditioned action the helper will perform within 10\nseconds. Predict the future interacted object's [x,y,width,height] box, cue\ntypes, action verb, and level-1 action noun. Frames are 1408x1408; boxes use\noriginal-frame pixels and are [x,y,width,height], not [x1,y1,x2,y2]. Cue types\nmust be selected only from verbal, gestural, and implicit.\n\nAttached images, in exact order:\n1. helper context frame at 1059.067s\n2. helper context frame at 1061.067s\n3. helper context frame at 1063.067s\n4. helper context frame at 1065.067s\n5. helper context frame at 1067.067s\n6. helper prediction frame at 1069.067s\n\nTranscript from the preceding 10 seconds:\ndo you need? I need another big bowl to put the garbage.\n",
+    "fields": [
+      "bbox",
+      "cue_type",
+      "action_verb",
+      "action_noun_l1"
+    ],
+    "transcript_10s": "do you need? I need another big bowl to put the garbage.",
+    "same_ordered_frames_for_direct_and_spatial_social": true
+  },
+  "direct_answer": {
+    "bbox": [
+      650,
+      700,
+      195,
+      150
+    ],
+    "cue_type": [
+      "verbal",
+      "implicit"
+    ],
+    "action_verb": "pick up",
+    "action_noun_l1": "bowl"
+  },
+  "spatial_social_answer": {
+    "bbox": [
+      665,
+      719,
+      208,
+      172
+    ],
+    "cue_type": [
+      "verbal",
+      "gestural"
+    ],
+    "action_verb": "retrieve",
+    "action_noun_l1": "bowl"
+  },
+  "ground_truth": {
+    "start_time": 1069.0666666666666,
+    "end_time": 1071.9666666666667,
+    "start_frame": 32072,
+    "end_frame": 32159,
+    "description": "receive bowl",
+    "numeric_id": "4",
+    "annot_type": "AG",
+    "verbs": [
+      "receive"
+    ],
+    "nouns": [
+      "bowl"
+    ],
+    "bbox": [
+      650.88,
+      756.34667,
+      226,
+      183.81333
+    ],
+    "transcript_10s": "do you need? I need another big bowl to put the garbage.",
+    "nouns_level2": [
+      "bowl"
+    ],
+    "nouns_level3": [
+      "serveware"
+    ]
+  },
+  "spatial_code": [
+    "S.fact(5, 'bbox', 'large_bowl', '[665,719,208,172]', source='video', confidence=0.9);",
+    "S.fact(5, 'cue_type', 'request_for_large_bowl', 'verbal', source='video', confidence=0.99);",
+    "S.fact(5, 'cue_type', 'drawer_opening', 'gestural', source='video', confidence=0.8);",
+    "S.event(6, 'helper', 'retrieve', 'large_bowl', source='video', confidence=0.78);",
+    "S.fact(6, 'action_noun_level_1', 'retrieve', 'bowl', source='video', confidence=0.78);"
+  ],
+  "social_code": [
+    "M.observe(5, \"helper\", \"The other person verbally says they need another big bowl to put the garbage.\", confidence=0.99);",
+    "M.observe(5, \"helper\", \"The other person opens a lower drawer containing a large bowl at [665,719,208,172].\", confidence=0.9);",
+    "M.belief(5, \"helper\", \"The other person needs help obtaining the large bowl from the drawer.\", 0.92, \"The explicit request for another big bowl is followed by the drawer being opened toward the visible bowl.\");",
+    "M.goal(\"helper\", \"Help the other person continue food preparation by supplying a garbage bowl.\", 0.9, \"The other person explicitly states a need for another big bowl for garbage.\");",
+    "M.social_goal(\"helper\", \"other_person\", \"Retrieve the requested large bowl for them.\", 0.9, \"The verbal request and drawer-opening gesture jointly identify the needed object.\");",
+    "M.intent(5, \"helper\", \"Reach into the open drawer and retrieve the large bowl.\", 0.88, \"The requested large bowl is exposed in the open drawer within immediate reach.\");",
+    "M.action_evidence(6, \"helper\", \"retrieve\", \"The helper will interact with the large bowl at [665,719,208,172] using verbal and gestural cues; the level-1 action noun is bowl.\", 0.78, \"The Spatial Trace records the helper retrieving the large bowl after the request and drawer opening.\");"
+  ],
+  "score_audit": {
+    "direct": {
+      "iou_at_0_5": false,
+      "cue_type": false,
+      "action_verb": false,
+      "action_noun_l1": true
+    },
+    "spatial_social": {
+      "iou_at_0_5": true,
+      "cue_type": true,
+      "action_verb": false,
+      "action_noun_l1": true
+    },
+    "positive_flips": [
+      "iou_at_0_5",
+      "cue_type"
+    ],
+    "regressions": [],
+    "bbox_iou": {
+      "direct": 0.3455493765427401,
+      "spatial_social": 0.567997122568437,
+      "threshold": 0.5
+    }
+  },
+  "selected_original_frames": [
+    {
+      "role": "helper",
+      "kind": "context",
+      "time_seconds": 1059.0666666666666,
+      "approximate_frame_at_30fps": 31772,
+      "public_path": "reports/cases/comind_scoia_032159_helper_f031772_context.jpg",
+      "sha256": "717572d852c70da77b54e90f8ead153b4a5b27f7a14777c05f2420ba7989ecd9",
+      "exact_copy_of_source_frame": true
+    },
+    {
+      "role": "helper",
+      "kind": "context",
+      "time_seconds": 1061.0666666666666,
+      "approximate_frame_at_30fps": 31832,
+      "public_path": "reports/cases/comind_scoia_032159_helper_f031832_context.jpg",
+      "sha256": "6898e14749e994ab9c5676c301d4cdb86bf663ef496da03b09e98f54c12c9f3c",
+      "exact_copy_of_source_frame": true
+    },
+    {
+      "role": "helper",
+      "kind": "context",
+      "time_seconds": 1063.0666666666666,
+      "approximate_frame_at_30fps": 31892,
+      "public_path": "reports/cases/comind_scoia_032159_helper_f031892_context.jpg",
+      "sha256": "761fc36c9d4a62fccf3ec02e9e8fb8db2519bf765c21a1ac66dbd7a9a0fa86f2",
+      "exact_copy_of_source_frame": true
+    },
+    {
+      "role": "helper",
+      "kind": "context",
+      "time_seconds": 1065.0666666666666,
+      "approximate_frame_at_30fps": 31952,
+      "public_path": "reports/cases/comind_scoia_032159_helper_f031952_context.jpg",
+      "sha256": "621bbef168109685865b1cd288c746cf55521b083cf8505342495f52d9e69846",
+      "exact_copy_of_source_frame": true
+    },
+    {
+      "role": "helper",
+      "kind": "context",
+      "time_seconds": 1067.0666666666666,
+      "approximate_frame_at_30fps": 32012,
+      "public_path": "reports/cases/comind_scoia_032159_helper_f032012_context.jpg",
+      "sha256": "2e8508cc01e768de6db5a03f6229b2decde8ff8eee077c13f832aa70c10b4743",
+      "exact_copy_of_source_frame": true
+    },
+    {
+      "role": "helper",
+      "kind": "prediction",
+      "time_seconds": 1069.0666666666666,
+      "approximate_frame_at_30fps": 32072,
+      "public_path": "reports/cases/comind_scoia_032159_helper_f032072_prediction.jpg",
+      "sha256": "b3be265a55934c146fb1b9520d9b089c9696c482618b8bda06fea2ca92c9c340",
+      "exact_copy_of_source_frame": true
+    }
+  ],
+  "all_input_frames": [
+    {
+      "role": "helper",
+      "kind": "context",
+      "time_seconds": 1059.0666666666666,
+      "source_sha256": "717572d852c70da77b54e90f8ead153b4a5b27f7a14777c05f2420ba7989ecd9"
+    },
+    {
+      "role": "helper",
+      "kind": "context",
+      "time_seconds": 1061.0666666666666,
+      "source_sha256": "6898e14749e994ab9c5676c301d4cdb86bf663ef496da03b09e98f54c12c9f3c"
+    },
+    {
+      "role": "helper",
+      "kind": "context",
+      "time_seconds": 1063.0666666666666,
+      "source_sha256": "761fc36c9d4a62fccf3ec02e9e8fb8db2519bf765c21a1ac66dbd7a9a0fa86f2"
+    },
+    {
+      "role": "helper",
+      "kind": "context",
+      "time_seconds": 1065.0666666666666,
+      "source_sha256": "621bbef168109685865b1cd288c746cf55521b083cf8505342495f52d9e69846"
+    },
+    {
+      "role": "helper",
+      "kind": "context",
+      "time_seconds": 1067.0666666666666,
+      "source_sha256": "2e8508cc01e768de6db5a03f6229b2decde8ff8eee077c13f832aa70c10b4743"
+    },
+    {
+      "role": "helper",
+      "kind": "prediction",
+      "time_seconds": 1069.0666666666666,
+      "source_sha256": "b3be265a55934c146fb1b9520d9b089c9696c482618b8bda06fea2ca92c9c340"
+    }
+  ],
+  "protocol_boundary": {
+    "split": "labeled CoMind train subset",
+    "label_used_during_generation": false,
+    "label_used_only_for_post_generation_scoring_and_case_selection": true,
+    "aggregate_claim": "The 300-example paired experiment does not show an overall SSC improvement; this is an illustrative positive-flip case only."
+  },
+  "source_provenance": {
+    "manifest": {
+      "path": "workdirs/spatial_social_optimization_v1/comind_codex_300_manifest.jsonl",
+      "sha256": "542c2f28230d417d1885789d953c781aab54d489f55599f4fe44405628d077ba"
+    },
+    "annotation": {
+      "path": "external_datasets/comind/annotations/dataset_scoia_consolidated.json",
+      "sha256": "4a2b0081e0b465263066943e3ba35dac7fcd7a8d38957365806b8c39750b2cd2"
+    },
+    "paired_outputs": {
+      "direct": {
+        "path": "workdirs/spatial_social_optimization_v1/codex_work/raw/scoia_3ef7356e-3b75-4eab-add9-363b0cdc2b99_032159_direct.json",
+        "sha256": "57a46e5203a5ff810362efab67ad950ab14d30353c37e6bb23efb085706ca5e6"
+      },
+      "spatial": {
+        "path": "workdirs/spatial_social_optimization_v1/codex_work/raw/scoia_3ef7356e-3b75-4eab-add9-363b0cdc2b99_032159_spatial.json",
+        "sha256": "db1ba78cb268ab521241464875a7ad4730c71c30b20acb92de0cc1a201816ee5"
+      },
+      "social": {
+        "path": "workdirs/spatial_social_optimization_v1/codex_work/raw/scoia_3ef7356e-3b75-4eab-add9-363b0cdc2b99_032159_social.json",
+        "sha256": "17383f2ac7f711d6a33586f95844f9527488bafab2b4884c1d9e497e7d568160"
+      },
+      "answer": {
+        "path": "workdirs/spatial_social_optimization_v1/codex_work/raw/scoia_3ef7356e-3b75-4eab-add9-363b0cdc2b99_032159_answer.json",
+        "sha256": "a274330c5c3b8a2c8e316dae30e57f56a771ea4cae1e4b233d47f4b882adcbd5"
+      }
+    }
+  }
+}
