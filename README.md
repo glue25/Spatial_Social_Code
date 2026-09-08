@@ -108,7 +108,11 @@ then the model plans through the normal private-observation runtime. The
 compiler never reads `golden_trajectory`, does not emit action schedules, and
 does not reveal another agent's private facts. Direct, Spatial-only,
 Social-only, and Spatial+Social use the same tasks and 20-turn budget. See the
-[live Habitat status](reports/habitat_spatial_social_status_zh.md).
+[live Habitat status](reports/habitat_spatial_social_status_zh.md). A separate
+[hard_20 action-trace case](reports/habitat_hard20_case_zh.md) documents a
+75%-progress Standard failure and a 100% Oracle-schedule upper bound. The
+historical runs used text observations and saved no RGB frames, so the case is
+an action-log audit rather than a visual gallery.
 
 The lightweight public artifact does not require datasets or API credentials:
 
