@@ -114,6 +114,13 @@ Social-only, and Spatial+Social use the same tasks and 20-turn budget. See the
 historical runs used text observations and saved no RGB frames, so the case is
 an action-log audit rather than a visual gallery.
 
+For a non-Oracle learned-agent example, the
+[episode 772 Physical+Social case](reports/habitat_episode_772_case_zh.md)
+exports the complete repeat-3 action/communication trace and the exact
+per-agent Spatial/Social Code. It records 100% completion versus 75% for Direct
+under seed 891003. Historical RGB frames were not saved; the report identifies
+the replay frames still required for visual verification.
+
 The lightweight public artifact does not require datasets or API credentials:
 
 ```bash

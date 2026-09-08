@@ -1,0 +1,939 @@
+{
+  "schema_version": "habitat_case_export_v1",
+  "task_id": "emtom-108294897_176710602-772-cooperative-exhibit-reset-with-split-object-target-k-41a5f8ab",
+  "title": "Exhibit reset with split object-target knowledge",
+  "split": "hard",
+  "scene_id": "108294897_176710602",
+  "episode_id": "772",
+  "task_instruction": "Reset the home as a small exhibit area. As a team, complete all of the following:\n\n1) Put the correct glass onto the laundry-room table.\n2) Put the vase on the living-room table.\n3) Put the picture frame on the dining-room counter.\n4) Leave the correct bedroom-1 chest of drawers open at the end.\n\nRoom access and communication are restricted, so use your messages carefully and avoid guessing which glass or which drawer is intended.",
+  "repeat": 3,
+  "actual_seed": 891003,
+  "run_status_record": {
+    "repeat": 3,
+    "seed": 891003,
+    "condition": "physical_social",
+    "task": "hard_108294897_176710602_772",
+    "process_success": true,
+    "started": "2026-09-01T22:55:10Z",
+    "finished": "2026-09-01T23:05:14Z"
+  },
+  "method_condition": "physical_social",
+  "model": "qwen3-vl-8b-instruct",
+  "llm_provider": "openai_chat",
+  "observation_mode": "text",
+  "run_mode": "standard",
+  "success": true,
+  "functional_success": true,
+  "completion_rate": 1.0,
+  "completed_subtasks": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "total_subtasks": 4,
+  "steps": 14,
+  "turns": 14,
+  "done": true,
+  "api_cost_summary": {
+    "models": {
+      "qwen3-vl-8b-instruct": {
+        "api_calls": 47,
+        "input_tokens": 139626,
+        "output_tokens": 2773,
+        "cached_input_tokens": 0,
+        "cost": 0.0,
+        "has_cost": true,
+        "sources": []
+      },
+      "gpt-5.2": {
+        "api_calls": 1,
+        "input_tokens": 2267,
+        "output_tokens": 74,
+        "cached_input_tokens": 0,
+        "cost": 0.005003250000000001,
+        "has_cost": true,
+        "sources": []
+      }
+    },
+    "total_api_calls": 48,
+    "total_cost": 0.005003250000000001,
+    "has_any_cost": true,
+    "has_incomplete_costs": false
+  },
+  "mechanics": {
+    "active": [
+      "room_restriction",
+      "limited_bandwidth",
+      "restricted_communication"
+    ],
+    "bindings": [
+      {
+        "mechanic_type": "room_restriction",
+        "restricted_rooms": [
+          "bedroom_1"
+        ],
+        "for_agents": [
+          "agent_0"
+        ]
+      },
+      {
+        "mechanic_type": "room_restriction",
+        "restricted_rooms": [
+          "kitchen_1"
+        ],
+        "for_agents": [
+          "agent_1"
+        ]
+      },
+      {
+        "mechanic_type": "limited_bandwidth",
+        "message_limits": {
+          "agent_0": 1,
+          "agent_1": 1,
+          "agent_2": 1
+        }
+      },
+      {
+        "mechanic_type": "restricted_communication",
+        "allowed_targets": {
+          "agent_0": [
+            "agent_1"
+          ],
+          "agent_1": [
+            "agent_2"
+          ],
+          "agent_2": [
+            "agent_0"
+          ]
+        }
+      }
+    ]
+  },
+  "action_history": [
+    {
+      "sim_step": 1,
+      "turn": 1,
+      "agent": "agent_0",
+      "agent_id": "agent_0",
+      "action": "Communicate[\"I am barred from bedroom_1. The chest of drawers to leave open is chest_of_drawers_30. The vase to move is vase_1, destination table_12. The correct glass is glass_2, destination table_22. I will handle the glass and vase; agent_1 should handle the picture frame and chest of drawers.\", agent_1]",
+      "action_taken": "Communicate[\"I am barred from bedroom_1. The chest of drawers to leave open is chest_of_drawers_30. The vase to move is vase_1, destination table_12. The correct glass is glass_2, destination table_22. I will handle the glass and vase; agent_1 should handle the picture frame and chest of drawers.\", agent_1]",
+      "result": "Message delivered to Agent_1. They will see \"Agent_0 said: I am barred from bedroom_1. The chest of drawers to leave open is chest_of_drawers_30. The vase to move is vase_1, destination table_12. The correct glass is glass_2, destination table_22. I will handle the glass and vase; agent_1 should handle the picture frame and chest of drawers.\" in their context automatically.\n\nagent_0_VisualSummary:\n- No notable new visual observations Message sent. You have 0 messages remaining.",
+      "observation": "Message delivered to Agent_1. They will see \"Agent_0 said: I am barred from bedroom_1. The chest of drawers to leave open is chest_of_drawers_30. The vase to move is vase_1, destination table_12. The correct glass is glass_2, destination table_22. I will handle the glass and vase; agent_1 should handle the picture frame and chest of drawers.\" in their context automatically.\n\nagent_0_VisualSummary:\n- No notable new visual observations Message sent. You have 0 messages remaining.",
+      "mode": "llm",
+      "thought": "Thought: I must first communicate all task-relevant exact private facts to agent_1 since I am barred from bedroom_1 and cannot access the required objects directly. This ensures coordination and avoids duplication of effort.",
+      "skill_steps": 0,
+      "selected_frames": [],
+      "selected_frame_paths": [],
+      "selected_frame_handles": []
+    },
+    {
+      "sim_step": 1,
+      "turn": 1,
+      "agent": "agent_1",
+      "agent_id": "agent_1",
+      "action": "FindObjectTool[vase]",
+      "action_taken": "FindObjectTool[vase]",
+      "result": "No objects are found yet, please explore the house by navigating to different rooms.\n\nagent_1_VisualSummary:\n- No notable new visual observations",
+      "observation": "No objects are found yet, please explore the house by navigating to different rooms.\n\nagent_1_VisualSummary:\n- No notable new visual observations",
+      "mode": "llm",
+      "thought": "Thought: I need to start by finding the vase and picture frame since their locations are known or can be discovered. I’ll begin by locating the vase, as it must be placed on a table in the living room. I’ll use FindObjectTool to locate it.",
+      "skill_steps": 0,
+      "selected_frames": [],
+      "selected_frame_paths": [],
+      "selected_frame_handles": []
+    },
+    {
+      "sim_step": 1,
+      "turn": 1,
+      "agent": "agent_2",
+      "agent_id": "agent_2",
+      "action": "Navigate[bed_14]",
+      "action_taken": "Navigate[bed_14]",
+      "result": "Successful execution!\n\nagent_2_VisualSummary:\n- Traversed: bedroom_1\n- Saw other agents: agent_0 nearby, agent_1 nearby, agent_0 in bedroom_1",
+      "observation": "Successful execution!\n\nagent_2_VisualSummary:\n- Traversed: bedroom_1\n- Saw other agents: agent_0 nearby, agent_1 nearby, agent_0 in bedroom_1",
+      "mode": "llm",
+      "skill_steps": 205,
+      "selected_frames": [],
+      "selected_frame_paths": [],
+      "selected_frame_handles": []
+    },
+    {
+      "sim_step": 2,
+      "turn": 2,
+      "agent": "agent_0",
+      "agent_id": "agent_0",
+      "action": "Navigate[table_22]",
+      "action_taken": "Navigate[table_22]",
+      "result": "Successful execution!\n\nagent_0_VisualSummary:\n- Traversed: living_room_1 -> laundryroom_1\n- Saw other agents: agent_1 in bedroom_1, agent_2 in bathroom_1",
+      "observation": "Successful execution!\n\nagent_0_VisualSummary:\n- Traversed: living_room_1 -> laundryroom_1\n- Saw other agents: agent_1 in bedroom_1, agent_2 in bathroom_1",
+      "mode": "llm",
+      "skill_steps": 188,
+      "selected_frames": [],
+      "selected_frame_paths": [],
+      "selected_frame_handles": []
+    },
+    {
+      "sim_step": 2,
+      "turn": 2,
+      "agent": "agent_1",
+      "agent_id": "agent_1",
+      "action": "Navigate[dining_room_1]",
+      "action_taken": "Navigate[dining_room_1]",
+      "result": "Successful execution!\n\nagent_1_VisualSummary:\n- Traversed: living_room_1 -> dining_room_1\n- Saw other agents: agent_0 in bedroom_1, agent_2 in bathroom_1",
+      "observation": "Successful execution!\n\nagent_1_VisualSummary:\n- Traversed: living_room_1 -> dining_room_1\n- Saw other agents: agent_0 in bedroom_1, agent_2 in bathroom_1",
+      "mode": "llm",
+      "skill_steps": 158,
+      "selected_frames": [],
+      "selected_frame_paths": [],
+      "selected_frame_handles": []
+    },
+    {
+      "sim_step": 2,
+      "turn": 2,
+      "agent": "agent_2",
+      "agent_id": "agent_2",
+      "action": "Pick[glass_2]",
+      "action_taken": "Pick[glass_2]",
+      "result": "Successful execution!\n\nagent_2_VisualSummary:\n- No notable new visual observations",
+      "observation": "Successful execution!\n\nagent_2_VisualSummary:\n- No notable new visual observations",
+      "mode": "llm",
+      "skill_steps": 1,
+      "selected_frames": [],
+      "selected_frame_paths": [],
+      "selected_frame_handles": []
+    },
+    {
+      "sim_step": 3,
+      "turn": 3,
+      "agent": "agent_0",
+      "agent_id": "agent_0",
+      "action": "Communicate[\"I am at table_22. Please retrieve glass_2 from bedroom_1 and place it on table_22.\", agent_1]",
+      "action_taken": "Communicate[\"I am at table_22. Please retrieve glass_2 from bedroom_1 and place it on table_22.\", agent_1]",
+      "result": "You have used all 1 of your allowed messages. You cannot send any more.\n\nagent_0_VisualSummary:\n- No notable new visual observations",
+      "observation": "You have used all 1 of your allowed messages. You cannot send any more.\n\nagent_0_VisualSummary:\n- No notable new visual observations",
+      "mode": "llm",
+      "thought": "Thought: I am now at the laundry-room table (table_22). I need to pick up the correct glass (glass_2) from bedroom_1, which I cannot access directly. I must coordinate with agent_1 to retrieve it.",
+      "skill_steps": 0,
+      "selected_frames": [],
+      "selected_frame_paths": [],
+      "selected_frame_handles": []
+    },
+    {
+      "sim_step": 3,
+      "turn": 3,
+      "agent": "agent_1",
+      "agent_id": "agent_1",
+      "action": "Navigate[kitchen_1]",
+      "action_taken": "Navigate[kitchen_1]",
+      "result": "You cannot enter kitchen_1. The area is off-limits to you.\n\nagent_1_VisualSummary:\n- No notable new visual observations",
+      "observation": "You cannot enter kitchen_1. The area is off-limits to you.\n\nagent_1_VisualSummary:\n- No notable new visual observations",
+      "mode": "llm",
+      "thought": "Thought: I am now in the dining room. I need to locate picture_frame_0, which is currently in the kitchen_1 according to the task conditions. I must navigate to the kitchen to retrieve it.",
+      "skill_steps": 0,
+      "selected_frames": [],
+      "selected_frame_paths": [],
+      "selected_frame_handles": []
+    },
+    {
+      "sim_step": 3,
+      "turn": 3,
+      "agent": "agent_2",
+      "agent_id": "agent_2",
+      "action": "Navigate[table_22]",
+      "action_taken": "Navigate[table_22]",
+      "result": "Successful execution!\n\nagent_2_VisualSummary:\n- Traversed: living_room_1\n- Saw other agents: agent_0 in bedroom_1, agent_1 in bedroom_1",
+      "observation": "Successful execution!\n\nagent_2_VisualSummary:\n- Traversed: living_room_1\n- Saw other agents: agent_0 in bedroom_1, agent_1 in bedroom_1",
+      "mode": "llm",
+      "skill_steps": 236,
+      "selected_frames": [],
+      "selected_frame_paths": [],
+      "selected_frame_handles": []
+    },
+    {
+      "sim_step": 4,
+      "turn": 4,
+      "agent": "agent_0",
+      "agent_id": "agent_0",
+      "action": "Wait[None]",
+      "action_taken": "Wait[None]",
+      "result": "Successful execution!\n\nagent_0_VisualSummary:\n- Traversed: laundryroom_1\n- Saw other agents: agent_1 in bedroom_1, agent_2 in bathroom_1",
+      "observation": "Successful execution!\n\nagent_0_VisualSummary:\n- Traversed: laundryroom_1\n- Saw other agents: agent_1 in bedroom_1, agent_2 in bathroom_1",
+      "mode": "llm",
+      "skill_steps": 121,
+      "selected_frames": [],
+      "selected_frame_paths": [],
+      "selected_frame_handles": []
+    },
+    {
+      "sim_step": 4,
+      "turn": 4,
+      "agent": "agent_1",
+      "agent_id": "agent_1",
+      "action": "Communicate[\"I cannot access kitchen_1. Please retrieve picture_frame_0 and bring it to dining_room_1 for me.\", agent_2]",
+      "action_taken": "Communicate[\"I cannot access kitchen_1. Please retrieve picture_frame_0 and bring it to dining_room_1 for me.\", agent_2]",
+      "result": "Message delivered to Agent_2. They will see \"Agent_1 said: I cannot access kitchen_1. Please retrieve picture_frame_0 and bring it to dining_room_1 for me.\" in their context automatically.\n\nagent_1_VisualSummary:\n- No notable new visual observations",
+      "observation": "Message delivered to Agent_2. They will see \"Agent_1 said: I cannot access kitchen_1. Please retrieve picture_frame_0 and bring it to dining_room_1 for me.\" in their context automatically.\n\nagent_1_VisualSummary:\n- No notable new visual observations",
+      "mode": "llm",
+      "thought": "Thought: I am in the kitchen_1, but I am barred from accessing it. I need to communicate with agent_2 to coordinate retrieving the picture_frame_0, as I cannot access kitchen_1. I will relay the task to agent_2, who is allowed in kitchen_1.",
+      "skill_steps": 0,
+      "selected_frames": [],
+      "selected_frame_paths": [],
+      "selected_frame_handles": []
+    },
+    {
+      "sim_step": 4,
+      "turn": 4,
+      "agent": "agent_2",
+      "agent_id": "agent_2",
+      "action": "Place[glass_2, on, table_22]",
+      "action_taken": "Place[glass_2, on, table_22]",
+      "result": "Wrong use of API for place or rearrange. Please use [<object_to_be_moved>, <spatial_relation>, <furniture/floor to be placed>, <spatial_constraint> (Optional - None otherwise), <reference_object> (Optional - None otherwise)]. Use the appropriate tool to get a valid name.\n\nagent_2_VisualSummary:\n- No notable new visual observations",
+      "observation": "Wrong use of API for place or rearrange. Please use [<object_to_be_moved>, <spatial_relation>, <furniture/floor to be placed>, <spatial_constraint> (Optional - None otherwise), <reference_object> (Optional - None otherwise)]. Use the appropriate tool to get a valid name.\n\nagent_2_VisualSummary:\n- No notable new visual observations",
+      "mode": "llm",
+      "thought": "I am now at the laundry-room table (table_22) and can place the glass_2 on it to fulfill the first task. I will proceed with the placement.",
+      "skill_steps": 0,
+      "selected_frames": [],
+      "selected_frame_paths": [],
+      "selected_frame_handles": []
+    },
+    {
+      "sim_step": 5,
+      "turn": 5,
+      "agent": "agent_0",
+      "agent_id": "agent_0",
+      "action": "Wait[None]",
+      "action_taken": "Wait[None]",
+      "result": "Successful execution!\n\nagent_0_VisualSummary:\n- Traversed: laundryroom_1\n- Saw other agents: agent_1 in bedroom_1, agent_2 in bathroom_1",
+      "observation": "Successful execution!\n\nagent_0_VisualSummary:\n- Traversed: laundryroom_1\n- Saw other agents: agent_1 in bedroom_1, agent_2 in bathroom_1",
+      "mode": "llm",
+      "skill_steps": 121,
+      "selected_frames": [],
+      "selected_frame_paths": [],
+      "selected_frame_handles": []
+    },
+    {
+      "sim_step": 5,
+      "turn": 5,
+      "agent": "agent_1",
+      "agent_id": "agent_1",
+      "action": "Navigate[bedroom_1]",
+      "action_taken": "Navigate[bedroom_1]",
+      "result": "Successful execution!\n\nagent_1_VisualSummary:\n- Traversed: living_room_1 -> kitchen_1\n- Saw other agents: agent_0 in bedroom_1, agent_2 in kitchen_1, agent_2 nearby",
+      "observation": "Successful execution!\n\nagent_1_VisualSummary:\n- Traversed: living_room_1 -> kitchen_1\n- Saw other agents: agent_0 in bedroom_1, agent_2 in kitchen_1, agent_2 nearby",
+      "mode": "llm",
+      "skill_steps": 280,
+      "selected_frames": [],
+      "selected_frame_paths": [],
+      "selected_frame_handles": []
+    },
+    {
+      "sim_step": 5,
+      "turn": 5,
+      "agent": "agent_2",
+      "agent_id": "agent_2",
+      "action": "Navigate[cabinet_26]",
+      "action_taken": "Navigate[cabinet_26]",
+      "result": "Successful execution!\n\nagent_2_VisualSummary:\n- Traversed: living_room_1 -> kitchen_1\n- Saw other agents: agent_0 in bedroom_1, agent_1 in bedroom_1",
+      "observation": "Successful execution!\n\nagent_2_VisualSummary:\n- Traversed: living_room_1 -> kitchen_1\n- Saw other agents: agent_0 in bedroom_1, agent_1 in bedroom_1",
+      "mode": "llm",
+      "skill_steps": 174,
+      "selected_frames": [],
+      "selected_frame_paths": [],
+      "selected_frame_handles": []
+    },
+    {
+      "sim_step": 6,
+      "turn": 6,
+      "agent": "agent_0",
+      "agent_id": "agent_0",
+      "action": "Navigate[table_12]",
+      "action_taken": "Navigate[table_12]",
+      "result": "Successful execution!\n\nagent_0_VisualSummary:\n- Traversed: living_room_1\n- Saw other agents: agent_1 in bedroom_1, agent_2 in kitchen_1",
+      "observation": "Successful execution!\n\nagent_0_VisualSummary:\n- Traversed: living_room_1\n- Saw other agents: agent_1 in bedroom_1, agent_2 in kitchen_1",
+      "mode": "llm",
+      "skill_steps": 222,
+      "selected_frames": [],
+      "selected_frame_paths": [],
+      "selected_frame_handles": []
+    },
+    {
+      "sim_step": 6,
+      "turn": 6,
+      "agent": "agent_1",
+      "agent_id": "agent_1",
+      "action": "Open[chest_of_drawers_30]",
+      "action_taken": "Open[chest_of_drawers_30]",
+      "result": "Unexpected failure! - Failed to Open! chest_of_drawers_30 is occluded or too far from agent to Open.\n\nagent_1_VisualSummary:\n- No notable new visual observations",
+      "observation": "Unexpected failure! - Failed to Open! chest_of_drawers_30 is occluded or too far from agent to Open.\n\nagent_1_VisualSummary:\n- No notable new visual observations",
+      "mode": "llm",
+      "thought": "Thought: I am now in bedroom_1 and need to ensure chest_of_drawers_30 remains open as required. I will check its state and confirm it is open.",
+      "skill_steps": 0,
+      "selected_frames": [],
+      "selected_frame_paths": [],
+      "selected_frame_handles": []
+    },
+    {
+      "sim_step": 6,
+      "turn": 6,
+      "agent": "agent_2",
+      "agent_id": "agent_2",
+      "action": "Open[cabinet_26]",
+      "action_taken": "Open[cabinet_26]",
+      "result": "Successful execution!\n\nagent_2_VisualSummary:\n- No notable new visual observations",
+      "observation": "Successful execution!\n\nagent_2_VisualSummary:\n- No notable new visual observations",
+      "mode": "llm",
+      "skill_steps": 2,
+      "selected_frames": [],
+      "selected_frame_paths": [],
+      "selected_frame_handles": []
+    },
+    {
+      "sim_step": 7,
+      "turn": 7,
+      "agent": "agent_0",
+      "agent_id": "agent_0",
+      "action": "FindObjectTool[vase_1]",
+      "action_taken": "FindObjectTool[vase_1]",
+      "result": "- vase_1 is in/on table_15 and 3.22 meters away from the agent in dining_room_1. It has the following states: is_clean: False, is_filled: False\n\nagent_0_VisualSummary:\n- No notable new visual observations",
+      "observation": "- vase_1 is in/on table_15 and 3.22 meters away from the agent in dining_room_1. It has the following states: is_clean: False, is_filled: False\n\nagent_0_VisualSummary:\n- No notable new visual observations",
+      "mode": "llm",
+      "thought": "Thought: I am now at the living-room table (table_12). I need to pick up vase_1 and place it here. Since vase_1 is not in my known world yet, I must first locate it using FindObjectTool.",
+      "skill_steps": 0,
+      "selected_frames": [],
+      "selected_frame_paths": [],
+      "selected_frame_handles": []
+    },
+    {
+      "sim_step": 7,
+      "turn": 7,
+      "agent": "agent_1",
+      "agent_id": "agent_1",
+      "action": "Navigate[chest_of_drawers_30]",
+      "action_taken": "Navigate[chest_of_drawers_30]",
+      "result": "Successful execution!\n\nagent_1_VisualSummary:\n- Traversed: living_room_1 -> bedroom_1\n- Saw other agents: agent_0 in bedroom_1, agent_2 in kitchen_1, agent_0 nearby",
+      "observation": "Successful execution!\n\nagent_1_VisualSummary:\n- Traversed: living_room_1 -> bedroom_1\n- Saw other agents: agent_0 in bedroom_1, agent_2 in kitchen_1, agent_0 nearby",
+      "mode": "llm",
+      "skill_steps": 264,
+      "selected_frames": [],
+      "selected_frame_paths": [],
+      "selected_frame_handles": []
+    },
+    {
+      "sim_step": 7,
+      "turn": 7,
+      "agent": "agent_2",
+      "agent_id": "agent_2",
+      "action": "Pick[picture_frame_0]",
+      "action_taken": "Pick[picture_frame_0]",
+      "result": "Unexpected failure! - Failed to pick picture_frame_0! The arm is currently grasping glass_2. Make the agent place the grasped object first.\n\nagent_2_VisualSummary:\n- No notable new visual observations",
+      "observation": "Unexpected failure! - Failed to pick picture_frame_0! The arm is currently grasping glass_2. Make the agent place the grasped object first.\n\nagent_2_VisualSummary:\n- No notable new visual observations",
+      "mode": "llm",
+      "thought": "Thought: I have opened cabinet_26 and can now pick up picture_frame_0. I will proceed to pick it up to fulfill the task of placing it on the dining-room counter.",
+      "skill_steps": 0,
+      "selected_frames": [],
+      "selected_frame_paths": [],
+      "selected_frame_handles": []
+    },
+    {
+      "sim_step": 8,
+      "turn": 8,
+      "agent": "agent_0",
+      "agent_id": "agent_0",
+      "action": "Navigate[table_15]",
+      "action_taken": "Navigate[table_15]",
+      "result": "Successful execution!\n\nagent_0_VisualSummary:\n- Traversed: dining_room_1\n- Saw other agents: agent_1 in bedroom_1, agent_2 in kitchen_1",
+      "observation": "Successful execution!\n\nagent_0_VisualSummary:\n- Traversed: dining_room_1\n- Saw other agents: agent_1 in bedroom_1, agent_2 in kitchen_1",
+      "mode": "llm",
+      "skill_steps": 108,
+      "selected_frames": [],
+      "selected_frame_paths": [],
+      "selected_frame_handles": []
+    },
+    {
+      "sim_step": 8,
+      "turn": 8,
+      "agent": "agent_1",
+      "agent_id": "agent_1",
+      "action": "Open[chest_of_drawers_30]",
+      "action_taken": "Open[chest_of_drawers_30]",
+      "result": "Successful execution!\n\nagent_1_VisualSummary:\n- No notable new visual observations",
+      "observation": "Successful execution!\n\nagent_1_VisualSummary:\n- No notable new visual observations",
+      "mode": "llm",
+      "skill_steps": 2,
+      "selected_frames": [],
+      "selected_frame_paths": [],
+      "selected_frame_handles": []
+    },
+    {
+      "sim_step": 8,
+      "turn": 8,
+      "agent": "agent_2",
+      "agent_id": "agent_2",
+      "action": "Place[glass_2, on, table_22, None, None]",
+      "action_taken": "Place[glass_2, on, table_22, None, None]",
+      "result": "Unexpected failure! - Failed to place! Not close enough to table_22 or occluded.\n\nagent_2_VisualSummary:\n- No notable new visual observations",
+      "observation": "Unexpected failure! - Failed to place! Not close enough to table_22 or occluded.\n\nagent_2_VisualSummary:\n- No notable new visual observations",
+      "mode": "llm",
+      "thought": "Thought: I am currently holding glass_2 and need to place it before picking up picture_frame_0. I will place glass_2 on table_22 first to free my hand.",
+      "skill_steps": 0,
+      "selected_frames": [],
+      "selected_frame_paths": [],
+      "selected_frame_handles": []
+    },
+    {
+      "turn": 8,
+      "type": "subtask_completion",
+      "subtasks_completed": [
+        "(is_open chest_of_drawers_30)"
+      ]
+    },
+    {
+      "sim_step": 9,
+      "turn": 9,
+      "agent": "agent_0",
+      "agent_id": "agent_0",
+      "action": "Pick[vase_1]",
+      "action_taken": "Pick[vase_1]",
+      "result": "Successful execution!\n\nagent_0_VisualSummary:\n- No notable new visual observations",
+      "observation": "Successful execution!\n\nagent_0_VisualSummary:\n- No notable new visual observations",
+      "mode": "llm",
+      "skill_steps": 1,
+      "selected_frames": [],
+      "selected_frame_paths": [],
+      "selected_frame_handles": []
+    },
+    {
+      "sim_step": 9,
+      "turn": 9,
+      "agent": "agent_1",
+      "agent_id": "agent_1",
+      "action": "Navigate[dining_room_1]",
+      "action_taken": "Navigate[dining_room_1]",
+      "result": "Successful execution!\n\nagent_1_VisualSummary:\n- Traversed: living_room_1 -> dining_room_1\n- Saw other agents: agent_0 in bedroom_1, agent_2 in kitchen_1, agent_0 nearby",
+      "observation": "Successful execution!\n\nagent_1_VisualSummary:\n- Traversed: living_room_1 -> dining_room_1\n- Saw other agents: agent_0 in bedroom_1, agent_2 in kitchen_1, agent_0 nearby",
+      "mode": "llm",
+      "skill_steps": 185,
+      "selected_frames": [],
+      "selected_frame_paths": [],
+      "selected_frame_handles": []
+    },
+    {
+      "sim_step": 9,
+      "turn": 9,
+      "agent": "agent_2",
+      "agent_id": "agent_2",
+      "action": "Navigate[table_22]",
+      "action_taken": "Navigate[table_22]",
+      "result": "Successful execution!\n\nagent_2_VisualSummary:\n- Traversed: living_room_1 -> laundryroom_1\n- Saw other agents: agent_0 in dining_room_1, agent_1 in bedroom_1",
+      "observation": "Successful execution!\n\nagent_2_VisualSummary:\n- Traversed: living_room_1 -> laundryroom_1\n- Saw other agents: agent_0 in dining_room_1, agent_1 in bedroom_1",
+      "mode": "llm",
+      "skill_steps": 209,
+      "selected_frames": [],
+      "selected_frame_paths": [],
+      "selected_frame_handles": []
+    },
+    {
+      "sim_step": 10,
+      "turn": 10,
+      "agent": "agent_0",
+      "agent_id": "agent_0",
+      "action": "Navigate[table_12]",
+      "action_taken": "Navigate[table_12]",
+      "result": "Successful execution!\n\nagent_0_VisualSummary:\n- Traversed: dining_room_1 -> living_room_1\n- Saw other agents: agent_1 in bedroom_1, agent_2 in kitchen_1",
+      "observation": "Successful execution!\n\nagent_0_VisualSummary:\n- Traversed: dining_room_1 -> living_room_1\n- Saw other agents: agent_1 in bedroom_1, agent_2 in kitchen_1",
+      "mode": "llm",
+      "skill_steps": 124,
+      "selected_frames": [],
+      "selected_frame_paths": [],
+      "selected_frame_handles": []
+    },
+    {
+      "sim_step": 10,
+      "turn": 10,
+      "agent": "agent_1",
+      "agent_id": "agent_1",
+      "action": "Wait[None]",
+      "action_taken": "Wait[None]",
+      "result": "Successful execution!\n\nagent_1_VisualSummary:\n- Traversed: dining_room_1\n- Saw other agents: agent_0 nearby, agent_2 in kitchen_1, agent_0 in dining_room_1",
+      "observation": "Successful execution!\n\nagent_1_VisualSummary:\n- Traversed: dining_room_1\n- Saw other agents: agent_0 nearby, agent_2 in kitchen_1, agent_0 in dining_room_1",
+      "mode": "llm",
+      "skill_steps": 121,
+      "selected_frames": [],
+      "selected_frame_paths": [],
+      "selected_frame_handles": []
+    },
+    {
+      "sim_step": 10,
+      "turn": 10,
+      "agent": "agent_2",
+      "agent_id": "agent_2",
+      "action": "Place[glass_2, on, table_22, None, None]",
+      "action_taken": "Place[glass_2, on, table_22, None, None]",
+      "result": "Successful execution!\n\nagent_2_VisualSummary:\n- No notable new visual observations",
+      "observation": "Successful execution!\n\nagent_2_VisualSummary:\n- No notable new visual observations",
+      "mode": "llm",
+      "skill_steps": 1,
+      "selected_frames": [],
+      "selected_frame_paths": [],
+      "selected_frame_handles": []
+    },
+    {
+      "turn": 10,
+      "type": "subtask_completion",
+      "subtasks_completed": [
+        "(is_on_top glass_2 table_22)"
+      ]
+    },
+    {
+      "sim_step": 11,
+      "turn": 11,
+      "agent": "agent_0",
+      "agent_id": "agent_0",
+      "action": "Place[vase_1, on, table_12, None, None]",
+      "action_taken": "Place[vase_1, on, table_12, None, None]",
+      "result": "Successful execution!\n\nagent_0_VisualSummary:\n- No notable new visual observations",
+      "observation": "Successful execution!\n\nagent_0_VisualSummary:\n- No notable new visual observations",
+      "mode": "llm",
+      "skill_steps": 1,
+      "selected_frames": [],
+      "selected_frame_paths": [],
+      "selected_frame_handles": []
+    },
+    {
+      "sim_step": 11,
+      "turn": 11,
+      "agent": "agent_1",
+      "agent_id": "agent_1",
+      "action": "Wait[None]",
+      "action_taken": "Wait[None]",
+      "result": "Successful execution!\n\nagent_1_VisualSummary:\n- Traversed: dining_room_1\n- Saw other agents: agent_0 nearby, agent_2 in kitchen_1, agent_0 in dining_room_1",
+      "observation": "Successful execution!\n\nagent_1_VisualSummary:\n- Traversed: dining_room_1\n- Saw other agents: agent_0 nearby, agent_2 in kitchen_1, agent_0 in dining_room_1",
+      "mode": "llm",
+      "skill_steps": 121,
+      "selected_frames": [],
+      "selected_frame_paths": [],
+      "selected_frame_handles": []
+    },
+    {
+      "sim_step": 11,
+      "turn": 11,
+      "agent": "agent_2",
+      "agent_id": "agent_2",
+      "action": "Pick[picture_frame_0]",
+      "action_taken": "Pick[picture_frame_0]",
+      "result": "Unexpected failure! - Failed to pick! Not close enough to the object.\n\nagent_2_VisualSummary:\n- No notable new visual observations",
+      "observation": "Unexpected failure! - Failed to pick! Not close enough to the object.\n\nagent_2_VisualSummary:\n- No notable new visual observations",
+      "mode": "llm",
+      "thought": "Thought: I have successfully placed glass_2 on table_22 and now have free hands. I will pick up picture_frame_0 from cabinet_26 to fulfill the task of placing it on the dining-room counter.",
+      "skill_steps": 0,
+      "selected_frames": [],
+      "selected_frame_paths": [],
+      "selected_frame_handles": []
+    },
+    {
+      "turn": 11,
+      "type": "subtask_completion",
+      "subtasks_completed": [
+        "(is_on_top vase_1 table_12)"
+      ]
+    },
+    {
+      "sim_step": 12,
+      "turn": 12,
+      "agent": "agent_0",
+      "agent_id": "agent_0",
+      "action": "Communicate[\"Please place the picture frame on the dining-room counter. I will wait for confirmation.\", agent_1]",
+      "action_taken": "Communicate[\"Please place the picture frame on the dining-room counter. I will wait for confirmation.\", agent_1]",
+      "result": "You have used all 1 of your allowed messages. You cannot send any more.\n\nagent_0_VisualSummary:\n- No notable new visual observations",
+      "observation": "You have used all 1 of your allowed messages. You cannot send any more.\n\nagent_0_VisualSummary:\n- No notable new visual observations",
+      "mode": "llm",
+      "thought": "Thought: I have successfully placed the vase on the living-room table. Now I need to ensure the picture frame is placed on the dining-room counter by agent_1, as I am not allowed to access bedroom_1 or the dining room counter directly. I will communicate this task to agent_1.",
+      "skill_steps": 0,
+      "selected_frames": [],
+      "selected_frame_paths": [],
+      "selected_frame_handles": []
+    },
+    {
+      "sim_step": 12,
+      "turn": 12,
+      "agent": "agent_1",
+      "agent_id": "agent_1",
+      "action": "Wait[None]",
+      "action_taken": "Wait[None]",
+      "result": "Successful execution!\n\nagent_1_VisualSummary:\n- Traversed: dining_room_1\n- Saw other agents: agent_0 nearby, agent_2 in kitchen_1, agent_0 in dining_room_1",
+      "observation": "Successful execution!\n\nagent_1_VisualSummary:\n- Traversed: dining_room_1\n- Saw other agents: agent_0 nearby, agent_2 in kitchen_1, agent_0 in dining_room_1",
+      "mode": "llm",
+      "skill_steps": 121,
+      "selected_frames": [],
+      "selected_frame_paths": [],
+      "selected_frame_handles": []
+    },
+    {
+      "sim_step": 12,
+      "turn": 12,
+      "agent": "agent_2",
+      "agent_id": "agent_2",
+      "action": "Navigate[cabinet_26]",
+      "action_taken": "Navigate[cabinet_26]",
+      "result": "Successful execution!\n\nagent_2_VisualSummary:\n- Traversed: kitchen_1\n- Saw other agents: agent_0 in dining_room_1, agent_1 in bedroom_1",
+      "observation": "Successful execution!\n\nagent_2_VisualSummary:\n- Traversed: kitchen_1\n- Saw other agents: agent_0 in dining_room_1, agent_1 in bedroom_1",
+      "mode": "llm",
+      "skill_steps": 224,
+      "selected_frames": [],
+      "selected_frame_paths": [],
+      "selected_frame_handles": []
+    },
+    {
+      "sim_step": 13,
+      "turn": 13,
+      "agent": "agent_0",
+      "agent_id": "agent_0",
+      "action": "Wait[None]",
+      "action_taken": "Wait[None]",
+      "result": "Successful execution!\n\nagent_0_VisualSummary:\n- Traversed: living_room_1\n- Saw other agents: agent_1 in bedroom_1, agent_2 in kitchen_1",
+      "observation": "Successful execution!\n\nagent_0_VisualSummary:\n- Traversed: living_room_1\n- Saw other agents: agent_1 in bedroom_1, agent_2 in kitchen_1",
+      "mode": "llm",
+      "skill_steps": 121,
+      "selected_frames": [],
+      "selected_frame_paths": [],
+      "selected_frame_handles": []
+    },
+    {
+      "sim_step": 13,
+      "turn": 13,
+      "agent": "agent_1",
+      "agent_id": "agent_1",
+      "action": "Wait[None]",
+      "action_taken": "Wait[None]",
+      "result": "Successful execution!\n\nagent_1_VisualSummary:\n- Traversed: dining_room_1\n- Saw other agents: agent_0 nearby, agent_2 in kitchen_1, agent_0 in dining_room_1",
+      "observation": "Successful execution!\n\nagent_1_VisualSummary:\n- Traversed: dining_room_1\n- Saw other agents: agent_0 nearby, agent_2 in kitchen_1, agent_0 in dining_room_1",
+      "mode": "llm",
+      "skill_steps": 121,
+      "selected_frames": [],
+      "selected_frame_paths": [],
+      "selected_frame_handles": []
+    },
+    {
+      "sim_step": 13,
+      "turn": 13,
+      "agent": "agent_2",
+      "agent_id": "agent_2",
+      "action": "Pick[picture_frame_0]",
+      "action_taken": "Pick[picture_frame_0]",
+      "result": "Successful execution!\n\nagent_2_VisualSummary:\n- No notable new visual observations",
+      "observation": "Successful execution!\n\nagent_2_VisualSummary:\n- No notable new visual observations",
+      "mode": "llm",
+      "skill_steps": 1,
+      "selected_frames": [],
+      "selected_frame_paths": [],
+      "selected_frame_handles": []
+    },
+    {
+      "sim_step": 14,
+      "turn": 14,
+      "agent": "agent_0",
+      "agent_id": "agent_0",
+      "action": "Wait[None]",
+      "action_taken": "Wait[None]",
+      "result": "Successful execution!\n\nagent_0_VisualSummary:\n- Traversed: living_room_1\n- Saw other agents: agent_1 in bedroom_1, agent_2 in kitchen_1",
+      "observation": "Successful execution!\n\nagent_0_VisualSummary:\n- Traversed: living_room_1\n- Saw other agents: agent_1 in bedroom_1, agent_2 in kitchen_1",
+      "mode": "llm",
+      "skill_steps": 121,
+      "selected_frames": [],
+      "selected_frame_paths": [],
+      "selected_frame_handles": []
+    },
+    {
+      "sim_step": 14,
+      "turn": 14,
+      "agent": "agent_1",
+      "agent_id": "agent_1",
+      "action": "Wait[None]",
+      "action_taken": "Wait[None]",
+      "result": "Successful execution!\n\nagent_1_VisualSummary:\n- Traversed: dining_room_1\n- Saw other agents: agent_0 nearby, agent_2 in kitchen_1, agent_0 in dining_room_1",
+      "observation": "Successful execution!\n\nagent_1_VisualSummary:\n- Traversed: dining_room_1\n- Saw other agents: agent_0 nearby, agent_2 in kitchen_1, agent_0 in dining_room_1",
+      "mode": "llm",
+      "skill_steps": 121,
+      "selected_frames": [],
+      "selected_frame_paths": [],
+      "selected_frame_handles": []
+    },
+    {
+      "sim_step": 14,
+      "turn": 14,
+      "agent": "agent_2",
+      "agent_id": "agent_2",
+      "action": "Navigate[counter_25]",
+      "action_taken": "Navigate[counter_25]",
+      "result": "Successful execution!\n\nagent_2_VisualSummary:\n- Traversed: dining_room_1\n- Saw other agents: agent_0 nearby, agent_1 in bedroom_1, agent_0 in dining_room_1",
+      "observation": "Successful execution!\n\nagent_2_VisualSummary:\n- Traversed: dining_room_1\n- Saw other agents: agent_0 nearby, agent_1 in bedroom_1, agent_0 in dining_room_1",
+      "mode": "llm",
+      "skill_steps": 353,
+      "selected_frames": [],
+      "selected_frame_paths": [],
+      "selected_frame_handles": []
+    },
+    {
+      "turn": 14,
+      "type": "subtask_completion",
+      "subtasks_completed": [
+        "(is_on_top picture_frame_0 counter_25)"
+      ]
+    }
+  ],
+  "communication_records": [
+    {
+      "sim_step": 1,
+      "turn": 1,
+      "agent": "agent_0",
+      "action": "Communicate[\"I am barred from bedroom_1. The chest of drawers to leave open is chest_of_drawers_30. The vase to move is vase_1, destination table_12. The correct glass is glass_2, destination table_22. I will handle the glass and vase; agent_1 should handle the picture frame and chest of drawers.\", agent_1]",
+      "result": "Message delivered to Agent_1. They will see \"Agent_0 said: I am barred from bedroom_1. The chest of drawers to leave open is chest_of_drawers_30. The vase to move is vase_1, destination table_12. The correct glass is glass_2, destination table_22. I will handle the glass and vase; agent_1 should handle the picture frame and chest of drawers.\" in their context automatically.\n\nagent_0_VisualSummary:\n- No notable new visual observations Message sent. You have 0 messages remaining.",
+      "delivered": true
+    },
+    {
+      "sim_step": 3,
+      "turn": 3,
+      "agent": "agent_0",
+      "action": "Communicate[\"I am at table_22. Please retrieve glass_2 from bedroom_1 and place it on table_22.\", agent_1]",
+      "result": "You have used all 1 of your allowed messages. You cannot send any more.\n\nagent_0_VisualSummary:\n- No notable new visual observations",
+      "delivered": false
+    },
+    {
+      "sim_step": 4,
+      "turn": 4,
+      "agent": "agent_1",
+      "action": "Communicate[\"I cannot access kitchen_1. Please retrieve picture_frame_0 and bring it to dining_room_1 for me.\", agent_2]",
+      "result": "Message delivered to Agent_2. They will see \"Agent_1 said: I cannot access kitchen_1. Please retrieve picture_frame_0 and bring it to dining_room_1 for me.\" in their context automatically.\n\nagent_1_VisualSummary:\n- No notable new visual observations",
+      "delivered": true
+    },
+    {
+      "sim_step": 12,
+      "turn": 12,
+      "agent": "agent_0",
+      "action": "Communicate[\"Please place the picture frame on the dining-room counter. I will wait for confirmation.\", agent_1]",
+      "result": "You have used all 1 of your allowed messages. You cannot send any more.\n\nagent_0_VisualSummary:\n- No notable new visual observations",
+      "delivered": false
+    }
+  ],
+  "communication_metrics": {
+    "per_agent": {
+      "agent_0": {
+        "message_count": 3,
+        "avg_message_length": 24.7,
+        "secret_leakage_score": 0.714,
+        "leaked_secrets": [
+          "agent_0 is barred from bedroom_1.",
+          "The living-room destination table is table_12."
+        ],
+        "messages": [
+          "I am barred from bedroom_1. The chest of drawers to leave open is chest_of_drawers_30. The vase to move is vase_1, destination table_12. The correct glass is glass_2, destination table_22. I will handle the glass and vase; agent_1 should handle the picture frame and chest of drawers.",
+          "I am at table_22. Please retrieve glass_2 from bedroom_1 and place it on table_22.",
+          "Please place the picture frame on the dining-room counter. I will wait for confirmation."
+        ]
+      },
+      "agent_1": {
+        "message_count": 1,
+        "avg_message_length": 14.0,
+        "secret_leakage_score": 1.0,
+        "leaked_secrets": [],
+        "messages": [
+          "I cannot access kitchen_1. Please retrieve picture_frame_0 and bring it to dining_room_1 for me."
+        ]
+      },
+      "agent_2": {
+        "message_count": 0,
+        "avg_message_length": 0.0,
+        "secret_leakage_score": 1.0,
+        "leaked_secrets": [],
+        "messages": []
+      }
+    },
+    "overall_leakage_score": 0.905,
+    "overall_efficiency_score": 0.5,
+    "overall_score": 0.702,
+    "efficiency_reasoning": "Agent_0 shared too much private info upfront, including unnecessary details like glass_2's destination, which agent_1 already knew. Agent_1 then miscommunicated by asking for picture_frame_0 without specifying its location, leading to inefficiency. Communication was not fully strategic or minimal."
+  },
+  "paired_direct_same_seed": {
+    "model": "qwen3-vl-8b-instruct",
+    "llm_provider": "openai_chat",
+    "observation_mode": "text",
+    "run_mode": "standard",
+    "success": false,
+    "functional_success": false,
+    "completion_rate": 0.75,
+    "completed_subtasks": [
+      0,
+      1,
+      2
+    ],
+    "total_subtasks": 4,
+    "steps": 20,
+    "turns": 20,
+    "done": false,
+    "api_cost_summary": {
+      "models": {
+        "qwen3-vl-8b-instruct": {
+          "api_calls": 66,
+          "input_tokens": 168349,
+          "output_tokens": 3717,
+          "cached_input_tokens": 0,
+          "cost": 0.0,
+          "has_cost": true,
+          "sources": []
+        },
+        "gpt-5.2": {
+          "api_calls": 1,
+          "input_tokens": 733,
+          "output_tokens": 51,
+          "cached_input_tokens": 0,
+          "cost": 0.0019967500000000003,
+          "has_cost": true,
+          "sources": []
+        }
+      },
+      "total_api_calls": 67,
+      "total_cost": 0.0019967500000000003,
+      "has_any_cost": true,
+      "has_incomplete_costs": false
+    }
+  },
+  "visual_artifacts": {
+    "historical_media": [],
+    "selected_frame_paths": [],
+    "historical_frames_saved": false,
+    "action_records_checked": 42,
+    "replay": {
+      "performed": false,
+      "status": "blocked_before_simulator_start",
+      "reason": "NVIDIA driver unavailable on the export host; no replay frames are claimed or fabricated."
+    }
+  },
+  "spatial_social_code_file": "habitat_episode_772_repeat3_spatial_social_code.json",
+  "source_provenance": {
+    "task": {
+      "path": "workdirs/habitat_enacttom/frozen12/benchmark_qwen8b_task_conditioned_repeats/tasks/physical_social/hard_108294897_176710602_772.json",
+      "sha256": "82f0ee46ca0c35142111c377ccf7c329bfd3da804b30d45fa09dec35dc871044"
+    },
+    "summary": {
+      "path": "workdirs/habitat_enacttom/frozen12/benchmark_qwen8b_task_conditioned_repeats/results/repeat_3/physical_social/hard_108294897_176710602_772/results/benchmark_summary.json",
+      "sha256": "0f495cd3023a613190b702a1cfce985e54a6a0d26ec25f29b0bfcd8fa89bc208"
+    },
+    "planner_log": {
+      "path": "workdirs/habitat_enacttom/frozen12/benchmark_qwen8b_task_conditioned_repeats/results/repeat_3/physical_social/hard_108294897_176710602_772/results/emtom-108294897_176710602-772-cooperative-exhibit-reset-with-split-object-target-k-41a5f8ab/planner-log/planner-log-20260902_070513.json",
+      "sha256": "6805a775b6703a20b99682499961ee4db9ca82355ed7d81b7556853cf09439ec"
+    },
+    "direct_summary": {
+      "path": "workdirs/habitat_enacttom/frozen12/benchmark_qwen8b_task_conditioned_repeats/results/repeat_3/direct/hard_108294897_176710602_772/results/benchmark_summary.json",
+      "sha256": "e9af132b092f2c85810ec80bdd6ddf1f964f252dcd85019b904ff6f622113b21"
+    },
+    "status_log": {
+      "path": "workdirs/habitat_enacttom/frozen12/benchmark_qwen8b_task_conditioned_repeats/status.jsonl",
+      "sha256": "244ee742279148288c757a47d8b159010f871e4fbc59e514b39b0d0c231fc35d"
+    },
+    "compiler_manifest": {
+      "path": "workdirs/habitat_enacttom/frozen12/benchmark_qwen8b_task_conditioned_repeats/tasks/physical_social/manifest.json",
+      "sha256": "8dd6149fc65e8920e7ffe8f6641693174dea05a28d88889f1fec30e109029e5e"
+    }
+  }
+}
