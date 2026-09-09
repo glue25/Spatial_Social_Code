@@ -1,0 +1,23 @@
+{
+  "schema_version": "habitat_spatial_social_code_export_v1",
+  "task_id": "emtom-108294897_176710602-1566-mixed-safety-prep-with-a-private-checklist-ite-2016757d",
+  "episode_id": "1566",
+  "condition": "physical_social",
+  "repeat": 3,
+  "actual_seed": 891003,
+  "agents": {
+    "agent_0": {
+      "spatial_code": "[Task-Conditioned Spatial Code]\nSPATIAL_STATE {\n task_goal:\n  - IS_ON_TOP(UNKNOWN_spray_bottle, UNKNOWN_couch)\n  - IS_ON_TOP(UNKNOWN_box, UNKNOWN_counter)\n  - IS_OPEN(UNKNOWN_fridge)\n known_current_relations:\n  - IS_IN_ROOM(chair_17, dining_room_1)\n  - IS_IN_ROOM(bottle_4, dining_room_1)\n type_safety: Pick only movable objects; Open/Close only articulated furniture.\n interaction_precondition: Navigate to the exact object before Pick/Open/Close; Navigate to the exact destination before Place; after distance/occlusion failure, Navigate and retry.\n completion_rule: a goal changes only after a successful runtime observation.\n}",
+      "social_code": "[Task-Conditioned Social Code]\nSOCIAL_STATE {\n self: agent_0\n teammates: agent_1\n room_capabilities:\n  - kitchen_1: ALLOWED=agent_1; DENIED=agent_0\n  - living_room_1: ALLOWED=agent_0; DENIED=agent_1\n self_private_facts:\n  - You are barred from kitchen_1.\n  - Your personal objective: by the end, ensure bottle_4 is on chair_17 in dining_room_1.\n peer_private_facts: UNKNOWN until explicitly communicated.\n communication: remaining_initial=1; targets=agent_1\n communication_role: primary_integrator=agent_0; BEFORE spending your only message, use received exact facts and your own observations; while waiting, begin only executable work supported by exact facts you already know\n objective_priority: the explicit shared task goal is authoritative; model private personal objectives but never let them overwrite the shared goal.\n coordination_invariant: address only a directly reachable recipient; with a one-message budget, never send twice; assign work only to an allowed agent; do not treat promises as completion.\n progress_rule: after your required message is sent, execute any accessible unfinished shared goal instead of repeatedly waiting for confirmation; use a Find tool when an exact ID is unknown.\n}"
+    },
+    "agent_1": {
+      "spatial_code": "[Task-Conditioned Spatial Code]\nSPATIAL_STATE {\n task_goal:\n  - IS_ON_TOP(spray_bottle_3, UNKNOWN_couch)\n  - IS_ON_TOP(UNKNOWN_box, UNKNOWN_counter)\n  - IS_OPEN(UNKNOWN_fridge)\n known_current_relations:\n  - IS_IN_ROOM(table_12, living_room_1)\n  - IS_IN_ROOM(spray_bottle_3, living_room_1)\n  - IS_ON_TOP(spray_bottle_3, table_12)\n type_safety: Pick only movable objects; Open/Close only articulated furniture.\n interaction_precondition: Navigate to the exact object before Pick/Open/Close; Navigate to the exact destination before Place; after distance/occlusion failure, Navigate and retry.\n completion_rule: a goal changes only after a successful runtime observation.\n}",
+      "social_code": "[Task-Conditioned Social Code]\nSOCIAL_STATE {\n self: agent_1\n teammates: agent_0\n room_capabilities:\n  - kitchen_1: ALLOWED=agent_1; DENIED=agent_0\n  - living_room_1: ALLOWED=agent_0; DENIED=agent_1\n self_private_facts:\n  - You are barred from living_room_1.\n  - spray_bottle_3 starts on table_12 in living_room_1.\n  - Your personal objective: by the end, ensure the kitchen refrigerator is closed.\n peer_private_facts: UNKNOWN until explicitly communicated.\n communication: remaining_initial=1; targets=agent_0\n communication_role: fact_source_to=agent_0; FIRST DECISION: send all task-relevant exact private facts in one message directly to agent_0, before searching or moving\n objective_priority: the explicit shared task goal is authoritative; model private personal objectives but never let them overwrite the shared goal.\n coordination_invariant: address only a directly reachable recipient; with a one-message budget, never send twice; assign work only to an allowed agent; do not treat promises as completion.\n progress_rule: after your required message is sent, execute any accessible unfinished shared goal instead of repeatedly waiting for confirmation; use a Find tool when an exact ID is unknown.\n}"
+    }
+  },
+  "provenance": {
+    "source_task": "workdirs/habitat_enacttom/frozen12/benchmark_qwen8b_task_conditioned_repeats/tasks/physical_social/standard_108294897_176710602_1566.json",
+    "source_task_sha256": "786cbb3a5ca95d887a0de17ac50a89aee3a8bba92f219a5f2cefa7701ca46e65",
+    "extraction": "Exact strings from agent_secrets; no rewriting."
+  }
+}

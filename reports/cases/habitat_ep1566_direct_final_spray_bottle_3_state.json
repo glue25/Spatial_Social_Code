@@ -1,0 +1,33 @@
+{
+  "turn": 20,
+  "target": "spray_bottle_3",
+  "support": "couch_13",
+  "handles": {
+    "spray_bottle_3": "Spray_Bottle_8_:0000",
+    "couch_13": "9dace26762b78b5c87d4e29142477f3434a5b4a3_:0000"
+  },
+  "translations": {
+    "spray_bottle_3": [
+      0.2650604844093323,
+      1.0810071229934692,
+      -6.050090789794922
+    ],
+    "couch_13": [
+      0.40247806906700134,
+      0.5077756643295288,
+      -6.007391452789307
+    ]
+  },
+  "grasped_objects": [
+    {
+      "agent_id": "agent_0",
+      "object_handle": "Spray_Bottle_8_:0000"
+    }
+  ],
+  "target_is_grasped": true,
+  "target_support_handles_from_above": [
+    "cfdd6e58044d96b1e82ef2795300e6b16596b302_:0000",
+    "hab_spot_arm_:0000"
+  ],
+  "expected_support_matched": false
+}
