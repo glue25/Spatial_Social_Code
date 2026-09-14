@@ -6,6 +6,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import math
 import shutil
 from pathlib import Path
 
@@ -35,6 +36,7 @@ def main() -> None:
 
     rows = []
     selected_frames = []
+    panels_to_render = []
     summaries = sorted(runs.glob("results/*/results/*/closed_loop_artifacts/summary.json"))
     if len(summaries) != 3:
         raise SystemExit(f"expected three generated-environment runs, found {len(summaries)}")
@@ -46,14 +48,62 @@ def main() -> None:
         frames = sorted((artifact / "frames").glob("**/*.png"))
         if not frames:
             raise SystemExit(f"no rendered frames in {artifact}")
-        chosen = frames[-1]
         condition = run_manifest["condition"]
-        frame_out = output / f"generated_environment_{condition}_final.png"
-        shutil.copy2(chosen, frame_out)
-        selected_frames.append({
-            "condition": condition, "source": str(chosen.relative_to(ROOT)),
-            "export": str(frame_out.relative_to(ROOT)), "sha256": sha256(frame_out),
-        })
+        events = read_jsonl(artifact / "events.jsonl")
+        if condition == "dynamic_ssc":
+            target_entities = {str(check["entity"]) for check in final["checks"]}
+            key_actions = []
+            seen_entities = set()
+            for event in events:
+                action = event.get("action") or {}
+                outcome = event.get("outcome") or {}
+                arguments = action.get("arguments") or []
+                if (
+                    event.get("event_type") == "action_feedback"
+                    and outcome.get("success")
+                    and action.get("name") in {"Place", "Open"}
+                    and arguments
+                    and str(arguments[0]) in target_entities
+                    and str(arguments[0]) not in seen_entities
+                ):
+                    key_actions.append((int(event["turn"]), str(event["agent_id"]), str(arguments[0]), action["name"]))
+                    seen_entities.add(str(arguments[0]))
+            if len(key_actions) < len(target_entities):
+                raise SystemExit(f"missing successful goal actions in {artifact}: {key_actions}")
+            for turn, agent, entity, action_name in key_actions:
+                actor_candidates = sorted((artifact / "frames" / agent / f"turn_{turn:04d}").glob("*_in_action.png"))
+                chosen = max(actor_candidates, key=lambda path: path.stat().st_size) if actor_candidates else None
+                if chosen is None or chosen.stat().st_size < 50_000:
+                    candidates = sorted((artifact / "frames").glob(f"*/turn_{turn:04d}/*_in_action.png"))
+                    candidates += sorted((artifact / "frames").glob(f"*/turn_{turn + 1:04d}/*_in_action.png"))
+                    if not candidates:
+                        candidates = sorted((artifact / "frames" / agent / f"turn_{turn:04d}").glob("*.png"))
+                    chosen = max(candidates, key=lambda path: path.stat().st_size)
+                frame_agent = chosen.parents[1].name
+                frame_out = output / f"generated_environment_dynamic_t{turn:04d}_{entity}.png"
+                shutil.copy2(chosen, frame_out)
+                record = {
+                    "condition": condition, "turn": turn, "agent": agent,
+                    "frame_agent": frame_agent,
+                    "action": action_name, "entity": entity,
+                    "source": str(chosen.relative_to(ROOT)),
+                    "export": str(frame_out.relative_to(ROOT)), "sha256": sha256(frame_out),
+                }
+                selected_frames.append(record)
+                panels_to_render.append((record, f"Dynamic SSC · T{turn} · {action_name} {entity}"))
+        else:
+            final_turn = int(final["turn"])
+            candidates = sorted((artifact / "frames").glob(f"*/turn_{final_turn:04d}/*_in_action.png"))
+            chosen = candidates[-1] if candidates else frames[-1]
+            frame_out = output / f"generated_environment_{condition}_final.png"
+            shutil.copy2(chosen, frame_out)
+            record = {
+                "condition": condition, "turn": final_turn,
+                "source": str(chosen.relative_to(ROOT)),
+                "export": str(frame_out.relative_to(ROOT)), "sha256": sha256(frame_out),
+            }
+            selected_frames.append(record)
+            panels_to_render.append((record, f"{condition} · final · {final['completed_goals']}/{final['total_goals']} goals"))
         rows.append({
             "condition": condition,
             "task_id": run_manifest["task_id"],
@@ -68,16 +118,18 @@ def main() -> None:
         })
 
     thumbs = []
-    for frame in selected_frames:
+    for frame, title in panels_to_render:
         image = Image.open(ROOT / frame["export"]).convert("RGB")
         image.thumbnail((640, 420))
         panel = Image.new("RGB", (660, 470), "white")
         panel.paste(image, ((660 - image.width) // 2, 40))
-        ImageDraw.Draw(panel).text((18, 12), f"{frame['condition']} · generated episode 911166", fill="black")
+        ImageDraw.Draw(panel).text((18, 12), title, fill="black")
         thumbs.append(panel)
-    sheet = Image.new("RGB", (660 * len(thumbs), 470), "white")
+    columns = 2
+    rows_count = math.ceil(len(thumbs) / columns)
+    sheet = Image.new("RGB", (660 * columns, 470 * rows_count), "white")
     for index, panel in enumerate(thumbs):
-        sheet.paste(panel, (660 * index, 0))
+        sheet.paste(panel, (660 * (index % columns), 470 * (index // columns)))
     sheet_path = output / "ssc_code_generated_environment_execution.png"
     sheet.save(sheet_path)
 
@@ -122,7 +174,13 @@ def main() -> None:
             f"| {row['condition']} | {row['episode_id']} | "
             f"{row['completed_goals']}/{row['total_goals']} | {row['turns']} | {row['frame_count']} |"
         )
-    lines.extend(["", f"编译与执行验收：`accepted={str(evidence['accepted']).lower()}`。", ""])
+    lines.extend([
+        "", f"编译与执行验收：`accepted={str(evidence['accepted']).lower()}`。", "",
+        "- [真实执行帧对照](ssc_code_generated_environment_execution.png)",
+        "- [生成后的 Spatial–Social Code](generated_ssc_code.json)",
+        "- [编译 manifest](compile_manifest.json)",
+        "- [可直接加载的 Habitat episodes](episodes.json.gz)", "",
+    ])
     (output / "README_zh.md").write_text("\n".join(lines), encoding="utf-8")
     print(json.dumps(evidence, indent=2, ensure_ascii=False))
 

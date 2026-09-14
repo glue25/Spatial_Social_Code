@@ -43,10 +43,14 @@ Dynamic SSC 在每轮执行后根据私有观察、动作结果和已确认送�
 全新 3D 网格。未来生成式世界模型可替换资产检索与布局模块，而继续使用同一 SSC 接口
 表达物理关系、主体视角和信息边界。
 
+实际生成的 episode `911166` 使用 seed `893116` 运行了三个规划 case：Direct 在 20 轮
+完成 0/3，Static SSC 在 20 轮完成 1/3，Dynamic SSC 在 10 轮严格完成 3/3。三者都由
+Habitat 加载生成 episode 并导出真实 RGB 帧。该单环境结果用于证明“生成环境可推理、
+可规划、可审计”，不作为总体准确率估计。
+
 ## 证据边界
 
 - golden trajectory、Oracle schedule 和 QA 目标答案不会进入生成任务。
 - 生成 episode 必须由 Habitat 实际加载并产生 RGB 帧，不能只通过 JSON schema 检查。
 - 物理完成由 `strict_physical_v1` 连续三次物理采样判定，RGB 只作展示。
 - 固定场景干预和单个生成环境属于机制证据，不报告成总体 benchmark 提升。
-

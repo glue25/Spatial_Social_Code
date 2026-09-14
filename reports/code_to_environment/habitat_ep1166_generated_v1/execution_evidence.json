@@ -72,25 +72,54 @@
   "selected_frames": [
     {
       "condition": "direct",
-      "source": "workdirs/habitat_closed_loop/code_generated_full/results/direct/results/sscenv-911166-code-generated/closed_loop_artifacts/frames/agent_2/turn_0020/agent_2_t0020_f0004_s0121_sim002545_turn_end.png",
+      "turn": 20,
+      "source": "workdirs/habitat_closed_loop/code_generated_full/results/direct/results/sscenv-911166-code-generated/closed_loop_artifacts/frames/agent_2/turn_0020/agent_2_t0020_f0003_s0120_sim002544_in_action.png",
       "export": "reports/code_to_environment/habitat_ep1166_generated_v1/generated_environment_direct_final.png",
-      "sha256": "fbcf6ad14e2280cd3fc94f4c0087e2230dc821216cf51eec55781f25588b3e78"
+      "sha256": "7a55f41d4a8367b5450f5f03273bdda140980bf3e8ee8f517b81d67f6a85e049"
     },
     {
       "condition": "dynamic_ssc",
-      "source": "workdirs/habitat_closed_loop/code_generated_full/results/dynamic_ssc/results/sscenv-911166-code-generated/closed_loop_artifacts/frames/agent_2/turn_0010/agent_2_t0010_f0004_s0121_sim001541_turn_end.png",
-      "export": "reports/code_to_environment/habitat_ep1166_generated_v1/generated_environment_dynamic_ssc_final.png",
-      "sha256": "fbcf6ad14e2280cd3fc94f4c0087e2230dc821216cf51eec55781f25588b3e78"
+      "turn": 4,
+      "agent": "agent_2",
+      "frame_agent": "agent_0",
+      "action": "Place",
+      "entity": "vase_0",
+      "source": "workdirs/habitat_closed_loop/code_generated_full/results/dynamic_ssc/results/sscenv-911166-code-generated/closed_loop_artifacts/frames/agent_0/turn_0005/agent_0_t0005_f0002_s0090_sim000861_in_action.png",
+      "export": "reports/code_to_environment/habitat_ep1166_generated_v1/generated_environment_dynamic_t0004_vase_0.png",
+      "sha256": "248a75337aea99b3599ad60f13368cf08fdf0b69d9b163e6b90ad2d6e4f4dc26"
+    },
+    {
+      "condition": "dynamic_ssc",
+      "turn": 7,
+      "agent": "agent_1",
+      "frame_agent": "agent_1",
+      "action": "Open",
+      "entity": "fridge_34",
+      "source": "workdirs/habitat_closed_loop/code_generated_full/results/dynamic_ssc/results/sscenv-911166-code-generated/closed_loop_artifacts/frames/agent_1/turn_0007/agent_1_t0007_f0000_s0030_sim001179_in_action.png",
+      "export": "reports/code_to_environment/habitat_ep1166_generated_v1/generated_environment_dynamic_t0007_fridge_34.png",
+      "sha256": "2cb246ad466445f492c168e6bdb90af4ebdc842fdfef9f4c9618f11af684ccbe"
+    },
+    {
+      "condition": "dynamic_ssc",
+      "turn": 10,
+      "agent": "agent_0",
+      "frame_agent": "agent_0",
+      "action": "Place",
+      "entity": "box_3",
+      "source": "workdirs/habitat_closed_loop/code_generated_full/results/dynamic_ssc/results/sscenv-911166-code-generated/closed_loop_artifacts/frames/agent_0/turn_0010/agent_0_t0010_f0000_s0030_sim001450_in_action.png",
+      "export": "reports/code_to_environment/habitat_ep1166_generated_v1/generated_environment_dynamic_t0010_box_3.png",
+      "sha256": "930b6d3ee06317fa8c2cbb8655fef479a011f4950b1e46fc6ba1793e754515e0"
     },
     {
       "condition": "static_ssc",
-      "source": "workdirs/habitat_closed_loop/code_generated_full/results/static_ssc/results/sscenv-911166-code-generated/closed_loop_artifacts/frames/agent_2/turn_0020/agent_2_t0020_f0004_s0121_sim002754_turn_end.png",
+      "turn": 20,
+      "source": "workdirs/habitat_closed_loop/code_generated_full/results/static_ssc/results/sscenv-911166-code-generated/closed_loop_artifacts/frames/agent_2/turn_0020/agent_2_t0020_f0003_s0120_sim002753_in_action.png",
       "export": "reports/code_to_environment/habitat_ep1166_generated_v1/generated_environment_static_ssc_final.png",
-      "sha256": "fbcf6ad14e2280cd3fc94f4c0087e2230dc821216cf51eec55781f25588b3e78"
+      "sha256": "17661fb945b347cb61598c3cde00e22623fb2f51923fb153f62b630c5cf819fd"
     }
   ],
   "contact_sheet": "reports/code_to_environment/habitat_ep1166_generated_v1/ssc_code_generated_environment_execution.png",
-  "contact_sheet_sha256": "aaaca8ec4b8f5b43e97267905305d84726c58e5fb0fda93ef23d1525b5c6f5b7",
+  "contact_sheet_sha256": "4b336a9ce850d37ef7d31a54116807ba72bfc114bfe4e60360d849b76258a73b",
   "checks": {
     "all_runs_use_generated_episode": true,
     "all_runs_have_real_frames": true,

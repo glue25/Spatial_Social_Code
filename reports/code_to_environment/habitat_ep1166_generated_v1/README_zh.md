@@ -18,3 +18,8 @@
 | static_ssc | 911166 | 1/3 | 20 | 324 |
 
 编译与执行验收：`accepted=true`。
+
+- [真实执行帧对照](ssc_code_generated_environment_execution.png)
+- [生成后的 Spatial–Social Code](generated_ssc_code.json)
+- [编译 manifest](compile_manifest.json)
+- [可直接加载的 Habitat episodes](episodes.json.gz)
