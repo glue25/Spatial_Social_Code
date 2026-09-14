@@ -1,0 +1,41 @@
+{
+  "schema_version": "ssc_complete_supplement_manifest_v1",
+  "output": "reports/supplement_complete_zh.md",
+  "output_sha256": "40d4c1002042c796b0f4a69e77bd639995c1d740f1559b2260893482fbb3073b",
+  "sources": {
+    "mmtom_option_blind": {
+      "path": "spatial_social_code/mmtom_option_blind_gemini3pro_summary.json",
+      "sha256": "b0e823a178236ebf8817460f9740f4dd83d3a0a2717bf34c6712c693d8fe2566"
+    },
+    "mmtom_compile_once": {
+      "path": "workdirs/cross_model_v1/mmtom_gpt56_compile_once20_summary.json",
+      "sha256": "34f8be07559a4ed0f76215a1553c0ce8c0876132b496f92e1377dcd20fca5bdf"
+    },
+    "maegoqa_gpt56": {
+      "path": "workdirs/cross_model_v1/maegoqa_gpt56_reasoning20_summary.json",
+      "sha256": "a79a4f534648838bd82b0e629a2c4cb15c5f719dcb7cac2bc4bc30c94389d6e9"
+    },
+    "habitat_multiseed": {
+      "path": "reports/habitat_closed_loop_multiseed/habitat_multiseed_summary.json",
+      "sha256": "1bf620d009be4622d193323db7129a86957e866112cfc11ad1ff8f1ed4167ecd"
+    },
+    "comind_oof": {
+      "path": "reports/comind_grounding_oof_summary.json",
+      "sha256": "699a0293cce32a773a058fc51ddf57f284706478e24246898ad61cb33c2f6c8a"
+    },
+    "human_audit": {
+      "path": "workdirs/priority_ssc_v1/human_audit/manifest.json",
+      "sha256": "f5d89f4c16720b5f06b9f2d23b0c64ed1068db6140c04934efd3c6329978ce8d"
+    },
+    "environment_spec": {
+      "path": "reports/cases/habitat_ep1166_ssc_generated_environment.json",
+      "sha256": "c330931e27394be3fd4d6fd30530532ee03a68b5a9e86186922c9b826ca6c5d8"
+    },
+    "environment_cases": {
+      "path": "reports/habitat_generated_environment_cases/habitat_ssc_environment_cases_results.json",
+      "sha256": "c92aff893b2343ef90bb38315e7e06e944046b218a86616ba0cee1c14d5befd8"
+    }
+  },
+  "missing_optional_sources": [],
+  "claim_policy": "No unsupported result is promoted from diagnostic, single-case, or pending human audit status."
+}

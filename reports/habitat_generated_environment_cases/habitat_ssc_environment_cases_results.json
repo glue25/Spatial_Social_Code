@@ -1,0 +1,400 @@
+{
+  "schema_version": "ssc_environment_case_results_v1",
+  "status": "illustrative_fixed_scene_cases_not_population_benchmark",
+  "model": "qwen3-vl-8b-instruct",
+  "same_physical_state_and_goal": true,
+  "answer_bearing_fields_removed": true,
+  "pairs": [
+    {
+      "case_id": "fact_owner_agent0",
+      "key_fact_owner": "agent_0",
+      "intervention": "move exact spray-bottle location from agent_1 to agent_0",
+      "direct_goals": "2/3",
+      "dynamic_ssc_goals": "3/3",
+      "direct_success": false,
+      "dynamic_ssc_success": true,
+      "direct_target_relevant_messages": [],
+      "dynamic_target_relevant_messages": []
+    },
+    {
+      "case_id": "fact_owner_agent1",
+      "key_fact_owner": "agent_1",
+      "intervention": "none; original private information owner",
+      "direct_goals": "3/3",
+      "dynamic_ssc_goals": "3/3",
+      "direct_success": true,
+      "dynamic_ssc_success": true,
+      "direct_target_relevant_messages": [
+        {
+          "turn": 1,
+          "sender": "agent_1",
+          "receivers": [
+            "agent_0"
+          ],
+          "message": "I can't access living_room_1. Please take the spray bottle from table_12 and place it on couch_13. I'll handle the refrigerator and box."
+        }
+      ],
+      "dynamic_target_relevant_messages": [
+        {
+          "turn": 1,
+          "sender": "agent_1",
+          "receivers": [
+            "agent_0"
+          ],
+          "message": "I can't access the living room. Please take the spray bottle from table_12 and place it on couch_13."
+        }
+      ]
+    },
+    {
+      "case_id": "fact_withheld",
+      "key_fact_owner": null,
+      "intervention": "remove the exact spray-bottle location from both agents",
+      "direct_goals": "2/3",
+      "dynamic_ssc_goals": "2/3",
+      "direct_success": false,
+      "dynamic_ssc_success": false,
+      "direct_target_relevant_messages": [],
+      "dynamic_target_relevant_messages": []
+    },
+    {
+      "case_id": "irrelevant_fact_control",
+      "key_fact_owner": "agent_1",
+      "intervention": "add one task-irrelevant furniture-room fact to agent_0",
+      "direct_goals": "3/3",
+      "dynamic_ssc_goals": "2/3",
+      "direct_success": true,
+      "dynamic_ssc_success": false,
+      "direct_target_relevant_messages": [
+        {
+          "turn": 1,
+          "sender": "agent_1",
+          "receivers": [
+            "agent_0"
+          ],
+          "message": "I can't access living_room_1. Please take the spray bottle from table_12 and place it on couch_13. I'll handle the refrigerator and box."
+        }
+      ],
+      "dynamic_target_relevant_messages": [
+        {
+          "turn": 1,
+          "sender": "agent_1",
+          "receivers": [
+            "agent_0"
+          ],
+          "message": "I can't access the living room. Please take the spray bottle from table_12 and place it on couch_13."
+        }
+      ]
+    }
+  ],
+  "runs": [
+    {
+      "case_id": "fact_owner_agent0",
+      "condition": "direct",
+      "task_id": "sscgen-1566-fact_owner_agent0",
+      "seed": 892156,
+      "key_fact_owner": "agent_0",
+      "intervention": "move exact spray-bottle location from agent_1 to agent_0",
+      "strict_success": false,
+      "completed_goals": 2,
+      "total_goals": 3,
+      "turns": 20,
+      "api_calls": 36,
+      "input_tokens": 91876,
+      "output_tokens": 2215,
+      "delivered_messages": [
+        {
+          "turn": 2,
+          "sender": "agent_1",
+          "receivers": [
+            "agent_0"
+          ],
+          "message": "I can't access the living room. I’ll find the spray bottle and box, then assign tasks. I need you to handle the couch placement."
+        },
+        {
+          "turn": 5,
+          "sender": "agent_0",
+          "receivers": [
+            "agent_1"
+          ],
+          "message": "I placed the spray bottle on chair_17. You handle the box on the dining-room counter and ensure the fridge stays open."
+        }
+      ],
+      "target_relevant_messages": [],
+      "artifact_dir": "workdirs/habitat_closed_loop/generated_environment_cases/results/direct/fact_owner_agent0/results/sscgen-1566-fact_owner_agent0/closed_loop_artifacts"
+    },
+    {
+      "case_id": "fact_owner_agent1",
+      "condition": "direct",
+      "task_id": "sscgen-1566-fact_owner_agent1",
+      "seed": 892156,
+      "key_fact_owner": "agent_1",
+      "intervention": "none; original private information owner",
+      "strict_success": true,
+      "completed_goals": 3,
+      "total_goals": 3,
+      "turns": 14,
+      "api_calls": 32,
+      "input_tokens": 72561,
+      "output_tokens": 1718,
+      "delivered_messages": [
+        {
+          "turn": 1,
+          "sender": "agent_1",
+          "receivers": [
+            "agent_0"
+          ],
+          "message": "I can't access living_room_1. Please take the spray bottle from table_12 and place it on couch_13. I'll handle the refrigerator and box."
+        },
+        {
+          "turn": 10,
+          "sender": "agent_0",
+          "receivers": [
+            "agent_1"
+          ],
+          "message": "I cannot access the kitchen. Please retrieve box_5 from dishwasher_33 and place it on counter_25 in dining_room_1."
+        }
+      ],
+      "target_relevant_messages": [
+        {
+          "turn": 1,
+          "sender": "agent_1",
+          "receivers": [
+            "agent_0"
+          ],
+          "message": "I can't access living_room_1. Please take the spray bottle from table_12 and place it on couch_13. I'll handle the refrigerator and box."
+        }
+      ],
+      "artifact_dir": "workdirs/habitat_closed_loop/generated_environment_cases/results/direct/fact_owner_agent1/results/sscgen-1566-fact_owner_agent1/closed_loop_artifacts"
+    },
+    {
+      "case_id": "fact_withheld",
+      "condition": "direct",
+      "task_id": "sscgen-1566-fact_withheld",
+      "seed": 892156,
+      "key_fact_owner": null,
+      "intervention": "remove the exact spray-bottle location from both agents",
+      "strict_success": false,
+      "completed_goals": 2,
+      "total_goals": 3,
+      "turns": 20,
+      "api_calls": 43,
+      "input_tokens": 101337,
+      "output_tokens": 2748,
+      "delivered_messages": [
+        {
+          "turn": 2,
+          "sender": "agent_1",
+          "receivers": [
+            "agent_0"
+          ],
+          "message": "I can't access the living room. I’ll find the spray bottle and box, then assign tasks. I need you to handle the couch placement."
+        },
+        {
+          "turn": 9,
+          "sender": "agent_0",
+          "receivers": [
+            "agent_1"
+          ],
+          "message": "I found the box on dishwasher_33. Can you place it on the dining-room counter? I’ll handle the fridge task."
+        }
+      ],
+      "target_relevant_messages": [],
+      "artifact_dir": "workdirs/habitat_closed_loop/generated_environment_cases/results/direct/fact_withheld/results/sscgen-1566-fact_withheld/closed_loop_artifacts"
+    },
+    {
+      "case_id": "irrelevant_fact_control",
+      "condition": "direct",
+      "task_id": "sscgen-1566-irrelevant_fact_control",
+      "seed": 892156,
+      "key_fact_owner": "agent_1",
+      "intervention": "add one task-irrelevant furniture-room fact to agent_0",
+      "strict_success": true,
+      "completed_goals": 3,
+      "total_goals": 3,
+      "turns": 14,
+      "api_calls": 33,
+      "input_tokens": 74777,
+      "output_tokens": 1935,
+      "delivered_messages": [
+        {
+          "turn": 1,
+          "sender": "agent_1",
+          "receivers": [
+            "agent_0"
+          ],
+          "message": "I can't access living_room_1. Please take the spray bottle from table_12 and place it on couch_13. I'll handle the refrigerator and box."
+        },
+        {
+          "turn": 8,
+          "sender": "agent_0",
+          "receivers": [
+            "agent_1"
+          ],
+          "message": "Agent_1, please pick up box_5 from dishwasher_33 in kitchen_1 and place it on counter_25 in dining_room_1. I’ll handle the spray bottle and refrigerator."
+        }
+      ],
+      "target_relevant_messages": [
+        {
+          "turn": 1,
+          "sender": "agent_1",
+          "receivers": [
+            "agent_0"
+          ],
+          "message": "I can't access living_room_1. Please take the spray bottle from table_12 and place it on couch_13. I'll handle the refrigerator and box."
+        }
+      ],
+      "artifact_dir": "workdirs/habitat_closed_loop/generated_environment_cases/results/direct/irrelevant_fact_control/results/sscgen-1566-irrelevant_fact_control/closed_loop_artifacts"
+    },
+    {
+      "case_id": "fact_owner_agent0",
+      "condition": "dynamic_ssc",
+      "task_id": "sscgen-1566-fact_owner_agent0",
+      "seed": 892156,
+      "key_fact_owner": "agent_0",
+      "intervention": "move exact spray-bottle location from agent_1 to agent_0",
+      "strict_success": true,
+      "completed_goals": 3,
+      "total_goals": 3,
+      "turns": 7,
+      "api_calls": 16,
+      "input_tokens": 45582,
+      "output_tokens": 982,
+      "delivered_messages": [
+        {
+          "turn": 1,
+          "sender": "agent_1",
+          "receivers": [
+            "agent_0"
+          ],
+          "message": "I cannot access the living room. Please place the spray bottle on the couch. I will handle closing the refrigerator at the end."
+        },
+        {
+          "turn": 7,
+          "sender": "agent_0",
+          "receivers": [
+            "agent_1"
+          ],
+          "message": "I’ve placed the spray bottle on the couch and confirmed bottle_4 is on chair_17. You handle keeping the fridge open."
+        }
+      ],
+      "target_relevant_messages": [],
+      "artifact_dir": "workdirs/habitat_closed_loop/generated_environment_cases/results/dynamic_ssc/fact_owner_agent0/results/sscgen-1566-fact_owner_agent0/closed_loop_artifacts"
+    },
+    {
+      "case_id": "fact_owner_agent1",
+      "condition": "dynamic_ssc",
+      "task_id": "sscgen-1566-fact_owner_agent1",
+      "seed": 892156,
+      "key_fact_owner": "agent_1",
+      "intervention": "none; original private information owner",
+      "strict_success": true,
+      "completed_goals": 3,
+      "total_goals": 3,
+      "turns": 12,
+      "api_calls": 25,
+      "input_tokens": 89532,
+      "output_tokens": 1710,
+      "delivered_messages": [
+        {
+          "turn": 1,
+          "sender": "agent_1",
+          "receivers": [
+            "agent_0"
+          ],
+          "message": "I can't access the living room. Please take the spray bottle from table_12 and place it on couch_13."
+        },
+        {
+          "turn": 8,
+          "sender": "agent_0",
+          "receivers": [
+            "agent_1"
+          ],
+          "message": "I’ve placed the spray bottle. I can’t access the kitchen. Please take the box from dishwasher_33 and place it on counter_25."
+        }
+      ],
+      "target_relevant_messages": [
+        {
+          "turn": 1,
+          "sender": "agent_1",
+          "receivers": [
+            "agent_0"
+          ],
+          "message": "I can't access the living room. Please take the spray bottle from table_12 and place it on couch_13."
+        }
+      ],
+      "artifact_dir": "workdirs/habitat_closed_loop/generated_environment_cases/results/dynamic_ssc/fact_owner_agent1/results/sscgen-1566-fact_owner_agent1/closed_loop_artifacts"
+    },
+    {
+      "case_id": "fact_withheld",
+      "condition": "dynamic_ssc",
+      "task_id": "sscgen-1566-fact_withheld",
+      "seed": 892156,
+      "key_fact_owner": null,
+      "intervention": "remove the exact spray-bottle location from both agents",
+      "strict_success": false,
+      "completed_goals": 2,
+      "total_goals": 3,
+      "turns": 20,
+      "api_calls": 30,
+      "input_tokens": 122004,
+      "output_tokens": 2558,
+      "delivered_messages": [
+        {
+          "turn": 1,
+          "sender": "agent_1",
+          "receivers": [
+            "agent_0"
+          ],
+          "message": "I cannot access the living room. Please place the spray bottle on the couch. I will handle closing the refrigerator at the end."
+        },
+        {
+          "turn": 7,
+          "sender": "agent_0",
+          "receivers": [
+            "agent_1"
+          ],
+          "message": "I placed the spray bottle on the couch. I’ll now find the box and place it on the dining-room counter. You handle the refrigerator."
+        }
+      ],
+      "target_relevant_messages": [],
+      "artifact_dir": "workdirs/habitat_closed_loop/generated_environment_cases/results/dynamic_ssc/fact_withheld/results/sscgen-1566-fact_withheld/closed_loop_artifacts"
+    },
+    {
+      "case_id": "irrelevant_fact_control",
+      "condition": "dynamic_ssc",
+      "task_id": "sscgen-1566-irrelevant_fact_control",
+      "seed": 892156,
+      "key_fact_owner": "agent_1",
+      "intervention": "add one task-irrelevant furniture-room fact to agent_0",
+      "strict_success": false,
+      "completed_goals": 2,
+      "total_goals": 3,
+      "turns": 20,
+      "api_calls": 57,
+      "input_tokens": 174888,
+      "output_tokens": 3030,
+      "delivered_messages": [
+        {
+          "turn": 1,
+          "sender": "agent_1",
+          "receivers": [
+            "agent_0"
+          ],
+          "message": "I can't access the living room. Please take the spray bottle from table_12 and place it on couch_13."
+        }
+      ],
+      "target_relevant_messages": [
+        {
+          "turn": 1,
+          "sender": "agent_1",
+          "receivers": [
+            "agent_0"
+          ],
+          "message": "I can't access the living room. Please take the spray bottle from table_12 and place it on couch_13."
+        }
+      ],
+      "artifact_dir": "workdirs/habitat_closed_loop/generated_environment_cases/results/dynamic_ssc/irrelevant_fact_control/results/sscgen-1566-irrelevant_fact_control/closed_loop_artifacts"
+    }
+  ],
+  "interpretation_boundary": "Four interventions in one episode illustrate executable information attribution; they do not estimate population-level accuracy or significance."
+}
