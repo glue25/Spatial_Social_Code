@@ -1,0 +1,514 @@
+{
+  "condition": "direct",
+  "done": false,
+  "final_states": {
+    "agent_0": {
+      "agent_id": "agent_0",
+      "social": {
+        "access.denied_rooms": {
+          "confidence": 1.0,
+          "evidence": "task mechanic visible to self",
+          "key": "access.denied_rooms",
+          "source_agent": "agent_0",
+          "source_type": "task_private",
+          "status": "task_specified",
+          "supersedes": null,
+          "turn": 0,
+          "value": [
+            "kitchen_1"
+          ]
+        },
+        "task.private_facts": {
+          "confidence": 1.0,
+          "evidence": "own private task input",
+          "key": "task.private_facts",
+          "source_agent": "agent_0",
+          "source_type": "task_private",
+          "status": "task_specified",
+          "supersedes": null,
+          "turn": 0,
+          "value": [
+            "agent_0 is barred from kitchen_1.",
+            "You can only message agent_1.",
+            "The living-room side table for the toy vehicle is table_19.",
+            "Your personal objective: cushion_2 must be on top of chair_17 in bedroom_1 at the end."
+          ]
+        },
+        "task.self": {
+          "confidence": 1.0,
+          "evidence": "Reset the home before guests arrive. As a group, complete all of the following shared chores: (1) put the toy vehicle on the living-room side table, (2) put the hand towel on the laundry-room shelves, and (3) leave the correct kitchen storage piece open at the end.",
+          "key": "task.self",
+          "source_agent": "agent_0",
+          "source_type": "task_public",
+          "status": "task_specified",
+          "supersedes": null,
+          "turn": 0,
+          "value": "agent_0"
+        }
+      },
+      "spatial": {
+        "object.chair_17.in": {
+          "confidence": 1.0,
+          "evidence": "Your personal objective: cushion_2 must be on top of chair_17 in bedroom_1 at the end.",
+          "key": "object.chair_17.in",
+          "source_agent": "agent_0",
+          "source_type": "task_private",
+          "status": "task_specified",
+          "supersedes": null,
+          "turn": 0,
+          "value": "bedroom_1"
+        },
+        "task.shared_goal": {
+          "confidence": 1.0,
+          "evidence": "Reset the home before guests arrive. As a group, complete all of the following shared chores: (1) put the toy vehicle on the living-room side table, (2) put the hand towel on the laundry-room shelves, and (3) leave the correct kitchen storage piece open at the end.",
+          "key": "task.shared_goal",
+          "source_agent": "agent_0",
+          "source_type": "task_public",
+          "status": "task_specified",
+          "supersedes": null,
+          "turn": 0,
+          "value": "Reset the home before guests arrive. As a group, complete all of the following shared chores: (1) put the toy vehicle on the living-room side table, (2) put the hand towel on the laundry-room shelves, and (3) leave the correct kitchen storage piece open at the end."
+        }
+      },
+      "version": 2
+    },
+    "agent_1": {
+      "agent_id": "agent_1",
+      "social": {
+        "access.denied_rooms": {
+          "confidence": 1.0,
+          "evidence": "task mechanic visible to self",
+          "key": "access.denied_rooms",
+          "source_agent": "agent_1",
+          "source_type": "task_private",
+          "status": "task_specified",
+          "supersedes": null,
+          "turn": 0,
+          "value": []
+        },
+        "task.private_facts": {
+          "confidence": 1.0,
+          "evidence": "own private task input",
+          "key": "task.private_facts",
+          "source_agent": "agent_1",
+          "source_type": "task_private",
+          "status": "task_specified",
+          "supersedes": null,
+          "turn": 0,
+          "value": [
+            "You can message agent_0 and agent_2.",
+            "The hand towel to move is hand_towel_6.",
+            "The laundry-room shelves that must receive the hand towel are shelves_20.",
+            "Your personal objective: chest_of_drawers_29 in bedroom_2 must be open at the end."
+          ]
+        },
+        "task.self": {
+          "confidence": 1.0,
+          "evidence": "Reset the home before guests arrive. As a group, complete all of the following shared chores: (1) put the toy vehicle on the living-room side table, (2) put the hand towel on the laundry-room shelves, and (3) leave the correct kitchen storage piece open at the end.",
+          "key": "task.self",
+          "source_agent": "agent_1",
+          "source_type": "task_public",
+          "status": "task_specified",
+          "supersedes": null,
+          "turn": 0,
+          "value": "agent_1"
+        }
+      },
+      "spatial": {
+        "object.chest_of_drawers_29.in": {
+          "confidence": 1.0,
+          "evidence": "Your personal objective: chest_of_drawers_29 in bedroom_2 must be open at the end.",
+          "key": "object.chest_of_drawers_29.in",
+          "source_agent": "agent_1",
+          "source_type": "task_private",
+          "status": "task_specified",
+          "supersedes": null,
+          "turn": 0,
+          "value": "bedroom_2"
+        },
+        "task.shared_goal": {
+          "confidence": 1.0,
+          "evidence": "Reset the home before guests arrive. As a group, complete all of the following shared chores: (1) put the toy vehicle on the living-room side table, (2) put the hand towel on the laundry-room shelves, and (3) leave the correct kitchen storage piece open at the end.",
+          "key": "task.shared_goal",
+          "source_agent": "agent_1",
+          "source_type": "task_public",
+          "status": "task_specified",
+          "supersedes": null,
+          "turn": 0,
+          "value": "Reset the home before guests arrive. As a group, complete all of the following shared chores: (1) put the toy vehicle on the living-room side table, (2) put the hand towel on the laundry-room shelves, and (3) leave the correct kitchen storage piece open at the end."
+        }
+      },
+      "version": 2
+    },
+    "agent_2": {
+      "agent_id": "agent_2",
+      "social": {
+        "access.denied_rooms": {
+          "confidence": 1.0,
+          "evidence": "task mechanic visible to self",
+          "key": "access.denied_rooms",
+          "source_agent": "agent_2",
+          "source_type": "task_private",
+          "status": "task_specified",
+          "supersedes": null,
+          "turn": 0,
+          "value": []
+        },
+        "task.private_facts": {
+          "confidence": 1.0,
+          "evidence": "own private task input",
+          "key": "task.private_facts",
+          "source_agent": "agent_2",
+          "source_type": "task_private",
+          "status": "task_specified",
+          "supersedes": null,
+          "turn": 0,
+          "value": [
+            "You can only message agent_1.",
+            "The kitchen storage piece that must end open is fridge_31.",
+            "Before the task starts, you saw that fridge_31 is in kitchen_1.",
+            "Your personal objective: canister_3 must be on top of counter_25 at the end."
+          ]
+        },
+        "task.self": {
+          "confidence": 1.0,
+          "evidence": "Reset the home before guests arrive. As a group, complete all of the following shared chores: (1) put the toy vehicle on the living-room side table, (2) put the hand towel on the laundry-room shelves, and (3) leave the correct kitchen storage piece open at the end.",
+          "key": "task.self",
+          "source_agent": "agent_2",
+          "source_type": "task_public",
+          "status": "task_specified",
+          "supersedes": null,
+          "turn": 0,
+          "value": "agent_2"
+        }
+      },
+      "spatial": {
+        "object.fridge_31.in": {
+          "confidence": 1.0,
+          "evidence": "Before the task starts, you saw that fridge_31 is in kitchen_1.",
+          "key": "object.fridge_31.in",
+          "source_agent": "agent_2",
+          "source_type": "task_private",
+          "status": "task_specified",
+          "supersedes": null,
+          "turn": 0,
+          "value": "kitchen_1"
+        },
+        "task.shared_goal": {
+          "confidence": 1.0,
+          "evidence": "Reset the home before guests arrive. As a group, complete all of the following shared chores: (1) put the toy vehicle on the living-room side table, (2) put the hand towel on the laundry-room shelves, and (3) leave the correct kitchen storage piece open at the end.",
+          "key": "task.shared_goal",
+          "source_agent": "agent_2",
+          "source_type": "task_public",
+          "status": "task_specified",
+          "supersedes": null,
+          "turn": 0,
+          "value": "Reset the home before guests arrive. As a group, complete all of the following shared chores: (1) put the toy vehicle on the living-room side table, (2) put the hand towel on the laundry-room shelves, and (3) leave the correct kitchen storage piece open at the end."
+        }
+      },
+      "version": 2
+    }
+  },
+  "historical_benchmark_evaluation": {
+    "agent_subgoal_status": {
+      "agent_0": false,
+      "agent_1": true,
+      "agent_2": false
+    },
+    "all_goal_percent_complete": 0.5,
+    "completed_all_subtasks": [
+      1,
+      2,
+      4
+    ],
+    "completed_subtasks": [
+      1,
+      2
+    ],
+    "functional_success": false,
+    "historical_benchmark_percent_complete": 0.6666666666666666,
+    "historical_benchmark_success": false,
+    "literal_tom_probe_results": [
+      {
+        "agent_id": "agent_2",
+        "counted_in_score": false,
+        "details": {
+          "expected_negated": false,
+          "expected_response": {
+            "args": [
+              "fridge_31"
+            ],
+            "holds": true,
+            "predicate": "is_open"
+          },
+          "fact_true": true,
+          "parsed_response": {
+            "args": [],
+            "holds": null,
+            "predicate": ""
+          }
+        },
+        "probe_id": "k_probe_2",
+        "question": "Probe 2: report whether \"fridge 31 is open\" holds for ordered entities [fridge_31]. The expected argument order is fixed as listed. If unknown, return predicate \"unknown\" and holds null. JSON shape: {\"probe_id\":\"k_probe_X\",\"predicate\":\"<predicate_name>|unknown\",\"holds\":true|false|null,\"args\":[\"entity_or_target\", ...]}",
+        "raw_response": "```\nThought: I have successfully opened the fridge_31 as required by the task. The fridge must remain open at the end, and I have confirmed its state.\nAgent_2_Action: is_open[fridge_31]\n",
+        "source_pddl": "(K agent_2 (is_open fridge_31))",
+        "status": "failed",
+        "supported": true
+      },
+      {
+        "agent_id": "agent_1",
+        "counted_in_score": false,
+        "details": {
+          "behavioral_target_probe_id": "k_probe_2",
+          "behavioral_target_response": {
+            "args": [],
+            "holds": null,
+            "predicate": ""
+          },
+          "parsed_response": {
+            "args": [
+              "fridge_31"
+            ],
+            "holds": null,
+            "predicate": "is_open"
+          }
+        },
+        "probe_id": "k_probe_1",
+        "question": "Probe 1: predict what agent_2 would report about \"fridge 31 is open\" for ordered entities [fridge_31]. The expected argument order is fixed as listed. If unknown, return predicate \"unknown\" and holds null. JSON shape: {\"probe_id\":\"k_probe_X\",\"predicate\":\"<predicate_name>|unknown\",\"holds\":true|false|null,\"args\":[\"entity_or_target\", ...]}",
+        "raw_response": "{\"answers\":[{\"probe_id\":\"k_probe_1\",\"predicate\":\"is_open\",\"holds\":null,\"args\":[\"fridge_31\"]}]",
+        "source_pddl": "(K agent_1 (K agent_2 (is_open fridge_31)))",
+        "status": "failed",
+        "supported": true
+      },
+      {
+        "agent_id": "agent_0",
+        "counted_in_score": true,
+        "details": {
+          "behavioral_target_probe_id": "k_probe_1",
+          "behavioral_target_response": {
+            "args": [
+              "fridge_31"
+            ],
+            "holds": null,
+            "predicate": "is_open"
+          },
+          "parsed_response": {
+            "args": [
+              "fridge_31"
+            ],
+            "holds": null,
+            "predicate": "is_open"
+          }
+        },
+        "probe_id": "k_probe_0",
+        "question": "Probe 0: predict what agent_1 would report about \"fridge 31 is open\" for ordered entities [fridge_31]. The expected argument order is fixed as listed. If unknown, return predicate \"unknown\" and holds null. JSON shape: {\"probe_id\":\"k_probe_X\",\"predicate\":\"<predicate_name>|unknown\",\"holds\":true|false|null,\"args\":[\"entity_or_target\", ...]}",
+        "raw_response": "{\"answers\":[{\"probe_id\":\"k_probe_0\",\"predicate\":\"is_open\",\"holds\":null,\"args\":[\"fridge_31\"]}]}\n\nThought: I do not have direct knowledge of the state of fridge_31 (whether it is open or closed). I cannot observe or confirm its state without navigating to it or receiving explicit information from agent_1. Since I am barred from kitchen_1 and cannot directly interact with the fridge, and no prior observation or message has confirmed its state, I must report \"unknown\" for this probe.\n\nAgent_0_Action: Wait[]\n",
+        "source_pddl": "(K agent_0 (K agent_1 (K agent_2 (is_open fridge_31))))",
+        "status": "passed",
+        "supported": true
+      }
+    ],
+    "literal_tom_probe_score": 1.0,
+    "literal_tom_probe_summary": {
+      "intermediate_probe_count": 2,
+      "passed_count": 1,
+      "probe_count": 3,
+      "supported_probe_count": 1
+    },
+    "main_goal_success": false,
+    "percent_complete": 0.6666666666666666,
+    "strict_physical": {
+      "checks": [
+        {
+          "entity": "toy_vehicle_0",
+          "goal_id": "is_on_top:toy_vehicle_0:table_19",
+          "predicate": "is_on_top",
+          "relation_stable": false,
+          "released_stable": true,
+          "samples": [
+            {
+              "detail": {
+                "benchmark_predicate_result": {
+                  "failure_explanations": [
+                    "toy_vehicle_0 is not on top of table_19"
+                  ],
+                  "percent_complete": 0.0,
+                  "proposition_status": {
+                    "prop_0": false
+                  },
+                  "success": false
+                }
+              },
+              "held_by": null,
+              "relation_ok": false
+            },
+            {
+              "detail": {
+                "benchmark_predicate_result": {
+                  "failure_explanations": [
+                    "toy_vehicle_0 is not on top of table_19"
+                  ],
+                  "percent_complete": 0.0,
+                  "proposition_status": {
+                    "prop_0": false
+                  },
+                  "success": false
+                }
+              },
+              "held_by": null,
+              "relation_ok": false
+            },
+            {
+              "detail": {
+                "benchmark_predicate_result": {
+                  "failure_explanations": [
+                    "toy_vehicle_0 is not on top of table_19"
+                  ],
+                  "percent_complete": 0.0,
+                  "proposition_status": {
+                    "prop_0": false
+                  },
+                  "success": false
+                }
+              },
+              "held_by": null,
+              "relation_ok": false
+            }
+          ],
+          "samples_observed": 3,
+          "samples_required": 3,
+          "satisfied": false,
+          "stable_window_measured": true,
+          "target": "table_19"
+        },
+        {
+          "entity": "hand_towel_6",
+          "goal_id": "is_on_top:hand_towel_6:shelves_20",
+          "predicate": "is_on_top",
+          "relation_stable": true,
+          "released_stable": true,
+          "samples": [
+            {
+              "detail": {
+                "benchmark_predicate_result": {
+                  "failure_explanations": [],
+                  "percent_complete": 1.0,
+                  "proposition_status": {
+                    "prop_0": true
+                  },
+                  "success": true
+                }
+              },
+              "held_by": null,
+              "relation_ok": true
+            },
+            {
+              "detail": {
+                "benchmark_predicate_result": {
+                  "failure_explanations": [],
+                  "percent_complete": 1.0,
+                  "proposition_status": {
+                    "prop_0": true
+                  },
+                  "success": true
+                }
+              },
+              "held_by": null,
+              "relation_ok": true
+            },
+            {
+              "detail": {
+                "benchmark_predicate_result": {
+                  "failure_explanations": [],
+                  "percent_complete": 1.0,
+                  "proposition_status": {
+                    "prop_0": true
+                  },
+                  "success": true
+                }
+              },
+              "held_by": null,
+              "relation_ok": true
+            }
+          ],
+          "samples_observed": 3,
+          "samples_required": 3,
+          "satisfied": true,
+          "stable_window_measured": true,
+          "target": "shelves_20"
+        },
+        {
+          "entity": "fridge_31",
+          "goal_id": "is_open:fridge_31",
+          "predicate": "is_open",
+          "relation_stable": true,
+          "released_stable": true,
+          "samples": [
+            {
+              "detail": {
+                "articulated_object_found": true,
+                "default_link_found": true,
+                "joint_positions": [
+                  0.0,
+                  2.356194496154785
+                ],
+                "joint_threshold": 0.1,
+                "resolved_handle": "257b108daedcb3537c6066ed191f8550658a70c2_:0000"
+              },
+              "held_by": null,
+              "relation_ok": true
+            },
+            {
+              "detail": {
+                "articulated_object_found": true,
+                "default_link_found": true,
+                "joint_positions": [
+                  0.0,
+                  2.356194496154785
+                ],
+                "joint_threshold": 0.1,
+                "resolved_handle": "257b108daedcb3537c6066ed191f8550658a70c2_:0000"
+              },
+              "held_by": null,
+              "relation_ok": true
+            },
+            {
+              "detail": {
+                "articulated_object_found": true,
+                "default_link_found": true,
+                "joint_positions": [
+                  0.0,
+                  2.356194496154785
+                ],
+                "joint_threshold": 0.1,
+                "resolved_handle": "257b108daedcb3537c6066ed191f8550658a70c2_:0000"
+              },
+              "held_by": null,
+              "relation_ok": true
+            }
+          ],
+          "samples_observed": 3,
+          "samples_required": 3,
+          "satisfied": true,
+          "stable_window_measured": true,
+          "target": null
+        }
+      ],
+      "completed_goals": 2,
+      "open_threshold": 0.1,
+      "physics_dt": 0.016666666666666666,
+      "physics_steps_per_sample": 10,
+      "scorer_version": "strict_physical_v1",
+      "stability_advance_ok": true,
+      "stable_samples": 3,
+      "strict_percent_complete": 0.6666666666666666,
+      "strict_success": false,
+      "total_goals": 3
+    },
+    "success": false,
+    "total_all_subtasks": 6,
+    "total_subtasks": 3
+  },
+  "task_id": "emtom-104862639_172226823-623-mixed-laundry-to-kitchen-reset-with-relayed-fr-38041058",
+  "turns": 20
+}

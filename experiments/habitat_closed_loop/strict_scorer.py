@@ -7,7 +7,7 @@ from dataclasses import asdict, dataclass
 from typing import Any, Callable, Dict, Iterable, List, Optional
 
 
-SCORER_VERSION = "strict_physical_v1"
+SCORER_VERSION = "strict_physical_v2"
 SUPPORTED = {"is_on_top", "is_inside", "is_open", "is_closed", "is_in_room", "is_on_floor", "is_next_to"}
 ATOM_RE = re.compile(r"\((is_[a-z_]+)\s+([^()]+?)\)")
 
@@ -105,8 +105,17 @@ class StrictPhysicalScorer:
                 samples[goal.goal_id].append(probe(goal))
         result = self.score(goals, samples)
         result["stability_advance_ok"] = all(advance_results) if advance_results else False
+        result["measurement_valid"] = result["stability_advance_ok"]
+        result["measurement_status"] = "measured" if result["measurement_valid"] else "invalid"
         if not result["stability_advance_ok"]:
-            result["strict_success"] = False
+            # Preserve the instantaneous calculation only as diagnostic data.
+            # It must not enter aggregates as a valid strict measurement.
+            result["unvalidated_strict_success"] = result["strict_success"]
+            result["unvalidated_completed_goals"] = result["completed_goals"]
+            result["unvalidated_strict_percent_complete"] = result["strict_percent_complete"]
+            result["strict_success"] = None
+            result["completed_goals"] = None
+            result["strict_percent_complete"] = None
             result["stability_error"] = "fixed physics stability window could not be advanced"
         return result
 

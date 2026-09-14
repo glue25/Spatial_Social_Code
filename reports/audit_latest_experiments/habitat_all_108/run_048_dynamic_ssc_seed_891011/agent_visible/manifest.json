@@ -1,0 +1,27 @@
+{
+  "agent_ids": [
+    "agent_0",
+    "agent_1",
+    "agent_2"
+  ],
+  "budgets": {
+    "aggregate_api_calls": "measured_not_assumed",
+    "communication": "task-defined",
+    "environment_turns": 20,
+    "tokens": "provider_usage_log"
+  },
+  "common_guidance_sha256": "dbfcc2d913b12946f5a1c6fd6e9143db82a099f30209ec990ae4d0aff5339617",
+  "completed_utc": "2026-09-12T20:29:29.922042+00:00",
+  "condition": "dynamic_ssc",
+  "config_sha256": "ad53e72d3c8a57c2ea3d068fb49821f5f1fd49a29dbd6fd9c5e01e74086b4731",
+  "created_utc": "2026-09-12T20:25:05.925617+00:00",
+  "episode_id": "619",
+  "model": "qwen3-vl-8b-instruct",
+  "model_checkpoint": "$MODEL_ROOT/Qwen3-VL-8B-Instruct",
+  "python": "3.9.2",
+  "scene_id": "104862639_172226823",
+  "schema_version": "habitat_closed_loop_v1",
+  "seed": "891011",
+  "status": "completed",
+  "task_id": "emtom-104862639_172226823-619-cooperative-gallery-reset-with-a-relay-only-reveal-d649a9e6"
+}

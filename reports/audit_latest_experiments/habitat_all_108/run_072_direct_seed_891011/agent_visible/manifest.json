@@ -1,0 +1,27 @@
+{
+  "agent_ids": [
+    "agent_0",
+    "agent_1",
+    "agent_2"
+  ],
+  "budgets": {
+    "aggregate_api_calls": "measured_not_assumed",
+    "communication": "task-defined",
+    "environment_turns": 20,
+    "tokens": "provider_usage_log"
+  },
+  "common_guidance_sha256": "dbfcc2d913b12946f5a1c6fd6e9143db82a099f30209ec990ae4d0aff5339617",
+  "completed_utc": "2026-09-12T18:52:27.685539+00:00",
+  "condition": "direct",
+  "config_sha256": "ad53e72d3c8a57c2ea3d068fb49821f5f1fd49a29dbd6fd9c5e01e74086b4731",
+  "created_utc": "2026-09-12T18:48:35.549423+00:00",
+  "episode_id": "744",
+  "model": "qwen3-vl-8b-instruct",
+  "model_checkpoint": "$MODEL_ROOT/Qwen3-VL-8B-Instruct",
+  "python": "3.9.2",
+  "scene_id": "107734479_176000442",
+  "schema_version": "habitat_closed_loop_v1",
+  "seed": "891011",
+  "status": "completed",
+  "task_id": "emtom-107734479_176000442-744-mixed-relay-the-correct-family-room-table-for--d901a915"
+}

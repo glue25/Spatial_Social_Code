@@ -156,8 +156,16 @@ class ClosedLoopRuntime:
         if not self.dynamic:
             return
         before = self.store.snapshot(agent_id)
+        invalidated = self.spatial.invalidated_keys(action, outcome, before["spatial"])
         updates = [
-            self.store.update(agent_id, "spatial", self.spatial.reduce_action(agent_id, turn, action, outcome)),
+            self.store.update(
+                agent_id,
+                "spatial",
+                self.spatial.reduce_action(agent_id, turn, action, outcome),
+                invalidated_keys=invalidated,
+                invalidation_reason="superseded_by_successful_motion",
+                invalidation_turn=turn,
+            ),
             self.store.update(agent_id, "social", self.social.reduce_action(agent_id, turn, action, outcome)),
         ]
         self.trace.append("state_before_after.jsonl", {"turn": turn, "agent_id": agent_id, "before": before, "updates": updates, "after": self.store.snapshot(agent_id), "reason": "action_feedback"})

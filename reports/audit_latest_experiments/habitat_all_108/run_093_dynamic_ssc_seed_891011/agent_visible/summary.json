@@ -1,0 +1,956 @@
+{
+  "condition": "dynamic_ssc",
+  "done": false,
+  "final_states": {
+    "agent_0": {
+      "agent_id": "agent_0",
+      "social": {
+        "access.denied_rooms": {
+          "confidence": 1.0,
+          "evidence": "task mechanic visible to self",
+          "key": "access.denied_rooms",
+          "source_agent": "agent_0",
+          "source_type": "task_private",
+          "status": "task_specified",
+          "supersedes": null,
+          "turn": 0,
+          "value": [
+            "kitchen_1"
+          ]
+        },
+        "action.turn_1.status": {
+          "confidence": 1.0,
+          "evidence": "Successful execution!\n\nagent_0_VisualSummary:\n- Traversed: living_room_1 -> dining_room_1\n- Saw other agents: agent_1 in bedroom_1",
+          "key": "action.turn_1.status",
+          "source_agent": "agent_0",
+          "source_type": "action_feedback",
+          "status": "observed",
+          "supersedes": null,
+          "turn": 1,
+          "value": "succeeded"
+        },
+        "action.turn_10.status": {
+          "confidence": 1.0,
+          "evidence": "Node with name bottle_4 not present in the graph. Use the appropriate tool to get a valid name.\n\nagent_0_VisualSummary:\n- No notable new visual observations",
+          "key": "action.turn_10.status",
+          "source_agent": "agent_0",
+          "source_type": "action_feedback",
+          "status": "observed",
+          "supersedes": null,
+          "turn": 10,
+          "value": "failed"
+        },
+        "action.turn_11.status": {
+          "confidence": 1.0,
+          "evidence": "Node with name bottle_4 not present in the graph. This may not be the correct node name, try using appropriate tool to get the exact name. If that doesnt work, this node may just not exist yet, explore the house to discover.\n\nagent_0_VisualSummary:\n- No notable new visual observations",
+          "key": "action.turn_11.status",
+          "source_agent": "agent_0",
+          "source_type": "action_feedback",
+          "status": "observed",
+          "supersedes": null,
+          "turn": 11,
+          "value": "failed"
+        },
+        "action.turn_12.status": {
+          "confidence": 1.0,
+          "evidence": "Node with name bottle_4 not present in the graph. Use the appropriate tool to get a valid name.\n\nagent_0_VisualSummary:\n- No notable new visual observations",
+          "key": "action.turn_12.status",
+          "source_agent": "agent_0",
+          "source_type": "action_feedback",
+          "status": "observed",
+          "supersedes": null,
+          "turn": 12,
+          "value": "failed"
+        },
+        "action.turn_13.status": {
+          "confidence": 1.0,
+          "evidence": "Node with name bottle_4 not present in the graph. This may not be the correct node name, try using appropriate tool to get the exact name. If that doesnt work, this node may just not exist yet, explore the house to discover.\n\nagent_0_VisualSummary:\n- No notable new visual observations",
+          "key": "action.turn_13.status",
+          "source_agent": "agent_0",
+          "source_type": "action_feedback",
+          "status": "observed",
+          "supersedes": null,
+          "turn": 13,
+          "value": "failed"
+        },
+        "action.turn_14.status": {
+          "confidence": 1.0,
+          "evidence": "Node with name bottle_4 not present in the graph. This may not be the correct node name, try using appropriate tool to get the exact name. If that doesnt work, this node may just not exist yet, explore the house to discover.\n\nagent_0_VisualSummary:\n- No notable new visual observations",
+          "key": "action.turn_14.status",
+          "source_agent": "agent_0",
+          "source_type": "action_feedback",
+          "status": "observed",
+          "supersedes": null,
+          "turn": 14,
+          "value": "failed"
+        },
+        "action.turn_15.status": {
+          "confidence": 1.0,
+          "evidence": "Node with name bottle_4 not present in the graph. This may not be the correct node name, try using appropriate tool to get the exact name. If that doesnt work, this node may just not exist yet, explore the house to discover.\n\nagent_0_VisualSummary:\n- No notable new visual observations",
+          "key": "action.turn_15.status",
+          "source_agent": "agent_0",
+          "source_type": "action_feedback",
+          "status": "observed",
+          "supersedes": null,
+          "turn": 15,
+          "value": "failed"
+        },
+        "action.turn_16.status": {
+          "confidence": 1.0,
+          "evidence": "Node with name bottle_4 not present in the graph. This may not be the correct node name, try using appropriate tool to get the exact name. If that doesnt work, this node may just not exist yet, explore the house to discover.\n\nagent_0_VisualSummary:\n- No notable new visual observations",
+          "key": "action.turn_16.status",
+          "source_agent": "agent_0",
+          "source_type": "action_feedback",
+          "status": "observed",
+          "supersedes": null,
+          "turn": 16,
+          "value": "failed"
+        },
+        "action.turn_17.status": {
+          "confidence": 1.0,
+          "evidence": "Node with name bottle_4 not present in the graph. This may not be the correct node name, try using appropriate tool to get the exact name. If that doesnt work, this node may just not exist yet, explore the house to discover.\n\nagent_0_VisualSummary:\n- No notable new visual observations",
+          "key": "action.turn_17.status",
+          "source_agent": "agent_0",
+          "source_type": "action_feedback",
+          "status": "observed",
+          "supersedes": null,
+          "turn": 17,
+          "value": "failed"
+        },
+        "action.turn_18.status": {
+          "confidence": 1.0,
+          "evidence": "Node with name bottle_4 not present in the graph. This may not be the correct node name, try using appropriate tool to get the exact name. If that doesnt work, this node may just not exist yet, explore the house to discover.\n\nagent_0_VisualSummary:\n- No notable new visual observations",
+          "key": "action.turn_18.status",
+          "source_agent": "agent_0",
+          "source_type": "action_feedback",
+          "status": "observed",
+          "supersedes": null,
+          "turn": 18,
+          "value": "failed"
+        },
+        "action.turn_19.status": {
+          "confidence": 1.0,
+          "evidence": "Node with name bottle_4 not present in the graph. Use the appropriate tool to get a valid name.\n\nagent_0_VisualSummary:\n- No notable new visual observations",
+          "key": "action.turn_19.status",
+          "source_agent": "agent_0",
+          "source_type": "action_feedback",
+          "status": "observed",
+          "supersedes": null,
+          "turn": 19,
+          "value": "failed"
+        },
+        "action.turn_2.status": {
+          "confidence": 1.0,
+          "evidence": "Node with name bottle_4 not present in the graph. Use the appropriate tool to get a valid name.\n\nagent_0_VisualSummary:\n- No notable new visual observations",
+          "key": "action.turn_2.status",
+          "source_agent": "agent_0",
+          "source_type": "action_feedback",
+          "status": "observed",
+          "supersedes": null,
+          "turn": 2,
+          "value": "failed"
+        },
+        "action.turn_20.status": {
+          "confidence": 1.0,
+          "evidence": "Node with name bottle_4 not present in the graph. Use the appropriate tool to get a valid name.\n\nagent_0_VisualSummary:\n- No notable new visual observations",
+          "key": "action.turn_20.status",
+          "source_agent": "agent_0",
+          "source_type": "action_feedback",
+          "status": "observed",
+          "supersedes": null,
+          "turn": 20,
+          "value": "failed"
+        },
+        "action.turn_3.status": {
+          "confidence": 1.0,
+          "evidence": "Successful execution!\n\nagent_0_VisualSummary:\n- Traversed: dining_room_1\n- Saw other agents: agent_1 in bedroom_1",
+          "key": "action.turn_3.status",
+          "source_agent": "agent_0",
+          "source_type": "action_feedback",
+          "status": "observed",
+          "supersedes": null,
+          "turn": 3,
+          "value": "succeeded"
+        },
+        "action.turn_4.status": {
+          "confidence": 1.0,
+          "evidence": "Node with name bottle_4 not present in the graph. This may not be the correct node name, try using appropriate tool to get the exact name. If that doesnt work, this node may just not exist yet, explore the house to discover.\n\nagent_0_VisualSummary:\n- No notable new visual observations",
+          "key": "action.turn_4.status",
+          "source_agent": "agent_0",
+          "source_type": "action_feedback",
+          "status": "observed",
+          "supersedes": null,
+          "turn": 4,
+          "value": "failed"
+        },
+        "action.turn_5.status": {
+          "confidence": 1.0,
+          "evidence": "No objects with name bottle_4 on chair_17 were found.\n\nagent_0_VisualSummary:\n- No notable new visual observations",
+          "key": "action.turn_5.status",
+          "source_agent": "agent_0",
+          "source_type": "action_feedback",
+          "status": "observed",
+          "supersedes": null,
+          "turn": 5,
+          "value": "succeeded"
+        },
+        "action.turn_6.status": {
+          "confidence": 1.0,
+          "evidence": "No objects with name bottle_4 on chair_17 were found.\n\nagent_0_VisualSummary:\n- No notable new visual observations",
+          "key": "action.turn_6.status",
+          "source_agent": "agent_0",
+          "source_type": "action_feedback",
+          "status": "observed",
+          "supersedes": null,
+          "turn": 6,
+          "value": "succeeded"
+        },
+        "action.turn_7.status": {
+          "confidence": 1.0,
+          "evidence": "No objects with name bottle_4 on chair_17 were found.\n\nagent_0_VisualSummary:\n- No notable new visual observations",
+          "key": "action.turn_7.status",
+          "source_agent": "agent_0",
+          "source_type": "action_feedback",
+          "status": "observed",
+          "supersedes": null,
+          "turn": 7,
+          "value": "succeeded"
+        },
+        "action.turn_8.status": {
+          "confidence": 1.0,
+          "evidence": "No objects with name bottle_4 on chair_17 were found.\n\nagent_0_VisualSummary:\n- No notable new visual observations",
+          "key": "action.turn_8.status",
+          "source_agent": "agent_0",
+          "source_type": "action_feedback",
+          "status": "observed",
+          "supersedes": null,
+          "turn": 8,
+          "value": "succeeded"
+        },
+        "action.turn_9.status": {
+          "confidence": 1.0,
+          "evidence": "Node with name bottle_4 not present in the graph. This may not be the correct node name, try using appropriate tool to get the exact name. If that doesnt work, this node may just not exist yet, explore the house to discover.\n\nagent_0_VisualSummary:\n- No notable new visual observations",
+          "key": "action.turn_9.status",
+          "source_agent": "agent_0",
+          "source_type": "action_feedback",
+          "status": "observed",
+          "supersedes": null,
+          "turn": 9,
+          "value": "failed"
+        },
+        "claim.agent_1.couch_13": {
+          "confidence": 1.0,
+          "evidence": "I can't access the living room. Please take the spray bottle from table_12 and place it on couch_13.",
+          "key": "claim.agent_1.couch_13",
+          "source_agent": "agent_1",
+          "source_type": "delivered_message",
+          "status": "reported",
+          "supersedes": null,
+          "turn": 1,
+          "value": "I can't access the living room. Please take the spray bottle from table_12 and place it on couch_13."
+        },
+        "claim.agent_1.table_12": {
+          "confidence": 1.0,
+          "evidence": "I can't access the living room. Please take the spray bottle from table_12 and place it on couch_13.",
+          "key": "claim.agent_1.table_12",
+          "source_agent": "agent_1",
+          "source_type": "delivered_message",
+          "status": "reported",
+          "supersedes": null,
+          "turn": 1,
+          "value": "I can't access the living room. Please take the spray bottle from table_12 and place it on couch_13."
+        },
+        "message.turn_1.from.agent_1": {
+          "confidence": 1.0,
+          "evidence": "I can't access the living room. Please take the spray bottle from table_12 and place it on couch_13.",
+          "key": "message.turn_1.from.agent_1",
+          "source_agent": "agent_1",
+          "source_type": "delivered_message",
+          "status": "observed",
+          "supersedes": null,
+          "turn": 1,
+          "value": "I can't access the living room. Please take the spray bottle from table_12 and place it on couch_13."
+        },
+        "task.private_facts": {
+          "confidence": 1.0,
+          "evidence": "own private task input",
+          "key": "task.private_facts",
+          "source_agent": "agent_0",
+          "source_type": "task_private",
+          "status": "task_specified",
+          "supersedes": null,
+          "turn": 0,
+          "value": [
+            "You are barred from kitchen_1.",
+            "Your personal objective: by the end, ensure bottle_4 is on chair_17 in dining_room_1."
+          ]
+        },
+        "task.self": {
+          "confidence": 1.0,
+          "evidence": "A safety inspector is coming. As a group, complete ALL shared requirements:\n\n1) Put the spray bottle onto the couch in the living room.\n2) Put the box onto the dining-room counter.\n3) Leave the kitchen refrigerator OPEN at the end.",
+          "key": "task.self",
+          "source_agent": "agent_0",
+          "source_type": "task_public",
+          "status": "task_specified",
+          "supersedes": null,
+          "turn": 0,
+          "value": "agent_0"
+        }
+      },
+      "spatial": {
+        "object.bottle_4.on": {
+          "confidence": 1.0,
+          "evidence": "Your personal objective: by the end, ensure bottle_4 is on chair_17 in dining_room_1.",
+          "key": "object.bottle_4.on",
+          "source_agent": "agent_0",
+          "source_type": "task_private",
+          "status": "task_specified",
+          "supersedes": null,
+          "turn": 0,
+          "value": "chair_17"
+        },
+        "observation.latest_private_world": {
+          "confidence": 1.0,
+          "evidence": "Furniture:\nliving_room_1: floor_living_room_1, table_12, couch_13, chair_24\nbedroom_1: floor_bedroom_1, shelves_11, bed_14, chest_of_drawers_29, chest_of_drawers_30, chest_of_drawers_32, table_35\ncloset_1: floor_closet_1\nbathroom_1: floor_bathroom_1, toilet_9, toilet_23\nlaundryroom_1: floor_laundryroom_1, table_22, shelves_31\nbathroom_2: floor_bathroom_2\nbedroom_2: floor_bedroom_2, bed_10, bed_21, cabinet_27, cabinet_28\nkitchen_1: floor_kitchen_1, cabinet_26, dishwasher_33, fridge_34\ndining_room_1: floor_dining_room_1, table_15, chair_16, chair_17, chair_18, chair_19, chair_20, counter_25\n\nObjects:\nbox_5: dishwasher_33\n",
+          "key": "observation.latest_private_world",
+          "source_agent": "agent_0",
+          "source_type": "observation",
+          "status": "observed",
+          "supersedes": "v60:spatial:observation.latest_private_world",
+          "turn": 20,
+          "value": "Furniture:\nliving_room_1: floor_living_room_1, table_12, couch_13, chair_24\nbedroom_1: floor_bedroom_1, shelves_11, bed_14, chest_of_drawers_29, chest_of_drawers_30, chest_of_drawers_32, table_35\ncloset_1: floor_closet_1\nbathroom_1: floor_bathroom_1, toilet_9, toilet_23\nlaundryroom_1: floor_laundryroom_1, table_22, shelves_31\nbathroom_2: floor_bathroom_2\nbedroom_2: floor_bedroom_2, bed_10, bed_21, cabinet_27, cabinet_28\nkitchen_1: floor_kitchen_1, cabinet_26, dishwasher_33, fridge_34\ndining_room_1: floor_dining_room_1, table_15, chair_16, chair_17, chair_18, chair_19, chair_20, counter_25\n\nObjects:\nbox_5: dishwasher_33\n"
+        },
+        "self.near": {
+          "confidence": 1.0,
+          "evidence": "Successful execution!\n\nagent_0_VisualSummary:\n- Traversed: dining_room_1\n- Saw other agents: agent_1 in bedroom_1",
+          "key": "self.near",
+          "source_agent": "agent_0",
+          "source_type": "action_feedback",
+          "status": "observed",
+          "supersedes": "v10:spatial:self.near",
+          "turn": 3,
+          "value": "chair_17"
+        },
+        "task.shared_goal": {
+          "confidence": 1.0,
+          "evidence": "A safety inspector is coming. As a group, complete ALL shared requirements:\n\n1) Put the spray bottle onto the couch in the living room.\n2) Put the box onto the dining-room counter.\n3) Leave the kitchen refrigerator OPEN at the end.",
+          "key": "task.shared_goal",
+          "source_agent": "agent_0",
+          "source_type": "task_public",
+          "status": "task_specified",
+          "supersedes": null,
+          "turn": 0,
+          "value": "A safety inspector is coming. As a group, complete ALL shared requirements:\n\n1) Put the spray bottle onto the couch in the living room.\n2) Put the box onto the dining-room counter.\n3) Leave the kitchen refrigerator OPEN at the end."
+        }
+      },
+      "version": 63
+    },
+    "agent_1": {
+      "agent_id": "agent_1",
+      "social": {
+        "access.denied_rooms": {
+          "confidence": 1.0,
+          "evidence": "task mechanic visible to self",
+          "key": "access.denied_rooms",
+          "source_agent": "agent_1",
+          "source_type": "task_private",
+          "status": "task_specified",
+          "supersedes": null,
+          "turn": 0,
+          "value": [
+            "living_room_1"
+          ]
+        },
+        "action.turn_1.status": {
+          "confidence": 1.0,
+          "evidence": "Message delivered to Agent_0. They will see \"Agent_1 said: I can't access the living room. Please take the spray bottle from table_12 and place it on couch_13.\" in their context automatically.\n\nagent_1_VisualSummary:\n- No notable new visual observations Message sent. You have 0 messages remaining.",
+          "key": "action.turn_1.status",
+          "source_agent": "agent_1",
+          "source_type": "action_feedback",
+          "status": "observed",
+          "supersedes": null,
+          "turn": 1,
+          "value": "failed"
+        },
+        "action.turn_10.status": {
+          "confidence": 1.0,
+          "evidence": "Successful execution!\n\nagent_1_VisualSummary:\n- Traversed: bedroom_1\n- Saw other agents: agent_0 nearby, agent_0 in bedroom_1",
+          "key": "action.turn_10.status",
+          "source_agent": "agent_1",
+          "source_type": "action_feedback",
+          "status": "observed",
+          "supersedes": null,
+          "turn": 10,
+          "value": "succeeded"
+        },
+        "action.turn_11.status": {
+          "confidence": 1.0,
+          "evidence": "Successful execution!\n\nagent_1_VisualSummary:\n- Traversed: bedroom_1\n- Saw other agents: agent_0 nearby, agent_0 in bedroom_1",
+          "key": "action.turn_11.status",
+          "source_agent": "agent_1",
+          "source_type": "action_feedback",
+          "status": "observed",
+          "supersedes": null,
+          "turn": 11,
+          "value": "succeeded"
+        },
+        "action.turn_12.status": {
+          "confidence": 1.0,
+          "evidence": "Successful execution!\n\nagent_1_VisualSummary:\n- Traversed: bedroom_1\n- Saw other agents: agent_0 nearby, agent_0 in bedroom_1",
+          "key": "action.turn_12.status",
+          "source_agent": "agent_1",
+          "source_type": "action_feedback",
+          "status": "observed",
+          "supersedes": null,
+          "turn": 12,
+          "value": "succeeded"
+        },
+        "action.turn_13.status": {
+          "confidence": 1.0,
+          "evidence": "Successful execution!\n\nagent_1_VisualSummary:\n- Traversed: bedroom_1\n- Saw other agents: agent_0 nearby, agent_0 in bedroom_1",
+          "key": "action.turn_13.status",
+          "source_agent": "agent_1",
+          "source_type": "action_feedback",
+          "status": "observed",
+          "supersedes": null,
+          "turn": 13,
+          "value": "succeeded"
+        },
+        "action.turn_14.status": {
+          "confidence": 1.0,
+          "evidence": "Successful execution!\n\nagent_1_VisualSummary:\n- Traversed: bedroom_1\n- Saw other agents: agent_0 nearby, agent_0 in bedroom_1",
+          "key": "action.turn_14.status",
+          "source_agent": "agent_1",
+          "source_type": "action_feedback",
+          "status": "observed",
+          "supersedes": null,
+          "turn": 14,
+          "value": "succeeded"
+        },
+        "action.turn_15.status": {
+          "confidence": 1.0,
+          "evidence": "Successful execution!\n\nagent_1_VisualSummary:\n- Traversed: bedroom_1\n- Saw other agents: agent_0 nearby, agent_0 in bedroom_1",
+          "key": "action.turn_15.status",
+          "source_agent": "agent_1",
+          "source_type": "action_feedback",
+          "status": "observed",
+          "supersedes": null,
+          "turn": 15,
+          "value": "succeeded"
+        },
+        "action.turn_16.status": {
+          "confidence": 1.0,
+          "evidence": "Successful execution!\n\nagent_1_VisualSummary:\n- Traversed: bedroom_1\n- Saw other agents: agent_0 nearby, agent_0 in bedroom_1",
+          "key": "action.turn_16.status",
+          "source_agent": "agent_1",
+          "source_type": "action_feedback",
+          "status": "observed",
+          "supersedes": null,
+          "turn": 16,
+          "value": "succeeded"
+        },
+        "action.turn_17.status": {
+          "confidence": 1.0,
+          "evidence": "Successful execution!\n\nagent_1_VisualSummary:\n- Traversed: bedroom_1\n- Saw other agents: agent_0 nearby, agent_0 in bedroom_1",
+          "key": "action.turn_17.status",
+          "source_agent": "agent_1",
+          "source_type": "action_feedback",
+          "status": "observed",
+          "supersedes": null,
+          "turn": 17,
+          "value": "succeeded"
+        },
+        "action.turn_18.status": {
+          "confidence": 1.0,
+          "evidence": "Successful execution!\n\nagent_1_VisualSummary:\n- Traversed: bedroom_1\n- Saw other agents: agent_0 nearby, agent_0 in bedroom_1",
+          "key": "action.turn_18.status",
+          "source_agent": "agent_1",
+          "source_type": "action_feedback",
+          "status": "observed",
+          "supersedes": null,
+          "turn": 18,
+          "value": "succeeded"
+        },
+        "action.turn_19.status": {
+          "confidence": 1.0,
+          "evidence": "Successful execution!\n\nagent_1_VisualSummary:\n- Traversed: bedroom_1\n- Saw other agents: agent_0 nearby, agent_0 in bedroom_1",
+          "key": "action.turn_19.status",
+          "source_agent": "agent_1",
+          "source_type": "action_feedback",
+          "status": "observed",
+          "supersedes": null,
+          "turn": 19,
+          "value": "succeeded"
+        },
+        "action.turn_2.status": {
+          "confidence": 1.0,
+          "evidence": "You have used all 1 of your allowed messages. You cannot send any more.\n\nagent_1_VisualSummary:\n- No notable new visual observations",
+          "key": "action.turn_2.status",
+          "source_agent": "agent_1",
+          "source_type": "action_feedback",
+          "status": "observed",
+          "supersedes": null,
+          "turn": 2,
+          "value": "failed"
+        },
+        "action.turn_20.status": {
+          "confidence": 1.0,
+          "evidence": "Successful execution!\n\nagent_1_VisualSummary:\n- Traversed: bedroom_1\n- Saw other agents: agent_0 nearby, agent_0 in bedroom_1",
+          "key": "action.turn_20.status",
+          "source_agent": "agent_1",
+          "source_type": "action_feedback",
+          "status": "observed",
+          "supersedes": null,
+          "turn": 20,
+          "value": "succeeded"
+        },
+        "action.turn_3.status": {
+          "confidence": 1.0,
+          "evidence": "Successful execution!\n\nagent_1_VisualSummary:\n- Traversed: bedroom_1\n- Saw other agents: agent_0 nearby, agent_0 in bedroom_1",
+          "key": "action.turn_3.status",
+          "source_agent": "agent_1",
+          "source_type": "action_feedback",
+          "status": "observed",
+          "supersedes": null,
+          "turn": 3,
+          "value": "succeeded"
+        },
+        "action.turn_4.status": {
+          "confidence": 1.0,
+          "evidence": "Successful execution!\n\nagent_1_VisualSummary:\n- Traversed: bedroom_1\n- Saw other agents: agent_0 nearby, agent_0 in bedroom_1",
+          "key": "action.turn_4.status",
+          "source_agent": "agent_1",
+          "source_type": "action_feedback",
+          "status": "observed",
+          "supersedes": null,
+          "turn": 4,
+          "value": "succeeded"
+        },
+        "action.turn_5.status": {
+          "confidence": 1.0,
+          "evidence": "Successful execution!\n\nagent_1_VisualSummary:\n- Traversed: bedroom_1\n- Saw other agents: agent_0 nearby, agent_0 in bedroom_1",
+          "key": "action.turn_5.status",
+          "source_agent": "agent_1",
+          "source_type": "action_feedback",
+          "status": "observed",
+          "supersedes": null,
+          "turn": 5,
+          "value": "succeeded"
+        },
+        "action.turn_6.status": {
+          "confidence": 1.0,
+          "evidence": "Successful execution!\n\nagent_1_VisualSummary:\n- Traversed: bedroom_1\n- Saw other agents: agent_0 nearby, agent_0 in bedroom_1",
+          "key": "action.turn_6.status",
+          "source_agent": "agent_1",
+          "source_type": "action_feedback",
+          "status": "observed",
+          "supersedes": null,
+          "turn": 6,
+          "value": "succeeded"
+        },
+        "action.turn_7.status": {
+          "confidence": 1.0,
+          "evidence": "Successful execution!\n\nagent_1_VisualSummary:\n- Traversed: bedroom_1\n- Saw other agents: agent_0 nearby, agent_0 in bedroom_1",
+          "key": "action.turn_7.status",
+          "source_agent": "agent_1",
+          "source_type": "action_feedback",
+          "status": "observed",
+          "supersedes": null,
+          "turn": 7,
+          "value": "succeeded"
+        },
+        "action.turn_8.status": {
+          "confidence": 1.0,
+          "evidence": "Successful execution!\n\nagent_1_VisualSummary:\n- Traversed: bedroom_1\n- Saw other agents: agent_0 nearby, agent_0 in bedroom_1",
+          "key": "action.turn_8.status",
+          "source_agent": "agent_1",
+          "source_type": "action_feedback",
+          "status": "observed",
+          "supersedes": null,
+          "turn": 8,
+          "value": "succeeded"
+        },
+        "action.turn_9.status": {
+          "confidence": 1.0,
+          "evidence": "Successful execution!\n\nagent_1_VisualSummary:\n- Traversed: bedroom_1\n- Saw other agents: agent_0 nearby, agent_0 in bedroom_1",
+          "key": "action.turn_9.status",
+          "source_agent": "agent_1",
+          "source_type": "action_feedback",
+          "status": "observed",
+          "supersedes": null,
+          "turn": 9,
+          "value": "succeeded"
+        },
+        "message.turn_1.attempted": {
+          "confidence": 1.0,
+          "evidence": "Message delivered to Agent_0. They will see \"Agent_1 said: I can't access the living room. Please take the spray bottle from table_12 and place it on couch_13.\" in their context automatically.\n\nagent_1_VisualSummary:\n- No notable new visual observations Message sent. You have 0 messages remaining.",
+          "key": "message.turn_1.attempted",
+          "source_agent": "agent_1",
+          "source_type": "action_feedback",
+          "status": "observed",
+          "supersedes": null,
+          "turn": 1,
+          "value": true
+        },
+        "message.turn_1.delivered": {
+          "confidence": 1.0,
+          "evidence": "Message delivered to Agent_0. They will see \"Agent_1 said: I can't access the living room. Please take the spray bottle from table_12 and place it on couch_13.\" in their context automatically.\n\nagent_1_VisualSummary:\n- No notable new visual observations Message sent. You have 0 messages remaining.",
+          "key": "message.turn_1.delivered",
+          "source_agent": "agent_1",
+          "source_type": "action_feedback",
+          "status": "observed",
+          "supersedes": "v5:social:message.turn_1.delivered",
+          "turn": 1,
+          "value": false
+        },
+        "message.turn_1.sent": {
+          "confidence": 1.0,
+          "evidence": "environment delivered message to agent_0",
+          "key": "message.turn_1.sent",
+          "source_agent": "agent_1",
+          "source_type": "action_feedback",
+          "status": "observed",
+          "supersedes": null,
+          "turn": 1,
+          "value": true
+        },
+        "message.turn_2.attempted": {
+          "confidence": 1.0,
+          "evidence": "You have used all 1 of your allowed messages. You cannot send any more.\n\nagent_1_VisualSummary:\n- No notable new visual observations",
+          "key": "message.turn_2.attempted",
+          "source_agent": "agent_1",
+          "source_type": "action_feedback",
+          "status": "observed",
+          "supersedes": null,
+          "turn": 2,
+          "value": true
+        },
+        "message.turn_2.delivered": {
+          "confidence": 1.0,
+          "evidence": "You have used all 1 of your allowed messages. You cannot send any more.\n\nagent_1_VisualSummary:\n- No notable new visual observations",
+          "key": "message.turn_2.delivered",
+          "source_agent": "agent_1",
+          "source_type": "action_feedback",
+          "status": "observed",
+          "supersedes": null,
+          "turn": 2,
+          "value": false
+        },
+        "task.private_facts": {
+          "confidence": 1.0,
+          "evidence": "own private task input",
+          "key": "task.private_facts",
+          "source_agent": "agent_1",
+          "source_type": "task_private",
+          "status": "task_specified",
+          "supersedes": null,
+          "turn": 0,
+          "value": [
+            "You are barred from living_room_1.",
+            "spray_bottle_3 starts on table_12 in living_room_1.",
+            "Your personal objective: by the end, ensure the kitchen refrigerator is closed."
+          ]
+        },
+        "task.self": {
+          "confidence": 1.0,
+          "evidence": "A safety inspector is coming. As a group, complete ALL shared requirements:\n\n1) Put the spray bottle onto the couch in the living room.\n2) Put the box onto the dining-room counter.\n3) Leave the kitchen refrigerator OPEN at the end.",
+          "key": "task.self",
+          "source_agent": "agent_1",
+          "source_type": "task_public",
+          "status": "task_specified",
+          "supersedes": null,
+          "turn": 0,
+          "value": "agent_1"
+        }
+      },
+      "spatial": {
+        "object.spray_bottle_3.on": {
+          "confidence": 1.0,
+          "evidence": "spray_bottle_3 starts on table_12 in living_room_1.",
+          "key": "object.spray_bottle_3.on",
+          "source_agent": "agent_1",
+          "source_type": "task_private",
+          "status": "task_specified",
+          "supersedes": null,
+          "turn": 0,
+          "value": "table_12"
+        },
+        "observation.latest_private_world": {
+          "confidence": 1.0,
+          "evidence": "Furniture:\nliving_room_1: floor_living_room_1, table_12, couch_13, chair_24\nbedroom_1: floor_bedroom_1, shelves_11, bed_14, chest_of_drawers_29, chest_of_drawers_30, chest_of_drawers_32, table_35\ncloset_1: floor_closet_1\nbathroom_1: floor_bathroom_1, toilet_9, toilet_23\nlaundryroom_1: floor_laundryroom_1, table_22, shelves_31\nbathroom_2: floor_bathroom_2\nbedroom_2: floor_bedroom_2, bed_10, bed_21, cabinet_27, cabinet_28\nkitchen_1: floor_kitchen_1, cabinet_26, dishwasher_33, fridge_34\ndining_room_1: floor_dining_room_1, table_15, chair_16, chair_17, chair_18, chair_19, chair_20, counter_25\n\nObjects:\n",
+          "key": "observation.latest_private_world",
+          "source_agent": "agent_1",
+          "source_type": "observation",
+          "status": "observed",
+          "supersedes": "v60:spatial:observation.latest_private_world",
+          "turn": 20,
+          "value": "Furniture:\nliving_room_1: floor_living_room_1, table_12, couch_13, chair_24\nbedroom_1: floor_bedroom_1, shelves_11, bed_14, chest_of_drawers_29, chest_of_drawers_30, chest_of_drawers_32, table_35\ncloset_1: floor_closet_1\nbathroom_1: floor_bathroom_1, toilet_9, toilet_23\nlaundryroom_1: floor_laundryroom_1, table_22, shelves_31\nbathroom_2: floor_bathroom_2\nbedroom_2: floor_bedroom_2, bed_10, bed_21, cabinet_27, cabinet_28\nkitchen_1: floor_kitchen_1, cabinet_26, dishwasher_33, fridge_34\ndining_room_1: floor_dining_room_1, table_15, chair_16, chair_17, chair_18, chair_19, chair_20, counter_25\n\nObjects:\n"
+        },
+        "task.shared_goal": {
+          "confidence": 1.0,
+          "evidence": "A safety inspector is coming. As a group, complete ALL shared requirements:\n\n1) Put the spray bottle onto the couch in the living room.\n2) Put the box onto the dining-room counter.\n3) Leave the kitchen refrigerator OPEN at the end.",
+          "key": "task.shared_goal",
+          "source_agent": "agent_1",
+          "source_type": "task_public",
+          "status": "task_specified",
+          "supersedes": null,
+          "turn": 0,
+          "value": "A safety inspector is coming. As a group, complete ALL shared requirements:\n\n1) Put the spray bottle onto the couch in the living room.\n2) Put the box onto the dining-room counter.\n3) Leave the kitchen refrigerator OPEN at the end."
+        }
+      },
+      "version": 63
+    }
+  },
+  "historical_benchmark_evaluation": {
+    "agent_subgoal_status": {
+      "agent_0": false,
+      "agent_1": true
+    },
+    "all_goal_percent_complete": 0.2,
+    "completed_all_subtasks": [
+      3
+    ],
+    "completed_subtasks": [],
+    "functional_success": false,
+    "historical_benchmark_percent_complete": 0.0,
+    "historical_benchmark_success": false,
+    "literal_tom_probe_results": [
+      {
+        "agent_id": "agent_0",
+        "counted_in_score": true,
+        "details": {
+          "expected_negated": false,
+          "expected_response": {
+            "args": [
+              "fridge_34"
+            ],
+            "holds": true,
+            "predicate": "is_open"
+          },
+          "fact_true": false,
+          "parsed_response": {
+            "args": [
+              "fridge_34"
+            ],
+            "holds": null,
+            "predicate": "is_open"
+          }
+        },
+        "probe_id": "k_probe_0",
+        "question": "Probe 0: agent_0 knows a fact about ordered entities [fridge_34]. Report which benchmark predicate applies to those entities and whether it holds. The expected argument order is fixed as listed. If unknown, return predicate \"unknown\" and holds null. JSON shape: {\"probe_id\":\"k_probe_X\",\"predicate\":\"<predicate_name>|unknown\",\"holds\":true|false|null,\"args\":[\"entity_or_target\", ...]}",
+        "raw_response": "{\"answers\":[{\"probe_id\":\"k_probe_0\",\"predicate\":\"is_open\",\"holds\":null,\"args\":[\"fridge_34\"]}]}\n\nThought: I cannot confirm the state of the refrigerator (fridge_34) because I am barred from the kitchen_1 and have no observation or tool feedback indicating its open/closed state. The task requires leaving it open, but without direct access or observation, I cannot verify or enforce this condition. Therefore, the predicate \"is_open\" for fridge_34 holds as unknown.",
+        "source_pddl": "(K agent_0 (is_open fridge_34))",
+        "status": "failed",
+        "supported": true
+      }
+    ],
+    "literal_tom_probe_score": 0.0,
+    "literal_tom_probe_summary": {
+      "intermediate_probe_count": 0,
+      "passed_count": 0,
+      "probe_count": 1,
+      "supported_probe_count": 1
+    },
+    "main_goal_success": false,
+    "percent_complete": 0.0,
+    "strict_physical": {
+      "checks": [
+        {
+          "entity": "spray_bottle_3",
+          "goal_id": "is_on_top:spray_bottle_3:couch_13",
+          "predicate": "is_on_top",
+          "relation_stable": false,
+          "released_stable": true,
+          "samples": [
+            {
+              "detail": {
+                "benchmark_predicate_result": {
+                  "failure_explanations": [
+                    "spray_bottle_3 is not on top of couch_13"
+                  ],
+                  "percent_complete": 0.0,
+                  "proposition_status": {
+                    "prop_0": false
+                  },
+                  "success": false
+                }
+              },
+              "held_by": null,
+              "relation_ok": false
+            },
+            {
+              "detail": {
+                "benchmark_predicate_result": {
+                  "failure_explanations": [
+                    "spray_bottle_3 is not on top of couch_13"
+                  ],
+                  "percent_complete": 0.0,
+                  "proposition_status": {
+                    "prop_0": false
+                  },
+                  "success": false
+                }
+              },
+              "held_by": null,
+              "relation_ok": false
+            },
+            {
+              "detail": {
+                "benchmark_predicate_result": {
+                  "failure_explanations": [
+                    "spray_bottle_3 is not on top of couch_13"
+                  ],
+                  "percent_complete": 0.0,
+                  "proposition_status": {
+                    "prop_0": false
+                  },
+                  "success": false
+                }
+              },
+              "held_by": null,
+              "relation_ok": false
+            }
+          ],
+          "samples_observed": 3,
+          "samples_required": 3,
+          "satisfied": false,
+          "stable_window_measured": true,
+          "target": "couch_13"
+        },
+        {
+          "entity": "box_5",
+          "goal_id": "is_on_top:box_5:counter_25",
+          "predicate": "is_on_top",
+          "relation_stable": false,
+          "released_stable": true,
+          "samples": [
+            {
+              "detail": {
+                "benchmark_predicate_result": {
+                  "failure_explanations": [
+                    "box_5 is not on top of counter_25"
+                  ],
+                  "percent_complete": 0.0,
+                  "proposition_status": {
+                    "prop_0": false
+                  },
+                  "success": false
+                }
+              },
+              "held_by": null,
+              "relation_ok": false
+            },
+            {
+              "detail": {
+                "benchmark_predicate_result": {
+                  "failure_explanations": [
+                    "box_5 is not on top of counter_25"
+                  ],
+                  "percent_complete": 0.0,
+                  "proposition_status": {
+                    "prop_0": false
+                  },
+                  "success": false
+                }
+              },
+              "held_by": null,
+              "relation_ok": false
+            },
+            {
+              "detail": {
+                "benchmark_predicate_result": {
+                  "failure_explanations": [
+                    "box_5 is not on top of counter_25"
+                  ],
+                  "percent_complete": 0.0,
+                  "proposition_status": {
+                    "prop_0": false
+                  },
+                  "success": false
+                }
+              },
+              "held_by": null,
+              "relation_ok": false
+            }
+          ],
+          "samples_observed": 3,
+          "samples_required": 3,
+          "satisfied": false,
+          "stable_window_measured": true,
+          "target": "counter_25"
+        },
+        {
+          "entity": "fridge_34",
+          "goal_id": "is_open:fridge_34",
+          "predicate": "is_open",
+          "relation_stable": false,
+          "released_stable": true,
+          "samples": [
+            {
+              "detail": {
+                "articulated_object_found": true,
+                "default_link_found": true,
+                "joint_positions": [
+                  0.0,
+                  0.0
+                ],
+                "joint_threshold": 0.1,
+                "resolved_handle": "f5a154e8d963064a8e43960374e4b5be523d68b0_:0000"
+              },
+              "held_by": null,
+              "relation_ok": false
+            },
+            {
+              "detail": {
+                "articulated_object_found": true,
+                "default_link_found": true,
+                "joint_positions": [
+                  0.0,
+                  0.0
+                ],
+                "joint_threshold": 0.1,
+                "resolved_handle": "f5a154e8d963064a8e43960374e4b5be523d68b0_:0000"
+              },
+              "held_by": null,
+              "relation_ok": false
+            },
+            {
+              "detail": {
+                "articulated_object_found": true,
+                "default_link_found": true,
+                "joint_positions": [
+                  0.0,
+                  0.0
+                ],
+                "joint_threshold": 0.1,
+                "resolved_handle": "f5a154e8d963064a8e43960374e4b5be523d68b0_:0000"
+              },
+              "held_by": null,
+              "relation_ok": false
+            }
+          ],
+          "samples_observed": 3,
+          "samples_required": 3,
+          "satisfied": false,
+          "stable_window_measured": true,
+          "target": null
+        }
+      ],
+      "completed_goals": 0,
+      "open_threshold": 0.1,
+      "physics_dt": 0.016666666666666666,
+      "physics_steps_per_sample": 10,
+      "scorer_version": "strict_physical_v1",
+      "stability_advance_ok": true,
+      "stable_samples": 3,
+      "strict_percent_complete": 0.0,
+      "strict_success": false,
+      "total_goals": 3
+    },
+    "success": false,
+    "total_all_subtasks": 5,
+    "total_subtasks": 3
+  },
+  "task_id": "emtom-108294897_176710602-1566-mixed-safety-prep-with-a-private-checklist-ite-2016757d",
+  "turns": 20
+}

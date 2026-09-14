@@ -1,22 +1,21 @@
 # Spatial-Social Code：投稿结果与 baseline 口径
 
-> **2026-09-07 方法审计更正：** 本文中的 MMToM 470/600（78.33%）使用了答案定向 `query_evidence` 启发式，只能作为已撤回的 legacy 结果。随后得到的 508/600 与 525/600 又使用了看过测试错误/标签后设计的规则和权重，同样全部作废。正式替代数字须在冻结、选项盲的 Physical/Social 编译协议下重新评测。
+> **2026-09-14 证据同步：** 已导出并独立复算 MMToM 选项盲运行的 205 行记录（204 个有效配对），并导出 Habitat 1166/1566 的 18 个原始运行包。旧 MMToM 470/600、508/600、525/600 仍为撤回结果；旧 MA-EgoQA 904/1741 仍只作历史诊断。
 
-更新日期：2026-09-07。
+更新日期：2026-09-14。
 
 ## 结论
 
 当前最稳妥的论文主张是：
 
-> 在同模型、同视觉证据的 paired protocol 下，agent-indexed
-> Spatial-Social Code 在 MA-EgoQA 上提高回答准确率，在 EnactToM/Habitat 的
-> 冻结子集上提高平均目标完成度，并在 CoMind recording-heldout OOF 上改善真实
-> 多视角定位。MMToM 尚无可报告的干净 SSC 数字。
+> Spatial-Social Code 已有可执行 reducer、主体索引状态、局部信息干预和环境实例化接口。
+> MMToM 选项盲部分运行显示积极信号；Habitat 在线闭环已经实现，但 12-task×3-seed
+> 开发套件上 Dynamic SSC 的总体平均完成度低于 Direct，且效果高度依赖任务。
 
-正式协议中，Physical/Social compiler 只能读取任务证据和去除选项后的问题前提，
-不能读取 A/B 选项、gold label、正确性反馈或 baseline answer。只有最终统一答题器
-可以读取选项。视觉主实验匹配模型和视觉输入，但不匹配调用数、token、延迟或
-FLOPs。
+正式协议中，Spatial/Social compiler 只能读取冻结的场景证据，不能读取问题、
+选项、gold label、正确性反馈或 baseline answer。问题只用于从不可变代码构造
+只读 view；只有最终统一答题器可以读取选项。视觉主实验匹配模型和视觉输入，但
+不匹配调用数、token、延迟或 FLOPs。
 
 ## 1. 同协议主结果
 
@@ -24,9 +23,9 @@ FLOPs。
 
 | 环境 | Direct | Spatial-Social | 差值 | 统计与边界 |
 |---|---:|---:|---:|---|
-| MMToM，600 题 | 406/600，67.67% | 无有效干净结果 | — | 470/600、508/600、525/600 均已撤回；待选项盲协议重跑 |
-| MA-EgoQA，1,741 题 | 848/1741，48.71% | **904/1741，51.92%** | **+3.22 pp** | McNemar `p=0.00388`；同模型/同 clips，不同计算量 |
-| Habitat frozen-12，36 run/条件 | success 2.78%，完成度 45.83% | success 11.11%，完成度 **53.47%** | 完成度 **+7.64 pp** | task-cluster bootstrap 95% CI `[+0.69,+15.74]`；仅 12 个任务 |
+| MMToM，选项盲部分运行 | 121/204，59.31% | **142/204，69.61%** | **+10.29 pp** | exact McNemar `p=0.00145049`；205 行中 1 行 HTTP 429；不是完整 600 题 |
+| MA-EgoQA，1,741 题（历史诊断） | 848/1741，48.71% | 904/1741，51.92% | +3.22 pp | compiler 读取完整问题和选项；不作为干净 SSC 主结果 |
+| Habitat，12 task×3 seed 开发套件 | success 3/36，完成度 **53.01%** | Dynamic success 4/36，完成度 41.67% | 完成度 **−11.34 pp** | McNemar `p=1`；Dynamic token 约多 50.5%；不是冻结确认集 |
 
 CoMind 没有可合并成单一准确率的官方总指标，因此作为同一主表的独立 grounding
 面板报告。协议是 55 个 labeled train recording 上的五折 recording-heldout
@@ -51,9 +50,9 @@ MMToM 的 equal-call direct diagnostic 使用约 1,550 个逻辑调用，得到
 
 | 环境 | 当前能支持的组件结论 | 当前不能支持的结论 |
 |---|---|---|
-| MMToM | 暂无可报告的干净组件结论，须按选项盲协议重跑 | 旧 rules、Bayesian、dense/refined 数字均不能作为正式归因 |
+| MMToM | 204 个有效配对的选项盲部分运行可作积极信号；43题 compile-once pilot 为 74.4% vs 67.4%，不显著 | 不能把部分运行写成完整 benchmark；旧 rules、Bayesian、dense/refined 数字不能作为正式归因 |
 | MA-EgoQA | 冻结100题诊断中 Raw 44.44%、Spatial-only **51.00%**、Social-only 48.00%、P+S 50.00%；Spatial 有独立信号 | P+S 没超过 Spatial-only；自然语言 scratchpad 也是 51.00%，不能把完整增益只归因于代码格式 |
-| Habitat | P+S 完成度比 Direct 高 7.64 pp；Social-only 达到最高的 59.95% | P+S 低于 Social-only 6.48 pp，不能声称 Habitat 上 P/S 互补或 Spatial 独立有效 |
+| Habitat | 1166 上 Dynamic 三个 seed 均成功而 Direct/Static 均失败，适合作机制案例 | 1566 出现相反方向；总体完成度下降，不能声称 Dynamic SSC 总体胜出 |
 | CoMind | recording-heldout OOF grounding 在三项 bbox IoU@0.5 上由近零提高到 6.47%--23.15%，handover category 达 31.88% | 这是 labeled train OOF，不是 hidden test；原始300题 paired SSC 也没有整体领先 |
 
 另外两项已完成的 Spatial 诊断为：MMToM 冻结70题上 VLM-only 74.29%，
@@ -144,15 +143,16 @@ StoryVideoQA 与 SocialNav-SUB pilot 当前没有增益，不建议为首篇论�
 
 可以写：
 
-- “same-model, same-evidence paired improvement”；
-- MMToM 的 Spatial bridge 有显著独立贡献；
-- Habitat P+S 提高平均完成度，Social-only 是该环境最强组件；
+- “MMToM 204 个有效配对上的 same-model, same-evidence 积极信号”；
+- Habitat 闭环状态可执行、可审计，并呈现明确的任务异质性；
 - runtime、unknown semantics、provenance 和 agent-indexed state 是可审计设计。
 
 暂时不要写：
 
 - query-independent visual world representation；
+- 把 MMToM 204 个有效配对写成完整 600 题主结果；
 - compute-matched，除非补齐 token/延迟/FLOP 对照；
 - Spatial 与 Social 在所有环境都互补；
+- Dynamic SSC 在 Habitat 总体优于 Direct；
 - CoMind hidden-test/SOTA（当前是 train recording-heldout OOF）；
 - Habitat 超过官方 EnactToM SOTA，因为指标和任务协议不同。

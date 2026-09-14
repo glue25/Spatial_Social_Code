@@ -1,0 +1,503 @@
+{
+  "condition": "direct",
+  "done": false,
+  "final_states": {
+    "agent_0": {
+      "agent_id": "agent_0",
+      "social": {
+        "access.denied_rooms": {
+          "confidence": 1.0,
+          "evidence": "task mechanic visible to self",
+          "key": "access.denied_rooms",
+          "source_agent": "agent_0",
+          "source_type": "task_private",
+          "status": "task_specified",
+          "supersedes": null,
+          "turn": 0,
+          "value": [
+            "kitchen_1"
+          ]
+        },
+        "task.private_facts": {
+          "confidence": 1.0,
+          "evidence": "own private task input",
+          "key": "task.private_facts",
+          "source_agent": "agent_0",
+          "source_type": "task_private",
+          "status": "task_specified",
+          "supersedes": null,
+          "turn": 0,
+          "value": [
+            "You are barred from kitchen_1.",
+            "agent_1 is barred from living_room_1.",
+            "Personal objective: the stuffed_toy_4 should remain on top of bed_24 in bedroom_2.",
+            "The designated pickup cabinet is cabinet_39 in kitchen_1."
+          ]
+        },
+        "task.self": {
+          "confidence": 1.0,
+          "evidence": "Prepare the apartment for a courier pickup. As a team, do ALL of the following: (1) put the plate onto the kitchen table, (2) put the stuffed toy onto the living-room couch, and (3) open the kitchen cabinet that was designated for pickup.",
+          "key": "task.self",
+          "source_agent": "agent_0",
+          "source_type": "task_public",
+          "status": "task_specified",
+          "supersedes": null,
+          "turn": 0,
+          "value": "agent_0"
+        }
+      },
+      "spatial": {
+        "object.bed_24.in": {
+          "confidence": 1.0,
+          "evidence": "Personal objective: the stuffed_toy_4 should remain on top of bed_24 in bedroom_2.",
+          "key": "object.bed_24.in",
+          "source_agent": "agent_0",
+          "source_type": "task_private",
+          "status": "task_specified",
+          "supersedes": null,
+          "turn": 0,
+          "value": "bedroom_2"
+        },
+        "object.cabinet_39.in": {
+          "confidence": 1.0,
+          "evidence": "The designated pickup cabinet is cabinet_39 in kitchen_1.",
+          "key": "object.cabinet_39.in",
+          "source_agent": "agent_0",
+          "source_type": "task_private",
+          "status": "task_specified",
+          "supersedes": null,
+          "turn": 0,
+          "value": "kitchen_1"
+        },
+        "task.shared_goal": {
+          "confidence": 1.0,
+          "evidence": "Prepare the apartment for a courier pickup. As a team, do ALL of the following: (1) put the plate onto the kitchen table, (2) put the stuffed toy onto the living-room couch, and (3) open the kitchen cabinet that was designated for pickup.",
+          "key": "task.shared_goal",
+          "source_agent": "agent_0",
+          "source_type": "task_public",
+          "status": "task_specified",
+          "supersedes": null,
+          "turn": 0,
+          "value": "Prepare the apartment for a courier pickup. As a team, do ALL of the following: (1) put the plate onto the kitchen table, (2) put the stuffed toy onto the living-room couch, and (3) open the kitchen cabinet that was designated for pickup."
+        }
+      },
+      "version": 2
+    },
+    "agent_1": {
+      "agent_id": "agent_1",
+      "social": {
+        "access.denied_rooms": {
+          "confidence": 1.0,
+          "evidence": "task mechanic visible to self",
+          "key": "access.denied_rooms",
+          "source_agent": "agent_1",
+          "source_type": "task_private",
+          "status": "task_specified",
+          "supersedes": null,
+          "turn": 0,
+          "value": [
+            "living_room_1"
+          ]
+        },
+        "task.private_facts": {
+          "confidence": 1.0,
+          "evidence": "own private task input",
+          "key": "task.private_facts",
+          "source_agent": "agent_1",
+          "source_type": "task_private",
+          "status": "task_specified",
+          "supersedes": null,
+          "turn": 0,
+          "value": [
+            "You are barred from living_room_1.",
+            "agent_0 is barred from kitchen_1.",
+            "Personal objective: plate_1 should remain on top of table_10 in familyroom_1."
+          ]
+        },
+        "task.self": {
+          "confidence": 1.0,
+          "evidence": "Prepare the apartment for a courier pickup. As a team, do ALL of the following: (1) put the plate onto the kitchen table, (2) put the stuffed toy onto the living-room couch, and (3) open the kitchen cabinet that was designated for pickup.",
+          "key": "task.self",
+          "source_agent": "agent_1",
+          "source_type": "task_public",
+          "status": "task_specified",
+          "supersedes": null,
+          "turn": 0,
+          "value": "agent_1"
+        }
+      },
+      "spatial": {
+        "object.table_10.in": {
+          "confidence": 1.0,
+          "evidence": "Personal objective: plate_1 should remain on top of table_10 in familyroom_1.",
+          "key": "object.table_10.in",
+          "source_agent": "agent_1",
+          "source_type": "task_private",
+          "status": "task_specified",
+          "supersedes": null,
+          "turn": 0,
+          "value": "familyroom_1"
+        },
+        "task.shared_goal": {
+          "confidence": 1.0,
+          "evidence": "Prepare the apartment for a courier pickup. As a team, do ALL of the following: (1) put the plate onto the kitchen table, (2) put the stuffed toy onto the living-room couch, and (3) open the kitchen cabinet that was designated for pickup.",
+          "key": "task.shared_goal",
+          "source_agent": "agent_1",
+          "source_type": "task_public",
+          "status": "task_specified",
+          "supersedes": null,
+          "turn": 0,
+          "value": "Prepare the apartment for a courier pickup. As a team, do ALL of the following: (1) put the plate onto the kitchen table, (2) put the stuffed toy onto the living-room couch, and (3) open the kitchen cabinet that was designated for pickup."
+        }
+      },
+      "version": 2
+    },
+    "agent_2": {
+      "agent_id": "agent_2",
+      "social": {
+        "access.denied_rooms": {
+          "confidence": 1.0,
+          "evidence": "task mechanic visible to self",
+          "key": "access.denied_rooms",
+          "source_agent": "agent_2",
+          "source_type": "task_private",
+          "status": "task_specified",
+          "supersedes": null,
+          "turn": 0,
+          "value": []
+        },
+        "task.private_facts": {
+          "confidence": 1.0,
+          "evidence": "own private task input",
+          "key": "task.private_facts",
+          "source_agent": "agent_2",
+          "source_type": "task_private",
+          "status": "task_specified",
+          "supersedes": null,
+          "turn": 0,
+          "value": [
+            "You can enter all rooms.",
+            "agent_0 is barred from kitchen_1.",
+            "agent_1 is barred from living_room_1.",
+            "Personal objective: cabinet_39 in kitchen_1 should be open."
+          ]
+        },
+        "task.self": {
+          "confidence": 1.0,
+          "evidence": "Prepare the apartment for a courier pickup. As a team, do ALL of the following: (1) put the plate onto the kitchen table, (2) put the stuffed toy onto the living-room couch, and (3) open the kitchen cabinet that was designated for pickup.",
+          "key": "task.self",
+          "source_agent": "agent_2",
+          "source_type": "task_public",
+          "status": "task_specified",
+          "supersedes": null,
+          "turn": 0,
+          "value": "agent_2"
+        }
+      },
+      "spatial": {
+        "object.cabinet_39.in": {
+          "confidence": 1.0,
+          "evidence": "Personal objective: cabinet_39 in kitchen_1 should be open.",
+          "key": "object.cabinet_39.in",
+          "source_agent": "agent_2",
+          "source_type": "task_private",
+          "status": "task_specified",
+          "supersedes": null,
+          "turn": 0,
+          "value": "kitchen_1"
+        },
+        "task.shared_goal": {
+          "confidence": 1.0,
+          "evidence": "Prepare the apartment for a courier pickup. As a team, do ALL of the following: (1) put the plate onto the kitchen table, (2) put the stuffed toy onto the living-room couch, and (3) open the kitchen cabinet that was designated for pickup.",
+          "key": "task.shared_goal",
+          "source_agent": "agent_2",
+          "source_type": "task_public",
+          "status": "task_specified",
+          "supersedes": null,
+          "turn": 0,
+          "value": "Prepare the apartment for a courier pickup. As a team, do ALL of the following: (1) put the plate onto the kitchen table, (2) put the stuffed toy onto the living-room couch, and (3) open the kitchen cabinet that was designated for pickup."
+        }
+      },
+      "version": 2
+    }
+  },
+  "historical_benchmark_evaluation": {
+    "agent_subgoal_status": {
+      "agent_0": true,
+      "agent_1": true,
+      "agent_2": true
+    },
+    "all_goal_percent_complete": 0.8,
+    "completed_all_subtasks": [
+      0,
+      2,
+      3,
+      4
+    ],
+    "completed_subtasks": [
+      0
+    ],
+    "functional_success": false,
+    "historical_benchmark_percent_complete": 0.5,
+    "historical_benchmark_success": false,
+    "literal_tom_probe_results": [
+      {
+        "agent_id": "agent_2",
+        "counted_in_score": false,
+        "details": {
+          "expected_negated": false,
+          "expected_response": {
+            "args": [
+              "cabinet_39"
+            ],
+            "holds": true,
+            "predicate": "is_open"
+          },
+          "fact_true": true,
+          "parsed_response": {
+            "args": [
+              "cabinet_39"
+            ],
+            "holds": true,
+            "predicate": "is_open"
+          }
+        },
+        "probe_id": "k_probe_1",
+        "question": "Probe 1: agent_2 knows a fact about ordered entities [cabinet_39]. Report which benchmark predicate applies to those entities and whether it holds. The expected argument order is fixed as listed. If unknown, return predicate \"unknown\" and holds null. JSON shape: {\"probe_id\":\"k_probe_X\",\"predicate\":\"<predicate_name>|unknown\",\"holds\":true|false|null,\"args\":[\"entity_or_target\", ...]}",
+        "raw_response": "{\"answers\":[{\"probe_id\":\"k_probe_1\",\"predicate\":\"is_open\",\"holds\":true,\"args\":[\"cabinet_39\"]}]",
+        "source_pddl": "(K agent_2 (is_open cabinet_39))",
+        "status": "passed",
+        "supported": true
+      },
+      {
+        "agent_id": "agent_0",
+        "counted_in_score": true,
+        "details": {
+          "behavioral_target_probe_id": "k_probe_1",
+          "behavioral_target_response": {
+            "args": [
+              "cabinet_39"
+            ],
+            "holds": true,
+            "predicate": "is_open"
+          },
+          "parsed_response": {
+            "args": [
+              "cabinet_39"
+            ],
+            "holds": null,
+            "predicate": "is_open"
+          }
+        },
+        "probe_id": "k_probe_0",
+        "question": "Probe 0: agent_0 knows that agent_2 knows a fact about ordered entities [cabinet_39]. Report which benchmark predicate applies to those entities and whether it holds. The expected argument order is fixed as listed. If unknown, return predicate \"unknown\" and holds null. JSON shape: {\"probe_id\":\"k_probe_X\",\"predicate\":\"<predicate_name>|unknown\",\"holds\":true|false|null,\"args\":[\"entity_or_target\", ...]}",
+        "raw_response": "{\"answers\":[{\"probe_id\":\"k_probe_0\",\"predicate\":\"is_open\",\"holds\":null,\"args\":[\"cabinet_39\"]}]",
+        "source_pddl": "(K agent_0 (K agent_2 (is_open cabinet_39)))",
+        "status": "failed",
+        "supported": true
+      }
+    ],
+    "literal_tom_probe_score": 0.0,
+    "literal_tom_probe_summary": {
+      "intermediate_probe_count": 1,
+      "passed_count": 0,
+      "probe_count": 2,
+      "supported_probe_count": 1
+    },
+    "main_goal_success": false,
+    "percent_complete": 0.6666666666666666,
+    "strict_physical": {
+      "checks": [
+        {
+          "entity": "plate_1",
+          "goal_id": "is_on_top:plate_1:table_22",
+          "predicate": "is_on_top",
+          "relation_stable": true,
+          "released_stable": true,
+          "samples": [
+            {
+              "detail": {
+                "benchmark_predicate_result": {
+                  "failure_explanations": [],
+                  "percent_complete": 1.0,
+                  "proposition_status": {
+                    "prop_0": true
+                  },
+                  "success": true
+                }
+              },
+              "held_by": null,
+              "relation_ok": true
+            },
+            {
+              "detail": {
+                "benchmark_predicate_result": {
+                  "failure_explanations": [],
+                  "percent_complete": 1.0,
+                  "proposition_status": {
+                    "prop_0": true
+                  },
+                  "success": true
+                }
+              },
+              "held_by": null,
+              "relation_ok": true
+            },
+            {
+              "detail": {
+                "benchmark_predicate_result": {
+                  "failure_explanations": [],
+                  "percent_complete": 1.0,
+                  "proposition_status": {
+                    "prop_0": true
+                  },
+                  "success": true
+                }
+              },
+              "held_by": null,
+              "relation_ok": true
+            }
+          ],
+          "samples_observed": 3,
+          "samples_required": 3,
+          "satisfied": true,
+          "stable_window_measured": true,
+          "target": "table_22"
+        },
+        {
+          "entity": "stuffed_toy_4",
+          "goal_id": "is_on_top:stuffed_toy_4:couch_25",
+          "predicate": "is_on_top",
+          "relation_stable": false,
+          "released_stable": true,
+          "samples": [
+            {
+              "detail": {
+                "benchmark_predicate_result": {
+                  "failure_explanations": [
+                    "stuffed_toy_4 is not on top of couch_25"
+                  ],
+                  "percent_complete": 0.0,
+                  "proposition_status": {
+                    "prop_0": false
+                  },
+                  "success": false
+                }
+              },
+              "held_by": null,
+              "relation_ok": false
+            },
+            {
+              "detail": {
+                "benchmark_predicate_result": {
+                  "failure_explanations": [
+                    "stuffed_toy_4 is not on top of couch_25"
+                  ],
+                  "percent_complete": 0.0,
+                  "proposition_status": {
+                    "prop_0": false
+                  },
+                  "success": false
+                }
+              },
+              "held_by": null,
+              "relation_ok": false
+            },
+            {
+              "detail": {
+                "benchmark_predicate_result": {
+                  "failure_explanations": [
+                    "stuffed_toy_4 is not on top of couch_25"
+                  ],
+                  "percent_complete": 0.0,
+                  "proposition_status": {
+                    "prop_0": false
+                  },
+                  "success": false
+                }
+              },
+              "held_by": null,
+              "relation_ok": false
+            }
+          ],
+          "samples_observed": 3,
+          "samples_required": 3,
+          "satisfied": false,
+          "stable_window_measured": true,
+          "target": "couch_25"
+        },
+        {
+          "entity": "cabinet_39",
+          "goal_id": "is_open:cabinet_39",
+          "predicate": "is_open",
+          "relation_stable": true,
+          "released_stable": true,
+          "samples": [
+            {
+              "detail": {
+                "articulated_object_found": true,
+                "default_link_found": true,
+                "joint_positions": [
+                  2.6179938316345215,
+                  0.0
+                ],
+                "joint_threshold": 0.1,
+                "resolved_handle": "db74ce14813eb0d5c54c8992806b22fb846ee34c_:0000"
+              },
+              "held_by": null,
+              "relation_ok": true
+            },
+            {
+              "detail": {
+                "articulated_object_found": true,
+                "default_link_found": true,
+                "joint_positions": [
+                  2.6179938316345215,
+                  0.0
+                ],
+                "joint_threshold": 0.1,
+                "resolved_handle": "db74ce14813eb0d5c54c8992806b22fb846ee34c_:0000"
+              },
+              "held_by": null,
+              "relation_ok": true
+            },
+            {
+              "detail": {
+                "articulated_object_found": true,
+                "default_link_found": true,
+                "joint_positions": [
+                  2.6179938316345215,
+                  0.0
+                ],
+                "joint_threshold": 0.1,
+                "resolved_handle": "db74ce14813eb0d5c54c8992806b22fb846ee34c_:0000"
+              },
+              "held_by": null,
+              "relation_ok": true
+            }
+          ],
+          "samples_observed": 3,
+          "samples_required": 3,
+          "satisfied": true,
+          "stable_window_measured": true,
+          "target": null
+        }
+      ],
+      "completed_goals": 2,
+      "open_threshold": 0.1,
+      "physics_dt": 0.016666666666666666,
+      "physics_steps_per_sample": 10,
+      "scorer_version": "strict_physical_v1",
+      "stability_advance_ok": true,
+      "stable_samples": 3,
+      "strict_percent_complete": 0.6666666666666666,
+      "strict_success": false,
+      "total_goals": 3
+    },
+    "success": false,
+    "total_all_subtasks": 5,
+    "total_subtasks": 2
+  },
+  "task_id": "emtom-107734479_176000442-1526-mixed-courier-prep-with-a-hidden-cabinet-choic-74e271e4",
+  "turns": 20
+}

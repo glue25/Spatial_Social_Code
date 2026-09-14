@@ -11,11 +11,12 @@ grounded physical evidence from social and mental-state inference:
 - A restricted AST runtime validates generated programs before executing them
   into canonical JSON traces.
 
-The repository contains two complementary evaluation tracks. In the primary
-visual formulation, Physical and Social compilers may read the task evidence
-and option-free question premise, but never answer choices, gold labels,
-correctness feedback, or a baseline answer. Only the shared final answerer sees
-the answer choices.
+The repository contains two complementary evaluation tracks. In the target
+visual formulation, the Spatial and Social compilers read scene evidence only;
+the question is used later to construct a read-only view over the compiled
+state, and only the shared final answerer sees answer choices. Some historical
+visual runs predate this stricter compile-once protocol and are explicitly
+marked as diagnostics below.
 
 1. task-conditioned agent-indexed state compilation and closed-loop planning
    on EnactToM/Habitat, with deterministic oracle execution retained only as
@@ -32,13 +33,20 @@ They are not call-, token-, latency-, or FLOP-matched unless explicitly noted.
 
 | Benchmark | Spatial-Social Code | Direct baseline | Difference |
 |---|---:|---:|---:|
-| MA-EgoQA (video) | **904/1741 (51.92%)** | 848/1741 (48.71%) | **+3.22 pp** |
-| MMToM (legacy answer-directed heuristic; withdrawn as a clean SSC claim) | 470/600 (78.33%) | 406/600 (67.67%) | +10.67 pp |
-| EnactToM/Habitat frozen-12 (goal completion) | **53.47%** | 45.83% | **+7.64 pp** |
+| MMToM option-blind partial run (204 valid pairs) | **142/204 (69.61%)** | 121/204 (59.31%) | **+10.29 pp** |
+| EnactToM/Habitat dynamic, 12-task × 3-seed development suite (strict completion) | 41.67% | **53.01%** | **−11.34 pp** |
 | CoMind train recording-heldout OOF (bbox IoU@0.5) | **6.47%--23.15%** | 0.11%--0.34% | metric-dependent |
 
-McNemar's exact test gives `p = 0.00388` on MA-EgoQA and `p = 3.17e-05`
-on the legacy MMToM result. Aggregate machine-readable summaries are included with the code.
+The option-blind MMToM partial run has exact McNemar `p = 0.00145049`, but it
+stopped after 205 rows (204 valid pairs) and is not the complete 600-question
+benchmark. On Habitat, strict full-task success is 3/36 for Direct, 3/36 for
+Static SSC, and 4/36 for Dynamic SSC; Dynamic does not improve the aggregate
+mean completion score and uses about 50.5% more tokens. These are development
+results, not a frozen confirmation set.
+
+The former MMToM 470/600 and MA-EgoQA 904/1741 runs are retained only in
+clearly marked historical audit reports because their compiler protocols do
+not satisfy the current question/option-independence requirement.
 See the [submission results and baseline policy](reports/submission_results_and_baselines_zh.md)
 for the component evidence, Habitat results, official published references,
 and the strict comparability boundary.
@@ -76,15 +84,16 @@ The current MMToM, MA-EgoQA, and CoMind ablation matrix and resumable launch
 commands are recorded in the
 [three-environment ablation status](reports/three_environment_ablation_status_zh.md).
 
-## Adopted visual pipeline
+## Target visual pipeline
 
-1. Retrieve or sample visual evidence without consulting a baseline answer.
-2. Compile option-blind grounded Spatial Code with clip/time provenance.
+1. Freeze scene evidence independently of any question or answer choice.
+2. Compile query-independent grounded Spatial Code with clip/time provenance.
 3. Execute the Spatial program in the restricted runtime.
 4. Compile Social Code using only validated Spatial evidence references.
 5. Infer answer-independent beliefs, goals, intents, and roles while
    preserving unknowns and contradictions.
-6. Give the frozen traces and answer choices to one shared final reasoner.
+6. Construct a question-specific read-only view, then give that view and the
+   answer choices to one shared final reasoner.
 7. On uncertain MMToM items, use an independent denser visual pass as the
    authoritative method prediction instead of averaging it with sparse
    evidence.
@@ -98,6 +107,12 @@ Important constraints include:
 - Social records can be required to cite valid Spatial evidence IDs;
 - `query_evidence` is rejected by the normal runtime; historical replay is
   isolated behind explicitly named `legacy_*` entry points.
+
+The controlled mechanism test in
+[`experiments/ssc_mechanism_v1`](experiments/ssc_mechanism_v1/) directly checks
+observation projection, information update, joint action feasibility,
+compile-once multi-query reuse, and local counterfactual replay. It is a
+deterministic conformance test, not a learned-model benchmark.
 
 ## EnactToM track
 
@@ -118,12 +133,16 @@ Social-only, and Spatial+Social use the same tasks and 20-turn budget. See the
 historical runs used text observations and saved no RGB frames, so the case is
 an action-log audit rather than a visual gallery.
 
-For a non-Oracle learned-agent example, the
+For a non-Oracle learned-agent audit example, the
 [episode 772 Physical+Social case](reports/habitat_episode_772_case_zh.md)
-exports the complete repeat-3 action/communication trace and the exact
-per-agent Spatial/Social Code. It records 100% completion versus 75% for Direct
-under seed 891003. Historical RGB frames were not saved; the report identifies
-the replay frames still required for visual verification.
+exports the complete repeat-3 action/communication trace, exact per-agent Code,
+and replay frames. The historical evaluator recorded 100%, but replay shows the
+picture frame was still grasped; this is an evaluator-failure case, not evidence
+that SSC beat Direct.
+
+The current offline-recomputed evidence, including raw records for Habitat
+episodes 1166/1566 and the 204-pair MMToM partial run, is indexed in the
+[latest experiment audit bundle](reports/audit_latest_experiments/README_zh.md).
 
 The lightweight public artifact does not require datasets or API credentials:
 

@@ -1,0 +1,81 @@
+{
+  "comparisons": {
+    "cot_vs_ssc": {
+      "left_only_correct": 1,
+      "mcnemar_exact_p": 1.0,
+      "ssc_only_correct": 1
+    },
+    "natural_language_scratchpad_vs_ssc": {
+      "left_only_correct": 0,
+      "mcnemar_exact_p": 1.0,
+      "ssc_only_correct": 1
+    },
+    "pddl_mind_adapted_vs_ssc": {
+      "left_only_correct": 2,
+      "mcnemar_exact_p": 1.0,
+      "ssc_only_correct": 1
+    },
+    "spatial_only_vs_ssc": {
+      "left_only_correct": 1,
+      "mcnemar_exact_p": 1.0,
+      "ssc_only_correct": 1
+    }
+  },
+  "conditions": {
+    "cot": {
+      "accuracy": 0.5,
+      "calls": 20,
+      "correct": 10,
+      "input_tokens": 178925,
+      "latency_seconds": 331.73918466456234,
+      "output_tokens": 1782,
+      "retries": 0,
+      "total": 20
+    },
+    "natural_language_scratchpad": {
+      "accuracy": 0.45,
+      "calls": 20,
+      "correct": 9,
+      "input_tokens": 179265,
+      "latency_seconds": 366.9306472558528,
+      "output_tokens": 3433,
+      "retries": 0,
+      "total": 20
+    },
+    "pddl_mind_adapted": {
+      "accuracy": 0.55,
+      "calls": 20,
+      "correct": 11,
+      "input_tokens": 179745,
+      "latency_seconds": 397.33552200719714,
+      "output_tokens": 3687,
+      "retries": 1,
+      "total": 20
+    },
+    "spatial_only": {
+      "accuracy": 0.5,
+      "calls": 20,
+      "correct": 10,
+      "input_tokens": 178945,
+      "latency_seconds": 312.73876527510583,
+      "output_tokens": 1412,
+      "retries": 0,
+      "total": 20
+    },
+    "ssc": {
+      "accuracy": 0.5,
+      "calls": 20,
+      "correct": 10,
+      "input_tokens": 182724,
+      "latency_seconds": 341.7953541651368,
+      "output_tokens": 2143,
+      "retries": 0,
+      "total": 20
+    }
+  },
+  "fully_complete": 20,
+  "model": "gpt-5.6-sol",
+  "protocol": "reasoning_only_shared_frozen_perception_one_call_each",
+  "schema_version": 1,
+  "selected": 20
+}

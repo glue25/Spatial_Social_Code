@@ -11,8 +11,13 @@ trap 'code=$?; date -u "+stopped=%Y-%m-%dT%H:%M:%SZ" >> "$STATUS"; echo "exit_co
 date -u '+started=%Y-%m-%dT%H:%M:%SZ' > "$STATUS"
 
 conda install --solver classic -p "$ENV_PREFIX" \
-  pytorch==2.4.1 torchvision==0.19.1 torchaudio==2.4.1 pytorch-cuda=12.4 \
-  'mkl<2025' 'intel-openmp<2025' -c pytorch -c nvidia -y
+  python=3.9 'mkl<2025' 'intel-openmp<2025' -c conda-forge -y
+
+# The current Habitat worker is an sm_120 GPU. PyTorch 2.4.1 only ships
+# kernels through sm_90, so use the CUDA 12.8 wheels that include sm_120.
+"$ENV_PREFIX/bin/python" -m pip install \
+  torch==2.7.1 torchvision==0.22.1 torchaudio==2.7.1 \
+  --index-url https://download.pytorch.org/whl/cu128
 
 conda install --solver classic -p "$ENV_PREFIX" \
   habitat-sim=0.3.3 withbullet headless -c conda-forge -c aihabitat -y

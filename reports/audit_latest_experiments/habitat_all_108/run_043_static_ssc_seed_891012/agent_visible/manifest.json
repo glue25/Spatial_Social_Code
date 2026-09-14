@@ -1,0 +1,27 @@
+{
+  "agent_ids": [
+    "agent_0",
+    "agent_1",
+    "agent_2"
+  ],
+  "budgets": {
+    "aggregate_api_calls": "measured_not_assumed",
+    "communication": "task-defined",
+    "environment_turns": 20,
+    "tokens": "provider_usage_log"
+  },
+  "common_guidance_sha256": "dbfcc2d913b12946f5a1c6fd6e9143db82a099f30209ec990ae4d0aff5339617",
+  "completed_utc": "2026-09-13T12:22:33.586082+00:00",
+  "condition": "static_ssc",
+  "config_sha256": "1935fb5cc1023dfcb42f37958190fca8d487cce5e11a97921156d45726121537",
+  "created_utc": "2026-09-13T12:17:49.653218+00:00",
+  "episode_id": "618",
+  "model": "qwen3-vl-8b-instruct",
+  "model_checkpoint": "$MODEL_ROOT/Qwen3-VL-8B-Instruct",
+  "python": "3.9.2",
+  "scene_id": "104862639_172226823",
+  "schema_version": "habitat_closed_loop_v1",
+  "seed": "891012",
+  "status": "completed",
+  "task_id": "emtom-104862639_172226823-618-cooperative-walkthrough-briefing-under-access-and-co-7854fc84"
+}

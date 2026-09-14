@@ -1,5 +1,11 @@
 # Habitat Spatial-Social Code 实验状态
 
+> **历史四条件报告。** 该批结果已被 2026-09-14 的 Direct / Static SSC /
+> Dynamic SSC 三条件、12 task×3 seed 在线闭环审计取代。最新结果中 Dynamic 的
+> 严格成功为 4/36（Direct 3/36），但平均完成度为 41.67%（Direct 53.01%），
+> 不支持总体提升。见 [三 seed 汇总](habitat_closed_loop_multiseed/habitat_multiseed_results.md)
+> 与 [最新证据包](audit_latest_experiments/README_zh.md)。
+
 更新时间：2026-09-03。
 
 ## 论文主实验

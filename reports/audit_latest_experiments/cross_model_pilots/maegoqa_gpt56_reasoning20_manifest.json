@@ -1,0 +1,40 @@
+{
+  "backend": "codex",
+  "calls_per_condition": 1,
+  "conditions": [
+    "cot",
+    "natural_language_scratchpad",
+    "pddl_mind_adapted",
+    "spatial_only",
+    "ssc"
+  ],
+  "dataset": "maegoqa",
+  "pddl_mind_status": "adapted_baseline_not_official_reproduction",
+  "protocol": "reasoning_only_shared_frozen_perception_one_call_each",
+  "schema_version": 1,
+  "selected_indices": [
+    1581,
+    105,
+    662,
+    1361,
+    922,
+    1579,
+    80,
+    410,
+    1342,
+    1015,
+    1443,
+    204,
+    431,
+    1248,
+    891,
+    1492,
+    290,
+    498,
+    1139,
+    1075
+  ],
+  "source": "$WORKSPACE/MA-EgoQA/data/baselines/video_balanced_role_full.jsonl",
+  "source_sha256": "c6049ac7bee8b811b004b363afc1baa765fd0c4250d526d0adec1e655a13af6b",
+  "target_directed_social_records_removed": true
+}

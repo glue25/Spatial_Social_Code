@@ -1,0 +1,592 @@
+{
+  "condition": "static_ssc",
+  "done": false,
+  "final_states": {
+    "agent_0": {
+      "agent_id": "agent_0",
+      "social": {
+        "access.denied_rooms": {
+          "confidence": 1.0,
+          "evidence": "task mechanic visible to self",
+          "key": "access.denied_rooms",
+          "source_agent": "agent_0",
+          "source_type": "task_private",
+          "status": "task_specified",
+          "supersedes": null,
+          "turn": 0,
+          "value": [
+            "kitchen_1"
+          ]
+        },
+        "task.private_facts": {
+          "confidence": 1.0,
+          "evidence": "own private task input",
+          "key": "task.private_facts",
+          "source_agent": "agent_0",
+          "source_type": "task_private",
+          "status": "task_specified",
+          "supersedes": null,
+          "turn": 0,
+          "value": [
+            "agent_0 is barred from kitchen_1.",
+            "agent_0 can send at most 1 message total.",
+            "agent_0 can only message agent_1.",
+            "The object that must be moved to the family-room table is bottle_4 on cabinet_40 in kitchen_1.",
+            "Private objective: toy_vehicle_0 should be on table_35 in bedroom_1."
+          ]
+        },
+        "task.self": {
+          "confidence": 1.0,
+          "evidence": "Stage the house for a quick check: put the bottle onto the correct family-room table, put the picture frame on the entryway bench, and leave the designated kitchen container open at the end.",
+          "key": "task.self",
+          "source_agent": "agent_0",
+          "source_type": "task_public",
+          "status": "task_specified",
+          "supersedes": null,
+          "turn": 0,
+          "value": "agent_0"
+        }
+      },
+      "spatial": {
+        "object.bottle_4.on": {
+          "confidence": 1.0,
+          "evidence": "The object that must be moved to the family-room table is bottle_4 on cabinet_40 in kitchen_1.",
+          "key": "object.bottle_4.on",
+          "source_agent": "agent_0",
+          "source_type": "task_private",
+          "status": "task_specified",
+          "supersedes": null,
+          "turn": 0,
+          "value": "cabinet_40"
+        },
+        "object.table_35.in": {
+          "confidence": 1.0,
+          "evidence": "Private objective: toy_vehicle_0 should be on table_35 in bedroom_1.",
+          "key": "object.table_35.in",
+          "source_agent": "agent_0",
+          "source_type": "task_private",
+          "status": "task_specified",
+          "supersedes": null,
+          "turn": 0,
+          "value": "bedroom_1"
+        },
+        "task.shared_goal": {
+          "confidence": 1.0,
+          "evidence": "Stage the house for a quick check: put the bottle onto the correct family-room table, put the picture frame on the entryway bench, and leave the designated kitchen container open at the end.",
+          "key": "task.shared_goal",
+          "source_agent": "agent_0",
+          "source_type": "task_public",
+          "status": "task_specified",
+          "supersedes": null,
+          "turn": 0,
+          "value": "Stage the house for a quick check: put the bottle onto the correct family-room table, put the picture frame on the entryway bench, and leave the designated kitchen container open at the end."
+        }
+      },
+      "version": 2
+    },
+    "agent_1": {
+      "agent_id": "agent_1",
+      "social": {
+        "access.denied_rooms": {
+          "confidence": 1.0,
+          "evidence": "task mechanic visible to self",
+          "key": "access.denied_rooms",
+          "source_agent": "agent_1",
+          "source_type": "task_private",
+          "status": "task_specified",
+          "supersedes": null,
+          "turn": 0,
+          "value": [
+            "familyroom_1"
+          ]
+        },
+        "task.private_facts": {
+          "confidence": 1.0,
+          "evidence": "own private task input",
+          "key": "task.private_facts",
+          "source_agent": "agent_1",
+          "source_type": "task_private",
+          "status": "task_specified",
+          "supersedes": null,
+          "turn": 0,
+          "value": [
+            "agent_1 is barred from familyroom_1.",
+            "agent_1 can send at most 1 message total.",
+            "agent_1 can only message agent_2.",
+            "The correct family-room destination surface for the bottle is table_28 in familyroom_1.",
+            "The candidate family-room destination surfaces are table_10 and table_28.",
+            "The designated kitchen container that must be left open is fridge_32 in kitchen_1.",
+            "Private objective: stuffed_toy_1 should be on bed_11 in bedroom_1."
+          ]
+        },
+        "task.self": {
+          "confidence": 1.0,
+          "evidence": "Stage the house for a quick check: put the bottle onto the correct family-room table, put the picture frame on the entryway bench, and leave the designated kitchen container open at the end.",
+          "key": "task.self",
+          "source_agent": "agent_1",
+          "source_type": "task_public",
+          "status": "task_specified",
+          "supersedes": null,
+          "turn": 0,
+          "value": "agent_1"
+        }
+      },
+      "spatial": {
+        "object.bed_11.in": {
+          "confidence": 1.0,
+          "evidence": "Private objective: stuffed_toy_1 should be on bed_11 in bedroom_1.",
+          "key": "object.bed_11.in",
+          "source_agent": "agent_1",
+          "source_type": "task_private",
+          "status": "task_specified",
+          "supersedes": null,
+          "turn": 0,
+          "value": "bedroom_1"
+        },
+        "object.fridge_32.in": {
+          "confidence": 1.0,
+          "evidence": "The designated kitchen container that must be left open is fridge_32 in kitchen_1.",
+          "key": "object.fridge_32.in",
+          "source_agent": "agent_1",
+          "source_type": "task_private",
+          "status": "task_specified",
+          "supersedes": null,
+          "turn": 0,
+          "value": "kitchen_1"
+        },
+        "object.table_28.in": {
+          "confidence": 1.0,
+          "evidence": "The correct family-room destination surface for the bottle is table_28 in familyroom_1.",
+          "key": "object.table_28.in",
+          "source_agent": "agent_1",
+          "source_type": "task_private",
+          "status": "task_specified",
+          "supersedes": null,
+          "turn": 0,
+          "value": "familyroom_1"
+        },
+        "task.shared_goal": {
+          "confidence": 1.0,
+          "evidence": "Stage the house for a quick check: put the bottle onto the correct family-room table, put the picture frame on the entryway bench, and leave the designated kitchen container open at the end.",
+          "key": "task.shared_goal",
+          "source_agent": "agent_1",
+          "source_type": "task_public",
+          "status": "task_specified",
+          "supersedes": null,
+          "turn": 0,
+          "value": "Stage the house for a quick check: put the bottle onto the correct family-room table, put the picture frame on the entryway bench, and leave the designated kitchen container open at the end."
+        }
+      },
+      "version": 2
+    },
+    "agent_2": {
+      "agent_id": "agent_2",
+      "social": {
+        "access.denied_rooms": {
+          "confidence": 1.0,
+          "evidence": "task mechanic visible to self",
+          "key": "access.denied_rooms",
+          "source_agent": "agent_2",
+          "source_type": "task_private",
+          "status": "task_specified",
+          "supersedes": null,
+          "turn": 0,
+          "value": []
+        },
+        "task.private_facts": {
+          "confidence": 1.0,
+          "evidence": "own private task input",
+          "key": "task.private_facts",
+          "source_agent": "agent_2",
+          "source_type": "task_private",
+          "status": "task_specified",
+          "supersedes": null,
+          "turn": 0,
+          "value": [
+            "agent_2 can send at most 1 message total.",
+            "agent_2 can only message agent_0.",
+            "The picture frame that must be moved is picture_frame_5 on couch_26 in living_room_1.",
+            "The destination for the picture frame is bench_18 in entryway_1.",
+            "The candidate family-room destination surfaces are table_10 and table_28.",
+            "Private objective: picture_frame_5 should be on bench_21 in living_room_1."
+          ]
+        },
+        "task.self": {
+          "confidence": 1.0,
+          "evidence": "Stage the house for a quick check: put the bottle onto the correct family-room table, put the picture frame on the entryway bench, and leave the designated kitchen container open at the end.",
+          "key": "task.self",
+          "source_agent": "agent_2",
+          "source_type": "task_public",
+          "status": "task_specified",
+          "supersedes": null,
+          "turn": 0,
+          "value": "agent_2"
+        }
+      },
+      "spatial": {
+        "object.bench_18.in": {
+          "confidence": 1.0,
+          "evidence": "The destination for the picture frame is bench_18 in entryway_1.",
+          "key": "object.bench_18.in",
+          "source_agent": "agent_2",
+          "source_type": "task_private",
+          "status": "task_specified",
+          "supersedes": null,
+          "turn": 0,
+          "value": "entryway_1"
+        },
+        "object.bench_21.in": {
+          "confidence": 1.0,
+          "evidence": "Private objective: picture_frame_5 should be on bench_21 in living_room_1.",
+          "key": "object.bench_21.in",
+          "source_agent": "agent_2",
+          "source_type": "task_private",
+          "status": "task_specified",
+          "supersedes": null,
+          "turn": 0,
+          "value": "living_room_1"
+        },
+        "object.picture_frame_5.on": {
+          "confidence": 1.0,
+          "evidence": "The picture frame that must be moved is picture_frame_5 on couch_26 in living_room_1.",
+          "key": "object.picture_frame_5.on",
+          "source_agent": "agent_2",
+          "source_type": "task_private",
+          "status": "task_specified",
+          "supersedes": null,
+          "turn": 0,
+          "value": "couch_26"
+        },
+        "task.shared_goal": {
+          "confidence": 1.0,
+          "evidence": "Stage the house for a quick check: put the bottle onto the correct family-room table, put the picture frame on the entryway bench, and leave the designated kitchen container open at the end.",
+          "key": "task.shared_goal",
+          "source_agent": "agent_2",
+          "source_type": "task_public",
+          "status": "task_specified",
+          "supersedes": null,
+          "turn": 0,
+          "value": "Stage the house for a quick check: put the bottle onto the correct family-room table, put the picture frame on the entryway bench, and leave the designated kitchen container open at the end."
+        }
+      },
+      "version": 2
+    }
+  },
+  "historical_benchmark_evaluation": {
+    "agent_subgoal_status": {
+      "agent_0": false,
+      "agent_1": true,
+      "agent_2": true
+    },
+    "all_goal_percent_complete": 0.5,
+    "completed_all_subtasks": [
+      2,
+      4,
+      5
+    ],
+    "completed_subtasks": [
+      2
+    ],
+    "functional_success": false,
+    "historical_benchmark_percent_complete": 0.3333333333333333,
+    "historical_benchmark_success": false,
+    "literal_tom_probe_results": [
+      {
+        "agent_id": "agent_2",
+        "counted_in_score": false,
+        "details": {
+          "expected_negated": false,
+          "expected_response": {
+            "args": [
+              "fridge_32"
+            ],
+            "holds": true,
+            "predicate": "is_open"
+          },
+          "fact_true": true,
+          "parsed_response": {
+            "args": [
+              "fridge_32"
+            ],
+            "holds": null,
+            "predicate": "is_open"
+          }
+        },
+        "probe_id": "k_probe_2",
+        "question": "Probe 2: report whether \"fridge 32 is open\" holds for ordered entities [fridge_32]. The expected argument order is fixed as listed. If unknown, return predicate \"unknown\" and holds null. JSON shape: {\"probe_id\":\"k_probe_X\",\"predicate\":\"<predicate_name>|unknown\",\"holds\":true|false|null,\"args\":[\"entity_or_target\", ...]}",
+        "raw_response": "{\"answers\":[{\"probe_id\":\"k_probe_2\",\"predicate\":\"is_open\",\"holds\":null,\"args\":[\"fridge_32\"]}]",
+        "source_pddl": "(K agent_2 (is_open fridge_32))",
+        "status": "failed",
+        "supported": true
+      },
+      {
+        "agent_id": "agent_1",
+        "counted_in_score": false,
+        "details": {
+          "behavioral_target_probe_id": "k_probe_2",
+          "behavioral_target_response": {
+            "args": [
+              "fridge_32"
+            ],
+            "holds": null,
+            "predicate": "is_open"
+          },
+          "parsed_response": {
+            "args": [
+              "fridge_32"
+            ],
+            "holds": true,
+            "predicate": "is_open"
+          }
+        },
+        "probe_id": "k_probe_1",
+        "question": "Probe 1: predict what agent_2 would report about \"fridge 32 is open\" for ordered entities [fridge_32]. The expected argument order is fixed as listed. If unknown, return predicate \"unknown\" and holds null. JSON shape: {\"probe_id\":\"k_probe_X\",\"predicate\":\"<predicate_name>|unknown\",\"holds\":true|false|null,\"args\":[\"entity_or_target\", ...]}",
+        "raw_response": "{\"answers\":[{\"probe_id\":\"k_probe_1\",\"predicate\":\"is_open\",\"holds\":true,\"args\":[\"fridge_32\"]}]",
+        "source_pddl": "(K agent_1 (K agent_2 (is_open fridge_32)))",
+        "status": "failed",
+        "supported": true
+      },
+      {
+        "agent_id": "agent_0",
+        "counted_in_score": true,
+        "details": {
+          "behavioral_target_probe_id": "k_probe_1",
+          "behavioral_target_response": {
+            "args": [
+              "fridge_32"
+            ],
+            "holds": true,
+            "predicate": "is_open"
+          },
+          "parsed_response": {
+            "args": [
+              "fridge_32"
+            ],
+            "holds": null,
+            "predicate": "is_open"
+          }
+        },
+        "probe_id": "k_probe_0",
+        "question": "Probe 0: predict what agent_1 would report about \"fridge 32 is open\" for ordered entities [fridge_32]. The expected argument order is fixed as listed. If unknown, return predicate \"unknown\" and holds null. JSON shape: {\"probe_id\":\"k_probe_X\",\"predicate\":\"<predicate_name>|unknown\",\"holds\":true|false|null,\"args\":[\"entity_or_target\", ...]}",
+        "raw_response": "{\"answers\":[{\"probe_id\":\"k_probe_0\",\"predicate\":\"is_open\",\"holds\":null,\"args\":[\"fridge_32\"]}]}\n\nThought: I cannot determine the state of fridge_32 as it is not in my known world and I have no direct access to kitchen_1. I also cannot confirm its state through agent_1’s report since I have no information about it. Therefore, the state is unknown.\nAgent_0_Action: Wait[]\n",
+        "source_pddl": "(K agent_0 (K agent_1 (K agent_2 (is_open fridge_32))))",
+        "status": "failed",
+        "supported": true
+      }
+    ],
+    "literal_tom_probe_score": 0.0,
+    "literal_tom_probe_summary": {
+      "intermediate_probe_count": 2,
+      "passed_count": 0,
+      "probe_count": 3,
+      "supported_probe_count": 1
+    },
+    "main_goal_success": false,
+    "percent_complete": 0.3333333333333333,
+    "strict_physical": {
+      "checks": [
+        {
+          "entity": "bottle_4",
+          "goal_id": "is_on_top:bottle_4:table_28",
+          "predicate": "is_on_top",
+          "relation_stable": false,
+          "released_stable": true,
+          "samples": [
+            {
+              "detail": {
+                "benchmark_predicate_result": {
+                  "failure_explanations": [
+                    "bottle_4 is not on top of table_28"
+                  ],
+                  "percent_complete": 0.0,
+                  "proposition_status": {
+                    "prop_0": false
+                  },
+                  "success": false
+                }
+              },
+              "held_by": null,
+              "relation_ok": false
+            },
+            {
+              "detail": {
+                "benchmark_predicate_result": {
+                  "failure_explanations": [
+                    "bottle_4 is not on top of table_28"
+                  ],
+                  "percent_complete": 0.0,
+                  "proposition_status": {
+                    "prop_0": false
+                  },
+                  "success": false
+                }
+              },
+              "held_by": null,
+              "relation_ok": false
+            },
+            {
+              "detail": {
+                "benchmark_predicate_result": {
+                  "failure_explanations": [
+                    "bottle_4 is not on top of table_28"
+                  ],
+                  "percent_complete": 0.0,
+                  "proposition_status": {
+                    "prop_0": false
+                  },
+                  "success": false
+                }
+              },
+              "held_by": null,
+              "relation_ok": false
+            }
+          ],
+          "samples_observed": 3,
+          "samples_required": 3,
+          "satisfied": false,
+          "stable_window_measured": true,
+          "target": "table_28"
+        },
+        {
+          "entity": "picture_frame_5",
+          "goal_id": "is_on_top:picture_frame_5:bench_18",
+          "predicate": "is_on_top",
+          "relation_stable": false,
+          "released_stable": true,
+          "samples": [
+            {
+              "detail": {
+                "benchmark_predicate_result": {
+                  "failure_explanations": [
+                    "picture_frame_5 is not on top of bench_18"
+                  ],
+                  "percent_complete": 0.0,
+                  "proposition_status": {
+                    "prop_0": false
+                  },
+                  "success": false
+                }
+              },
+              "held_by": null,
+              "relation_ok": false
+            },
+            {
+              "detail": {
+                "benchmark_predicate_result": {
+                  "failure_explanations": [
+                    "picture_frame_5 is not on top of bench_18"
+                  ],
+                  "percent_complete": 0.0,
+                  "proposition_status": {
+                    "prop_0": false
+                  },
+                  "success": false
+                }
+              },
+              "held_by": null,
+              "relation_ok": false
+            },
+            {
+              "detail": {
+                "benchmark_predicate_result": {
+                  "failure_explanations": [
+                    "picture_frame_5 is not on top of bench_18"
+                  ],
+                  "percent_complete": 0.0,
+                  "proposition_status": {
+                    "prop_0": false
+                  },
+                  "success": false
+                }
+              },
+              "held_by": null,
+              "relation_ok": false
+            }
+          ],
+          "samples_observed": 3,
+          "samples_required": 3,
+          "satisfied": false,
+          "stable_window_measured": true,
+          "target": "bench_18"
+        },
+        {
+          "entity": "fridge_32",
+          "goal_id": "is_open:fridge_32",
+          "predicate": "is_open",
+          "relation_stable": true,
+          "released_stable": true,
+          "samples": [
+            {
+              "detail": {
+                "articulated_object_found": true,
+                "default_link_found": true,
+                "joint_positions": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.3839403986930847
+                ],
+                "joint_threshold": 0.1,
+                "resolved_handle": "35230dedd6b3f035a602f7226fae2dcb61bf1e4a_:0000"
+              },
+              "held_by": null,
+              "relation_ok": true
+            },
+            {
+              "detail": {
+                "articulated_object_found": true,
+                "default_link_found": true,
+                "joint_positions": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.3839403986930847
+                ],
+                "joint_threshold": 0.1,
+                "resolved_handle": "35230dedd6b3f035a602f7226fae2dcb61bf1e4a_:0000"
+              },
+              "held_by": null,
+              "relation_ok": true
+            },
+            {
+              "detail": {
+                "articulated_object_found": true,
+                "default_link_found": true,
+                "joint_positions": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.3839403986930847
+                ],
+                "joint_threshold": 0.1,
+                "resolved_handle": "35230dedd6b3f035a602f7226fae2dcb61bf1e4a_:0000"
+              },
+              "held_by": null,
+              "relation_ok": true
+            }
+          ],
+          "samples_observed": 3,
+          "samples_required": 3,
+          "satisfied": true,
+          "stable_window_measured": true,
+          "target": null
+        }
+      ],
+      "completed_goals": 1,
+      "open_threshold": 0.1,
+      "physics_dt": 0.016666666666666666,
+      "physics_steps_per_sample": 10,
+      "scorer_version": "strict_physical_v1",
+      "stability_advance_ok": true,
+      "stable_samples": 3,
+      "strict_percent_complete": 0.3333333333333333,
+      "strict_success": false,
+      "total_goals": 3
+    },
+    "success": false,
+    "total_all_subtasks": 6,
+    "total_subtasks": 3
+  },
+  "task_id": "emtom-107734479_176000442-744-mixed-relay-the-correct-family-room-table-for--d901a915",
+  "turns": 20
+}

@@ -45,6 +45,8 @@ def main():
         manifest = json.loads((artifact / "manifest.json").read_text())
         evaluation = summary.get("historical_benchmark_evaluation", {})
         strict = evaluation.get("strict_physical", {})
+        if strict.get("measurement_valid") is False:
+            raise SystemExit(f"{path}: invalid strict physical measurement; refusing aggregation")
         usage_files = list(path.parents[1].glob("**/api_usage.jsonl"))
         usage = [row for file in usage_files for row in jsonl(file)]
         rows.append({

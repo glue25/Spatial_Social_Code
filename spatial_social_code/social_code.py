@@ -1029,8 +1029,10 @@ def compile_native_bayesian(
             weights = [math.exp(item["score"] - maximum) for item in group]
             denominator = sum(weights)
             probabilities = [weight / denominator for weight in weights]
+        if len(group) != len(probabilities):
+            raise RuntimeError("candidate/probability length mismatch")
         for candidate, probability in sorted(
-            zip(group, probabilities, strict=True), key=lambda pair: pair[0]["hypothesis"]
+            zip(group, probabilities), key=lambda pair: pair[0]["hypothesis"]
         ):
             evidence = (
                 "native Social Code Bayesian update: compiler prior + "

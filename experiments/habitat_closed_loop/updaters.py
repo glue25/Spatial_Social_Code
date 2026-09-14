@@ -4,7 +4,7 @@ from __future__ import annotations
 
 import re
 from dataclasses import dataclass
-from typing import Any, Dict, List
+from typing import Any, Dict, List, Mapping
 
 from .action_interface import CanonicalAction, ActionOutcome
 from .state_store import Fact
@@ -22,6 +22,26 @@ class RuntimeEvent:
 
 
 class SpatialUpdater:
+    @staticmethod
+    def invalidated_keys(
+        action: CanonicalAction,
+        outcome: ActionOutcome,
+        current: Mapping[str, Any],
+    ) -> List[str]:
+        """Return current spatial relations made stale by a successful move.
+
+        The removed records remain in ``StateStore.history``.  Failed or
+        ambiguous actions invalidate nothing; later observations must resolve
+        those cases.
+        """
+        if not action.valid or not outcome.success or not action.arguments:
+            return []
+        if action.name not in {"Pick", "Place"}:
+            return []
+        obj = re.escape(action.arguments[0])
+        relation = re.compile(rf"^object\.{obj}\.(?:on|inside|in)$")
+        return sorted(key for key in current if relation.match(key))
+
     def reduce_action(self, agent_id: str, turn: int, action: CanonicalAction, outcome: ActionOutcome) -> List[Fact]:
         if not action.valid or not outcome.success:
             return []

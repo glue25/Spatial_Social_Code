@@ -1,14 +1,14 @@
-# Thinking with Spatial Social Code
+# Thinking with Spatial–Social Code
 
 ## 摘要
 
 现有多模态模型可以描述多主体视频中“发生了什么”，却常常不能稳定回答“谁获得了哪条信息”“谁应当执行下一步”“如果某条消息未被接收，后续会如何改变”。我们认为，这类失败不应被笼统归因于模型缺少社会常识，而应被表述为一个更基础的表示问题：**多主体物理世界中的推理是否缺少一种显式、主体索引的中间状态？**
 
-受到 Thinking with Spatial Code [1] 的启发，本文提出 Spatial Social Code。Spatial Code 将视频编译为显式三维变量，使语言模型能够在结构化空间上推理；Spatial Social Code 将同一思想扩展到多主体场景，把中间表示定义为共享 Physical Code 与 agent-indexed Interaction Code 的组合：
+受到 Thinking with Spatial Code [1] 的启发，本文提出 Spatial–Social Code。Spatial Code 将视频编译为显式空间变量，使语言模型能够在结构化空间上推理；Spatial–Social Code 将同一思想扩展到多主体场景，把中间表示定义为共享 Spatial Code 与 agent-indexed Social Code 的组合：
 
-> Cₜ = (Pₜ, Iₜ).
+> Cₜ = (Cₜsp, Cₜsoc).
 
-其中，Pₜ 描述实体、物理属性、空间关系与信息接入条件；Iₜ 描述目标、角色、主体特定的任务相关信息、承诺与近期交互。论文不试图建立完整 Social World Model，也不声称读取人的真实心理，而是检验一个可证伪的 intermediate representation hypothesis：在相同信息源、相同推理器和近似 token budget 下，Pₜ 与 Iₜ 的显式组合能否优于视频、caption、自由文本 memory、Physical-only 和 Interaction-only 表示。
+其中，Cₜsp 描述实体、物理属性、空间关系与信息接入条件；Cₜsoc 描述主体获得的证据、操作性信息状态、目标、角色、承诺与近期交互。核心不是在 Spatial 后附加心理描述，而是执行 `空间事件 → 主体证据 → 主体状态 → 可行动作`。论文不试图建立完整 Social World Model，也不声称读取人的真实心理，而是检验一个可证伪的 intermediate representation hypothesis：在相同信息源、相同推理器和近似 token budget 下，两类代码的显式组合能否优于视频、caption、自由文本 memory、Spatial-only 和 Social-only 表示。
 
 我们进一步提出三类互补实验：在 MA-EgoQA 上检验主体索引是否减少 perspective leakage；在 HoloAssist 上检验代码是否改善真实协作中的 instruction、intervention 与 next-action reasoning；在 EnactToM 上检验局部信息、角色或承诺干预能否产生正确且局部的行为变化。Oracle、semi-oracle 与 predicted code 分开报告，从而区分表示上限、compiler 误差与 reasoner 误差。
 
@@ -73,7 +73,7 @@ Spatial Code 引入中间变量 c，将问题重写为：
 
 如果输入表示只保留 Pₜ，那么任何只依赖该表示的策略在这种 minimal pair 上都无法同时正确。由此得到本文的核心科学问题：
 
-> **除了显式物理状态，多主体视频推理是否还需要一个显式、主体索引的 Interaction State？**
+> **多主体推理是否需要把物理世界及其对不同主体的影响，编译成可执行、主体索引的 Spatial–Social Code？**
 
 ### 1.3 为什么问题不是“模型有没有社会常识”
 
@@ -173,13 +173,13 @@ Spatial Code 引入中间变量 c，将问题重写为：
 
 本文把论文表面的代码压缩为两个部分：
 
-> **Cₜ = (Pₜ, Iₜ).**
+> **Cₜ = (Cₜsp, Cₜsoc).**
 
-Pₜ 是共享 Physical Code；Iₜ = {Iₜ¹, …, Iₜᴺ, Iₜgroup} 是主体索引与群体级 Interaction Code。二分表示控制了方法粒度：它足以检验缺失中间表示假设，但不会膨胀为完整认知架构。
+Cₜsp 是共享 Spatial Code；Cₜsoc = {Cₜsoc,1, …, Cₜsoc,N, Cₜsoc,group} 是主体索引与群体级 Social Code。旧实现中的 `physical_code` / `interaction_code` 仅视为兼容字段名，论文、图表与新实验统一使用 Spatial / Social。二分表示控制了方法粒度：它足以检验缺失中间表示假设，但不会膨胀为完整认知架构。
 
 <!-- FIGURE:code -->
 
-### 3.2 Physical Code
+### 3.2 Spatial Code
 
 定义：
 
@@ -196,7 +196,7 @@ Pₜ 是共享 Physical Code；Iₜ = {Iₜ¹, …, Iₜᴺ, Iₜgroup} 是主�
 
 Pₜ 不要求每个数据集都有完整三维重建。具有相机位姿与深度时可使用 3D position、size 与 orientation；只有 caption 或二维标注时，可以退化为离散位置和关系。2D、3D 与 annotation-only 设置必须分开报告。
 
-### 3.3 Interaction Code
+### 3.3 Social Code
 
 定义：
 
@@ -316,7 +316,15 @@ Zₜ 可以包含 registry、access score、provenance ledger、task graph 与 c
 
 无法可靠 grounding 的槽位必须输出 `unknown`，不得根据剧情合理性自动补全。
 
-### 4.3 确定性更新
+### 4.3 三个可执行核心运算
+
+1. **主体观察投影** `ProjectObserve(Csp, event, agent)`：联合位置、朝向、遮挡、距离与通道，产生该主体可获得的 evidence；
+2. **主体状态更新** `UpdateSocial(Csoc,i, evidence/message)`：只更新有有效接入路径的主体，未收到新证据时保留旧值或 unknown；
+3. **行动条件组合** `ComposeAction(Csp, Csoc,i, goal, role)`：联合当前位置、可达性、主体信息、目标与角色生成或验证动作。
+
+通信只是第二个运算可接收的一种事件，不是独立的策略模块。`Social Code` 只保存状态与证据，`Planner` 才负责决定发送、等待或执行什么动作。
+
+确定性 reducer 采用以下更新顺序：
 
 建议采用以下更新顺序：
 
@@ -478,7 +486,7 @@ Memory 必须由与 Code 相同的 canonical facts 生成，只移除类型、�
 
 **科学问题：** 显式 Interaction Code 是否会导致正确行动变化，而不只是提高问答分数？
 
-现有 300 个任务包含 PDDL、private information、message targets、literal ToM probes 与 golden trajectories。第一阶段无需完整 Habitat，即可进行 oracle replay。
+现有 300 个任务包含 PDDL、private information、message targets、literal ToM probes 与 golden trajectories。当前已完成 Habitat 在线闭环工程实现，并在 12 个开发任务、3 个 seed 上得到 Direct / Static SSC / Dynamic SSC 共 108 次运行。Dynamic 只在部分任务（尤其 episode 1166）稳定获益，在总体平均完成度上低于 Direct；因此这里研究的是适用条件和失效模式，不预设总体提升。
 
 三类干预：
 
@@ -587,9 +595,13 @@ MA-EgoQA 跑完整 1,741 题；EnactToM 跑 300 个任务的 replay、信息干�
 
 绘制 code quality 与 reasoning accuracy 曲线，定位主要瓶颈。只有在 representation pilot 通过后，才下载冻结的 HoloAssist 视频子集并运行视觉/音频模型。
 
-### Stage 5：功能环境与扩展
+### Stage 5：功能环境与扩展（已进入实证阶段）
 
-在 Linux GPU 环境运行 EnactToM Habitat/HSSD；获得许可或下载恢复后增加 EgoTaskQA 与 CoMind。
+已在 Linux GPU 环境实现 EnactToM/Habitat 闭环 planning，并完成一个
+`SSC-conditioned executable environment instantiation`：把包含资产、位姿、权限、
+通信与目标的 SSC 规范编译成可运行 Habitat episode。该实例复用 HSSD 房间壳与已有
+刚体资产，不是从视频恢复三维世界，也不是从零生成 mesh。下一步是扩展到多场景，
+报告可达性、碰撞、约束满足率与额外 rollout 收益。
 
 ### 8.1 推荐的第一轮结果表
 

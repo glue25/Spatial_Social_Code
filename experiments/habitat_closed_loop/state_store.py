@@ -33,6 +33,8 @@ class AgentState:
     version: int = 0
     spatial: Dict[str, Fact] = field(default_factory=dict)
     social: Dict[str, Fact] = field(default_factory=dict)
+    # Inactive facts are retained for audit, but never rendered as current state.
+    history: List[Dict[str, Any]] = field(default_factory=list)
 
     def to_dict(self) -> Dict[str, Any]:
         return {
@@ -40,6 +42,7 @@ class AgentState:
             "version": self.version,
             "spatial": {key: fact.to_dict() for key, fact in sorted(self.spatial.items())},
             "social": {key: fact.to_dict() for key, fact in sorted(self.social.items())},
+            "history": copy.deepcopy(self.history),
         }
 
 
@@ -59,18 +62,57 @@ class StateStore:
     def version(self, agent_id: str) -> int:
         return self._require(agent_id).version
 
-    def update(self, agent_id: str, layer: str, facts: Iterable[Fact]) -> Dict[str, Any]:
+    def update(
+        self,
+        agent_id: str,
+        layer: str,
+        facts: Iterable[Fact],
+        *,
+        invalidated_keys: Iterable[str] = (),
+        invalidation_reason: str = "superseded_by_motion",
+        invalidation_turn: Optional[int] = None,
+    ) -> Dict[str, Any]:
         state = self._require(agent_id)
         if layer not in {"spatial", "social"}:
             raise ValueError(f"invalid state layer: {layer}")
         target: Dict[str, Fact] = getattr(state, layer)
         changes = []
+        for key in sorted(set(invalidated_keys)):
+            previous = target.pop(key, None)
+            if previous is None:
+                continue
+            archived = previous.to_dict()
+            archived["status"] = "inactive"
+            state.history.append({
+                "layer": layer,
+                "key": key,
+                "fact": archived,
+                "inactive_reason": invalidation_reason,
+                "inactive_turn": invalidation_turn,
+            })
+            changes.append({
+                "layer": layer,
+                "key": key,
+                "before": previous.to_dict(),
+                "after": None,
+                "change_type": "invalidation",
+                "reason": invalidation_reason,
+            })
         for fact in facts:
             if fact.source_agent != agent_id and fact.source_type not in {"delivered_message", "task_public"}:
                 raise ValueError("cross-agent fact lacks delivered-message provenance")
             previous = target.get(fact.key)
             if previous is not None:
                 fact.supersedes = f"v{state.version}:{layer}:{fact.key}"
+                archived = previous.to_dict()
+                archived["status"] = "inactive"
+                state.history.append({
+                    "layer": layer,
+                    "key": fact.key,
+                    "fact": archived,
+                    "inactive_reason": "replaced_same_key",
+                    "inactive_turn": fact.turn,
+                })
             target[fact.key] = copy.deepcopy(fact)
             changes.append({
                 "layer": layer,

@@ -1,0 +1,856 @@
+--- a/enacttom/runner/benchmark.py
++++ b/enacttom/runner/benchmark.py
+@@ -26,6 +26,43 @@
+     """Fatal benchmark execution error."""
+
+
++def _is_synthetic_remote_effect(mechanic_result: Any) -> bool:
++    """Return whether a mechanic action should bypass physical articulation."""
++    return bool(
++        mechanic_result
++        and getattr(mechanic_result, "applies", False)
++        and any(
++            str(effect).startswith("remote_effect=")
++            for effect in (getattr(mechanic_result, "effects", None) or [])
++        )
++    )
++
++
++def _coordination_action_entity_names(action: str) -> List[str]:
++    """Extract entity identifiers from one frozen scheduler action.
++
++    Place actions contain an object, a relation, and a destination.  Other
++    supported motor actions use their first argument as the entity.  Tokens
++    such as ``None`` and spatial relations are intentionally excluded.
++    """
++    match = re.match(r"\s*(\w+)\[([^\]]*)\]\s*$", action or "")
++    if not match:
++        return []
++    action_name, raw_args = match.groups()
++    args = [part.strip() for part in raw_args.split(",")]
++    if action_name == "Place":
++        indexes = (0, 2)
++    elif action_name in {"Navigate", "Pick", "Open", "Close"}:
++        indexes = (0,)
++    else:
++        return []
++    return [
++        args[index]
++        for index in indexes
++        if index < len(args) and args[index] and args[index] != "None"
++    ]
++
++
+ def _normalize_probe_answer(response_data: Dict[str, Any]) -> Dict[str, Any]:
+     """Normalize a probe answer into the fixed comparison schema."""
+     if not isinstance(response_data, dict):
+@@ -122,11 +159,64 @@
+         self._completed_subtasks: Set[str] = set()
+         self._visual_store: Optional[VisualObservationStore] = None
+         self._trajectory_store: List[Dict[str, Any]] = []
++        self._coordination_grounded_entities: Set[Tuple[int, str]] = set()
++        # Optional experiment adapter. It is disabled unless the wrapper sets
++        # SSC_CLOSED_LOOP_CONDITION, so historical benchmark entrypoints retain
++        # their exact behavior.
++        self._closed_loop = None
++        self._last_strict_evaluation = None
+
+     def get_run_mode(self) -> str:
+         raw_mode = str(getattr(self.config, "benchmark_run_mode", "standard")).strip().lower()
+         return raw_mode if raw_mode in {"standard", "baseline"} else "standard"
+
++    def _ground_current_coordination_targets(
++        self, uid: int, current_action: str
++    ) -> List[str]:
++        """Expose only the current scheduled action's entities to one private graph.
++
++        Partial Habitat graphs omit unseen movable objects, so an otherwise
++        valid oracle directive can fail before navigation begins.  This adapter
++        copies the target entity (and, for movable objects, its containment path)
++        from the simulator graph into only the assigned agent's graph.  It does
++        not replace the graph with the globally shared graph.
++        """
++        if (
++            self.get_run_mode() != "standard"
++            or not self.task
++            or not getattr(self.task, "coordination_target_grounding", False)
++        ):
++            return []
++
++        full_graph = getattr(self.env_interface, "full_world_graph", None)
++        private_graph = getattr(self.env_interface, "world_graph", {}).get(uid)
++        if full_graph is None or private_graph is None:
++            return []
++
++        grounded: List[str] = []
++        for entity_name in _coordination_action_entity_names(current_action):
++            grounding_key = (uid, entity_name)
++            if grounding_key in self._coordination_grounded_entities:
++                continue
++            try:
++                full_node = full_graph.get_node_from_name(entity_name)
++            except ValueError:
++                continue
++
++            # get_subgraph adds an object's furniture/room/house ancestry.  For
++            # structural targets already known in almost all private graphs, a
++            # single-node fallback still supplies the executable sim handle.
++            target_subgraph = full_graph.get_subgraph([full_node])
++            if not target_subgraph.has_node(entity_name):
++                from habitat_llm.world_model.graph import Graph
++
++                target_subgraph = Graph()
++                target_subgraph.add_node(full_node)
++            private_graph.merge(target_subgraph, add_only=True)
++            self._coordination_grounded_entities.add(grounding_key)
++            grounded.append(entity_name)
++        return grounded
++
+     def setup(
+         self,
+         env_interface: "EnvironmentInterface",
+@@ -182,6 +272,32 @@
+         ]
+         self._setup_planners(llm_agent_uids)
+
++        closed_loop_condition = os.environ.get("SSC_CLOSED_LOOP_CONDITION", "").strip().lower()
++        if closed_loop_condition:
++            from experiments.habitat_closed_loop.runtime import ClosedLoopRuntime
++
++            self._closed_loop = ClosedLoopRuntime(
++                condition=closed_loop_condition,
++                agent_ids=[f"agent_{uid}" for uid in sorted(self.agents)],
++                output_dir=self.output_dir,
++                task=self.task,
++            )
++            print(
++                f"[ClosedLoopSSC] enabled condition={closed_loop_condition} "
++                f"artifacts={self._closed_loop.trace.root}",
++                flush=True,
++            )
++            # Closed-loop engineering runs must retain real simulator images
++            # even when the policy itself uses text observations.  This store
++            # reads only the RGB tensors already returned by Habitat; it does
++            # not expose images to a text-only planner or depend on the
++            # optional habitat_llm video helpers.
++            if self._visual_store is None:
++                self._visual_store = VisualObservationStore(
++                    str(self._closed_loop.trace.root / "frames"),
++                    image_format="png",
++                )
++
+     @staticmethod
+     def _normalize_agent_id(raw_agent: Any) -> Optional[str]:
+         """Normalize mixed agent ID formats to canonical 'agent_<uid>'."""
+@@ -418,6 +534,7 @@
+         done = False
+         turn_count = 0
+         agents_done: Set[int] = set()
++        coordination_positions: Dict[int, int] = {uid: 0 for uid in self.agents}
+
+         # Reset step count for this run
+         self._step_count = 0
+@@ -548,14 +665,171 @@
+
+                 planner = self.planners[uid]
+                 agent_instruction = instruction.get(agent_id, instruction.get(str(uid), ""))
++                if self._closed_loop is not None:
++                    try:
++                        private_world = world_graph[uid].get_world_descr(allow_unknown=True)
++                    except Exception as exc:
++                        private_world = f"private world observation unavailable: {type(exc).__name__}: {exc}"
++                    self._closed_loop.private_observation(
++                        agent_id, turn_count, private_world
++                    )
++                    state_context, state_version = self._closed_loop.planner_context(
++                        agent_id, turn_count
++                    )
++                    if not getattr(planner, "curr_prompt", ""):
++                        agent_instruction = f"{agent_instruction}\n\n{state_context}"
++                    elif self._closed_loop.dynamic:
++                        self._replace_runtime_state_in_planner_context(
++                            planner, state_context
++                        )
++                coordination_cards = (
++                    getattr(self.task, "coordination_cards", {}) if self.task else {}
++                )
++                coordination_card = coordination_cards.get(agent_id, [])
++                if agent_id in coordination_cards:
++                    position = coordination_positions.get(uid, 0)
++                    current_action = (
++                        coordination_card[position]
++                        if position < len(coordination_card)
++                        else "Wait[]"
++                    )
++                    agent_instruction = (
++                        f"{agent_instruction}\n\n"
++                        "[Current Oracle Scheduler Directive]: Execute exactly the following action now; "
++                        "do not plan ahead or substitute another target.\n"
++                        f"{current_action}"
++                    )
++                    action_entities = _coordination_action_entity_names(current_action)
++                    binding_note = ""
++                    if action_entities:
++                        binding_note = (
++                            "\n[Runtime Target Binding]: Every entity ID in the current action "
++                            "is bound to an executable simulator target in your private runtime "
++                            "graph. Execute the directive literally even if an earlier object "
++                            "list omitted that entity; do not search for or substitute it.\n"
++                        )
++                        agent_instruction += binding_note
++                    # LLMPlanner only consumes ``instruction`` while creating
++                    # its first prompt.  On later replans, append the current
++                    # finite-state directive explicitly so the model sees the
++                    # newly advanced action rather than the turn-1 action.
++                    if getattr(planner, "curr_prompt", ""):
++                        scheduler_update = (
++                            f"\n\n[Oracle Scheduler Update — turn {turn_count}]: "
++                            f"Execute exactly {current_action} now. This update supersedes "
++                            f"all earlier scheduler directives.{binding_note}\n"
++                        )
++                        planner.curr_prompt += scheduler_update
++                        if hasattr(planner, "trace"):
++                            planner.trace += scheduler_update
++
++                    grounded_entities = self._ground_current_coordination_targets(
++                        uid, current_action
++                    )
++                    if grounded_entities:
++                        world_graph[uid] = self.env_interface.world_graph[uid]
++                        print(
++                            f"[TargetGrounding] {agent_id}: "
++                            f"{', '.join(grounded_entities)}",
++                            flush=True,
++                        )
+
+                 try:
+-                    # First call triggers planning (LLM call)
+-                    low_level_actions, planner_info, planner_done = planner.get_next_action(
+-                        agent_instruction, observations, world_graph
++                    runtime_execute = bool(
++                        self.task
++                        and getattr(self.task, "coordination_runtime_execute", False)
++                        and agent_id in coordination_cards
+                     )
++                    if runtime_execute:
++                        action_name, action_input = self._parse_action_to_tuple(
++                            current_action
++                        )
++                        action_input = action_input or None
++                        scheduled_actions = {
++                            uid: (action_name, action_input, None)
++                        }
++                        planner.last_high_level_actions = scheduled_actions
++                        recorded_responses = getattr(
++                            self.task,
++                            "coordination_replay_responses",
++                            {},
++                        ).get(agent_id, [])
++                        recorded_response = (
++                            recorded_responses[position]
++                            if position < len(recorded_responses)
++                            else ""
++                        )
++                        recorded_failure = any(
++                            phrase in recorded_response.lower()
++                            for phrase in (
++                                "too far",
++                                "occluded",
++                                "failed to",
++                                "unexpected failure",
++                                "cannot",
++                                "not found",
++                                "not present",
++                                "wrong use of api",
++                                "used all",
++                            )
++                        )
++                        replay_noop = bool(
++                            getattr(
++                                self.task,
++                                "coordination_advance_on_attempt",
++                                False,
++                            )
++                            and (
++                                recorded_failure
++                                or (
++                                    action_name.startswith("Find")
++                                    and action_name.endswith("Tool")
++                                )
++                            )
++                        )
++                        if replay_noop:
++                            if not recorded_response:
++                                recorded_response = (
++                                    "Recorded non-mutating action replayed as a no-op."
++                                )
++                            low_level_actions, responses = {}, {
++                                uid: recorded_response
++                            }
++                        else:
++                            low_level_actions, responses = planner.process_high_level_actions(
++                                scheduled_actions, observations
++                            )
++                        planner_info = {
++                            "high_level_actions": scheduled_actions,
++                            "responses": responses,
++                            "thought": {
++                                uid: "Executed by the deterministic oracle-code runtime."
++                            },
++                            "selected_frames": [],
++                            "selector": None,
++                        }
++                        planner_done = False
++                        print(
++                            "Thought: Executed by the deterministic oracle-code runtime.",
++                            flush=True,
++                        )
++                        print(f"Agent_{uid}: {current_action}", flush=True)
++                    else:
++                        # First call triggers planning (LLM call)
++                        low_level_actions, planner_info, planner_done = planner.get_next_action(
++                            agent_instruction, observations, world_graph
++                        )
+                     high_level_action = self._extract_high_level_action(planner_info, uid)
+
++                    if self._closed_loop is not None:
++                        self._closed_loop.record_plan(
++                            agent_id=agent_id,
++                            turn=turn_count,
++                            action=high_level_action or "",
++                            thought=planner_info.get("thought", {}).get(uid),
++                            prompt=getattr(planner, "curr_prompt", ""),
++                        )
++
+                     if not high_level_action:
+                         if planner_done:
+                             agents_done.add(uid)
+@@ -628,6 +902,30 @@
+                             low_level_actions = {uid: low_level_action}
+                             high_level_action = f"{actual_action_name}[{actual_target or ''}]"
+
++                        # Remote-control triggers are synthetic task mechanics:
++                        # a trigger such as a table need not be physically
++                        # articulated by Habitat.  Commit its mechanic effect
++                        # in phase 4 without attempting an invalid Open[table].
++                        if _is_synthetic_remote_effect(mech_result):
++                            llm_agent_state[uid] = {
++                                'planner': planner,
++                                'instruction': agent_instruction,
++                                'high_level_action': high_level_action,
++                                'low_level_actions': {},
++                                'planner_info': planner_info,
++                                'planner_done': planner_done,
++                                'action_done': True,
++                                'response': "Activated the remote-control trigger.",
++                                'skill_steps': 0,
++                                'mech_result': mech_result,
++                                'orig_action': orig_action_name,
++                                'orig_target': action_target,
++                                'skip_mechanic_apply': False,
++                                'selected_frames': planner_info.get("selected_frames", []),
++                                'selector': planner_info.get("selector"),
++                            }
++                            continue
++
+                     llm_agent_state[uid] = {
+                         'planner': planner,
+                         'instruction': agent_instruction,
+@@ -695,6 +993,18 @@
+                     # Drop buffered message so it never reaches recipients.
+                     continue
+                 original_post_message(sender_uid, message, target_uids=target_uids)
++                if self._closed_loop is not None:
++                    receiver_uids = (
++                        list(target_uids)
++                        if isinstance(target_uids, list)
++                        else [uid for uid in self.agents if uid != sender_uid]
++                    )
++                    self._closed_loop.message_delivery(
++                        sender=f"agent_{sender_uid}",
++                        receivers=[f"agent_{uid}" for uid in receiver_uids],
++                        turn=turn_count,
++                        message=message,
++                    )
+
+             if self._episode_done:
+                 break
+@@ -869,6 +1179,14 @@
+                 print(f"Agent_{uid}_Observation: {response}", flush=True)
+                 print(f"  ({skill_steps} steps)", flush=True)
+
++                if self._closed_loop is not None:
++                    self._closed_loop.action_feedback(
++                        agent_id=agent_id,
++                        turn=turn_count,
++                        action_text=high_level_action,
++                        feedback=response or "",
++                    )
++
+                 self._action_history.append(
+                     self._make_action_history_entry(
+                         sim_step=self._step_count,
+@@ -900,6 +1218,35 @@
+                     observation=response,
+                 )
+
++                coordination_cards = (
++                    getattr(self.task, "coordination_cards", {}) if self.task else {}
++                )
++                coordination_card = coordination_cards.get(agent_id, [])
++                position = coordination_positions.get(uid, 0)
++                if agent_id in coordination_cards and position < len(coordination_card):
++                    expected = coordination_card[position]
++                    failed = any(
++                        phrase in (response or "").lower()
++                        for phrase in (
++                            "too far",
++                            "occluded",
++                            "failed to",
++                            "unexpected failure",
++                            "cannot",
++                            "not found",
++                        )
++                    )
++                    advance_on_attempt = bool(
++                        self.task
++                        and getattr(
++                            self.task, "coordination_advance_on_attempt", False
++                        )
++                    )
++                    if high_level_action == expected and (
++                        advance_on_attempt or not failed
++                    ):
++                        coordination_positions[uid] = position + 1
++
+                 if state['planner_done']:
+                     agents_done.add(uid)
+                     print(f"[Agent {uid} DONE]", flush=True)
+@@ -915,7 +1262,32 @@
+             world_graph = self.get_world_graph()
+
+             eval_result = self._check_task_completion()
+-            if eval_result and eval_result.get("success"):
++            if self._closed_loop is not None:
++                from experiments.habitat_closed_loop.strict_scorer import evaluate_habitat_runner
++
++                strict_result = evaluate_habitat_runner(
++                    self,
++                    getattr(self.task, "functional_goal_pddl", "") or "",
++                    stable_samples=int(os.environ.get("SSC_STABLE_SAMPLES", "3")),
++                    physics_steps_per_sample=int(os.environ.get("SSC_PHYSICS_STEPS_PER_SAMPLE", "10")),
++                    physics_dt=float(os.environ.get("SSC_PHYSICS_DT", str(1.0 / 60.0))),
++                    open_threshold=float(os.environ.get("SSC_OPEN_THRESHOLD", "0.10")),
++                )
++                self._last_strict_evaluation = strict_result
++                self._closed_loop.trace.append(
++                    "physical_checks.jsonl", {"turn": turn_count, **strict_result}
++                )
++                self._closed_loop.trace.append(
++                    "labels_SCORER_ONLY.jsonl",
++                    {"turn": turn_count, "task_id": self.task.task_id, "strict_goal_checks": strict_result["checks"]},
++                )
++            self._capture_replay_audit_views(turn_count)
++            completion_success = (
++                bool(self._last_strict_evaluation.get("strict_success"))
++                if self._closed_loop is not None and self._last_strict_evaluation
++                else bool(eval_result and eval_result.get("success"))
++            )
++            if completion_success:
+                 print(f"\n{'='*60}", flush=True)
+                 print("TASK COMPLETE!", flush=True)
+                 print(f"{'='*60}", flush=True)
+@@ -925,7 +1297,7 @@
+             if len(agents_done) == len(self.agents):
+                 done = True
+
+-            if not self._episode_done and not done:
++            if not self._episode_done:
+                 observations = self.get_observations()
+                 # Record end-of-turn frame (no actions displayed)
+                 self.record_frame(observations, turn=turn_count)
+@@ -940,6 +1312,18 @@
+
+         # Final evaluation
+         evaluation = self._check_task_completion() or {}
++        if self._closed_loop is not None:
++            evaluation["historical_benchmark_success"] = evaluation.get("success", False)
++            evaluation["historical_benchmark_percent_complete"] = evaluation.get("percent_complete", 0.0)
++            evaluation["strict_physical"] = self._last_strict_evaluation or {}
++            evaluation["success"] = bool(
++                self._last_strict_evaluation
++                and self._last_strict_evaluation.get("strict_success")
++            )
++            evaluation["percent_complete"] = (
++                self._last_strict_evaluation.get("strict_percent_complete", 0.0)
++                if self._last_strict_evaluation else 0.0
++            )
+         evaluation["functional_success"] = evaluation.get("success", False)
+         probe_metrics = self._run_literal_tom_probes(instruction)
+         if probe_metrics:
+@@ -954,6 +1338,27 @@
+                 "status": "not_applicable",
+                 "reason": "This run mode shares private reasoning explicitly.",
+             }
++        elif self._closed_loop is not None:
++            # The historical evaluator hard-codes gpt-5.2. Closed-loop runs
++            # freeze one Qwen checkpoint and therefore keep communication
++            # accounting deterministic from delivery/violation traces instead
++            # of silently adding a second model.
++            delivered = sum(
++                1 for row in self._action_history
++                if str(row.get("action", "")).startswith("Communicate[")
++                and "blocked" not in str(row.get("result", "")).lower()
++            )
++            blocked = sum(
++                1 for row in self._action_history
++                if str(row.get("action", "")).startswith("Communicate[")
++                and "blocked" in str(row.get("result", "")).lower()
++            )
++            comm_dict = {
++                "status": "deterministic_runtime_accounting",
++                "delivered_action_count": delivered,
++                "blocked_action_count": blocked,
++                "llm_judge_disabled": True,
++            }
+         elif self.task and self._action_history:
+             try:
+                 from enacttom.evaluation_comms import evaluate_communication
+@@ -981,6 +1386,13 @@
+             done=done,
+             comm_metrics=comm_dict,
+         )
++        if self._closed_loop is not None:
++            self._closed_loop.finalize({
++                "task_id": self.task.task_id if self.task else "unknown",
++                "turns": turn_count,
++                "done": done,
++                "historical_benchmark_evaluation": evaluation,
++            })
+
+         result = {
+             "run_mode": self.get_run_mode(),
+@@ -1370,7 +1782,15 @@
+
+     @staticmethod
+     def _extract_probe_json(raw_response: Any) -> Dict[str, Any]:
+-        """Extract the first JSON object from a probe response."""
++        """Extract the first JSON object from a probe response.
++
++        Small local models occasionally emit an otherwise valid batch response
++        without the final outer brace (for example ``{"answers":[... ]``).
++        Probe scoring must not silently turn that response into an empty answer.
++        We therefore extract a balanced object when one is present and perform
++        one conservative repair when the only defect is missing closing
++        brackets/braces.  Arbitrary malformed prose is still rejected.
++        """
+         if isinstance(raw_response, dict):
+             return raw_response
+         text = str(raw_response or "").strip()
+@@ -1379,13 +1799,49 @@
+         try:
+             return json.loads(text)
+         except json.JSONDecodeError:
+-            match = re.search(r"\{.*\}", text, re.DOTALL)
+-            if not match:
+-                return {}
+-            try:
+-                return json.loads(match.group(0))
+-            except json.JSONDecodeError:
+-                return {}
++            pass
++
++        start = text.find("{")
++        if start < 0:
++            return {}
++
++        stack: List[str] = []
++        in_string = False
++        escaped = False
++        for idx in range(start, len(text)):
++            char = text[idx]
++            if in_string:
++                if escaped:
++                    escaped = False
++                elif char == "\\":
++                    escaped = True
++                elif char == '"':
++                    in_string = False
++                continue
++            if char == '"':
++                in_string = True
++            elif char in "{[":
++                stack.append(char)
++            elif char in "}]":
++                if not stack:
++                    return {}
++                expected = "{" if char == "}" else "["
++                if stack[-1] != expected:
++                    return {}
++                stack.pop()
++                if not stack:
++                    try:
++                        return json.loads(text[start : idx + 1])
++                    except json.JSONDecodeError:
++                        return {}
++
++        if in_string or not stack:
++            return {}
++        repaired = text[start:] + "".join("}" if token == "{" else "]" for token in reversed(stack))
++        try:
++            return json.loads(repaired)
++        except json.JSONDecodeError:
++            return {}
+
+     @staticmethod
+     def _extract_probe_answers(response_data: Dict[str, Any]) -> Dict[str, Dict[str, Any]]:
+@@ -1440,6 +1896,24 @@
+         sim_steps = self._step_count
+         success = evaluation.get("success", False)
+
++        if self._closed_loop is not None and self._dvu is not None:
++            try:
++                from PIL import Image
++
++                frames = list(getattr(self._dvu, "frames", []) or [])
++                if frames:
++                    selected = sorted(set([0, len(frames) // 2, len(frames) - 1]))
++                    for frame_index in selected:
++                        Image.fromarray(frames[frame_index]).save(
++                            self._closed_loop.trace.root / "frames" /
++                            f"combined_frame_{frame_index:06d}.png"
++                        )
++            except Exception as exc:
++                self._closed_loop.trace.append(
++                    "events.jsonl",
++                    {"event_type": "frame_export_error", "error": f"{type(exc).__name__}: {exc}"},
++                )
++
+         self.save_video(f"benchmark_{task_id}_{sim_steps}")
+
+         # Build log data
+@@ -1472,8 +1946,8 @@
+         if self._is_vision_mode():
+             log_data["vision_mode"] = True
+             log_data["selector_metrics"] = self._collect_selector_metrics()
+-            if self._visual_store is not None:
+-                log_data["visual_frame_index"] = self._visual_store.export_index()
++        if self._visual_store is not None:
++            log_data["visual_frame_index"] = self._visual_store.export_index()
+
+         self.save_planner_log(log_data)
+
+@@ -1522,7 +1996,7 @@
+         skill_step: int,
+         kind: str,
+     ) -> None:
+-        if not self._is_vision_mode() or self._visual_store is None:
++        if self._visual_store is None:
+             return
+
+         agent_ids = [f"agent_{uid}" for uid in sorted(self.agents.keys())]
+@@ -1535,6 +2009,137 @@
+             kind=kind,
+         )
+
++    def _capture_replay_audit_views(self, turn: int) -> None:
++        """Render camera-only audit views for selected recorded replay turns."""
++        if not self.task or not getattr(
++            self.task, "coordination_advance_on_attempt", False
++        ):
++            return
++
++        configured_specs = getattr(self.task, "replay_audit_specs", [])
++        if configured_specs:
++            specs = [
++                spec
++                for spec in configured_specs
++                if int(spec.get("turn", -1)) == turn and spec.get("target")
++            ]
++        else:
++            legacy_pairs = {
++                8: ("chest_of_drawers_30", None),
++                11: ("vase_1", "table_12"),
++                14: ("picture_frame_0", "counter_25"),
++            }
++            specs = []
++            if turn in legacy_pairs:
++                target, support = legacy_pairs[turn]
++                specs.append({"turn": turn, "target": target, "support": support})
++        if not specs:
++            return
++
++        sim = self.env_interface.sim
++        graph = self.env_interface.full_world_graph
++
++        from habitat.sims.habitat_simulator.debug_visualizer import DebugVisualizer
++        from habitat.sims.habitat_simulator.sim_utilities import (
++            above,
++            get_obj_from_handle,
++            get_obj_from_id,
++        )
++        import magnum as mn
++
++        rom = sim.get_rigid_object_manager()
++        grasped_by = []
++        for uid in range(len(self.agents)):
++            grasp_mgr = sim.agents_mgr[uid].grasp_mgr
++            if not grasp_mgr.is_grasped:
++                continue
++            held_handle = rom.get_object_handle_by_id(grasp_mgr.snap_idx)
++            grasped_by.append(
++                {"agent_id": f"agent_{uid}", "object_handle": held_handle}
++            )
++
++        turn_dir = Path(self.output_dir) / "replay_audit_views" / f"turn_{turn:04d}"
++        for spec in specs:
++            target_name = str(spec["target"])
++            support_value = spec.get("support")
++            support_name = str(support_value) if support_value else None
++            names = [target_name] + ([support_name] if support_name else [])
++            objects = []
++            handles = {}
++            centers = []
++            for name in names:
++                node = graph.get_node_from_name(name)
++                handle = node.sim_handle
++                obj = get_obj_from_handle(sim, handle)
++                if obj is None:
++                    raise RuntimeError(
++                        f"Replay audit object is missing: {name} ({handle})"
++                    )
++                handles[name] = handle
++                objects.append(obj)
++                centers.append(obj.transformation.transform_point(obj.aabb.center()))
++
++            center = sum(centers[1:], centers[0]) / len(centers)
++            max_separation = max(
++                [float((point - center).length()) for point in centers] + [1.0]
++            )
++            radius = max(2.4, 2.8 * max_separation)
++            offsets = [
++                mn.Vector3(radius, radius * 0.65, radius),
++                mn.Vector3(-radius, radius * 0.65, radius),
++                mn.Vector3(radius, radius * 0.65, -radius),
++                mn.Vector3(-radius, radius * 0.65, -radius),
++                mn.Vector3(0.15, radius * 1.4, 0.15),
++            ]
++
++            output_dir = turn_dir / target_name if configured_specs else turn_dir
++            output_dir.mkdir(parents=True, exist_ok=True)
++            dbv = DebugVisualizer(sim, resolution=(1024, 1024))
++            try:
++                for index, offset in enumerate(offsets):
++                    observation = dbv.get_observation(
++                        look_at=center,
++                        look_from=center + offset,
++                    )
++                    observation.get_image().save(
++                        output_dir / f"view_{index}_{target_name}.png"
++                    )
++            finally:
++                dbv.remove_dbv_agent()
++
++            target_obj = objects[0]
++            audit = {
++                "turn": turn,
++                "target": target_name,
++                "support": support_name,
++                "handles": handles,
++                "translations": {
++                    name: [float(value) for value in obj.translation]
++                    for name, obj in zip(names, objects)
++                },
++                "grasped_objects": grasped_by,
++                "target_is_grasped": any(
++                    row["object_handle"] == handles[target_name]
++                    for row in grasped_by
++                ),
++            }
++            if support_name:
++                support_handles = [
++                    get_obj_from_id(sim, object_id).handle
++                    for object_id in above(sim, target_obj)
++                    if get_obj_from_id(sim, object_id) is not None
++                ]
++                audit["target_support_handles_from_above"] = support_handles
++                audit["expected_support_matched"] = handles[support_name] in support_handles
++            else:
++                audit["joint_positions"] = [
++                    float(value) for value in target_obj.joint_positions
++                ]
++            (output_dir / "state.json").write_text(
++                json.dumps(audit, indent=2) + "\n",
++                encoding="utf-8",
++            )
++
+     def _set_planner_visual_context(self, turn: int) -> None:
+         if not self._is_vision_mode() or self._visual_store is None:
+             return
+@@ -1625,6 +2230,31 @@
+             for s in known_information:
+                 parts.append(f"- {s}")
+
++        if run_mode == "standard":
++            parts.extend(
++                [
++                    "",
++                    "[Private-State Coordination Protocol]:",
++                    "- Treat Known Information as private: teammates do not know it unless a message explicitly tells them.",
++                    "- Before acting, separate exact source IDs, destination IDs, access restrictions, and final-state requirements.",
++                    "- Spend scarce messages on those exact facts and a concrete assignment; do not send vague status requests or repeat a delivered fact.",
++                    "- Do not duplicate a teammate's assigned object. Continue an executable subtask that your own access and object knowledge support.",
++                    "- An assignment or promise is not completion. Claim success only after a successful action observation, and preserve required final open/closed states.",
++                ]
++            )
++
++        coordination_cards = getattr(task, "coordination_cards", {})
++        if agent_id in coordination_cards:
++            parts.extend(
++                [
++                    "",
++                    "[Oracle Agent-Indexed Execution Card]:",
++                    "- This is an oracle-schedule diagnostic compiled from the frozen task state.",
++                    "- At every turn, a Current Oracle Scheduler Directive will provide exactly one action. Execute only that action and exact target.",
++                    "- The scheduler advances only after a successful observation; do not plan ahead, substitute targets, or pursue personal objectives.",
++                ]
++            )
++
+         # Active mechanic constraints that affect planning.
+         mechanic_warnings = _build_mechanic_warnings(task)
+         if mechanic_warnings:
+--- a/enacttom/planner.py
++++ b/enacttom/planner.py
+@@ -51,6 +51,32 @@
+
+     def __init__(self, plan_config, env_interface):
+         super().__init__(plan_config, env_interface)
++        if os.environ.get("SSC_CLOSED_LOOP_CONDITION", "").strip():
++            # Apply the same syntax-only serializer to every comparison
++            # condition. It may expand Place's three explicit arguments to the
++            # five-field Habitat form, but never resolves or guesses an ID.
++            from experiments.habitat_closed_loop.action_interface import parse_action
++
++            original_actions_parser = self.actions_parser
++
++            def _public_actions_parser(agents, response, params):
++                parsed = original_actions_parser(agents, response, params)
++                normalized = {}
++                for uid, action_tuple in parsed.items():
++                    name, argument, error = action_tuple
++                    canonical = parse_action(f"{name}[{argument or ''}]")
++                    if canonical.valid:
++                        canonical_argument = canonical.serialized.split("[", 1)[1][:-1]
++                        normalized[uid] = (
++                            canonical.name,
++                            canonical_argument,
++                            error,
++                        )
++                    else:
++                        normalized[uid] = (name, argument, error or canonical.error)
++                return normalized
++
++            self.actions_parser = _public_actions_parser
+         self._vision_mode = (
+             str(getattr(self.env_interface.conf, "benchmark_observation_mode", "text")).lower()
+             == "vision"

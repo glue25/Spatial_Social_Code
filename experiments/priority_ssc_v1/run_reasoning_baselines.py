@@ -11,10 +11,13 @@ from __future__ import annotations
 import argparse
 import json
 import random
+import subprocess
 import sys
+import tempfile
 import time
 from collections import Counter, defaultdict
 from pathlib import Path
+from types import SimpleNamespace
 from typing import Any
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -78,11 +81,110 @@ def balanced_independent(source: list[dict[str, Any]], dataset: str, total: int,
     return selected
 
 
+class CodexResponsesClient:
+    """Small Codex-CLI adapter with the metadata shape used by this runner."""
+
+    def __init__(self, model: str, reasoning_effort: str, timeout_seconds: int, max_retries: int):
+        self.config = SimpleNamespace(model=model)
+        self.reasoning_effort = reasoning_effort
+        self.timeout_seconds = timeout_seconds
+        self.max_retries = max_retries
+
+    @staticmethod
+    def _events(stdout: str) -> tuple[dict[str, int], str]:
+        usage: dict[str, int] = {}
+        response = ""
+        for line in stdout.splitlines():
+            try:
+                event = json.loads(line)
+            except json.JSONDecodeError:
+                continue
+            if event.get("type") == "turn.completed" and isinstance(event.get("usage"), dict):
+                usage = {
+                    str(key): int(value)
+                    for key, value in event["usage"].items()
+                    if isinstance(value, int)
+                }
+            item = event.get("item")
+            if (
+                event.get("type") == "item.completed"
+                and isinstance(item, dict)
+                and item.get("type") == "agent_message"
+            ):
+                response = str(item.get("text", ""))
+        return usage, response
+
+    def generate_parts_with_metadata(
+        self,
+        parts: list[dict[str, Any]],
+        max_output_tokens: int = 1536,
+        temperature: float = 0.0,
+    ) -> dict[str, Any]:
+        del max_output_tokens, temperature
+        prompt = "\n\n".join(str(part.get("text", "")) for part in parts if "text" in part)
+        attempts: list[dict[str, Any]] = []
+        overall_started = time.monotonic()
+        last_error = "unknown error"
+        for attempt in range(1, self.max_retries + 2):
+            with tempfile.TemporaryDirectory(prefix="ssc_gpt56_") as temp_dir:
+                output_path = Path(temp_dir) / "response.txt"
+                command = [
+                    "codex", "exec", prompt, "--ephemeral", "--ignore-rules",
+                    "--disable", "apps", "--disable", "goals",
+                    "--disable", "shell_snapshot", "--disable", "plugins",
+                    "--disable", "unified_exec", "--disable", "code_mode_host",
+                    "--skip-git-repo-check", "--sandbox", "read-only", "--cd", "/tmp",
+                    "--model", self.config.model,
+                    "-c", f'model_reasoning_effort="{self.reasoning_effort}"',
+                    "--json", "--output-last-message", str(output_path),
+                ]
+                started = time.monotonic()
+                try:
+                    completed = subprocess.run(
+                        command,
+                        text=True,
+                        capture_output=True,
+                        timeout=self.timeout_seconds,
+                        check=False,
+                    )
+                    elapsed = time.monotonic() - started
+                    usage, event_text = self._events(completed.stdout)
+                    attempts.append({"attempt": attempt, "returncode": completed.returncode, "elapsed_seconds": elapsed})
+                    if completed.returncode == 0:
+                        response = (
+                            output_path.read_text(encoding="utf-8")
+                            if output_path.is_file()
+                            else event_text
+                        )
+                        if response.strip():
+                            return {
+                                "text": response,
+                                "attempts": attempts,
+                                "transport_retries": attempt - 1,
+                                "elapsed_seconds": time.monotonic() - overall_started,
+                                "usage": usage,
+                            }
+                    last_error = completed.stderr[-2000:] or completed.stdout[-2000:]
+                except subprocess.TimeoutExpired as error:
+                    last_error = f"timeout after {error.timeout}s"
+                    attempts.append({"attempt": attempt, "returncode": None, "error": last_error})
+            if attempt <= self.max_retries:
+                time.sleep(min(60, 2 ** (attempt - 1)))
+        raise RuntimeError(f"Codex call failed after {len(attempts)} attempts: {last_error}")
+
+
 def make_client(args: argparse.Namespace) -> Any:
     if args.backend == "local-qwen32b":
         from experiments.iclr_ablations_v1.run_mmtom_local_qwen32b import LocalQwenPartsClient
 
         return LocalQwenPartsClient(args.local_model_path, args.max_pixels, args.duty_cycle)
+    if args.backend == "codex":
+        return CodexResponsesClient(
+            args.model or "gpt-5.6-sol",
+            args.reasoning_effort,
+            args.timeout_seconds,
+            args.max_retries,
+        )
     from egomas.src.jdcloud_gemini import JDCloudGeminiClient, load_service_config
 
     config = load_service_config(args.credentials_file, args.model)
@@ -136,7 +238,7 @@ def summarize(rows: list[dict[str, Any]], selected: list[int], model: str) -> di
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--dataset", choices=("mmtom", "maegoqa"), required=True)
-    parser.add_argument("--backend", choices=("local-qwen32b", "jdcloud"), default="local-qwen32b")
+    parser.add_argument("--backend", choices=("local-qwen32b", "jdcloud", "codex"), default="local-qwen32b")
     parser.add_argument("--source", type=Path)
     parser.add_argument("--questions", type=Path)
     parser.add_argument("--output", type=Path)
@@ -149,6 +251,9 @@ def main() -> None:
     parser.add_argument("--max-pixels", type=int, default=512 * 28 * 28)
     parser.add_argument("--duty-cycle", type=float, default=1.0)
     parser.add_argument("--min-request-interval", type=float, default=0.0)
+    parser.add_argument("--reasoning-effort", choices=("low", "medium", "high", "xhigh", "max"), default="medium")
+    parser.add_argument("--timeout-seconds", type=int, default=1800)
+    parser.add_argument("--max-retries", type=int, default=2)
     parser.add_argument("--prepare-only", action="store_true")
     args = parser.parse_args()
     default_source = ROOT / ("spatial_social_code/mmtom_dense_authoritative_gemini3pro.jsonl" if args.dataset == "mmtom" else "MA-EgoQA/data/baselines/video_balanced_role_full.jsonl")

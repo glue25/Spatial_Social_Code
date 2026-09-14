@@ -13,12 +13,12 @@ OUTPUT = ROOT / "reports/supplement_complete_zh.md"
 MANIFEST = ROOT / "reports/supplement_complete_manifest.json"
 
 SOURCES = {
-    "mmtom_option_blind": ROOT / "spatial_social_code/mmtom_option_blind_gemini3pro_summary.json",
-    "mmtom_compile_once": ROOT / "workdirs/cross_model_v1/mmtom_gpt56_compile_once20_summary.json",
-    "maegoqa_gpt56": ROOT / "workdirs/cross_model_v1/maegoqa_gpt56_reasoning20_summary.json",
+    "mmtom_option_blind": ROOT / "reports/audit_latest_experiments/mmtom_option_blind/mmtom_option_blind_gemini3pro_summary.json",
+    "mmtom_compile_once": ROOT / "reports/audit_latest_experiments/cross_model_pilots/mmtom_gpt56_compile_once20_summary.json",
+    "maegoqa_gpt56": ROOT / "reports/audit_latest_experiments/cross_model_pilots/maegoqa_gpt56_reasoning20_summary.json",
     "habitat_multiseed": ROOT / "reports/habitat_closed_loop_multiseed/habitat_multiseed_summary.json",
     "comind_oof": ROOT / "reports/comind_grounding_oof_summary.json",
-    "human_audit": ROOT / "workdirs/priority_ssc_v1/human_audit/manifest.json",
+    "human_audit": ROOT / "reports/audit_latest_experiments/human_audit/manifest.json",
     "environment_spec": ROOT / "reports/cases/habitat_ep1166_ssc_generated_environment.json",
     "environment_cases": ROOT / "reports/habitat_generated_environment_cases/habitat_ssc_environment_cases_results.json",
 }
@@ -62,9 +62,12 @@ def main() -> None:
         )
 
     lines = [
-        "# Spatial–Social Code 完整补充材料（证据约束版）", "",
+        "# Spatial–Social Code 补充材料证据汇编（进行中）", "",
+        "> 本文件名为兼容旧链接而保留 `supplement_complete_zh.md`；它不表示实验已经完成。"
+        "人工核验、冻结确认集和若干同内容控制仍待完成。", "",
         "本文件由机器可读结果自动生成。不同协议分表报告，不把历史诊断、开发集、"
-        "单例或外部论文数字混成同一个主结果。", "",
+        "单例或外部论文数字混成同一个主结果。逐样本证据见"
+        " `reports/audit_latest_experiments/`。", "",
         "## A. 表征定义", "",
         "Spatial Code 保存对象、房间、支撑/容器、抓取、关节、时间和证据来源；"
         "Social Code 保存主体、观察/消息归属、访问权限、通信预算、reported/observed/unknown。"
@@ -75,7 +78,8 @@ def main() -> None:
         f"{mmtom['overall']['direct_baseline']['correct']}/204（{pct(mmtom['overall']['direct_baseline']['accuracy'])}），"
         f"SSC 为 {mmtom['overall']['standalone_spatial_social']['correct']}/204"
         f"（{pct(mmtom['overall']['standalone_spatial_social']['accuracy'])}），"
-        f"exact McNemar p={mmtom['contingency']['mcnemar_exact_p']:.6g}。该结果是当前最强干净问答证据。", "",
+        f"exact McNemar p={mmtom['contingency']['mcnemar_exact_p']:.6g}。这是 API 中断前的部分运行积极信号，"
+        "不是完整 600 题结果；保存记录没有 provider token usage。", "",
         "question-independent GPT-5.6-sol compile-once 开发 pilot 为 "
         f"Direct {pct(compile_once['direct_accuracy'])}、SSC {pct(compile_once['ssc_accuracy'])}，"
         f"p={compile_once['paired']['mcnemar_exact_p']}；样本只有 {compile_once['questions']} 题，不显著。", "",
@@ -99,6 +103,8 @@ def main() -> None:
     lines.extend([
         "", "Dynamic 对 Direct 的配对 McNemar p=1.0，且平均完成度更低、token 更高。"
         "闭环实现成立，但总体效果主张不成立。", "",
+        "任务异质性很强：episode 1166 中 Dynamic 为 3/3 seed 全成功而 Direct/Static 均为 0/3；"
+        "episode 1566 中 Direct 为 3/3 而 Dynamic 为 0/3。两种方向都必须报告。", "",
         "### CoMind：recording-heldout OOF grounding", "",
         "CoMind 的可支持结论是显式 grounding 改善 bbox/category 字段；它不是官方 hidden-test。"
         "完整数字见源文件 `reports/comind_grounding_oof_summary.json`。", "",
@@ -113,14 +119,19 @@ def main() -> None:
         "## D. 人工核验", "",
         f"人工包目标答案是否出现：`{audit.get('target_answers_present')}`；当前状态："
         f"`{audit.get('status', audit.get('review_status', 'unknown'))}`。未填写的人工结果不能报告为完成。", "",
-        "## E. 泄漏与复现边界", "",
-        "- 干净 MMToM 主结果不含选项、query_evidence 或手工答案权重。",
+        "## E. 泄漏、状态与复现边界", "",
+        "- MMToM 保存的 204 个有效样本的 compiler Code 不含选项、query_evidence 或手工答案权重；"
+        "但运行不完整，且缺 provider token usage。",
         "- Habitat planner 不接收 scorer-only 标签；失败动作不会写成完成。",
+        "- strict scorer v2 在稳定采样不能推进时输出 invalid/null，不再把瞬时完成度纳入汇总。"
+        "历史 108 个 summary 的 `stability_advance_ok` 均为 true，因此不因该修复而改分。",
+        "- 动态状态 v2 将成功移动后失效的旧 on/in/inside 关系移入 history，不再同时作为当前事实。"
+        "历史 rollout 保持原样，不能假装由新 runtime 生成。",
         "- 生成环境 cases 删除 golden trajectory、目标答案和持久化 expected response。",
         "- 开发 pilot、单例和合成干预只作机制证据。",
         "- 每个源文件的 SHA-256 记录在配套 manifest。", "",
         "## F. 当前可写与不可写", "",
-        "可写：MMToM 选项盲配对提升；SSC 是带主体归属和 provenance 的中间表征；Habitat 在线闭环可审计；"
+        "可写：MMToM 204 个有效配对的选项盲部分运行显示积极信号；SSC 是带主体归属和 provenance 的中间表征；Habitat 在线闭环可审计；"
         "SSC 可编译为资产化场景规范。", "",
         "不可写：SSC 在所有环境显著提升；Dynamic SSC 在 Habitat 总体胜出；已经从任意视频生成全新3D世界；"
         "GPT-6 已用于本实验；人工核验已经完成。", "",
@@ -128,7 +139,7 @@ def main() -> None:
     OUTPUT.write_text("\n".join(lines), encoding="utf-8")
 
     manifest = {
-        "schema_version": "ssc_complete_supplement_manifest_v1",
+        "schema_version": "ssc_supplement_evidence_manifest_v2",
         "output": str(OUTPUT.relative_to(ROOT)),
         "output_sha256": sha256(OUTPUT),
         "sources": {
@@ -136,7 +147,8 @@ def main() -> None:
             for name, path in SOURCES.items() if path.is_file()
         },
         "missing_optional_sources": [name for name, path in SOURCES.items() if not path.is_file()],
-        "claim_policy": "No unsupported result is promoted from diagnostic, single-case, or pending human audit status.",
+        "document_status": "in_progress_not_complete",
+        "claim_policy": "No unsupported result is promoted from partial, diagnostic, single-case, or pending human audit status.",
     }
     MANIFEST.write_text(json.dumps(manifest, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     print(json.dumps(manifest, indent=2, ensure_ascii=False))

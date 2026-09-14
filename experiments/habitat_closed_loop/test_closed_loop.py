@@ -103,6 +103,37 @@ def test_dynamic_state_enters_next_planner_version(tmp_path):
     assert rows[-1]["runtime_state_block_count"] == 1
 
 
+def test_successful_motion_moves_conflicting_relations_to_history(tmp_path):
+    runtime = ClosedLoopRuntime("dynamic_ssc", ["agent_0"], str(tmp_path), Task(agent_secrets={
+        "agent_0": ["cup_1 starts on shelf_2"],
+    }))
+    runtime.action_feedback("agent_0", 1, "Pick[cup_1]", "Successfully picked cup_1")
+    picked = runtime.store.snapshot("agent_0")
+    assert "object.cup_1.on" not in picked["spatial"]
+    assert picked["spatial"]["object.cup_1.held"]["value"] is True
+    assert any(
+        row["key"] == "object.cup_1.on"
+        and row["inactive_reason"] == "superseded_by_successful_motion"
+        for row in picked["history"]
+    )
+
+    runtime.action_feedback(
+        "agent_0", 2, "Place[cup_1, inside, cabinet_3, None, None]", "Successfully placed cup_1"
+    )
+    placed = runtime.store.snapshot("agent_0")
+    assert placed["spatial"]["object.cup_1.inside"]["value"] == "cabinet_3"
+    assert "object.cup_1.on" not in runtime.store.render("agent_0")
+
+
+def test_failed_motion_does_not_invalidate_current_relation(tmp_path):
+    runtime = ClosedLoopRuntime("dynamic_ssc", ["agent_0"], str(tmp_path), Task(agent_secrets={
+        "agent_0": ["cup_1 starts on shelf_2"],
+    }))
+    runtime.action_feedback("agent_0", 1, "Pick[cup_1]", "Failed to pick: too far")
+    state = runtime.store.snapshot("agent_0")
+    assert state["spatial"]["object.cup_1.on"]["value"] == "shelf_2"
+
+
 def test_static_state_is_not_updated_after_feedback(tmp_path):
     runtime = ClosedLoopRuntime("static_ssc", ["agent_0"], str(tmp_path), Task(agent_secrets={"agent_0": []}))
     before = runtime.store.snapshot("agent_0")
@@ -149,6 +180,22 @@ def test_strict_scorer_valid_held_wrong_and_reclosed():
     assert not scorer.score([place], held)["strict_success"]
     assert not scorer.score([place], wrong)["strict_success"]
     assert not scorer.score([opened], reclosed)["strict_success"]
+
+
+def test_failed_stability_advance_is_invalid_not_full_completion():
+    scorer = StrictPhysicalScorer(stable_samples=3)
+    goal = PhysicalGoal("is_on_top", "cup_1", "table_2")
+    result = scorer.measure(
+        [goal],
+        probe=lambda _goal: PhysicalSample(True, None),
+        advance=lambda: False,
+    )
+    assert result["measurement_valid"] is False
+    assert result["measurement_status"] == "invalid"
+    assert result["strict_success"] is None
+    assert result["completed_goals"] is None
+    assert result["strict_percent_complete"] is None
+    assert result["unvalidated_strict_percent_complete"] == 1.0
 
 
 def test_budget_exhaustion_is_a_failure():

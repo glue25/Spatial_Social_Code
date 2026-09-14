@@ -1,5 +1,10 @@
 # Spatial–Social Code 误差传播与不确定性分析
 
+> **历史诊断报告。** MMToM 78.33% 和 Habitat 53.47% 均不是当前主结果口径；
+> 前者已撤回，后者已被 108 次在线闭环开发实验取代。下列分析只用于追踪旧系统的
+> 失效模式，不应用于投稿主张。当前证据见
+> [最新实验审计](audit_latest_experiments/README_zh.md)。
+
 > 本报告由 `scripts/analyze_error_propagation.py` 从冻结结果自动生成。中间层没有人工真值时只报告代理指标，不把模型自报 confidence 写成真实确定性。
 
 ## 一页结论

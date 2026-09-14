@@ -1,0 +1,494 @@
+{
+  "condition": "direct",
+  "done": false,
+  "final_states": {
+    "agent_0": {
+      "agent_id": "agent_0",
+      "social": {
+        "access.denied_rooms": {
+          "confidence": 1.0,
+          "evidence": "task mechanic visible to self",
+          "key": "access.denied_rooms",
+          "source_agent": "agent_0",
+          "source_type": "task_private",
+          "status": "task_specified",
+          "supersedes": null,
+          "turn": 0,
+          "value": [
+            "kitchen_1"
+          ]
+        },
+        "task.private_facts": {
+          "confidence": 1.0,
+          "evidence": "own private task input",
+          "key": "task.private_facts",
+          "source_agent": "agent_0",
+          "source_type": "task_private",
+          "status": "task_specified",
+          "supersedes": null,
+          "turn": 0,
+          "value": [
+            "You are barred from kitchen_1.",
+            "The correct living-room display surface for toy_pineapple_0 is table_19 in living_room_1 (not table_12 and not counter_36).",
+            "picture_frame_2 starts on chest_of_drawers_29 in bedroom_2."
+          ]
+        },
+        "task.self": {
+          "confidence": 1.0,
+          "evidence": "Reset the apartment for a small photo-gallery preview. As a group, do all of the following: move one toy pineapple onto the living-room display table, move the picture frame onto the laundry-room shelves, and leave the kitchen fridge open at the end.",
+          "key": "task.self",
+          "source_agent": "agent_0",
+          "source_type": "task_public",
+          "status": "task_specified",
+          "supersedes": null,
+          "turn": 0,
+          "value": "agent_0"
+        }
+      },
+      "spatial": {
+        "object.picture_frame_2.on": {
+          "confidence": 1.0,
+          "evidence": "picture_frame_2 starts on chest_of_drawers_29 in bedroom_2.",
+          "key": "object.picture_frame_2.on",
+          "source_agent": "agent_0",
+          "source_type": "task_private",
+          "status": "task_specified",
+          "supersedes": null,
+          "turn": 0,
+          "value": "chest_of_drawers_29"
+        },
+        "object.table_19.in": {
+          "confidence": 1.0,
+          "evidence": "The correct living-room display surface for toy_pineapple_0 is table_19 in living_room_1 (not table_12 and not counter_36).",
+          "key": "object.table_19.in",
+          "source_agent": "agent_0",
+          "source_type": "task_private",
+          "status": "task_specified",
+          "supersedes": null,
+          "turn": 0,
+          "value": "living_room_1"
+        },
+        "task.shared_goal": {
+          "confidence": 1.0,
+          "evidence": "Reset the apartment for a small photo-gallery preview. As a group, do all of the following: move one toy pineapple onto the living-room display table, move the picture frame onto the laundry-room shelves, and leave the kitchen fridge open at the end.",
+          "key": "task.shared_goal",
+          "source_agent": "agent_0",
+          "source_type": "task_public",
+          "status": "task_specified",
+          "supersedes": null,
+          "turn": 0,
+          "value": "Reset the apartment for a small photo-gallery preview. As a group, do all of the following: move one toy pineapple onto the living-room display table, move the picture frame onto the laundry-room shelves, and leave the kitchen fridge open at the end."
+        }
+      },
+      "version": 2
+    },
+    "agent_1": {
+      "agent_id": "agent_1",
+      "social": {
+        "access.denied_rooms": {
+          "confidence": 1.0,
+          "evidence": "task mechanic visible to self",
+          "key": "access.denied_rooms",
+          "source_agent": "agent_1",
+          "source_type": "task_private",
+          "status": "task_specified",
+          "supersedes": null,
+          "turn": 0,
+          "value": [
+            "living_room_1"
+          ]
+        },
+        "task.private_facts": {
+          "confidence": 1.0,
+          "evidence": "own private task input",
+          "key": "task.private_facts",
+          "source_agent": "agent_1",
+          "source_type": "task_private",
+          "status": "task_specified",
+          "supersedes": null,
+          "turn": 0,
+          "value": [
+            "You are barred from living_room_1.",
+            "toy_pineapple_0 and toy_pineapple_1 start on cabinet_28 in kitchen_1.",
+            "glass_4 also starts on cabinet_28 in kitchen_1."
+          ]
+        },
+        "task.self": {
+          "confidence": 1.0,
+          "evidence": "Reset the apartment for a small photo-gallery preview. As a group, do all of the following: move one toy pineapple onto the living-room display table, move the picture frame onto the laundry-room shelves, and leave the kitchen fridge open at the end.",
+          "key": "task.self",
+          "source_agent": "agent_1",
+          "source_type": "task_public",
+          "status": "task_specified",
+          "supersedes": null,
+          "turn": 0,
+          "value": "agent_1"
+        }
+      },
+      "spatial": {
+        "object.cabinet_28.in": {
+          "confidence": 1.0,
+          "evidence": "glass_4 also starts on cabinet_28 in kitchen_1.",
+          "key": "object.cabinet_28.in",
+          "source_agent": "agent_1",
+          "source_type": "task_private",
+          "status": "task_specified",
+          "supersedes": "v0:spatial:object.cabinet_28.in",
+          "turn": 0,
+          "value": "kitchen_1"
+        },
+        "task.shared_goal": {
+          "confidence": 1.0,
+          "evidence": "Reset the apartment for a small photo-gallery preview. As a group, do all of the following: move one toy pineapple onto the living-room display table, move the picture frame onto the laundry-room shelves, and leave the kitchen fridge open at the end.",
+          "key": "task.shared_goal",
+          "source_agent": "agent_1",
+          "source_type": "task_public",
+          "status": "task_specified",
+          "supersedes": null,
+          "turn": 0,
+          "value": "Reset the apartment for a small photo-gallery preview. As a group, do all of the following: move one toy pineapple onto the living-room display table, move the picture frame onto the laundry-room shelves, and leave the kitchen fridge open at the end."
+        }
+      },
+      "version": 2
+    },
+    "agent_2": {
+      "agent_id": "agent_2",
+      "social": {
+        "access.denied_rooms": {
+          "confidence": 1.0,
+          "evidence": "task mechanic visible to self",
+          "key": "access.denied_rooms",
+          "source_agent": "agent_2",
+          "source_type": "task_private",
+          "status": "task_specified",
+          "supersedes": null,
+          "turn": 0,
+          "value": []
+        },
+        "task.private_facts": {
+          "confidence": 1.0,
+          "evidence": "own private task input",
+          "key": "task.private_facts",
+          "source_agent": "agent_2",
+          "source_type": "task_private",
+          "status": "task_specified",
+          "supersedes": null,
+          "turn": 0,
+          "value": [
+            "The picture frame destination is shelves_20 in laundryroom_1.",
+            "The kitchen fixture that must end open is fridge_31 in kitchen_1 (not cabinet_28)."
+          ]
+        },
+        "task.self": {
+          "confidence": 1.0,
+          "evidence": "Reset the apartment for a small photo-gallery preview. As a group, do all of the following: move one toy pineapple onto the living-room display table, move the picture frame onto the laundry-room shelves, and leave the kitchen fridge open at the end.",
+          "key": "task.self",
+          "source_agent": "agent_2",
+          "source_type": "task_public",
+          "status": "task_specified",
+          "supersedes": null,
+          "turn": 0,
+          "value": "agent_2"
+        }
+      },
+      "spatial": {
+        "object.fridge_31.in": {
+          "confidence": 1.0,
+          "evidence": "The kitchen fixture that must end open is fridge_31 in kitchen_1 (not cabinet_28).",
+          "key": "object.fridge_31.in",
+          "source_agent": "agent_2",
+          "source_type": "task_private",
+          "status": "task_specified",
+          "supersedes": null,
+          "turn": 0,
+          "value": "kitchen_1"
+        },
+        "object.shelves_20.in": {
+          "confidence": 1.0,
+          "evidence": "The picture frame destination is shelves_20 in laundryroom_1.",
+          "key": "object.shelves_20.in",
+          "source_agent": "agent_2",
+          "source_type": "task_private",
+          "status": "task_specified",
+          "supersedes": null,
+          "turn": 0,
+          "value": "laundryroom_1"
+        },
+        "task.shared_goal": {
+          "confidence": 1.0,
+          "evidence": "Reset the apartment for a small photo-gallery preview. As a group, do all of the following: move one toy pineapple onto the living-room display table, move the picture frame onto the laundry-room shelves, and leave the kitchen fridge open at the end.",
+          "key": "task.shared_goal",
+          "source_agent": "agent_2",
+          "source_type": "task_public",
+          "status": "task_specified",
+          "supersedes": null,
+          "turn": 0,
+          "value": "Reset the apartment for a small photo-gallery preview. As a group, do all of the following: move one toy pineapple onto the living-room display table, move the picture frame onto the laundry-room shelves, and leave the kitchen fridge open at the end."
+        }
+      },
+      "version": 2
+    }
+  },
+  "historical_benchmark_evaluation": {
+    "completed_subtasks": [
+      1,
+      2
+    ],
+    "functional_success": false,
+    "historical_benchmark_percent_complete": 0.6666666666666666,
+    "historical_benchmark_success": false,
+    "literal_tom_probe_results": [
+      {
+        "agent_id": "agent_2",
+        "counted_in_score": false,
+        "details": {
+          "expected_negated": false,
+          "expected_response": {
+            "args": [
+              "fridge_31"
+            ],
+            "holds": true,
+            "predicate": "is_open"
+          },
+          "fact_true": true,
+          "parsed_response": {
+            "args": [],
+            "holds": null,
+            "predicate": ""
+          }
+        },
+        "probe_id": "k_probe_1",
+        "question": "Probe 1: agent_2 knows a fact about ordered entities [fridge_31]. Report which benchmark predicate applies to those entities and whether it holds. The expected argument order is fixed as listed. If unknown, return predicate \"unknown\" and holds null. JSON shape: {\"probe_id\":\"k_probe_X\",\"predicate\":\"<predicate_name>|unknown\",\"holds\":true|false|null,\"args\":[\"entity_or_target\", ...]}",
+        "raw_response": "```\nThought: I have successfully opened the fridge_31 as required by the task. The fridge is now open, fulfilling the final-state requirement.\nAgent_2_Action: is_open[fridge_31]\n",
+        "source_pddl": "(K agent_2 (is_open fridge_31))",
+        "status": "failed",
+        "supported": true
+      },
+      {
+        "agent_id": "agent_0",
+        "counted_in_score": true,
+        "details": {
+          "behavioral_target_probe_id": "k_probe_1",
+          "behavioral_target_response": {
+            "args": [],
+            "holds": null,
+            "predicate": ""
+          },
+          "parsed_response": {
+            "args": [
+              "fridge_31"
+            ],
+            "holds": true,
+            "predicate": "is_open"
+          }
+        },
+        "probe_id": "k_probe_0",
+        "question": "Probe 0: agent_0 knows that agent_2 knows a fact about ordered entities [fridge_31]. Report which benchmark predicate applies to those entities and whether it holds. The expected argument order is fixed as listed. If unknown, return predicate \"unknown\" and holds null. JSON shape: {\"probe_id\":\"k_probe_X\",\"predicate\":\"<predicate_name>|unknown\",\"holds\":true|false|null,\"args\":[\"entity_or_target\", ...]}",
+        "raw_response": "{\"answers\":[{\"probe_id\":\"k_probe_0\",\"predicate\":\"is_open\",\"holds\":true,\"args\":[\"fridge_31\"]}]",
+        "source_pddl": "(K agent_0 (K agent_2 (is_open fridge_31)))",
+        "status": "failed",
+        "supported": true
+      }
+    ],
+    "literal_tom_probe_score": 0.0,
+    "literal_tom_probe_summary": {
+      "intermediate_probe_count": 1,
+      "passed_count": 0,
+      "probe_count": 2,
+      "supported_probe_count": 1
+    },
+    "percent_complete": 0.6666666666666666,
+    "strict_physical": {
+      "checks": [
+        {
+          "entity": "toy_pineapple_0",
+          "goal_id": "is_on_top:toy_pineapple_0:table_19",
+          "predicate": "is_on_top",
+          "relation_stable": false,
+          "released_stable": true,
+          "samples": [
+            {
+              "detail": {
+                "benchmark_predicate_result": {
+                  "failure_explanations": [
+                    "toy_pineapple_0 is not on top of table_19"
+                  ],
+                  "percent_complete": 0.0,
+                  "proposition_status": {
+                    "prop_0": false
+                  },
+                  "success": false
+                }
+              },
+              "held_by": null,
+              "relation_ok": false
+            },
+            {
+              "detail": {
+                "benchmark_predicate_result": {
+                  "failure_explanations": [
+                    "toy_pineapple_0 is not on top of table_19"
+                  ],
+                  "percent_complete": 0.0,
+                  "proposition_status": {
+                    "prop_0": false
+                  },
+                  "success": false
+                }
+              },
+              "held_by": null,
+              "relation_ok": false
+            },
+            {
+              "detail": {
+                "benchmark_predicate_result": {
+                  "failure_explanations": [
+                    "toy_pineapple_0 is not on top of table_19"
+                  ],
+                  "percent_complete": 0.0,
+                  "proposition_status": {
+                    "prop_0": false
+                  },
+                  "success": false
+                }
+              },
+              "held_by": null,
+              "relation_ok": false
+            }
+          ],
+          "samples_observed": 3,
+          "samples_required": 3,
+          "satisfied": false,
+          "stable_window_measured": true,
+          "target": "table_19"
+        },
+        {
+          "entity": "picture_frame_2",
+          "goal_id": "is_on_top:picture_frame_2:shelves_20",
+          "predicate": "is_on_top",
+          "relation_stable": true,
+          "released_stable": true,
+          "samples": [
+            {
+              "detail": {
+                "benchmark_predicate_result": {
+                  "failure_explanations": [],
+                  "percent_complete": 1.0,
+                  "proposition_status": {
+                    "prop_0": true
+                  },
+                  "success": true
+                }
+              },
+              "held_by": null,
+              "relation_ok": true
+            },
+            {
+              "detail": {
+                "benchmark_predicate_result": {
+                  "failure_explanations": [],
+                  "percent_complete": 1.0,
+                  "proposition_status": {
+                    "prop_0": true
+                  },
+                  "success": true
+                }
+              },
+              "held_by": null,
+              "relation_ok": true
+            },
+            {
+              "detail": {
+                "benchmark_predicate_result": {
+                  "failure_explanations": [],
+                  "percent_complete": 1.0,
+                  "proposition_status": {
+                    "prop_0": true
+                  },
+                  "success": true
+                }
+              },
+              "held_by": null,
+              "relation_ok": true
+            }
+          ],
+          "samples_observed": 3,
+          "samples_required": 3,
+          "satisfied": true,
+          "stable_window_measured": true,
+          "target": "shelves_20"
+        },
+        {
+          "entity": "fridge_31",
+          "goal_id": "is_open:fridge_31",
+          "predicate": "is_open",
+          "relation_stable": true,
+          "released_stable": true,
+          "samples": [
+            {
+              "detail": {
+                "articulated_object_found": true,
+                "default_link_found": true,
+                "joint_positions": [
+                  0.0,
+                  2.356194496154785
+                ],
+                "joint_threshold": 0.1,
+                "resolved_handle": "257b108daedcb3537c6066ed191f8550658a70c2_:0000"
+              },
+              "held_by": null,
+              "relation_ok": true
+            },
+            {
+              "detail": {
+                "articulated_object_found": true,
+                "default_link_found": true,
+                "joint_positions": [
+                  0.0,
+                  2.356194496154785
+                ],
+                "joint_threshold": 0.1,
+                "resolved_handle": "257b108daedcb3537c6066ed191f8550658a70c2_:0000"
+              },
+              "held_by": null,
+              "relation_ok": true
+            },
+            {
+              "detail": {
+                "articulated_object_found": true,
+                "default_link_found": true,
+                "joint_positions": [
+                  0.0,
+                  2.356194496154785
+                ],
+                "joint_threshold": 0.1,
+                "resolved_handle": "257b108daedcb3537c6066ed191f8550658a70c2_:0000"
+              },
+              "held_by": null,
+              "relation_ok": true
+            }
+          ],
+          "samples_observed": 3,
+          "samples_required": 3,
+          "satisfied": true,
+          "stable_window_measured": true,
+          "target": null
+        }
+      ],
+      "completed_goals": 2,
+      "open_threshold": 0.1,
+      "physics_dt": 0.016666666666666666,
+      "physics_steps_per_sample": 10,
+      "scorer_version": "strict_physical_v1",
+      "stability_advance_ok": true,
+      "stable_samples": 3,
+      "strict_percent_complete": 0.6666666666666666,
+      "strict_success": false,
+      "total_goals": 3
+    },
+    "success": false,
+    "total_subtasks": 3
+  },
+  "task_id": "emtom-104862639_172226823-619-cooperative-gallery-reset-with-a-relay-only-reveal-d649a9e6",
+  "turns": 20
+}

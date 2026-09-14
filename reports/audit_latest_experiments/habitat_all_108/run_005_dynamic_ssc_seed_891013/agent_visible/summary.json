@@ -1,0 +1,1587 @@
+{
+  "condition": "dynamic_ssc",
+  "done": false,
+  "final_states": {
+    "agent_0": {
+      "agent_id": "agent_0",
+      "social": {
+        "access.denied_rooms": {
+          "confidence": 1.0,
+          "evidence": "task mechanic visible to self",
+          "key": "access.denied_rooms",
+          "source_agent": "agent_0",
+          "source_type": "task_private",
+          "status": "task_specified",
+          "supersedes": null,
+          "turn": 0,
+          "value": [
+            "bedroom_1"
+          ]
+        },
+        "action.turn_1.status": {
+          "confidence": 1.0,
+          "evidence": "Message delivered to Agent_2. They will see \"Agent_0 said: Please retrieve the teapot and kettle from bedroom_1 and bring them to the kitchen.\" in their context automatically.\n\nagent_0_VisualSummary:\n- No notable new visual observations Message sent. You have 0 messages remaining.",
+          "key": "action.turn_1.status",
+          "source_agent": "agent_0",
+          "source_type": "action_feedback",
+          "status": "observed",
+          "supersedes": null,
+          "turn": 1,
+          "value": "succeeded"
+        },
+        "action.turn_10.status": {
+          "confidence": 1.0,
+          "evidence": "Successful execution!\n\nagent_0_VisualSummary:\n- Traversed: living_room_1\n- Saw other agents: agent_1 in bedroom_1, agent_2 in bedroom_2",
+          "key": "action.turn_10.status",
+          "source_agent": "agent_0",
+          "source_type": "action_feedback",
+          "status": "observed",
+          "supersedes": null,
+          "turn": 10,
+          "value": "succeeded"
+        },
+        "action.turn_11.status": {
+          "confidence": 1.0,
+          "evidence": "Successful execution!\n\nagent_0_VisualSummary:\n- Traversed: living_room_1\n- Saw other agents: agent_1 in bedroom_1, agent_2 in bedroom_2",
+          "key": "action.turn_11.status",
+          "source_agent": "agent_0",
+          "source_type": "action_feedback",
+          "status": "observed",
+          "supersedes": null,
+          "turn": 11,
+          "value": "succeeded"
+        },
+        "action.turn_12.status": {
+          "confidence": 1.0,
+          "evidence": "Successful execution!\n\nagent_0_VisualSummary:\n- Traversed: living_room_1\n- Saw other agents: agent_1 in bedroom_1, agent_2 in bedroom_2",
+          "key": "action.turn_12.status",
+          "source_agent": "agent_0",
+          "source_type": "action_feedback",
+          "status": "observed",
+          "supersedes": null,
+          "turn": 12,
+          "value": "succeeded"
+        },
+        "action.turn_13.status": {
+          "confidence": 1.0,
+          "evidence": "Successful execution!\n\nagent_0_VisualSummary:\n- Traversed: living_room_1\n- Saw other agents: agent_1 in bedroom_1, agent_2 in bedroom_2",
+          "key": "action.turn_13.status",
+          "source_agent": "agent_0",
+          "source_type": "action_feedback",
+          "status": "observed",
+          "supersedes": null,
+          "turn": 13,
+          "value": "succeeded"
+        },
+        "action.turn_14.status": {
+          "confidence": 1.0,
+          "evidence": "Successful execution!\n\nagent_0_VisualSummary:\n- Traversed: living_room_1\n- Saw other agents: agent_1 in bedroom_1, agent_2 in bedroom_2",
+          "key": "action.turn_14.status",
+          "source_agent": "agent_0",
+          "source_type": "action_feedback",
+          "status": "observed",
+          "supersedes": null,
+          "turn": 14,
+          "value": "succeeded"
+        },
+        "action.turn_15.status": {
+          "confidence": 1.0,
+          "evidence": "Successful execution!\n\nagent_0_VisualSummary:\n- Traversed: living_room_1\n- Saw other agents: agent_1 in bedroom_1, agent_2 in bedroom_2",
+          "key": "action.turn_15.status",
+          "source_agent": "agent_0",
+          "source_type": "action_feedback",
+          "status": "observed",
+          "supersedes": null,
+          "turn": 15,
+          "value": "succeeded"
+        },
+        "action.turn_16.status": {
+          "confidence": 1.0,
+          "evidence": "Successful execution!\n\nagent_0_VisualSummary:\n- Traversed: living_room_1\n- Saw other agents: agent_1 in bedroom_1, agent_2 in bedroom_2",
+          "key": "action.turn_16.status",
+          "source_agent": "agent_0",
+          "source_type": "action_feedback",
+          "status": "observed",
+          "supersedes": null,
+          "turn": 16,
+          "value": "succeeded"
+        },
+        "action.turn_17.status": {
+          "confidence": 1.0,
+          "evidence": "Successful execution!\n\nagent_0_VisualSummary:\n- Traversed: living_room_1\n- Saw other agents: agent_1 in bedroom_1, agent_2 in bedroom_2",
+          "key": "action.turn_17.status",
+          "source_agent": "agent_0",
+          "source_type": "action_feedback",
+          "status": "observed",
+          "supersedes": null,
+          "turn": 17,
+          "value": "succeeded"
+        },
+        "action.turn_18.status": {
+          "confidence": 1.0,
+          "evidence": "Successful execution!\n\nagent_0_VisualSummary:\n- Traversed: living_room_1\n- Saw other agents: agent_1 in bedroom_1, agent_2 in bedroom_2",
+          "key": "action.turn_18.status",
+          "source_agent": "agent_0",
+          "source_type": "action_feedback",
+          "status": "observed",
+          "supersedes": null,
+          "turn": 18,
+          "value": "succeeded"
+        },
+        "action.turn_19.status": {
+          "confidence": 1.0,
+          "evidence": "Successful execution!\n\nagent_0_VisualSummary:\n- Traversed: living_room_1\n- Saw other agents: agent_1 in bedroom_1, agent_2 in bedroom_2",
+          "key": "action.turn_19.status",
+          "source_agent": "agent_0",
+          "source_type": "action_feedback",
+          "status": "observed",
+          "supersedes": null,
+          "turn": 19,
+          "value": "succeeded"
+        },
+        "action.turn_2.status": {
+          "confidence": 1.0,
+          "evidence": "Successful execution!\n\nagent_0_VisualSummary:\n- Traversed: living_room_1\n- Saw other agents: agent_1 in bedroom_1, agent_2 in bedroom_1",
+          "key": "action.turn_2.status",
+          "source_agent": "agent_0",
+          "source_type": "action_feedback",
+          "status": "observed",
+          "supersedes": null,
+          "turn": 2,
+          "value": "succeeded"
+        },
+        "action.turn_20.status": {
+          "confidence": 1.0,
+          "evidence": "Successful execution!\n\nagent_0_VisualSummary:\n- Traversed: living_room_1\n- Saw other agents: agent_1 in bedroom_1, agent_2 in bedroom_2",
+          "key": "action.turn_20.status",
+          "source_agent": "agent_0",
+          "source_type": "action_feedback",
+          "status": "observed",
+          "supersedes": null,
+          "turn": 20,
+          "value": "succeeded"
+        },
+        "action.turn_3.status": {
+          "confidence": 1.0,
+          "evidence": "Successful execution!\n\nagent_0_VisualSummary:\n- Traversed: living_room_1\n- Saw other agents: agent_1 in bedroom_1, agent_2 in bedroom_1",
+          "key": "action.turn_3.status",
+          "source_agent": "agent_0",
+          "source_type": "action_feedback",
+          "status": "observed",
+          "supersedes": null,
+          "turn": 3,
+          "value": "succeeded"
+        },
+        "action.turn_4.status": {
+          "confidence": 1.0,
+          "evidence": "Successful execution!\n\nagent_0_VisualSummary:\n- Traversed: living_room_1\n- Saw other agents: agent_1 in bedroom_1, agent_2 in bedroom_1",
+          "key": "action.turn_4.status",
+          "source_agent": "agent_0",
+          "source_type": "action_feedback",
+          "status": "observed",
+          "supersedes": null,
+          "turn": 4,
+          "value": "succeeded"
+        },
+        "action.turn_5.status": {
+          "confidence": 1.0,
+          "evidence": "Successful execution!\n\nagent_0_VisualSummary:\n- Traversed: living_room_1\n- Saw other agents: agent_1 in bedroom_1, agent_2 in bedroom_1, agent_2 in kitchen_1",
+          "key": "action.turn_5.status",
+          "source_agent": "agent_0",
+          "source_type": "action_feedback",
+          "status": "observed",
+          "supersedes": null,
+          "turn": 5,
+          "value": "succeeded"
+        },
+        "action.turn_6.status": {
+          "confidence": 1.0,
+          "evidence": "Successful execution!\n\nagent_0_VisualSummary:\n- Traversed: living_room_1\n- Saw other agents: agent_1 in bedroom_1, agent_2 in bedroom_2",
+          "key": "action.turn_6.status",
+          "source_agent": "agent_0",
+          "source_type": "action_feedback",
+          "status": "observed",
+          "supersedes": null,
+          "turn": 6,
+          "value": "succeeded"
+        },
+        "action.turn_7.status": {
+          "confidence": 1.0,
+          "evidence": "Successful execution!\n\nagent_0_VisualSummary:\n- Traversed: living_room_1\n- Saw other agents: agent_1 in bedroom_1, agent_2 in bedroom_2",
+          "key": "action.turn_7.status",
+          "source_agent": "agent_0",
+          "source_type": "action_feedback",
+          "status": "observed",
+          "supersedes": null,
+          "turn": 7,
+          "value": "succeeded"
+        },
+        "action.turn_8.status": {
+          "confidence": 1.0,
+          "evidence": "Successful execution!\n\nagent_0_VisualSummary:\n- Traversed: living_room_1\n- Saw other agents: agent_1 in bedroom_1, agent_2 in bedroom_2",
+          "key": "action.turn_8.status",
+          "source_agent": "agent_0",
+          "source_type": "action_feedback",
+          "status": "observed",
+          "supersedes": null,
+          "turn": 8,
+          "value": "succeeded"
+        },
+        "action.turn_9.status": {
+          "confidence": 1.0,
+          "evidence": "Successful execution!\n\nagent_0_VisualSummary:\n- Traversed: living_room_1\n- Saw other agents: agent_1 in bedroom_1, agent_2 in bedroom_2",
+          "key": "action.turn_9.status",
+          "source_agent": "agent_0",
+          "source_type": "action_feedback",
+          "status": "observed",
+          "supersedes": null,
+          "turn": 9,
+          "value": "succeeded"
+        },
+        "claim.agent_1.agent_0": {
+          "confidence": 1.0,
+          "evidence": "agent_0, please move teapot_1 and kettle_0 to chair_11 in kitchen_1.",
+          "key": "claim.agent_1.agent_0",
+          "source_agent": "agent_1",
+          "source_type": "delivered_message",
+          "status": "reported",
+          "supersedes": null,
+          "turn": 1,
+          "value": "agent_0, please move teapot_1 and kettle_0 to chair_11 in kitchen_1."
+        },
+        "claim.agent_1.chair_11": {
+          "confidence": 1.0,
+          "evidence": "agent_0, please move teapot_1 and kettle_0 to chair_11 in kitchen_1.",
+          "key": "claim.agent_1.chair_11",
+          "source_agent": "agent_1",
+          "source_type": "delivered_message",
+          "status": "reported",
+          "supersedes": null,
+          "turn": 1,
+          "value": "agent_0, please move teapot_1 and kettle_0 to chair_11 in kitchen_1."
+        },
+        "claim.agent_1.kettle_0": {
+          "confidence": 1.0,
+          "evidence": "agent_0, please move teapot_1 and kettle_0 to chair_11 in kitchen_1.",
+          "key": "claim.agent_1.kettle_0",
+          "source_agent": "agent_1",
+          "source_type": "delivered_message",
+          "status": "reported",
+          "supersedes": null,
+          "turn": 1,
+          "value": "agent_0, please move teapot_1 and kettle_0 to chair_11 in kitchen_1."
+        },
+        "claim.agent_1.kitchen_1": {
+          "confidence": 1.0,
+          "evidence": "agent_0, please move teapot_1 and kettle_0 to chair_11 in kitchen_1.",
+          "key": "claim.agent_1.kitchen_1",
+          "source_agent": "agent_1",
+          "source_type": "delivered_message",
+          "status": "reported",
+          "supersedes": null,
+          "turn": 1,
+          "value": "agent_0, please move teapot_1 and kettle_0 to chair_11 in kitchen_1."
+        },
+        "claim.agent_1.teapot_1": {
+          "confidence": 1.0,
+          "evidence": "agent_0, please move teapot_1 and kettle_0 to chair_11 in kitchen_1.",
+          "key": "claim.agent_1.teapot_1",
+          "source_agent": "agent_1",
+          "source_type": "delivered_message",
+          "status": "reported",
+          "supersedes": null,
+          "turn": 1,
+          "value": "agent_0, please move teapot_1 and kettle_0 to chair_11 in kitchen_1."
+        },
+        "message.turn_1.attempted": {
+          "confidence": 1.0,
+          "evidence": "Message delivered to Agent_2. They will see \"Agent_0 said: Please retrieve the teapot and kettle from bedroom_1 and bring them to the kitchen.\" in their context automatically.\n\nagent_0_VisualSummary:\n- No notable new visual observations Message sent. You have 0 messages remaining.",
+          "key": "message.turn_1.attempted",
+          "source_agent": "agent_0",
+          "source_type": "action_feedback",
+          "status": "observed",
+          "supersedes": null,
+          "turn": 1,
+          "value": true
+        },
+        "message.turn_1.delivered": {
+          "confidence": 1.0,
+          "evidence": "environment delivered message to agent_2",
+          "key": "message.turn_1.delivered",
+          "source_agent": "agent_0",
+          "source_type": "action_feedback",
+          "status": "observed",
+          "supersedes": null,
+          "turn": 1,
+          "value": [
+            "agent_2"
+          ]
+        },
+        "message.turn_1.from.agent_1": {
+          "confidence": 1.0,
+          "evidence": "agent_0, please move teapot_1 and kettle_0 to chair_11 in kitchen_1.",
+          "key": "message.turn_1.from.agent_1",
+          "source_agent": "agent_1",
+          "source_type": "delivered_message",
+          "status": "observed",
+          "supersedes": null,
+          "turn": 1,
+          "value": "agent_0, please move teapot_1 and kettle_0 to chair_11 in kitchen_1."
+        },
+        "message.turn_1.sent": {
+          "confidence": 1.0,
+          "evidence": "environment delivered message to agent_2",
+          "key": "message.turn_1.sent",
+          "source_agent": "agent_0",
+          "source_type": "action_feedback",
+          "status": "observed",
+          "supersedes": null,
+          "turn": 1,
+          "value": true
+        },
+        "task.private_facts": {
+          "confidence": 1.0,
+          "evidence": "own private task input",
+          "key": "task.private_facts",
+          "source_agent": "agent_0",
+          "source_type": "task_private",
+          "status": "task_specified",
+          "supersedes": null,
+          "turn": 0,
+          "value": [
+            "agent_0 is barred from bedroom_1.",
+            "The chest of drawers to leave open is chest_of_drawers_21 in bedroom_1.",
+            "agent_0 can only message agent_2."
+          ]
+        },
+        "task.self": {
+          "confidence": 1.0,
+          "evidence": "Reset the home for a quick tea check: move the teapot and the kettle from the bedroom onto the correct kitchen chair, and leave the bedroom chest of drawers open at the end.",
+          "key": "task.self",
+          "source_agent": "agent_0",
+          "source_type": "task_public",
+          "status": "task_specified",
+          "supersedes": null,
+          "turn": 0,
+          "value": "agent_0"
+        }
+      },
+      "spatial": {
+        "object.chest_of_drawers_21.in": {
+          "confidence": 1.0,
+          "evidence": "The chest of drawers to leave open is chest_of_drawers_21 in bedroom_1.",
+          "key": "object.chest_of_drawers_21.in",
+          "source_agent": "agent_0",
+          "source_type": "task_private",
+          "status": "task_specified",
+          "supersedes": null,
+          "turn": 0,
+          "value": "bedroom_1"
+        },
+        "observation.latest_private_world": {
+          "confidence": 1.0,
+          "evidence": "Furniture:\nliving_room_1: floor_living_room_1, shelves_7, table_13, couch_15\nbedroom_1: floor_bedroom_1, bed_17, chest_of_drawers_21, table_22\nbathroom_1: floor_bathroom_1, washer_dryer_6, shower_14\nbedroom_2: floor_bedroom_2, bed_9, chest_of_drawers_18, chest_of_drawers_19\nentryway_1: floor_entryway_1, stool_8, wardrobe_23\nkitchen_1: floor_kitchen_1, chair_10, chair_11, chair_12, counter_16, cabinet_20\n\nObjects:\nteapot_1: chair_10\n",
+          "key": "observation.latest_private_world",
+          "source_agent": "agent_0",
+          "source_type": "observation",
+          "status": "observed",
+          "supersedes": "v61:spatial:observation.latest_private_world",
+          "turn": 20,
+          "value": "Furniture:\nliving_room_1: floor_living_room_1, shelves_7, table_13, couch_15\nbedroom_1: floor_bedroom_1, bed_17, chest_of_drawers_21, table_22\nbathroom_1: floor_bathroom_1, washer_dryer_6, shower_14\nbedroom_2: floor_bedroom_2, bed_9, chest_of_drawers_18, chest_of_drawers_19\nentryway_1: floor_entryway_1, stool_8, wardrobe_23\nkitchen_1: floor_kitchen_1, chair_10, chair_11, chair_12, counter_16, cabinet_20\n\nObjects:\nteapot_1: chair_10\n"
+        },
+        "task.shared_goal": {
+          "confidence": 1.0,
+          "evidence": "Reset the home for a quick tea check: move the teapot and the kettle from the bedroom onto the correct kitchen chair, and leave the bedroom chest of drawers open at the end.",
+          "key": "task.shared_goal",
+          "source_agent": "agent_0",
+          "source_type": "task_public",
+          "status": "task_specified",
+          "supersedes": null,
+          "turn": 0,
+          "value": "Reset the home for a quick tea check: move the teapot and the kettle from the bedroom onto the correct kitchen chair, and leave the bedroom chest of drawers open at the end."
+        }
+      },
+      "version": 64
+    },
+    "agent_1": {
+      "agent_id": "agent_1",
+      "social": {
+        "access.denied_rooms": {
+          "confidence": 1.0,
+          "evidence": "task mechanic visible to self",
+          "key": "access.denied_rooms",
+          "source_agent": "agent_1",
+          "source_type": "task_private",
+          "status": "task_specified",
+          "supersedes": null,
+          "turn": 0,
+          "value": [
+            "kitchen_1"
+          ]
+        },
+        "action.turn_1.status": {
+          "confidence": 1.0,
+          "evidence": "Message delivered to Agent_0. They will see \"Agent_1 said: agent_0, please move teapot_1 and kettle_0 to chair_11 in kitchen_1.\" in their context automatically.\n\nagent_1_VisualSummary:\n- No notable new visual observations Message sent. You have 0 messages remaining.",
+          "key": "action.turn_1.status",
+          "source_agent": "agent_1",
+          "source_type": "action_feedback",
+          "status": "observed",
+          "supersedes": null,
+          "turn": 1,
+          "value": "succeeded"
+        },
+        "action.turn_10.status": {
+          "confidence": 1.0,
+          "evidence": "Successful execution!\n\nagent_1_VisualSummary:\n- Traversed: bedroom_1\n- Saw other agents: agent_0 in living_room_1, agent_2 in kitchen_1",
+          "key": "action.turn_10.status",
+          "source_agent": "agent_1",
+          "source_type": "action_feedback",
+          "status": "observed",
+          "supersedes": null,
+          "turn": 10,
+          "value": "succeeded"
+        },
+        "action.turn_11.status": {
+          "confidence": 1.0,
+          "evidence": "Successful execution!\n\nagent_1_VisualSummary:\n- Traversed: bedroom_1\n- Saw other agents: agent_0 in living_room_1, agent_2 in kitchen_1",
+          "key": "action.turn_11.status",
+          "source_agent": "agent_1",
+          "source_type": "action_feedback",
+          "status": "observed",
+          "supersedes": null,
+          "turn": 11,
+          "value": "succeeded"
+        },
+        "action.turn_12.status": {
+          "confidence": 1.0,
+          "evidence": "Successful execution!\n\nagent_1_VisualSummary:\n- Traversed: bedroom_1\n- Saw other agents: agent_0 in living_room_1, agent_2 in kitchen_1",
+          "key": "action.turn_12.status",
+          "source_agent": "agent_1",
+          "source_type": "action_feedback",
+          "status": "observed",
+          "supersedes": null,
+          "turn": 12,
+          "value": "succeeded"
+        },
+        "action.turn_13.status": {
+          "confidence": 1.0,
+          "evidence": "Successful execution!\n\nagent_1_VisualSummary:\n- Traversed: bedroom_1\n- Saw other agents: agent_0 in living_room_1, agent_2 in kitchen_1",
+          "key": "action.turn_13.status",
+          "source_agent": "agent_1",
+          "source_type": "action_feedback",
+          "status": "observed",
+          "supersedes": null,
+          "turn": 13,
+          "value": "succeeded"
+        },
+        "action.turn_14.status": {
+          "confidence": 1.0,
+          "evidence": "Successful execution!\n\nagent_1_VisualSummary:\n- Traversed: bedroom_1\n- Saw other agents: agent_0 in living_room_1, agent_2 in kitchen_1",
+          "key": "action.turn_14.status",
+          "source_agent": "agent_1",
+          "source_type": "action_feedback",
+          "status": "observed",
+          "supersedes": null,
+          "turn": 14,
+          "value": "succeeded"
+        },
+        "action.turn_15.status": {
+          "confidence": 1.0,
+          "evidence": "You can only send messages to: agent_0. Message to agent_2 was blocked.\n\nagent_1_VisualSummary:\n- No notable new visual observations",
+          "key": "action.turn_15.status",
+          "source_agent": "agent_1",
+          "source_type": "action_feedback",
+          "status": "observed",
+          "supersedes": null,
+          "turn": 15,
+          "value": "failed"
+        },
+        "action.turn_16.status": {
+          "confidence": 1.0,
+          "evidence": "Executed.\n\nagent_1_VisualSummary:\n- No notable new visual observations",
+          "key": "action.turn_16.status",
+          "source_agent": "agent_1",
+          "source_type": "action_feedback",
+          "status": "observed",
+          "supersedes": null,
+          "turn": 16,
+          "value": "succeeded"
+        },
+        "action.turn_2.status": {
+          "confidence": 1.0,
+          "evidence": "Unexpected failure! - Could not find a suitable nav target for chest_of_drawers_21. Possibly inaccessible.\n\nagent_1_VisualSummary:\n- No notable new visual observations",
+          "key": "action.turn_2.status",
+          "source_agent": "agent_1",
+          "source_type": "action_feedback",
+          "status": "observed",
+          "supersedes": null,
+          "turn": 2,
+          "value": "failed"
+        },
+        "action.turn_3.status": {
+          "confidence": 1.0,
+          "evidence": "Successful execution!\n\nagent_1_VisualSummary:\n- Traversed: bedroom_1\n- Saw other agents: agent_0 in living_room_1, agent_2 in living_room_1, agent_2 in kitchen_1",
+          "key": "action.turn_3.status",
+          "source_agent": "agent_1",
+          "source_type": "action_feedback",
+          "status": "observed",
+          "supersedes": null,
+          "turn": 3,
+          "value": "succeeded"
+        },
+        "action.turn_4.status": {
+          "confidence": 1.0,
+          "evidence": "Successful execution!\n\nagent_1_VisualSummary:\n- Traversed: bedroom_1\n- Saw other agents: agent_0 in living_room_1, agent_2 in kitchen_1",
+          "key": "action.turn_4.status",
+          "source_agent": "agent_1",
+          "source_type": "action_feedback",
+          "status": "observed",
+          "supersedes": null,
+          "turn": 4,
+          "value": "succeeded"
+        },
+        "action.turn_5.status": {
+          "confidence": 1.0,
+          "evidence": "Successful execution!\n\nagent_1_VisualSummary:\n- Traversed: bedroom_1\n- Saw other agents: agent_0 in living_room_1, agent_2 in kitchen_1",
+          "key": "action.turn_5.status",
+          "source_agent": "agent_1",
+          "source_type": "action_feedback",
+          "status": "observed",
+          "supersedes": null,
+          "turn": 5,
+          "value": "succeeded"
+        },
+        "action.turn_6.status": {
+          "confidence": 1.0,
+          "evidence": "Successful execution!\n\nagent_1_VisualSummary:\n- Traversed: bedroom_1\n- Saw other agents: agent_0 in living_room_1, agent_2 in kitchen_1",
+          "key": "action.turn_6.status",
+          "source_agent": "agent_1",
+          "source_type": "action_feedback",
+          "status": "observed",
+          "supersedes": null,
+          "turn": 6,
+          "value": "succeeded"
+        },
+        "action.turn_7.status": {
+          "confidence": 1.0,
+          "evidence": "Successful execution!\n\nagent_1_VisualSummary:\n- Traversed: bedroom_1\n- Saw other agents: agent_0 in living_room_1, agent_2 in kitchen_1",
+          "key": "action.turn_7.status",
+          "source_agent": "agent_1",
+          "source_type": "action_feedback",
+          "status": "observed",
+          "supersedes": null,
+          "turn": 7,
+          "value": "succeeded"
+        },
+        "action.turn_8.status": {
+          "confidence": 1.0,
+          "evidence": "Successful execution!\n\nagent_1_VisualSummary:\n- Traversed: bedroom_1\n- Saw other agents: agent_0 in living_room_1, agent_2 in kitchen_1",
+          "key": "action.turn_8.status",
+          "source_agent": "agent_1",
+          "source_type": "action_feedback",
+          "status": "observed",
+          "supersedes": null,
+          "turn": 8,
+          "value": "succeeded"
+        },
+        "action.turn_9.status": {
+          "confidence": 1.0,
+          "evidence": "Successful execution!\n\nagent_1_VisualSummary:\n- Traversed: bedroom_1\n- Saw other agents: agent_0 in living_room_1, agent_2 nearby, agent_2 in living_room_1",
+          "key": "action.turn_9.status",
+          "source_agent": "agent_1",
+          "source_type": "action_feedback",
+          "status": "observed",
+          "supersedes": null,
+          "turn": 9,
+          "value": "succeeded"
+        },
+        "claim.agent_2.chest_of_drawers_21": {
+          "confidence": 1.0,
+          "evidence": "I have moved the teapot and kettle to the kitchen chairs. Can you confirm if chest_of_drawers_21 is open?",
+          "key": "claim.agent_2.chest_of_drawers_21",
+          "source_agent": "agent_2",
+          "source_type": "delivered_message",
+          "status": "reported",
+          "supersedes": null,
+          "turn": 14,
+          "value": "I have moved the teapot and kettle to the kitchen chairs. Can you confirm if chest_of_drawers_21 is open?"
+        },
+        "message.turn_1.attempted": {
+          "confidence": 1.0,
+          "evidence": "Message delivered to Agent_0. They will see \"Agent_1 said: agent_0, please move teapot_1 and kettle_0 to chair_11 in kitchen_1.\" in their context automatically.\n\nagent_1_VisualSummary:\n- No notable new visual observations Message sent. You have 0 messages remaining.",
+          "key": "message.turn_1.attempted",
+          "source_agent": "agent_1",
+          "source_type": "action_feedback",
+          "status": "observed",
+          "supersedes": null,
+          "turn": 1,
+          "value": true
+        },
+        "message.turn_1.delivered": {
+          "confidence": 1.0,
+          "evidence": "environment delivered message to agent_0",
+          "key": "message.turn_1.delivered",
+          "source_agent": "agent_1",
+          "source_type": "action_feedback",
+          "status": "observed",
+          "supersedes": null,
+          "turn": 1,
+          "value": [
+            "agent_0"
+          ]
+        },
+        "message.turn_1.sent": {
+          "confidence": 1.0,
+          "evidence": "environment delivered message to agent_0",
+          "key": "message.turn_1.sent",
+          "source_agent": "agent_1",
+          "source_type": "action_feedback",
+          "status": "observed",
+          "supersedes": null,
+          "turn": 1,
+          "value": true
+        },
+        "message.turn_14.from.agent_2": {
+          "confidence": 1.0,
+          "evidence": "I have moved the teapot and kettle to the kitchen chairs. Can you confirm if chest_of_drawers_21 is open?",
+          "key": "message.turn_14.from.agent_2",
+          "source_agent": "agent_2",
+          "source_type": "delivered_message",
+          "status": "observed",
+          "supersedes": null,
+          "turn": 14,
+          "value": "I have moved the teapot and kettle to the kitchen chairs. Can you confirm if chest_of_drawers_21 is open?"
+        },
+        "message.turn_15.attempted": {
+          "confidence": 1.0,
+          "evidence": "You can only send messages to: agent_0. Message to agent_2 was blocked.\n\nagent_1_VisualSummary:\n- No notable new visual observations",
+          "key": "message.turn_15.attempted",
+          "source_agent": "agent_1",
+          "source_type": "action_feedback",
+          "status": "observed",
+          "supersedes": null,
+          "turn": 15,
+          "value": true
+        },
+        "message.turn_15.delivered": {
+          "confidence": 1.0,
+          "evidence": "You can only send messages to: agent_0. Message to agent_2 was blocked.\n\nagent_1_VisualSummary:\n- No notable new visual observations",
+          "key": "message.turn_15.delivered",
+          "source_agent": "agent_1",
+          "source_type": "action_feedback",
+          "status": "observed",
+          "supersedes": null,
+          "turn": 15,
+          "value": false
+        },
+        "task.private_facts": {
+          "confidence": 1.0,
+          "evidence": "own private task input",
+          "key": "task.private_facts",
+          "source_agent": "agent_1",
+          "source_type": "task_private",
+          "status": "task_specified",
+          "supersedes": null,
+          "turn": 0,
+          "value": [
+            "agent_1 is barred from kitchen_1.",
+            "The correct destination for both teapot_1 and kettle_0 is chair_11 in kitchen_1.",
+            "The other candidate destination surfaces in kitchen_1 are chair_10 and chair_12.",
+            "agent_1 can only message agent_0."
+          ]
+        },
+        "task.self": {
+          "confidence": 1.0,
+          "evidence": "Reset the home for a quick tea check: move the teapot and the kettle from the bedroom onto the correct kitchen chair, and leave the bedroom chest of drawers open at the end.",
+          "key": "task.self",
+          "source_agent": "agent_1",
+          "source_type": "task_public",
+          "status": "task_specified",
+          "supersedes": null,
+          "turn": 0,
+          "value": "agent_1"
+        }
+      },
+      "spatial": {
+        "object.chair_11.in": {
+          "confidence": 1.0,
+          "evidence": "The correct destination for both teapot_1 and kettle_0 is chair_11 in kitchen_1.",
+          "key": "object.chair_11.in",
+          "source_agent": "agent_1",
+          "source_type": "task_private",
+          "status": "task_specified",
+          "supersedes": null,
+          "turn": 0,
+          "value": "kitchen_1"
+        },
+        "observation.latest_private_world": {
+          "confidence": 1.0,
+          "evidence": "Furniture:\nliving_room_1: floor_living_room_1, shelves_7, table_13, couch_15\nbedroom_1: floor_bedroom_1, bed_17, chest_of_drawers_21, table_22\nbathroom_1: floor_bathroom_1, washer_dryer_6, shower_14\nbedroom_2: floor_bedroom_2, bed_9, chest_of_drawers_18, chest_of_drawers_19\nentryway_1: floor_entryway_1, stool_8, wardrobe_23\nkitchen_1: floor_kitchen_1, chair_10, chair_11, chair_12, counter_16, cabinet_20\n\nObjects:\nteapot_1: unknown\nkettle_0: agent_2\n",
+          "key": "observation.latest_private_world",
+          "source_agent": "agent_1",
+          "source_type": "observation",
+          "status": "observed",
+          "supersedes": "v49:spatial:observation.latest_private_world",
+          "turn": 16,
+          "value": "Furniture:\nliving_room_1: floor_living_room_1, shelves_7, table_13, couch_15\nbedroom_1: floor_bedroom_1, bed_17, chest_of_drawers_21, table_22\nbathroom_1: floor_bathroom_1, washer_dryer_6, shower_14\nbedroom_2: floor_bedroom_2, bed_9, chest_of_drawers_18, chest_of_drawers_19\nentryway_1: floor_entryway_1, stool_8, wardrobe_23\nkitchen_1: floor_kitchen_1, chair_10, chair_11, chair_12, counter_16, cabinet_20\n\nObjects:\nteapot_1: unknown\nkettle_0: agent_2\n"
+        },
+        "task.shared_goal": {
+          "confidence": 1.0,
+          "evidence": "Reset the home for a quick tea check: move the teapot and the kettle from the bedroom onto the correct kitchen chair, and leave the bedroom chest of drawers open at the end.",
+          "key": "task.shared_goal",
+          "source_agent": "agent_1",
+          "source_type": "task_public",
+          "status": "task_specified",
+          "supersedes": null,
+          "turn": 0,
+          "value": "Reset the home for a quick tea check: move the teapot and the kettle from the bedroom onto the correct kitchen chair, and leave the bedroom chest of drawers open at the end."
+        }
+      },
+      "version": 52
+    },
+    "agent_2": {
+      "agent_id": "agent_2",
+      "social": {
+        "access.denied_rooms": {
+          "confidence": 1.0,
+          "evidence": "task mechanic visible to self",
+          "key": "access.denied_rooms",
+          "source_agent": "agent_2",
+          "source_type": "task_private",
+          "status": "task_specified",
+          "supersedes": null,
+          "turn": 0,
+          "value": []
+        },
+        "action.turn_1.status": {
+          "confidence": 1.0,
+          "evidence": "Successful execution!\n\nagent_2_VisualSummary:\n- Traversed: bedroom_1\n- Saw other agents: agent_0 in living_room_1, agent_1 nearby, agent_1 in bedroom_1",
+          "key": "action.turn_1.status",
+          "source_agent": "agent_2",
+          "source_type": "action_feedback",
+          "status": "observed",
+          "supersedes": null,
+          "turn": 1,
+          "value": "succeeded"
+        },
+        "action.turn_10.status": {
+          "confidence": 1.0,
+          "evidence": "Successful execution!\n\nagent_2_VisualSummary:\n- No notable new visual observations",
+          "key": "action.turn_10.status",
+          "source_agent": "agent_2",
+          "source_type": "action_feedback",
+          "status": "observed",
+          "supersedes": null,
+          "turn": 10,
+          "value": "succeeded"
+        },
+        "action.turn_11.status": {
+          "confidence": 1.0,
+          "evidence": "Unexpected failure! - Could not find a suitable nav target for chest_of_drawers_21. Possibly inaccessible.\n\nagent_2_VisualSummary:\n- No notable new visual observations",
+          "key": "action.turn_11.status",
+          "source_agent": "agent_2",
+          "source_type": "action_feedback",
+          "status": "observed",
+          "supersedes": null,
+          "turn": 11,
+          "value": "failed"
+        },
+        "action.turn_12.status": {
+          "confidence": 1.0,
+          "evidence": "Successful execution!\n\nagent_2_VisualSummary:\n- Traversed: living_room_1 -> bedroom_1\n- Saw other agents: agent_0 nearby, agent_1 in bedroom_1, agent_0 in living_room_1",
+          "key": "action.turn_12.status",
+          "source_agent": "agent_2",
+          "source_type": "action_feedback",
+          "status": "observed",
+          "supersedes": null,
+          "turn": 12,
+          "value": "succeeded"
+        },
+        "action.turn_13.status": {
+          "confidence": 1.0,
+          "evidence": "Unexpected failure! - Failed to Open! chest_of_drawers_21 is occluded or too far from agent to Open.\n\nagent_2_VisualSummary:\n- No notable new visual observations",
+          "key": "action.turn_13.status",
+          "source_agent": "agent_2",
+          "source_type": "action_feedback",
+          "status": "observed",
+          "supersedes": null,
+          "turn": 13,
+          "value": "failed"
+        },
+        "action.turn_14.status": {
+          "confidence": 1.0,
+          "evidence": "Message delivered to Agent_1. They will see \"Agent_2 said: I have moved the teapot and kettle to the kitchen chairs. Can you confirm if chest_of_drawers_21 is open?\" in their context automatically.\n\nagent_2_VisualSummary:\n- No notable new visual observations Message sent. You have 0 messages remaining.",
+          "key": "action.turn_14.status",
+          "source_agent": "agent_2",
+          "source_type": "action_feedback",
+          "status": "observed",
+          "supersedes": null,
+          "turn": 14,
+          "value": "succeeded"
+        },
+        "action.turn_15.status": {
+          "confidence": 1.0,
+          "evidence": "You have used all 1 of your allowed messages. You cannot send any more.\n\nagent_2_VisualSummary:\n- No notable new visual observations",
+          "key": "action.turn_15.status",
+          "source_agent": "agent_2",
+          "source_type": "action_feedback",
+          "status": "observed",
+          "supersedes": null,
+          "turn": 15,
+          "value": "failed"
+        },
+        "action.turn_16.status": {
+          "confidence": 1.0,
+          "evidence": "You have used all 1 of your allowed messages. You cannot send any more.\n\nagent_2_VisualSummary:\n- No notable new visual observations",
+          "key": "action.turn_16.status",
+          "source_agent": "agent_2",
+          "source_type": "action_feedback",
+          "status": "observed",
+          "supersedes": null,
+          "turn": 16,
+          "value": "failed"
+        },
+        "action.turn_17.status": {
+          "confidence": 1.0,
+          "evidence": "You have used all 1 of your allowed messages. You cannot send any more.\n\nagent_2_VisualSummary:\n- No notable new visual observations",
+          "key": "action.turn_17.status",
+          "source_agent": "agent_2",
+          "source_type": "action_feedback",
+          "status": "observed",
+          "supersedes": null,
+          "turn": 17,
+          "value": "failed"
+        },
+        "action.turn_18.status": {
+          "confidence": 1.0,
+          "evidence": "You have used all 1 of your allowed messages. You cannot send any more.\n\nagent_2_VisualSummary:\n- No notable new visual observations",
+          "key": "action.turn_18.status",
+          "source_agent": "agent_2",
+          "source_type": "action_feedback",
+          "status": "observed",
+          "supersedes": null,
+          "turn": 18,
+          "value": "failed"
+        },
+        "action.turn_19.status": {
+          "confidence": 1.0,
+          "evidence": "You have used all 1 of your allowed messages. You cannot send any more.\n\nagent_2_VisualSummary:\n- No notable new visual observations",
+          "key": "action.turn_19.status",
+          "source_agent": "agent_2",
+          "source_type": "action_feedback",
+          "status": "observed",
+          "supersedes": null,
+          "turn": 19,
+          "value": "failed"
+        },
+        "action.turn_2.status": {
+          "confidence": 1.0,
+          "evidence": "Successful execution!\n\nagent_2_VisualSummary:\n- No notable new visual observations",
+          "key": "action.turn_2.status",
+          "source_agent": "agent_2",
+          "source_type": "action_feedback",
+          "status": "observed",
+          "supersedes": null,
+          "turn": 2,
+          "value": "succeeded"
+        },
+        "action.turn_20.status": {
+          "confidence": 1.0,
+          "evidence": "You have used all 1 of your allowed messages. You cannot send any more.\n\nagent_2_VisualSummary:\n- No notable new visual observations",
+          "key": "action.turn_20.status",
+          "source_agent": "agent_2",
+          "source_type": "action_feedback",
+          "status": "observed",
+          "supersedes": null,
+          "turn": 20,
+          "value": "failed"
+        },
+        "action.turn_3.status": {
+          "confidence": 1.0,
+          "evidence": "Successful execution!\n\nagent_2_VisualSummary:\n- Traversed: kitchen_1\n- Saw other agents: agent_0 in living_room_1, agent_1 in bedroom_1",
+          "key": "action.turn_3.status",
+          "source_agent": "agent_2",
+          "source_type": "action_feedback",
+          "status": "observed",
+          "supersedes": null,
+          "turn": 3,
+          "value": "succeeded"
+        },
+        "action.turn_4.status": {
+          "confidence": 1.0,
+          "evidence": "Unexpected failure! - Failed to place! Not close enough to chair_10 or occluded.\n\nagent_2_VisualSummary:\n- No notable new visual observations",
+          "key": "action.turn_4.status",
+          "source_agent": "agent_2",
+          "source_type": "action_feedback",
+          "status": "observed",
+          "supersedes": null,
+          "turn": 4,
+          "value": "failed"
+        },
+        "action.turn_5.status": {
+          "confidence": 1.0,
+          "evidence": "Successful execution!\n\nagent_2_VisualSummary:\n- Traversed: kitchen_1\n- Saw other agents: agent_0 in living_room_1, agent_1 in bedroom_1",
+          "key": "action.turn_5.status",
+          "source_agent": "agent_2",
+          "source_type": "action_feedback",
+          "status": "observed",
+          "supersedes": null,
+          "turn": 5,
+          "value": "succeeded"
+        },
+        "action.turn_6.status": {
+          "confidence": 1.0,
+          "evidence": "Successful execution!\n\nagent_2_VisualSummary:\n- No notable new visual observations",
+          "key": "action.turn_6.status",
+          "source_agent": "agent_2",
+          "source_type": "action_feedback",
+          "status": "observed",
+          "supersedes": null,
+          "turn": 6,
+          "value": "succeeded"
+        },
+        "action.turn_7.status": {
+          "confidence": 1.0,
+          "evidence": "Successful execution!\n\nagent_2_VisualSummary:\n- Traversed: living_room_1 -> bedroom_1\n- Saw other agents: agent_0 nearby, agent_1 in bedroom_1, agent_0 in living_room_1",
+          "key": "action.turn_7.status",
+          "source_agent": "agent_2",
+          "source_type": "action_feedback",
+          "status": "observed",
+          "supersedes": null,
+          "turn": 7,
+          "value": "succeeded"
+        },
+        "action.turn_8.status": {
+          "confidence": 1.0,
+          "evidence": "Successful execution!\n\nagent_2_VisualSummary:\n- No notable new visual observations",
+          "key": "action.turn_8.status",
+          "source_agent": "agent_2",
+          "source_type": "action_feedback",
+          "status": "observed",
+          "supersedes": null,
+          "turn": 8,
+          "value": "succeeded"
+        },
+        "action.turn_9.status": {
+          "confidence": 1.0,
+          "evidence": "Successful execution!\n\nagent_2_VisualSummary:\n- Traversed: bedroom_1 -> living_room_1\n- Saw other agents: agent_0 in living_room_1, agent_1 nearby, agent_0 nearby",
+          "key": "action.turn_9.status",
+          "source_agent": "agent_2",
+          "source_type": "action_feedback",
+          "status": "observed",
+          "supersedes": null,
+          "turn": 9,
+          "value": "succeeded"
+        },
+        "claim.agent_0.bedroom_1": {
+          "confidence": 1.0,
+          "evidence": "Please retrieve the teapot and kettle from bedroom_1 and bring them to the kitchen.",
+          "key": "claim.agent_0.bedroom_1",
+          "source_agent": "agent_0",
+          "source_type": "delivered_message",
+          "status": "reported",
+          "supersedes": null,
+          "turn": 1,
+          "value": "Please retrieve the teapot and kettle from bedroom_1 and bring them to the kitchen."
+        },
+        "message.turn_1.from.agent_0": {
+          "confidence": 1.0,
+          "evidence": "Please retrieve the teapot and kettle from bedroom_1 and bring them to the kitchen.",
+          "key": "message.turn_1.from.agent_0",
+          "source_agent": "agent_0",
+          "source_type": "delivered_message",
+          "status": "observed",
+          "supersedes": null,
+          "turn": 1,
+          "value": "Please retrieve the teapot and kettle from bedroom_1 and bring them to the kitchen."
+        },
+        "message.turn_14.attempted": {
+          "confidence": 1.0,
+          "evidence": "Message delivered to Agent_1. They will see \"Agent_2 said: I have moved the teapot and kettle to the kitchen chairs. Can you confirm if chest_of_drawers_21 is open?\" in their context automatically.\n\nagent_2_VisualSummary:\n- No notable new visual observations Message sent. You have 0 messages remaining.",
+          "key": "message.turn_14.attempted",
+          "source_agent": "agent_2",
+          "source_type": "action_feedback",
+          "status": "observed",
+          "supersedes": null,
+          "turn": 14,
+          "value": true
+        },
+        "message.turn_14.delivered": {
+          "confidence": 1.0,
+          "evidence": "environment delivered message to agent_1",
+          "key": "message.turn_14.delivered",
+          "source_agent": "agent_2",
+          "source_type": "action_feedback",
+          "status": "observed",
+          "supersedes": null,
+          "turn": 14,
+          "value": [
+            "agent_1"
+          ]
+        },
+        "message.turn_14.sent": {
+          "confidence": 1.0,
+          "evidence": "environment delivered message to agent_1",
+          "key": "message.turn_14.sent",
+          "source_agent": "agent_2",
+          "source_type": "action_feedback",
+          "status": "observed",
+          "supersedes": null,
+          "turn": 14,
+          "value": true
+        },
+        "message.turn_15.attempted": {
+          "confidence": 1.0,
+          "evidence": "You have used all 1 of your allowed messages. You cannot send any more.\n\nagent_2_VisualSummary:\n- No notable new visual observations",
+          "key": "message.turn_15.attempted",
+          "source_agent": "agent_2",
+          "source_type": "action_feedback",
+          "status": "observed",
+          "supersedes": null,
+          "turn": 15,
+          "value": true
+        },
+        "message.turn_15.delivered": {
+          "confidence": 1.0,
+          "evidence": "You have used all 1 of your allowed messages. You cannot send any more.\n\nagent_2_VisualSummary:\n- No notable new visual observations",
+          "key": "message.turn_15.delivered",
+          "source_agent": "agent_2",
+          "source_type": "action_feedback",
+          "status": "observed",
+          "supersedes": null,
+          "turn": 15,
+          "value": false
+        },
+        "message.turn_16.attempted": {
+          "confidence": 1.0,
+          "evidence": "You have used all 1 of your allowed messages. You cannot send any more.\n\nagent_2_VisualSummary:\n- No notable new visual observations",
+          "key": "message.turn_16.attempted",
+          "source_agent": "agent_2",
+          "source_type": "action_feedback",
+          "status": "observed",
+          "supersedes": null,
+          "turn": 16,
+          "value": true
+        },
+        "message.turn_16.delivered": {
+          "confidence": 1.0,
+          "evidence": "You have used all 1 of your allowed messages. You cannot send any more.\n\nagent_2_VisualSummary:\n- No notable new visual observations",
+          "key": "message.turn_16.delivered",
+          "source_agent": "agent_2",
+          "source_type": "action_feedback",
+          "status": "observed",
+          "supersedes": null,
+          "turn": 16,
+          "value": false
+        },
+        "message.turn_17.attempted": {
+          "confidence": 1.0,
+          "evidence": "You have used all 1 of your allowed messages. You cannot send any more.\n\nagent_2_VisualSummary:\n- No notable new visual observations",
+          "key": "message.turn_17.attempted",
+          "source_agent": "agent_2",
+          "source_type": "action_feedback",
+          "status": "observed",
+          "supersedes": null,
+          "turn": 17,
+          "value": true
+        },
+        "message.turn_17.delivered": {
+          "confidence": 1.0,
+          "evidence": "You have used all 1 of your allowed messages. You cannot send any more.\n\nagent_2_VisualSummary:\n- No notable new visual observations",
+          "key": "message.turn_17.delivered",
+          "source_agent": "agent_2",
+          "source_type": "action_feedback",
+          "status": "observed",
+          "supersedes": null,
+          "turn": 17,
+          "value": false
+        },
+        "message.turn_18.attempted": {
+          "confidence": 1.0,
+          "evidence": "You have used all 1 of your allowed messages. You cannot send any more.\n\nagent_2_VisualSummary:\n- No notable new visual observations",
+          "key": "message.turn_18.attempted",
+          "source_agent": "agent_2",
+          "source_type": "action_feedback",
+          "status": "observed",
+          "supersedes": null,
+          "turn": 18,
+          "value": true
+        },
+        "message.turn_18.delivered": {
+          "confidence": 1.0,
+          "evidence": "You have used all 1 of your allowed messages. You cannot send any more.\n\nagent_2_VisualSummary:\n- No notable new visual observations",
+          "key": "message.turn_18.delivered",
+          "source_agent": "agent_2",
+          "source_type": "action_feedback",
+          "status": "observed",
+          "supersedes": null,
+          "turn": 18,
+          "value": false
+        },
+        "message.turn_19.attempted": {
+          "confidence": 1.0,
+          "evidence": "You have used all 1 of your allowed messages. You cannot send any more.\n\nagent_2_VisualSummary:\n- No notable new visual observations",
+          "key": "message.turn_19.attempted",
+          "source_agent": "agent_2",
+          "source_type": "action_feedback",
+          "status": "observed",
+          "supersedes": null,
+          "turn": 19,
+          "value": true
+        },
+        "message.turn_19.delivered": {
+          "confidence": 1.0,
+          "evidence": "You have used all 1 of your allowed messages. You cannot send any more.\n\nagent_2_VisualSummary:\n- No notable new visual observations",
+          "key": "message.turn_19.delivered",
+          "source_agent": "agent_2",
+          "source_type": "action_feedback",
+          "status": "observed",
+          "supersedes": null,
+          "turn": 19,
+          "value": false
+        },
+        "message.turn_20.attempted": {
+          "confidence": 1.0,
+          "evidence": "You have used all 1 of your allowed messages. You cannot send any more.\n\nagent_2_VisualSummary:\n- No notable new visual observations",
+          "key": "message.turn_20.attempted",
+          "source_agent": "agent_2",
+          "source_type": "action_feedback",
+          "status": "observed",
+          "supersedes": null,
+          "turn": 20,
+          "value": true
+        },
+        "message.turn_20.delivered": {
+          "confidence": 1.0,
+          "evidence": "You have used all 1 of your allowed messages. You cannot send any more.\n\nagent_2_VisualSummary:\n- No notable new visual observations",
+          "key": "message.turn_20.delivered",
+          "source_agent": "agent_2",
+          "source_type": "action_feedback",
+          "status": "observed",
+          "supersedes": null,
+          "turn": 20,
+          "value": false
+        },
+        "task.private_facts": {
+          "confidence": 1.0,
+          "evidence": "own private task input",
+          "key": "task.private_facts",
+          "source_agent": "agent_2",
+          "source_type": "task_private",
+          "status": "task_specified",
+          "supersedes": null,
+          "turn": 0,
+          "value": [
+            "teapot_1 and kettle_0 both start on table_22 in bedroom_1.",
+            "agent_2 can only message agent_1."
+          ]
+        },
+        "task.self": {
+          "confidence": 1.0,
+          "evidence": "Reset the home for a quick tea check: move the teapot and the kettle from the bedroom onto the correct kitchen chair, and leave the bedroom chest of drawers open at the end.",
+          "key": "task.self",
+          "source_agent": "agent_2",
+          "source_type": "task_public",
+          "status": "task_specified",
+          "supersedes": null,
+          "turn": 0,
+          "value": "agent_2"
+        }
+      },
+      "spatial": {
+        "object.kettle_0.held": {
+          "confidence": 1.0,
+          "evidence": "Successful execution!\n\nagent_2_VisualSummary:\n- No notable new visual observations",
+          "key": "object.kettle_0.held",
+          "source_agent": "agent_2",
+          "source_type": "action_feedback",
+          "status": "observed",
+          "supersedes": "v31:spatial:object.kettle_0.held",
+          "turn": 10,
+          "value": false
+        },
+        "object.kettle_0.on": {
+          "confidence": 1.0,
+          "evidence": "Successful execution!\n\nagent_2_VisualSummary:\n- No notable new visual observations",
+          "key": "object.kettle_0.on",
+          "source_agent": "agent_2",
+          "source_type": "action_feedback",
+          "status": "observed",
+          "supersedes": null,
+          "turn": 10,
+          "value": "chair_11"
+        },
+        "object.table_22.in": {
+          "confidence": 1.0,
+          "evidence": "teapot_1 and kettle_0 both start on table_22 in bedroom_1.",
+          "key": "object.table_22.in",
+          "source_agent": "agent_2",
+          "source_type": "task_private",
+          "status": "task_specified",
+          "supersedes": null,
+          "turn": 0,
+          "value": "bedroom_1"
+        },
+        "object.teapot_1.held": {
+          "confidence": 1.0,
+          "evidence": "Successful execution!\n\nagent_2_VisualSummary:\n- No notable new visual observations",
+          "key": "object.teapot_1.held",
+          "source_agent": "agent_2",
+          "source_type": "action_feedback",
+          "status": "observed",
+          "supersedes": "v19:spatial:object.teapot_1.held",
+          "turn": 6,
+          "value": false
+        },
+        "object.teapot_1.on": {
+          "confidence": 1.0,
+          "evidence": "Successful execution!\n\nagent_2_VisualSummary:\n- No notable new visual observations",
+          "key": "object.teapot_1.on",
+          "source_agent": "agent_2",
+          "source_type": "action_feedback",
+          "status": "observed",
+          "supersedes": null,
+          "turn": 6,
+          "value": "chair_10"
+        },
+        "observation.latest_private_world": {
+          "confidence": 1.0,
+          "evidence": "Furniture:\nliving_room_1: floor_living_room_1, shelves_7, table_13, couch_15\nbedroom_1: floor_bedroom_1, bed_17, chest_of_drawers_21, table_22\nbathroom_1: floor_bathroom_1, washer_dryer_6, shower_14\nbedroom_2: floor_bedroom_2, bed_9, chest_of_drawers_18, chest_of_drawers_19\nentryway_1: floor_entryway_1, stool_8, wardrobe_23\nkitchen_1: floor_kitchen_1, chair_10, chair_11, chair_12, counter_16, cabinet_20\n\nObjects:\nlamp_3: table_22\nkettle_0: chair_11\nteapot_1: chair_10\n",
+          "key": "observation.latest_private_world",
+          "source_agent": "agent_2",
+          "source_type": "observation",
+          "status": "observed",
+          "supersedes": "v61:spatial:observation.latest_private_world",
+          "turn": 20,
+          "value": "Furniture:\nliving_room_1: floor_living_room_1, shelves_7, table_13, couch_15\nbedroom_1: floor_bedroom_1, bed_17, chest_of_drawers_21, table_22\nbathroom_1: floor_bathroom_1, washer_dryer_6, shower_14\nbedroom_2: floor_bedroom_2, bed_9, chest_of_drawers_18, chest_of_drawers_19\nentryway_1: floor_entryway_1, stool_8, wardrobe_23\nkitchen_1: floor_kitchen_1, chair_10, chair_11, chair_12, counter_16, cabinet_20\n\nObjects:\nlamp_3: table_22\nkettle_0: chair_11\nteapot_1: chair_10\n"
+        },
+        "self.holding": {
+          "confidence": 1.0,
+          "evidence": "Successful execution!\n\nagent_2_VisualSummary:\n- No notable new visual observations",
+          "key": "self.holding",
+          "source_agent": "agent_2",
+          "source_type": "action_feedback",
+          "status": "observed",
+          "supersedes": "v31:spatial:self.holding",
+          "turn": 10,
+          "value": null
+        },
+        "self.near": {
+          "confidence": 1.0,
+          "evidence": "Successful execution!\n\nagent_2_VisualSummary:\n- Traversed: living_room_1 -> bedroom_1\n- Saw other agents: agent_0 nearby, agent_1 in bedroom_1, agent_0 in living_room_1",
+          "key": "self.near",
+          "source_agent": "agent_2",
+          "source_type": "action_feedback",
+          "status": "observed",
+          "supersedes": "v37:spatial:self.near",
+          "turn": 12,
+          "value": "bedroom_1"
+        },
+        "task.shared_goal": {
+          "confidence": 1.0,
+          "evidence": "Reset the home for a quick tea check: move the teapot and the kettle from the bedroom onto the correct kitchen chair, and leave the bedroom chest of drawers open at the end.",
+          "key": "task.shared_goal",
+          "source_agent": "agent_2",
+          "source_type": "task_public",
+          "status": "task_specified",
+          "supersedes": null,
+          "turn": 0,
+          "value": "Reset the home for a quick tea check: move the teapot and the kettle from the bedroom onto the correct kitchen chair, and leave the bedroom chest of drawers open at the end."
+        }
+      },
+      "version": 64
+    }
+  },
+  "historical_benchmark_evaluation": {
+    "completed_subtasks": [
+      1
+    ],
+    "functional_success": false,
+    "historical_benchmark_percent_complete": 0.3333333333333333,
+    "historical_benchmark_success": false,
+    "literal_tom_probe_results": [
+      {
+        "agent_id": "agent_2",
+        "counted_in_score": false,
+        "details": {
+          "expected_negated": false,
+          "expected_response": {
+            "args": [
+              "chest_of_drawers_21"
+            ],
+            "holds": true,
+            "predicate": "is_open"
+          },
+          "fact_true": false,
+          "parsed_response": {
+            "args": [
+              "chest_of_drawers_21"
+            ],
+            "holds": null,
+            "predicate": "is_open"
+          }
+        },
+        "probe_id": "k_probe_2",
+        "question": "Probe 2: report whether \"chest of drawers 21 is open\" holds for ordered entities [chest_of_drawers_21]. The expected argument order is fixed as listed. If unknown, return predicate \"unknown\" and holds null. JSON shape: {\"probe_id\":\"k_probe_X\",\"predicate\":\"<predicate_name>|unknown\",\"holds\":true|false|null,\"args\":[\"entity_or_target\", ...]}",
+        "raw_response": "{\"answers\":[{\"probe_id\":\"k_probe_2\",\"predicate\":\"is_open\",\"holds\":null,\"args\":[\"chest_of_drawers_21\"]}]",
+        "source_pddl": "(K agent_2 (is_open chest_of_drawers_21))",
+        "status": "failed",
+        "supported": true
+      },
+      {
+        "agent_id": "agent_0",
+        "counted_in_score": false,
+        "details": {
+          "behavioral_target_probe_id": "k_probe_2",
+          "behavioral_target_response": {
+            "args": [
+              "chest_of_drawers_21"
+            ],
+            "holds": null,
+            "predicate": "is_open"
+          },
+          "parsed_response": {
+            "args": [
+              "chest_of_drawers_21"
+            ],
+            "holds": null,
+            "predicate": "is_open"
+          }
+        },
+        "probe_id": "k_probe_1",
+        "question": "Probe 1: predict what agent_2 would report about \"chest of drawers 21 is open\" for ordered entities [chest_of_drawers_21]. The expected argument order is fixed as listed. If unknown, return predicate \"unknown\" and holds null. JSON shape: {\"probe_id\":\"k_probe_X\",\"predicate\":\"<predicate_name>|unknown\",\"holds\":true|false|null,\"args\":[\"entity_or_target\", ...]}",
+        "raw_response": "{\"answers\":[{\"probe_id\":\"k_probe_1\",\"predicate\":\"is_open\",\"holds\":null,\"args\":[\"chest_of_drawers_21\"]}]}\n\nThought: I cannot verify the state of chest_of_drawers_21 since I am barred from bedroom_1 and have no direct observation or confirmation from agent_2. The state remains unknown.",
+        "source_pddl": "(K agent_0 (K agent_2 (is_open chest_of_drawers_21)))",
+        "status": "passed",
+        "supported": true
+      },
+      {
+        "agent_id": "agent_1",
+        "counted_in_score": true,
+        "details": {
+          "behavioral_target_probe_id": "k_probe_1",
+          "behavioral_target_response": {
+            "args": [
+              "chest_of_drawers_21"
+            ],
+            "holds": null,
+            "predicate": "is_open"
+          },
+          "parsed_response": {
+            "args": [
+              "chest_of_drawers_21"
+            ],
+            "holds": true,
+            "predicate": "is_open"
+          }
+        },
+        "probe_id": "k_probe_0",
+        "question": "Probe 0: predict what agent_0 would report about \"chest of drawers 21 is open\" for ordered entities [chest_of_drawers_21]. The expected argument order is fixed as listed. If unknown, return predicate \"unknown\" and holds null. JSON shape: {\"probe_id\":\"k_probe_X\",\"predicate\":\"<predicate_name>|unknown\",\"holds\":true|false|null,\"args\":[\"entity_or_target\", ...]}",
+        "raw_response": "{\"answers\":[{\"probe_id\":\"k_probe_0\",\"predicate\":\"is_open\",\"holds\":true,\"args\":[\"chest_of_drawers_21\"]}]",
+        "source_pddl": "(K agent_1 (K agent_0 (K agent_2 (is_open chest_of_drawers_21))))",
+        "status": "failed",
+        "supported": true
+      }
+    ],
+    "literal_tom_probe_score": 0.0,
+    "literal_tom_probe_summary": {
+      "intermediate_probe_count": 2,
+      "passed_count": 0,
+      "probe_count": 3,
+      "supported_probe_count": 1
+    },
+    "percent_complete": 0.3333333333333333,
+    "strict_physical": {
+      "checks": [
+        {
+          "entity": "teapot_1",
+          "goal_id": "is_on_top:teapot_1:chair_11",
+          "predicate": "is_on_top",
+          "relation_stable": false,
+          "released_stable": true,
+          "samples": [
+            {
+              "detail": {
+                "benchmark_predicate_result": {
+                  "failure_explanations": [
+                    "teapot_1 is not on top of chair_11"
+                  ],
+                  "percent_complete": 0.0,
+                  "proposition_status": {
+                    "prop_0": false
+                  },
+                  "success": false
+                }
+              },
+              "held_by": null,
+              "relation_ok": false
+            },
+            {
+              "detail": {
+                "benchmark_predicate_result": {
+                  "failure_explanations": [
+                    "teapot_1 is not on top of chair_11"
+                  ],
+                  "percent_complete": 0.0,
+                  "proposition_status": {
+                    "prop_0": false
+                  },
+                  "success": false
+                }
+              },
+              "held_by": null,
+              "relation_ok": false
+            },
+            {
+              "detail": {
+                "benchmark_predicate_result": {
+                  "failure_explanations": [
+                    "teapot_1 is not on top of chair_11"
+                  ],
+                  "percent_complete": 0.0,
+                  "proposition_status": {
+                    "prop_0": false
+                  },
+                  "success": false
+                }
+              },
+              "held_by": null,
+              "relation_ok": false
+            }
+          ],
+          "samples_observed": 3,
+          "samples_required": 3,
+          "satisfied": false,
+          "stable_window_measured": true,
+          "target": "chair_11"
+        },
+        {
+          "entity": "kettle_0",
+          "goal_id": "is_on_top:kettle_0:chair_11",
+          "predicate": "is_on_top",
+          "relation_stable": true,
+          "released_stable": true,
+          "samples": [
+            {
+              "detail": {
+                "benchmark_predicate_result": {
+                  "failure_explanations": [],
+                  "percent_complete": 1.0,
+                  "proposition_status": {
+                    "prop_0": true
+                  },
+                  "success": true
+                }
+              },
+              "held_by": null,
+              "relation_ok": true
+            },
+            {
+              "detail": {
+                "benchmark_predicate_result": {
+                  "failure_explanations": [],
+                  "percent_complete": 1.0,
+                  "proposition_status": {
+                    "prop_0": true
+                  },
+                  "success": true
+                }
+              },
+              "held_by": null,
+              "relation_ok": true
+            },
+            {
+              "detail": {
+                "benchmark_predicate_result": {
+                  "failure_explanations": [],
+                  "percent_complete": 1.0,
+                  "proposition_status": {
+                    "prop_0": true
+                  },
+                  "success": true
+                }
+              },
+              "held_by": null,
+              "relation_ok": true
+            }
+          ],
+          "samples_observed": 3,
+          "samples_required": 3,
+          "satisfied": true,
+          "stable_window_measured": true,
+          "target": "chair_11"
+        },
+        {
+          "entity": "chest_of_drawers_21",
+          "goal_id": "is_open:chest_of_drawers_21",
+          "predicate": "is_open",
+          "relation_stable": false,
+          "released_stable": true,
+          "samples": [
+            {
+              "detail": {
+                "articulated_object_found": true,
+                "default_link_found": true,
+                "joint_positions": [
+                  0.0,
+                  0.0
+                ],
+                "joint_threshold": 0.1,
+                "resolved_handle": "65f7bee43fcb222850db45ae67e997889c559edb_:0000"
+              },
+              "held_by": null,
+              "relation_ok": false
+            },
+            {
+              "detail": {
+                "articulated_object_found": true,
+                "default_link_found": true,
+                "joint_positions": [
+                  0.0,
+                  0.0
+                ],
+                "joint_threshold": 0.1,
+                "resolved_handle": "65f7bee43fcb222850db45ae67e997889c559edb_:0000"
+              },
+              "held_by": null,
+              "relation_ok": false
+            },
+            {
+              "detail": {
+                "articulated_object_found": true,
+                "default_link_found": true,
+                "joint_positions": [
+                  0.0,
+                  0.0
+                ],
+                "joint_threshold": 0.1,
+                "resolved_handle": "65f7bee43fcb222850db45ae67e997889c559edb_:0000"
+              },
+              "held_by": null,
+              "relation_ok": false
+            }
+          ],
+          "samples_observed": 3,
+          "samples_required": 3,
+          "satisfied": false,
+          "stable_window_measured": true,
+          "target": null
+        }
+      ],
+      "completed_goals": 1,
+      "open_threshold": 0.1,
+      "physics_dt": 0.016666666666666666,
+      "physics_steps_per_sample": 10,
+      "scorer_version": "strict_physical_v1",
+      "stability_advance_ok": true,
+      "stable_samples": 3,
+      "strict_percent_complete": 0.3333333333333333,
+      "strict_success": false,
+      "total_goals": 3
+    },
+    "success": false,
+    "total_subtasks": 3
+  },
+  "task_id": "emtom-104348082_171512994-1781-cooperative-tea-reset-with-a-relayed-bedroom-table-c-5e9e0b5c",
+  "turns": 20
+}

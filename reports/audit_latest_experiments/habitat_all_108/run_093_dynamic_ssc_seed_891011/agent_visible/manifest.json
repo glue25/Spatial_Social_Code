@@ -1,0 +1,26 @@
+{
+  "agent_ids": [
+    "agent_0",
+    "agent_1"
+  ],
+  "budgets": {
+    "aggregate_api_calls": "measured_not_assumed",
+    "communication": "task-defined",
+    "environment_turns": 20,
+    "tokens": "provider_usage_log"
+  },
+  "common_guidance_sha256": "dbfcc2d913b12946f5a1c6fd6e9143db82a099f30209ec990ae4d0aff5339617",
+  "completed_utc": "2026-09-12T20:54:40.068331+00:00",
+  "condition": "dynamic_ssc",
+  "config_sha256": "ad53e72d3c8a57c2ea3d068fb49821f5f1fd49a29dbd6fd9c5e01e74086b4731",
+  "created_utc": "2026-09-12T20:50:59.488096+00:00",
+  "episode_id": "1566",
+  "model": "qwen3-vl-8b-instruct",
+  "model_checkpoint": "$MODEL_ROOT/Qwen3-VL-8B-Instruct",
+  "python": "3.9.2",
+  "scene_id": "108294897_176710602",
+  "schema_version": "habitat_closed_loop_v1",
+  "seed": "891011",
+  "status": "completed",
+  "task_id": "emtom-108294897_176710602-1566-mixed-safety-prep-with-a-private-checklist-ite-2016757d"
+}

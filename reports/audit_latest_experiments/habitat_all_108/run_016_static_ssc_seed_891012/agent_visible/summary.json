@@ -1,0 +1,421 @@
+{
+  "condition": "static_ssc",
+  "done": false,
+  "final_states": {
+    "agent_0": {
+      "agent_id": "agent_0",
+      "social": {
+        "access.denied_rooms": {
+          "confidence": 1.0,
+          "evidence": "task mechanic visible to self",
+          "key": "access.denied_rooms",
+          "source_agent": "agent_0",
+          "source_type": "task_private",
+          "status": "task_specified",
+          "supersedes": null,
+          "turn": 0,
+          "value": [
+            "bedroom_1"
+          ]
+        },
+        "task.private_facts": {
+          "confidence": 1.0,
+          "evidence": "own private task input",
+          "key": "task.private_facts",
+          "source_agent": "agent_0",
+          "source_type": "task_private",
+          "status": "task_specified",
+          "supersedes": null,
+          "turn": 0,
+          "value": [
+            "You are barred from bedroom_1.",
+            "The vase is in kitchen_1 on top of cabinet_20.",
+            "The correct destination surface for the vase is the table in bedroom_1.",
+            "Interacting with table_13 in living_room_1 remotely causes chest_of_drawers_21 in bedroom_1 to become open."
+          ]
+        },
+        "task.self": {
+          "confidence": 1.0,
+          "evidence": "You are preparing the apartment for a quick inspection. As a team, do ALL of the following: (1) move the vase onto the bedroom-1 table, (2) leave the bedroom-1 chest of drawers open, and (3) leave the multiport hub on the living-room shelves.",
+          "key": "task.self",
+          "source_agent": "agent_0",
+          "source_type": "task_public",
+          "status": "task_specified",
+          "supersedes": null,
+          "turn": 0,
+          "value": "agent_0"
+        }
+      },
+      "spatial": {
+        "object.chest_of_drawers_21.in": {
+          "confidence": 1.0,
+          "evidence": "Interacting with table_13 in living_room_1 remotely causes chest_of_drawers_21 in bedroom_1 to become open.",
+          "key": "object.chest_of_drawers_21.in",
+          "source_agent": "agent_0",
+          "source_type": "task_private",
+          "status": "task_specified",
+          "supersedes": null,
+          "turn": 0,
+          "value": "bedroom_1"
+        },
+        "object.table_13.in": {
+          "confidence": 1.0,
+          "evidence": "Interacting with table_13 in living_room_1 remotely causes chest_of_drawers_21 in bedroom_1 to become open.",
+          "key": "object.table_13.in",
+          "source_agent": "agent_0",
+          "source_type": "task_private",
+          "status": "task_specified",
+          "supersedes": null,
+          "turn": 0,
+          "value": "living_room_1"
+        },
+        "task.shared_goal": {
+          "confidence": 1.0,
+          "evidence": "You are preparing the apartment for a quick inspection. As a team, do ALL of the following: (1) move the vase onto the bedroom-1 table, (2) leave the bedroom-1 chest of drawers open, and (3) leave the multiport hub on the living-room shelves.",
+          "key": "task.shared_goal",
+          "source_agent": "agent_0",
+          "source_type": "task_public",
+          "status": "task_specified",
+          "supersedes": null,
+          "turn": 0,
+          "value": "You are preparing the apartment for a quick inspection. As a team, do ALL of the following: (1) move the vase onto the bedroom-1 table, (2) leave the bedroom-1 chest of drawers open, and (3) leave the multiport hub on the living-room shelves."
+        }
+      },
+      "version": 2
+    },
+    "agent_1": {
+      "agent_id": "agent_1",
+      "social": {
+        "access.denied_rooms": {
+          "confidence": 1.0,
+          "evidence": "task mechanic visible to self",
+          "key": "access.denied_rooms",
+          "source_agent": "agent_1",
+          "source_type": "task_private",
+          "status": "task_specified",
+          "supersedes": null,
+          "turn": 0,
+          "value": [
+            "living_room_1"
+          ]
+        },
+        "task.private_facts": {
+          "confidence": 1.0,
+          "evidence": "own private task input",
+          "key": "task.private_facts",
+          "source_agent": "agent_1",
+          "source_type": "task_private",
+          "status": "task_specified",
+          "supersedes": null,
+          "turn": 0,
+          "value": [
+            "You are barred from living_room_1.",
+            "multiport_hub_3 starts on shelves_7 in living_room_1."
+          ]
+        },
+        "task.self": {
+          "confidence": 1.0,
+          "evidence": "You are preparing the apartment for a quick inspection. As a team, do ALL of the following: (1) move the vase onto the bedroom-1 table, (2) leave the bedroom-1 chest of drawers open, and (3) leave the multiport hub on the living-room shelves.",
+          "key": "task.self",
+          "source_agent": "agent_1",
+          "source_type": "task_public",
+          "status": "task_specified",
+          "supersedes": null,
+          "turn": 0,
+          "value": "agent_1"
+        }
+      },
+      "spatial": {
+        "object.multiport_hub_3.on": {
+          "confidence": 1.0,
+          "evidence": "multiport_hub_3 starts on shelves_7 in living_room_1.",
+          "key": "object.multiport_hub_3.on",
+          "source_agent": "agent_1",
+          "source_type": "task_private",
+          "status": "task_specified",
+          "supersedes": null,
+          "turn": 0,
+          "value": "shelves_7"
+        },
+        "task.shared_goal": {
+          "confidence": 1.0,
+          "evidence": "You are preparing the apartment for a quick inspection. As a team, do ALL of the following: (1) move the vase onto the bedroom-1 table, (2) leave the bedroom-1 chest of drawers open, and (3) leave the multiport hub on the living-room shelves.",
+          "key": "task.shared_goal",
+          "source_agent": "agent_1",
+          "source_type": "task_public",
+          "status": "task_specified",
+          "supersedes": null,
+          "turn": 0,
+          "value": "You are preparing the apartment for a quick inspection. As a team, do ALL of the following: (1) move the vase onto the bedroom-1 table, (2) leave the bedroom-1 chest of drawers open, and (3) leave the multiport hub on the living-room shelves."
+        }
+      },
+      "version": 2
+    }
+  },
+  "historical_benchmark_evaluation": {
+    "completed_subtasks": [
+      1,
+      2
+    ],
+    "functional_success": false,
+    "historical_benchmark_percent_complete": 0.6666666666666666,
+    "historical_benchmark_success": false,
+    "literal_tom_probe_results": [
+      {
+        "agent_id": "agent_1",
+        "counted_in_score": false,
+        "details": {
+          "expected_negated": false,
+          "expected_response": {
+            "args": [
+              "chest_of_drawers_21"
+            ],
+            "holds": true,
+            "predicate": "is_open"
+          },
+          "fact_true": true,
+          "parsed_response": {
+            "args": [
+              "chest_of_drawers_21"
+            ],
+            "holds": true,
+            "predicate": "is_open"
+          }
+        },
+        "probe_id": "k_probe_1",
+        "question": "Probe 1: agent_1 knows a fact about ordered entities [chest_of_drawers_21]. Report which benchmark predicate applies to those entities and whether it holds. The expected argument order is fixed as listed. If unknown, return predicate \"unknown\" and holds null. JSON shape: {\"probe_id\":\"k_probe_X\",\"predicate\":\"<predicate_name>|unknown\",\"holds\":true|false|null,\"args\":[\"entity_or_target\", ...]}",
+        "raw_response": "{\"answers\":[{\"probe_id\":\"k_probe_1\",\"predicate\":\"is_open\",\"holds\":true,\"args\":[\"chest_of_drawers_21\"]}]",
+        "source_pddl": "(K agent_1 (is_open chest_of_drawers_21))",
+        "status": "passed",
+        "supported": true
+      },
+      {
+        "agent_id": "agent_0",
+        "counted_in_score": true,
+        "details": {
+          "behavioral_target_probe_id": "k_probe_1",
+          "behavioral_target_response": {
+            "args": [
+              "chest_of_drawers_21"
+            ],
+            "holds": true,
+            "predicate": "is_open"
+          },
+          "parsed_response": {
+            "args": [
+              "chest_of_drawers_21"
+            ],
+            "holds": true,
+            "predicate": "is_open"
+          }
+        },
+        "probe_id": "k_probe_0",
+        "question": "Probe 0: agent_0 knows that agent_1 knows a fact about ordered entities [chest_of_drawers_21]. Report which benchmark predicate applies to those entities and whether it holds. The expected argument order is fixed as listed. If unknown, return predicate \"unknown\" and holds null. JSON shape: {\"probe_id\":\"k_probe_X\",\"predicate\":\"<predicate_name>|unknown\",\"holds\":true|false|null,\"args\":[\"entity_or_target\", ...]}",
+        "raw_response": "{\"answers\":[{\"probe_id\":\"k_probe_0\",\"predicate\":\"is_open\",\"holds\":true,\"args\":[\"chest_of_drawers_21\"]}]",
+        "source_pddl": "(K agent_0 (K agent_1 (is_open chest_of_drawers_21)))",
+        "status": "passed",
+        "supported": true
+      }
+    ],
+    "literal_tom_probe_score": 1.0,
+    "literal_tom_probe_summary": {
+      "intermediate_probe_count": 1,
+      "passed_count": 1,
+      "probe_count": 2,
+      "supported_probe_count": 1
+    },
+    "percent_complete": 0.6666666666666666,
+    "strict_physical": {
+      "checks": [
+        {
+          "entity": "vase_4",
+          "goal_id": "is_on_top:vase_4:table_22",
+          "predicate": "is_on_top",
+          "relation_stable": false,
+          "released_stable": false,
+          "samples": [
+            {
+              "detail": {
+                "benchmark_predicate_result": {
+                  "failure_explanations": [
+                    "vase_4 is not on top of table_22"
+                  ],
+                  "percent_complete": 0.0,
+                  "proposition_status": {
+                    "prop_0": false
+                  },
+                  "success": false
+                }
+              },
+              "held_by": "agent_0",
+              "relation_ok": false
+            },
+            {
+              "detail": {
+                "benchmark_predicate_result": {
+                  "failure_explanations": [
+                    "vase_4 is not on top of table_22"
+                  ],
+                  "percent_complete": 0.0,
+                  "proposition_status": {
+                    "prop_0": false
+                  },
+                  "success": false
+                }
+              },
+              "held_by": "agent_0",
+              "relation_ok": false
+            },
+            {
+              "detail": {
+                "benchmark_predicate_result": {
+                  "failure_explanations": [
+                    "vase_4 is not on top of table_22"
+                  ],
+                  "percent_complete": 0.0,
+                  "proposition_status": {
+                    "prop_0": false
+                  },
+                  "success": false
+                }
+              },
+              "held_by": "agent_0",
+              "relation_ok": false
+            }
+          ],
+          "samples_observed": 3,
+          "samples_required": 3,
+          "satisfied": false,
+          "stable_window_measured": true,
+          "target": "table_22"
+        },
+        {
+          "entity": "chest_of_drawers_21",
+          "goal_id": "is_open:chest_of_drawers_21",
+          "predicate": "is_open",
+          "relation_stable": true,
+          "released_stable": true,
+          "samples": [
+            {
+              "detail": {
+                "articulated_object_found": true,
+                "default_link_found": true,
+                "joint_positions": [
+                  0.0,
+                  0.35282525420188904
+                ],
+                "joint_threshold": 0.1,
+                "resolved_handle": "65f7bee43fcb222850db45ae67e997889c559edb_:0000"
+              },
+              "held_by": null,
+              "relation_ok": true
+            },
+            {
+              "detail": {
+                "articulated_object_found": true,
+                "default_link_found": true,
+                "joint_positions": [
+                  0.0,
+                  0.35282525420188904
+                ],
+                "joint_threshold": 0.1,
+                "resolved_handle": "65f7bee43fcb222850db45ae67e997889c559edb_:0000"
+              },
+              "held_by": null,
+              "relation_ok": true
+            },
+            {
+              "detail": {
+                "articulated_object_found": true,
+                "default_link_found": true,
+                "joint_positions": [
+                  0.0,
+                  0.35282525420188904
+                ],
+                "joint_threshold": 0.1,
+                "resolved_handle": "65f7bee43fcb222850db45ae67e997889c559edb_:0000"
+              },
+              "held_by": null,
+              "relation_ok": true
+            }
+          ],
+          "samples_observed": 3,
+          "samples_required": 3,
+          "satisfied": true,
+          "stable_window_measured": true,
+          "target": null
+        },
+        {
+          "entity": "multiport_hub_3",
+          "goal_id": "is_on_top:multiport_hub_3:shelves_7",
+          "predicate": "is_on_top",
+          "relation_stable": true,
+          "released_stable": true,
+          "samples": [
+            {
+              "detail": {
+                "benchmark_predicate_result": {
+                  "failure_explanations": [],
+                  "percent_complete": 1.0,
+                  "proposition_status": {
+                    "prop_0": true
+                  },
+                  "success": true
+                }
+              },
+              "held_by": null,
+              "relation_ok": true
+            },
+            {
+              "detail": {
+                "benchmark_predicate_result": {
+                  "failure_explanations": [],
+                  "percent_complete": 1.0,
+                  "proposition_status": {
+                    "prop_0": true
+                  },
+                  "success": true
+                }
+              },
+              "held_by": null,
+              "relation_ok": true
+            },
+            {
+              "detail": {
+                "benchmark_predicate_result": {
+                  "failure_explanations": [],
+                  "percent_complete": 1.0,
+                  "proposition_status": {
+                    "prop_0": true
+                  },
+                  "success": true
+                }
+              },
+              "held_by": null,
+              "relation_ok": true
+            }
+          ],
+          "samples_observed": 3,
+          "samples_required": 3,
+          "satisfied": true,
+          "stable_window_measured": true,
+          "target": "shelves_7"
+        }
+      ],
+      "completed_goals": 2,
+      "open_threshold": 0.1,
+      "physics_dt": 0.016666666666666666,
+      "physics_steps_per_sample": 10,
+      "scorer_version": "strict_physical_v1",
+      "stability_advance_ok": true,
+      "stable_samples": 3,
+      "strict_percent_complete": 0.6666666666666666,
+      "strict_success": false,
+      "total_goals": 3
+    },
+    "success": false,
+    "total_subtasks": 3
+  },
+  "task_id": "emtom-104348082_171512994-588-cooperative-inspection-staging-with-a-hidden-correct-8487f942",
+  "turns": 20
+}
