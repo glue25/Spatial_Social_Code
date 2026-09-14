@@ -1,0 +1,872 @@
+{
+  "schema_version": "habitat_dynamic_ssc_visualization_v1",
+  "status": "mechanism_case_not_aggregate_evidence",
+  "task_id": "emtom-108294897_176710602-1166-mixed-guest-reset-with-a-hidden-bedroom-box-an-96b292f9",
+  "episode_id": "1166",
+  "scene_id": "108294897_176710602",
+  "model": "qwen3-vl-8b-instruct",
+  "model_checkpoint": "/pfs/xiabin/models/Qwen3-VL-8B-Instruct",
+  "seed": 891011,
+  "conditions": {
+    "direct": {
+      "turns": 20,
+      "strict_success": false,
+      "completed_goals": 1,
+      "total_goals": 3,
+      "strict_percent_complete": 0.3333333333333333,
+      "scorer_version": "strict_physical_v1",
+      "stable_samples": 3,
+      "final_checks": [
+        {
+          "entity": "vase_0",
+          "goal_id": "is_on_top:vase_0:table_15",
+          "predicate": "is_on_top",
+          "relation_stable": false,
+          "released_stable": true,
+          "samples": [
+            {
+              "detail": {
+                "benchmark_predicate_result": {
+                  "failure_explanations": [
+                    "vase_0 is not on top of table_15"
+                  ],
+                  "percent_complete": 0.0,
+                  "proposition_status": {
+                    "prop_0": false
+                  },
+                  "success": false
+                }
+              },
+              "held_by": null,
+              "relation_ok": false
+            },
+            {
+              "detail": {
+                "benchmark_predicate_result": {
+                  "failure_explanations": [
+                    "vase_0 is not on top of table_15"
+                  ],
+                  "percent_complete": 0.0,
+                  "proposition_status": {
+                    "prop_0": false
+                  },
+                  "success": false
+                }
+              },
+              "held_by": null,
+              "relation_ok": false
+            },
+            {
+              "detail": {
+                "benchmark_predicate_result": {
+                  "failure_explanations": [
+                    "vase_0 is not on top of table_15"
+                  ],
+                  "percent_complete": 0.0,
+                  "proposition_status": {
+                    "prop_0": false
+                  },
+                  "success": false
+                }
+              },
+              "held_by": null,
+              "relation_ok": false
+            }
+          ],
+          "samples_observed": 3,
+          "samples_required": 3,
+          "satisfied": false,
+          "stable_window_measured": true,
+          "target": "table_15"
+        },
+        {
+          "entity": "box_3",
+          "goal_id": "is_on_top:box_3:table_12",
+          "predicate": "is_on_top",
+          "relation_stable": false,
+          "released_stable": true,
+          "samples": [
+            {
+              "detail": {
+                "benchmark_predicate_result": {
+                  "failure_explanations": [
+                    "box_3 is not on top of table_12"
+                  ],
+                  "percent_complete": 0.0,
+                  "proposition_status": {
+                    "prop_0": false
+                  },
+                  "success": false
+                }
+              },
+              "held_by": null,
+              "relation_ok": false
+            },
+            {
+              "detail": {
+                "benchmark_predicate_result": {
+                  "failure_explanations": [
+                    "box_3 is not on top of table_12"
+                  ],
+                  "percent_complete": 0.0,
+                  "proposition_status": {
+                    "prop_0": false
+                  },
+                  "success": false
+                }
+              },
+              "held_by": null,
+              "relation_ok": false
+            },
+            {
+              "detail": {
+                "benchmark_predicate_result": {
+                  "failure_explanations": [
+                    "box_3 is not on top of table_12"
+                  ],
+                  "percent_complete": 0.0,
+                  "proposition_status": {
+                    "prop_0": false
+                  },
+                  "success": false
+                }
+              },
+              "held_by": null,
+              "relation_ok": false
+            }
+          ],
+          "samples_observed": 3,
+          "samples_required": 3,
+          "satisfied": false,
+          "stable_window_measured": true,
+          "target": "table_12"
+        },
+        {
+          "entity": "fridge_34",
+          "goal_id": "is_open:fridge_34",
+          "predicate": "is_open",
+          "relation_stable": true,
+          "released_stable": true,
+          "samples": [
+            {
+              "detail": {
+                "articulated_object_found": true,
+                "default_link_found": true,
+                "joint_positions": [
+                  2.094395160675049,
+                  0.0
+                ],
+                "joint_threshold": 0.1,
+                "resolved_handle": "f5a154e8d963064a8e43960374e4b5be523d68b0_:0000"
+              },
+              "held_by": null,
+              "relation_ok": true
+            },
+            {
+              "detail": {
+                "articulated_object_found": true,
+                "default_link_found": true,
+                "joint_positions": [
+                  2.094395160675049,
+                  0.0
+                ],
+                "joint_threshold": 0.1,
+                "resolved_handle": "f5a154e8d963064a8e43960374e4b5be523d68b0_:0000"
+              },
+              "held_by": null,
+              "relation_ok": true
+            },
+            {
+              "detail": {
+                "articulated_object_found": true,
+                "default_link_found": true,
+                "joint_positions": [
+                  2.094395160675049,
+                  0.0
+                ],
+                "joint_threshold": 0.1,
+                "resolved_handle": "f5a154e8d963064a8e43960374e4b5be523d68b0_:0000"
+              },
+              "held_by": null,
+              "relation_ok": true
+            }
+          ],
+          "samples_observed": 3,
+          "samples_required": 3,
+          "satisfied": true,
+          "stable_window_measured": true,
+          "target": null
+        }
+      ]
+    },
+    "static_ssc": {
+      "turns": 20,
+      "strict_success": false,
+      "completed_goals": 1,
+      "total_goals": 3,
+      "strict_percent_complete": 0.3333333333333333,
+      "scorer_version": "strict_physical_v1",
+      "stable_samples": 3,
+      "final_checks": [
+        {
+          "entity": "vase_0",
+          "goal_id": "is_on_top:vase_0:table_15",
+          "predicate": "is_on_top",
+          "relation_stable": false,
+          "released_stable": true,
+          "samples": [
+            {
+              "detail": {
+                "benchmark_predicate_result": {
+                  "failure_explanations": [
+                    "vase_0 is not on top of table_15"
+                  ],
+                  "percent_complete": 0.0,
+                  "proposition_status": {
+                    "prop_0": false
+                  },
+                  "success": false
+                }
+              },
+              "held_by": null,
+              "relation_ok": false
+            },
+            {
+              "detail": {
+                "benchmark_predicate_result": {
+                  "failure_explanations": [
+                    "vase_0 is not on top of table_15"
+                  ],
+                  "percent_complete": 0.0,
+                  "proposition_status": {
+                    "prop_0": false
+                  },
+                  "success": false
+                }
+              },
+              "held_by": null,
+              "relation_ok": false
+            },
+            {
+              "detail": {
+                "benchmark_predicate_result": {
+                  "failure_explanations": [
+                    "vase_0 is not on top of table_15"
+                  ],
+                  "percent_complete": 0.0,
+                  "proposition_status": {
+                    "prop_0": false
+                  },
+                  "success": false
+                }
+              },
+              "held_by": null,
+              "relation_ok": false
+            }
+          ],
+          "samples_observed": 3,
+          "samples_required": 3,
+          "satisfied": false,
+          "stable_window_measured": true,
+          "target": "table_15"
+        },
+        {
+          "entity": "box_3",
+          "goal_id": "is_on_top:box_3:table_12",
+          "predicate": "is_on_top",
+          "relation_stable": false,
+          "released_stable": true,
+          "samples": [
+            {
+              "detail": {
+                "benchmark_predicate_result": {
+                  "failure_explanations": [
+                    "box_3 is not on top of table_12"
+                  ],
+                  "percent_complete": 0.0,
+                  "proposition_status": {
+                    "prop_0": false
+                  },
+                  "success": false
+                }
+              },
+              "held_by": null,
+              "relation_ok": false
+            },
+            {
+              "detail": {
+                "benchmark_predicate_result": {
+                  "failure_explanations": [
+                    "box_3 is not on top of table_12"
+                  ],
+                  "percent_complete": 0.0,
+                  "proposition_status": {
+                    "prop_0": false
+                  },
+                  "success": false
+                }
+              },
+              "held_by": null,
+              "relation_ok": false
+            },
+            {
+              "detail": {
+                "benchmark_predicate_result": {
+                  "failure_explanations": [
+                    "box_3 is not on top of table_12"
+                  ],
+                  "percent_complete": 0.0,
+                  "proposition_status": {
+                    "prop_0": false
+                  },
+                  "success": false
+                }
+              },
+              "held_by": null,
+              "relation_ok": false
+            }
+          ],
+          "samples_observed": 3,
+          "samples_required": 3,
+          "satisfied": false,
+          "stable_window_measured": true,
+          "target": "table_12"
+        },
+        {
+          "entity": "fridge_34",
+          "goal_id": "is_open:fridge_34",
+          "predicate": "is_open",
+          "relation_stable": true,
+          "released_stable": true,
+          "samples": [
+            {
+              "detail": {
+                "articulated_object_found": true,
+                "default_link_found": true,
+                "joint_positions": [
+                  2.094395160675049,
+                  0.0
+                ],
+                "joint_threshold": 0.1,
+                "resolved_handle": "f5a154e8d963064a8e43960374e4b5be523d68b0_:0000"
+              },
+              "held_by": null,
+              "relation_ok": true
+            },
+            {
+              "detail": {
+                "articulated_object_found": true,
+                "default_link_found": true,
+                "joint_positions": [
+                  2.094395160675049,
+                  0.0
+                ],
+                "joint_threshold": 0.1,
+                "resolved_handle": "f5a154e8d963064a8e43960374e4b5be523d68b0_:0000"
+              },
+              "held_by": null,
+              "relation_ok": true
+            },
+            {
+              "detail": {
+                "articulated_object_found": true,
+                "default_link_found": true,
+                "joint_positions": [
+                  2.094395160675049,
+                  0.0
+                ],
+                "joint_threshold": 0.1,
+                "resolved_handle": "f5a154e8d963064a8e43960374e4b5be523d68b0_:0000"
+              },
+              "held_by": null,
+              "relation_ok": true
+            }
+          ],
+          "samples_observed": 3,
+          "samples_required": 3,
+          "satisfied": true,
+          "stable_window_measured": true,
+          "target": null
+        }
+      ]
+    },
+    "dynamic_ssc": {
+      "turns": 7,
+      "strict_success": true,
+      "completed_goals": 3,
+      "total_goals": 3,
+      "strict_percent_complete": 1.0,
+      "scorer_version": "strict_physical_v1",
+      "stable_samples": 3,
+      "final_checks": [
+        {
+          "entity": "vase_0",
+          "goal_id": "is_on_top:vase_0:table_15",
+          "predicate": "is_on_top",
+          "relation_stable": true,
+          "released_stable": true,
+          "samples": [
+            {
+              "detail": {
+                "benchmark_predicate_result": {
+                  "failure_explanations": [],
+                  "percent_complete": 1.0,
+                  "proposition_status": {
+                    "prop_0": true
+                  },
+                  "success": true
+                }
+              },
+              "held_by": null,
+              "relation_ok": true
+            },
+            {
+              "detail": {
+                "benchmark_predicate_result": {
+                  "failure_explanations": [],
+                  "percent_complete": 1.0,
+                  "proposition_status": {
+                    "prop_0": true
+                  },
+                  "success": true
+                }
+              },
+              "held_by": null,
+              "relation_ok": true
+            },
+            {
+              "detail": {
+                "benchmark_predicate_result": {
+                  "failure_explanations": [],
+                  "percent_complete": 1.0,
+                  "proposition_status": {
+                    "prop_0": true
+                  },
+                  "success": true
+                }
+              },
+              "held_by": null,
+              "relation_ok": true
+            }
+          ],
+          "samples_observed": 3,
+          "samples_required": 3,
+          "satisfied": true,
+          "stable_window_measured": true,
+          "target": "table_15"
+        },
+        {
+          "entity": "box_3",
+          "goal_id": "is_on_top:box_3:table_12",
+          "predicate": "is_on_top",
+          "relation_stable": true,
+          "released_stable": true,
+          "samples": [
+            {
+              "detail": {
+                "benchmark_predicate_result": {
+                  "failure_explanations": [],
+                  "percent_complete": 1.0,
+                  "proposition_status": {
+                    "prop_0": true
+                  },
+                  "success": true
+                }
+              },
+              "held_by": null,
+              "relation_ok": true
+            },
+            {
+              "detail": {
+                "benchmark_predicate_result": {
+                  "failure_explanations": [],
+                  "percent_complete": 1.0,
+                  "proposition_status": {
+                    "prop_0": true
+                  },
+                  "success": true
+                }
+              },
+              "held_by": null,
+              "relation_ok": true
+            },
+            {
+              "detail": {
+                "benchmark_predicate_result": {
+                  "failure_explanations": [],
+                  "percent_complete": 1.0,
+                  "proposition_status": {
+                    "prop_0": true
+                  },
+                  "success": true
+                }
+              },
+              "held_by": null,
+              "relation_ok": true
+            }
+          ],
+          "samples_observed": 3,
+          "samples_required": 3,
+          "satisfied": true,
+          "stable_window_measured": true,
+          "target": "table_12"
+        },
+        {
+          "entity": "fridge_34",
+          "goal_id": "is_open:fridge_34",
+          "predicate": "is_open",
+          "relation_stable": true,
+          "released_stable": true,
+          "samples": [
+            {
+              "detail": {
+                "articulated_object_found": true,
+                "default_link_found": true,
+                "joint_positions": [
+                  2.094395160675049,
+                  0.0
+                ],
+                "joint_threshold": 0.1,
+                "resolved_handle": "f5a154e8d963064a8e43960374e4b5be523d68b0_:0000"
+              },
+              "held_by": null,
+              "relation_ok": true
+            },
+            {
+              "detail": {
+                "articulated_object_found": true,
+                "default_link_found": true,
+                "joint_positions": [
+                  2.094395160675049,
+                  0.0
+                ],
+                "joint_threshold": 0.1,
+                "resolved_handle": "f5a154e8d963064a8e43960374e4b5be523d68b0_:0000"
+              },
+              "held_by": null,
+              "relation_ok": true
+            },
+            {
+              "detail": {
+                "articulated_object_found": true,
+                "default_link_found": true,
+                "joint_positions": [
+                  2.094395160675049,
+                  0.0
+                ],
+                "joint_threshold": 0.1,
+                "resolved_handle": "f5a154e8d963064a8e43960374e4b5be523d68b0_:0000"
+              },
+              "held_by": null,
+              "relation_ok": true
+            }
+          ],
+          "samples_observed": 3,
+          "samples_required": 3,
+          "satisfied": true,
+          "stable_window_measured": true,
+          "target": null
+        }
+      ]
+    }
+  },
+  "dynamic_state_versions_read": {
+    "agent_0": [
+      [
+        1,
+        3
+      ],
+      [
+        2,
+        7
+      ],
+      [
+        3,
+        10
+      ],
+      [
+        4,
+        13
+      ],
+      [
+        5,
+        17
+      ],
+      [
+        6,
+        21
+      ],
+      [
+        7,
+        24
+      ]
+    ],
+    "agent_1": [
+      [
+        1,
+        3
+      ],
+      [
+        2,
+        6
+      ],
+      [
+        3,
+        9
+      ],
+      [
+        4,
+        12
+      ],
+      [
+        5,
+        15
+      ],
+      [
+        6,
+        18
+      ],
+      [
+        7,
+        22
+      ]
+    ],
+    "agent_2": [
+      [
+        1,
+        3
+      ],
+      [
+        2,
+        7
+      ],
+      [
+        3,
+        10
+      ],
+      [
+        4,
+        13
+      ],
+      [
+        5,
+        17
+      ],
+      [
+        6,
+        21
+      ],
+      [
+        7,
+        25
+      ]
+    ]
+  },
+  "dynamic_actions": [
+    {
+      "action": "Communicate[\"I'll look for the vase and box; you handle the fridge. Need to leave candle_1 on chair_24.\", agent_2]",
+      "agent_id": "agent_0",
+      "thought": "Thought: I need to locate the vase and the correct box first. Since I can't access the kitchen, I should ask agent_2 to handle the fridge task while I search for the vase and box in accessible areas.",
+      "turn": 1
+    },
+    {
+      "action": "Navigate[living_room_1]",
+      "agent_id": "agent_1",
+      "thought": "Thought: I need to find the vase and the correct box first. Since I can't access bedroom_2, I should explore other rooms like the living room or dining room where these items might be. I'll start by navigating to the living room to check for the box.",
+      "turn": 1
+    },
+    {
+      "action": "Navigate[living_room_1]",
+      "agent_id": "agent_2",
+      "thought": "Thought: I need to move the vase to the dining-room table, but I don't know where it is. I should first explore likely rooms to find it. I'll start by navigating to the living room since it's a common area and might have the vase.",
+      "turn": 1
+    },
+    {
+      "action": "Navigate[living_room_1]",
+      "agent_id": "agent_0",
+      "thought": "Thought: I need to find the vase and the correct box. Since I can't access the kitchen, I'll start by checking likely locations like the living room or bedroom. I'll navigate to living_room_1 first to look for the vase.",
+      "turn": 2
+    },
+    {
+      "action": "Pick[box_3]",
+      "agent_id": "agent_1",
+      "thought": "I found the box_3 on the couch_13 in the living room. I will pick it up and move it to the living-room table (table_12) as part of the task. I’ll also need to find the vase and ensure the fridge remains open at the end. I’ll communicate with agent_2 to coordinate finding the vase.",
+      "turn": 2
+    },
+    {
+      "action": "Pick[vase_0]",
+      "agent_id": "agent_2",
+      "thought": "Thought: I have located the vase on table_12 in the living room. I will pick it up and move it to the dining-room table as per the task.",
+      "turn": 2
+    },
+    {
+      "action": "Pick[vase_0]",
+      "agent_id": "agent_0",
+      "thought": "I have located the vase with agent_2 and the box with agent_1. I need to move the vase to the dining-room table and the box to the living-room table. Since I can't access the kitchen, I'll proceed with moving the vase and box. I'll start by picking up the vase from agent_2 and placing it on the dining-room table.",
+      "turn": 3
+    },
+    {
+      "action": "Place[box_3, on, table_12, None, None]",
+      "agent_id": "agent_1",
+      "thought": "Thought: I have the box_3 and need to place it on the living-room table (table_12). I’ll do that next to fulfill part of the task. Afterward, I’ll coordinate with agent_2 to handle moving the vase to the dining-room table, since they have it. I’ll also ensure the fridge remains open at the end, which I’ll handle after completing the other tasks.",
+      "turn": 3
+    },
+    {
+      "action": "Navigate[dining_room_1]",
+      "agent_id": "agent_2",
+      "thought": "Thought: I have the vase and need to move it to the dining-room table. I'll navigate there next.",
+      "turn": 3
+    },
+    {
+      "action": "Communicate[\"Please place vase_0 on table_15 in dining_room_1.\", agent_2]",
+      "agent_id": "agent_0",
+      "thought": "Thought: I cannot pick up the vase since it's held by agent_2. I need to coordinate with them to get it moved to the dining-room table. I'll communicate this request to agent_2.",
+      "turn": 4
+    },
+    {
+      "action": "Navigate[table_12]",
+      "agent_id": "agent_1",
+      "thought": "Thought: I need to navigate closer to the living-room table (table_12) to successfully place the box_3. I’ll move to the table first before attempting placement again.",
+      "turn": 4
+    },
+    {
+      "action": "Place[vase_0, on, table_15, None, None]",
+      "agent_id": "agent_2",
+      "thought": "Thought: I have the vase and am now in the dining room. I will place the vase on the dining-room table as per the task.",
+      "turn": 4
+    },
+    {
+      "action": "Communicate[\"Please place box_3 on table_12 in living_room_1.\", agent_1]",
+      "agent_id": "agent_0",
+      "thought": "Thought: I have already communicated with agent_2 to place the vase on the dining-room table. Now I need to ensure the box is moved to the living-room table. Since agent_1 has the box, I should coordinate with them to complete this task.",
+      "turn": 5
+    },
+    {
+      "action": "Place[box_3, on, table_12, None, None]",
+      "agent_id": "agent_1",
+      "thought": "Thought: I am now near the living-room table (table_12) and holding the box_3. I will attempt to place it on the table again, ensuring proper positioning this time. After that, I’ll coordinate with agent_2 to handle moving the vase to the dining-room table and ensure the fridge remains open at the end.",
+      "turn": 5
+    },
+    {
+      "action": "Communicate[\"I’ll handle the fridge. You handle moving box_3 to the living-room table.\", agent_0]",
+      "agent_id": "agent_2",
+      "thought": "Thought: I have completed placing the vase on the dining-room table. Now I need to move the correct box (box_3) to the living-room table. Since I cannot access bedroom_2 (agent_1 is barred from it), I should coordinate with agent_0 to handle the box. I'll message them to assign the task.",
+      "turn": 5
+    },
+    {
+      "action": "Place[candle_1, on, chair_24, None, None]",
+      "agent_id": "agent_0",
+      "thought": "Thought: I have already communicated with agent_2 to handle the fridge and with agent_1 to move the box to the living-room table. Now I need to ensure the candle_1 is left on chair_24, which is my private objective. Since I am already in the living room, I can verify and complete this task.",
+      "turn": 6
+    },
+    {
+      "action": "Communicate[\"Agent_2, please move vase_0 to the dining-room table (table_15). Also, ensure cabinet_27 remains open at the end.\", agent_2]",
+      "agent_id": "agent_1",
+      "thought": "Thought: I have successfully placed the box_3 on the living-room table. Now I need to ensure the fridge remains open at the end and coordinate with agent_2 to move the vase to the dining-room table. I’ll communicate with agent_2 to assign them the vase task since I can’t access bedroom_2 and they can handle it. I’ll also remind them to leave cabinet_27 open at the end as per my private objective.",
+      "turn": 6
+    },
+    {
+      "action": "Navigate[kitchen_1]",
+      "agent_id": "agent_2",
+      "thought": "Thought: I have completed placing the vase and coordinated with agent_0 to handle the box. Now I need to leave the kitchen fridge open. I will navigate to the kitchen to open the fridge.",
+      "turn": 6
+    },
+    {
+      "action": "Navigate[chair_24]",
+      "agent_id": "agent_0",
+      "thought": "Thought: I need to place the candle_1 on chair_24, but it's not in my known world yet. I should explore the living room to locate it or confirm its existence.",
+      "turn": 7
+    },
+    {
+      "action": "Navigate[kitchen_1]",
+      "agent_id": "agent_1",
+      "thought": "Thought: I have successfully placed the box_3 on the living-room table and communicated with agent_2 to handle moving the vase to the dining-room table. Now, I need to ensure the kitchen fridge remains open at the end as per the task. I will navigate to the kitchen to check the fridge's state and open it if needed.",
+      "turn": 7
+    },
+    {
+      "action": "Open[fridge_34]",
+      "agent_id": "agent_2",
+      "thought": "Thought: I have completed placing the vase and coordinated with agent_0 for the box. Now I need to open the fridge in the kitchen as per the task. I am already near the kitchen, so I will proceed to open the fridge.",
+      "turn": 7
+    }
+  ],
+  "delivered_messages": [
+    {
+      "turn": 1,
+      "sender": "agent_0",
+      "receivers": [
+        "agent_2"
+      ],
+      "message": "I'll look for the vase and box; you handle the fridge. Need to leave candle_1 on chair_24."
+    },
+    {
+      "turn": 4,
+      "sender": "agent_0",
+      "receivers": [
+        "agent_2"
+      ],
+      "message": "Please place vase_0 on table_15 in dining_room_1."
+    },
+    {
+      "turn": 5,
+      "sender": "agent_2",
+      "receivers": [
+        "agent_0"
+      ],
+      "message": "I’ll handle the fridge. You handle moving box_3 to the living-room table."
+    },
+    {
+      "turn": 6,
+      "sender": "agent_1",
+      "receivers": [
+        "agent_2"
+      ],
+      "message": "Agent_2, please move vase_0 to the dining-room table (table_15). Also, ensure cabinet_27 remains open at the end."
+    }
+  ],
+  "selected_frames": [
+    {
+      "turn": 4,
+      "agent": "agent_2",
+      "label": "vase_0 ON table_15",
+      "source_path": "workdirs/habitat_closed_loop/dev36_final_v3/results/dynamic_ssc/hard_108294897_176710602_1166/results/emtom-108294897_176710602-1166-mixed-guest-reset-with-a-hidden-bedroom-box-an-96b292f9/closed_loop_artifacts/frames/agent_2/turn_0004/agent_2_t0004_f0003_s0103_sim000591_turn_end.png",
+      "sha256": "9b26bdf7e0904a08ee2dd757e81347cb8e797bc40180486aae541b8c8c525014"
+    },
+    {
+      "turn": 5,
+      "agent": "agent_1",
+      "label": "box_3 ON table_12",
+      "source_path": "workdirs/habitat_closed_loop/dev36_final_v3/results/dynamic_ssc/hard_108294897_176710602_1166/results/emtom-108294897_176710602-1166-mixed-guest-reset-with-a-hidden-bedroom-box-an-96b292f9/closed_loop_artifacts/frames/agent_1/turn_0005/agent_1_t0005_f0000_s0001_sim000592_turn_end.png",
+      "sha256": "1628072fb447c36a5b7d517f07fd648a8e4e50c69664d7b719d3d75b1a8847af"
+    },
+    {
+      "turn": 7,
+      "agent": "agent_2",
+      "label": "fridge_34 OPEN",
+      "source_path": "workdirs/habitat_closed_loop/dev36_final_v3/results/dynamic_ssc/hard_108294897_176710602_1166/results/emtom-108294897_176710602-1166-mixed-guest-reset-with-a-hidden-bedroom-box-an-96b292f9/closed_loop_artifacts/frames/agent_2/turn_0007/agent_2_t0007_f0009_s0271_sim001189_turn_end.png",
+      "sha256": "9b26bdf7e0904a08ee2dd757e81347cb8e797bc40180486aae541b8c8c525014"
+    }
+  ],
+  "sources": {
+    "direct": {
+      "artifact_dir": "workdirs/habitat_closed_loop/dev36_final_v3/results/direct/hard_108294897_176710602_1166/results/emtom-108294897_176710602-1166-mixed-guest-reset-with-a-hidden-bedroom-box-an-96b292f9/closed_loop_artifacts",
+      "manifest_sha256": "6736c37d8f3294fef1a2d1c2663760e9429b2074698291771c67770354dde789",
+      "plans_sha256": "b7208f5f512bb2f5cb2bc80ead8a4471d65619885e5941b02b50b265ba8734b4",
+      "physical_checks_sha256": "9d1fd43f4b1b03d6c11be59e9d8817e98edc82c6ac41a024d5776e1ed7ee68e4"
+    },
+    "static_ssc": {
+      "artifact_dir": "workdirs/habitat_closed_loop/dev36_final_v3/results/static_ssc/hard_108294897_176710602_1166/results/emtom-108294897_176710602-1166-mixed-guest-reset-with-a-hidden-bedroom-box-an-96b292f9/closed_loop_artifacts",
+      "manifest_sha256": "9262b1d208cab76b975d48d2b86244360ae0659ca6eea032e6920f4dc6f44d1a",
+      "plans_sha256": "9eadd91379f5b1f88d3b0523674bea196bac584bcde3c3e184146c02767d9076",
+      "physical_checks_sha256": "af095a9ffb2d30db76ab94399097ad4085fe2b00cf97fcc9c7de170b186d3766"
+    },
+    "dynamic_ssc": {
+      "artifact_dir": "workdirs/habitat_closed_loop/dev36_final_v3/results/dynamic_ssc/hard_108294897_176710602_1166/results/emtom-108294897_176710602-1166-mixed-guest-reset-with-a-hidden-bedroom-box-an-96b292f9/closed_loop_artifacts",
+      "manifest_sha256": "726b7df303381252d075ec827e8a1813bd98d5d484808170e3e7b4043feaade8",
+      "plans_sha256": "22aba4c64b8610a16f4abee9e224231b581b38968b0fa9bec514fd20547aaa27",
+      "physical_checks_sha256": "cc495b4c3091dd9c7054248f1f49908e21024288ec3018d0fbec09e39a1e506a"
+    }
+  },
+  "visualization": "reports/cases/habitat_ep1166_dynamic_ssc_visualization.png",
+  "completion_semantics": "strict_physical_v1; three stable physics samples; RGB not used as the completion judge"
+}

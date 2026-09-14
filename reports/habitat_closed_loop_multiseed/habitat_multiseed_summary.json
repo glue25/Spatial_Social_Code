@@ -1,0 +1,139 @@
+{
+  "status": "three_seed_extension_not_final_frozen_protocol",
+  "seeds": [
+    891011,
+    891012,
+    891013
+  ],
+  "unique_tasks": 12,
+  "task_seed_clusters": 36,
+  "total_rollouts": 108,
+  "aggregate": [
+    {
+      "condition": "direct",
+      "n_task_seed_runs": 36,
+      "strict_successes": 3,
+      "strict_success_rate": 0.08333333333333333,
+      "strict_ci95_wilson": [
+        0.02874861133599338,
+        0.2182669124927263
+      ],
+      "mean_strict_percent_complete": 0.5300925925925927,
+      "benchmark_success_rate": 0.08333333333333333,
+      "mean_api_calls": 56.22222222222222,
+      "mean_total_tokens": 147432.27777777778
+    },
+    {
+      "condition": "static_ssc",
+      "n_task_seed_runs": 36,
+      "strict_successes": 3,
+      "strict_success_rate": 0.08333333333333333,
+      "strict_ci95_wilson": [
+        0.02874861133599338,
+        0.2182669124927263
+      ],
+      "mean_strict_percent_complete": 0.4722222222222223,
+      "benchmark_success_rate": 0.08333333333333333,
+      "mean_api_calls": 56.916666666666664,
+      "mean_total_tokens": 168007.41666666666
+    },
+    {
+      "condition": "dynamic_ssc",
+      "n_task_seed_runs": 36,
+      "strict_successes": 4,
+      "strict_success_rate": 0.1111111111111111,
+      "strict_ci95_wilson": [
+        0.04406640300315648,
+        0.25314808590364857
+      ],
+      "mean_strict_percent_complete": 0.41666666666666674,
+      "benchmark_success_rate": 0.1388888888888889,
+      "mean_api_calls": 57.5,
+      "mean_total_tokens": 221910.0
+    }
+  ],
+  "per_seed": [
+    {
+      "seed": 891011,
+      "condition": "direct",
+      "strict_successes": 1,
+      "n_tasks": 12,
+      "mean_strict_percent_complete": 0.5
+    },
+    {
+      "seed": 891011,
+      "condition": "static_ssc",
+      "strict_successes": 1,
+      "n_tasks": 12,
+      "mean_strict_percent_complete": 0.4791666666666667
+    },
+    {
+      "seed": 891011,
+      "condition": "dynamic_ssc",
+      "strict_successes": 1,
+      "n_tasks": 12,
+      "mean_strict_percent_complete": 0.4236111111111111
+    },
+    {
+      "seed": 891012,
+      "condition": "direct",
+      "strict_successes": 1,
+      "n_tasks": 12,
+      "mean_strict_percent_complete": 0.5069444444444444
+    },
+    {
+      "seed": 891012,
+      "condition": "static_ssc",
+      "strict_successes": 2,
+      "n_tasks": 12,
+      "mean_strict_percent_complete": 0.5277777777777778
+    },
+    {
+      "seed": 891012,
+      "condition": "dynamic_ssc",
+      "strict_successes": 2,
+      "n_tasks": 12,
+      "mean_strict_percent_complete": 0.4791666666666666
+    },
+    {
+      "seed": 891013,
+      "condition": "direct",
+      "strict_successes": 1,
+      "n_tasks": 12,
+      "mean_strict_percent_complete": 0.5833333333333334
+    },
+    {
+      "seed": 891013,
+      "condition": "static_ssc",
+      "strict_successes": 0,
+      "n_tasks": 12,
+      "mean_strict_percent_complete": 0.40972222222222227
+    },
+    {
+      "seed": 891013,
+      "condition": "dynamic_ssc",
+      "strict_successes": 1,
+      "n_tasks": 12,
+      "mean_strict_percent_complete": 0.34722222222222227
+    }
+  ],
+  "paired_comparisons": [
+    {
+      "comparison": "static_ssc_vs_direct",
+      "both_success": 1,
+      "candidate_only_success": 2,
+      "direct_only_success": 2,
+      "neither_success": 31,
+      "exact_mcnemar_p": 1.0
+    },
+    {
+      "comparison": "dynamic_ssc_vs_direct",
+      "both_success": 0,
+      "candidate_only_success": 4,
+      "direct_only_success": 3,
+      "neither_success": 29,
+      "exact_mcnemar_p": 1.0
+    }
+  ],
+  "statistical_note": "Task-seed rows are paired, but repeated seeds of the same task are not claimed as independent task clusters."
+}

@@ -1,0 +1,693 @@
+{
+  "schema_version": "ssc_asset_linked_environment_v1",
+  "status": "validated_asset_linked_scenario_not_new_mesh_synthesis",
+  "accepted": true,
+  "task_id": "emtom-108294897_176710602-1166-mixed-guest-reset-with-a-hidden-bedroom-box-an-96b292f9",
+  "episode_id": "1166",
+  "scene": {
+    "scene_id": "108294897_176710602",
+    "scene_dataset_config": "external/EnactTom/data/versioned_data/hssd-hab/hssd-hab-partnr.scene_dataset_config.json",
+    "scene_dataset_sha256": "f6f4b431a45c3938a4a9c33a02ae43e1e78b47c4d40231d57c16c9beb7d8ddf3",
+    "stage_glb": "external/EnactTom/data/versioned_data/hssd-hab/stages/108294897_176710602.glb",
+    "stage_glb_sha256": "75be5e75175ddb54986804dadcf3e088a6784d6fdc87dd3b7d80cdd175f8c140"
+  },
+  "spatial_code": {
+    "entities": {
+      "agent": [
+        "agent_0",
+        "agent_1",
+        "agent_2"
+      ],
+      "room": [
+        "living_room_1",
+        "bedroom_1",
+        "closet_1",
+        "bedroom_2",
+        "kitchen_1",
+        "dining_room_1"
+      ],
+      "object": [
+        "vase_0",
+        "candle_1",
+        "book_2",
+        "box_3"
+      ],
+      "furniture": [
+        "table_12",
+        "couch_13",
+        "chair_24",
+        "shelves_11",
+        "cabinet_27",
+        "fridge_34",
+        "table_15"
+      ]
+    },
+    "initial_relations": [
+      {
+        "predicate": "agent_in_room",
+        "args": [
+          "agent_0",
+          "living_room_1"
+        ]
+      },
+      {
+        "predicate": "agent_in_room",
+        "args": [
+          "agent_1",
+          "bedroom_1"
+        ]
+      },
+      {
+        "predicate": "agent_in_room",
+        "args": [
+          "agent_2",
+          "closet_1"
+        ]
+      },
+      {
+        "predicate": "is_in_room",
+        "args": [
+          "table_12",
+          "living_room_1"
+        ]
+      },
+      {
+        "predicate": "is_in_room",
+        "args": [
+          "couch_13",
+          "living_room_1"
+        ]
+      },
+      {
+        "predicate": "is_in_room",
+        "args": [
+          "chair_24",
+          "living_room_1"
+        ]
+      },
+      {
+        "predicate": "is_in_room",
+        "args": [
+          "shelves_11",
+          "bedroom_1"
+        ]
+      },
+      {
+        "predicate": "is_in_room",
+        "args": [
+          "cabinet_27",
+          "bedroom_2"
+        ]
+      },
+      {
+        "predicate": "is_in_room",
+        "args": [
+          "fridge_34",
+          "kitchen_1"
+        ]
+      },
+      {
+        "predicate": "is_in_room",
+        "args": [
+          "table_15",
+          "dining_room_1"
+        ]
+      },
+      {
+        "predicate": "is_in_room",
+        "args": [
+          "vase_0",
+          "living_room_1"
+        ]
+      },
+      {
+        "predicate": "is_on_top",
+        "args": [
+          "vase_0",
+          "table_12"
+        ]
+      },
+      {
+        "predicate": "is_in_room",
+        "args": [
+          "candle_1",
+          "living_room_1"
+        ]
+      },
+      {
+        "predicate": "is_on_top",
+        "args": [
+          "candle_1",
+          "table_12"
+        ]
+      },
+      {
+        "predicate": "is_in_room",
+        "args": [
+          "book_2",
+          "living_room_1"
+        ]
+      },
+      {
+        "predicate": "is_on_top",
+        "args": [
+          "book_2",
+          "table_12"
+        ]
+      },
+      {
+        "predicate": "is_in_room",
+        "args": [
+          "box_3",
+          "living_room_1"
+        ]
+      },
+      {
+        "predicate": "is_on_top",
+        "args": [
+          "box_3",
+          "couch_13"
+        ]
+      }
+    ],
+    "functional_goals": [
+      {
+        "predicate": "is_on_top",
+        "args": [
+          "vase_0",
+          "table_15"
+        ]
+      },
+      {
+        "predicate": "is_on_top",
+        "args": [
+          "box_3",
+          "table_12"
+        ]
+      },
+      {
+        "predicate": "is_open",
+        "args": [
+          "fridge_34"
+        ]
+      }
+    ],
+    "rigid_asset_instances": [
+      {
+        "instance_index": 0,
+        "config_name": "7b497caf99a943b669087b3dd4e77be63b3dbc0a.object_config.json",
+        "config_path": "external/EnactTom/data/objects_ovmm/train_val/hssd/configs/objects/7b497caf99a943b669087b3dd4e77be63b3dbc0a.object_config.json",
+        "config_sha256": "f35ce642678c09c78bdb7c9a1d69eb1abe6dc592e0158a051bfecf2553ce3220",
+        "transform_4x4": [
+          [
+            -0.72336,
+            0.0,
+            -0.69047,
+            -3.17095
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.80071
+          ],
+          [
+            0.69047,
+            0.0,
+            -0.72336,
+            -5.94672
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "semantic_binding": "resolved_by_Habitat_runtime_not_inferred_by_compiler"
+      },
+      {
+        "instance_index": 1,
+        "config_name": "Candle_6.object_config.json",
+        "config_path": "external/EnactTom/data/objects_ovmm/train_val/ai2thorhab/configs/objects/Candle_6.object_config.json",
+        "config_sha256": "b269af69c7cc3a4d4b5518b19369711dc51c3e91fb9c6a9088fdc391ddd5a580",
+        "transform_4x4": [
+          [
+            0.40767,
+            0.0,
+            -0.91313,
+            -3.00575
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.72308
+          ],
+          [
+            0.91313,
+            0.0,
+            0.40767,
+            -5.96458
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "semantic_binding": "resolved_by_Habitat_runtime_not_inferred_by_compiler"
+      },
+      {
+        "instance_index": 2,
+        "config_name": "2f7ac29a1a7006f169b9a6235de97532c78b03c5.object_config.json",
+        "config_path": "external/EnactTom/data/objects_ovmm/train_val/hssd/configs/objects/2f7ac29a1a7006f169b9a6235de97532c78b03c5.object_config.json",
+        "config_sha256": "11982b2ee8d960b1ba89ac4d0cf58ade648bca024a23f386218c1e6ab1bfbdd1",
+        "transform_4x4": [
+          [
+            -0.909,
+            0.0,
+            0.41679,
+            -3.3863
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.65537
+          ],
+          [
+            -0.41679,
+            0.0,
+            -0.909,
+            -6.24128
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "semantic_binding": "resolved_by_Habitat_runtime_not_inferred_by_compiler"
+      },
+      {
+        "instance_index": 3,
+        "config_name": "Perricone_MD_Omega_3_Supplements.object_config.json",
+        "config_path": "external/EnactTom/data/objects_ovmm/train_val/google_scanned/assets/objects/Perricone_MD_Omega_3_Supplements/meshes/Perricone_MD_Omega_3_Supplements.object_config.json",
+        "config_sha256": "a4ac16b2048164f24b718b806f211eb276c03b3d1f6d8501b2fa6773d0ef5791",
+        "transform_4x4": [
+          [
+            0.98235,
+            0.0,
+            0.18708,
+            1.62973
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.59068
+          ],
+          [
+            -0.18708,
+            0.0,
+            0.98235,
+            -6.48581
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "semantic_binding": "resolved_by_Habitat_runtime_not_inferred_by_compiler"
+      },
+      {
+        "instance_index": 4,
+        "config_name": "b808e79f1fd6afd447a261a1582225a3a4aecb0b.object_config.json",
+        "config_path": "external/EnactTom/data/objects_ovmm/train_val/hssd/configs/objects/b808e79f1fd6afd447a261a1582225a3a4aecb0b.object_config.json",
+        "config_sha256": "8c948c2eb7c1f76699567b90f0f765eaf99063f1bfe572381a5f0e49041968cf",
+        "transform_4x4": [
+          [
+            0.03704,
+            0.0,
+            -0.99931,
+            -9.11943
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.82033
+          ],
+          [
+            0.99931,
+            0.0,
+            0.03704,
+            -7.20353
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "semantic_binding": "resolved_by_Habitat_runtime_not_inferred_by_compiler"
+      }
+    ]
+  },
+  "social_code": {
+    "agents": {
+      "agent_0": {
+        "spawn": {
+          "position": [
+            -6.407744884490967,
+            0.17155149579048157,
+            -3.566112518310547
+          ],
+          "rotation": 0.6183969974517822
+        },
+        "denied_rooms": [
+          "kitchen_1"
+        ],
+        "message_budget": 2,
+        "allowed_message_targets": [
+          "agent_2"
+        ],
+        "private_ssc_facts": [
+          "agent_0 is barred from kitchen_1.",
+          "agent_0 may send at most 2 messages total.",
+          "agent_0 may only message agent_2.",
+          "Private objective: leave candle_1 on chair_24 in living_room_1."
+        ],
+        "actions": [
+          "Navigate",
+          "Open",
+          "Close",
+          "Pick",
+          "Place",
+          "Communicate",
+          "Wait"
+        ]
+      },
+      "agent_1": {
+        "spawn": {
+          "position": [
+            -4.225989818572998,
+            0.17155149579048157,
+            -3.3229281902313232
+          ],
+          "rotation": 0.4155210852622986
+        },
+        "denied_rooms": [
+          "bedroom_2"
+        ],
+        "message_budget": 2,
+        "allowed_message_targets": [
+          "agent_2"
+        ],
+        "private_ssc_facts": [
+          "agent_1 is barred from bedroom_2.",
+          "agent_1 may send at most 2 messages total.",
+          "agent_1 may only message agent_2.",
+          "Private objective: leave cabinet_27 open at the end."
+        ],
+        "actions": [
+          "Navigate",
+          "Open",
+          "Close",
+          "Pick",
+          "Place",
+          "Communicate",
+          "Wait"
+        ]
+      },
+      "agent_2": {
+        "spawn": {
+          "position": [
+            -0.39835578203201294,
+            0.17155149579048157,
+            -2.934569835662842
+          ],
+          "rotation": 0.41201403737068176
+        },
+        "denied_rooms": [],
+        "message_budget": 2,
+        "allowed_message_targets": [
+          "agent_0",
+          "agent_1"
+        ],
+        "private_ssc_facts": [
+          "agent_2 may send at most 2 messages total.",
+          "agent_2 may message agent_0 or agent_1.",
+          "box_3 is in bedroom_2 on bed_10.",
+          "The kitchen fixture that must be left open at the end is fridge_34.",
+          "agent_0 is barred from kitchen_1.",
+          "agent_1 is barred from bedroom_2.",
+          "Private objective: leave book_2 on shelves_11 in bedroom_1."
+        ],
+        "actions": [
+          "Navigate",
+          "Open",
+          "Close",
+          "Pick",
+          "Place",
+          "Communicate",
+          "Wait"
+        ]
+      }
+    }
+  },
+  "generated_counterfactual_cases": [
+    {
+      "case_id": "base",
+      "physical_signature": "identical",
+      "intervention": null,
+      "question": "Which agent initially has the private exact location of box_3?",
+      "evaluation_target": "agent_2"
+    },
+    {
+      "case_id": "receiver_intervention",
+      "physical_signature": "identical",
+      "intervention": {
+        "type": "confirmed_message_delivery",
+        "sender": "agent_2",
+        "message": "box_3 is in bedroom_2 on bed_10",
+        "receiver_before": "agent_0",
+        "receiver_after": "agent_1"
+      },
+      "question": "After confirmed delivery, which agent received the exact box location?",
+      "evaluation_target": "changes_with_receiver"
+    },
+    {
+      "case_id": "irrelevant_fact_negative_control",
+      "physical_signature": "identical",
+      "intervention": {
+        "type": "private_fact_owner_change",
+        "fact": "glass_4 is on counter_25",
+        "from": "agent_0",
+        "to": "agent_1",
+        "task_relevance": "none"
+      },
+      "question": "Which agent initially has the private exact location of box_3?",
+      "evaluation_target": "must_remain_agent_2"
+    }
+  ],
+  "physical_signature": {
+    "scene_id": "108294897_176710602",
+    "stage_sha256": "75be5e75175ddb54986804dadcf3e088a6784d6fdc87dd3b7d80cdd175f8c140",
+    "initial_relations": [
+      {
+        "predicate": "agent_in_room",
+        "args": [
+          "agent_0",
+          "living_room_1"
+        ]
+      },
+      {
+        "predicate": "agent_in_room",
+        "args": [
+          "agent_1",
+          "bedroom_1"
+        ]
+      },
+      {
+        "predicate": "agent_in_room",
+        "args": [
+          "agent_2",
+          "closet_1"
+        ]
+      },
+      {
+        "predicate": "is_in_room",
+        "args": [
+          "table_12",
+          "living_room_1"
+        ]
+      },
+      {
+        "predicate": "is_in_room",
+        "args": [
+          "couch_13",
+          "living_room_1"
+        ]
+      },
+      {
+        "predicate": "is_in_room",
+        "args": [
+          "chair_24",
+          "living_room_1"
+        ]
+      },
+      {
+        "predicate": "is_in_room",
+        "args": [
+          "shelves_11",
+          "bedroom_1"
+        ]
+      },
+      {
+        "predicate": "is_in_room",
+        "args": [
+          "cabinet_27",
+          "bedroom_2"
+        ]
+      },
+      {
+        "predicate": "is_in_room",
+        "args": [
+          "fridge_34",
+          "kitchen_1"
+        ]
+      },
+      {
+        "predicate": "is_in_room",
+        "args": [
+          "table_15",
+          "dining_room_1"
+        ]
+      },
+      {
+        "predicate": "is_in_room",
+        "args": [
+          "vase_0",
+          "living_room_1"
+        ]
+      },
+      {
+        "predicate": "is_on_top",
+        "args": [
+          "vase_0",
+          "table_12"
+        ]
+      },
+      {
+        "predicate": "is_in_room",
+        "args": [
+          "candle_1",
+          "living_room_1"
+        ]
+      },
+      {
+        "predicate": "is_on_top",
+        "args": [
+          "candle_1",
+          "table_12"
+        ]
+      },
+      {
+        "predicate": "is_in_room",
+        "args": [
+          "book_2",
+          "living_room_1"
+        ]
+      },
+      {
+        "predicate": "is_on_top",
+        "args": [
+          "book_2",
+          "table_12"
+        ]
+      },
+      {
+        "predicate": "is_in_room",
+        "args": [
+          "box_3",
+          "living_room_1"
+        ]
+      },
+      {
+        "predicate": "is_on_top",
+        "args": [
+          "box_3",
+          "couch_13"
+        ]
+      }
+    ],
+    "goals": [
+      {
+        "predicate": "is_on_top",
+        "args": [
+          "vase_0",
+          "table_15"
+        ]
+      },
+      {
+        "predicate": "is_on_top",
+        "args": [
+          "box_3",
+          "table_12"
+        ]
+      },
+      {
+        "predicate": "is_open",
+        "args": [
+          "fridge_34"
+        ]
+      }
+    ]
+  },
+  "validation": {
+    "checks": {
+      "scene_dataset_exists": true,
+      "stage_glb_exists": true,
+      "all_rigid_asset_configs_exist": true,
+      "agent_spawns_complete": true,
+      "goals_nonempty": true,
+      "counterfactual_physics_frozen": true,
+      "golden_trajectory_used": false,
+      "probe_expected_response_used": false
+    },
+    "missing_assets": []
+  },
+  "leakage_boundary": {
+    "source_fields_used": [
+      "task_id",
+      "episode_id",
+      "scene_id",
+      "agent_spawns",
+      "mechanic_bindings",
+      "agent_secrets",
+      "agent_actions",
+      "problem_pddl",
+      "functional_goal_pddl",
+      "episode.scene_dataset_config",
+      "episode.additional_obj_config_paths",
+      "episode.rigid_objs"
+    ],
+    "source_fields_excluded": [
+      "golden_trajectory",
+      "literal_tom_probes.expected_response"
+    ]
+  },
+  "provenance": {
+    "task_path": "workdirs/habitat_enacttom/frozen12/tasks/hard_108294897_176710602_1166.json",
+    "task_sha256": "bf6c7674117402d3f20cb431679818d601a91ec84be166269749720a60b72261",
+    "episodes_path": "workdirs/habitat_enacttom/frozen12/episodes.json.gz",
+    "episodes_sha256": "b658199a62d68f7f5dd8a349dd3a7ed6a8082624016dc801204a67aa22a1f2d3"
+  }
+}
