@@ -1,0 +1,29 @@
+{
+  "schema_version": "ssc_to_habitat_compile_manifest_v1",
+  "accepted": true,
+  "claim": "SSC code compiled to a distinct executable Habitat episode using existing HSSD meshes.",
+  "generated_episode_id": "911166",
+  "source_scene_id": "108294897_176710602",
+  "asset_count": 5,
+  "pose_changed": true,
+  "changed_asset_index": 0,
+  "changed_instance_handle": "7b497caf99a943b669087b3dd4e77be63b3dbc0a_:0000",
+  "source_transform_sha256": "9d4d134bd81794a6b67148642a1e881915ca99b9b43a7949b3da81a0cb55a1c1",
+  "generated_transform_sha256": "4ffc9c6ec6832bde24a5cf92346622ddd65aea6ad72cc40d02b8dbad7de529c5",
+  "source_code_sha256": "59468000491568de56ed475379766ae3186b36034e5b981801ddb2a364f85c47",
+  "generated_code_sha256": "d714f3c5f52558e90fae2401d1cef9266c199b9bad92931d7ad78dac4d21ebc7",
+  "answer_bearing_fields_present": false,
+  "new_mesh_synthesis": false,
+  "source_code": "reports/cases/habitat_ep1166_ssc_generated_environment.json",
+  "source_code_file_sha256": "bc9f6964e3b6129da592e82944ae604b7bd3aed6e3bbcee20d4807f571cd11bb",
+  "outputs": {
+    "generated_code": "reports/code_to_environment/habitat_ep1166_generated_v1/generated_ssc_code.json",
+    "episodes": "reports/code_to_environment/habitat_ep1166_generated_v1/episodes.json.gz",
+    "task": "reports/code_to_environment/habitat_ep1166_generated_v1/task.json"
+  },
+  "output_sha256": {
+    "generated_code": "004b799330bfc18aeef6cf9fb5558108f0c3305e22ed4e48e853de15c10e7991",
+    "episodes": "a501adf1712fd2719cdf7f7fc57596f3d0d7ed7d4575762d784c0aa2e2b50578",
+    "task": "7292351936ccb815dc317d91e42d858ae31eaff2446b7ecefb61f0b0178a0f89"
+  }
+}

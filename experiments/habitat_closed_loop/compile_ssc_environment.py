@@ -10,6 +10,7 @@ expected_response are deliberately excluded.
 from __future__ import annotations
 
 import argparse
+import copy
 import gzip
 import hashlib
 import json
@@ -84,10 +85,15 @@ def compile_environment(task_path: Path, episodes_path: Path) -> dict[str, Any]:
     stage = DATA_ROOT / f"versioned_data/hssd-hab/stages/{task['scene_id']}.glb"
     rigid_assets = []
     missing_assets = []
+    instance_counts: dict[str, int] = {}
     for index, (config_name, transform) in enumerate(episode.get("rigid_objs", [])):
         path = resolve_asset(config_name)
+        short_name = config_name.split(".object_config.json", 1)[0]
+        instance_number = instance_counts.get(short_name, 0)
+        instance_counts[short_name] = instance_number + 1
         record = {
             "instance_index": index,
+            "instance_handle": f"{short_name}_:{instance_number:04d}",
             "config_name": config_name,
             "config_path": str(path.relative_to(ROOT)) if path else None,
             "config_sha256": sha256(path) if path else None,
@@ -97,6 +103,40 @@ def compile_environment(task_path: Path, episodes_path: Path) -> dict[str, Any]:
         rigid_assets.append(record)
         if path is None:
             missing_assets.append(config_name)
+
+    excluded_task_fields = {
+        "golden_trajectory", "golden_trajectory_metadata", "literal_tom_probes",
+        "calibration", "oracle_schedule", "coordination_cards",
+        "coordination_replay_responses", "replay_audit_specs",
+    }
+    task_blueprint = {
+        key: copy.deepcopy(value)
+        for key, value in task.items()
+        if key not in excluded_task_fields
+    }
+    episode_blueprint = {
+        "scene_id": episode["scene_id"],
+        "scene_dataset_config": episode["scene_dataset_config"],
+        "additional_obj_config_paths": copy.deepcopy(episode.get("additional_obj_config_paths", [])),
+        "start_position": copy.deepcopy(episode.get("start_position", [0, 0, 0])),
+        "start_rotation": copy.deepcopy(episode.get("start_rotation", [0, 0, 0, 1])),
+        "info": {
+            "task_gen": "ssc_code_to_environment",
+            "source_episode_id": str(episode["episode_id"]),
+            "object_labels": copy.deepcopy((episode.get("info") or {}).get("object_labels", {})),
+        },
+        "ao_states": copy.deepcopy(episode.get("ao_states", {})),
+        "targets": {},
+        "markers": copy.deepcopy(episode.get("markers", [])),
+        "target_receptacles": [],
+        "goal_receptacles": [],
+        "name_to_receptacle": copy.deepcopy(episode.get("name_to_receptacle", {})),
+        "instruction": task["task"],
+        "evaluation_propositions": [],
+        "evaluation_proposition_dependencies": [],
+        "evaluation_constraints": [],
+        "object_states": copy.deepcopy(episode.get("object_states", {})),
+    }
 
     room_restrictions: dict[str, list[str]] = {agent: [] for agent in entities.get("agent", [])}
     message_limits: dict[str, int] = {}
@@ -181,8 +221,8 @@ def compile_environment(task_path: Path, episodes_path: Path) -> dict[str, Any]:
     )
 
     return {
-        "schema_version": "ssc_asset_linked_environment_v1",
-        "status": "validated_asset_linked_scenario_not_new_mesh_synthesis",
+        "schema_version": "ssc_asset_linked_environment_v2",
+        "status": "code_complete_for_habitat_episode_instantiation_not_new_mesh_synthesis",
         "accepted": accepted,
         "task_id": task["task_id"],
         "episode_id": task["episode_id"],
@@ -200,6 +240,8 @@ def compile_environment(task_path: Path, episodes_path: Path) -> dict[str, Any]:
             "rigid_asset_instances": rigid_assets,
         },
         "social_code": {"agents": agents},
+        "habitat_episode_blueprint": episode_blueprint,
+        "task_blueprint": task_blueprint,
         "generated_counterfactual_cases": counterfactual_cases,
         "physical_signature": physical_signature,
         "validation": {"checks": checks, "missing_assets": missing_assets},
