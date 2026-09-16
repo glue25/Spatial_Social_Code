@@ -1,0 +1,1775 @@
+{
+  "frames": [
+    {
+      "camera_motion": {
+        "basis": "Sink, backsplash and worktop shift together between observations 0 and 1.",
+        "status": "present"
+      },
+      "entities": [
+        {
+          "basis": "Metal worktop surrounds the sink and cutting boards.",
+          "bbox": [
+            0.003,
+            0.407,
+            1,
+            0.882
+          ],
+          "confidence": 0.98,
+          "epistemic_status": "observed",
+          "id": "work_counter",
+          "state": "metal kitchen worktop",
+          "visibility": "partially_visible"
+        },
+        {
+          "basis": "Red mesh basket is beside the sink.",
+          "bbox": [
+            0.318,
+            0.429,
+            0.497,
+            0.598
+          ],
+          "confidence": 0.99,
+          "epistemic_status": "observed",
+          "id": "red_colander_counter",
+          "state": "red perforated basket",
+          "visibility": "visible"
+        },
+        {
+          "basis": "The relevant lower drawer is not identifiable in this view.",
+          "bbox": null,
+          "confidence": 0.99,
+          "epistemic_status": "unknown",
+          "id": "drawer_lower",
+          "state": "unknown",
+          "visibility": "unknown"
+        },
+        {
+          "basis": "No solid red drawer bowl is visible.",
+          "bbox": null,
+          "confidence": 0.99,
+          "epistemic_status": "unknown",
+          "id": "red_bowl_drawer",
+          "state": "unknown",
+          "visibility": "unknown"
+        },
+        {
+          "basis": "No nested metal bowl is visible.",
+          "bbox": null,
+          "confidence": 0.99,
+          "epistemic_status": "unknown",
+          "id": "nested_metal_bowl",
+          "state": "unknown",
+          "visibility": "unknown"
+        },
+        {
+          "basis": "Small green leafy material is visible between the left fingers and cabbage.",
+          "bbox": [
+            0.472,
+            0.669,
+            0.563,
+            0.726
+          ],
+          "confidence": 0.88,
+          "epistemic_status": "observed",
+          "id": "vegetable_scrap",
+          "state": "small green leafy remnant with pale stem",
+          "visibility": "partially_visible"
+        },
+        {
+          "basis": "Large round green head is visible above the right palm.",
+          "bbox": [
+            0.559,
+            0.6,
+            0.709,
+            0.76
+          ],
+          "confidence": 0.99,
+          "epistemic_status": "observed",
+          "id": "cabbage_head",
+          "state": "whole green cabbage",
+          "visibility": "visible"
+        },
+        {
+          "basis": "Left hand surrounds the small green material.",
+          "bbox": [
+            0.383,
+            0.665,
+            0.567,
+            0.79
+          ],
+          "confidence": 0.97,
+          "epistemic_status": "observed",
+          "id": "wearer_left_hand",
+          "state": "bare hand",
+          "visibility": "visible"
+        },
+        {
+          "basis": "Right palm and fingers are visible beneath the cabbage.",
+          "bbox": [
+            0.525,
+            0.646,
+            0.675,
+            0.824
+          ],
+          "confidence": 0.96,
+          "epistemic_status": "observed",
+          "id": "wearer_right_hand",
+          "state": "bare hand partly covered by cabbage",
+          "visibility": "partially_visible"
+        },
+        {
+          "basis": "Another person's arms and dark clothing enter from the right.",
+          "bbox": [
+            0.838,
+            0.546,
+            1,
+            0.834
+          ],
+          "confidence": 0.94,
+          "epistemic_status": "observed",
+          "id": "other_person",
+          "state": "partially framed person in dark clothing",
+          "visibility": "partially_visible"
+        },
+        {
+          "basis": "Silver wrist accessory is visible below the nearer hand.",
+          "bbox": [
+            0.838,
+            0.585,
+            0.906,
+            0.686
+          ],
+          "confidence": 0.97,
+          "epistemic_status": "observed",
+          "id": "other_person_bracelet_hand",
+          "state": "hand with silver wrist accessory",
+          "visibility": "visible"
+        },
+        {
+          "basis": "The upper hand has no visible wrist accessory.",
+          "bbox": [
+            0.866,
+            0.546,
+            0.959,
+            0.6
+          ],
+          "confidence": 0.94,
+          "epistemic_status": "observed",
+          "id": "other_person_other_hand",
+          "state": "bare hand above cutting board",
+          "visibility": "visible"
+        }
+      ],
+      "interactions": [
+        {
+          "actor": "wearer_left_hand",
+          "basis": "Fingers close around the small leafy material.",
+          "confidence": 0.95,
+          "epistemic_status": "observed",
+          "evidence_indices": [
+            0
+          ],
+          "predicate": "holding",
+          "target": "vegetable_scrap"
+        },
+        {
+          "actor": "wearer_right_hand",
+          "basis": "Palm supports the underside of the cabbage.",
+          "confidence": 0.97,
+          "epistemic_status": "observed",
+          "evidence_indices": [
+            0
+          ],
+          "predicate": "holding",
+          "target": "cabbage_head"
+        }
+      ],
+      "observation_index": 0,
+      "relations": [
+        {
+          "basis": "Basket base rests on the metal worktop beside the sink.",
+          "confidence": 0.98,
+          "epistemic_status": "observed",
+          "evidence_indices": [
+            0
+          ],
+          "object": "work_counter",
+          "predicate": "on_top_of",
+          "subject": "red_colander_counter"
+        }
+      ],
+      "uncertainties": [
+        "The leafy remnant may still be connected to the cabbage; separation is not established.",
+        "Drawer and drawer contents cannot be assessed.",
+        "No hand-colander contact is visible."
+      ]
+    },
+    {
+      "camera_motion": {
+        "basis": "Broad shifts of sink, hood and boards from observation 0 indicate camera rotation.",
+        "status": "present"
+      },
+      "entities": [
+        {
+          "basis": "Metal worktop remains visible around sink and boards.",
+          "bbox": [
+            0,
+            0.452,
+            1,
+            0.935
+          ],
+          "confidence": 0.98,
+          "epistemic_status": "observed",
+          "id": "work_counter",
+          "state": "metal kitchen worktop",
+          "visibility": "partially_visible"
+        },
+        {
+          "basis": "Perforated red basket remains beside the sink.",
+          "bbox": [
+            0.254,
+            0.479,
+            0.439,
+            0.661
+          ],
+          "confidence": 0.99,
+          "epistemic_status": "observed",
+          "id": "red_colander_counter",
+          "state": "red perforated basket",
+          "visibility": "visible"
+        },
+        {
+          "basis": "Relevant lower drawer is not identifiable.",
+          "bbox": null,
+          "confidence": 0.99,
+          "epistemic_status": "unknown",
+          "id": "drawer_lower",
+          "state": "unknown",
+          "visibility": "unknown"
+        },
+        {
+          "basis": "Solid red drawer bowl is not visible.",
+          "bbox": null,
+          "confidence": 0.99,
+          "epistemic_status": "unknown",
+          "id": "red_bowl_drawer",
+          "state": "unknown",
+          "visibility": "unknown"
+        },
+        {
+          "basis": "Nested metal bowl is not visible.",
+          "bbox": null,
+          "confidence": 0.99,
+          "epistemic_status": "unknown",
+          "id": "nested_metal_bowl",
+          "state": "unknown",
+          "visibility": "unknown"
+        },
+        {
+          "basis": "Green remnant and pale stem are visible at the left fingers.",
+          "bbox": [
+            0.435,
+            0.776,
+            0.517,
+            0.831
+          ],
+          "confidence": 0.9,
+          "epistemic_status": "observed",
+          "id": "vegetable_scrap",
+          "state": "small green leafy remnant with pale stem",
+          "visibility": "partially_visible"
+        },
+        {
+          "basis": "Round cabbage is visible over the right hand.",
+          "bbox": [
+            0.503,
+            0.671,
+            0.648,
+            0.834
+          ],
+          "confidence": 0.99,
+          "epistemic_status": "observed",
+          "id": "cabbage_head",
+          "state": "whole green cabbage",
+          "visibility": "visible"
+        },
+        {
+          "basis": "Left fingers surround the remnant.",
+          "bbox": [
+            0.356,
+            0.749,
+            0.497,
+            0.865
+          ],
+          "confidence": 0.97,
+          "epistemic_status": "observed",
+          "id": "wearer_left_hand",
+          "state": "bare hand",
+          "visibility": "visible"
+        },
+        {
+          "basis": "Right fingers and palm are visible around the cabbage underside.",
+          "bbox": [
+            0.474,
+            0.727,
+            0.618,
+            0.893
+          ],
+          "confidence": 0.96,
+          "epistemic_status": "observed",
+          "id": "wearer_right_hand",
+          "state": "bare hand partly covered by cabbage",
+          "visibility": "partially_visible"
+        },
+        {
+          "basis": "Dark-shirt torso and arms are visible at right.",
+          "bbox": [
+            0.767,
+            0.573,
+            1,
+            0.972
+          ],
+          "confidence": 0.97,
+          "epistemic_status": "observed",
+          "id": "other_person",
+          "state": "person in dark clothing",
+          "visibility": "partially_visible"
+        },
+        {
+          "basis": "Nearer hand has a silver wrist accessory.",
+          "bbox": [
+            0.768,
+            0.609,
+            0.849,
+            0.722
+          ],
+          "confidence": 0.97,
+          "epistemic_status": "observed",
+          "id": "other_person_bracelet_hand",
+          "state": "hand with silver wrist accessory",
+          "visibility": "visible"
+        },
+        {
+          "basis": "Upper hand is visibly separate from the accessory-bearing wrist.",
+          "bbox": [
+            0.797,
+            0.573,
+            0.882,
+            0.636
+          ],
+          "confidence": 0.95,
+          "epistemic_status": "observed",
+          "id": "other_person_other_hand",
+          "state": "bare hand above cutting board",
+          "visibility": "visible"
+        }
+      ],
+      "interactions": [
+        {
+          "actor": "wearer_left_hand",
+          "basis": "Fingers enclose the green remnant.",
+          "confidence": 0.96,
+          "epistemic_status": "observed",
+          "evidence_indices": [
+            1
+          ],
+          "predicate": "holding",
+          "target": "vegetable_scrap"
+        },
+        {
+          "actor": "wearer_right_hand",
+          "basis": "Right palm supports the cabbage.",
+          "confidence": 0.97,
+          "epistemic_status": "observed",
+          "evidence_indices": [
+            1
+          ],
+          "predicate": "holding",
+          "target": "cabbage_head"
+        }
+      ],
+      "observation_index": 1,
+      "relations": [
+        {
+          "basis": "The perforated basket rests on the worktop beside the sink.",
+          "confidence": 0.98,
+          "epistemic_status": "observed",
+          "evidence_indices": [
+            1
+          ],
+          "object": "work_counter",
+          "predicate": "on_top_of",
+          "subject": "red_colander_counter"
+        }
+      ],
+      "uncertainties": [
+        "Remnant attachment to the cabbage is unclear.",
+        "Other person's hands are above the board, not visibly reaching toward a drawer.",
+        "Basket screen displacement accompanies camera motion, not demonstrated basket movement."
+      ]
+    },
+    {
+      "camera_motion": {
+        "basis": "Hood, sink and counter shift slightly together from observation 1.",
+        "status": "present"
+      },
+      "entities": [
+        {
+          "basis": "Worktop is visible beneath kitchen items.",
+          "bbox": [
+            0,
+            0.449,
+            1,
+            0.942
+          ],
+          "confidence": 0.98,
+          "epistemic_status": "observed",
+          "id": "work_counter",
+          "state": "metal kitchen worktop",
+          "visibility": "partially_visible"
+        },
+        {
+          "basis": "Mesh-sided red basket is visible beside the sink.",
+          "bbox": [
+            0.244,
+            0.48,
+            0.428,
+            0.661
+          ],
+          "confidence": 0.99,
+          "epistemic_status": "observed",
+          "id": "red_colander_counter",
+          "state": "red perforated basket",
+          "visibility": "visible"
+        },
+        {
+          "basis": "Relevant lower drawer is not identifiable.",
+          "bbox": null,
+          "confidence": 0.99,
+          "epistemic_status": "unknown",
+          "id": "drawer_lower",
+          "state": "unknown",
+          "visibility": "unknown"
+        },
+        {
+          "basis": "Solid red drawer bowl is not visible.",
+          "bbox": null,
+          "confidence": 0.99,
+          "epistemic_status": "unknown",
+          "id": "red_bowl_drawer",
+          "state": "unknown",
+          "visibility": "unknown"
+        },
+        {
+          "basis": "Nested metal bowl is not visible.",
+          "bbox": null,
+          "confidence": 0.99,
+          "epistemic_status": "unknown",
+          "id": "nested_metal_bowl",
+          "state": "unknown",
+          "visibility": "unknown"
+        },
+        {
+          "basis": "Small leafy material is visible in the left fingers below the cabbage.",
+          "bbox": [
+            0.428,
+            0.786,
+            0.511,
+            0.845
+          ],
+          "confidence": 0.92,
+          "epistemic_status": "observed",
+          "id": "vegetable_scrap",
+          "state": "small green leafy remnant with pale stem",
+          "visibility": "partially_visible"
+        },
+        {
+          "basis": "Large green head is visible above the hands.",
+          "bbox": [
+            0.501,
+            0.694,
+            0.643,
+            0.847
+          ],
+          "confidence": 0.99,
+          "epistemic_status": "observed",
+          "id": "cabbage_head",
+          "state": "whole green cabbage",
+          "visibility": "visible"
+        },
+        {
+          "basis": "Left hand is visible around the leafy remnant.",
+          "bbox": [
+            0.362,
+            0.786,
+            0.499,
+            0.876
+          ],
+          "confidence": 0.97,
+          "epistemic_status": "observed",
+          "id": "wearer_left_hand",
+          "state": "bare hand",
+          "visibility": "visible"
+        },
+        {
+          "basis": "Right fingers and palm support the head from below.",
+          "bbox": [
+            0.453,
+            0.754,
+            0.618,
+            0.908
+          ],
+          "confidence": 0.96,
+          "epistemic_status": "observed",
+          "id": "wearer_right_hand",
+          "state": "bare hand partly covered by cabbage",
+          "visibility": "partially_visible"
+        },
+        {
+          "basis": "Dark clothing and both arms are visible at right.",
+          "bbox": [
+            0.764,
+            0.569,
+            1,
+            0.98
+          ],
+          "confidence": 0.97,
+          "epistemic_status": "observed",
+          "id": "other_person",
+          "state": "person in dark clothing",
+          "visibility": "partially_visible"
+        },
+        {
+          "basis": "Silver accessory is visible on the wrist of the lower hand.",
+          "bbox": [
+            0.764,
+            0.603,
+            0.846,
+            0.725
+          ],
+          "confidence": 0.97,
+          "epistemic_status": "observed",
+          "id": "other_person_bracelet_hand",
+          "state": "hand with silver wrist accessory",
+          "visibility": "visible"
+        },
+        {
+          "basis": "Upper hand is separate from the bracelet-bearing hand.",
+          "bbox": [
+            0.799,
+            0.569,
+            0.882,
+            0.632
+          ],
+          "confidence": 0.95,
+          "epistemic_status": "observed",
+          "id": "other_person_other_hand",
+          "state": "bare hand above cutting board",
+          "visibility": "visible"
+        }
+      ],
+      "interactions": [
+        {
+          "actor": "wearer_left_hand",
+          "basis": "Left fingers grasp the small green material.",
+          "confidence": 0.96,
+          "epistemic_status": "observed",
+          "evidence_indices": [
+            2
+          ],
+          "predicate": "holding",
+          "target": "vegetable_scrap"
+        },
+        {
+          "actor": "wearer_right_hand",
+          "basis": "Right palm remains under the cabbage.",
+          "confidence": 0.97,
+          "epistemic_status": "observed",
+          "evidence_indices": [
+            2
+          ],
+          "predicate": "holding",
+          "target": "cabbage_head"
+        }
+      ],
+      "observation_index": 2,
+      "relations": [
+        {
+          "basis": "Basket base rests on the worktop.",
+          "confidence": 0.98,
+          "epistemic_status": "observed",
+          "evidence_indices": [
+            2
+          ],
+          "object": "work_counter",
+          "predicate": "on_top_of",
+          "subject": "red_colander_counter"
+        }
+      ],
+      "uncertainties": [
+        "Remnant separation from the cabbage is not clearly visible.",
+        "No drawer state or drawer-directed reach is established.",
+        "No colander grasp or lift is visible."
+      ]
+    },
+    {
+      "camera_motion": {
+        "basis": "Large leftward viewpoint rotation reveals the dish rack and shifts the whole work area.",
+        "status": "present"
+      },
+      "entities": [
+        {
+          "basis": "Sink surround and worktop span the middle and lower image.",
+          "bbox": [
+            0,
+            0.452,
+            1,
+            0.864
+          ],
+          "confidence": 0.98,
+          "epistemic_status": "observed",
+          "id": "work_counter",
+          "state": "metal kitchen worktop",
+          "visibility": "partially_visible"
+        },
+        {
+          "basis": "Red perforated basket is now right of the centered sink.",
+          "bbox": [
+            0.523,
+            0.469,
+            0.69,
+            0.622
+          ],
+          "confidence": 0.99,
+          "epistemic_status": "observed",
+          "id": "red_colander_counter",
+          "state": "red perforated basket",
+          "visibility": "visible"
+        },
+        {
+          "basis": "Relevant lower drawer is not identifiable.",
+          "bbox": null,
+          "confidence": 0.99,
+          "epistemic_status": "unknown",
+          "id": "drawer_lower",
+          "state": "unknown",
+          "visibility": "unknown"
+        },
+        {
+          "basis": "Solid red drawer bowl is not visible.",
+          "bbox": null,
+          "confidence": 0.99,
+          "epistemic_status": "unknown",
+          "id": "red_bowl_drawer",
+          "state": "unknown",
+          "visibility": "unknown"
+        },
+        {
+          "basis": "Nested metal bowl is not visible.",
+          "bbox": null,
+          "confidence": 0.99,
+          "epistemic_status": "unknown",
+          "id": "nested_metal_bowl",
+          "state": "unknown",
+          "visibility": "unknown"
+        },
+        {
+          "basis": "Green remnant is visible at the left fingers below a pale strip.",
+          "bbox": [
+            0.603,
+            0.821,
+            0.71,
+            0.912
+          ],
+          "confidence": 0.88,
+          "epistemic_status": "observed",
+          "id": "vegetable_scrap",
+          "state": "small green leafy remnant",
+          "visibility": "partially_visible"
+        },
+        {
+          "basis": "Large cabbage remains visible near the lower-right board.",
+          "bbox": [
+            0.703,
+            0.748,
+            0.864,
+            0.906
+          ],
+          "confidence": 0.98,
+          "epistemic_status": "observed",
+          "id": "cabbage_head",
+          "state": "whole green cabbage",
+          "visibility": "visible"
+        },
+        {
+          "basis": "Left hand is visible across the lower center around the remnant.",
+          "bbox": [
+            0.542,
+            0.822,
+            0.687,
+            0.926
+          ],
+          "confidence": 0.96,
+          "epistemic_status": "observed",
+          "id": "wearer_left_hand",
+          "state": "bare hand",
+          "visibility": "visible"
+        },
+        {
+          "basis": "Right fingers and palm are partly visible under the cabbage.",
+          "bbox": [
+            0.665,
+            0.784,
+            0.787,
+            0.977
+          ],
+          "confidence": 0.94,
+          "epistemic_status": "observed",
+          "id": "wearer_right_hand",
+          "state": "bare hand partly covered by cabbage",
+          "visibility": "partially_visible"
+        },
+        {
+          "basis": "No identifiable portion of the other person can be resolved after the turn.",
+          "bbox": null,
+          "confidence": 0.9,
+          "epistemic_status": "unknown",
+          "id": "other_person",
+          "state": "unknown",
+          "visibility": "unknown"
+        },
+        {
+          "basis": "No silver-accessory hand can be resolved.",
+          "bbox": null,
+          "confidence": 0.96,
+          "epistemic_status": "unknown",
+          "id": "other_person_bracelet_hand",
+          "state": "unknown",
+          "visibility": "unknown"
+        },
+        {
+          "basis": "No identifiable other-person bare hand is visible.",
+          "bbox": null,
+          "confidence": 0.96,
+          "epistemic_status": "unknown",
+          "id": "other_person_other_hand",
+          "state": "unknown",
+          "visibility": "unknown"
+        }
+      ],
+      "interactions": [
+        {
+          "actor": "wearer_left_hand",
+          "basis": "Fingers surround the visible leafy remnant.",
+          "confidence": 0.94,
+          "epistemic_status": "observed",
+          "evidence_indices": [
+            3
+          ],
+          "predicate": "holding",
+          "target": "vegetable_scrap"
+        },
+        {
+          "actor": "wearer_right_hand",
+          "basis": "Visible palm and fingers support the cabbage.",
+          "confidence": 0.95,
+          "epistemic_status": "observed",
+          "evidence_indices": [
+            3
+          ],
+          "predicate": "holding",
+          "target": "cabbage_head"
+        }
+      ],
+      "observation_index": 3,
+      "relations": [
+        {
+          "basis": "Basket rests on the same worktop beside the sink.",
+          "confidence": 0.98,
+          "epistemic_status": "observed",
+          "evidence_indices": [
+            3
+          ],
+          "object": "work_counter",
+          "predicate": "on_top_of",
+          "subject": "red_colander_counter"
+        }
+      ],
+      "uncertainties": [
+        "Large camera rotation prevents interpreting screen displacement as object motion.",
+        "The right border is obscured and does not resolve the other person's location.",
+        "No clear cabbage release or colander interaction is visible."
+      ]
+    },
+    {
+      "camera_motion": {
+        "basis": "Sink, rack and basket rotate and shift together from observation 3.",
+        "status": "present"
+      },
+      "entities": [
+        {
+          "basis": "Metal sink surround and right-hand worktop are visible.",
+          "bbox": [
+            0.091,
+            0.358,
+            1,
+            0.928
+          ],
+          "confidence": 0.98,
+          "epistemic_status": "observed",
+          "id": "work_counter",
+          "state": "metal kitchen worktop",
+          "visibility": "partially_visible"
+        },
+        {
+          "basis": "Red perforated basket remains beside the sink.",
+          "bbox": [
+            0.625,
+            0.486,
+            0.805,
+            0.632
+          ],
+          "confidence": 0.99,
+          "epistemic_status": "observed",
+          "id": "red_colander_counter",
+          "state": "red perforated basket",
+          "visibility": "visible"
+        },
+        {
+          "basis": "Relevant lower drawer is not identifiable.",
+          "bbox": null,
+          "confidence": 0.99,
+          "epistemic_status": "unknown",
+          "id": "drawer_lower",
+          "state": "unknown",
+          "visibility": "unknown"
+        },
+        {
+          "basis": "Solid red drawer bowl is not visible.",
+          "bbox": null,
+          "confidence": 0.99,
+          "epistemic_status": "unknown",
+          "id": "red_bowl_drawer",
+          "state": "unknown",
+          "visibility": "unknown"
+        },
+        {
+          "basis": "Nested metal bowl is not visible.",
+          "bbox": null,
+          "confidence": 0.99,
+          "epistemic_status": "unknown",
+          "id": "nested_metal_bowl",
+          "state": "unknown",
+          "visibility": "unknown"
+        },
+        {
+          "basis": "Small green leafy material protrudes above and below the left fingers.",
+          "bbox": [
+            0.599,
+            0.794,
+            0.674,
+            0.891
+          ],
+          "confidence": 0.94,
+          "epistemic_status": "observed",
+          "id": "vegetable_scrap",
+          "state": "small green leafy remnant",
+          "visibility": "partially_visible"
+        },
+        {
+          "basis": "Part of the large green cabbage is visible at the obscured lower-right edge.",
+          "bbox": [
+            0.808,
+            0.801,
+            0.908,
+            0.908
+          ],
+          "confidence": 0.94,
+          "epistemic_status": "observed",
+          "id": "cabbage_head",
+          "state": "green cabbage partly obscured",
+          "visibility": "partially_visible"
+        },
+        {
+          "basis": "Left hand surrounds the remnant at the counter edge.",
+          "bbox": [
+            0.526,
+            0.808,
+            0.678,
+            0.902
+          ],
+          "confidence": 0.97,
+          "epistemic_status": "observed",
+          "id": "wearer_left_hand",
+          "state": "bare hand",
+          "visibility": "visible"
+        },
+        {
+          "basis": "Right fingers are visible beside and beneath the cabbage.",
+          "bbox": [
+            0.753,
+            0.817,
+            0.828,
+            0.939
+          ],
+          "confidence": 0.95,
+          "epistemic_status": "observed",
+          "id": "wearer_right_hand",
+          "state": "bare hand partly obscured",
+          "visibility": "partially_visible"
+        },
+        {
+          "basis": "Other person is not identifiable in the left-turned view.",
+          "bbox": null,
+          "confidence": 0.94,
+          "epistemic_status": "unknown",
+          "id": "other_person",
+          "state": "unknown",
+          "visibility": "unknown"
+        },
+        {
+          "basis": "Accessory-bearing hand is not visible.",
+          "bbox": null,
+          "confidence": 0.98,
+          "epistemic_status": "unknown",
+          "id": "other_person_bracelet_hand",
+          "state": "unknown",
+          "visibility": "unknown"
+        },
+        {
+          "basis": "Other person's non-accessory hand is not identifiable.",
+          "bbox": null,
+          "confidence": 0.98,
+          "epistemic_status": "unknown",
+          "id": "other_person_other_hand",
+          "state": "unknown",
+          "visibility": "unknown"
+        }
+      ],
+      "interactions": [
+        {
+          "actor": "wearer_left_hand",
+          "basis": "Left fingers enclose the small leafy remnant.",
+          "confidence": 0.97,
+          "epistemic_status": "observed",
+          "evidence_indices": [
+            4
+          ],
+          "predicate": "holding",
+          "target": "vegetable_scrap"
+        },
+        {
+          "actor": "wearer_right_hand",
+          "basis": "Visible right fingers remain against the cabbage's lower side.",
+          "confidence": 0.92,
+          "epistemic_status": "observed",
+          "evidence_indices": [
+            4
+          ],
+          "predicate": "holding",
+          "target": "cabbage_head"
+        }
+      ],
+      "observation_index": 4,
+      "relations": [
+        {
+          "basis": "Basket sits on the metal worktop.",
+          "confidence": 0.98,
+          "epistemic_status": "observed",
+          "evidence_indices": [
+            4
+          ],
+          "object": "work_counter",
+          "predicate": "on_top_of",
+          "subject": "red_colander_counter"
+        }
+      ],
+      "uncertainties": [
+        "Cabbage support by the cutting board cannot be resolved at the obscured edge.",
+        "No cabbage release is visible.",
+        "Drawer state and other person's hands remain unobservable."
+      ]
+    },
+    {
+      "camera_motion": {
+        "basis": "Rack, sink and worktop shift together as the camera continues turning.",
+        "status": "present"
+      },
+      "entities": [
+        {
+          "basis": "Metal worktop surrounds the centered sink and right-side board.",
+          "bbox": [
+            0.136,
+            0.362,
+            1,
+            0.938
+          ],
+          "confidence": 0.98,
+          "epistemic_status": "observed",
+          "id": "work_counter",
+          "state": "metal kitchen worktop",
+          "visibility": "partially_visible"
+        },
+        {
+          "basis": "Perforated red basket is fully identifiable beside the sink.",
+          "bbox": [
+            0.663,
+            0.49,
+            0.847,
+            0.642
+          ],
+          "confidence": 0.99,
+          "epistemic_status": "observed",
+          "id": "red_colander_counter",
+          "state": "red perforated basket",
+          "visibility": "visible"
+        },
+        {
+          "basis": "Relevant lower drawer is not identifiable.",
+          "bbox": null,
+          "confidence": 0.99,
+          "epistemic_status": "unknown",
+          "id": "drawer_lower",
+          "state": "unknown",
+          "visibility": "unknown"
+        },
+        {
+          "basis": "Solid red drawer bowl is not visible.",
+          "bbox": null,
+          "confidence": 0.99,
+          "epistemic_status": "unknown",
+          "id": "red_bowl_drawer",
+          "state": "unknown",
+          "visibility": "unknown"
+        },
+        {
+          "basis": "Nested metal bowl is not visible.",
+          "bbox": null,
+          "confidence": 0.99,
+          "epistemic_status": "unknown",
+          "id": "nested_metal_bowl",
+          "state": "unknown",
+          "visibility": "unknown"
+        },
+        {
+          "basis": "Green material protrudes from the left fist.",
+          "bbox": [
+            0.545,
+            0.76,
+            0.608,
+            0.857
+          ],
+          "confidence": 0.96,
+          "epistemic_status": "observed",
+          "id": "vegetable_scrap",
+          "state": "small green leafy remnant",
+          "visibility": "partially_visible"
+        },
+        {
+          "basis": "Green cabbage leaves remain visible at the obscured right edge.",
+          "bbox": [
+            0.83,
+            0.797,
+            0.912,
+            0.891
+          ],
+          "confidence": 0.94,
+          "epistemic_status": "observed",
+          "id": "cabbage_head",
+          "state": "green cabbage partly obscured",
+          "visibility": "partially_visible"
+        },
+        {
+          "basis": "Left hand is visible enclosing the green remnant.",
+          "bbox": [
+            0.49,
+            0.776,
+            0.623,
+            0.865
+          ],
+          "confidence": 0.97,
+          "epistemic_status": "observed",
+          "id": "wearer_left_hand",
+          "state": "bare hand",
+          "visibility": "visible"
+        },
+        {
+          "basis": "Right fingers are visible alongside the cabbage.",
+          "bbox": [
+            0.777,
+            0.825,
+            0.847,
+            0.932
+          ],
+          "confidence": 0.94,
+          "epistemic_status": "observed",
+          "id": "wearer_right_hand",
+          "state": "bare hand partly obscured",
+          "visibility": "partially_visible"
+        },
+        {
+          "basis": "No identifiable other person is visible.",
+          "bbox": null,
+          "confidence": 0.95,
+          "epistemic_status": "unknown",
+          "id": "other_person",
+          "state": "unknown",
+          "visibility": "unknown"
+        },
+        {
+          "basis": "No accessory-bearing hand is visible.",
+          "bbox": null,
+          "confidence": 0.98,
+          "epistemic_status": "unknown",
+          "id": "other_person_bracelet_hand",
+          "state": "unknown",
+          "visibility": "unknown"
+        },
+        {
+          "basis": "No identifiable other-person bare hand is visible.",
+          "bbox": null,
+          "confidence": 0.98,
+          "epistemic_status": "unknown",
+          "id": "other_person_other_hand",
+          "state": "unknown",
+          "visibility": "unknown"
+        }
+      ],
+      "interactions": [
+        {
+          "actor": "wearer_left_hand",
+          "basis": "Closed fingers retain the leafy remnant.",
+          "confidence": 0.97,
+          "epistemic_status": "observed",
+          "evidence_indices": [
+            5
+          ],
+          "predicate": "holding",
+          "target": "vegetable_scrap"
+        },
+        {
+          "actor": "wearer_right_hand",
+          "basis": "Right fingers remain around the visible lower side of the cabbage.",
+          "confidence": 0.91,
+          "epistemic_status": "observed",
+          "evidence_indices": [
+            5
+          ],
+          "predicate": "holding",
+          "target": "cabbage_head"
+        }
+      ],
+      "observation_index": 5,
+      "relations": [
+        {
+          "basis": "Basket rests on the worktop beside the sink.",
+          "confidence": 0.98,
+          "epistemic_status": "observed",
+          "evidence_indices": [
+            5
+          ],
+          "object": "work_counter",
+          "predicate": "on_top_of",
+          "subject": "red_colander_counter"
+        }
+      ],
+      "uncertainties": [
+        "Cabbage and right hand are partly obscured; a placement or release is not established.",
+        "No basket grasp or displacement relative to the worktop is demonstrated.",
+        "Drawer and other-person hand states cannot be assessed."
+      ]
+    },
+    {
+      "camera_motion": {
+        "basis": "Background-wide rotation and translation continue between observations 5 and 6.",
+        "status": "present"
+      },
+      "entities": [
+        {
+          "basis": "Sink surround and worktop remain visible.",
+          "bbox": [
+            0.163,
+            0.352,
+            1,
+            0.939
+          ],
+          "confidence": 0.98,
+          "epistemic_status": "observed",
+          "id": "work_counter",
+          "state": "metal kitchen worktop",
+          "visibility": "partially_visible"
+        },
+        {
+          "basis": "Red mesh basket remains to the sink's right.",
+          "bbox": [
+            0.697,
+            0.501,
+            0.881,
+            0.658
+          ],
+          "confidence": 0.99,
+          "epistemic_status": "observed",
+          "id": "red_colander_counter",
+          "state": "red perforated basket",
+          "visibility": "visible"
+        },
+        {
+          "basis": "Relevant lower drawer is not identifiable.",
+          "bbox": null,
+          "confidence": 0.99,
+          "epistemic_status": "unknown",
+          "id": "drawer_lower",
+          "state": "unknown",
+          "visibility": "unknown"
+        },
+        {
+          "basis": "Solid red drawer bowl is not visible.",
+          "bbox": null,
+          "confidence": 0.99,
+          "epistemic_status": "unknown",
+          "id": "red_bowl_drawer",
+          "state": "unknown",
+          "visibility": "unknown"
+        },
+        {
+          "basis": "Nested metal bowl is not visible.",
+          "bbox": null,
+          "confidence": 0.99,
+          "epistemic_status": "unknown",
+          "id": "nested_metal_bowl",
+          "state": "unknown",
+          "visibility": "unknown"
+        },
+        {
+          "basis": "Small leafy remnant protrudes from the left hand.",
+          "bbox": [
+            0.54,
+            0.747,
+            0.606,
+            0.838
+          ],
+          "confidence": 0.96,
+          "epistemic_status": "observed",
+          "id": "vegetable_scrap",
+          "state": "small green leafy remnant",
+          "visibility": "partially_visible"
+        },
+        {
+          "basis": "Part of the green head is visible beside the right fingers.",
+          "bbox": [
+            0.814,
+            0.791,
+            0.915,
+            0.903
+          ],
+          "confidence": 0.95,
+          "epistemic_status": "observed",
+          "id": "cabbage_head",
+          "state": "green cabbage partly obscured",
+          "visibility": "partially_visible"
+        },
+        {
+          "basis": "Left fingers visibly enclose the remnant.",
+          "bbox": [
+            0.481,
+            0.76,
+            0.626,
+            0.849
+          ],
+          "confidence": 0.97,
+          "epistemic_status": "observed",
+          "id": "wearer_left_hand",
+          "state": "bare hand",
+          "visibility": "visible"
+        },
+        {
+          "basis": "Right fingers are visible beneath the cabbage edge.",
+          "bbox": [
+            0.764,
+            0.815,
+            0.836,
+            0.933
+          ],
+          "confidence": 0.95,
+          "epistemic_status": "observed",
+          "id": "wearer_right_hand",
+          "state": "bare hand partly obscured",
+          "visibility": "partially_visible"
+        },
+        {
+          "basis": "Other person is not identifiable in this view.",
+          "bbox": null,
+          "confidence": 0.95,
+          "epistemic_status": "unknown",
+          "id": "other_person",
+          "state": "unknown",
+          "visibility": "unknown"
+        },
+        {
+          "basis": "No silver-accessory hand is visible.",
+          "bbox": null,
+          "confidence": 0.98,
+          "epistemic_status": "unknown",
+          "id": "other_person_bracelet_hand",
+          "state": "unknown",
+          "visibility": "unknown"
+        },
+        {
+          "basis": "No identifiable other-person bare hand is visible.",
+          "bbox": null,
+          "confidence": 0.98,
+          "epistemic_status": "unknown",
+          "id": "other_person_other_hand",
+          "state": "unknown",
+          "visibility": "unknown"
+        }
+      ],
+      "interactions": [
+        {
+          "actor": "wearer_left_hand",
+          "basis": "Fingers enclose the green remnant.",
+          "confidence": 0.97,
+          "epistemic_status": "observed",
+          "evidence_indices": [
+            6
+          ],
+          "predicate": "holding",
+          "target": "vegetable_scrap"
+        },
+        {
+          "actor": "wearer_right_hand",
+          "basis": "Visible right fingers remain cupped against the cabbage.",
+          "confidence": 0.92,
+          "epistemic_status": "observed",
+          "evidence_indices": [
+            6
+          ],
+          "predicate": "holding",
+          "target": "cabbage_head"
+        }
+      ],
+      "observation_index": 6,
+      "relations": [
+        {
+          "basis": "Basket is supported by the worktop beside the sink.",
+          "confidence": 0.98,
+          "epistemic_status": "observed",
+          "evidence_indices": [
+            6
+          ],
+          "object": "work_counter",
+          "predicate": "on_top_of",
+          "subject": "red_colander_counter"
+        }
+      ],
+      "uncertainties": [
+        "Right-edge obstruction prevents determining whether the board also supports the cabbage.",
+        "No colander manipulation is visible.",
+        "Drawer state is unknown, not carried backward from reference observation 50."
+      ]
+    },
+    {
+      "camera_motion": {
+        "basis": "Sink and basket shift together with a smaller continued camera turn.",
+        "status": "present"
+      },
+      "entities": [
+        {
+          "basis": "Metal worktop remains visible around sink and board.",
+          "bbox": [
+            0.163,
+            0.342,
+            1,
+            0.941
+          ],
+          "confidence": 0.98,
+          "epistemic_status": "observed",
+          "id": "work_counter",
+          "state": "metal kitchen worktop",
+          "visibility": "partially_visible"
+        },
+        {
+          "basis": "Perforated red basket is visible to the right of the sink.",
+          "bbox": [
+            0.723,
+            0.498,
+            0.906,
+            0.659
+          ],
+          "confidence": 0.99,
+          "epistemic_status": "observed",
+          "id": "red_colander_counter",
+          "state": "red perforated basket",
+          "visibility": "visible"
+        },
+        {
+          "basis": "Relevant lower drawer is not identifiable.",
+          "bbox": null,
+          "confidence": 0.99,
+          "epistemic_status": "unknown",
+          "id": "drawer_lower",
+          "state": "unknown",
+          "visibility": "unknown"
+        },
+        {
+          "basis": "Solid red drawer bowl is not visible.",
+          "bbox": null,
+          "confidence": 0.99,
+          "epistemic_status": "unknown",
+          "id": "red_bowl_drawer",
+          "state": "unknown",
+          "visibility": "unknown"
+        },
+        {
+          "basis": "Nested metal bowl is not visible.",
+          "bbox": null,
+          "confidence": 0.99,
+          "epistemic_status": "unknown",
+          "id": "nested_metal_bowl",
+          "state": "unknown",
+          "visibility": "unknown"
+        },
+        {
+          "basis": "Green remnant protrudes from the left hand over the near sink area.",
+          "bbox": [
+            0.503,
+            0.653,
+            0.568,
+            0.743
+          ],
+          "confidence": 0.96,
+          "epistemic_status": "observed",
+          "id": "vegetable_scrap",
+          "state": "small green leafy remnant",
+          "visibility": "partially_visible"
+        },
+        {
+          "basis": "Green cabbage is partly visible beside the right fingers.",
+          "bbox": [
+            0.808,
+            0.78,
+            0.918,
+            0.898
+          ],
+          "confidence": 0.95,
+          "epistemic_status": "observed",
+          "id": "cabbage_head",
+          "state": "green cabbage partly obscured",
+          "visibility": "partially_visible"
+        },
+        {
+          "basis": "Left hand is visible above the near side of the sink.",
+          "bbox": [
+            0.443,
+            0.662,
+            0.577,
+            0.77
+          ],
+          "confidence": 0.97,
+          "epistemic_status": "observed",
+          "id": "wearer_left_hand",
+          "state": "bare hand",
+          "visibility": "visible"
+        },
+        {
+          "basis": "Right fingers remain visible beneath the cabbage.",
+          "bbox": [
+            0.76,
+            0.808,
+            0.835,
+            0.933
+          ],
+          "confidence": 0.95,
+          "epistemic_status": "observed",
+          "id": "wearer_right_hand",
+          "state": "bare hand partly obscured",
+          "visibility": "partially_visible"
+        },
+        {
+          "basis": "Other person is not identifiable.",
+          "bbox": null,
+          "confidence": 0.95,
+          "epistemic_status": "unknown",
+          "id": "other_person",
+          "state": "unknown",
+          "visibility": "unknown"
+        },
+        {
+          "basis": "Accessory-bearing hand is not visible.",
+          "bbox": null,
+          "confidence": 0.98,
+          "epistemic_status": "unknown",
+          "id": "other_person_bracelet_hand",
+          "state": "unknown",
+          "visibility": "unknown"
+        },
+        {
+          "basis": "Other person's bare hand is not identifiable.",
+          "bbox": null,
+          "confidence": 0.98,
+          "epistemic_status": "unknown",
+          "id": "other_person_other_hand",
+          "state": "unknown",
+          "visibility": "unknown"
+        }
+      ],
+      "interactions": [
+        {
+          "actor": "wearer_left_hand",
+          "basis": "Left fingers retain the green remnant.",
+          "confidence": 0.98,
+          "epistemic_status": "observed",
+          "evidence_indices": [
+            7
+          ],
+          "predicate": "holding",
+          "target": "vegetable_scrap"
+        },
+        {
+          "actor": "wearer_left_hand",
+          "basis": "Hand and enclosed remnant advance from the counter edge toward the sink relative to the sink rim.",
+          "confidence": 0.91,
+          "epistemic_status": "observed",
+          "evidence_indices": [
+            6,
+            7
+          ],
+          "predicate": "moving_with_hand",
+          "target": "vegetable_scrap"
+        },
+        {
+          "actor": "wearer_right_hand",
+          "basis": "Visible right fingers remain cupped against the cabbage underside.",
+          "confidence": 0.92,
+          "epistemic_status": "observed",
+          "evidence_indices": [
+            7
+          ],
+          "predicate": "holding",
+          "target": "cabbage_head"
+        }
+      ],
+      "observation_index": 7,
+      "relations": [
+        {
+          "basis": "Basket rests on the worktop beside the sink.",
+          "confidence": 0.98,
+          "epistemic_status": "observed",
+          "evidence_indices": [
+            7
+          ],
+          "object": "work_counter",
+          "predicate": "on_top_of",
+          "subject": "red_colander_counter"
+        }
+      ],
+      "uncertainties": [
+        "No remnant release is visible.",
+        "Cabbage placement is unresolved because its lower-right portion is obscured.",
+        "No drawer-directed reach or colander manipulation is visible."
+      ]
+    },
+    {
+      "camera_motion": {
+        "basis": "Sink, rack and basket shift with a continued camera tilt and turn.",
+        "status": "present"
+      },
+      "entities": [
+        {
+          "basis": "Metal worktop and sink surround remain visible.",
+          "bbox": [
+            0.148,
+            0.321,
+            1,
+            0.928
+          ],
+          "confidence": 0.98,
+          "epistemic_status": "observed",
+          "id": "work_counter",
+          "state": "metal kitchen worktop",
+          "visibility": "partially_visible"
+        },
+        {
+          "basis": "Red perforated basket is visible at the right of the sink.",
+          "bbox": [
+            0.744,
+            0.486,
+            0.929,
+            0.655
+          ],
+          "confidence": 0.99,
+          "epistemic_status": "observed",
+          "id": "red_colander_counter",
+          "state": "red perforated basket",
+          "visibility": "visible"
+        },
+        {
+          "basis": "Relevant lower drawer is not identifiable.",
+          "bbox": null,
+          "confidence": 0.99,
+          "epistemic_status": "unknown",
+          "id": "drawer_lower",
+          "state": "unknown",
+          "visibility": "unknown"
+        },
+        {
+          "basis": "Solid red drawer bowl is not visible.",
+          "bbox": null,
+          "confidence": 0.99,
+          "epistemic_status": "unknown",
+          "id": "red_bowl_drawer",
+          "state": "unknown",
+          "visibility": "unknown"
+        },
+        {
+          "basis": "Nested metal bowl is not visible.",
+          "bbox": null,
+          "confidence": 0.99,
+          "epistemic_status": "unknown",
+          "id": "nested_metal_bowl",
+          "state": "unknown",
+          "visibility": "unknown"
+        },
+        {
+          "basis": "Small green remnant is visible between the left fingers above the basin.",
+          "bbox": [
+            0.462,
+            0.603,
+            0.509,
+            0.68
+          ],
+          "confidence": 0.96,
+          "epistemic_status": "observed",
+          "id": "vegetable_scrap",
+          "state": "small green leafy remnant",
+          "visibility": "partially_visible"
+        },
+        {
+          "basis": "A portion of the large green head remains visible at lower right.",
+          "bbox": [
+            0.831,
+            0.783,
+            0.927,
+            0.889
+          ],
+          "confidence": 0.95,
+          "epistemic_status": "observed",
+          "id": "cabbage_head",
+          "state": "green cabbage partly obscured",
+          "visibility": "partially_visible"
+        },
+        {
+          "basis": "Left hand is visible above the sink basin.",
+          "bbox": [
+            0.419,
+            0.6,
+            0.522,
+            0.702
+          ],
+          "confidence": 0.97,
+          "epistemic_status": "observed",
+          "id": "wearer_left_hand",
+          "state": "bare hand",
+          "visibility": "visible"
+        },
+        {
+          "basis": "Right fingers remain visible next to the cabbage.",
+          "bbox": [
+            0.788,
+            0.818,
+            0.852,
+            0.928
+          ],
+          "confidence": 0.94,
+          "epistemic_status": "observed",
+          "id": "wearer_right_hand",
+          "state": "bare hand partly obscured",
+          "visibility": "partially_visible"
+        },
+        {
+          "basis": "Other person is not identifiable in this view.",
+          "bbox": null,
+          "confidence": 0.95,
+          "epistemic_status": "unknown",
+          "id": "other_person",
+          "state": "unknown",
+          "visibility": "unknown"
+        },
+        {
+          "basis": "No accessory-bearing hand is visible.",
+          "bbox": null,
+          "confidence": 0.98,
+          "epistemic_status": "unknown",
+          "id": "other_person_bracelet_hand",
+          "state": "unknown",
+          "visibility": "unknown"
+        },
+        {
+          "basis": "No identifiable other-person bare hand is visible.",
+          "bbox": null,
+          "confidence": 0.98,
+          "epistemic_status": "unknown",
+          "id": "other_person_other_hand",
+          "state": "unknown",
+          "visibility": "unknown"
+        }
+      ],
+      "interactions": [
+        {
+          "actor": "wearer_left_hand",
+          "basis": "Left fingers remain closed around the green remnant.",
+          "confidence": 0.98,
+          "epistemic_status": "observed",
+          "evidence_indices": [
+            8
+          ],
+          "predicate": "holding",
+          "target": "vegetable_scrap"
+        },
+        {
+          "actor": "wearer_left_hand",
+          "basis": "Hand and remnant move farther over the basin relative to its near rim.",
+          "confidence": 0.9,
+          "epistemic_status": "observed",
+          "evidence_indices": [
+            7,
+            8
+          ],
+          "predicate": "moving_with_hand",
+          "target": "vegetable_scrap"
+        },
+        {
+          "actor": "wearer_right_hand",
+          "basis": "Visible right fingers remain around the cabbage's lower side.",
+          "confidence": 0.9,
+          "epistemic_status": "observed",
+          "evidence_indices": [
+            8
+          ],
+          "predicate": "holding",
+          "target": "cabbage_head"
+        }
+      ],
+      "observation_index": 8,
+      "relations": [
+        {
+          "basis": "Basket remains supported by the worktop beside the sink.",
+          "confidence": 0.98,
+          "epistemic_status": "observed",
+          "evidence_indices": [
+            8
+          ],
+          "object": "work_counter",
+          "predicate": "on_top_of",
+          "subject": "red_colander_counter"
+        }
+      ],
+      "uncertainties": [
+        "Remnant release is not shown in this frame.",
+        "Cabbage-board support and any release remain unresolved.",
+        "Later reference drawer contents do not establish earlier drawer visibility or state.",
+        "No colander grasp, lift, move or put-down is supported in these target observations."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,2 @@
+# Preserve frozen artifact hashes across checkouts.
+* -text

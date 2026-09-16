@@ -1,0 +1,25 @@
+{
+  "synchronized_streams": {
+    "original_clip.mp4": {
+      "frames": 301,
+      "fps": 30.0,
+      "width": 1408,
+      "height": 1408
+    },
+    "blender_animation.mp4": {
+      "frames": 301,
+      "fps": 30.0,
+      "width": 640,
+      "height": 640
+    },
+    "comparison_preview.mp4": {
+      "frames": 301,
+      "fps": 30.0,
+      "width": 1920,
+      "height": 736
+    }
+  },
+  "observation_count": 51,
+  "timed_social_updates": 0,
+  "frame_zero_source_time": 1059.0666666666666
+}

@@ -1,0 +1,27 @@
+{
+  "valid": true,
+  "frames": [
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17
+  ],
+  "server_model": "gpt-6-astra",
+  "usage": {
+    "input_tokens": 10441,
+    "input_tokens_details": {
+      "cache_write_tokens": 10438,
+      "cached_tokens": 0
+    },
+    "output_tokens": 9892,
+    "output_tokens_details": {
+      "reasoning_tokens": 436
+    },
+    "total_tokens": 20333
+  }
+}

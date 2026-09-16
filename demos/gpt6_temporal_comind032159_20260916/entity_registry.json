@@ -1,0 +1,14 @@
+{
+  "work_counter": "Fixed kitchen worktop; apparent image motion can be egocentric camera motion.",
+  "red_colander_counter": "Red perforated colander/filter basket initially on countertop near sink. NEVER the solid red drawer bowl.",
+  "drawer_lower": "Lower pull-out drawer under worktop near the other person. Out of view before visible is NOT closed.",
+  "red_bowl_drawer": "Solid red bowl in drawer, distinct from countertop perforated colander. Register unknown when not actually visible.",
+  "nested_metal_bowl": "Metallic bowl nested in solid red drawer bowl; not an ordinary white dish on countertop.",
+  "vegetable_scrap": "Small green vegetable/leaf remnant in camera wearer hand; NOT whole cabbage. Identity continuity uncertain if hidden.",
+  "cabbage_head": "Large whole green cabbage, distinct from small remnant.",
+  "wearer_left_hand": "Camera wearer anatomical left hand, generally small green remnant; do not assume holding in every frame.",
+  "wearer_right_hand": "Camera wearer anatomical right hand. Do not swap with other person hands.",
+  "other_person": "Visible dark-shirt person. Anonymous visual track; not linked to any transcript speaker or mental state.",
+  "other_person_bracelet_hand": "Other person hand with visible silver wrist accessory. If identity not visually resolvable use unknown, do not switch IDs.",
+  "other_person_other_hand": "Other person hand without that accessory; use unknown where identity unresolved."
+}

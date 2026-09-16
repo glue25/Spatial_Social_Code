@@ -1,0 +1,1193 @@
+{
+  "scope": "2D background RANSAC diagnostic only; parallax/occlusion/rolling-shutter can invalidate it; never interpreted as metric camera or object movement",
+  "pairs": [
+    {
+      "from_evidence": "F031772",
+      "to_evidence": "F031778",
+      "status": "inferred_background_image_transform",
+      "homography": [
+        [
+          1.0768165461282908,
+          0.054576708935440636,
+          -78.42490346845128
+        ],
+        [
+          -0.021605784185302658,
+          1.0354357600876554,
+          40.56228357647751
+        ],
+        [
+          9.132435832937699e-05,
+          -4.7401796137482075e-06,
+          1.0
+        ]
+      ],
+      "metric_camera_pose": null,
+      "applied_to_world_tracks": false,
+      "candidate_matches": 438,
+      "inliers": 256
+    },
+    {
+      "from_evidence": "F031778",
+      "to_evidence": "F031784",
+      "status": "inferred_background_image_transform",
+      "homography": [
+        [
+          0.9821546101867342,
+          0.013969166401524636,
+          -7.247238577458285
+        ],
+        [
+          -0.02379829001314484,
+          1.0205174333747378,
+          -0.7941628886130447
+        ],
+        [
+          -5.202573405279477e-05,
+          4.029673488202353e-05,
+          1.0
+        ]
+      ],
+      "metric_camera_pose": null,
+      "applied_to_world_tracks": false,
+      "candidate_matches": 814,
+      "inliers": 713
+    },
+    {
+      "from_evidence": "F031784",
+      "to_evidence": "F031790",
+      "status": "inferred_background_image_transform",
+      "homography": [
+        [
+          0.5575245280194656,
+          -0.29293694976937895,
+          334.748004546919
+        ],
+        [
+          0.09156544331768764,
+          0.573930044197525,
+          70.7471462715141
+        ],
+        [
+          -0.0004028347020341305,
+          -0.0002008702158876471,
+          1.0
+        ]
+      ],
+      "metric_camera_pose": null,
+      "applied_to_world_tracks": false,
+      "candidate_matches": 107,
+      "inliers": 58
+    },
+    {
+      "from_evidence": "F031790",
+      "to_evidence": "F031796",
+      "status": "inferred_background_image_transform",
+      "homography": [
+        [
+          0.7625692999534379,
+          -0.15256882769285388,
+          157.85207917297927
+        ],
+        [
+          0.07987496419327987,
+          0.823458989634534,
+          -9.417350172222863
+        ],
+        [
+          -0.0003034075381856071,
+          -3.489905754164275e-05,
+          1.0
+        ]
+      ],
+      "metric_camera_pose": null,
+      "applied_to_world_tracks": false,
+      "candidate_matches": 154,
+      "inliers": 78
+    },
+    {
+      "from_evidence": "F031796",
+      "to_evidence": "F031802",
+      "status": "inferred_background_image_transform",
+      "homography": [
+        [
+          0.9745308164410212,
+          -0.062455886027500754,
+          51.38392995780672
+        ],
+        [
+          0.05961413077850149,
+          1.0024021579417761,
+          -35.11821354473871
+        ],
+        [
+          -5.4771911336526285e-05,
+          1.4740441197255827e-05,
+          1.0
+        ]
+      ],
+      "metric_camera_pose": null,
+      "applied_to_world_tracks": false,
+      "candidate_matches": 746,
+      "inliers": 556
+    },
+    {
+      "from_evidence": "F031802",
+      "to_evidence": "F031808",
+      "status": "inferred_background_image_transform",
+      "homography": [
+        [
+          0.9951481678588169,
+          -0.02254089145781226,
+          25.248847544706383
+        ],
+        [
+          0.030293735745141243,
+          1.0113092703972033,
+          -17.923545050217253
+        ],
+        [
+          -2.3472603364705954e-05,
+          -1.8588687992666685e-06,
+          1.0
+        ]
+      ],
+      "metric_camera_pose": null,
+      "applied_to_world_tracks": false,
+      "candidate_matches": 808,
+      "inliers": 538
+    },
+    {
+      "from_evidence": "F031808",
+      "to_evidence": "F031814",
+      "status": "inferred_background_image_transform",
+      "homography": [
+        [
+          1.067868034179102,
+          0.02502141035548235,
+          -20.846790351395654
+        ],
+        [
+          -0.0002250779706439874,
+          1.035000351949083,
+          -10.12315245379805
+        ],
+        [
+          5.520233825778938e-05,
+          -3.234180646259525e-05,
+          1.0
+        ]
+      ],
+      "metric_camera_pose": null,
+      "applied_to_world_tracks": false,
+      "candidate_matches": 713,
+      "inliers": 438
+    },
+    {
+      "from_evidence": "F031814",
+      "to_evidence": "F031820",
+      "status": "inferred_background_image_transform",
+      "homography": [
+        [
+          1.1234657440417688,
+          0.05440785877671297,
+          -55.665169680850155
+        ],
+        [
+          -0.010895308060653053,
+          1.0546920470846337,
+          -12.121120331117929
+        ],
+        [
+          0.00012026242460476896,
+          -6.842686099508168e-05,
+          1.0
+        ]
+      ],
+      "metric_camera_pose": null,
+      "applied_to_world_tracks": false,
+      "candidate_matches": 490,
+      "inliers": 297
+    },
+    {
+      "from_evidence": "F031820",
+      "to_evidence": "F031826",
+      "status": "inferred_background_image_transform",
+      "homography": [
+        [
+          1.1433377820089157,
+          0.020770538185903166,
+          -45.65614311996008
+        ],
+        [
+          0.01867428721077665,
+          1.0285715714116939,
+          -3.397194786868693
+        ],
+        [
+          0.0001762587164051409,
+          -0.00012071788973558914,
+          1.0
+        ]
+      ],
+      "metric_camera_pose": null,
+      "applied_to_world_tracks": false,
+      "candidate_matches": 497,
+      "inliers": 266
+    },
+    {
+      "from_evidence": "F031826",
+      "to_evidence": "F031832",
+      "status": "inferred_background_image_transform",
+      "homography": [
+        [
+          1.2251882334581181,
+          0.11390118074397729,
+          -125.57742178929038
+        ],
+        [
+          -0.009382710303726144,
+          1.1047565467263507,
+          0.6793215793291127
+        ],
+        [
+          0.00030868755416863316,
+          -5.3628508649968616e-05,
+          1.0
+        ]
+      ],
+      "metric_camera_pose": null,
+      "applied_to_world_tracks": false,
+      "candidate_matches": 579,
+      "inliers": 411
+    },
+    {
+      "from_evidence": "F031832",
+      "to_evidence": "F031838",
+      "status": "inferred_background_image_transform",
+      "homography": [
+        [
+          1.2272026068411273,
+          0.22458646242229366,
+          -174.76274814436914
+        ],
+        [
+          -0.08071262677177457,
+          1.2194953248821234,
+          4.694517471187547
+        ],
+        [
+          0.00023713844229728424,
+          0.00016101396877763846,
+          1.0
+        ]
+      ],
+      "metric_camera_pose": null,
+      "applied_to_world_tracks": false,
+      "candidate_matches": 417,
+      "inliers": 267
+    },
+    {
+      "from_evidence": "F031838",
+      "to_evidence": "F031844",
+      "status": "inferred_background_image_transform",
+      "homography": [
+        [
+          1.0128491307725669,
+          0.07085871046683176,
+          -58.48178000231495
+        ],
+        [
+          -0.06994100034075185,
+          0.9710020124957289,
+          41.38762025343358
+        ],
+        [
+          5.6778188098109216e-05,
+          -5.423977674501437e-05,
+          0.9999999999999999
+        ]
+      ],
+      "metric_camera_pose": null,
+      "applied_to_world_tracks": false,
+      "candidate_matches": 557,
+      "inliers": 423
+    },
+    {
+      "from_evidence": "F031844",
+      "to_evidence": "F031850",
+      "status": "inferred_background_image_transform",
+      "homography": [
+        [
+          0.9710291764336724,
+          0.003981466638649446,
+          -18.60070928409941
+        ],
+        [
+          -0.04440809115984171,
+          0.9812536115747376,
+          35.22850772709268
+        ],
+        [
+          -2.2901051658690085e-05,
+          -8.019583958334043e-06,
+          1.0
+        ]
+      ],
+      "metric_camera_pose": null,
+      "applied_to_world_tracks": false,
+      "candidate_matches": 552,
+      "inliers": 337
+    },
+    {
+      "from_evidence": "F031850",
+      "to_evidence": "F031856",
+      "status": "unknown",
+      "homography": null,
+      "metric_camera_pose": null,
+      "applied_to_world_tracks": false,
+      "candidate_matches": 78,
+      "inliers": 37
+    },
+    {
+      "from_evidence": "F031856",
+      "to_evidence": "F031862",
+      "status": "unknown",
+      "homography": null,
+      "metric_camera_pose": null,
+      "applied_to_world_tracks": false,
+      "candidate_matches": 94,
+      "inliers": 42
+    },
+    {
+      "from_evidence": "F031862",
+      "to_evidence": "F031868",
+      "status": "unknown",
+      "homography": null,
+      "metric_camera_pose": null,
+      "applied_to_world_tracks": false,
+      "candidate_matches": 210,
+      "inliers": 92
+    },
+    {
+      "from_evidence": "F031868",
+      "to_evidence": "F031874",
+      "status": "unknown",
+      "homography": null,
+      "metric_camera_pose": null,
+      "applied_to_world_tracks": false,
+      "candidate_matches": 225,
+      "inliers": 108
+    },
+    {
+      "from_evidence": "F031874",
+      "to_evidence": "F031880",
+      "status": "inferred_background_image_transform",
+      "homography": [
+        [
+          0.86122192020025,
+          -0.02641486522757821,
+          88.80186423336211
+        ],
+        [
+          -0.032495846123700406,
+          0.9708364059124599,
+          -8.369842505778774
+        ],
+        [
+          -0.0002800129810904189,
+          9.81356561561499e-05,
+          0.9999999999999999
+        ]
+      ],
+      "metric_camera_pose": null,
+      "applied_to_world_tracks": false,
+      "candidate_matches": 231,
+      "inliers": 119
+    },
+    {
+      "from_evidence": "F031880",
+      "to_evidence": "F031886",
+      "status": "inferred_background_image_transform",
+      "homography": [
+        [
+          1.0511128432743737,
+          0.032455663440873424,
+          -38.02778830816598
+        ],
+        [
+          -0.015003210315673868,
+          1.0290326081676429,
+          5.56200500140794
+        ],
+        [
+          7.84527678874664e-05,
+          1.951205291299459e-06,
+          1.0
+        ]
+      ],
+      "metric_camera_pose": null,
+      "applied_to_world_tracks": false,
+      "candidate_matches": 1018,
+      "inliers": 750
+    },
+    {
+      "from_evidence": "F031886",
+      "to_evidence": "F031892",
+      "status": "unknown",
+      "homography": null,
+      "metric_camera_pose": null,
+      "applied_to_world_tracks": false,
+      "candidate_matches": 94,
+      "inliers": 40
+    },
+    {
+      "from_evidence": "F031892",
+      "to_evidence": "F031898",
+      "status": "unknown",
+      "homography": null,
+      "metric_camera_pose": null,
+      "applied_to_world_tracks": false,
+      "candidate_matches": 11,
+      "inliers": 6
+    },
+    {
+      "from_evidence": "F031898",
+      "to_evidence": "F031904",
+      "status": "unknown",
+      "homography": null,
+      "metric_camera_pose": null,
+      "applied_to_world_tracks": false,
+      "candidate_matches": 70,
+      "inliers": 25
+    },
+    {
+      "from_evidence": "F031904",
+      "to_evidence": "F031910",
+      "status": "inferred_background_image_transform",
+      "homography": [
+        [
+          1.073437195785677,
+          0.14586494698457006,
+          -77.69481122339819
+        ],
+        [
+          -0.0905023790931824,
+          1.0816845682598857,
+          13.386849498970054
+        ],
+        [
+          5.950512081438351e-05,
+          7.791021233829174e-05,
+          1.0
+        ]
+      ],
+      "metric_camera_pose": null,
+      "applied_to_world_tracks": false,
+      "candidate_matches": 859,
+      "inliers": 634
+    },
+    {
+      "from_evidence": "F031910",
+      "to_evidence": "F031916",
+      "status": "inferred_background_image_transform",
+      "homography": [
+        [
+          1.192482944672335,
+          0.17310313881266887,
+          -128.0575733585027
+        ],
+        [
+          -0.039999205376314136,
+          1.1887631142673676,
+          -8.104297198600818
+        ],
+        [
+          0.00015963737046824285,
+          0.00015555006098638024,
+          0.9999999999999999
+        ]
+      ],
+      "metric_camera_pose": null,
+      "applied_to_world_tracks": false,
+      "candidate_matches": 618,
+      "inliers": 392
+    },
+    {
+      "from_evidence": "F031916",
+      "to_evidence": "F031922",
+      "status": "inferred_background_image_transform",
+      "homography": [
+        [
+          1.3012310667420954,
+          0.19216391811947828,
+          -178.73646675131747
+        ],
+        [
+          -0.013867875847693065,
+          1.2710725998205086,
+          -21.00676640169675
+        ],
+        [
+          0.00031965558783041744,
+          0.00017247201716494065,
+          0.9999999999999999
+        ]
+      ],
+      "metric_camera_pose": null,
+      "applied_to_world_tracks": false,
+      "candidate_matches": 315,
+      "inliers": 201
+    },
+    {
+      "from_evidence": "F031922",
+      "to_evidence": "F031928",
+      "status": "inferred_background_image_transform",
+      "homography": [
+        [
+          0.9549267556384905,
+          -0.00559207288432897,
+          -30.72160643670234
+        ],
+        [
+          -0.08184690371659348,
+          0.9306457135285869,
+          47.35243906061518
+        ],
+        [
+          -3.678529603934463e-05,
+          -0.00012108787093293215,
+          1.0
+        ]
+      ],
+      "metric_camera_pose": null,
+      "applied_to_world_tracks": false,
+      "candidate_matches": 374,
+      "inliers": 278
+    },
+    {
+      "from_evidence": "F031928",
+      "to_evidence": "F031934",
+      "status": "inferred_background_image_transform",
+      "homography": [
+        [
+          0.9851877247071783,
+          0.01294341877572622,
+          -21.648586868419606
+        ],
+        [
+          -0.06367232102559939,
+          1.0087614407806844,
+          16.961187763565427
+        ],
+        [
+          -4.382858701783558e-05,
+          -2.5688795810243803e-05,
+          1.0
+        ]
+      ],
+      "metric_camera_pose": null,
+      "applied_to_world_tracks": false,
+      "candidate_matches": 475,
+      "inliers": 355
+    },
+    {
+      "from_evidence": "F031934",
+      "to_evidence": "F031940",
+      "status": "inferred_background_image_transform",
+      "homography": [
+        [
+          0.9132389606241844,
+          -0.023750847317064106,
+          83.2973163067779
+        ],
+        [
+          -0.017718889312154443,
+          1.0350151289000318,
+          -22.371517096621574
+        ],
+        [
+          -0.00021564463529294273,
+          0.00011268985723585597,
+          1.0
+        ]
+      ],
+      "metric_camera_pose": null,
+      "applied_to_world_tracks": false,
+      "candidate_matches": 364,
+      "inliers": 248
+    },
+    {
+      "from_evidence": "F031940",
+      "to_evidence": "F031946",
+      "status": "inferred_background_image_transform",
+      "homography": [
+        [
+          0.9183242317949738,
+          -0.04351975360642815,
+          51.404552709005316
+        ],
+        [
+          -0.007728856283209673,
+          0.9461079459569093,
+          4.824275890671942
+        ],
+        [
+          -0.00012206297995107932,
+          -1.5714142952522004e-05,
+          1.0
+        ]
+      ],
+      "metric_camera_pose": null,
+      "applied_to_world_tracks": false,
+      "candidate_matches": 553,
+      "inliers": 464
+    },
+    {
+      "from_evidence": "F031946",
+      "to_evidence": "F031952",
+      "status": "inferred_background_image_transform",
+      "homography": [
+        [
+          0.9660773840847774,
+          -0.03725548452970938,
+          29.943345026026417
+        ],
+        [
+          0.010911787172271797,
+          0.9634084507572669,
+          3.4524621033491143
+        ],
+        [
+          -2.9441136298528594e-05,
+          -2.7555296544077474e-05,
+          1.0
+        ]
+      ],
+      "metric_camera_pose": null,
+      "applied_to_world_tracks": false,
+      "candidate_matches": 818,
+      "inliers": 764
+    },
+    {
+      "from_evidence": "F031952",
+      "to_evidence": "F031958",
+      "status": "inferred_background_image_transform",
+      "homography": [
+        [
+          1.0055118854841942,
+          0.015452475367306992,
+          -13.62506488905458
+        ],
+        [
+          -0.01091451794682694,
+          0.9886073978486505,
+          18.719629117540045
+        ],
+        [
+          3.093160435847435e-05,
+          -1.4681510723152131e-05,
+          1.0
+        ]
+      ],
+      "metric_camera_pose": null,
+      "applied_to_world_tracks": false,
+      "candidate_matches": 641,
+      "inliers": 522
+    },
+    {
+      "from_evidence": "F031958",
+      "to_evidence": "F031964",
+      "status": "inferred_background_image_transform",
+      "homography": [
+        [
+          0.9748931011781785,
+          -0.011091940680105971,
+          -25.5447278922808
+        ],
+        [
+          -0.03931459203282296,
+          0.8822566326748668,
+          62.69941284591549
+        ],
+        [
+          8.653429476494206e-05,
+          -0.00013398900748122917,
+          1.0
+        ]
+      ],
+      "metric_camera_pose": null,
+      "applied_to_world_tracks": false,
+      "candidate_matches": 275,
+      "inliers": 205
+    },
+    {
+      "from_evidence": "F031964",
+      "to_evidence": "F031970",
+      "status": "inferred_background_image_transform",
+      "homography": [
+        [
+          1.1510132055826452,
+          0.13476327856004147,
+          -104.55423663128
+        ],
+        [
+          -0.005130031927645774,
+          1.1244708891136241,
+          8.376351755061911
+        ],
+        [
+          0.00020689404515815852,
+          9.380227984829633e-05,
+          1.0
+        ]
+      ],
+      "metric_camera_pose": null,
+      "applied_to_world_tracks": false,
+      "candidate_matches": 112,
+      "inliers": 73
+    },
+    {
+      "from_evidence": "F031970",
+      "to_evidence": "F031976",
+      "status": "inferred_background_image_transform",
+      "homography": [
+        [
+          0.9943436727724054,
+          0.0009421450876962072,
+          -25.255847831758626
+        ],
+        [
+          0.007876393656598934,
+          0.9351850910979052,
+          29.219471265697823
+        ],
+        [
+          6.526895655854227e-05,
+          -9.625011289928765e-05,
+          1.0
+        ]
+      ],
+      "metric_camera_pose": null,
+      "applied_to_world_tracks": false,
+      "candidate_matches": 250,
+      "inliers": 187
+    },
+    {
+      "from_evidence": "F031976",
+      "to_evidence": "F031982",
+      "status": "inferred_background_image_transform",
+      "homography": [
+        [
+          0.9643966472013846,
+          -0.03084901240298656,
+          13.940987147661392
+        ],
+        [
+          0.014156738409524024,
+          0.9520284461730781,
+          13.257536163767236
+        ],
+        [
+          -8.699424910188678e-06,
+          -4.105997615765557e-05,
+          1.0
+        ]
+      ],
+      "metric_camera_pose": null,
+      "applied_to_world_tracks": false,
+      "candidate_matches": 355,
+      "inliers": 292
+    },
+    {
+      "from_evidence": "F031982",
+      "to_evidence": "F031988",
+      "status": "inferred_background_image_transform",
+      "homography": [
+        [
+          1.0168617379125962,
+          -0.004489590388851902,
+          -17.45274798140704
+        ],
+        [
+          0.02047405994658678,
+          0.9728604826673887,
+          24.459821231031924
+        ],
+        [
+          6.168313916210816e-05,
+          -4.142881433918503e-05,
+          1.0
+        ]
+      ],
+      "metric_camera_pose": null,
+      "applied_to_world_tracks": false,
+      "candidate_matches": 278,
+      "inliers": 206
+    },
+    {
+      "from_evidence": "F031988",
+      "to_evidence": "F031994",
+      "status": "inferred_background_image_transform",
+      "homography": [
+        [
+          1.1041106471550928,
+          0.013356364125037936,
+          -28.703091207461387
+        ],
+        [
+          0.06360364870209734,
+          1.1207240481546739,
+          -45.773907944586774
+        ],
+        [
+          8.41070098022634e-05,
+          9.175692957239139e-05,
+          1.0
+        ]
+      ],
+      "metric_camera_pose": null,
+      "applied_to_world_tracks": false,
+      "candidate_matches": 351,
+      "inliers": 283
+    },
+    {
+      "from_evidence": "F031994",
+      "to_evidence": "F032000",
+      "status": "inferred_background_image_transform",
+      "homography": [
+        [
+          0.9581691344230089,
+          -0.047612650192780534,
+          45.750353080439695
+        ],
+        [
+          0.02127806892114126,
+          0.9659135210718529,
+          -5.41524855039469
+        ],
+        [
+          -3.948800684972224e-05,
+          -1.5890693143482846e-05,
+          1.0
+        ]
+      ],
+      "metric_camera_pose": null,
+      "applied_to_world_tracks": false,
+      "candidate_matches": 242,
+      "inliers": 200
+    },
+    {
+      "from_evidence": "F032000",
+      "to_evidence": "F032006",
+      "status": "inferred_background_image_transform",
+      "homography": [
+        [
+          0.968033046074225,
+          -0.020031774894034547,
+          27.193666150648454
+        ],
+        [
+          -0.008288909220470334,
+          0.979678004943762,
+          4.622149826090047
+        ],
+        [
+          -4.9493100270647066e-05,
+          -5.44947875608716e-06,
+          1.0
+        ]
+      ],
+      "metric_camera_pose": null,
+      "applied_to_world_tracks": false,
+      "candidate_matches": 266,
+      "inliers": 198
+    },
+    {
+      "from_evidence": "F032006",
+      "to_evidence": "F032012",
+      "status": "inferred_background_image_transform",
+      "homography": [
+        [
+          1.0849341065487026,
+          0.06714592520550174,
+          -70.74756687662348
+        ],
+        [
+          -0.02493573960395856,
+          1.0546713262485556,
+          14.698602853566312
+        ],
+        [
+          9.812673472884537e-05,
+          1.1083862753917494e-05,
+          1.0
+        ]
+      ],
+      "metric_camera_pose": null,
+      "applied_to_world_tracks": false,
+      "candidate_matches": 162,
+      "inliers": 114
+    },
+    {
+      "from_evidence": "F032012",
+      "to_evidence": "F032018",
+      "status": "inferred_background_image_transform",
+      "homography": [
+        [
+          1.227287245989651,
+          0.14338764424263742,
+          -111.29568123584963
+        ],
+        [
+          0.008521055077872394,
+          1.2315924171407082,
+          -31.994525605229814
+        ],
+        [
+          0.0001672376468984955,
+          0.00023521644894781518,
+          1.0
+        ]
+      ],
+      "metric_camera_pose": null,
+      "applied_to_world_tracks": false,
+      "candidate_matches": 178,
+      "inliers": 148
+    },
+    {
+      "from_evidence": "F032018",
+      "to_evidence": "F032024",
+      "status": "inferred_background_image_transform",
+      "homography": [
+        [
+          0.9043307199897972,
+          0.10727868763132925,
+          -54.05934776259043
+        ],
+        [
+          -0.160438604090125,
+          0.9564584676710409,
+          51.52548896791555
+        ],
+        [
+          -0.00012280596953592922,
+          -1.369265164428812e-05,
+          0.9999999999999999
+        ]
+      ],
+      "metric_camera_pose": null,
+      "applied_to_world_tracks": false,
+      "candidate_matches": 290,
+      "inliers": 242
+    },
+    {
+      "from_evidence": "F032024",
+      "to_evidence": "F032030",
+      "status": "inferred_background_image_transform",
+      "homography": [
+        [
+          1.6745374223826224,
+          0.323265630992091,
+          -308.3480135744074
+        ],
+        [
+          0.056727712120715694,
+          1.5437066049608021,
+          -108.35196351253623
+        ],
+        [
+          0.000760408459298276,
+          0.0003534354624484118,
+          0.9999999999999999
+        ]
+      ],
+      "metric_camera_pose": null,
+      "applied_to_world_tracks": false,
+      "candidate_matches": 521,
+      "inliers": 462
+    },
+    {
+      "from_evidence": "F032030",
+      "to_evidence": "F032036",
+      "status": "inferred_background_image_transform",
+      "homography": [
+        [
+          1.3385153068513618,
+          0.08264165426361351,
+          -130.15242077188614
+        ],
+        [
+          0.13264215239534713,
+          1.236915378984996,
+          -80.04336709138708
+        ],
+        [
+          0.0004401064793022849,
+          0.000140394174734971,
+          1.0
+        ]
+      ],
+      "metric_camera_pose": null,
+      "applied_to_world_tracks": false,
+      "candidate_matches": 698,
+      "inliers": 560
+    },
+    {
+      "from_evidence": "F032036",
+      "to_evidence": "F032042",
+      "status": "inferred_background_image_transform",
+      "homography": [
+        [
+          1.0288171019985615,
+          0.0322777255387529,
+          -25.37183255275047
+        ],
+        [
+          -0.02323016481157192,
+          1.0519179977078243,
+          -11.088799686635852
+        ],
+        [
+          -1.8592199048624443e-05,
+          8.855184124072348e-05,
+          1.0
+        ]
+      ],
+      "metric_camera_pose": null,
+      "applied_to_world_tracks": false,
+      "candidate_matches": 967,
+      "inliers": 809
+    },
+    {
+      "from_evidence": "F032042",
+      "to_evidence": "F032048",
+      "status": "inferred_background_image_transform",
+      "homography": [
+        [
+          1.1673059456406936,
+          -0.029829005780566475,
+          -10.547505331901434
+        ],
+        [
+          0.07923476345099266,
+          1.188512284315215,
+          -66.3944043985331
+        ],
+        [
+          0.00017580622285003208,
+          0.00016900790973881568,
+          1.0
+        ]
+      ],
+      "metric_camera_pose": null,
+      "applied_to_world_tracks": false,
+      "candidate_matches": 730,
+      "inliers": 455
+    },
+    {
+      "from_evidence": "F032048",
+      "to_evidence": "F032054",
+      "status": "inferred_background_image_transform",
+      "homography": [
+        [
+          1.152428493704203,
+          -0.09404808872011383,
+          22.978220076628283
+        ],
+        [
+          0.12636033820927497,
+          1.2405336079325682,
+          -114.52128323137113
+        ],
+        [
+          7.41114644222028e-06,
+          0.00029568051536306287,
+          1.0
+        ]
+      ],
+      "metric_camera_pose": null,
+      "applied_to_world_tracks": false,
+      "candidate_matches": 517,
+      "inliers": 280
+    },
+    {
+      "from_evidence": "F032054",
+      "to_evidence": "F032060",
+      "status": "inferred_background_image_transform",
+      "homography": [
+        [
+          0.9942028555074218,
+          -0.03229066344404858,
+          19.957501312453903
+        ],
+        [
+          0.011837692619144396,
+          1.140091504056626,
+          -84.89313491377342
+        ],
+        [
+          -0.00022106469189870338,
+          0.00023125832472286538,
+          1.0
+        ]
+      ],
+      "metric_camera_pose": null,
+      "applied_to_world_tracks": false,
+      "candidate_matches": 598,
+      "inliers": 416
+    },
+    {
+      "from_evidence": "F032060",
+      "to_evidence": "F032066",
+      "status": "inferred_background_image_transform",
+      "homography": [
+        [
+          1.0112091345414578,
+          -0.08718657946729777,
+          42.56564106062904
+        ],
+        [
+          0.09027176676148563,
+          1.0457559322547503,
+          -79.46087562087605
+        ],
+        [
+          -5.828137081848894e-05,
+          8.975101140862201e-05,
+          1.0
+        ]
+      ],
+      "metric_camera_pose": null,
+      "applied_to_world_tracks": false,
+      "candidate_matches": 832,
+      "inliers": 694
+    },
+    {
+      "from_evidence": "F032066",
+      "to_evidence": "F032072",
+      "status": "inferred_background_image_transform",
+      "homography": [
+        [
+          1.1663598317114596,
+          -0.03149036571674895,
+          -9.584625718864219
+        ],
+        [
+          0.09835921956840737,
+          1.1282066345429544,
+          -92.09558385844751
+        ],
+        [
+          0.00015251874547795354,
+          0.00011591619220938103,
+          1.0
+        ]
+      ],
+      "metric_camera_pose": null,
+      "applied_to_world_tracks": false,
+      "candidate_matches": 772,
+      "inliers": 576
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "all_passed": true,
+  "render_frames": 301,
+  "persistent_entity_ids": [
+    "cabbage_head",
+    "drawer_lower",
+    "nested_metal_bowl",
+    "other_person",
+    "other_person_bracelet_hand",
+    "other_person_other_hand",
+    "red_bowl_drawer",
+    "red_colander_counter",
+    "vegetable_scrap",
+    "wearer_left_hand",
+    "wearer_right_hand",
+    "work_counter"
+  ],
+  "baked_position_scale_checks": 2760,
+  "visibility_persistence_checks": 3612,
+  "drawer_state_proxy_checked": true,
+  "embedded_observation_json_exact": true,
+  "claim": "engineering track consistency only; not 3D truth or model annotation accuracy"
+}

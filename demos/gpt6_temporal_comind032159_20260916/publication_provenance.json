@@ -1,0 +1,125 @@
+{
+  "source_run": "comind032159_20260916_v2",
+  "artifact_copy": "Original artifact bytes preserved, including historical local provenance paths.",
+  "fresh_gpt6_calls": 6,
+  "publication_model_calls": 0,
+  "api_records": [
+    {
+      "batch": "batch_00",
+      "reported_model": "gpt-6-astra",
+      "status": "completed",
+      "usage": {
+        "input_tokens": 8539,
+        "input_tokens_details": {
+          "cache_write_tokens": 8536,
+          "cached_tokens": 0
+        },
+        "output_tokens": 8259,
+        "output_tokens_details": {
+          "reasoning_tokens": 125
+        },
+        "total_tokens": 16798
+      },
+      "original_api_envelope_sha256": "fbc172f8e1c57a1b315b9fdd836951054e0b7c41959e48a7d78e9fa65cd1de3e",
+      "raw_payload_sha256": "53c104e1d736762baac26ca21ad9e6728174f3dfff50f6ae38bce12035b8b765"
+    },
+    {
+      "batch": "batch_01",
+      "reported_model": "gpt-6-astra",
+      "status": "completed",
+      "usage": {
+        "input_tokens": 10441,
+        "input_tokens_details": {
+          "cache_write_tokens": 10438,
+          "cached_tokens": 0
+        },
+        "output_tokens": 9892,
+        "output_tokens_details": {
+          "reasoning_tokens": 436
+        },
+        "total_tokens": 20333
+      },
+      "original_api_envelope_sha256": "9702253bac8c6509ca7a8d808f9ce6eceb9f632d0b6d9cd0f46094bfd391eef5",
+      "raw_payload_sha256": "ab0e4d0f958e49ee0d84a0a8e286e2aa820decfe434119a9f8bf90789b719092"
+    },
+    {
+      "batch": "batch_02",
+      "reported_model": "gpt-6-astra",
+      "status": "completed",
+      "usage": {
+        "input_tokens": 10441,
+        "input_tokens_details": {
+          "cache_write_tokens": 10438,
+          "cached_tokens": 0
+        },
+        "output_tokens": 12063,
+        "output_tokens_details": {
+          "reasoning_tokens": 999
+        },
+        "total_tokens": 22504
+      },
+      "original_api_envelope_sha256": "44e4fb6c28cb2ee1d1877000bf47e97981e53e6a7110b709372e22ba2cedf947",
+      "raw_payload_sha256": "de6661ceb1f20e151c96e772fa1bccbfcff6ee433b0bf22f36fc9e90b27fd017"
+    },
+    {
+      "batch": "batch_03",
+      "reported_model": "gpt-6-astra",
+      "status": "completed",
+      "usage": {
+        "input_tokens": 10441,
+        "input_tokens_details": {
+          "cache_write_tokens": 10438,
+          "cached_tokens": 0
+        },
+        "output_tokens": 11786,
+        "output_tokens_details": {
+          "reasoning_tokens": 129
+        },
+        "total_tokens": 22227
+      },
+      "original_api_envelope_sha256": "04c621334eb34efee671956069a04b62fa55eabc2cc0de804c5472342b8a5acd",
+      "raw_payload_sha256": "b51a54143095b14aaaaf68dad228a3ee358678bfae2d555d803dba04fefe270c"
+    },
+    {
+      "batch": "batch_04",
+      "reported_model": "gpt-6-astra",
+      "status": "completed",
+      "usage": {
+        "input_tokens": 10441,
+        "input_tokens_details": {
+          "cache_write_tokens": 10438,
+          "cached_tokens": 0
+        },
+        "output_tokens": 9567,
+        "output_tokens_details": {
+          "reasoning_tokens": 441
+        },
+        "total_tokens": 20008
+      },
+      "original_api_envelope_sha256": "940a06fa151183791601f9e5641c34fdc2ab2deddec782ccc020f2b874f5ed8f",
+      "raw_payload_sha256": "e942ade90febd534ed049460ceb56645dd6d6d8adbaba388946894c131fd9579"
+    },
+    {
+      "batch": "batch_05",
+      "reported_model": "gpt-6-astra",
+      "status": "completed",
+      "usage": {
+        "input_tokens": 7262,
+        "input_tokens_details": {
+          "cache_write_tokens": 7259,
+          "cached_tokens": 0
+        },
+        "output_tokens": 6687,
+        "output_tokens_details": {
+          "reasoning_tokens": 200
+        },
+        "total_tokens": 13949
+      },
+      "original_api_envelope_sha256": "ba0e87e9dd7122d28be4f602b5b61211cd40ec083d9e1791528602724d2c43bd",
+      "raw_payload_sha256": "61f98dec9a567298a928bdbc4ab51f783897217aa654c1a328e392b3ef058021"
+    }
+  ],
+  "excluded": "Credentials, full API envelopes, transport attempt logs, 301 intermediate render PNGs and full recording video excluded. Original clip and all 51 true source PNG observations included.",
+  "blender_source": "source_v3/blender_temporal.py (float-valued drawer state fix); other pipeline source in source_v2",
+  "claim": "Offline retrospective model annotation + image-plane proxy animation, not metric reconstruction or online tracking."
+}

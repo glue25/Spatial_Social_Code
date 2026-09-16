@@ -1,0 +1,77 @@
+{
+  "complete": true,
+  "source_frames": 51,
+  "persistent_ids": 12,
+  "fresh_gpt6_calls": 6,
+  "usage": {
+    "input_tokens": 57565,
+    "output_tokens": 58254,
+    "total_tokens": 115819
+  },
+  "localized_sample_counts": {
+    "work_counter": 51,
+    "red_colander_counter": 46,
+    "drawer_lower": 7,
+    "red_bowl_drawer": 2,
+    "nested_metal_bowl": 2,
+    "vegetable_scrap": 40,
+    "cabbage_head": 42,
+    "wearer_left_hand": 41,
+    "wearer_right_hand": 44,
+    "other_person": 32,
+    "other_person_bracelet_hand": 32,
+    "other_person_other_hand": 32
+  },
+  "json_schema_passed": true,
+  "python_equals_json": true,
+  "no_timed_social_fabrication": true,
+  "no_metric_reconstruction_claim": true,
+  "render_track_checks": {
+    "all_passed": true,
+    "render_frames": 301,
+    "persistent_entity_ids": [
+      "cabbage_head",
+      "drawer_lower",
+      "nested_metal_bowl",
+      "other_person",
+      "other_person_bracelet_hand",
+      "other_person_other_hand",
+      "red_bowl_drawer",
+      "red_colander_counter",
+      "vegetable_scrap",
+      "wearer_left_hand",
+      "wearer_right_hand",
+      "work_counter"
+    ],
+    "baked_position_scale_checks": 2760,
+    "visibility_persistence_checks": 3612,
+    "drawer_state_proxy_checked": true,
+    "embedded_observation_json_exact": true,
+    "claim": "engineering track consistency only; not 3D truth or model annotation accuracy"
+  },
+  "preview_checks": {
+    "synchronized_streams": {
+      "original_clip.mp4": {
+        "frames": 301,
+        "fps": 30.0,
+        "width": 1408,
+        "height": 1408
+      },
+      "blender_animation.mp4": {
+        "frames": 301,
+        "fps": 30.0,
+        "width": 640,
+        "height": 640
+      },
+      "comparison_preview.mp4": {
+        "frames": 301,
+        "fps": 30.0,
+        "width": 1920,
+        "height": 736
+      }
+    },
+    "observation_count": 51,
+    "timed_social_updates": 0,
+    "frame_zero_source_time": 1059.0666666666666
+  }
+}

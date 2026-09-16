@@ -1,0 +1,9 @@
+{
+  "frames_rendered": 301,
+  "entities": 12,
+  "all_ids_present": true,
+  "metric_3d_claim": false,
+  "animation_fps": 30,
+  "render_only_interpolation": true,
+  "scene_editable": true
+}

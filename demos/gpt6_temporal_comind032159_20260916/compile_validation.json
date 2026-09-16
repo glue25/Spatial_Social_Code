@@ -1,0 +1,10 @@
+{
+  "states": 51,
+  "persistent_ids": 12,
+  "render_frames": 301,
+  "readable_python_equals_json": true,
+  "raw_observation_interpolation": false,
+  "metric_coordinates_claimed": false,
+  "timed_social_updates": 0,
+  "conservative_corrections": 17
+}
