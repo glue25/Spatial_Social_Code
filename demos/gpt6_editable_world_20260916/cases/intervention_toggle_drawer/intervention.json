@@ -1,0 +1,7 @@
+{
+  "type": "state_toggle",
+  "factor": "drawer_open",
+  "entity_id": "lower_drawer",
+  "after": false,
+  "is_original_video_fact": false
+}

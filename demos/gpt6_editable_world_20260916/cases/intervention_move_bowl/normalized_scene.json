@@ -1,0 +1,662 @@
+{
+  "schema_version": "task_local_world_v1",
+  "supported_subset": {
+    "entity_types": [
+      "agent",
+      "bowl",
+      "counter",
+      "drawer",
+      "surface",
+      "vegetable_scrap"
+    ],
+    "relations": [
+      "inside",
+      "near",
+      "on_top_of"
+    ],
+    "states": [
+      "open"
+    ],
+    "poses": [
+      "holding",
+      "reaching_toward"
+    ]
+  },
+  "statement_count": 18,
+  "code_sha256": "83e9ea253fa48483fa813f5ae834dcab7c4310da6d3ad256ad7823aad1045017",
+  "statements": [
+    {
+      "statement_id": "W01",
+      "kind": "entity",
+      "values": {
+        "entity_id": "work_counter",
+        "entity_type": "counter"
+      },
+      "source": "observed",
+      "evidence_id": "e01",
+      "confidence": 0.9,
+      "basis": "frame 6 at 1069.067 seconds"
+    },
+    {
+      "statement_id": "W02",
+      "kind": "entity",
+      "values": {
+        "entity_id": "lower_drawer",
+        "entity_type": "drawer"
+      },
+      "source": "observed",
+      "evidence_id": "e02",
+      "confidence": 0.9,
+      "basis": "frame 6 at 1069.067 seconds"
+    },
+    {
+      "statement_id": "W03",
+      "kind": "entity",
+      "values": {
+        "entity_id": "red_drawer_bowl",
+        "entity_type": "bowl"
+      },
+      "source": "observed",
+      "evidence_id": "e03",
+      "confidence": 0.9,
+      "basis": "frame 6 at 1069.067 seconds"
+    },
+    {
+      "statement_id": "W04",
+      "kind": "entity",
+      "values": {
+        "entity_id": "metal_drawer_bowl",
+        "entity_type": "bowl"
+      },
+      "source": "observed",
+      "evidence_id": "e04",
+      "confidence": 0.9,
+      "basis": "frame 6 at 1069.067 seconds"
+    },
+    {
+      "statement_id": "W05",
+      "kind": "entity",
+      "values": {
+        "entity_id": "dark_shirt_agent",
+        "entity_type": "agent"
+      },
+      "source": "observed",
+      "evidence_id": "e05",
+      "confidence": 0.9,
+      "basis": "frame 6 at 1069.067 seconds"
+    },
+    {
+      "statement_id": "W06",
+      "kind": "entity",
+      "values": {
+        "entity_id": "foreground_agent",
+        "entity_type": "agent"
+      },
+      "source": "observed",
+      "evidence_id": "e06",
+      "confidence": 0.9,
+      "basis": "frame 6 at 1069.067 seconds"
+    },
+    {
+      "statement_id": "W07",
+      "kind": "entity",
+      "values": {
+        "entity_id": "green_scrap",
+        "entity_type": "vegetable_scrap"
+      },
+      "source": "observed",
+      "evidence_id": "e07",
+      "confidence": 0.9,
+      "basis": "frame 6 at 1069.067 seconds"
+    },
+    {
+      "statement_id": "W08",
+      "kind": "state",
+      "values": {
+        "entity_id": "lower_drawer",
+        "state": "open",
+        "value": true
+      },
+      "source": "observed",
+      "evidence_id": "e08",
+      "confidence": 0.9,
+      "basis": "frame 6 at 1069.067 seconds"
+    },
+    {
+      "statement_id": "W09",
+      "kind": "relation",
+      "values": {
+        "relation": "on_top_of",
+        "subject": "metal_drawer_bowl",
+        "object": "work_counter"
+      },
+      "source": "intervention",
+      "evidence_id": "I1_MOVE_BOWL",
+      "confidence": 1.0,
+      "basis": "single-factor intervention: replace inside(metal_drawer_bowl,red_drawer_bowl) with on_top_of(metal_drawer_bowl,work_counter)"
+    },
+    {
+      "statement_id": "W10",
+      "kind": "relation",
+      "values": {
+        "relation": "inside",
+        "subject": "red_drawer_bowl",
+        "object": "lower_drawer"
+      },
+      "source": "observed",
+      "evidence_id": "e10",
+      "confidence": 0.9,
+      "basis": "frame 6 at 1069.067 seconds"
+    },
+    {
+      "statement_id": "W11",
+      "kind": "relation",
+      "values": {
+        "relation": "near",
+        "subject": "lower_drawer",
+        "object": "work_counter"
+      },
+      "source": "observed",
+      "evidence_id": "e11",
+      "confidence": 0.9,
+      "basis": "frame 6 at 1069.067 seconds"
+    },
+    {
+      "statement_id": "W12",
+      "kind": "pose",
+      "values": {
+        "pose": "reaching_toward",
+        "agent": "dark_shirt_agent",
+        "target": "lower_drawer"
+      },
+      "source": "observed",
+      "evidence_id": "e12",
+      "confidence": 0.9,
+      "basis": "frame 6 at 1069.067 seconds"
+    },
+    {
+      "statement_id": "W13",
+      "kind": "pose",
+      "values": {
+        "pose": "holding",
+        "agent": "foreground_agent",
+        "target": "green_scrap"
+      },
+      "source": "observed",
+      "evidence_id": "e13",
+      "confidence": 0.9,
+      "basis": "frame 6 at 1069.067 seconds"
+    },
+    {
+      "statement_id": "W14",
+      "kind": "utterance",
+      "values": {
+        "speaker": "unknown_speaker",
+        "text": "do you need? I need another big bowl to put the garbage."
+      },
+      "source": "observed",
+      "evidence_id": "e14",
+      "confidence": 1.0,
+      "basis": "do you need? I need another big bowl to put the garbage."
+    },
+    {
+      "statement_id": "W15",
+      "kind": "social",
+      "values": {
+        "social_type": "goal",
+        "agent": "unknown_speaker",
+        "text": "Obtain another big bowl to put garbage in."
+      },
+      "source": "inferred",
+      "evidence_id": "e14,e15",
+      "confidence": 0.9,
+      "basis": "The transcript explicitly states: I need another big bowl to put the garbage. The speaker is unidentified."
+    },
+    {
+      "statement_id": "W16",
+      "kind": "unknown",
+      "values": {
+        "variable": "speaker_identity:unknown_speaker:dark_shirt_agent"
+      },
+      "source": "unknown",
+      "evidence_id": "e15",
+      "confidence": 0.0,
+      "basis": "The transcript has no speaker labels and the ordered frames do not establish who spoke."
+    },
+    {
+      "statement_id": "W17",
+      "kind": "unknown",
+      "values": {
+        "variable": "unknown_speaker:speaker_identity"
+      },
+      "source": "unknown",
+      "evidence_id": "",
+      "confidence": 0.0,
+      "basis": "evidence does not resolve this variable"
+    },
+    {
+      "statement_id": "W18",
+      "kind": "unknown",
+      "values": {
+        "variable": "dark_shirt_agent:intent_of_reaching_toward_lower_drawer"
+      },
+      "source": "unknown",
+      "evidence_id": "",
+      "confidence": 0.0,
+      "basis": "evidence does not resolve this variable"
+    }
+  ],
+  "generator_defaults_boundary": [
+    "metric dimensions and depth",
+    "materials and mesh tessellation",
+    "camera, lighting, and background floor",
+    "unconstrained object spacing"
+  ],
+  "case_id": "intervention_move_bowl",
+  "intervention": {
+    "type": "relation_replacement",
+    "factor": "bowl_support",
+    "subject": "metal_drawer_bowl",
+    "before": [
+      "inside",
+      "red_drawer_bowl"
+    ],
+    "after": [
+      "on_top_of",
+      "work_counter"
+    ],
+    "is_original_video_fact": false
+  },
+  "source_compilation": {
+    "evidence_class": "fresh GPT-6 API; preselected development proxy-world demo, NOT metric reconstruction",
+    "input_manifest_path": "/pfs/zhangxiaoyuan/project/physical_code/workdirs/astra_world_demo_v1/run_20260916_gpt6_demo_replay_v3/validation/inputs/input_manifest.json",
+    "input_manifest_sha256": "17086fbafea402e3f10579359ef48989f3d9248df85b5169833b8673c101a8b6",
+    "base_scene_sha256": "94fdcad1a90507adadc625f85760cd6dd72e3a411a51eee551c26e44e6d683b9",
+    "base_ssc_mapping": [
+      {
+        "world_line": 1,
+        "mapping_kind": "entity_type",
+        "source_record": {
+          "kind": "spatial_fact",
+          "values": {
+            "clip_id": "comind_032159",
+            "confidence": 0.9,
+            "evidence_id": "e01",
+            "evidence_span": "frame 6 at 1069.067 seconds",
+            "object": "counter",
+            "observer": "helper",
+            "relation": "entity_type",
+            "source": "video",
+            "subject": "work_counter",
+            "t": 6
+          }
+        }
+      },
+      {
+        "world_line": 2,
+        "mapping_kind": "entity_type",
+        "source_record": {
+          "kind": "spatial_fact",
+          "values": {
+            "clip_id": "comind_032159",
+            "confidence": 0.9,
+            "evidence_id": "e02",
+            "evidence_span": "frame 6 at 1069.067 seconds",
+            "object": "drawer",
+            "observer": "helper",
+            "relation": "entity_type",
+            "source": "video",
+            "subject": "lower_drawer",
+            "t": 6
+          }
+        }
+      },
+      {
+        "world_line": 3,
+        "mapping_kind": "entity_type",
+        "source_record": {
+          "kind": "spatial_fact",
+          "values": {
+            "clip_id": "comind_032159",
+            "confidence": 0.9,
+            "evidence_id": "e03",
+            "evidence_span": "frame 6 at 1069.067 seconds",
+            "object": "bowl",
+            "observer": "helper",
+            "relation": "entity_type",
+            "source": "video",
+            "subject": "red_drawer_bowl",
+            "t": 6
+          }
+        }
+      },
+      {
+        "world_line": 4,
+        "mapping_kind": "entity_type",
+        "source_record": {
+          "kind": "spatial_fact",
+          "values": {
+            "clip_id": "comind_032159",
+            "confidence": 0.9,
+            "evidence_id": "e04",
+            "evidence_span": "frame 6 at 1069.067 seconds",
+            "object": "bowl",
+            "observer": "helper",
+            "relation": "entity_type",
+            "source": "video",
+            "subject": "metal_drawer_bowl",
+            "t": 6
+          }
+        }
+      },
+      {
+        "world_line": 5,
+        "mapping_kind": "entity_type",
+        "source_record": {
+          "kind": "spatial_fact",
+          "values": {
+            "clip_id": "comind_032159",
+            "confidence": 0.9,
+            "evidence_id": "e05",
+            "evidence_span": "frame 6 at 1069.067 seconds",
+            "object": "agent",
+            "observer": "helper",
+            "relation": "entity_type",
+            "source": "video",
+            "subject": "dark_shirt_agent",
+            "t": 6
+          }
+        }
+      },
+      {
+        "world_line": 6,
+        "mapping_kind": "entity_type",
+        "source_record": {
+          "kind": "spatial_fact",
+          "values": {
+            "clip_id": "comind_032159",
+            "confidence": 0.9,
+            "evidence_id": "e06",
+            "evidence_span": "frame 6 at 1069.067 seconds",
+            "object": "agent",
+            "observer": "helper",
+            "relation": "entity_type",
+            "source": "video",
+            "subject": "foreground_agent",
+            "t": 6
+          }
+        }
+      },
+      {
+        "world_line": 7,
+        "mapping_kind": "entity_type",
+        "source_record": {
+          "kind": "spatial_fact",
+          "values": {
+            "clip_id": "comind_032159",
+            "confidence": 0.9,
+            "evidence_id": "e07",
+            "evidence_span": "frame 6 at 1069.067 seconds",
+            "object": "vegetable_scrap",
+            "observer": "helper",
+            "relation": "entity_type",
+            "source": "video",
+            "subject": "green_scrap",
+            "t": 6
+          }
+        }
+      },
+      {
+        "world_line": 8,
+        "mapping_kind": "state",
+        "source_record": {
+          "kind": "spatial_fact",
+          "values": {
+            "clip_id": "comind_032159",
+            "confidence": 0.9,
+            "evidence_id": "e08",
+            "evidence_span": "frame 6 at 1069.067 seconds",
+            "object": "open",
+            "observer": "helper",
+            "relation": "state",
+            "source": "video",
+            "subject": "lower_drawer",
+            "t": 6
+          }
+        }
+      },
+      {
+        "world_line": 9,
+        "mapping_kind": "relation",
+        "source_record": {
+          "kind": "spatial_fact",
+          "values": {
+            "clip_id": "comind_032159",
+            "confidence": 0.9,
+            "evidence_id": "e09",
+            "evidence_span": "frame 6 at 1069.067 seconds",
+            "object": "red_drawer_bowl",
+            "observer": "helper",
+            "relation": "inside",
+            "source": "video",
+            "subject": "metal_drawer_bowl",
+            "t": 6
+          }
+        }
+      },
+      {
+        "world_line": 10,
+        "mapping_kind": "relation",
+        "source_record": {
+          "kind": "spatial_fact",
+          "values": {
+            "clip_id": "comind_032159",
+            "confidence": 0.9,
+            "evidence_id": "e10",
+            "evidence_span": "frame 6 at 1069.067 seconds",
+            "object": "lower_drawer",
+            "observer": "helper",
+            "relation": "inside",
+            "source": "video",
+            "subject": "red_drawer_bowl",
+            "t": 6
+          }
+        }
+      },
+      {
+        "world_line": 11,
+        "mapping_kind": "relation",
+        "source_record": {
+          "kind": "spatial_fact",
+          "values": {
+            "clip_id": "comind_032159",
+            "confidence": 0.9,
+            "evidence_id": "e11",
+            "evidence_span": "frame 6 at 1069.067 seconds",
+            "object": "work_counter",
+            "observer": "helper",
+            "relation": "near",
+            "source": "video",
+            "subject": "lower_drawer",
+            "t": 6
+          }
+        }
+      },
+      {
+        "world_line": 12,
+        "mapping_kind": "pose",
+        "source_record": {
+          "kind": "spatial_fact",
+          "values": {
+            "clip_id": "comind_032159",
+            "confidence": 0.9,
+            "evidence_id": "e12",
+            "evidence_span": "frame 6 at 1069.067 seconds",
+            "object": "lower_drawer",
+            "observer": "helper",
+            "relation": "reaching_toward",
+            "source": "video",
+            "subject": "dark_shirt_agent",
+            "t": 6
+          }
+        }
+      },
+      {
+        "world_line": 13,
+        "mapping_kind": "pose",
+        "source_record": {
+          "kind": "spatial_fact",
+          "values": {
+            "clip_id": "comind_032159",
+            "confidence": 0.9,
+            "evidence_id": "e13",
+            "evidence_span": "frame 6 at 1069.067 seconds",
+            "object": "green_scrap",
+            "observer": "helper",
+            "relation": "holding",
+            "source": "video",
+            "subject": "foreground_agent",
+            "t": 6
+          }
+        }
+      },
+      {
+        "world_line": 14,
+        "mapping_kind": "utterance",
+        "source_record": {
+          "kind": "event",
+          "values": {
+            "action": "utter",
+            "actor": "unknown_speaker",
+            "clip_id": "comind_032159",
+            "confidence": 1.0,
+            "evidence_id": "e14",
+            "evidence_span": "preceding 10 seconds",
+            "observer": "helper",
+            "quote": "do you need? I need another big bowl to put the garbage.",
+            "source": "transcript",
+            "t": 6,
+            "target": "need_big_bowl"
+          }
+        }
+      },
+      {
+        "world_line": 15,
+        "mapping_kind": "social_state",
+        "source_record": {
+          "kind": "goal",
+          "values": {
+            "agent": "unknown_speaker",
+            "confidence": 0.9,
+            "evidence": "The transcript explicitly states: I need another big bowl to put the garbage. The speaker is unidentified.",
+            "evidence_ids": [
+              "e14",
+              "e15"
+            ],
+            "goal": "Obtain another big bowl to put garbage in."
+          }
+        }
+      },
+      {
+        "world_line": 16,
+        "mapping_kind": "unknown",
+        "source_record": {
+          "kind": "spatial_unknown",
+          "values": {
+            "clip_id": "comind_032159",
+            "confidence": 0.0,
+            "evidence_id": "e15",
+            "evidence_span": "The transcript has no speaker labels and the ordered frames do not establish who spoke.",
+            "object": "dark_shirt_agent",
+            "observer": "helper",
+            "relation": "speaker_identity",
+            "source": "unknown",
+            "subject": "unknown_speaker",
+            "t": 6
+          }
+        }
+      },
+      {
+        "world_line": 17,
+        "mapping_kind": "unknown",
+        "source_record": {
+          "kind": "social_unknown",
+          "values": {
+            "agent": "unknown_speaker",
+            "variable": "speaker_identity"
+          }
+        }
+      },
+      {
+        "world_line": 18,
+        "mapping_kind": "unknown",
+        "source_record": {
+          "kind": "social_unknown",
+          "values": {
+            "agent": "dark_shirt_agent",
+            "variable": "intent_of_reaching_toward_lower_drawer"
+          }
+        }
+      }
+    ],
+    "compiler_decisions": [
+      {
+        "trace": "social",
+        "index": 0,
+        "decision": "retained_in_social_trace_not_duplicated_in_world_code",
+        "record": {
+          "kind": "observation",
+          "values": {
+            "agent": "helper",
+            "confidence": 0.9,
+            "evidence_ids": [
+              "e08",
+              "e09",
+              "e10"
+            ],
+            "fact": "lower_drawer is open; red_drawer_bowl is inside lower_drawer, and metal_drawer_bowl is inside red_drawer_bowl.",
+            "source": "spatial_trace",
+            "t": 6
+          }
+        }
+      },
+      {
+        "trace": "social",
+        "index": 1,
+        "decision": "retained_in_social_trace_not_duplicated_in_world_code",
+        "record": {
+          "kind": "observation",
+          "values": {
+            "agent": "helper",
+            "confidence": 0.9,
+            "evidence_ids": [
+              "e12"
+            ],
+            "fact": "dark_shirt_agent is reaching toward lower_drawer.",
+            "source": "spatial_trace",
+            "t": 6
+          }
+        }
+      },
+      {
+        "trace": "social",
+        "index": 2,
+        "decision": "retained_in_social_trace_not_duplicated_in_world_code",
+        "record": {
+          "kind": "observation",
+          "values": {
+            "agent": "helper",
+            "confidence": 0.9,
+            "evidence_ids": [
+              "e07",
+              "e13"
+            ],
+            "fact": "foreground_agent is holding green_scrap, a vegetable scrap.",
+            "source": "spatial_trace",
+            "t": 6
+          }
+        }
+      }
+    ]
+  }
+}

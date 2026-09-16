@@ -1,0 +1,110 @@
+{
+  "dark_shirt_agent": {
+    "aabb_max": [
+      -1.725,
+      -1.075,
+      1.575
+    ],
+    "aabb_min": [
+      -2.275,
+      -1.425,
+      0.525
+    ],
+    "entity_type": "agent",
+    "location": [
+      -2.0,
+      -1.25,
+      1.05
+    ]
+  },
+  "foreground_agent": {
+    "aabb_max": [
+      2.275,
+      -1.075,
+      1.575
+    ],
+    "aabb_min": [
+      1.725,
+      -1.425,
+      0.525
+    ],
+    "entity_type": "agent",
+    "location": [
+      2.0,
+      -1.25,
+      1.05
+    ]
+  },
+  "green_scrap": {
+    "aabb_max": [
+      1.67,
+      -1.434,
+      1.194
+    ],
+    "aabb_min": [
+      1.43,
+      -1.566,
+      1.086
+    ],
+    "entity_type": "vegetable_scrap",
+    "location": [
+      1.55,
+      -1.5,
+      1.14
+    ]
+  },
+  "lower_drawer": {
+    "aabb_max": [
+      0.925,
+      -0.17,
+      0.71
+    ],
+    "aabb_min": [
+      -0.925,
+      -1.27,
+      0.61
+    ],
+    "entity_type": "drawer",
+    "location": [
+      0.0,
+      -0.72,
+      0.66
+    ]
+  },
+  "red_drawer_bowl": {
+    "aabb_max": [
+      0.4032,
+      -0.3368,
+      0.9324
+    ],
+    "aabb_min": [
+      -0.4032,
+      -1.1432,
+      0.7812
+    ],
+    "entity_type": "bowl",
+    "location": [
+      0.0,
+      -0.74,
+      0.8568
+    ]
+  },
+  "work_counter": {
+    "aabb_max": [
+      2.1,
+      1.95,
+      1.09
+    ],
+    "aabb_min": [
+      -2.1,
+      0.75,
+      0.91
+    ],
+    "entity_type": "counter",
+    "location": [
+      0.0,
+      1.35,
+      1.0
+    ]
+  }
+}

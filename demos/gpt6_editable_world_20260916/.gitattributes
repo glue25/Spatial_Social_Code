@@ -1,0 +1,5 @@
+# Preserve exact published bytes and hashes on every checkout platform.
+* -text
+# Original CSV writer uses CRLF; frozen source has an original blank EOF line.
+analysis/*.csv whitespace=cr-at-eol
+source/experiments/astra_world_demo_v1/__init__.py whitespace=-blank-at-eof

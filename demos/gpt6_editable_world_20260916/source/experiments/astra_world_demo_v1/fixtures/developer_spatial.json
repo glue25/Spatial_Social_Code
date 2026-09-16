@@ -1,0 +1,20 @@
+{
+  "fixture_status": "developer-authored from visual audit; never a model result",
+  "spatial_code": [
+    "S.fact(6, 'entity_type', 'counter_1', 'counter', source='video', confidence=0.99, evidence_id='F6_COUNTER', clip_id='comind_032159', observer='helper', evidence_span='frame 32072 at 1069.067 seconds');",
+    "S.fact(6, 'entity_type', 'drawer_1', 'drawer', source='video', confidence=0.99, evidence_id='F6_DRAWER', clip_id='comind_032159', observer='helper', evidence_span='frame 32072 at 1069.067 seconds');",
+    "S.fact(6, 'entity_type', 'red_bowl_1', 'bowl', source='video', confidence=0.95, evidence_id='F6_RED_BOWL', clip_id='comind_032159', observer='helper', evidence_span='frame 32072 at 1069.067 seconds');",
+    "S.fact(6, 'entity_type', 'metal_bowl_1', 'bowl', source='video', confidence=0.92, evidence_id='F6_METAL_BOWL', clip_id='comind_032159', observer='helper', evidence_span='frame 32072 at 1069.067 seconds');",
+    "S.fact(6, 'entity_type', 'helper', 'agent', source='video', confidence=0.99, evidence_id='F6_HELPER', clip_id='comind_032159', observer='helper', evidence_span='egocentric helper body and hands in frame 32072');",
+    "S.fact(6, 'entity_type', 'partner', 'agent', source='video', confidence=0.98, evidence_id='F6_PARTNER', clip_id='comind_032159', observer='helper', evidence_span='visible participant in frame 32072');",
+    "S.fact(6, 'entity_type', 'vegetable_scrap_1', 'vegetable_scrap', source='video', confidence=0.93, evidence_id='F6_SCRAP', clip_id='comind_032159', observer='helper', evidence_span='green vegetable remnant in helper hand in frame 32072');",
+    "S.fact(6, 'state', 'drawer_1', 'open', source='video', confidence=0.99, evidence_id='F6_DRAWER_OPEN', clip_id='comind_032159', observer='helper', evidence_span='drawer visibly extended in frame 32072');",
+    "S.fact(6, 'inside', 'red_bowl_1', 'drawer_1', source='video', confidence=0.96, evidence_id='F6_RED_IN_DRAWER', clip_id='comind_032159', observer='helper', evidence_span='red bowl is within open drawer in frame 32072');",
+    "S.fact(6, 'inside', 'metal_bowl_1', 'red_bowl_1', source='video', confidence=0.88, evidence_id='F6_METAL_IN_RED', clip_id='comind_032159', observer='helper', evidence_span='metal bowl appears nested in red bowl in frame 32072');",
+    "S.fact(6, 'holding', 'helper', 'vegetable_scrap_1', source='video', confidence=0.98, evidence_id='F6_HELPER_HOLDING', clip_id='comind_032159', observer='helper', evidence_span='helper left hand holds green remnant in frame 32072');",
+    "S.fact(6, 'reaching_toward', 'partner', 'drawer_1', source='video', confidence=0.96, evidence_id='F6_PARTNER_REACH', clip_id='comind_032159', observer='helper', evidence_span='partner hand is at open drawer in frame 32072');",
+    "S.fact(6, 'near', 'partner', 'drawer_1', source='video', confidence=0.99, evidence_id='F6_PARTNER_NEAR', clip_id='comind_032159', observer='helper', evidence_span='partner is adjacent to drawer in frame 32072');",
+    "S.event(6, 'unknown_speaker', 'utter', 'need_big_bowl', source='transcript', confidence=1.0, evidence_id='T1_UTTERANCE', clip_id='comind_032159', observer='helper', evidence_span='preceding 10 second transcript', quote='do you need? I need another big bowl to put the garbage.');",
+    "S.unknown(6, 'identity', 'unknown_speaker', 'transcript_speaker', source='unknown', confidence=0.0, evidence_id='T1_SPEAKER_UNKNOWN', clip_id='comind_032159', observer='helper', evidence_span='transcript has no speaker label');"
+  ]
+}

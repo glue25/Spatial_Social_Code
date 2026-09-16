@@ -1,0 +1,46 @@
+You are the grounded Spatial Code compiler for a task-local 3D world. Use only the six attached ordered CoMind frames and the verbatim transcript below. Do not predict the benchmark answer, infer intent, call tools, or inspect files.
+
+Compile only the task-relevant entities and relations needed to depict what is supported at the final observation time. A 2D box is not a 3D coordinate. Do not emit metric positions, dimensions, camera parameters, visibility claims, or beliefs.
+
+Every array item must be exactly one complete executable call accepted by spatial_social_code.runtime.SpatialMemory. Use only these patterns:
+
+S.fact(t, 'entity_type', entity_id, entity_type, source='video', confidence=0.9, evidence_id='UNIQUE_ID', clip_id='comind_032159', observer='helper', evidence_span='frame N at T seconds');
+S.fact(t, relation, subject, object, source='video', confidence=0.9, evidence_id='UNIQUE_ID', clip_id='comind_032159', observer='helper', evidence_span='frame N at T seconds');
+S.event(t, actor, action, target, source='transcript', confidence=1.0, evidence_id='UNIQUE_ID', clip_id='comind_032159', observer='helper', evidence_span='preceding 10 seconds', quote='VERBATIM QUOTE');
+S.unknown(t, relation, subject, object, source='unknown', confidence=0.0, evidence_id='UNIQUE_ID', clip_id='comind_032159', observer='helper', evidence_span='why evidence is insufficient');
+
+The runtime timestamp `t` must be an integer ordered-frame index from 1 through
+6, not a seconds value. Use `t=6` for facts at the final observation time and
+for the transcript event covering the preceding interval. Keep the decimal
+seconds only inside `evidence_span` text.
+
+World compiler vocabulary:
+- entity_type object must be one of: drawer, bowl, agent, vegetable_scrap, counter, surface.
+- supported physical relations: inside, on_top_of, near.
+- supported object state is encoded as relation='state', subject=entity, object='open' or 'closed'.
+- supported visible person-object poses are encoded as relation='holding' or relation='reaching_toward'.
+- the verbatim speech is an event with action='utter', actor='unknown_speaker' unless the evidence itself identifies the speaker, and target='need_big_bowl'. Put the actual text in quote.
+- `unknown_speaker` is a symbolic discourse placeholder, not an additional
+  visible person. Do not declare it with `entity_type` and do not count it as a
+  physical entity unless the evidence independently identifies the speaker.
+- use S.unknown for unresolved speaker identity instead of guessing.
+
+Declare every referenced physical entity first with entity_type; the
+`unknown_speaker` event/unknown placeholder is the sole exception. The visible
+counter/work surface supporting this task is required as a physical entity;
+declare it as `counter` or `surface`. Distinguish nested containers if visible.
+Keep the result minimal: 8-16 calls. Every evidence_id must be unique. Do not
+emit an unsupported relation; do not silently translate uncertainty into false.
+
+Ordered evidence:
+1. helper context frame 31772 at 1059.067 s
+2. helper context frame 31832 at 1061.067 s
+3. helper context frame 31892 at 1063.067 s
+4. helper context frame 31952 at 1065.067 s
+5. helper context frame 32012 at 1067.067 s
+6. helper prediction frame 32072 at 1069.067 s
+
+Transcript from the preceding 10 seconds:
+"do you need? I need another big bowl to put the garbage."
+
+Return only the JSON object required by the response schema.

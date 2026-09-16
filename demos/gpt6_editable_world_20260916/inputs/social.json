@@ -1,0 +1,10 @@
+{
+  "social_code": [
+    "M.observe(6, 'helper', 'lower_drawer is open; red_drawer_bowl is inside lower_drawer, and metal_drawer_bowl is inside red_drawer_bowl.', source='spatial_trace', confidence=0.9, evidence_ids='e08,e09,e10');",
+    "M.observe(6, 'helper', 'dark_shirt_agent is reaching toward lower_drawer.', source='spatial_trace', confidence=0.9, evidence_ids='e12');",
+    "M.observe(6, 'helper', 'foreground_agent is holding green_scrap, a vegetable scrap.', source='spatial_trace', confidence=0.9, evidence_ids='e07,e13');",
+    "M.goal('unknown_speaker', 'Obtain another big bowl to put garbage in.', 0.9, 'The transcript explicitly states: I need another big bowl to put the garbage. The speaker is unidentified.', evidence_ids='e14,e15');",
+    "M.unknown('unknown_speaker', 'speaker_identity');",
+    "M.unknown('dark_shirt_agent', 'intent_of_reaching_toward_lower_drawer');"
+  ]
+}

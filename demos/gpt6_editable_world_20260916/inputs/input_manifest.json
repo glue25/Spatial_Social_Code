@@ -1,0 +1,60 @@
+{
+  "model_requested": "gt-6-as-a",
+  "dataset": "CoMind",
+  "sample_id": "032159",
+  "recording_id": "3ef7356e-3b75-4eab-add9-363b0cdc2b99",
+  "frames": [
+    {
+      "order": 1,
+      "role": "helper",
+      "kind": "context",
+      "time_seconds": 1059.0666666666666,
+      "path": "reports/cases/comind_scoia_032159_helper_f031772_context.jpg",
+      "sha256": "717572d852c70da77b54e90f8ead153b4a5b27f7a14777c05f2420ba7989ecd9"
+    },
+    {
+      "order": 2,
+      "role": "helper",
+      "kind": "context",
+      "time_seconds": 1061.0666666666666,
+      "path": "reports/cases/comind_scoia_032159_helper_f031832_context.jpg",
+      "sha256": "6898e14749e994ab9c5676c301d4cdb86bf663ef496da03b09e98f54c12c9f3c"
+    },
+    {
+      "order": 3,
+      "role": "helper",
+      "kind": "context",
+      "time_seconds": 1063.0666666666666,
+      "path": "reports/cases/comind_scoia_032159_helper_f031892_context.jpg",
+      "sha256": "761fc36c9d4a62fccf3ec02e9e8fb8db2519bf765c21a1ac66dbd7a9a0fa86f2"
+    },
+    {
+      "order": 4,
+      "role": "helper",
+      "kind": "context",
+      "time_seconds": 1065.0666666666666,
+      "path": "reports/cases/comind_scoia_032159_helper_f031952_context.jpg",
+      "sha256": "621bbef168109685865b1cd288c746cf55521b083cf8505342495f52d9e69846"
+    },
+    {
+      "order": 5,
+      "role": "helper",
+      "kind": "context",
+      "time_seconds": 1067.0666666666666,
+      "path": "reports/cases/comind_scoia_032159_helper_f032012_context.jpg",
+      "sha256": "2e8508cc01e768de6db5a03f6229b2decde8ff8eee077c13f832aa70c10b4743"
+    },
+    {
+      "order": 6,
+      "role": "helper",
+      "kind": "prediction",
+      "time_seconds": 1069.0666666666666,
+      "path": "reports/cases/comind_scoia_032159_helper_f032072_prediction.jpg",
+      "sha256": "b3be265a55934c146fb1b9520d9b089c9696c482618b8bda06fea2ca92c9c340"
+    }
+  ],
+  "transcript": "do you need? I need another big bowl to put the garbage.",
+  "case_selection": "previously inspected development showcase, not random test",
+  "claim": "fresh model code and editable task-local proxy world; not image-faithful or metric reconstruction",
+  "old_model_outputs_reused": false
+}
