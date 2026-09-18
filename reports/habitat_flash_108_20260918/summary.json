@@ -1,0 +1,76 @@
+{
+  "scope": "complete local development suite; not official hidden test",
+  "model_requested": "gemini-3-flash-preview",
+  "model_identity_basis": "provider-reported, not independently verified weights",
+  "unique_tasks": 12,
+  "seeds": [
+    891011,
+    891012,
+    891013
+  ],
+  "total_rollouts": 108,
+  "conditions": [
+    "direct",
+    "static_ssc",
+    "dynamic_ssc"
+  ],
+  "observation_mode": "text",
+  "state_variant": "v2",
+  "environment_turn_cap": 20,
+  "per_call_output_cap": 8192,
+  "reasoning_effort": "low",
+  "compute_matched": false,
+  "results": {
+    "direct": {
+      "n": 36,
+      "successes": 8,
+      "success_rate": 0.2222222222222222,
+      "mean_completion": 0.5717592592592592,
+      "logged_api_calls": 2324,
+      "input_tokens": 5853107,
+      "output_tokens": 513799
+    },
+    "static_ssc": {
+      "n": 36,
+      "successes": 10,
+      "success_rate": 0.2777777777777778,
+      "mean_completion": 0.6550925925925928,
+      "logged_api_calls": 2358,
+      "input_tokens": 6428146,
+      "output_tokens": 567088
+    },
+    "dynamic_ssc": {
+      "n": 36,
+      "successes": 24,
+      "success_rate": 0.6666666666666666,
+      "mean_completion": 0.8310185185185186,
+      "logged_api_calls": 1921,
+      "input_tokens": 7389139,
+      "output_tokens": 467025
+    }
+  },
+  "successes_by_seed": {
+    "direct": {
+      "891011": 2,
+      "891012": 4,
+      "891013": 2
+    },
+    "static_ssc": {
+      "891011": 4,
+      "891012": 3,
+      "891013": 3
+    },
+    "dynamic_ssc": {
+      "891011": 8,
+      "891012": 9,
+      "891013": 7
+    }
+  },
+  "cost_scope": "Logged provider calls/tokens for completed rollouts; not an estimate of unlogged failed network attempts or monetary cost.",
+  "historical_comparison": "Distinct Qwen3-VL-8B Habitat protocols must not be conflated: the earlier task-conditioned four-condition report showed positive P+S completion (53.47% vs Direct45.83%); the later online three-condition strict audit was mixed (Dynamic41.67% vs Direct53.01%; strict success4/36 vs3/36). The earlier report is historical, not re-certified under the later scorer. Neither is a matched Gemini3-Pro/Flash replication, and this new Flash result does not overwrite either.",
+  "sha256": {
+    "rollouts.csv": "ab8dd928463db2ded77737411b7c1d82fbd655812165a71319ab06abce7e5ec3",
+    "source_partial_results": "5fc7f4033314c62eacb349fecb4c7b559ba5539d0383a622c7d7161b9cdbc935",
+    "source_frozen_config": "a44ba40ad7376844f70be7e49db0463df63a9aa48c164afc0b08d237ceb669ea"
+  }
+}
