@@ -69,7 +69,7 @@
   "cost_scope": "Logged provider calls/tokens for completed rollouts; not an estimate of unlogged failed network attempts or monetary cost.",
   "historical_comparison": "Distinct Qwen3-VL-8B Habitat protocols must not be conflated: the earlier task-conditioned four-condition report showed positive P+S completion (53.47% vs Direct45.83%); the later online three-condition strict audit was mixed (Dynamic41.67% vs Direct53.01%; strict success4/36 vs3/36). The earlier report is historical, not re-certified under the later scorer. Neither is a matched Gemini3-Pro/Flash replication, and this new Flash result does not overwrite either.",
   "sha256": {
-    "rollouts.csv": "ab8dd928463db2ded77737411b7c1d82fbd655812165a71319ab06abce7e5ec3",
+    "rollouts.csv": "b468c23ae28f77162046616ae32df3b81a4e7ee8abd4c2d80c6239e658da09ff",
     "source_partial_results": "5fc7f4033314c62eacb349fecb4c7b559ba5539d0383a622c7d7161b9cdbc935",
     "source_frozen_config": "a44ba40ad7376844f70be7e49db0463df63a9aa48c164afc0b08d237ceb669ea"
   }
