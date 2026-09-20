@@ -1,0 +1,7 @@
+{
+  "native_envelope_roundtrips": 4,
+  "ma_rows": 1741,
+  "ma_pipeline_mismatches": [],
+  "no_api_calls": true,
+  "note": "Replays historical responses, including parse retries and audit. Does not independently prove original prompt/media byte identity."
+}

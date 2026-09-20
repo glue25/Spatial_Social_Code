@@ -1,0 +1,444 @@
+{
+  "split": "hard",
+  "task_id": "emtom-108294897_176710602-772-cooperative-exhibit-reset-with-split-object-target-k-41a5f8ab",
+  "title": "Exhibit reset with split object-target knowledge",
+  "category": "cooperative",
+  "task": "Reset the home as a small exhibit area. As a team, complete all of the following:\n\n1) Put the correct glass onto the laundry-room table.\n2) Put the vase on the living-room table.\n3) Put the picture frame on the dining-room counter.\n4) Leave the correct bedroom-1 chest of drawers open at the end.\n\nRoom access and communication are restricted, so use your messages carefully and avoid guessing which glass or which drawer is intended.",
+  "scene_id": "108294897_176710602",
+  "episode_id": "772",
+  "agent_spawns": {
+    "agent_0": {
+      "position": [
+        -6.407744884490967,
+        0.17155149579048157,
+        -3.566112518310547
+      ],
+      "rotation": 1.782667636871338
+    },
+    "agent_1": {
+      "position": [
+        -4.225989818572998,
+        0.17155149579048157,
+        -3.3229281902313232
+      ],
+      "rotation": 0.2261635959148407
+    },
+    "agent_2": {
+      "position": [
+        -0.39835578203201294,
+        0.17155149579048157,
+        -2.934569835662842
+      ],
+      "rotation": 2.4423067569732666
+    }
+  },
+  "initial_states": {},
+  "active_mechanics": [
+    "room_restriction",
+    "limited_bandwidth",
+    "restricted_communication"
+  ],
+  "mechanic_bindings": [
+    {
+      "mechanic_type": "room_restriction",
+      "restricted_rooms": [
+        "bedroom_1"
+      ],
+      "for_agents": [
+        "agent_0"
+      ]
+    },
+    {
+      "mechanic_type": "room_restriction",
+      "restricted_rooms": [
+        "kitchen_1"
+      ],
+      "for_agents": [
+        "agent_1"
+      ]
+    },
+    {
+      "mechanic_type": "limited_bandwidth",
+      "message_limits": {
+        "agent_0": 1,
+        "agent_1": 1,
+        "agent_2": 1
+      }
+    },
+    {
+      "mechanic_type": "restricted_communication",
+      "allowed_targets": {
+        "agent_0": [
+          "agent_1"
+        ],
+        "agent_1": [
+          "agent_2"
+        ],
+        "agent_2": [
+          "agent_0"
+        ]
+      }
+    }
+  ],
+  "agent_secrets": {
+    "agent_0": [
+      "agent_0 is barred from bedroom_1.",
+      "The chest of drawers in bedroom_1 that must be left open is chest_of_drawers_30.",
+      "The vase that must be moved to the living-room table is vase_1.",
+      "The living-room destination table is table_12.",
+      "The correct glass for the laundry-room table is glass_2."
+    ],
+    "agent_1": [
+      "agent_1 is barred from kitchen_1.",
+      "The laundry-room destination table for the correct glass is table_22.",
+      "The picture frame that must be moved is picture_frame_0.",
+      "The dining-room destination counter is counter_25."
+    ],
+    "agent_2": [
+      "You can enter kitchen_1 and bedroom_1.",
+      "glass_2 starts on bed_14 in bedroom_1.",
+      "glass_4 starts on bed_10 in bedroom_2.",
+      "picture_frame_0 starts in kitchen_1 inside cabinet_26.",
+      "chest_of_drawers_29 is in bedroom_1.",
+      "chest_of_drawers_30 is in bedroom_1.",
+      "chest_of_drawers_32 is in bedroom_1."
+    ]
+  },
+  "agent_actions": {
+    "agent_0": [
+      "Navigate",
+      "Open",
+      "Close",
+      "Pick",
+      "Place",
+      "FindObjectTool",
+      "FindReceptacleTool",
+      "FindRoomTool",
+      "Communicate",
+      "Wait"
+    ],
+    "agent_1": [
+      "Navigate",
+      "Open",
+      "Close",
+      "Pick",
+      "Place",
+      "FindObjectTool",
+      "FindReceptacleTool",
+      "FindRoomTool",
+      "Communicate",
+      "Wait"
+    ],
+    "agent_2": [
+      "Navigate",
+      "Open",
+      "Close",
+      "Pick",
+      "Place",
+      "FindObjectTool",
+      "FindReceptacleTool",
+      "FindRoomTool",
+      "Communicate",
+      "Wait"
+    ]
+  },
+  "message_targets": {},
+  "pddl_domain": "enacttom",
+  "problem_pddl": "(define (problem coop_tom3_gallery_handover_108294897_176710602_772_v3)\n  (:domain enacttom)\n  (:objects\n    agent_0 agent_1 agent_2 - agent\n    living_room_1 bedroom_1 closet_1 laundryroom_1 kitchen_1 dining_room_1 - room\n    glass_2 picture_frame_0 vase_1 - object\n    table_12 bed_14 chest_of_drawers_30 table_22 cabinet_26 table_15 counter_25 - furniture\n  )\n  (:init\n    (agent_in_room agent_0 living_room_1)\n    (agent_in_room agent_1 bedroom_1)\n    (agent_in_room agent_2 closet_1)\n    (is_in_room table_12 living_room_1)\n    (is_in_room bed_14 bedroom_1)\n    (is_in_room chest_of_drawers_30 bedroom_1)\n    (is_in_room table_22 laundryroom_1)\n    (is_in_room cabinet_26 kitchen_1)\n    (is_in_room table_15 dining_room_1)\n    (is_in_room counter_25 dining_room_1)\n    (is_in_room glass_2 bedroom_1)\n    (is_on_top glass_2 bed_14)\n    (is_in_room picture_frame_0 kitchen_1)\n    (is_on_top picture_frame_0 cabinet_26)\n    (is_in_room vase_1 dining_room_1)\n    (is_on_top vase_1 table_15)\n  )\n  (:goal (and\n    (is_on_top glass_2 table_22)\n    (is_on_top vase_1 table_12)\n    (is_on_top picture_frame_0 counter_25)\n    (is_open chest_of_drawers_30)\n    (K agent_0 (K agent_1 (K agent_2 (is_open chest_of_drawers_30))))\n  ))\n)",
+  "num_agents": 3,
+  "teams": {},
+  "team_secrets": {},
+  "tom_level": 3,
+  "tom_reasoning": "Syntactic fallback: K() nesting depth = 3 (strict FD proof unavailable: Strict Fast Downward ToM proof failed. Planner status: UNSOLVABLE_INCOMPLETELY)",
+  "runtime_semantics_version": "literal_tom_probe_v1",
+  "functional_goal_pddl": "(and (is_on_top glass_2 table_22) (is_on_top vase_1 table_12) (is_on_top picture_frame_0 counter_25) (is_open chest_of_drawers_30))",
+  "literal_tom_probes": [
+    {
+      "probe_id": "k_probe_0",
+      "agent_id": "agent_0",
+      "subject_agents": [
+        "agent_1",
+        "agent_2"
+      ],
+      "fact_pddl": "(is_open chest_of_drawers_30)",
+      "fact_natural_language": "chest of drawers 30 is open",
+      "source_pddl": "(K agent_0 (K agent_1 (K agent_2 (is_open chest_of_drawers_30))))",
+      "question": "Probe 0: agent_0 knows the nested chain agent_1 -> agent_2 knows a fact about ordered entities [chest_of_drawers_30]. Report which benchmark predicate applies to those entities and whether it holds. The expected argument order is fixed as listed. If unknown, return predicate \"unknown\" and holds null. JSON shape: {\"probe_id\":\"k_probe_X\",\"predicate\":\"<predicate_name>|unknown\",\"holds\":true|false|null,\"args\":[\"entity_or_target\", ...]}",
+      "expected_response": {
+        "predicate": "is_open",
+        "holds": true,
+        "args": [
+          "chest_of_drawers_30"
+        ]
+      },
+      "depth": 3,
+      "owner": null,
+      "supported": true,
+      "unsupported_reason": null
+    },
+    {
+      "probe_id": "k_probe_1",
+      "agent_id": "agent_1",
+      "subject_agents": [
+        "agent_2"
+      ],
+      "fact_pddl": "(is_open chest_of_drawers_30)",
+      "fact_natural_language": "chest of drawers 30 is open",
+      "source_pddl": "(K agent_1 (K agent_2 (is_open chest_of_drawers_30)))",
+      "question": "Probe 1: agent_1 knows that agent_2 knows a fact about ordered entities [chest_of_drawers_30]. Report which benchmark predicate applies to those entities and whether it holds. The expected argument order is fixed as listed. If unknown, return predicate \"unknown\" and holds null. JSON shape: {\"probe_id\":\"k_probe_X\",\"predicate\":\"<predicate_name>|unknown\",\"holds\":true|false|null,\"args\":[\"entity_or_target\", ...]}",
+      "expected_response": {
+        "predicate": "is_open",
+        "holds": true,
+        "args": [
+          "chest_of_drawers_30"
+        ]
+      },
+      "depth": 2,
+      "owner": null,
+      "supported": true,
+      "unsupported_reason": null
+    },
+    {
+      "probe_id": "k_probe_2",
+      "agent_id": "agent_2",
+      "subject_agents": [],
+      "fact_pddl": "(is_open chest_of_drawers_30)",
+      "fact_natural_language": "chest of drawers 30 is open",
+      "source_pddl": "(K agent_2 (is_open chest_of_drawers_30))",
+      "question": "Probe 2: agent_2 knows a fact about ordered entities [chest_of_drawers_30]. Report which benchmark predicate applies to those entities and whether it holds. The expected argument order is fixed as listed. If unknown, return predicate \"unknown\" and holds null. JSON shape: {\"probe_id\":\"k_probe_X\",\"predicate\":\"<predicate_name>|unknown\",\"holds\":true|false|null,\"args\":[\"entity_or_target\", ...]}",
+      "expected_response": {
+        "predicate": "is_open",
+        "holds": true,
+        "args": [
+          "chest_of_drawers_30"
+        ]
+      },
+      "depth": 1,
+      "owner": null,
+      "supported": true,
+      "unsupported_reason": null
+    }
+  ],
+  "epistemic_conjuncts_removed": 1,
+  "runtime_projection_valid": true,
+  "runtime_projection_errors": [],
+  "tom_level_method": "syntactic_fallback",
+  "golden_trajectory": [
+    {
+      "actions": [
+        {
+          "agent": "agent_0",
+          "action": "Navigate[dining_room_1]"
+        },
+        {
+          "agent": "agent_1",
+          "action": "Navigate[glass_2]"
+        },
+        {
+          "agent": "agent_2",
+          "action": "Wait[]"
+        }
+      ]
+    },
+    {
+      "actions": [
+        {
+          "agent": "agent_0",
+          "action": "Navigate[vase_1]"
+        },
+        {
+          "agent": "agent_1",
+          "action": "Pick[glass_2]"
+        },
+        {
+          "agent": "agent_2",
+          "action": "Wait[]"
+        }
+      ]
+    },
+    {
+      "actions": [
+        {
+          "agent": "agent_0",
+          "action": "Pick[vase_1]"
+        },
+        {
+          "agent": "agent_1",
+          "action": "Navigate[chest_of_drawers_30]"
+        },
+        {
+          "agent": "agent_2",
+          "action": "Wait[]"
+        }
+      ]
+    },
+    {
+      "actions": [
+        {
+          "agent": "agent_0",
+          "action": "Navigate[kitchen_1]"
+        },
+        {
+          "agent": "agent_1",
+          "action": "Open[chest_of_drawers_30]"
+        },
+        {
+          "agent": "agent_2",
+          "action": "Wait[]"
+        }
+      ]
+    },
+    {
+      "actions": [
+        {
+          "agent": "agent_0",
+          "action": "Navigate[picture_frame_0]"
+        },
+        {
+          "agent": "agent_1",
+          "action": "Navigate[laundryroom_1]"
+        },
+        {
+          "agent": "agent_2",
+          "action": "Wait[]"
+        }
+      ]
+    },
+    {
+      "actions": [
+        {
+          "agent": "agent_0",
+          "action": "Pick[picture_frame_0]"
+        },
+        {
+          "agent": "agent_1",
+          "action": "Navigate[table_22]"
+        },
+        {
+          "agent": "agent_2",
+          "action": "Wait[]"
+        }
+      ]
+    },
+    {
+      "actions": [
+        {
+          "agent": "agent_0",
+          "action": "Navigate[dining_room_1]"
+        },
+        {
+          "agent": "agent_1",
+          "action": "Place[glass_2, on, table_22, None, None]"
+        },
+        {
+          "agent": "agent_2",
+          "action": "Wait[]"
+        }
+      ]
+    },
+    {
+      "actions": [
+        {
+          "agent": "agent_0",
+          "action": "Navigate[counter_25]"
+        },
+        {
+          "agent": "agent_1",
+          "action": "Wait[]"
+        },
+        {
+          "agent": "agent_2",
+          "action": "Wait[]"
+        }
+      ]
+    },
+    {
+      "actions": [
+        {
+          "agent": "agent_0",
+          "action": "Place[picture_frame_0, on, counter_25, None, None]"
+        },
+        {
+          "agent": "agent_1",
+          "action": "Wait[]"
+        },
+        {
+          "agent": "agent_2",
+          "action": "Wait[]"
+        }
+      ]
+    },
+    {
+      "actions": [
+        {
+          "agent": "agent_0",
+          "action": "Navigate[living_room_1]"
+        },
+        {
+          "agent": "agent_1",
+          "action": "Wait[]"
+        },
+        {
+          "agent": "agent_2",
+          "action": "Wait[]"
+        }
+      ]
+    },
+    {
+      "actions": [
+        {
+          "agent": "agent_0",
+          "action": "Navigate[table_12]"
+        },
+        {
+          "agent": "agent_1",
+          "action": "Wait[]"
+        },
+        {
+          "agent": "agent_2",
+          "action": "Wait[]"
+        }
+      ]
+    },
+    {
+      "actions": [
+        {
+          "agent": "agent_0",
+          "action": "Place[vase_1, on, table_12, None, None]"
+        },
+        {
+          "agent": "agent_1",
+          "action": "Wait[]"
+        },
+        {
+          "agent": "agent_2",
+          "action": "Wait[]"
+        }
+      ]
+    }
+  ],
+  "golden_trajectory_metadata": {
+    "planner": "strict_fd_translator",
+    "planner_version": "v7_parallel_runtime",
+    "source": "cli_verify",
+    "spec_hash": "f2c49c54b12a633757560f7f3bbe929c66d844e9b21a0753bc9e6d17353d26ee",
+    "trajectory_hash": "34f1e06552caf1a3250b56348c640e3cc6c8efb109dd5462b00b08cc4ca6f9e7",
+    "generated_at": "2026-08-27T02:08:04.950364",
+    "num_steps": 12,
+    "communication_derived": false,
+    "ignored_epistemic_steps": 0,
+    "functional_goal_pddl": "(and (is_on_top glass_2 table_22) (is_on_top vase_1 table_12) (is_on_top picture_frame_0 counter_25) (is_open chest_of_drawers_30))",
+    "planned_literals": [
+      "(is_on_top glass_2 table_22)",
+      "(is_on_top picture_frame_0 counter_25)",
+      "(is_on_top vase_1 table_12)",
+      "(is_open chest_of_drawers_30)"
+    ],
+    "ignored_literals": [],
+    "planner_notes": [
+      "Deterministic golden trajectory derived from strict Fast Downward plan.",
+      "Translated 12 planner step(s) into 12 golden step(s).",
+      "Runtime golden semantics removed 1 epistemic conjunct(s)."
+    ]
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "paired": {
+    "flash": {
+      "both_correct": 301,
+      "ssc_only": 138,
+      "direct_only": 74,
+      "both_wrong": 87,
+      "net_gain": 64
+    },
+    "pro": {
+      "both_correct": 322,
+      "ssc_only": 148,
+      "direct_only": 84,
+      "both_wrong": 46,
+      "net_gain": 64
+    }
+  },
+  "complete_code_identity": {
+    "spatial_raw": {
+      "compared": 599,
+      "identical": 0
+    },
+    "spatial_code": {
+      "compared": 599,
+      "identical": 0
+    },
+    "social_code": {
+      "compared": 599,
+      "identical": 0
+    }
+  },
+  "interpretation": "Equal net gain is not equal outcomes. No identical full spatial/social program among the 599 completed pairs. This does not authenticate provider weights."
+}

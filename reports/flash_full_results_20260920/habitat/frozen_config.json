@@ -1,0 +1,928 @@
+{
+  "protocol": "qdd_flash_habitat12x3seeds_DTC_v1",
+  "root": "${PROJECT_ROOT}",
+  "source": "${PROJECT_ROOT}/workdirs/qdd_four_env_20260917/habitat108_v2/source",
+  "scope": "existing previously inspected12-task development suite; not full official EnactToM corpus",
+  "model": "gemini-3-flash-preview",
+  "base_url": "https://api2.aigcbest.top/v1",
+  "reported_model": "gemini-3-flash-preview",
+  "conditions": [
+    "direct",
+    "static_ssc",
+    "dynamic_ssc"
+  ],
+  "seeds": [
+    891011,
+    891012,
+    891013
+  ],
+  "jobs": [
+    {
+      "task": "${PROJECT_ROOT}/workdirs/qdd_four_env_20260917/habitat108_v2/source/tasks/standard_108294897_176710602_1566.json",
+      "condition": "direct",
+      "seed": 891011
+    },
+    {
+      "task": "${PROJECT_ROOT}/workdirs/qdd_four_env_20260917/habitat108_v2/source/tasks/standard_108294897_176710602_1566.json",
+      "condition": "static_ssc",
+      "seed": 891011
+    },
+    {
+      "task": "${PROJECT_ROOT}/workdirs/qdd_four_env_20260917/habitat108_v2/source/tasks/standard_108294897_176710602_1566.json",
+      "condition": "dynamic_ssc",
+      "seed": 891011
+    },
+    {
+      "task": "${PROJECT_ROOT}/workdirs/qdd_four_env_20260917/habitat108_v2/source/tasks/hard_104348082_171512994_1781.json",
+      "condition": "direct",
+      "seed": 891011
+    },
+    {
+      "task": "${PROJECT_ROOT}/workdirs/qdd_four_env_20260917/habitat108_v2/source/tasks/hard_104348082_171512994_1781.json",
+      "condition": "static_ssc",
+      "seed": 891011
+    },
+    {
+      "task": "${PROJECT_ROOT}/workdirs/qdd_four_env_20260917/habitat108_v2/source/tasks/hard_104348082_171512994_1781.json",
+      "condition": "dynamic_ssc",
+      "seed": 891011
+    },
+    {
+      "task": "${PROJECT_ROOT}/workdirs/qdd_four_env_20260917/habitat108_v2/source/tasks/hard_104862639_172226823_1013.json",
+      "condition": "direct",
+      "seed": 891011
+    },
+    {
+      "task": "${PROJECT_ROOT}/workdirs/qdd_four_env_20260917/habitat108_v2/source/tasks/hard_104862639_172226823_1013.json",
+      "condition": "static_ssc",
+      "seed": 891011
+    },
+    {
+      "task": "${PROJECT_ROOT}/workdirs/qdd_four_env_20260917/habitat108_v2/source/tasks/hard_104862639_172226823_1013.json",
+      "condition": "dynamic_ssc",
+      "seed": 891011
+    },
+    {
+      "task": "${PROJECT_ROOT}/workdirs/qdd_four_env_20260917/habitat108_v2/source/tasks/hard_104862639_172226823_623.json",
+      "condition": "direct",
+      "seed": 891011
+    },
+    {
+      "task": "${PROJECT_ROOT}/workdirs/qdd_four_env_20260917/habitat108_v2/source/tasks/hard_104862639_172226823_623.json",
+      "condition": "static_ssc",
+      "seed": 891011
+    },
+    {
+      "task": "${PROJECT_ROOT}/workdirs/qdd_four_env_20260917/habitat108_v2/source/tasks/hard_104862639_172226823_623.json",
+      "condition": "dynamic_ssc",
+      "seed": 891011
+    },
+    {
+      "task": "${PROJECT_ROOT}/workdirs/qdd_four_env_20260917/habitat108_v2/source/tasks/hard_107734479_176000442_744.json",
+      "condition": "direct",
+      "seed": 891011
+    },
+    {
+      "task": "${PROJECT_ROOT}/workdirs/qdd_four_env_20260917/habitat108_v2/source/tasks/hard_107734479_176000442_744.json",
+      "condition": "static_ssc",
+      "seed": 891011
+    },
+    {
+      "task": "${PROJECT_ROOT}/workdirs/qdd_four_env_20260917/habitat108_v2/source/tasks/hard_107734479_176000442_744.json",
+      "condition": "dynamic_ssc",
+      "seed": 891011
+    },
+    {
+      "task": "${PROJECT_ROOT}/workdirs/qdd_four_env_20260917/habitat108_v2/source/tasks/hard_108294897_176710602_1166.json",
+      "condition": "direct",
+      "seed": 891011
+    },
+    {
+      "task": "${PROJECT_ROOT}/workdirs/qdd_four_env_20260917/habitat108_v2/source/tasks/hard_108294897_176710602_1166.json",
+      "condition": "static_ssc",
+      "seed": 891011
+    },
+    {
+      "task": "${PROJECT_ROOT}/workdirs/qdd_four_env_20260917/habitat108_v2/source/tasks/hard_108294897_176710602_1166.json",
+      "condition": "dynamic_ssc",
+      "seed": 891011
+    },
+    {
+      "task": "${PROJECT_ROOT}/workdirs/qdd_four_env_20260917/habitat108_v2/source/tasks/hard_108294897_176710602_772.json",
+      "condition": "direct",
+      "seed": 891011
+    },
+    {
+      "task": "${PROJECT_ROOT}/workdirs/qdd_four_env_20260917/habitat108_v2/source/tasks/hard_108294897_176710602_772.json",
+      "condition": "static_ssc",
+      "seed": 891011
+    },
+    {
+      "task": "${PROJECT_ROOT}/workdirs/qdd_four_env_20260917/habitat108_v2/source/tasks/hard_108294897_176710602_772.json",
+      "condition": "dynamic_ssc",
+      "seed": 891011
+    },
+    {
+      "task": "${PROJECT_ROOT}/workdirs/qdd_four_env_20260917/habitat108_v2/source/tasks/standard_104348082_171512994_588.json",
+      "condition": "direct",
+      "seed": 891011
+    },
+    {
+      "task": "${PROJECT_ROOT}/workdirs/qdd_four_env_20260917/habitat108_v2/source/tasks/standard_104348082_171512994_588.json",
+      "condition": "static_ssc",
+      "seed": 891011
+    },
+    {
+      "task": "${PROJECT_ROOT}/workdirs/qdd_four_env_20260917/habitat108_v2/source/tasks/standard_104348082_171512994_588.json",
+      "condition": "dynamic_ssc",
+      "seed": 891011
+    },
+    {
+      "task": "${PROJECT_ROOT}/workdirs/qdd_four_env_20260917/habitat108_v2/source/tasks/standard_104348082_171512994_983.json",
+      "condition": "direct",
+      "seed": 891011
+    },
+    {
+      "task": "${PROJECT_ROOT}/workdirs/qdd_four_env_20260917/habitat108_v2/source/tasks/standard_104348082_171512994_983.json",
+      "condition": "static_ssc",
+      "seed": 891011
+    },
+    {
+      "task": "${PROJECT_ROOT}/workdirs/qdd_four_env_20260917/habitat108_v2/source/tasks/standard_104348082_171512994_983.json",
+      "condition": "dynamic_ssc",
+      "seed": 891011
+    },
+    {
+      "task": "${PROJECT_ROOT}/workdirs/qdd_four_env_20260917/habitat108_v2/source/tasks/standard_104862639_172226823_618.json",
+      "condition": "direct",
+      "seed": 891011
+    },
+    {
+      "task": "${PROJECT_ROOT}/workdirs/qdd_four_env_20260917/habitat108_v2/source/tasks/standard_104862639_172226823_618.json",
+      "condition": "static_ssc",
+      "seed": 891011
+    },
+    {
+      "task": "${PROJECT_ROOT}/workdirs/qdd_four_env_20260917/habitat108_v2/source/tasks/standard_104862639_172226823_618.json",
+      "condition": "dynamic_ssc",
+      "seed": 891011
+    },
+    {
+      "task": "${PROJECT_ROOT}/workdirs/qdd_four_env_20260917/habitat108_v2/source/tasks/standard_104862639_172226823_619.json",
+      "condition": "direct",
+      "seed": 891011
+    },
+    {
+      "task": "${PROJECT_ROOT}/workdirs/qdd_four_env_20260917/habitat108_v2/source/tasks/standard_104862639_172226823_619.json",
+      "condition": "static_ssc",
+      "seed": 891011
+    },
+    {
+      "task": "${PROJECT_ROOT}/workdirs/qdd_four_env_20260917/habitat108_v2/source/tasks/standard_104862639_172226823_619.json",
+      "condition": "dynamic_ssc",
+      "seed": 891011
+    },
+    {
+      "task": "${PROJECT_ROOT}/workdirs/qdd_four_env_20260917/habitat108_v2/source/tasks/standard_107734479_176000442_1526.json",
+      "condition": "direct",
+      "seed": 891011
+    },
+    {
+      "task": "${PROJECT_ROOT}/workdirs/qdd_four_env_20260917/habitat108_v2/source/tasks/standard_107734479_176000442_1526.json",
+      "condition": "static_ssc",
+      "seed": 891011
+    },
+    {
+      "task": "${PROJECT_ROOT}/workdirs/qdd_four_env_20260917/habitat108_v2/source/tasks/standard_107734479_176000442_1526.json",
+      "condition": "dynamic_ssc",
+      "seed": 891011
+    },
+    {
+      "task": "${PROJECT_ROOT}/workdirs/qdd_four_env_20260917/habitat108_v2/source/tasks/standard_108294897_176710602_1566.json",
+      "condition": "direct",
+      "seed": 891012
+    },
+    {
+      "task": "${PROJECT_ROOT}/workdirs/qdd_four_env_20260917/habitat108_v2/source/tasks/standard_108294897_176710602_1566.json",
+      "condition": "static_ssc",
+      "seed": 891012
+    },
+    {
+      "task": "${PROJECT_ROOT}/workdirs/qdd_four_env_20260917/habitat108_v2/source/tasks/standard_108294897_176710602_1566.json",
+      "condition": "dynamic_ssc",
+      "seed": 891012
+    },
+    {
+      "task": "${PROJECT_ROOT}/workdirs/qdd_four_env_20260917/habitat108_v2/source/tasks/hard_104348082_171512994_1781.json",
+      "condition": "direct",
+      "seed": 891012
+    },
+    {
+      "task": "${PROJECT_ROOT}/workdirs/qdd_four_env_20260917/habitat108_v2/source/tasks/hard_104348082_171512994_1781.json",
+      "condition": "static_ssc",
+      "seed": 891012
+    },
+    {
+      "task": "${PROJECT_ROOT}/workdirs/qdd_four_env_20260917/habitat108_v2/source/tasks/hard_104348082_171512994_1781.json",
+      "condition": "dynamic_ssc",
+      "seed": 891012
+    },
+    {
+      "task": "${PROJECT_ROOT}/workdirs/qdd_four_env_20260917/habitat108_v2/source/tasks/hard_104862639_172226823_1013.json",
+      "condition": "direct",
+      "seed": 891012
+    },
+    {
+      "task": "${PROJECT_ROOT}/workdirs/qdd_four_env_20260917/habitat108_v2/source/tasks/hard_104862639_172226823_1013.json",
+      "condition": "static_ssc",
+      "seed": 891012
+    },
+    {
+      "task": "${PROJECT_ROOT}/workdirs/qdd_four_env_20260917/habitat108_v2/source/tasks/hard_104862639_172226823_1013.json",
+      "condition": "dynamic_ssc",
+      "seed": 891012
+    },
+    {
+      "task": "${PROJECT_ROOT}/workdirs/qdd_four_env_20260917/habitat108_v2/source/tasks/hard_104862639_172226823_623.json",
+      "condition": "direct",
+      "seed": 891012
+    },
+    {
+      "task": "${PROJECT_ROOT}/workdirs/qdd_four_env_20260917/habitat108_v2/source/tasks/hard_104862639_172226823_623.json",
+      "condition": "static_ssc",
+      "seed": 891012
+    },
+    {
+      "task": "${PROJECT_ROOT}/workdirs/qdd_four_env_20260917/habitat108_v2/source/tasks/hard_104862639_172226823_623.json",
+      "condition": "dynamic_ssc",
+      "seed": 891012
+    },
+    {
+      "task": "${PROJECT_ROOT}/workdirs/qdd_four_env_20260917/habitat108_v2/source/tasks/hard_107734479_176000442_744.json",
+      "condition": "direct",
+      "seed": 891012
+    },
+    {
+      "task": "${PROJECT_ROOT}/workdirs/qdd_four_env_20260917/habitat108_v2/source/tasks/hard_107734479_176000442_744.json",
+      "condition": "static_ssc",
+      "seed": 891012
+    },
+    {
+      "task": "${PROJECT_ROOT}/workdirs/qdd_four_env_20260917/habitat108_v2/source/tasks/hard_107734479_176000442_744.json",
+      "condition": "dynamic_ssc",
+      "seed": 891012
+    },
+    {
+      "task": "${PROJECT_ROOT}/workdirs/qdd_four_env_20260917/habitat108_v2/source/tasks/hard_108294897_176710602_1166.json",
+      "condition": "direct",
+      "seed": 891012
+    },
+    {
+      "task": "${PROJECT_ROOT}/workdirs/qdd_four_env_20260917/habitat108_v2/source/tasks/hard_108294897_176710602_1166.json",
+      "condition": "static_ssc",
+      "seed": 891012
+    },
+    {
+      "task": "${PROJECT_ROOT}/workdirs/qdd_four_env_20260917/habitat108_v2/source/tasks/hard_108294897_176710602_1166.json",
+      "condition": "dynamic_ssc",
+      "seed": 891012
+    },
+    {
+      "task": "${PROJECT_ROOT}/workdirs/qdd_four_env_20260917/habitat108_v2/source/tasks/hard_108294897_176710602_772.json",
+      "condition": "direct",
+      "seed": 891012
+    },
+    {
+      "task": "${PROJECT_ROOT}/workdirs/qdd_four_env_20260917/habitat108_v2/source/tasks/hard_108294897_176710602_772.json",
+      "condition": "static_ssc",
+      "seed": 891012
+    },
+    {
+      "task": "${PROJECT_ROOT}/workdirs/qdd_four_env_20260917/habitat108_v2/source/tasks/hard_108294897_176710602_772.json",
+      "condition": "dynamic_ssc",
+      "seed": 891012
+    },
+    {
+      "task": "${PROJECT_ROOT}/workdirs/qdd_four_env_20260917/habitat108_v2/source/tasks/standard_104348082_171512994_588.json",
+      "condition": "direct",
+      "seed": 891012
+    },
+    {
+      "task": "${PROJECT_ROOT}/workdirs/qdd_four_env_20260917/habitat108_v2/source/tasks/standard_104348082_171512994_588.json",
+      "condition": "static_ssc",
+      "seed": 891012
+    },
+    {
+      "task": "${PROJECT_ROOT}/workdirs/qdd_four_env_20260917/habitat108_v2/source/tasks/standard_104348082_171512994_588.json",
+      "condition": "dynamic_ssc",
+      "seed": 891012
+    },
+    {
+      "task": "${PROJECT_ROOT}/workdirs/qdd_four_env_20260917/habitat108_v2/source/tasks/standard_104348082_171512994_983.json",
+      "condition": "direct",
+      "seed": 891012
+    },
+    {
+      "task": "${PROJECT_ROOT}/workdirs/qdd_four_env_20260917/habitat108_v2/source/tasks/standard_104348082_171512994_983.json",
+      "condition": "static_ssc",
+      "seed": 891012
+    },
+    {
+      "task": "${PROJECT_ROOT}/workdirs/qdd_four_env_20260917/habitat108_v2/source/tasks/standard_104348082_171512994_983.json",
+      "condition": "dynamic_ssc",
+      "seed": 891012
+    },
+    {
+      "task": "${PROJECT_ROOT}/workdirs/qdd_four_env_20260917/habitat108_v2/source/tasks/standard_104862639_172226823_618.json",
+      "condition": "direct",
+      "seed": 891012
+    },
+    {
+      "task": "${PROJECT_ROOT}/workdirs/qdd_four_env_20260917/habitat108_v2/source/tasks/standard_104862639_172226823_618.json",
+      "condition": "static_ssc",
+      "seed": 891012
+    },
+    {
+      "task": "${PROJECT_ROOT}/workdirs/qdd_four_env_20260917/habitat108_v2/source/tasks/standard_104862639_172226823_618.json",
+      "condition": "dynamic_ssc",
+      "seed": 891012
+    },
+    {
+      "task": "${PROJECT_ROOT}/workdirs/qdd_four_env_20260917/habitat108_v2/source/tasks/standard_104862639_172226823_619.json",
+      "condition": "direct",
+      "seed": 891012
+    },
+    {
+      "task": "${PROJECT_ROOT}/workdirs/qdd_four_env_20260917/habitat108_v2/source/tasks/standard_104862639_172226823_619.json",
+      "condition": "static_ssc",
+      "seed": 891012
+    },
+    {
+      "task": "${PROJECT_ROOT}/workdirs/qdd_four_env_20260917/habitat108_v2/source/tasks/standard_104862639_172226823_619.json",
+      "condition": "dynamic_ssc",
+      "seed": 891012
+    },
+    {
+      "task": "${PROJECT_ROOT}/workdirs/qdd_four_env_20260917/habitat108_v2/source/tasks/standard_107734479_176000442_1526.json",
+      "condition": "direct",
+      "seed": 891012
+    },
+    {
+      "task": "${PROJECT_ROOT}/workdirs/qdd_four_env_20260917/habitat108_v2/source/tasks/standard_107734479_176000442_1526.json",
+      "condition": "static_ssc",
+      "seed": 891012
+    },
+    {
+      "task": "${PROJECT_ROOT}/workdirs/qdd_four_env_20260917/habitat108_v2/source/tasks/standard_107734479_176000442_1526.json",
+      "condition": "dynamic_ssc",
+      "seed": 891012
+    },
+    {
+      "task": "${PROJECT_ROOT}/workdirs/qdd_four_env_20260917/habitat108_v2/source/tasks/standard_108294897_176710602_1566.json",
+      "condition": "direct",
+      "seed": 891013
+    },
+    {
+      "task": "${PROJECT_ROOT}/workdirs/qdd_four_env_20260917/habitat108_v2/source/tasks/standard_108294897_176710602_1566.json",
+      "condition": "static_ssc",
+      "seed": 891013
+    },
+    {
+      "task": "${PROJECT_ROOT}/workdirs/qdd_four_env_20260917/habitat108_v2/source/tasks/standard_108294897_176710602_1566.json",
+      "condition": "dynamic_ssc",
+      "seed": 891013
+    },
+    {
+      "task": "${PROJECT_ROOT}/workdirs/qdd_four_env_20260917/habitat108_v2/source/tasks/hard_104348082_171512994_1781.json",
+      "condition": "direct",
+      "seed": 891013
+    },
+    {
+      "task": "${PROJECT_ROOT}/workdirs/qdd_four_env_20260917/habitat108_v2/source/tasks/hard_104348082_171512994_1781.json",
+      "condition": "static_ssc",
+      "seed": 891013
+    },
+    {
+      "task": "${PROJECT_ROOT}/workdirs/qdd_four_env_20260917/habitat108_v2/source/tasks/hard_104348082_171512994_1781.json",
+      "condition": "dynamic_ssc",
+      "seed": 891013
+    },
+    {
+      "task": "${PROJECT_ROOT}/workdirs/qdd_four_env_20260917/habitat108_v2/source/tasks/hard_104862639_172226823_1013.json",
+      "condition": "direct",
+      "seed": 891013
+    },
+    {
+      "task": "${PROJECT_ROOT}/workdirs/qdd_four_env_20260917/habitat108_v2/source/tasks/hard_104862639_172226823_1013.json",
+      "condition": "static_ssc",
+      "seed": 891013
+    },
+    {
+      "task": "${PROJECT_ROOT}/workdirs/qdd_four_env_20260917/habitat108_v2/source/tasks/hard_104862639_172226823_1013.json",
+      "condition": "dynamic_ssc",
+      "seed": 891013
+    },
+    {
+      "task": "${PROJECT_ROOT}/workdirs/qdd_four_env_20260917/habitat108_v2/source/tasks/hard_104862639_172226823_623.json",
+      "condition": "direct",
+      "seed": 891013
+    },
+    {
+      "task": "${PROJECT_ROOT}/workdirs/qdd_four_env_20260917/habitat108_v2/source/tasks/hard_104862639_172226823_623.json",
+      "condition": "static_ssc",
+      "seed": 891013
+    },
+    {
+      "task": "${PROJECT_ROOT}/workdirs/qdd_four_env_20260917/habitat108_v2/source/tasks/hard_104862639_172226823_623.json",
+      "condition": "dynamic_ssc",
+      "seed": 891013
+    },
+    {
+      "task": "${PROJECT_ROOT}/workdirs/qdd_four_env_20260917/habitat108_v2/source/tasks/hard_107734479_176000442_744.json",
+      "condition": "direct",
+      "seed": 891013
+    },
+    {
+      "task": "${PROJECT_ROOT}/workdirs/qdd_four_env_20260917/habitat108_v2/source/tasks/hard_107734479_176000442_744.json",
+      "condition": "static_ssc",
+      "seed": 891013
+    },
+    {
+      "task": "${PROJECT_ROOT}/workdirs/qdd_four_env_20260917/habitat108_v2/source/tasks/hard_107734479_176000442_744.json",
+      "condition": "dynamic_ssc",
+      "seed": 891013
+    },
+    {
+      "task": "${PROJECT_ROOT}/workdirs/qdd_four_env_20260917/habitat108_v2/source/tasks/hard_108294897_176710602_1166.json",
+      "condition": "direct",
+      "seed": 891013
+    },
+    {
+      "task": "${PROJECT_ROOT}/workdirs/qdd_four_env_20260917/habitat108_v2/source/tasks/hard_108294897_176710602_1166.json",
+      "condition": "static_ssc",
+      "seed": 891013
+    },
+    {
+      "task": "${PROJECT_ROOT}/workdirs/qdd_four_env_20260917/habitat108_v2/source/tasks/hard_108294897_176710602_1166.json",
+      "condition": "dynamic_ssc",
+      "seed": 891013
+    },
+    {
+      "task": "${PROJECT_ROOT}/workdirs/qdd_four_env_20260917/habitat108_v2/source/tasks/hard_108294897_176710602_772.json",
+      "condition": "direct",
+      "seed": 891013
+    },
+    {
+      "task": "${PROJECT_ROOT}/workdirs/qdd_four_env_20260917/habitat108_v2/source/tasks/hard_108294897_176710602_772.json",
+      "condition": "static_ssc",
+      "seed": 891013
+    },
+    {
+      "task": "${PROJECT_ROOT}/workdirs/qdd_four_env_20260917/habitat108_v2/source/tasks/hard_108294897_176710602_772.json",
+      "condition": "dynamic_ssc",
+      "seed": 891013
+    },
+    {
+      "task": "${PROJECT_ROOT}/workdirs/qdd_four_env_20260917/habitat108_v2/source/tasks/standard_104348082_171512994_588.json",
+      "condition": "direct",
+      "seed": 891013
+    },
+    {
+      "task": "${PROJECT_ROOT}/workdirs/qdd_four_env_20260917/habitat108_v2/source/tasks/standard_104348082_171512994_588.json",
+      "condition": "static_ssc",
+      "seed": 891013
+    },
+    {
+      "task": "${PROJECT_ROOT}/workdirs/qdd_four_env_20260917/habitat108_v2/source/tasks/standard_104348082_171512994_588.json",
+      "condition": "dynamic_ssc",
+      "seed": 891013
+    },
+    {
+      "task": "${PROJECT_ROOT}/workdirs/qdd_four_env_20260917/habitat108_v2/source/tasks/standard_104348082_171512994_983.json",
+      "condition": "direct",
+      "seed": 891013
+    },
+    {
+      "task": "${PROJECT_ROOT}/workdirs/qdd_four_env_20260917/habitat108_v2/source/tasks/standard_104348082_171512994_983.json",
+      "condition": "static_ssc",
+      "seed": 891013
+    },
+    {
+      "task": "${PROJECT_ROOT}/workdirs/qdd_four_env_20260917/habitat108_v2/source/tasks/standard_104348082_171512994_983.json",
+      "condition": "dynamic_ssc",
+      "seed": 891013
+    },
+    {
+      "task": "${PROJECT_ROOT}/workdirs/qdd_four_env_20260917/habitat108_v2/source/tasks/standard_104862639_172226823_618.json",
+      "condition": "direct",
+      "seed": 891013
+    },
+    {
+      "task": "${PROJECT_ROOT}/workdirs/qdd_four_env_20260917/habitat108_v2/source/tasks/standard_104862639_172226823_618.json",
+      "condition": "static_ssc",
+      "seed": 891013
+    },
+    {
+      "task": "${PROJECT_ROOT}/workdirs/qdd_four_env_20260917/habitat108_v2/source/tasks/standard_104862639_172226823_618.json",
+      "condition": "dynamic_ssc",
+      "seed": 891013
+    },
+    {
+      "task": "${PROJECT_ROOT}/workdirs/qdd_four_env_20260917/habitat108_v2/source/tasks/standard_104862639_172226823_619.json",
+      "condition": "direct",
+      "seed": 891013
+    },
+    {
+      "task": "${PROJECT_ROOT}/workdirs/qdd_four_env_20260917/habitat108_v2/source/tasks/standard_104862639_172226823_619.json",
+      "condition": "static_ssc",
+      "seed": 891013
+    },
+    {
+      "task": "${PROJECT_ROOT}/workdirs/qdd_four_env_20260917/habitat108_v2/source/tasks/standard_104862639_172226823_619.json",
+      "condition": "dynamic_ssc",
+      "seed": 891013
+    },
+    {
+      "task": "${PROJECT_ROOT}/workdirs/qdd_four_env_20260917/habitat108_v2/source/tasks/standard_107734479_176000442_1526.json",
+      "condition": "direct",
+      "seed": 891013
+    },
+    {
+      "task": "${PROJECT_ROOT}/workdirs/qdd_four_env_20260917/habitat108_v2/source/tasks/standard_107734479_176000442_1526.json",
+      "condition": "static_ssc",
+      "seed": 891013
+    },
+    {
+      "task": "${PROJECT_ROOT}/workdirs/qdd_four_env_20260917/habitat108_v2/source/tasks/standard_107734479_176000442_1526.json",
+      "condition": "dynamic_ssc",
+      "seed": 891013
+    }
+  ],
+  "rollouts": 108,
+  "max_environment_turns": 20,
+  "observation_mode": "text",
+  "state_variant": "v2",
+  "reasoning_effort": "low",
+  "max_tokens_per_call": 8192,
+  "timeout_seconds_per_rollout": 3600,
+  "baseline_reuse": false,
+  "oracle": false,
+  "budget_note": "20 is environment turns, not total API calls; costs differ by condition",
+  "source_hashes": {
+    "tests/test_qdd_habitat.py": "7e2d015fe366bd74880beb7814cb5094aecebbe285d10d369765e6d8a1f8e180",
+    "external/EnactTom/habitat_llm/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "external/EnactTom/habitat_llm/agent/__init__.py": "aabb40e558b56a8d8ccce2bd7deca076da93074b3a72ae6c9a5d7641753ac816",
+    "external/EnactTom/habitat_llm/agent/agent.py": "d544f39ef020ceeb33e1d7ed6ef29ddcb348103d7b20dccbfb7e352e2834381c",
+    "external/EnactTom/habitat_llm/agent/env/environment_interface.py": "0d227a523d86e67dd029ddc1ad449213889f441d0b7cafaa5a8f609d326a8c55",
+    "external/EnactTom/habitat_llm/agent/env/actions.py": "21129bf31169dd8acaca945fa21b16f166bd4a7318fafebb3b0c83973c296f00",
+    "external/EnactTom/habitat_llm/agent/env/__init__.py": "0ec76e13e9e904da16d35bc3890656b5b45e5a1f4791f3006cb8a663537a914b",
+    "external/EnactTom/habitat_llm/agent/env/sensors.py": "cec454b542b3f98e6b84d61322d739ec81fa55be37bbd39c684fb3afa8f2f2fb",
+    "external/EnactTom/habitat_llm/agent/env/measures.py": "7c63b2c45cd5891ecfd265e52d1fe496bb6110fa2401abd85ce312438a2f064e",
+    "external/EnactTom/habitat_llm/agent/env/dataset.py": "1dac7aa6b652a11fb3800415b4f465f0ee119f9980e00cacf4d198c53e2ff538",
+    "external/EnactTom/habitat_llm/agent/env/evaluation/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "external/EnactTom/habitat_llm/agent/env/evaluation/failure_explanations.py": "0f436f9ae49bb48256719b83543def8943539c226d64b6a6e5199b4f75dc6640",
+    "external/EnactTom/habitat_llm/agent/env/evaluation/predicate_wrappers.py": "fdb0b78043d7d2335d78a8071e574f4360f19087e428d7f3ce75927befca40af",
+    "external/EnactTom/habitat_llm/agent/env/evaluation/evaluation_functions.py": "f1b62ec89bc41fef1b1f711dd9ea4b5f0c1650df8f4e5a85540dbdbaa05175d9",
+    "external/EnactTom/habitat_llm/conf/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "external/EnactTom/habitat_llm/conf/agent/oracle_rearrange_agent.yaml": "4bc9be2230f0f28974f9519a38390ed3bb91dc250d2234dfc021a82561afc132",
+    "external/EnactTom/habitat_llm/conf/hydra/output/output.yaml": "94b25598589c57b80bf2916a9c05ac66863681eac3acbad2d58e86e138166d66",
+    "external/EnactTom/habitat_llm/conf/tools/motor_skills/oracle_pick.yaml": "f9caf59c9d6ae86f3dbe8c396b493fe79798da9aecbeaea98576138c1896be68",
+    "external/EnactTom/habitat_llm/conf/tools/motor_skills/oracle_open.yaml": "6055e28c8de20ad6253a819aa2feb49eda31cc38d15b58c31f92ee1d865f4f7b",
+    "external/EnactTom/habitat_llm/conf/tools/motor_skills/oracle_place.yaml": "a04e9495e3952559d42c5b55ea97fe23b33c1ccd01eaeecbe384395a5a187840",
+    "external/EnactTom/habitat_llm/conf/tools/motor_skills/oracle_nav.yaml": "13575c76022bbed3b87e93ccc3ef889684d941a77c7d9ccebd53246fde0e0d67",
+    "external/EnactTom/habitat_llm/conf/tools/motor_skills/wait.yaml": "42b652a05dcf2ef3e0ed160641847b69156efb252f1fbab71453b28433b7443b",
+    "external/EnactTom/habitat_llm/conf/tools/motor_skills/oracle_rearrange.yaml": "1722d12c3b03aa825fc299defcf6629698e391819aba4ad8ec967d74073c7809",
+    "external/EnactTom/habitat_llm/conf/tools/motor_skills/oracle_close.yaml": "cfa8b2f4b76260530141b9bfae86ac179a6b8d54391dc0a5eb04450e510d438c",
+    "external/EnactTom/habitat_llm/conf/tools/perception/find_object_tool.yaml": "a3e8fd89bf3b1f75c327eb60e670c9ec7818d2a95c00a12d1b07ac690a7e432e",
+    "external/EnactTom/habitat_llm/conf/tools/perception/communication_tool.yaml": "c355c84d9530d1c6380dadd515b210337141067d323f4c862eb1077bf2605bf8",
+    "external/EnactTom/habitat_llm/conf/tools/perception/find_agent_action_tool.yaml": "e071be7aff7d2704f3f0559c0ff4359bfc0b89b3cdbbf6b8636000036117090a",
+    "external/EnactTom/habitat_llm/conf/tools/perception/find_room_tool.yaml": "ceca99ec43cd769d6e84133a74c212633766b8e02089a106172a70ea245e8892",
+    "external/EnactTom/habitat_llm/conf/tools/perception/find_receptacle_tool.yaml": "85e1aa3f22b2c332145138ebf4ded0b56b2209149d40b543a90a004f7143fdb9",
+    "external/EnactTom/habitat_llm/conf/instruct/enacttom_agent.yaml": "e1993b067a9d3cb4c74e4de868926741122297bb0514ae0c287c909b68a5d6c8",
+    "external/EnactTom/habitat_llm/conf/instruct/enacttom_frame_selector.yaml": "c84afe0a2a56041ae711ecb9371461e7447a21f27657c6c1587d1b25bbbd9871",
+    "external/EnactTom/habitat_llm/conf/instruct/enacttom_no_visual.yaml": "bb3ec06eb1f2fae544ca5a92b7caeca1527f07c113f53db14b70c4e5aed305ba",
+    "external/EnactTom/habitat_llm/conf/trajectory/trajectory_logger.yaml": "fd4eac4b4ab1b20f5a67cf28db992d5ae89d8720c3e351990ade5a9bbc084b83",
+    "external/EnactTom/habitat_llm/conf/world_model/gt_graph.yaml": "52d6c65592dfe613cedaadf7c0505bc23b5d7cf3b3a0489b215eeddad24f3e5a",
+    "external/EnactTom/habitat_llm/conf/logging/logging_defaults.yaml": "1169ce0e197da74a6df0169dc9afa41e0da4770ec29f7a670a91cf03d81f507a",
+    "external/EnactTom/habitat_llm/conf/habitat_conf/enacttom_spot_multi_agent_3.yaml": "18e6676091abdd8638c2ded0ce5a8903cf7934c0f9e338299c705b73ddc18802",
+    "external/EnactTom/habitat_llm/conf/habitat_conf/enacttom_spot_multi_agent_4.yaml": "19fbf2a103526bf61bc2a611f96792a832eb95eb1748ac398f001e5568d0625d",
+    "external/EnactTom/habitat_llm/conf/habitat_conf/enacttom_oracle_spot_kinematic_multi_agent_sym.yaml": "4e82998301060e1ec74001155020ed84f2be1c6e5cfb4fd6287726ba96cb1098",
+    "external/EnactTom/habitat_llm/conf/habitat_conf/dataset/enacttom_hssd.yaml": "0eb50e86369e95430f4da895c6cac242eb704cf15afde8a91af528e04f1d6c00",
+    "external/EnactTom/habitat_llm/conf/habitat_conf/task/rearrange_easy_multi_agent_4.yaml": "f65771e03dfcc8af6f1db18b3b4a79282c5182431edeafa9f50c1b98f13f319d",
+    "external/EnactTom/habitat_llm/conf/habitat_conf/task/rearrange_easy_multi_agent_3.yaml": "bf90e51adf625ed98868baa075eb4a4fd7be6277ea691f0588bec3e27d263d25",
+    "external/EnactTom/habitat_llm/conf/habitat_conf/task/rearrange_easy_multi_agent.yaml": "1c4819227786a46b5b2627d4798b473b5bf4c01d437c20c3eafbe0eb01122ef8",
+    "external/EnactTom/habitat_llm/conf/habitat_conf/habitat_agent/rgbd_head_rgbd_arm_rgbd_jaw_agent_vis.yaml": "d32bc2d9778da4596cf515840121717003d3fe30eab489b89939f9c99c0114e2",
+    "external/EnactTom/habitat_llm/conf/habitat_conf/habitat_agent/rgbd_head_rgbd_arm_agent_vis.yaml": "921176692c2dae5f15819fe44bc36bbd67ea9cdddae3e37870724f9c4bbfa9ae",
+    "external/EnactTom/habitat_llm/conf/evaluation/decentralized_evaluation_runner_multi_agent_openai.yaml": "3ddea7849ad4557d2c480cd08761ac056336b12640434c4711d36c6e1d4cbc21",
+    "external/EnactTom/habitat_llm/conf/evaluation/decentralized_evaluation_runner_4_agent_openai.yaml": "d1cee4636cd871a639d544a618ebaf96495165f13625fd9aed535830bdc9d834",
+    "external/EnactTom/habitat_llm/conf/evaluation/decentralized_evaluation_runner_3_agent_openai.yaml": "76673727b92c56b1c015b285d0fe634f7bc39c5de9d55d55f61a99415d606fc9",
+    "external/EnactTom/habitat_llm/conf/examples/enacttom_4_robots.yaml": "f18b9086c929eb83fab4ed368cd03b102f11e43e8ac2eb329efc0fcb2258f6a0",
+    "external/EnactTom/habitat_llm/conf/examples/enacttom_2_robots.yaml": "6a29ef44cded236ff3f09587f480a0a5da309a308df4d1a00f913ed18443f531",
+    "external/EnactTom/habitat_llm/conf/examples/enacttom_3_robots.yaml": "fdc40c0dda5bff1b5186d24f1304b6b3e2ef8d242711e58cad03c93f76f2c250",
+    "external/EnactTom/habitat_llm/conf/llm/openai_chat.yaml": "ca9ee235ecfdbb97723437fce172207ec34700558f45c5f5cbccd32c03bff200",
+    "external/EnactTom/habitat_llm/conf/llm/bedrock_claude.yaml": "7271c693bffe0f81de7c38a1e5f5d81d7f83710da184d925d8c4d2b8f631e78a",
+    "external/EnactTom/habitat_llm/conf/llm/anthropic_claude.yaml": "7c45c314ee90a76de014180226f16dac4c2cbf231a2768f550b398decdd73d9c",
+    "external/EnactTom/habitat_llm/conf/planner/llm_planner_openai.yaml": "2e0e9d130bf058ea5998cced91d9e81488e19911ddca2bf21d6a5e11c1477026",
+    "external/EnactTom/habitat_llm/conf/training/base_train.yaml": "ef365bfb275b83443338ef71c2eccd145e2c660e76e44d9bcee953509015fb1f",
+    "external/EnactTom/habitat_llm/tools/prompts.py": "f35f33599b0d2463bbd80e50f9ce25c91374a8d682d773b2dd53dca902f3d026",
+    "external/EnactTom/habitat_llm/tools/__init__.py": "63fcabe8fd5e9dac91b09022458ae5b79e0ff771b894faa0c235d016d643fd96",
+    "external/EnactTom/habitat_llm/tools/tool.py": "9316f98b81bd44c65800cce58cd720e3cad88442d7b652d6d4d09670a1c1800f",
+    "external/EnactTom/habitat_llm/tools/motor_skills/__init__.py": "85a21a2e000917bfa935a76004b4d4e2d62ccc3a9b1bde85d9fdd74e8af9c43c",
+    "external/EnactTom/habitat_llm/tools/motor_skills/skill.py": "5692d70faf59eab1ba3bdd272170667667528edffc89c8875698c88a2372ca99",
+    "external/EnactTom/habitat_llm/tools/motor_skills/motor_skill_tool.py": "58ddfa3e5e6addbb6d5265c972348cdee48c572e3b966de2f580740a7f92af13",
+    "external/EnactTom/habitat_llm/tools/motor_skills/art_obj/oracle_open_close_skill.py": "93e85dbb981d38c8371e0373a92c33642d1c089a7369dac979f4de39aa4c994a",
+    "external/EnactTom/habitat_llm/tools/motor_skills/nav/oracle_nav_skill.py": "96eb99b3a705669b405cf1199e9ea50e350365c66392c2f7f35deb5653efd333",
+    "external/EnactTom/habitat_llm/tools/motor_skills/nav/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "external/EnactTom/habitat_llm/tools/motor_skills/rearrange/oracle_rearrange_skill.py": "cf325b2f6f586e79305e8bee8fd87b924c7b7a0aade907ca79e4d8027cea9de2",
+    "external/EnactTom/habitat_llm/tools/motor_skills/rearrange/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "external/EnactTom/habitat_llm/tools/motor_skills/pick/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "external/EnactTom/habitat_llm/tools/motor_skills/pick/oracle_pick_skill.py": "fa67675121de8e141d8f93976edaec301c0d804ecf3646a53bd66381a29ea081",
+    "external/EnactTom/habitat_llm/tools/motor_skills/wait/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "external/EnactTom/habitat_llm/tools/motor_skills/wait/wait_skill.py": "4fb22e70e1193323e2695ce315a680b9a8814dd18490919ab5e15745a8a0c970",
+    "external/EnactTom/habitat_llm/tools/motor_skills/place/oracle_place_skill.py": "4062fdf18aeba4f516b8d6e3467e49c201a0f21e91dbc598fedc965f6b2a6deb",
+    "external/EnactTom/habitat_llm/tools/motor_skills/place/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "external/EnactTom/habitat_llm/tools/perception/find_object_tool.py": "b0360f4265b661a0fd3be08ae6388eaff4cce945e1ea08b265864789828e1d80",
+    "external/EnactTom/habitat_llm/tools/perception/__init__.py": "530f6f5d8ab3c9aa58a7628f2241b8a29a694ecfd719080eea062696126b11a3",
+    "external/EnactTom/habitat_llm/tools/perception/find_receptacle_tool.py": "93fe385224f84efa2f777cd721a8cb457efd84974859bdcf547e67d3faf425a0",
+    "external/EnactTom/habitat_llm/tools/perception/communication_tool.py": "002ef65f7e10d7815b653f516a373477aecf78979c395709e5f14b9e833afc6c",
+    "external/EnactTom/habitat_llm/tools/perception/find_agent_action_tool.py": "3f860b611274518a33fb7de37aad37e51df0a1924f8b9a070f348eaa979e3140",
+    "external/EnactTom/habitat_llm/tools/perception/find_room_tool.py": "3f38101fda13d5a255d907639749c330a36cad21fb6b200775d3f4c9b583c02a",
+    "external/EnactTom/habitat_llm/perception/__init__.py": "7093ef73a306b69e9c9cdce1ff7f2656dea04101bfd0dbfabd7a12df9dc1174a",
+    "external/EnactTom/habitat_llm/perception/perception.py": "f19c5d839f30f46c8a05c6c280318e56ef416eb11196d15e1deac0f27329a4a5",
+    "external/EnactTom/habitat_llm/perception/perception_sim.py": "ca51e37d44188f3fa756696ec2a0c37c222875c000ce771671cc6b77216474d6",
+    "external/EnactTom/habitat_llm/utils/geometric.py": "cee8833da04b970e2dae4e3b005ed03fa616dab48050385ad1c8dfa4b70abf2e",
+    "external/EnactTom/habitat_llm/utils/grammar.py": "679735757c07a4de3778d438878b0b4a586b4b578fd58ac2068b1f5dde484bc4",
+    "external/EnactTom/habitat_llm/utils/semantic_constants.py": "a1bfc5caeb015d33227c49884dc319c432b852917a445e680424bc1986252876",
+    "external/EnactTom/habitat_llm/utils/__init__.py": "e575c7e5dda925f4b5cc7c6c092d2b3d5a0c172d47dfb568b4512e1af235848a",
+    "external/EnactTom/habitat_llm/utils/world_graph.py": "6e7fd3ef9191736ee6209f11d33cc118cdf2f85b730046242901d2ddec32f803",
+    "external/EnactTom/habitat_llm/utils/core.py": "6a3a34554f41d3304a9831ad3298ff4b62b3a007fe00d9301f32e6d4ed918190",
+    "external/EnactTom/habitat_llm/utils/sim.py": "7f0990a10a847c028bb5f71164b679c37dbe09550d6805ac596753d6a3a4b217",
+    "external/EnactTom/habitat_llm/world_model/graph.py": "18fedd9fbe5723f724b7484e707321003f2273a84dba2ea183a89e15a3737c31",
+    "external/EnactTom/habitat_llm/world_model/__init__.py": "1043cd61b2e0776399a5e5f519a05b9f95df1c509a4288d205ba422428003e61",
+    "external/EnactTom/habitat_llm/world_model/object_states.py": "90e840ecb19cf9f90c09fdf816d7cfffaf3332b32a04b337501004f51a5fb7ea",
+    "external/EnactTom/habitat_llm/world_model/world_graph.py": "c82a1e4c3b37a54fb41e90cf33fc8783a6d1b042b75a9bcf726038721c3b6a77",
+    "external/EnactTom/habitat_llm/world_model/dynamic_world_graph.py": "2efc133a6159c55fbd7857e369c42bbb54e407a1cb4b469f2762f26a10172794",
+    "external/EnactTom/habitat_llm/world_model/entity.py": "4452e8d0513da7182387cc335d203c8efcad9316f45d7563bc120a9d8a90f19c",
+    "external/EnactTom/habitat_llm/world_model/entities/furniture.py": "6ce21a961a2438ae00469e705c4d1db8d2a0e8b29b1f1e4203f5ed30760c20eb",
+    "external/EnactTom/habitat_llm/world_model/entities/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "external/EnactTom/habitat_llm/world_model/entities/floor.py": "a0f7769295a4797e69c816e15eaca86d306e792c4323d2222f71fb10223fd770",
+    "external/EnactTom/habitat_llm/evaluation/evaluation_runner.py": "3ca5bf55de568f41c86858cb776f7f7b8ec3c9af6588c617be41063abb5cd31b",
+    "external/EnactTom/habitat_llm/evaluation/__init__.py": "f398f07bfcb3090001647e7eace9214ca8f6140cc65f5344e90597be76c88e76",
+    "external/EnactTom/habitat_llm/evaluation/decentralized_evaluation_runner.py": "9c43e4035037b19f8826984c52eadf5ee1f32949f615d78b530b163f109738e0",
+    "external/EnactTom/habitat_llm/llm/anthropic_claude.py": "12bc2f6529037274003a640b7bbd1499d2a522a07774e8bbe0705cbb070e1d25",
+    "external/EnactTom/habitat_llm/llm/bedrock_claude.py": "3b07526b120cf9bc284e05c659fd4962918e195c393d7c90f3b0de81f32a14dc",
+    "external/EnactTom/habitat_llm/llm/base_llm.py": "493a24462ffe70e2a1da34ffcee0b8fa62350bc6595ec4d65f630908626df75b",
+    "external/EnactTom/habitat_llm/llm/__init__.py": "7ae552c1d3951fdef83f33b4c3bcf1aa4f2bcd935fc03495ca13b6a4b4a1a029",
+    "external/EnactTom/habitat_llm/llm/openai_chat.py": "d6e0444c1ca7a53340a198bf5e286a2d38756d4139111544ca49f755021c4848",
+    "external/EnactTom/habitat_llm/llm/instruct/utils.py": "0fd11287907ad12240e02292e8d3ffa16048b30e51caaeeb38655928a0de94bb",
+    "external/EnactTom/habitat_llm/sims/metadata_interface.py": "eba79a27fbc1e3ab3e1487a208728e3a872a8166daef74ad9f731ff36309527c",
+    "external/EnactTom/habitat_llm/sims/enacttom_sim.py": "e755968f6e95465d58c63344a8a0e939ede983908c950ea01e115ea12f8846d6",
+    "external/EnactTom/habitat_llm/planner/llm_planner.py": "8dda90668ffa03bcddba58322ddd6c8dc25552eb17f031e0c47fb6f3a1848f50",
+    "external/EnactTom/habitat_llm/planner/__init__.py": "76fd3c789b7e2e7402d1536a540be293b0976ce0857280de99cfe2e75f6ec9dc",
+    "external/EnactTom/habitat_llm/planner/planner.py": "4a8bff1fbe827d6a41166db264c87b4b50d2834b1169dc04d9a8059ea2fa8180",
+    "external/EnactTom/enacttom/benchmark_metrics.py": "83905bf6697e60436ed1aae2ae89ffb803c5e7758336707cb33aba2254f79f31",
+    "external/EnactTom/enacttom/vision.py": "7b2dce568eccbf1307b881322811e6b942a71b9ce06b05d82addf0542490764d",
+    "external/EnactTom/enacttom/__init__.py": "015a0158a3f539a8dce37246ff7239de55cb5167c27c26f7c1807f7aba9f8d1c",
+    "external/EnactTom/enacttom/api_costs.py": "f33e91fecdb3a21f89a008af39ba8f19b1b4acfc93be32313321a95e947b3779",
+    "external/EnactTom/enacttom/run.sh": "fa8dcf6396408f64b076c7d7f3a6f8dfc7855e6378b35ca70a0d032fc6711d5e",
+    "external/EnactTom/enacttom/benchmark_results.py": "e60670e0a7a266f8250224bea2f8f9d6e4592c2219ebcdd78e8a57ad359bf70e",
+    "external/EnactTom/enacttom/evaluation_comms.py": "5594e48897fc2f9f99ecf5c9fdca908f6562e9320dc28163fc5d5260a703cc1a",
+    "external/EnactTom/enacttom/planner.py": "6bb6b57914c69bb8ce6f91c2c00b18b659090758914e1c80a500fe43c1750f7d",
+    "external/EnactTom/enacttom/evaluation.py": "61e77ca4a9f98df188069f907ed46080d422c9de08baec035fee95fe4d1c8556",
+    "external/EnactTom/enacttom/tests/test_api_costs.py": "c363da15795bc7d6ee9078cf3b958aec5bf062cdb5b785edd5e06b9aefa48123",
+    "external/EnactTom/enacttom/tests/test_benchmark_wrapper.py": "500e5b53e6b44bf33b865ff9eaeda52d45a0d4644404b0355098594aaa3bc818",
+    "external/EnactTom/enacttom/tests/test_benchmark_repeat.py": "6de7f2dc17926db273389933a31828445fb9ea22be3c894955e5e3415cf15a01",
+    "external/EnactTom/enacttom/tests/test_benchmark_metrics.py": "543cd4db5ba4143ccd4d0532317565cc03593d33b45e1a9e994f4b77228fb5f1",
+    "external/EnactTom/enacttom/tests/test_print_benchmark_summary.py": "ab46c1c70eb87ca95de187c73ac4cf40b66134be593a9825ce0964e8e3a5e1a8",
+    "external/EnactTom/enacttom/tests/test_planner_retry.py": "537c3536d512bdc80cd18082ce14dbc7a3deec74bdd933a9c5ebfa42440307f1",
+    "external/EnactTom/enacttom/tests/test_vision.py": "2953af57ee9f8dd97261b574f7d0513322d8ebbdf48e50ce7df6b004fab869b3",
+    "external/EnactTom/enacttom/tests/test_literal_tom_behavioral.py": "e7cf8a0c65b444723f39dff8cdb8a8f2101f8cdd34651ee9c8d503c1f4e20f6c",
+    "external/EnactTom/enacttom/tests/test_benchmark_config.py": "8803e10dddb5a6648ca376cb9c3250285433db8a6216316cbba12771a90a9771",
+    "external/EnactTom/enacttom/utils/show_prompt.py": "d467b8789153b6c93b3ba84c350d2d3cf2649294713c1e70c5cf3f8ede667bac",
+    "external/EnactTom/enacttom/utils/__init__.py": "bfab8fd5efd560b784441fbb4f03bc6f5418e89692e7924595b05e49b26d679e",
+    "external/EnactTom/enacttom/utils/summarize.py": "df73facafe552032a54e184d8ee954adbcbe24cca648aa7e89f84f755e91e6fe",
+    "external/EnactTom/enacttom/pddl/epistemic_compiler.py": "ca52076a12f344bac5fde8d9c8b4bef4f845f0229c3934114c6d9129e3f3674f",
+    "external/EnactTom/enacttom/pddl/problem_pddl.py": "621d7db9d541e089159443c1c5b64231dbb7f98ebfb8f83f6c0b6a28087ff0b1",
+    "external/EnactTom/enacttom/pddl/compiler.py": "ed192702759c2d5575a18a60bd5fae03b4fa436e8173728ccb0d47318f2d3441",
+    "external/EnactTom/enacttom/pddl/runtime_projection.py": "ecdc7aa47656b9b06f98e1ae58298f0807eac1396fe7041f5eb7e48149d5bb1d",
+    "external/EnactTom/enacttom/pddl/goal_checker.py": "0a8c6c0f428379f1a3c493f60ac63b5e791ffdd1a3277de72d414db715afab83",
+    "external/EnactTom/enacttom/pddl/describe.py": "2da690e8a0df55d19c6300b65b4f04107afe298b1f838bf66e5e8a8fed7f6153",
+    "external/EnactTom/enacttom/pddl/fd_solver.py": "8dee9a826a476becac3513607f9d66221348ff5a6702ecbe88bda939af708954",
+    "external/EnactTom/enacttom/pddl/__init__.py": "cd8996c40af8c68025ed6cb9e4c2884fc04b7be1c428f22d6efd6a4319bb30d8",
+    "external/EnactTom/enacttom/pddl/solver.py": "f1fa9d047fc832d360501f82760d07335f83aaa5790a747ce3ce00ef3e393944",
+    "external/EnactTom/enacttom/pddl/dsl.py": "88ec8cebf68b5d5f412467ead7f8117ef8f77354961718e3f33152939b7335a6",
+    "external/EnactTom/enacttom/pddl/goal_spec.py": "046d69b3c95496b6c25809b85cde7e64182936099a7dd0135933ca44375ab773",
+    "external/EnactTom/enacttom/pddl/domain.py": "128a712be00ed7498ea9cea27ac91c64aea8d56e74c4737cbf6c378e15dd88c3",
+    "external/EnactTom/enacttom/pddl/planner.py": "189d95167c782f03e85f8c92ab71dd0cd7301bcb0e0c3f4d466216a0820acd04",
+    "external/EnactTom/enacttom/pddl/epistemic.py": "473147d6eb7f5148391132f221f474f94e148ea3e7c4a577e46b7096afc070ba",
+    "external/EnactTom/enacttom/pddl/tom_verifier.py": "57f7271c0a165ffb3f4c30458578b7bac64873557ec38791255f9344347465ed",
+    "external/EnactTom/enacttom/pddl/tests/test_runtime_projection.py": "043eaae84dc46c4ae88f1612e5cee672b2c7f9d19994f4b3daa56f81cef52e7a",
+    "external/EnactTom/enacttom/pddl/tests/test_solver.py": "cb39c4c9866ab0f448371b8a7622999703d5f7b018de4dc713bcb1f1d2c67231",
+    "external/EnactTom/enacttom/pddl/tests/test_fd_solver.py": "9cf3d756ce24b9814825a4b2a5695b4fcb0ba78b15ee4142891201539e26d236",
+    "external/EnactTom/enacttom/pddl/tests/test_goal_spec.py": "8424e506b86238ac2d16f920ed65befd3830eaa780746acee67415c25f643404",
+    "external/EnactTom/enacttom/pddl/tests/test_planner_runtime_translation.py": "ddf09b581f293ffea2d841afa034b051d4ba66cde04cabd399e55bffbc61b485",
+    "external/EnactTom/enacttom/pddl/tests/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "external/EnactTom/enacttom/pddl/tests/test_planner_solver_backed.py": "8c13f06da32a820dc2d1369e3f62b7c4e0916be5cd2d525818077d97e530fa0a",
+    "external/EnactTom/enacttom/pddl/tests/test_epistemic_compiler.py": "ac4c87f897b170166ef8fcff7ae05bb954b3cd86c4d4db4aaad3fc9bfecbfb7a",
+    "external/EnactTom/enacttom/pddl/tests/test_compiler.py": "ff159aa975d25653fffc41cd27c894c66379104cf57ea44c3c3691756c729efc",
+    "external/EnactTom/enacttom/actions/tool_wrapper.py": "df693a4fb82d3a800786515ed6415c39571551aa3cbaff8f37a4da0809340a54",
+    "external/EnactTom/enacttom/actions/__init__.py": "46b5d8402619e6065e5b3da2da3434886f391d7b851d6a6dd4f7114a7c3d07ea",
+    "external/EnactTom/enacttom/actions/baseline_tools.py": "de9dc8f28e13e936b65221ee23710be37116b25b2cbf678e2ad9b4c84a759cc9",
+    "external/EnactTom/enacttom/actions/schema.py": "21f4ec6445a92f1cc6a9f243374f5a5a4b6d48ebcd4f39434e8e5da9231a2729",
+    "external/EnactTom/enacttom/actions/registry.py": "ae73b0fd32c112cf24a6a4596bfbcabd061baf0554611ac4ca62b58b2121a50f",
+    "external/EnactTom/enacttom/actions/custom_actions.py": "f70c8fdb2fca723cf2bdc8cec246d1dbfeef59520e922af3efc9b5e55a8742c0",
+    "external/EnactTom/enacttom/mechanics/__init__.py": "fec65679d867767dac049c1f3c9b442140708daa3655b388f42091817ab02830",
+    "external/EnactTom/enacttom/mechanics/handlers.py": "74b8e4e1281feb93bb6a071cee189cd7956f6fbcdc8d11731e5101413d7f402e",
+    "external/EnactTom/enacttom/runner/__init__.py": "d167c417cc36706fdd3f9a9adcda5a16b3c9aacf4c010df240ec88facd4f456f",
+    "external/EnactTom/enacttom/runner/benchmark.py": "4a85909c8a50e115353c0a0240d0c2b5248c8bb598db4329daae99e71ff0e8bc",
+    "external/EnactTom/enacttom/runner/verification.py": "21779dbb65d6f996f2bd1ddba541d6ad5d1f803f977f4ccceeb963d1511a61e1",
+    "external/EnactTom/enacttom/runner/base.py": "8c00be1eb0f2cecaca0444e81ad128803978b03c6a5970667ffc9994e6f353d6",
+    "external/EnactTom/enacttom/runner/world_adapter.py": "1504af51de17c52539161b41c783e5cd38ef9a551b8fde5cc3c2c27172556e35",
+    "external/EnactTom/enacttom/task_gen/spec_validator.py": "278ed78a03b741e8a328c73991bf49936003da3271b7c2fb9f0bb2a24c239eb5",
+    "external/EnactTom/enacttom/task_gen/test_spec_validator.py": "6b40530045004c1f6b2bcba74e0046b6db7e18633475f48b99cb2c86b55b08ec",
+    "external/EnactTom/enacttom/task_gen/event_log.py": "059815151fe7d59d062152b3086c179891b435025528989b066ca66407fc7dd8",
+    "external/EnactTom/enacttom/task_gen/authoring_surface.py": "202ebde25ddc11009789da46d3e1a6456f2f63e580de0f3e27707bd8fe1841cc",
+    "external/EnactTom/enacttom/task_gen/test_task_bootstrap.py": "b9c2350d887d2a1d4d8810b5caee09c54f7d8f5a1a97d2c0fa2dc0935efcb7cb",
+    "external/EnactTom/enacttom/task_gen/prompts.py": "32c10971fbd45e25f58bb3a720ba7fcb402272f656ec93e7715ae88fde1d9d70",
+    "external/EnactTom/enacttom/task_gen/task_generator.py": "236299e624284360066099918906c625453bb570c97052d0da609d7e763a929e",
+    "external/EnactTom/enacttom/task_gen/test_prompts.py": "ef22b267bdd042e9cae28b047de8311e8f33c225ae55e537110b0409e706ddff",
+    "external/EnactTom/enacttom/task_gen/test_runner.py": "79ce6a0961ad0276fa1ae42c1de0828c5984fb53d598f616047e0b3c1c316d76",
+    "external/EnactTom/enacttom/task_gen/diversity.py": "255706f49a76474737756eeea1db455515c35b03d7033dc16387285c2f70eeb2",
+    "external/EnactTom/enacttom/task_gen/__init__.py": "8fa8699cc1221aec0adf3bc1be8b88fcfeb81e39f985bf739b42a435874c5ec6",
+    "external/EnactTom/enacttom/task_gen/scene_loader.py": "8edd5237214437374cce7a68a31d0d428eb18969c54c78b6755728e8d546efc4",
+    "external/EnactTom/enacttom/task_gen/dag.py": "f768103b27f824cf99b520ffcb3b694fdfac1875795b6c5d5b0c52246083ebf2",
+    "external/EnactTom/enacttom/task_gen/test_task.py": "c55059cfaa577e91574b9fcb59be802372c617440f8358c93a8cc0f72a3f86c7",
+    "external/EnactTom/enacttom/task_gen/icl_sampler.py": "2dc01abdf589448768d0c545ce7156887d648ea087541071d7587e6822f65348",
+    "external/EnactTom/enacttom/task_gen/seed_sanitizer.py": "f6bf6492d6c3a7a0fea15c10fc518b4c31462bbae20f48a57cf5cd34ab88bbf2",
+    "external/EnactTom/enacttom/task_gen/seed_selector.py": "5b07bf715b140971fdc6102dddda677e8db6f1b3d1c6f0895d93afcc450cde51",
+    "external/EnactTom/enacttom/task_gen/verify_trajectory.py": "73073627e5998eb61c682ae7da873375d2ac55915f774e3c52614ab7f7cf4a51",
+    "external/EnactTom/enacttom/task_gen/test_seed_selector.py": "a2c10a2b6f32a454713dc4722b1e51a882d71465af94d83ca38ed669645c0fae",
+    "external/EnactTom/enacttom/task_gen/test_judge.py": "8d57b06b466c487b4c0ddfb58554e53e4d489abf1bb430ed9ea98269336fd9d5",
+    "external/EnactTom/enacttom/task_gen/judge.py": "3aceb5cf9ccf0e70fa51d57dfb8269c161701174d11030a8b1390b71feefdd56",
+    "external/EnactTom/enacttom/task_gen/task_bootstrap.py": "b13e482dc7794d953910261fb51c6002ad3cde656880e5fc25074b1730862ff5",
+    "external/EnactTom/enacttom/task_gen/external_agent.py": "236650f026e59d5aa40f8055ab94bbd5ce9b29711f169e6a6c11e98270620164",
+    "external/EnactTom/enacttom/task_gen/session.py": "699fcf47795609a20e82970dd27b36c54b5a7d90caa2e2e2eb34cd44dbc9f081",
+    "external/EnactTom/enacttom/task_gen/runner.py": "d4c94792cb72cd1e0720e8b3f8fc119194671266acb5357a266b0aea541bf298",
+    "external/EnactTom/enacttom/task_gen/template/sample_tasks.json": "c328e4ca9939fe88e1d21a8859bf25336701400ba191dd05a673bca642991c31",
+    "external/EnactTom/enacttom/task_gen/template/template.json": "0eb09de76c0b063e8bb54c7633aaa1c5b572ad1c04139ab34406812324d4a895",
+    "external/EnactTom/enacttom/examples/__init__.py": "9967fee193e244e966a2f3276ba3aab36791dcc8104c445a822d701abe2177aa",
+    "external/EnactTom/enacttom/examples/run_habitat_benchmark.py": "c2dce88321b13df0bfee0729dddbb1fcd7ac9a11c0a7f7c8b50d5e6ebdc3ae10",
+    "external/EnactTom/enacttom/cli/new_scene.py": "fad047e60ca7ee267348cbeebf84af2f3383e4d9a5e4f5e540bf7bac0fa866fa",
+    "external/EnactTom/enacttom/cli/__init__.py": "2eb7024072079a852c1ad7ffbc2f184f97cfa11e7039affce31be07380d4f5ca",
+    "external/EnactTom/enacttom/cli/submit_task.py": "0525d6ca9ba701346d1af7bc995677658400a4b9287fcae22148ee6f7e55fd7d",
+    "external/EnactTom/enacttom/cli/test_task.py": "11562d9f4060acc833d76ccdbf5d04b57fb277aab949b757090731f8d6f0e75b",
+    "external/EnactTom/enacttom/cli/verify_pddl.py": "1f088ee38a95963cda442f34981e636b67563e4b062576e26d95c00b8229343c",
+    "external/EnactTom/enacttom/cli/task_metadata.py": "ccf218f3de584982fc6e44fc65b5cde17b5842d4f4cd36bb038c500cedbc74bc",
+    "external/EnactTom/enacttom/cli/verify_trajectory.py": "69c6fab3b27372a2a7b2879228fe279a48d3278196a92f721294370b935de3ef",
+    "external/EnactTom/enacttom/cli/taskgen.py": "cbc3dd3f047368fc729739da7480d0f83162410fab81414881b36b589a747b17",
+    "external/EnactTom/enacttom/cli/validate_task.py": "3e976b0605065069946d0b851e06c03deadb883ddbe6b3f655c8e97a75d2238f",
+    "external/EnactTom/enacttom/cli/judge_task.py": "487bd1f567a607956ab550ad5e78428ddc00828d0a4b0fce87ed2d265598b016",
+    "external/EnactTom/enacttom/cli/tests/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "external/EnactTom/enacttom/cli/tests/test_cli.py": "fbc79910b42c8d6f7a9ec7ecb69428d299e42dd6d27ce9e3405d86e58cc02e33",
+    "external/EnactTom/enacttom/scripts/benchmark_repeat.py": "6770f422c9381f90bb0410ad86c5f599f9e8cf236443ade2214257685de9b0b8",
+    "external/EnactTom/enacttom/scripts/run_benchmark_parallel.py": "d8cb86aa68980640fc8a8ad6ea0d54c85d63757f8679eb0f3f33c1a18be5d4bf",
+    "external/EnactTom/enacttom/scripts/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "external/EnactTom/enacttom/scripts/print_benchmark_summary.py": "2a47e1a0c236f09fdff4c6a9ab6ddeb49e122b584965ebe8aa4d2a919a35a7af",
+    "external/EnactTom/enacttom/scripts/update_calibration.py": "fd01ad18e549aa8b7fbf2d994915889e680bb72f92c1eb3fb1346eb30f2a6b77",
+    "external/EnactTom/enacttom/tracing/__init__.py": "0fb773d049f8e9052f6919e9db464c92958940413e5336896d318544dd15f6e9",
+    "external/EnactTom/enacttom/tracing/events.py": "465faec9071ac86551104fc41d7070dd35a20d02446dc257025781481f266b1f",
+    "external/EnactTom/enacttom/state/game_state.py": "adb78ff05fc007fd2221a0cfc714d71e9d3a9722f5d88b09dcc0cfd8ff4999da",
+    "external/EnactTom/enacttom/state/__init__.py": "2a240284d34dae4e6695d2fd37a7682ee923787984adc6feec0e156fb825f2dc",
+    "external/EnactTom/enacttom/state/manager.py": "d1be5f77152ae0d7d20ef7bb25b43a6231eabe0ad44db87e57a4dcf6ba4c6248",
+    "tasks/hard_104348082_171512994_1781.json": "4270dbea74ea8985ea31813e1af7545b814a2549cdd9eca5b8a035ed109dbfd4",
+    "tasks/standard_104862639_172226823_619.json": "0eea8620e5e232db1d1d9da9d1b568a950591eb65f7d6916e338cc2a12cc1385",
+    "tasks/standard_104348082_171512994_588.json": "a9162841b01c5d85b7e0bea2eab3b65aff6f6aff4bbdd9a06586272af8e382d9",
+    "tasks/hard_108294897_176710602_1166.json": "bf6c7674117402d3f20cb431679818d601a91ec84be166269749720a60b72261",
+    "tasks/standard_104862639_172226823_618.json": "9d4a431336583559e25886df6c225f694321094d8c32d8d3c14d628d720e3088",
+    "tasks/hard_107734479_176000442_744.json": "949d5abd7099feea195f56390fae50038d0a7986ca6feb3c1f62f38f989898e4",
+    "tasks/standard_104348082_171512994_983.json": "f11437d2d00d0f6da7c80bb4aa39e3c0f03a57bba8ad22e41288d29700ead795",
+    "tasks/hard_108294897_176710602_772.json": "78a2d8593e25cd40e2926c74802b28826ebb3962af40a1688cda5b693b3ba7d4",
+    "tasks/hard_104862639_172226823_623.json": "88869e8d0032a1110c04786c530d4c47da80aa8c6188a7c25cb4fa08016402a1",
+    "tasks/standard_107734479_176000442_1526.json": "57b2a48b71db669452425a63cee308858eef80c445767264943e5e01a41b063a",
+    "tasks/standard_108294897_176710602_1566.json": "18ed09ac245bcbae18472287401894319973a74d898401af283f2a33599d40d2",
+    "tasks/hard_104862639_172226823_1013.json": "dbf383a4ee5fcaf6a49a43ea4a576ba89239846ff9c8bf6d1d71601d2f070a07",
+    "experiments/reevaluation_v3/habitat_qdd_guard.py": "133df3e6bd5c7312f7f8720e7702ae2577dfb7b72a675256b56ee2a1b035aaaf",
+    "experiments/reevaluation_v3/run_qdd_habitat.py": "d62b7c99b7ec2beea5849c89d25bb06852becfa45bfd50e785017d1cfe68cc56",
+    "experiments/reevaluation_v3/__init__.py": "47fd32c8663c1cedb1332f874dfa4a7aacb5eb337954b55771c86420e434854f",
+    "experiments/habitat_closed_loop/runtime.py": "4419b8acd611adb7a215109600b1a98f829331d0029fb0b562e75ac7a7a8d7b9",
+    "experiments/habitat_closed_loop/analyze_code_generated_environment.py": "1f52ae3d709b8e63aeff6e223723f980c73f00fb832e6201288bcdc4f86c5f40",
+    "experiments/habitat_closed_loop/state_store.py": "c0a36e73ce7ea4864698345e94000b38fe2a8c0c07db6b36724de8a72878e1d0",
+    "experiments/habitat_closed_loop/visualize_episode1166.py": "90845c18017e209aa03b315900b2cbc7662f8da2914d3ffa0c618f3f95980b1c",
+    "experiments/habitat_closed_loop/run_environment_cases_background.sh": "5287b70f7d69ab3591827e245713dcca3a2205402377c1a07e6416f84c6efb67",
+    "experiments/habitat_closed_loop/analyze_dev36.py": "622b44e2da9f799274af63ba735434fe1d45850cee7425a4efedc334588feffe",
+    "experiments/habitat_closed_loop/trace_recorder.py": "bda96a300dc64c3a15bbf448e9cb5a5121d2d5267dfe033418b1211881b69845",
+    "experiments/habitat_closed_loop/strict_scorer.py": "3ca82963c0e155fa52cd50be094d8013cb9ef93ba6aa19f4495ecb71e9eb39e3",
+    "experiments/habitat_closed_loop/test_closed_loop.py": "1c038ed0bdd96df717cf4edda45b5b2a2a9044d5d33d57bf020ef6dfb63fdaf5",
+    "experiments/habitat_closed_loop/feedback_memory_v3.py": "57322f6989f8635400091f89c8e6ee5b4cade0c68f3a69b7d6f1a0eafb764616",
+    "experiments/habitat_closed_loop/updaters.py": "a562ba6f575a511dfc6ae43bd9d99354deaff57e6b745ea72f9d175dce39ec4f",
+    "experiments/habitat_closed_loop/action_interface.py": "ef59bb307a910a4b42660c83e7fdd41060993a1be0ad07d830b33b80af619e80",
+    "experiments/habitat_closed_loop/__init__.py": "1ab2cb411b6517dbebe7cd23949e7b8911e31eaa8aadb8ff06f394a8155d6775",
+    "experiments/habitat_closed_loop/run_regression.py": "fc62c4fad7d6a25cd49f28a36f43f92fe3cd410b7bb1baf0d0c94d58ca6b687f",
+    "experiments/habitat_closed_loop/analyze_multiseed.py": "551757062e7c96dae343e551525fa268064e765370694430346879a4012b5c67",
+    "experiments/habitat_closed_loop/observation_adapter.py": "05cdf8ff0210da42a6eeed6f06fbed347fd3b3da44ef5a3faca1470d924f4c1b",
+    "experiments/habitat_closed_loop/analyze_environment_cases.py": "79214335eba9ad0e8d6e23809b910105bc4fcc61e86b150bf993ad4e8366919a",
+    "experiments/habitat_closed_loop/compile_ssc_environment.py": "f03c5a88b303144c023788567d445f215bfb748cc43f8ec94b6939855a9fe3b8",
+    "experiments/habitat_closed_loop/check_environment.py": "dc09ce78b76d207ec03932f5433bee6e7895eb9d2101530e2fcac2b4f6509aba",
+    "experiments/habitat_closed_loop/run_code_generated_environment.py": "eec41b5e416f67eab40e181cd59045ed07f42b0ebb5d53e3de57c5925a66b6e2",
+    "experiments/habitat_closed_loop/validate_run.py": "4ef0581b814612a2a6c0d7750c7c9bbe202b52daccaf2bdb933bba0703a57f53",
+    "experiments/habitat_closed_loop/run_code_to_environment_background.sh": "3b2658255cc7bf3a9b3f754c6daaa1eacc13abc77c63fcb537e595cc91e27533",
+    "experiments/habitat_closed_loop/audit_historical_cases.py": "58f63d02db35a40c4059a5f7872fa503edb3683fe40185ac991f349616543f5a",
+    "experiments/habitat_closed_loop/build_environment_cases.py": "1916829ef9791a9445b84641fa584c56eaaff75dfe854096aa2738fde5a0111c",
+    "experiments/habitat_closed_loop/run_environment_cases.py": "6beb785d4f06f559716df99a5ae15f412d1091a1a0ad1b01cd7da6060d2c05ed",
+    "experiments/habitat_closed_loop/instantiate_ssc_environment.py": "22e39d5746fe886e11193f10d01e04713db594a1718f450d93d826fa70ce333e",
+    "experiments/habitat_closed_loop/test_code_to_environment.py": "0d1de72282eb26b001ce534f80a369e58341cef869866995c26dd2b6299cc0c5",
+    "reports/cases/habitat_ep1566_ssc_final_box_5_state.json": "84c05fe4362d0ca83badcfe05474bde275718b14dc39ed53a23c4383693f1d50",
+    "reports/cases/habitat_ep1566_direct_final_fridge_34_state.json": "561e6db31834a5f2648bbf66f05e43a1ffe50bd872d6736e6339b1509e990255",
+    "reports/cases/habitat_ep772_turn11_state.json": "f6ecc9ca04490f14214d073cf3ebfda20cc33c517ecbcf408e54eb4fdd3ca766",
+    "reports/cases/habitat_ep1566_direct_final_box_5_state.json": "d5252f2c399558dbde4ab7d83ea38a3cb6039d7137f0a52e1cac29061c66ba61",
+    "reports/cases/habitat_ep1566_ssc_final_spray_bottle_3_state.json": "5afe3c1bc022efa51ac88b04aec5d4d52be0ab7a6dfd9e7f9d74a2eb24a69a53",
+    "reports/cases/habitat_ep1566_ssc_final_fridge_34_state.json": "d88dc8a1772a021effab914e7362e834b1420581bd4c16641d423f322ea80209",
+    "reports/cases/habitat_ep772_turn08_state.json": "e3cc4245519655bbf100cb6e34cc21337b9b24d1d500cee19ff094ac4e9b7eb5",
+    "reports/cases/habitat_ep772_turn14_state.json": "5add44bbbf15d636edf676e5ac744b4905bca60d61ba5677cc3814a2903165a8",
+    "reports/cases/habitat_ep1566_direct_final_spray_bottle_3_state.json": "c4d5237f046a5c96821cd2418b7fc010c030a8411b3b5f36c51d4fc2beac89f4",
+    "spatial_social_code/mmtom_uncertainty_gemini3pro_summary.json": "d29bfbdb1bf5ea4b2c69130347d24ff556d663ac12a1a7e4818d7c0d4d3d1153",
+    "spatial_social_code/http_range_reader.py": "e1c32f3905f4a37a5849a05deb492f6d1ecf05c7e48a6123ef1cbbcd826f337b",
+    "spatial_social_code/runtime.py": "cb4876a14afca88e100cccf22c6b4b3cff5b0f1587bf7b5cab0a3ad569c1dd6f",
+    "spatial_social_code/mmtom_fair70_shard0_summary.json": "44a22113665ed53f4c5d48825b166b17c08dedad4328115f6d3aa0b228ce1ad5",
+    "spatial_social_code/mmtom_fair70_gated.json": "51b2a2bbe44e41407853205355474acc94585d69ee68b5e6d289e8b5d4565360",
+    "spatial_social_code/evaluate_mmtom_jdcloud.py": "1ed7e5ed9fa2611af2ee0b9bb92490a33f6d7897cbc3ca079f7b34bb59cf089d",
+    "spatial_social_code/evaluate_executable_hypothesis_offline.py": "d2886799d1d9c3143dfb26ee9dc43db0ec44bd5c6592db11fe2b4a2df5dfbc15",
+    "spatial_social_code/mmtom_native_hybrid_full_vs_autotom.json": "21ecf0c65701a69ef2bc02c58a71fa393f82c054a6f12bf14ed4e55442435d33",
+    "spatial_social_code/executable_hypothesis.py": "7ef9f34a1499644a0d2c9e7a6e02bb908acea6c351b8812248c60b983e51c718",
+    "spatial_social_code/refine_mmtom_uncertain_jdcloud.py": "97deb9ef200c4d2238d8e8c9618a0aa2b01304404af7a541241f891813c4aef0",
+    "spatial_social_code/rescore_mmtom_dense_authoritative.py": "b13f0d4a3b5ae61287ad11c11d26338b5fd779b7321a158a7453eb477fafd248",
+    "spatial_social_code/prepare_comind_stratified_subset.py": "64ba118530c64882092310f9519460cf53f2167551a0a03818422fa9d9803db3",
+    "spatial_social_code/comind_optimization.py": "f43e7ad6f66dd9dd01b884cf9219a20117420f3c42b2665bb71217c389ce29bc",
+    "spatial_social_code/mmtom_candidate_aligned_smoke_summary.json": "19147ea04180d5225e1f7cf8126469cc479be83b9e9297e24cc0bd2006ccef15",
+    "spatial_social_code/test_spatial_social.py": "dcc810ac53a9b9d422301b3fbbe12192e57b054c2582b879a469c28c09cc7d2f",
+    "spatial_social_code/mmtom_uncertainty_pilot50_summary.json": "b8a00356dee35dfdad37b64d78c2fb6d055d13daf651c3b9db067df00e483e21",
+    "spatial_social_code/mmtom_option_blind_gemini3pro_summary.json": "b0e823a178236ebf8817460f9740f4dd83d3a0a2717bf34c6712c693d8fe2566",
+    "spatial_social_code/mmtom_pilot_v2_summary.json": "35921be1bcb3ae61780c86876384f88a83efe9e24511247a245a756c5900a80a",
+    "spatial_social_code/analyze_spatial_social.py": "0827ff27c0b2f98739e089a2e7a61b3240efc543befd8012b81ba5aa00d30826",
+    "spatial_social_code/analyze_gated_fusion.py": "ded01736fee9ae8d0ec32dff528c7e3dbc5516aef8f489497adcc9628f26c869",
+    "spatial_social_code/mmtom_uncertainty_role_rerun_gemini3pro_summary.json": "93683894fa7ab778f336759d4b58ffd5931ab65b9401d9820732795610f9e08a",
+    "spatial_social_code/enacttom.py": "64c97d49152bcfc4cc8541abfa3ea321831594d2e7f9fb40c201658fccf39ec6",
+    "spatial_social_code/run_full_after_autotom.sh": "336db71aa850d0dc592492a1cbc409cbcc1a5d48c6d99b791816f9d5dbc97823",
+    "spatial_social_code/spatial_contract.py": "1fedb4f37cf4a81a670f31d5c602257beab97fdee41fcc7cc5f6fc9863f4ef96",
+    "spatial_social_code/prepare_comind_codex_jobs.py": "1611f7ec68ee3d8393d9b45368b424e62c67f24c255a26942e6d37e1fe075229",
+    "spatial_social_code/run_candidate_aligned_full.sh": "3e4d3e94315856742caef0aa0d399e1787bd95354cb998c6c2b2bd6cb09b6926",
+    "spatial_social_code/ssc_operations.py": "f9e6a9e6deb452743400fb2fcba9993112b94c6f961bf666ec60f743f5081bc3",
+    "spatial_social_code/mmtom_candidate_aligned_full_native_wins.json": "96b8f56051351e8e8f179b38251967dc8ad5e81d386c73d3047823b60c15b0ea",
+    "spatial_social_code/comind.py": "c83d4048022da65c40ad7adefb41e0149b328211e16d53a2fc8696a60129391f",
+    "spatial_social_code/mmtom_claim_covered_smoke_summary.json": "8151d8adf8a5cebf9432ed71060df160af0a553e24e452fa858dcd097737d92e",
+    "spatial_social_code/run_autotom_alignment_corrections.sh": "c7cc8430f8f4fa126a98d120a846e507a502d58f688811ccaecc4d67e8b854eb",
+    "spatial_social_code/mmtom_fair70_manifest.json": "acbb3785cd52fbead72343836cf7e6774f74ccbc0da3c8dabc1d17a60b0317f2",
+    "spatial_social_code/run_executable_hypothesis_mmtom_offline.sh": "161172074074ca574d681c82e0ae16f385c4c7978e5524cf5703a238add24123",
+    "spatial_social_code/run_mmtom_uncertainty_rerun.sh": "37212c1c7d7711f7eb9f0b6be06682a4d27b8d99beb80f98be61958b949ff983",
+    "spatial_social_code/autotom_adapter.py": "5fec61796a6a835fb368134842eca191a6cf4e70ad2e91be36475b03fdbaa333",
+    "spatial_social_code/mmtom_autotom_alignment.json": "21228ad4eef276574769dce4da1fe4df5aaa58d66f87d8faf3fbb7dade37a247",
+    "spatial_social_code/prepare_aligned_mmtom_autotom.py": "f7656f908188bee783d7d5fbcb6427b0929af37c04d8863dd0ed093b4e40d156",
+    "spatial_social_code/social_code.py": "c9b5296eeb7738d4abed2b7c42b7056a9da80e5a3639a7beda3bfd1f2210ddb0",
+    "spatial_social_code/merge_spatial_social.py": "539e443d89c7dd617539c238091673fbcb52c6a110aa1169958598349e71a6fd",
+    "spatial_social_code/mmtom_contrastive_gemini3pro_vs_autotom.json": "e41280c6ffea8bad322de7fe462d844dc9760b762095eacdc6c39bad84f126e0",
+    "spatial_social_code/__init__.py": "e83048ca6b0e84dfce90a34d3d0f65aa373fbf76bc6ffba38fd1c6f2264c8fa5",
+    "spatial_social_code/run_spatial_social_ablations.sh": "fe005b960648e395860ec3f0c537fbfc48c82a98e9c4e8abbed384903857bf3a",
+    "spatial_social_code/mmtom_runtime_smoke_summary.json": "0a02230b0c91a915f2fafb3eb87a610c2fdde4f2d55cdec74f2afbbfce8aa3f0",
+    "spatial_social_code/mmtom_candidate_aligned_full_vs_autotom.json": "d64874b5bed70bd9d6d65c9395b73921a2b61c4bbf8b073710858b3a4d45b2e3",
+    "spatial_social_code/mmtom_native_hybrid_full_summary.json": "446486cb40429b3e36cb946d6fc48845388c7f53c187d849f2cca44adc295bac",
+    "spatial_social_code/mmtom_full_shard3_summary.json": "a5302915fcbaaf098e4e54dda9dfe4ffd6dffdb849c8f9440fa487f902b0ab8b",
+    "spatial_social_code/run_native_hybrid_full.sh": "12e3e09ff0e51e1922ae2803ee277f19698ab81691e4c95855741f97eb10c76d",
+    "spatial_social_code/mmtom_contrastive_gemini3pro_smoke_summary.json": "e9a796208d055acc788546f782b0bb866d8f1b0fcd81ddbc2d93a01e2037ac51",
+    "spatial_social_code/mmtom_native_hybrid_full_native_wins.json": "4a42fd8fcfc8c332b67587b49da92ed4695830e04b7c11f5464ddaff9a0682d0",
+    "spatial_social_code/evaluate_mmtom_component_ablation_offline.py": "e62ada2ada43c2655a2f807ea373b5a1023aecefd376fb8fcae5dad6e5317791",
+    "spatial_social_code/run_spatial_social_full_sharded.sh": "769930c0c79738dbd86cad34f68be9edf72bd9f962eda675e91c6aa2ce7439a3",
+    "spatial_social_code/mmtom_fair70_shard1_summary.json": "f4a6e356c4f6c959eb366df2cbfc99b5a0e1a8d65e8526ad3eef00881462643b",
+    "spatial_social_code/socialnav_sub.py": "0e08c4bd6beb64432000c812c187a21e282f275904c3a3581af9de6932e31abd",
+    "spatial_social_code/mmtom_pilot_v2_gated.json": "238e3d39de46ac369686aee1065f55d70b69ed831f46e64e6eda664b4d250a5b",
+    "spatial_social_code/mmtom_pilot_summary.json": "76c6fa141c8ccb037fdd6f52dab46190a45285652c17e104a49bc78ab4c1e1bc",
+    "spatial_social_code/mmtom_full_shard1_summary.json": "fdc299c4b3c41814615e6ab3140769f90822dc5a73927f51a7822beb905aca91",
+    "spatial_social_code/mmtom_pilot_v3_summary.json": "c46648c9c71e125be6fc474df007b2843c579edeec2b7133553d72ae29c0a116",
+    "spatial_social_code/mmtom_pilot_v3_gated.json": "069da52b5b39a4a721b91e663e26ff84eefff6e3abd36ee62f519ef867d83fd5",
+    "spatial_social_code/prepare_comind_pilot.py": "62b06cb89b10c20cc47fbf2918f3d516b5e1e95b6bf6c72de16375179d91f53e",
+    "spatial_social_code/compare_native_autotom.py": "5989a25ff8092d13434e2ce712230bb9b38cf1f839e40a3d50b9b99b16279742",
+    "spatial_social_code/mmtom_claim_covered_gemini3pro_summary.json": "c7be73dc82fcd06f45a71614d151d3d65c65f8f8dbc55cf9f59087d11dd148ae",
+    "spatial_social_code/mmtom_smoke_summary.json": "77115eacfda5bd097703730b76d68e5adb00aca65fc2f1bd21431440d7579089",
+    "spatial_social_code/mmtom_dense_authoritative_gemini3pro_summary.json": "1f2a3d8ec39aaf7ba3173f6080b9c723fe4e24c0486676d673141144b342c2fd",
+    "spatial_social_code/run_mmtom_full_sharded.sh": "83b6cc00aa898479da204477b29ac50abc692da8e33364670061de82052f6d43",
+    "spatial_social_code/mmtom_contrastive_gemini3pro_native_wins.json": "e25d9303578ff9b562ce5a41be66478232dd9785785bab8d432d8b9f2128a403",
+    "spatial_social_code/queue_native_after_alignment.sh": "3742094c3b66f4df7170c62892ce4017798491b40aa910b9ef6becbee2531b49",
+    "spatial_social_code/evaluate_spatial_social.py": "28d267f873b2cc7ec491e5f459191e68f585ec0b945398f26abe3ff58c0531b1",
+    "spatial_social_code/mmtom_full_summary.json": "4ae1caba9ff7703b0ea1678dbe0c239ddc48b04844028f9b936ad86d5b7388c9",
+    "spatial_social_code/mmtom_executable_hypothesis_offline_v2_summary.json": "447790c144e426f2f48aef0dbd2b39b9c798f18a444b8972f089ecc49641265f",
+    "spatial_social_code/mmtom_fair70_merged_summary.json": "f2a980e2f2acf920ba4d8d591cd546c87efd8b14b13632f73fe65a646aaf270f",
+    "spatial_social_code/evaluate_mmtom.py": "8a655df393d6d08da38235bf4411e443608568fbdd9e4f1d4692b4b9783f17e2",
+    "spatial_social_code/merge_results.py": "496c4126213260b3ded751cf7f4db36f9293922f1a35004e02f48f6f6a259e01",
+    "spatial_social_code/mmtom_candidate_aligned_full_summary.json": "9948c31280ba5cc1ad11d69cde1d7d00a619759585e530c60dd5fbd89341130a",
+    "spatial_social_code/mmtom_full_shard2_summary.json": "926de4cbdfe21f90d0ca99469756a412b0996ee2b83036c0fc0355c420fed2b8",
+    "spatial_social_code/mmtom_full_shard0_summary.json": "5e93c90eef0949b7c5eeccb5f8ae36c7ed4c5b9341303756379b729254ec2a61",
+    "spatial_social_code/mmtom_joint_smoke_summary.json": "2b72953197d7bfa00b8ebba28522594c13d5c7a13bfd175dd552e7b285f8e83f",
+    "spatial_social_code/optimization_audit.py": "d90793223643980d1d57782b8b232e6d62e168eb8513807e62221d0a18c6b7c0",
+    "spatial_social_code/run_comind_codex_pilot.py": "468e4c525c39ec58cf9456294e295ba6a13860555fbb93f42aa8314857abc1e2",
+    "spatial_social_code/mmtom_component_ablation_offline_summary.json": "da7dd58134e5f8a7aa07c2e149ccdda28bf75ecbb8e70d59c0852bd3daecce31",
+    "spatial_social_code/mmtom_contrastive_gemini3pro_summary.json": "b065d8defea19427c355d913c74deeeb3071860ee435fe860a0bb0713682b7ec",
+    "spatial_social_code/mmtom_robust_gemini3pro_summary.json": "ccbff237bcd704bb15fbb62d5729df91b125384e5de5345e2067dbf52837ca86",
+    "spatial_social_code/comparison_site/server.py": "c8e72bddbac6535e78de96636dd072b8b5f1638d7266ae7fb4ae834b06e59526"
+  },
+  "episode_hash": "b658199a62d68f7f5dd8a349dd3a7ed6a8082624016dc801204a67aa22a1f2d3",
+  "probe_hash": "41a729681c02003b4aee120e52d48ae78283a4e73d19884b785d12d77bcbe999"
+}

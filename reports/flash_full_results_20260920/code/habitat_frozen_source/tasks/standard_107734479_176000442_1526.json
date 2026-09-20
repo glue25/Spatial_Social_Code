@@ -1,0 +1,320 @@
+{
+  "split": "standard",
+  "task_id": "emtom-107734479_176000442-1526-mixed-courier-prep-with-a-hidden-cabinet-choic-74e271e4",
+  "title": "Courier prep with a hidden cabinet choice",
+  "category": "mixed",
+  "task": "Prepare the apartment for a courier pickup. As a team, do ALL of the following: (1) put the plate onto the kitchen table, (2) put the stuffed toy onto the living-room couch, and (3) open the kitchen cabinet that was designated for pickup.",
+  "scene_id": "107734479_176000442",
+  "episode_id": "1526",
+  "agent_spawns": {
+    "agent_0": {
+      "position": [
+        -3.069430351257324,
+        0.1774507462978363,
+        -8.899806022644043
+      ],
+      "rotation": 1.0890461206436157
+    },
+    "agent_1": {
+      "position": [
+        -3.417774200439453,
+        0.1774507462978363,
+        -10.177398681640625
+      ],
+      "rotation": 2.9463140964508057
+    },
+    "agent_2": {
+      "position": [
+        -6.931848526000977,
+        0.1774507462978363,
+        -6.859072685241699
+      ],
+      "rotation": 1.4000352621078491
+    }
+  },
+  "initial_states": {},
+  "active_mechanics": [
+    "room_restriction",
+    "limited_bandwidth"
+  ],
+  "mechanic_bindings": [
+    {
+      "mechanic_type": "room_restriction",
+      "restricted_rooms": [
+        "kitchen_1"
+      ],
+      "for_agents": [
+        "agent_0"
+      ]
+    },
+    {
+      "mechanic_type": "room_restriction",
+      "restricted_rooms": [
+        "living_room_1"
+      ],
+      "for_agents": [
+        "agent_1"
+      ]
+    },
+    {
+      "mechanic_type": "limited_bandwidth",
+      "message_limits": {
+        "agent_0": 1,
+        "agent_1": 1,
+        "agent_2": 1
+      }
+    }
+  ],
+  "agent_secrets": {
+    "agent_0": [
+      "You are barred from kitchen_1.",
+      "agent_1 is barred from living_room_1.",
+      "Personal objective: the stuffed_toy_4 should remain on top of bed_24 in bedroom_2.",
+      "The designated pickup cabinet is cabinet_39 in kitchen_1."
+    ],
+    "agent_1": [
+      "You are barred from living_room_1.",
+      "agent_0 is barred from kitchen_1.",
+      "Personal objective: plate_1 should remain on top of table_10 in familyroom_1."
+    ],
+    "agent_2": [
+      "You can enter all rooms.",
+      "agent_0 is barred from kitchen_1.",
+      "agent_1 is barred from living_room_1.",
+      "Personal objective: cabinet_39 in kitchen_1 should be open."
+    ]
+  },
+  "agent_actions": {
+    "agent_0": [
+      "Navigate",
+      "Open",
+      "Close",
+      "Pick",
+      "Place",
+      "FindObjectTool",
+      "FindReceptacleTool",
+      "FindRoomTool",
+      "Communicate",
+      "Wait"
+    ],
+    "agent_1": [
+      "Navigate",
+      "Open",
+      "Close",
+      "Pick",
+      "Place",
+      "FindObjectTool",
+      "FindReceptacleTool",
+      "FindRoomTool",
+      "Communicate",
+      "Wait"
+    ],
+    "agent_2": [
+      "Navigate",
+      "Open",
+      "Close",
+      "Pick",
+      "Place",
+      "FindObjectTool",
+      "FindReceptacleTool",
+      "FindRoomTool",
+      "Communicate",
+      "Wait"
+    ]
+  },
+  "message_targets": {},
+  "pddl_domain": "enacttom",
+  "problem_pddl": "(define (problem emtom_mixed_k2_two_cabinet_pickup_107734479_176000442_ep1526_v1)\n  (:domain enacttom)\n  (:objects\n    agent_0 agent_1 agent_2 - agent\n    living_room_1 familyroom_1 closet_1 bedroom_2 kitchen_1 - room\n    plate_1 stuffed_toy_4 - object\n    couch_25 table_10 bed_24 table_22 cabinet_39 - furniture\n  )\n  (:init\n    (agent_in_room agent_0 living_room_1)\n    (agent_in_room agent_1 familyroom_1)\n    (agent_in_room agent_2 closet_1)\n    (is_in_room couch_25 living_room_1)\n    (is_in_room table_10 familyroom_1)\n    (is_in_room bed_24 bedroom_2)\n    (is_in_room table_22 kitchen_1)\n    (is_in_room cabinet_39 kitchen_1)\n    (is_in_room plate_1 familyroom_1)\n    (is_on_top plate_1 table_10)\n    (is_in_room stuffed_toy_4 bedroom_2)\n    (is_on_top stuffed_toy_4 bed_24)\n  )\n  (:goal (and\n    (is_on_top plate_1 table_22)\n    (is_on_top stuffed_toy_4 couch_25)\n    (is_open cabinet_39)\n    (K agent_0 (K agent_2 (is_open cabinet_39)))\n  ))\n  (:goal-owners\n    (agent_0 (is_on_top stuffed_toy_4 bed_24))\n    (agent_1 (is_on_top plate_1 table_10))\n    (agent_2 (is_open cabinet_39))\n  )\n)",
+  "num_agents": 3,
+  "teams": {},
+  "team_secrets": {},
+  "tom_level": 2,
+  "tom_reasoning": "Task includes second-order nested knowledge goals and the strict proof succeeds at depth 2. Agents must model what others think about third parties' knowledge. Gaps: agent_0 cannot see rooms: ['kitchen_1']; agent_1 cannot see rooms: ['living_room_1']. WARNING: 1 K() goal(s) are trivially satisfied (agent can directly observe the fact).",
+  "runtime_semantics_version": "literal_tom_probe_v1",
+  "functional_goal_pddl": "(and (is_on_top plate_1 table_22) (is_on_top stuffed_toy_4 couch_25) (is_open cabinet_39))",
+  "literal_tom_probes": [
+    {
+      "probe_id": "k_probe_0",
+      "agent_id": "agent_0",
+      "subject_agents": [
+        "agent_2"
+      ],
+      "fact_pddl": "(is_open cabinet_39)",
+      "fact_natural_language": "cabinet 39 is open",
+      "source_pddl": "(K agent_0 (K agent_2 (is_open cabinet_39)))",
+      "question": "Probe 0: agent_0 knows that agent_2 knows a fact about ordered entities [cabinet_39]. Report which benchmark predicate applies to those entities and whether it holds. The expected argument order is fixed as listed. If unknown, return predicate \"unknown\" and holds null. JSON shape: {\"probe_id\":\"k_probe_X\",\"predicate\":\"<predicate_name>|unknown\",\"holds\":true|false|null,\"args\":[\"entity_or_target\", ...]}",
+      "expected_response": {
+        "predicate": "is_open",
+        "holds": true,
+        "args": [
+          "cabinet_39"
+        ]
+      },
+      "depth": 2,
+      "owner": null,
+      "supported": true,
+      "unsupported_reason": null
+    },
+    {
+      "probe_id": "k_probe_1",
+      "agent_id": "agent_2",
+      "subject_agents": [],
+      "fact_pddl": "(is_open cabinet_39)",
+      "fact_natural_language": "cabinet 39 is open",
+      "source_pddl": "(K agent_2 (is_open cabinet_39))",
+      "question": "Probe 1: agent_2 knows a fact about ordered entities [cabinet_39]. Report which benchmark predicate applies to those entities and whether it holds. The expected argument order is fixed as listed. If unknown, return predicate \"unknown\" and holds null. JSON shape: {\"probe_id\":\"k_probe_X\",\"predicate\":\"<predicate_name>|unknown\",\"holds\":true|false|null,\"args\":[\"entity_or_target\", ...]}",
+      "expected_response": {
+        "predicate": "is_open",
+        "holds": true,
+        "args": [
+          "cabinet_39"
+        ]
+      },
+      "depth": 1,
+      "owner": null,
+      "supported": true,
+      "unsupported_reason": null
+    }
+  ],
+  "epistemic_conjuncts_removed": 1,
+  "runtime_projection_valid": true,
+  "runtime_projection_errors": [],
+  "tom_level_method": "strict_fd",
+  "golden_trajectory": [
+    {
+      "actions": [
+        {
+          "agent": "agent_0",
+          "action": "Navigate[bedroom_2]"
+        },
+        {
+          "agent": "agent_1",
+          "action": "Navigate[plate_1]"
+        },
+        {
+          "agent": "agent_2",
+          "action": "Wait[]"
+        }
+      ]
+    },
+    {
+      "actions": [
+        {
+          "agent": "agent_0",
+          "action": "Navigate[stuffed_toy_4]"
+        },
+        {
+          "agent": "agent_1",
+          "action": "Pick[plate_1]"
+        },
+        {
+          "agent": "agent_2",
+          "action": "Wait[]"
+        }
+      ]
+    },
+    {
+      "actions": [
+        {
+          "agent": "agent_0",
+          "action": "Pick[stuffed_toy_4]"
+        },
+        {
+          "agent": "agent_1",
+          "action": "Navigate[kitchen_1]"
+        },
+        {
+          "agent": "agent_2",
+          "action": "Wait[]"
+        }
+      ]
+    },
+    {
+      "actions": [
+        {
+          "agent": "agent_0",
+          "action": "Navigate[living_room_1]"
+        },
+        {
+          "agent": "agent_1",
+          "action": "Navigate[table_22]"
+        },
+        {
+          "agent": "agent_2",
+          "action": "Wait[]"
+        }
+      ]
+    },
+    {
+      "actions": [
+        {
+          "agent": "agent_0",
+          "action": "Navigate[couch_25]"
+        },
+        {
+          "agent": "agent_1",
+          "action": "Place[plate_1, on, table_22, None, None]"
+        },
+        {
+          "agent": "agent_2",
+          "action": "Wait[]"
+        }
+      ]
+    },
+    {
+      "actions": [
+        {
+          "agent": "agent_0",
+          "action": "Place[stuffed_toy_4, on, couch_25, None, None]"
+        },
+        {
+          "agent": "agent_1",
+          "action": "Navigate[cabinet_39]"
+        },
+        {
+          "agent": "agent_2",
+          "action": "Wait[]"
+        }
+      ]
+    },
+    {
+      "actions": [
+        {
+          "agent": "agent_0",
+          "action": "Wait[]"
+        },
+        {
+          "agent": "agent_1",
+          "action": "Open[cabinet_39]"
+        },
+        {
+          "agent": "agent_2",
+          "action": "Wait[]"
+        }
+      ]
+    }
+  ],
+  "golden_trajectory_metadata": {
+    "planner": "strict_fd_translator",
+    "planner_version": "v7_parallel_runtime",
+    "source": "cli_verify",
+    "spec_hash": "4798616879ebc47b275ddf97a849cf7eebce5cb0e0eaffa6b6a401b6428f2b48",
+    "trajectory_hash": "da7cdb6b62f7b60f23a5bde5b66253778c42a296bc8857bd4bd5ccdfc1e10cb3",
+    "generated_at": "2026-08-27T02:12:17.013916",
+    "num_steps": 7,
+    "communication_derived": false,
+    "ignored_epistemic_steps": 0,
+    "functional_goal_pddl": "(and (is_on_top plate_1 table_22) (is_on_top stuffed_toy_4 couch_25) (is_open cabinet_39))",
+    "planned_literals": [
+      "(is_on_top plate_1 table_22)",
+      "(is_on_top stuffed_toy_4 couch_25)",
+      "(is_open cabinet_39)"
+    ],
+    "ignored_literals": [],
+    "planner_notes": [
+      "Deterministic golden trajectory derived from strict Fast Downward plan.",
+      "Translated 8 planner step(s) into 7 golden step(s).",
+      "Runtime golden semantics removed 1 epistemic conjunct(s)."
+    ]
+  }
+}

@@ -1,0 +1,292 @@
+{
+  "split": "standard",
+  "task_id": "emtom-104348082_171512994-588-cooperative-inspection-staging-with-a-hidden-correct-8487f942",
+  "title": "Inspection staging with a hidden correct surface",
+  "category": "cooperative",
+  "task": "You are preparing the apartment for a quick inspection. As a team, do ALL of the following: (1) move the vase onto the bedroom-1 table, (2) leave the bedroom-1 chest of drawers open, and (3) leave the multiport hub on the living-room shelves.",
+  "scene_id": "104348082_171512994",
+  "episode_id": "588",
+  "agent_spawns": {
+    "agent_0": {
+      "position": [
+        -6.012299060821533,
+        0.16528025269508362,
+        -5.097275733947754
+      ],
+      "rotation": 0.05289842560887337
+    },
+    "agent_1": {
+      "position": [
+        -4.134091377258301,
+        0.16528025269508362,
+        -8.364537239074707
+      ],
+      "rotation": 0.7883855700492859
+    }
+  },
+  "initial_states": {},
+  "active_mechanics": [
+    "room_restriction",
+    "limited_bandwidth",
+    "remote_control"
+  ],
+  "mechanic_bindings": [
+    {
+      "mechanic_type": "room_restriction",
+      "restricted_rooms": [
+        "bedroom_1"
+      ],
+      "for_agents": [
+        "agent_0"
+      ]
+    },
+    {
+      "mechanic_type": "room_restriction",
+      "restricted_rooms": [
+        "living_room_1"
+      ],
+      "for_agents": [
+        "agent_1"
+      ]
+    },
+    {
+      "mechanic_type": "limited_bandwidth",
+      "message_limits": {
+        "agent_0": 1,
+        "agent_1": 1
+      }
+    },
+    {
+      "mechanic_type": "remote_control",
+      "trigger_object": "table_13",
+      "target_object": "chest_of_drawers_21",
+      "target_state": "is_open"
+    }
+  ],
+  "agent_secrets": {
+    "agent_0": [
+      "You are barred from bedroom_1.",
+      "The vase is in kitchen_1 on top of cabinet_20.",
+      "The correct destination surface for the vase is the table in bedroom_1.",
+      "Interacting with table_13 in living_room_1 remotely causes chest_of_drawers_21 in bedroom_1 to become open."
+    ],
+    "agent_1": [
+      "You are barred from living_room_1.",
+      "multiport_hub_3 starts on shelves_7 in living_room_1."
+    ]
+  },
+  "agent_actions": {
+    "agent_0": [
+      "Navigate",
+      "Open",
+      "Close",
+      "Pick",
+      "Place",
+      "FindObjectTool",
+      "FindReceptacleTool",
+      "FindRoomTool",
+      "Communicate",
+      "Wait"
+    ],
+    "agent_1": [
+      "Navigate",
+      "Open",
+      "Close",
+      "Pick",
+      "Place",
+      "FindObjectTool",
+      "FindReceptacleTool",
+      "FindRoomTool",
+      "Communicate",
+      "Wait"
+    ]
+  },
+  "message_targets": {},
+  "pddl_domain": "enacttom",
+  "problem_pddl": "(define (problem coop_tom2_hidden_surface_vase_drawer_104348082_171512994_588)\n  (:domain enacttom)\n  (:objects\n    agent_0 agent_1 - agent\n    living_room_1 closet_1 bedroom_1 kitchen_1 - room\n    multiport_hub_3 vase_4 - object\n    shelves_7 table_13 chest_of_drawers_21 table_22 cabinet_20 - furniture\n  )\n  (:init\n    (agent_in_room agent_0 living_room_1)\n    (agent_in_room agent_1 closet_1)\n    (is_in_room shelves_7 living_room_1)\n    (is_in_room table_13 living_room_1)\n    (is_in_room chest_of_drawers_21 bedroom_1)\n    (is_in_room table_22 bedroom_1)\n    (is_in_room cabinet_20 kitchen_1)\n    (is_in_room multiport_hub_3 living_room_1)\n    (is_on_top multiport_hub_3 shelves_7)\n    (is_in_room vase_4 kitchen_1)\n    (is_on_top vase_4 cabinet_20)\n  )\n  (:goal (and\n    (is_on_top vase_4 table_22)\n    (is_open chest_of_drawers_21)\n    (is_on_top multiport_hub_3 shelves_7)\n    (K agent_0 (K agent_1 (is_open chest_of_drawers_21)))\n  ))\n)",
+  "tom_level": 2,
+  "tom_reasoning": "Task includes second-order nested knowledge goals and the strict proof succeeds at depth 2. Agents must model what others think about third parties' knowledge. Gaps: agent_0 cannot see rooms: ['bedroom_1']; agent_1 cannot see rooms: ['living_room_1']; Effect of table_13 hidden from: ['agent_0', 'agent_1']. WARNING: 1 K() goal(s) are trivially satisfied (agent can directly observe the fact).",
+  "runtime_semantics_version": "literal_tom_probe_v1",
+  "functional_goal_pddl": "(and (is_on_top vase_4 table_22) (is_open chest_of_drawers_21) (is_on_top multiport_hub_3 shelves_7))",
+  "literal_tom_probes": [
+    {
+      "probe_id": "k_probe_0",
+      "agent_id": "agent_0",
+      "subject_agents": [
+        "agent_1"
+      ],
+      "fact_pddl": "(is_open chest_of_drawers_21)",
+      "fact_natural_language": "chest of drawers 21 is open",
+      "source_pddl": "(K agent_0 (K agent_1 (is_open chest_of_drawers_21)))",
+      "question": "Probe 0: agent_0 knows that agent_1 knows a fact about ordered entities [chest_of_drawers_21]. Report which benchmark predicate applies to those entities and whether it holds. The expected argument order is fixed as listed. If unknown, return predicate \"unknown\" and holds null. JSON shape: {\"probe_id\":\"k_probe_X\",\"predicate\":\"<predicate_name>|unknown\",\"holds\":true|false|null,\"args\":[\"entity_or_target\", ...]}",
+      "expected_response": {
+        "predicate": "is_open",
+        "holds": true,
+        "args": [
+          "chest_of_drawers_21"
+        ]
+      },
+      "depth": 2,
+      "owner": null,
+      "supported": true,
+      "unsupported_reason": null
+    },
+    {
+      "probe_id": "k_probe_1",
+      "agent_id": "agent_1",
+      "subject_agents": [],
+      "fact_pddl": "(is_open chest_of_drawers_21)",
+      "fact_natural_language": "chest of drawers 21 is open",
+      "source_pddl": "(K agent_1 (is_open chest_of_drawers_21))",
+      "question": "Probe 1: agent_1 knows a fact about ordered entities [chest_of_drawers_21]. Report which benchmark predicate applies to those entities and whether it holds. The expected argument order is fixed as listed. If unknown, return predicate \"unknown\" and holds null. JSON shape: {\"probe_id\":\"k_probe_X\",\"predicate\":\"<predicate_name>|unknown\",\"holds\":true|false|null,\"args\":[\"entity_or_target\", ...]}",
+      "expected_response": {
+        "predicate": "is_open",
+        "holds": true,
+        "args": [
+          "chest_of_drawers_21"
+        ]
+      },
+      "depth": 1,
+      "owner": null,
+      "supported": true,
+      "unsupported_reason": null
+    }
+  ],
+  "epistemic_conjuncts_removed": 1,
+  "runtime_projection_valid": true,
+  "runtime_projection_errors": [],
+  "tom_level_method": "strict_fd",
+  "golden_trajectory": [
+    {
+      "actions": [
+        {
+          "agent": "agent_0",
+          "action": "Wait[]"
+        },
+        {
+          "agent": "agent_1",
+          "action": "Navigate[bedroom_1]"
+        }
+      ]
+    },
+    {
+      "actions": [
+        {
+          "agent": "agent_0",
+          "action": "Wait[]"
+        },
+        {
+          "agent": "agent_1",
+          "action": "Navigate[kitchen_1]"
+        }
+      ]
+    },
+    {
+      "actions": [
+        {
+          "agent": "agent_0",
+          "action": "Wait[]"
+        },
+        {
+          "agent": "agent_1",
+          "action": "Navigate[vase_4]"
+        }
+      ]
+    },
+    {
+      "actions": [
+        {
+          "agent": "agent_0",
+          "action": "Wait[]"
+        },
+        {
+          "agent": "agent_1",
+          "action": "Pick[vase_4]"
+        }
+      ]
+    },
+    {
+      "actions": [
+        {
+          "agent": "agent_0",
+          "action": "Wait[]"
+        },
+        {
+          "agent": "agent_1",
+          "action": "Navigate[bedroom_1]"
+        }
+      ]
+    },
+    {
+      "actions": [
+        {
+          "agent": "agent_0",
+          "action": "Wait[]"
+        },
+        {
+          "agent": "agent_1",
+          "action": "Navigate[table_22]"
+        }
+      ]
+    },
+    {
+      "actions": [
+        {
+          "agent": "agent_0",
+          "action": "Wait[]"
+        },
+        {
+          "agent": "agent_1",
+          "action": "Place[vase_4, on, table_22, None, None]"
+        }
+      ]
+    },
+    {
+      "actions": [
+        {
+          "agent": "agent_0",
+          "action": "Wait[]"
+        },
+        {
+          "agent": "agent_1",
+          "action": "Navigate[table_13]"
+        }
+      ]
+    },
+    {
+      "actions": [
+        {
+          "agent": "agent_0",
+          "action": "Wait[]"
+        },
+        {
+          "agent": "agent_1",
+          "action": "Open[table_13]"
+        }
+      ]
+    }
+  ],
+  "golden_trajectory_metadata": {
+    "planner": "strict_fd_translator",
+    "planner_version": "v7_parallel_runtime",
+    "source": "cli_verify",
+    "spec_hash": "a54b047a2f791dd55a0404d489f49c988d0a71366d712597d7a8f442e76b12c9",
+    "trajectory_hash": "d728c78e519cfd1b2a938e75c2903687355170a000288879ae3c3cdd17f165e4",
+    "generated_at": "2026-08-26T17:53:20.088309",
+    "num_steps": 9,
+    "communication_derived": false,
+    "ignored_epistemic_steps": 0,
+    "functional_goal_pddl": "(and (is_on_top vase_4 table_22) (is_open chest_of_drawers_21) (is_on_top multiport_hub_3 shelves_7))",
+    "planned_literals": [
+      "(is_on_top multiport_hub_3 shelves_7)",
+      "(is_on_top vase_4 table_22)",
+      "(is_open chest_of_drawers_21)"
+    ],
+    "ignored_literals": [],
+    "planner_notes": [
+      "Deterministic golden trajectory derived from strict Fast Downward plan.",
+      "Translated 6 planner step(s) into 9 golden step(s).",
+      "Runtime golden semantics removed 1 epistemic conjunct(s)."
+    ]
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "index": 6,
+  "type": "1.1",
+  "answer": "a",
+  "direct_prediction": "a",
+  "ssc_prediction": "b",
+  "direct_correct": true,
+  "ssc_correct": false,
+  "direct_invalid": false,
+  "ssc_invalid": false,
+  "pro_direct_correct": true,
+  "pro_ssc_correct": true,
+  "error_type": null,
+  "direct_recovered_from_own_reply": false,
+  "dense": false,
+  "source": "workdirs/flash_budget16384_pilot_20260919/runs/mmtom/results/0006.json"
+}

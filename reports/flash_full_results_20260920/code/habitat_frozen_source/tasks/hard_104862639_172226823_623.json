@@ -1,0 +1,447 @@
+{
+  "split": "hard",
+  "task_id": "emtom-104862639_172226823-623-mixed-laundry-to-kitchen-reset-with-relayed-fr-38041058",
+  "title": "Laundry-to-kitchen reset with relayed fridge confirmation",
+  "category": "mixed",
+  "task": "Reset the home before guests arrive. As a group, complete all of the following shared chores: (1) put the toy vehicle on the living-room side table, (2) put the hand towel on the laundry-room shelves, and (3) leave the correct kitchen storage piece open at the end.",
+  "scene_id": "104862639_172226823",
+  "episode_id": "623",
+  "agent_spawns": {
+    "agent_0": {
+      "position": [
+        -8.313193321228027,
+        0.17659315466880798,
+        -2.9896693229675293
+      ],
+      "rotation": 1.963857889175415
+    },
+    "agent_1": {
+      "position": [
+        -9.489087104797363,
+        0.17659315466880798,
+        -2.70766544342041
+      ],
+      "rotation": -0.3939037621021271
+    },
+    "agent_2": {
+      "position": [
+        -0.5288047194480896,
+        0.17659315466880798,
+        -2.9573960304260254
+      ],
+      "rotation": -1.665838599205017
+    }
+  },
+  "initial_states": {},
+  "active_mechanics": [
+    "room_restriction",
+    "limited_bandwidth",
+    "restricted_communication"
+  ],
+  "mechanic_bindings": [
+    {
+      "mechanic_type": "room_restriction",
+      "restricted_rooms": [
+        "kitchen_1"
+      ],
+      "for_agents": [
+        "agent_0"
+      ]
+    },
+    {
+      "mechanic_type": "limited_bandwidth",
+      "message_limits": {
+        "agent_0": 1,
+        "agent_1": 1,
+        "agent_2": 1
+      }
+    },
+    {
+      "mechanic_type": "restricted_communication",
+      "allowed_targets": {
+        "agent_0": [
+          "agent_1"
+        ],
+        "agent_1": [
+          "agent_0",
+          "agent_2"
+        ],
+        "agent_2": [
+          "agent_1"
+        ]
+      }
+    }
+  ],
+  "agent_secrets": {
+    "agent_0": [
+      "agent_0 is barred from kitchen_1.",
+      "You can only message agent_1.",
+      "The living-room side table for the toy vehicle is table_19.",
+      "Your personal objective: cushion_2 must be on top of chair_17 in bedroom_1 at the end."
+    ],
+    "agent_1": [
+      "You can message agent_0 and agent_2.",
+      "The hand towel to move is hand_towel_6.",
+      "The laundry-room shelves that must receive the hand towel are shelves_20.",
+      "Your personal objective: chest_of_drawers_29 in bedroom_2 must be open at the end."
+    ],
+    "agent_2": [
+      "You can only message agent_1.",
+      "The kitchen storage piece that must end open is fridge_31.",
+      "Before the task starts, you saw that fridge_31 is in kitchen_1.",
+      "Your personal objective: canister_3 must be on top of counter_25 at the end."
+    ]
+  },
+  "agent_actions": {
+    "agent_0": [
+      "Navigate",
+      "Open",
+      "Close",
+      "Pick",
+      "Place",
+      "FindObjectTool",
+      "FindReceptacleTool",
+      "FindRoomTool",
+      "Communicate",
+      "Wait"
+    ],
+    "agent_1": [
+      "Navigate",
+      "Open",
+      "Close",
+      "Pick",
+      "Place",
+      "FindObjectTool",
+      "FindReceptacleTool",
+      "FindRoomTool",
+      "Communicate",
+      "Wait"
+    ],
+    "agent_2": [
+      "Navigate",
+      "Open",
+      "Close",
+      "Pick",
+      "Place",
+      "FindObjectTool",
+      "FindReceptacleTool",
+      "FindRoomTool",
+      "Communicate",
+      "Wait"
+    ]
+  },
+  "message_targets": {},
+  "pddl_domain": "enacttom",
+  "problem_pddl": "(define (problem mixed_k3_laundry_kitchen_reset_104862639_172226823_ep623_v1)\n  (:domain enacttom)\n  (:objects\n    agent_0 agent_1 agent_2 - agent\n    bedroom_1 bathroom_1 living_room_1 laundryroom_1 bedroom_2 kitchen_1 - room\n    cushion_2 hand_towel_6 toy_vehicle_0 canister_3 - object\n    chair_17 bed_18 table_19 couch_26 shelves_20 chest_of_drawers_29 counter_25 cabinet_28 fridge_31 - furniture\n  )\n  (:init\n    (agent_in_room agent_0 bedroom_1)\n    (agent_in_room agent_1 bathroom_1)\n    (agent_in_room agent_2 living_room_1)\n    (is_in_room chair_17 bedroom_1)\n    (is_in_room bed_18 bedroom_1)\n    (is_in_room table_19 living_room_1)\n    (is_in_room couch_26 living_room_1)\n    (is_in_room shelves_20 laundryroom_1)\n    (is_in_room chest_of_drawers_29 bedroom_2)\n    (is_in_room counter_25 kitchen_1)\n    (is_in_room cabinet_28 kitchen_1)\n    (is_in_room fridge_31 kitchen_1)\n    (is_in_room cushion_2 bedroom_1)\n    (is_on_top cushion_2 bed_18)\n    (is_in_room hand_towel_6 living_room_1)\n    (is_on_top hand_towel_6 couch_26)\n    (is_in_room toy_vehicle_0 laundryroom_1)\n    (is_on_top toy_vehicle_0 shelves_20)\n    (is_in_room canister_3 kitchen_1)\n    (is_on_top canister_3 cabinet_28)\n  )\n  (:goal (and\n    (is_on_top toy_vehicle_0 table_19)\n    (is_on_top hand_towel_6 shelves_20)\n    (is_open fridge_31)\n    (K agent_0 (K agent_1 (K agent_2 (is_open fridge_31))))\n  ))\n  (:goal-owners\n    (agent_0 (is_on_top cushion_2 chair_17))\n    (agent_1 (is_open chest_of_drawers_29))\n    (agent_2 (is_on_top canister_3 counter_25))\n  )\n)",
+  "num_agents": 3,
+  "teams": {},
+  "team_secrets": {},
+  "tom_level": 3,
+  "tom_reasoning": "Task includes third-order nested knowledge goals and the strict proof succeeds at depth 3. Complex nested beliefs about others' models of others. Gaps: agent_0 cannot see rooms: ['kitchen_1']. WARNING: 1 K() goal(s) are trivially satisfied (agent can directly observe the fact).",
+  "runtime_semantics_version": "literal_tom_probe_v1",
+  "functional_goal_pddl": "(and (is_on_top toy_vehicle_0 table_19) (is_on_top hand_towel_6 shelves_20) (is_open fridge_31))",
+  "literal_tom_probes": [
+    {
+      "probe_id": "k_probe_0",
+      "agent_id": "agent_0",
+      "subject_agents": [
+        "agent_1",
+        "agent_2"
+      ],
+      "fact_pddl": "(is_open fridge_31)",
+      "fact_natural_language": "fridge 31 is open",
+      "source_pddl": "(K agent_0 (K agent_1 (K agent_2 (is_open fridge_31))))",
+      "question": "Probe 0: predict what agent_1 would report about \"fridge 31 is open\" for ordered entities [fridge_31]. The expected argument order is fixed as listed. If unknown, return predicate \"unknown\" and holds null. JSON shape: {\"probe_id\":\"k_probe_X\",\"predicate\":\"<predicate_name>|unknown\",\"holds\":true|false|null,\"args\":[\"entity_or_target\", ...]}",
+      "expected_response": {
+        "predicate": "is_open",
+        "holds": true,
+        "args": [
+          "fridge_31"
+        ]
+      },
+      "depth": 3,
+      "owner": null,
+      "supported": true,
+      "unsupported_reason": null
+    },
+    {
+      "probe_id": "k_probe_1",
+      "agent_id": "agent_1",
+      "subject_agents": [
+        "agent_2"
+      ],
+      "fact_pddl": "(is_open fridge_31)",
+      "fact_natural_language": "fridge 31 is open",
+      "source_pddl": "(K agent_1 (K agent_2 (is_open fridge_31)))",
+      "question": "Probe 1: predict what agent_2 would report about \"fridge 31 is open\" for ordered entities [fridge_31]. The expected argument order is fixed as listed. If unknown, return predicate \"unknown\" and holds null. JSON shape: {\"probe_id\":\"k_probe_X\",\"predicate\":\"<predicate_name>|unknown\",\"holds\":true|false|null,\"args\":[\"entity_or_target\", ...]}",
+      "expected_response": {
+        "predicate": "is_open",
+        "holds": true,
+        "args": [
+          "fridge_31"
+        ]
+      },
+      "depth": 2,
+      "owner": null,
+      "supported": true,
+      "unsupported_reason": null
+    },
+    {
+      "probe_id": "k_probe_2",
+      "agent_id": "agent_2",
+      "subject_agents": [],
+      "fact_pddl": "(is_open fridge_31)",
+      "fact_natural_language": "fridge 31 is open",
+      "source_pddl": "(K agent_2 (is_open fridge_31))",
+      "question": "Probe 2: report whether \"fridge 31 is open\" holds for ordered entities [fridge_31]. The expected argument order is fixed as listed. If unknown, return predicate \"unknown\" and holds null. JSON shape: {\"probe_id\":\"k_probe_X\",\"predicate\":\"<predicate_name>|unknown\",\"holds\":true|false|null,\"args\":[\"entity_or_target\", ...]}",
+      "expected_response": {
+        "predicate": "is_open",
+        "holds": true,
+        "args": [
+          "fridge_31"
+        ]
+      },
+      "depth": 1,
+      "owner": null,
+      "supported": true,
+      "unsupported_reason": null
+    }
+  ],
+  "epistemic_conjuncts_removed": 1,
+  "runtime_projection_valid": true,
+  "runtime_projection_errors": [],
+  "tom_level_method": "strict_fd",
+  "golden_trajectory": [
+    {
+      "actions": [
+        {
+          "agent": "agent_0",
+          "action": "Wait[]"
+        },
+        {
+          "agent": "agent_1",
+          "action": "Wait[]"
+        },
+        {
+          "agent": "agent_2",
+          "action": "Navigate[hand_towel_6]"
+        }
+      ]
+    },
+    {
+      "actions": [
+        {
+          "agent": "agent_0",
+          "action": "Wait[]"
+        },
+        {
+          "agent": "agent_1",
+          "action": "Wait[]"
+        },
+        {
+          "agent": "agent_2",
+          "action": "Pick[hand_towel_6]"
+        }
+      ]
+    },
+    {
+      "actions": [
+        {
+          "agent": "agent_0",
+          "action": "Wait[]"
+        },
+        {
+          "agent": "agent_1",
+          "action": "Wait[]"
+        },
+        {
+          "agent": "agent_2",
+          "action": "Navigate[laundryroom_1]"
+        }
+      ]
+    },
+    {
+      "actions": [
+        {
+          "agent": "agent_0",
+          "action": "Wait[]"
+        },
+        {
+          "agent": "agent_1",
+          "action": "Wait[]"
+        },
+        {
+          "agent": "agent_2",
+          "action": "Navigate[toy_vehicle_0]"
+        }
+      ]
+    },
+    {
+      "actions": [
+        {
+          "agent": "agent_0",
+          "action": "Wait[]"
+        },
+        {
+          "agent": "agent_1",
+          "action": "Wait[]"
+        },
+        {
+          "agent": "agent_2",
+          "action": "Pick[toy_vehicle_0]"
+        }
+      ]
+    },
+    {
+      "actions": [
+        {
+          "agent": "agent_0",
+          "action": "Wait[]"
+        },
+        {
+          "agent": "agent_1",
+          "action": "Wait[]"
+        },
+        {
+          "agent": "agent_2",
+          "action": "Navigate[shelves_20]"
+        }
+      ]
+    },
+    {
+      "actions": [
+        {
+          "agent": "agent_0",
+          "action": "Wait[]"
+        },
+        {
+          "agent": "agent_1",
+          "action": "Wait[]"
+        },
+        {
+          "agent": "agent_2",
+          "action": "Place[hand_towel_6, on, shelves_20, None, None]"
+        }
+      ]
+    },
+    {
+      "actions": [
+        {
+          "agent": "agent_0",
+          "action": "Wait[]"
+        },
+        {
+          "agent": "agent_1",
+          "action": "Wait[]"
+        },
+        {
+          "agent": "agent_2",
+          "action": "Navigate[kitchen_1]"
+        }
+      ]
+    },
+    {
+      "actions": [
+        {
+          "agent": "agent_0",
+          "action": "Wait[]"
+        },
+        {
+          "agent": "agent_1",
+          "action": "Wait[]"
+        },
+        {
+          "agent": "agent_2",
+          "action": "Navigate[fridge_31]"
+        }
+      ]
+    },
+    {
+      "actions": [
+        {
+          "agent": "agent_0",
+          "action": "Wait[]"
+        },
+        {
+          "agent": "agent_1",
+          "action": "Wait[]"
+        },
+        {
+          "agent": "agent_2",
+          "action": "Open[fridge_31]"
+        }
+      ]
+    },
+    {
+      "actions": [
+        {
+          "agent": "agent_0",
+          "action": "Wait[]"
+        },
+        {
+          "agent": "agent_1",
+          "action": "Wait[]"
+        },
+        {
+          "agent": "agent_2",
+          "action": "Navigate[living_room_1]"
+        }
+      ]
+    },
+    {
+      "actions": [
+        {
+          "agent": "agent_0",
+          "action": "Wait[]"
+        },
+        {
+          "agent": "agent_1",
+          "action": "Wait[]"
+        },
+        {
+          "agent": "agent_2",
+          "action": "Navigate[table_19]"
+        }
+      ]
+    },
+    {
+      "actions": [
+        {
+          "agent": "agent_0",
+          "action": "Wait[]"
+        },
+        {
+          "agent": "agent_1",
+          "action": "Wait[]"
+        },
+        {
+          "agent": "agent_2",
+          "action": "Place[toy_vehicle_0, on, table_19, None, None]"
+        }
+      ]
+    }
+  ],
+  "golden_trajectory_metadata": {
+    "planner": "strict_fd_translator",
+    "planner_version": "v7_parallel_runtime",
+    "source": "cli_verify",
+    "spec_hash": "2aeaa547bad5676cc3671a8db5066f30bd21d635dea582a671ebf9bdccc8bf29",
+    "trajectory_hash": "db6db829099589232ebade2f1c1db0d5b053df06dd6ddc77330c7c75d853bc8f",
+    "generated_at": "2026-08-27T01:48:45.149197",
+    "num_steps": 13,
+    "communication_derived": false,
+    "ignored_epistemic_steps": 0,
+    "functional_goal_pddl": "(and (is_on_top toy_vehicle_0 table_19) (is_on_top hand_towel_6 shelves_20) (is_open fridge_31))",
+    "planned_literals": [
+      "(is_on_top hand_towel_6 shelves_20)",
+      "(is_on_top toy_vehicle_0 table_19)",
+      "(is_open fridge_31)"
+    ],
+    "ignored_literals": [],
+    "planner_notes": [
+      "Deterministic golden trajectory derived from strict Fast Downward plan.",
+      "Translated 8 planner step(s) into 13 golden step(s).",
+      "Runtime golden semantics removed 1 epistemic conjunct(s)."
+    ]
+  }
+}

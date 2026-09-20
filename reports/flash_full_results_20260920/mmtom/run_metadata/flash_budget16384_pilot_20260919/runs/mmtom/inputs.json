@@ -1,0 +1,987 @@
+[
+  {
+    "index": 0,
+    "row": {
+      "question": "What's inside the apartment: The apartment consists of a bedroom, kitchen, living room, and bathroom. \nIn the bedroom, there is a coffee table and a desk, with a dish bowl and two wine glasses placed on the coffee table. \nThe kitchen is equipped with four cabinets, a fridge, a kitchen table, a microwave, and a stove. The third cabinet from the left houses a wine glass, while the second cabinet contains a plate. The first and fourth cabinets are empty. Inside the fridge, there is a plate and a cupcake, and the microwave contains another cupcake. The stove has a salmon cooking inside. \nThe living room features a cabinet, a sofa, a coffee table, and a desk. The cabinet holds a dish bowl, an apple, a bag of chips, a wine glass, and a condiment bottle. On the coffee table, there are two water glasses, a book, and a bottle of wine. \nThe bathroom is furnished with a bathroom cabinet, which is currently empty. \nActions taken by Jennifer: Jennifer is situated in the bathroom. She proceeds to the kitchen and advances towards the wine glass. \nQuestion: If Jennifer has been trying to get a plate, which one of the following statements is more likely to be true? (a) Jennifer thinks that the plate is inside the fridge. (b) Jennifer thinks that the plate is not inside the fridge. Please respond with either a or b.",
+      "answer": "b",
+      "question_type": 1.3,
+      "test": [
+        "init_graph",
+        "actions"
+      ],
+      "episode": 6,
+      "start_time": 0,
+      "end_time": 5,
+      "answer_list": [
+        "a",
+        "b"
+      ]
+    },
+    "frames_8": {
+      "episode": 6,
+      "end_time": 5,
+      "end_frame": 84,
+      "requested_frame_numbers": [
+        0,
+        12,
+        24,
+        36,
+        48,
+        60,
+        72,
+        84
+      ],
+      "frame_numbers": [
+        0,
+        12,
+        24,
+        36,
+        48,
+        60,
+        72,
+        84
+      ]
+    },
+    "frames_16": {
+      "episode": 6,
+      "end_time": 5,
+      "end_frame": 84,
+      "requested_frame_numbers": [
+        0,
+        5,
+        10,
+        15,
+        20,
+        25,
+        30,
+        35,
+        40,
+        45,
+        50,
+        55,
+        60,
+        65,
+        70,
+        75
+      ],
+      "frame_numbers": [
+        0,
+        0,
+        12,
+        12,
+        24,
+        24,
+        24,
+        36,
+        36,
+        48,
+        48,
+        60,
+        60,
+        60,
+        72,
+        72
+      ]
+    },
+    "media_files": [
+      "${PROJECT_ROOT}/MMToM-QA-data/required_frames/task_6/script/0/Action_0000_0_normal.png",
+      "${PROJECT_ROOT}/MMToM-QA-data/required_frames/task_6/script/0/Action_0012_0_normal.png",
+      "${PROJECT_ROOT}/MMToM-QA-data/required_frames/task_6/script/0/Action_0024_0_normal.png",
+      "${PROJECT_ROOT}/MMToM-QA-data/required_frames/task_6/script/0/Action_0036_0_normal.png",
+      "${PROJECT_ROOT}/MMToM-QA-data/required_frames/task_6/script/0/Action_0048_0_normal.png",
+      "${PROJECT_ROOT}/MMToM-QA-data/required_frames/task_6/script/0/Action_0060_0_normal.png",
+      "${PROJECT_ROOT}/MMToM-QA-data/required_frames/task_6/script/0/Action_0072_0_normal.png",
+      "${PROJECT_ROOT}/MMToM-QA-data/required_frames/task_6/script/0/Action_0084_0_normal.png"
+    ]
+  },
+  {
+    "index": 1,
+    "row": {
+      "question": "What's inside the apartment: The apartment consists of a bedroom, kitchen, living room, and bathroom. \nIn the bedroom, there is a coffee table and a desk. \nThe kitchen is equipped with four cabinets, a fridge, a kitchen table, a microwave, and a stove. The third cabinet from the left houses a water glass and a dish bowl, while the fridge contains two apples, a salmon, a plate, and a dish bowl. The second cabinet from the left holds a water glass, a bag of chips, a condiment bottle, and a dish bowl. The first cabinet from the left contains a wine glass, a bottle of wine, and a condiment bottle. The microwave has a salmon inside, and there is a cupcake in the stove. The fourth cabinet from the left has a plate inside. \nThe living room features a cabinet, a sofa, a coffee table, and a desk. Inside the cabinet, there are two apples and four books. A plate and a remote control are placed on the coffee table. \nThe bathroom is furnished with a cabinet, which is currently empty. \nActions taken by Mark: Mark is situated in the bathroom. He proceeds towards the kitchen, making his way to the stove which he opens and then shuts. Following this, he strides towards the fourth kitchen cabinet, opens it, and then secures it shut. He then moves to the second kitchen cabinet, opens it, and closes it. He repeats this action with the third kitchen cabinet. Finally, he walks towards the first kitchen cabinet, opens it, and then firmly closes it. \nQuestion: If Mark has been trying to get a salmon, which one of the following statements is more likely to be true? (a) Mark thinks that the salmon is inside the microwave. (b) Mark thinks that the salmon is not inside the microwave. Please respond with either a or b.",
+      "answer": "b",
+      "question_type": 1.3,
+      "test": [
+        "init_graph",
+        "actions"
+      ],
+      "episode": 23,
+      "start_time": 0,
+      "end_time": 21,
+      "answer_list": [
+        "a",
+        "b"
+      ]
+    },
+    "frames_8": {
+      "episode": 23,
+      "end_time": 21,
+      "end_frame": 1082,
+      "requested_frame_numbers": [
+        0,
+        154,
+        308,
+        462,
+        616,
+        770,
+        924,
+        1078
+      ],
+      "frame_numbers": [
+        0,
+        154,
+        308,
+        462,
+        616,
+        770,
+        924,
+        1078
+      ]
+    },
+    "frames_16": {
+      "episode": 23,
+      "end_time": 21,
+      "end_frame": 1082,
+      "requested_frame_numbers": [
+        0,
+        72,
+        144,
+        216,
+        288,
+        360,
+        432,
+        504,
+        576,
+        648,
+        720,
+        792,
+        864,
+        936,
+        1008,
+        1080
+      ],
+      "frame_numbers": [
+        0,
+        0,
+        154,
+        154,
+        308,
+        308,
+        462,
+        462,
+        616,
+        616,
+        770,
+        770,
+        924,
+        924,
+        1078,
+        1078
+      ]
+    },
+    "media_files": [
+      "${PROJECT_ROOT}/MMToM-QA-data/required_frames/task_23/script/0/Action_0000_0_normal.png",
+      "${PROJECT_ROOT}/MMToM-QA-data/required_frames/task_23/script/0/Action_0154_0_normal.png",
+      "${PROJECT_ROOT}/MMToM-QA-data/required_frames/task_23/script/0/Action_0308_0_normal.png",
+      "${PROJECT_ROOT}/MMToM-QA-data/required_frames/task_23/script/0/Action_0462_0_normal.png",
+      "${PROJECT_ROOT}/MMToM-QA-data/required_frames/task_23/script/0/Action_0616_0_normal.png",
+      "${PROJECT_ROOT}/MMToM-QA-data/required_frames/task_23/script/0/Action_0770_0_normal.png",
+      "${PROJECT_ROOT}/MMToM-QA-data/required_frames/task_23/script/0/Action_0924_0_normal.png",
+      "${PROJECT_ROOT}/MMToM-QA-data/required_frames/task_23/script/0/Action_1078_0_normal.png"
+    ]
+  },
+  {
+    "index": 2,
+    "row": {
+      "question": "What's inside the apartment: The apartment consists of a bedroom, kitchen, living room, and bathroom. \nIn the bedroom, there is a coffee table and a desk. \nThe kitchen is equipped with four cabinets, a fridge, a kitchen table, a microwave, and a stove. The third cabinet from the left houses a water glass and a dish bowl. Inside the fridge, there are two apples, a salmon, a plate, and a dish bowl. The second cabinet from the left contains a water glass, a bag of chips, a condiment bottle, and a dish bowl. The first cabinet from the left holds a wine glass, a bottle of wine, and a condiment bottle. The microwave contains a salmon, and there is a cupcake in the stove. The fourth cabinet from the left has a plate. \nThe living room features a cabinet, a sofa, a coffee table, and a desk. Inside the cabinet, there are two apples and four books. A plate and a remote control are placed on the coffee table. \nThe bathroom is furnished with a bathroom cabinet, which is currently empty. \nActions taken by Mark: Mark is situated in the bathroom. He proceeds towards the kitchen, making his way to the stove. He opens and then closes the stove. Subsequently, he strides towards the fourth kitchen cabinet, opens it, and then shuts it. He then moves to the second kitchen cabinet, opens and closes it, before doing the same with the third kitchen cabinet. Finally, he heads towards the first kitchen cabinet, opens and closes it, and is about to open the microwave. \nQuestion: If Mark has been trying to get a salmon, which one of the following statements is more likely to be true? (a) Mark thinks that the salmon is not inside the microwave. (b) Mark thinks that the salmon is inside the microwave. Please respond with either a or b.",
+      "answer": "b",
+      "question_type": 1.1,
+      "test": [
+        "init_graph",
+        "actions"
+      ],
+      "episode": 23,
+      "start_time": 21,
+      "end_time": 21,
+      "answer_list": [
+        "a",
+        "b"
+      ]
+    },
+    "frames_8": {
+      "episode": 23,
+      "end_time": 21,
+      "end_frame": 1082,
+      "requested_frame_numbers": [
+        0,
+        154,
+        308,
+        462,
+        616,
+        770,
+        924,
+        1078
+      ],
+      "frame_numbers": [
+        0,
+        154,
+        308,
+        462,
+        616,
+        770,
+        924,
+        1078
+      ]
+    },
+    "frames_16": {
+      "episode": 23,
+      "end_time": 21,
+      "end_frame": 1082,
+      "requested_frame_numbers": [
+        0,
+        72,
+        144,
+        216,
+        288,
+        360,
+        432,
+        504,
+        576,
+        648,
+        720,
+        792,
+        864,
+        936,
+        1008,
+        1080
+      ],
+      "frame_numbers": [
+        0,
+        0,
+        154,
+        154,
+        308,
+        308,
+        462,
+        462,
+        616,
+        616,
+        770,
+        770,
+        924,
+        924,
+        1078,
+        1078
+      ]
+    },
+    "media_files": [
+      "${PROJECT_ROOT}/MMToM-QA-data/required_frames/task_23/script/0/Action_0000_0_normal.png",
+      "${PROJECT_ROOT}/MMToM-QA-data/required_frames/task_23/script/0/Action_0154_0_normal.png",
+      "${PROJECT_ROOT}/MMToM-QA-data/required_frames/task_23/script/0/Action_0308_0_normal.png",
+      "${PROJECT_ROOT}/MMToM-QA-data/required_frames/task_23/script/0/Action_0462_0_normal.png",
+      "${PROJECT_ROOT}/MMToM-QA-data/required_frames/task_23/script/0/Action_0616_0_normal.png",
+      "${PROJECT_ROOT}/MMToM-QA-data/required_frames/task_23/script/0/Action_0770_0_normal.png",
+      "${PROJECT_ROOT}/MMToM-QA-data/required_frames/task_23/script/0/Action_0924_0_normal.png",
+      "${PROJECT_ROOT}/MMToM-QA-data/required_frames/task_23/script/0/Action_1078_0_normal.png"
+    ]
+  },
+  {
+    "index": 3,
+    "row": {
+      "question": "What's inside the apartment: The apartment consists of a bedroom, kitchen, living room, and bathroom. \nIn the bedroom, there is a coffee table and a desk. \nThe kitchen is equipped with four cabinets, a fridge, a kitchen table, a microwave, and a stove. The third cabinet from the left houses a bag of chips and a condiment bottle. Inside the fridge, there is a bottle of wine and a salmon. The second cabinet from the left contains two dish bowls, a water glass, and a plate. The first cabinet from the left has an apple, while the microwave contains a plate. The stove is empty, and the fourth cabinet from the left holds a dish bowl. \nThe living room features a cabinet, a sofa, a coffee table, and a desk. The cabinet contains two plates, an apple, a bag of chips, a wine glass, and a remote control. The coffee table is adorned with two plates, a book, a bottle of wine, a dish bowl, and a water glass. \nThe bathroom is fitted with a cabinet, which is currently empty. \nActions taken by Elizabeth: Elizabeth is situated in the bedroom. She proceeds towards the kitchen, advances towards the stove, and is on the verge of opening it. \nQuestion: If Elizabeth has been trying to get a wine glass, which one of the following statements is more likely to be true? (a) Elizabeth thinks that the wine glass is inside the stove. (b) Elizabeth thinks that the wine glass is not inside the stove. Please respond with either a or b.",
+      "answer": "a",
+      "question_type": 1.2,
+      "test": [
+        "init_graph",
+        "actions"
+      ],
+      "episode": 43,
+      "start_time": 0,
+      "end_time": 7,
+      "answer_list": [
+        "a",
+        "b"
+      ]
+    },
+    "frames_8": {
+      "episode": 43,
+      "end_time": 7,
+      "end_frame": 184,
+      "requested_frame_numbers": [
+        0,
+        26,
+        52,
+        78,
+        104,
+        130,
+        156,
+        182
+      ],
+      "frame_numbers": [
+        0,
+        26,
+        52,
+        78,
+        104,
+        130,
+        156,
+        182
+      ]
+    },
+    "frames_16": {
+      "episode": 43,
+      "end_time": 7,
+      "end_frame": 184,
+      "requested_frame_numbers": [
+        0,
+        12,
+        24,
+        36,
+        48,
+        60,
+        72,
+        84,
+        96,
+        108,
+        120,
+        132,
+        144,
+        156,
+        168,
+        180
+      ],
+      "frame_numbers": [
+        0,
+        0,
+        26,
+        26,
+        52,
+        52,
+        75,
+        78,
+        103,
+        104,
+        130,
+        130,
+        141,
+        156,
+        156,
+        182
+      ]
+    },
+    "media_files": [
+      "${PROJECT_ROOT}/MMToM-QA-data/required_frames/task_43/script/0/Action_0000_0_normal.png",
+      "${PROJECT_ROOT}/MMToM-QA-data/required_frames/task_43/script/0/Action_0026_0_normal.png",
+      "${PROJECT_ROOT}/MMToM-QA-data/required_frames/task_43/script/0/Action_0052_0_normal.png",
+      "${PROJECT_ROOT}/MMToM-QA-data/required_frames/task_43/script/0/Action_0075_0_normal.png",
+      "${PROJECT_ROOT}/MMToM-QA-data/required_frames/task_43/script/0/Action_0078_0_normal.png",
+      "${PROJECT_ROOT}/MMToM-QA-data/required_frames/task_43/script/0/Action_0103_0_normal.png",
+      "${PROJECT_ROOT}/MMToM-QA-data/required_frames/task_43/script/0/Action_0104_0_normal.png",
+      "${PROJECT_ROOT}/MMToM-QA-data/required_frames/task_43/script/0/Action_0130_0_normal.png",
+      "${PROJECT_ROOT}/MMToM-QA-data/required_frames/task_43/script/0/Action_0141_0_normal.png",
+      "${PROJECT_ROOT}/MMToM-QA-data/required_frames/task_43/script/0/Action_0156_0_normal.png",
+      "${PROJECT_ROOT}/MMToM-QA-data/required_frames/task_43/script/0/Action_0182_0_normal.png"
+    ]
+  },
+  {
+    "index": 4,
+    "row": {
+      "question": "What's inside the apartment: The apartment consists of a bedroom, kitchen, living room, and bathroom. \nIn the bedroom, there is a coffee table and a desk. \nThe kitchen is equipped with four cabinets, a fridge, a kitchen table, a microwave, and a stove. The third cabinet from the left houses a bag of chips and a condiment bottle. Inside the fridge, there is a bottle of wine and a salmon. The second cabinet from the left contains two dish bowls, a water glass, and a plate. The first cabinet from the left has an apple, while the microwave contains a plate. The stove is empty, and the fourth cabinet from the left holds a dish bowl. \nThe living room features a cabinet, a sofa, a coffee table, and a desk. The cabinet contains two plates, an apple, a bag of chips, a wine glass, and a remote control. The coffee table is adorned with two plates, a book, a bottle of wine, a dish bowl, and a water glass. \nThe bathroom is fitted with a bathroom cabinet, which is currently empty. \nActions taken by Elizabeth: Elizabeth is situated in the bedroom. She proceeds to the kitchen, strides towards the stove, opens it, and subsequently closes it. She then advances towards the third kitchen cabinet, opens it, and then shuts it. Finally, she moves towards the fridge, preparing to open it. \nQuestion: If Elizabeth has been trying to get a salmon, which one of the following statements is more likely to be true? (a) Elizabeth thinks that the salmon is inside the fridge. (b) Elizabeth thinks that the salmon is not inside the fridge. Please respond with either a or b.",
+      "answer": "a",
+      "question_type": 1.1,
+      "test": [
+        "init_graph",
+        "actions"
+      ],
+      "episode": 43,
+      "start_time": 8,
+      "end_time": 14,
+      "answer_list": [
+        "a",
+        "b"
+      ]
+    },
+    "frames_8": {
+      "episode": 43,
+      "end_time": 14,
+      "end_frame": 525,
+      "requested_frame_numbers": [
+        0,
+        75,
+        150,
+        225,
+        300,
+        375,
+        450,
+        525
+      ],
+      "frame_numbers": [
+        0,
+        75,
+        150,
+        225,
+        300,
+        375,
+        450,
+        525
+      ]
+    },
+    "frames_16": {
+      "episode": 43,
+      "end_time": 14,
+      "end_frame": 525,
+      "requested_frame_numbers": [
+        0,
+        35,
+        70,
+        105,
+        140,
+        175,
+        210,
+        245,
+        280,
+        315,
+        350,
+        385,
+        420,
+        455,
+        490,
+        525
+      ],
+      "frame_numbers": [
+        0,
+        26,
+        75,
+        104,
+        141,
+        182,
+        206,
+        225,
+        282,
+        309,
+        375,
+        375,
+        423,
+        450,
+        515,
+        525
+      ]
+    },
+    "media_files": [
+      "${PROJECT_ROOT}/MMToM-QA-data/required_frames/task_43/script/0/Action_0000_0_normal.png",
+      "${PROJECT_ROOT}/MMToM-QA-data/required_frames/task_43/script/0/Action_0026_0_normal.png",
+      "${PROJECT_ROOT}/MMToM-QA-data/required_frames/task_43/script/0/Action_0075_0_normal.png",
+      "${PROJECT_ROOT}/MMToM-QA-data/required_frames/task_43/script/0/Action_0104_0_normal.png",
+      "${PROJECT_ROOT}/MMToM-QA-data/required_frames/task_43/script/0/Action_0141_0_normal.png",
+      "${PROJECT_ROOT}/MMToM-QA-data/required_frames/task_43/script/0/Action_0150_0_normal.png",
+      "${PROJECT_ROOT}/MMToM-QA-data/required_frames/task_43/script/0/Action_0182_0_normal.png",
+      "${PROJECT_ROOT}/MMToM-QA-data/required_frames/task_43/script/0/Action_0206_0_normal.png",
+      "${PROJECT_ROOT}/MMToM-QA-data/required_frames/task_43/script/0/Action_0225_0_normal.png",
+      "${PROJECT_ROOT}/MMToM-QA-data/required_frames/task_43/script/0/Action_0282_0_normal.png",
+      "${PROJECT_ROOT}/MMToM-QA-data/required_frames/task_43/script/0/Action_0300_0_normal.png",
+      "${PROJECT_ROOT}/MMToM-QA-data/required_frames/task_43/script/0/Action_0309_0_normal.png",
+      "${PROJECT_ROOT}/MMToM-QA-data/required_frames/task_43/script/0/Action_0375_0_normal.png",
+      "${PROJECT_ROOT}/MMToM-QA-data/required_frames/task_43/script/0/Action_0423_0_normal.png",
+      "${PROJECT_ROOT}/MMToM-QA-data/required_frames/task_43/script/0/Action_0450_0_normal.png",
+      "${PROJECT_ROOT}/MMToM-QA-data/required_frames/task_43/script/0/Action_0515_0_normal.png",
+      "${PROJECT_ROOT}/MMToM-QA-data/required_frames/task_43/script/0/Action_0525_0_normal.png"
+    ]
+  },
+  {
+    "index": 5,
+    "row": {
+      "question": "What's inside the apartment: The apartment consists of a bedroom, kitchen, living room, and bathroom. \nIn the bedroom, there is a coffee table and a desk. \nThe kitchen is equipped with four cabinets, a fridge, a kitchen table, a microwave, and a stove. The third cabinet from the left houses a bag of chips and a condiment bottle. Inside the fridge, there is a bottle of wine and a salmon. The second cabinet from the left contains two dish bowls, a water glass, and a plate. The first cabinet from the left has an apple, while the fourth cabinet holds a dish bowl. The microwave contains a plate, and the stove is empty. \nThe living room features a cabinet, a sofa, a coffee table, and a desk. The cabinet stores two plates, an apple, a bag of chips, a wine glass, and a remote control. The coffee table displays two plates, a book, a bottle of wine, a dish bowl, and a water glass. \nThe bathroom is furnished with a bathroom cabinet, which is currently empty. \nActions taken by Elizabeth: Elizabeth is situated in the bedroom. She proceeds towards the kitchen, strides towards the stove, opens it, and subsequently closes it. She then advances towards the third kitchen cabinet, opens it, and then shuts it. Following this, she moves towards the refrigerator, opens it, and then seals it. Finally, she heads towards the second kitchen cabinet, preparing to open it. \nQuestion: If Elizabeth has been trying to get a wine glass, which one of the following statements is more likely to be true? (a) Elizabeth thinks that the wine glass is inside the 2nd kitchen cabinet. (b) Elizabeth thinks that the wine glass is not inside the 2nd kitchen cabinet. Please respond with either a or b.",
+      "answer": "a",
+      "question_type": 1.2,
+      "test": [
+        "init_graph",
+        "actions"
+      ],
+      "episode": 43,
+      "start_time": 15,
+      "end_time": 17,
+      "answer_list": [
+        "a",
+        "b"
+      ]
+    },
+    "frames_8": {
+      "episode": 43,
+      "end_time": 17,
+      "end_frame": 723,
+      "requested_frame_numbers": [
+        0,
+        103,
+        206,
+        309,
+        412,
+        515,
+        618,
+        721
+      ],
+      "frame_numbers": [
+        0,
+        103,
+        206,
+        309,
+        412,
+        515,
+        618,
+        721
+      ]
+    },
+    "frames_16": {
+      "episode": 43,
+      "end_time": 17,
+      "end_frame": 723,
+      "requested_frame_numbers": [
+        0,
+        48,
+        96,
+        144,
+        192,
+        240,
+        288,
+        336,
+        384,
+        432,
+        480,
+        528,
+        576,
+        624,
+        672,
+        720
+      ],
+      "frame_numbers": [
+        0,
+        52,
+        103,
+        141,
+        182,
+        225,
+        282,
+        309,
+        375,
+        423,
+        450,
+        525,
+        564,
+        618,
+        705,
+        721
+      ]
+    },
+    "media_files": [
+      "${PROJECT_ROOT}/MMToM-QA-data/required_frames/task_43/script/0/Action_0000_0_normal.png",
+      "${PROJECT_ROOT}/MMToM-QA-data/required_frames/task_43/script/0/Action_0052_0_normal.png",
+      "${PROJECT_ROOT}/MMToM-QA-data/required_frames/task_43/script/0/Action_0103_0_normal.png",
+      "${PROJECT_ROOT}/MMToM-QA-data/required_frames/task_43/script/0/Action_0141_0_normal.png",
+      "${PROJECT_ROOT}/MMToM-QA-data/required_frames/task_43/script/0/Action_0182_0_normal.png",
+      "${PROJECT_ROOT}/MMToM-QA-data/required_frames/task_43/script/0/Action_0206_0_normal.png",
+      "${PROJECT_ROOT}/MMToM-QA-data/required_frames/task_43/script/0/Action_0225_0_normal.png",
+      "${PROJECT_ROOT}/MMToM-QA-data/required_frames/task_43/script/0/Action_0282_0_normal.png",
+      "${PROJECT_ROOT}/MMToM-QA-data/required_frames/task_43/script/0/Action_0309_0_normal.png",
+      "${PROJECT_ROOT}/MMToM-QA-data/required_frames/task_43/script/0/Action_0375_0_normal.png",
+      "${PROJECT_ROOT}/MMToM-QA-data/required_frames/task_43/script/0/Action_0412_0_normal.png",
+      "${PROJECT_ROOT}/MMToM-QA-data/required_frames/task_43/script/0/Action_0423_0_normal.png",
+      "${PROJECT_ROOT}/MMToM-QA-data/required_frames/task_43/script/0/Action_0450_0_normal.png",
+      "${PROJECT_ROOT}/MMToM-QA-data/required_frames/task_43/script/0/Action_0515_0_normal.png",
+      "${PROJECT_ROOT}/MMToM-QA-data/required_frames/task_43/script/0/Action_0525_0_normal.png",
+      "${PROJECT_ROOT}/MMToM-QA-data/required_frames/task_43/script/0/Action_0564_0_normal.png",
+      "${PROJECT_ROOT}/MMToM-QA-data/required_frames/task_43/script/0/Action_0618_0_normal.png",
+      "${PROJECT_ROOT}/MMToM-QA-data/required_frames/task_43/script/0/Action_0705_0_normal.png",
+      "${PROJECT_ROOT}/MMToM-QA-data/required_frames/task_43/script/0/Action_0721_0_normal.png"
+    ]
+  },
+  {
+    "index": 6,
+    "row": {
+      "question": "What's inside the apartment: The apartment consists of a bedroom, kitchen, living room, and bathroom. \nIn the bedroom, there is a coffee table and a desk. \nThe kitchen is equipped with four cabinets, a fridge, a kitchen table, a microwave, and a stove. The third cabinet from the left houses a bag of chips and a condiment bottle. Inside the fridge, there is a bottle of wine and a salmon. The second cabinet from the left contains two dish bowls, a water glass, and a plate. The first cabinet from the left has an apple, while the fourth cabinet holds a dish bowl. The microwave contains a plate, and the stove is empty. \nThe living room features a cabinet, a sofa, a coffee table, and a desk. The cabinet stores two plates, an apple, a bag of chips, a wine glass, and a remote control. The coffee table displays two plates, a book, a bottle of wine, a dish bowl, and a water glass. \nThe bathroom is furnished with a bathroom cabinet, which is currently empty. \nActions taken by Elizabeth: Elizabeth is situated in the bedroom. She proceeds towards the kitchen, making her way to the stove. She opens the stove, then closes it. She then strides towards the third kitchen cabinet, opens it, and subsequently closes it. Elizabeth then navigates towards the refrigerator, opens it, and then shuts it. She then moves towards the second kitchen cabinet, opens it, and then closes it. Finally, she walks towards the living room, preparing to open a cabinet. \nQuestion: If Elizabeth has been trying to get a wine glass, which one of the following statements is more likely to be true? (a) Elizabeth thinks that the wine glass is inside the cabinet. (b) Elizabeth thinks that the wine glass is not inside the cabinet. Please respond with either a or b.",
+      "answer": "a",
+      "question_type": 1.1,
+      "test": [
+        "init_graph",
+        "actions"
+      ],
+      "episode": 43,
+      "start_time": 18,
+      "end_time": 25,
+      "answer_list": [
+        "a",
+        "b"
+      ]
+    },
+    "frames_8": {
+      "episode": 43,
+      "end_time": 25,
+      "end_frame": 988,
+      "requested_frame_numbers": [
+        0,
+        141,
+        282,
+        423,
+        564,
+        705,
+        846,
+        987
+      ],
+      "frame_numbers": [
+        0,
+        141,
+        282,
+        423,
+        564,
+        705,
+        846,
+        987
+      ]
+    },
+    "frames_16": {
+      "episode": 43,
+      "end_time": 25,
+      "end_frame": 988,
+      "requested_frame_numbers": [
+        0,
+        65,
+        130,
+        195,
+        260,
+        325,
+        390,
+        455,
+        520,
+        585,
+        650,
+        715,
+        780,
+        845,
+        910,
+        975
+      ],
+      "frame_numbers": [
+        0,
+        75,
+        130,
+        206,
+        282,
+        309,
+        375,
+        450,
+        515,
+        564,
+        618,
+        721,
+        721,
+        846,
+        846,
+        987
+      ]
+    },
+    "media_files": [
+      "${PROJECT_ROOT}/MMToM-QA-data/required_frames/task_43/script/0/Action_0000_0_normal.png",
+      "${PROJECT_ROOT}/MMToM-QA-data/required_frames/task_43/script/0/Action_0075_0_normal.png",
+      "${PROJECT_ROOT}/MMToM-QA-data/required_frames/task_43/script/0/Action_0130_0_normal.png",
+      "${PROJECT_ROOT}/MMToM-QA-data/required_frames/task_43/script/0/Action_0141_0_normal.png",
+      "${PROJECT_ROOT}/MMToM-QA-data/required_frames/task_43/script/0/Action_0206_0_normal.png",
+      "${PROJECT_ROOT}/MMToM-QA-data/required_frames/task_43/script/0/Action_0282_0_normal.png",
+      "${PROJECT_ROOT}/MMToM-QA-data/required_frames/task_43/script/0/Action_0309_0_normal.png",
+      "${PROJECT_ROOT}/MMToM-QA-data/required_frames/task_43/script/0/Action_0375_0_normal.png",
+      "${PROJECT_ROOT}/MMToM-QA-data/required_frames/task_43/script/0/Action_0423_0_normal.png",
+      "${PROJECT_ROOT}/MMToM-QA-data/required_frames/task_43/script/0/Action_0450_0_normal.png",
+      "${PROJECT_ROOT}/MMToM-QA-data/required_frames/task_43/script/0/Action_0515_0_normal.png",
+      "${PROJECT_ROOT}/MMToM-QA-data/required_frames/task_43/script/0/Action_0564_0_normal.png",
+      "${PROJECT_ROOT}/MMToM-QA-data/required_frames/task_43/script/0/Action_0618_0_normal.png",
+      "${PROJECT_ROOT}/MMToM-QA-data/required_frames/task_43/script/0/Action_0705_0_normal.png",
+      "${PROJECT_ROOT}/MMToM-QA-data/required_frames/task_43/script/0/Action_0721_0_normal.png",
+      "${PROJECT_ROOT}/MMToM-QA-data/required_frames/task_43/script/0/Action_0846_0_normal.png",
+      "${PROJECT_ROOT}/MMToM-QA-data/required_frames/task_43/script/0/Action_0987_0_normal.png"
+    ]
+  },
+  {
+    "index": 7,
+    "row": {
+      "question": "What's inside the apartment: The apartment consists of a bedroom, kitchen, living room, and bathroom. \nIn the bedroom, there is a coffee table and a desk, with a water glass, two books, a remote control, and a bottle of wine placed on the coffee table. \nThe kitchen is equipped with four cabinets, a fridge, a kitchen table, a microwave, and a stove. The third cabinet, from left to right, holds a dish bowl, a bag of chips, a water glass, and a bottle of wine. Inside the fridge, there is a cupcake, a plate, and a dish bowl. The second cabinet contains two apples, while the first cabinet houses a wine glass. The microwave contains a condiment bottle and a cupcake, and there is a salmon in the stove. The fourth cabinet contains a wine glass and a dish bowl. \nThe living room features a cabinet, a sofa, a coffee table, and a desk. The cabinet holds a wine glass, a condiment bottle, a water glass, and an apple. On the coffee table, there is a dish bowl, a wine glass, and a book. \nThe bathroom is furnished with a bathroom cabinet, which is currently empty. \nActions taken by Emily: Emily is situated in the kitchen. She strides towards the first kitchen cabinet, opens it, then promptly shuts it. Subsequently, she opens the second kitchen cabinet and closes it as well. Finally, she walks towards the bathroom and then towards the wine. \nQuestion: If Emily has been trying to get a cupcake, which one of the following statements is more likely to be true? (a) Emily thinks that the cupcake is inside the microwave. (b) Emily thinks that the cupcake is not inside the microwave. Please respond with either a or b.",
+      "answer": "b",
+      "question_type": 1.3,
+      "test": [
+        "init_graph",
+        "actions"
+      ],
+      "episode": 51,
+      "start_time": 0,
+      "end_time": 10,
+      "answer_list": [
+        "a",
+        "b"
+      ]
+    },
+    "frames_8": {
+      "episode": 51,
+      "end_time": 10,
+      "end_frame": 443,
+      "requested_frame_numbers": [
+        0,
+        63,
+        126,
+        189,
+        252,
+        315,
+        378,
+        441
+      ],
+      "frame_numbers": [
+        0,
+        63,
+        126,
+        189,
+        252,
+        315,
+        378,
+        441
+      ]
+    },
+    "frames_16": {
+      "episode": 51,
+      "end_time": 10,
+      "end_frame": 443,
+      "requested_frame_numbers": [
+        0,
+        29,
+        58,
+        87,
+        116,
+        145,
+        174,
+        203,
+        232,
+        261,
+        290,
+        319,
+        348,
+        377,
+        406,
+        435
+      ],
+      "frame_numbers": [
+        0,
+        0,
+        63,
+        63,
+        126,
+        126,
+        189,
+        189,
+        252,
+        252,
+        315,
+        315,
+        378,
+        378,
+        378,
+        441
+      ]
+    },
+    "media_files": [
+      "${PROJECT_ROOT}/MMToM-QA-data/required_frames/task_51/script/0/Action_0000_0_normal.png",
+      "${PROJECT_ROOT}/MMToM-QA-data/required_frames/task_51/script/0/Action_0063_0_normal.png",
+      "${PROJECT_ROOT}/MMToM-QA-data/required_frames/task_51/script/0/Action_0126_0_normal.png",
+      "${PROJECT_ROOT}/MMToM-QA-data/required_frames/task_51/script/0/Action_0189_0_normal.png",
+      "${PROJECT_ROOT}/MMToM-QA-data/required_frames/task_51/script/0/Action_0252_0_normal.png",
+      "${PROJECT_ROOT}/MMToM-QA-data/required_frames/task_51/script/0/Action_0315_0_normal.png",
+      "${PROJECT_ROOT}/MMToM-QA-data/required_frames/task_51/script/0/Action_0378_0_normal.png",
+      "${PROJECT_ROOT}/MMToM-QA-data/required_frames/task_51/script/0/Action_0441_0_normal.png"
+    ]
+  },
+  {
+    "index": 8,
+    "row": {
+      "question": "What's inside the apartment: The apartment consists of a bedroom, kitchen, living room, and bathroom. \nIn the bedroom, there is a coffee table and a desk, with two wine glasses and a remote control placed on the coffee table. \nThe kitchen is equipped with four cabinets, a fridge, a kitchen table, a microwave, and a stove. The third cabinet from the left houses a condiment bottle, while the second cabinet contains a bag of chips. The first cabinet stores two dish bowls, and the fourth cabinet has an apple. Inside the fridge, there is a salmon, a plate, an apple, and a dish bowl. The microwave contains a cupcake and a plate, and there is a plate in the stove. \nThe living room features a cabinet, a sofa, a coffee table, and a desk. The cabinet holds four books, a bottle of wine, a condiment bottle, and an apple. On the coffee table, there is a bottle of wine, a water glass, and a plate. \nThe bathroom is furnished with a bathroom cabinet, which is currently empty. \nActions taken by Jessica: Jessica is situated in the bathroom. She proceeds towards the kitchen, approaches the fourth kitchen cabinet, and is on the verge of opening it. \nQuestion: If Jessica has been trying to get an apple, which one of the following statements is more likely to be true? (a) Jessica thinks that the apple is inside the 4th kitchen cabinet. (b) Jessica thinks that the apple is not inside the 4th kitchen cabinet. Please respond with either a or b.",
+      "answer": "a",
+      "question_type": 1.1,
+      "test": [
+        "init_graph",
+        "actions"
+      ],
+      "episode": 54,
+      "start_time": 0,
+      "end_time": 10,
+      "answer_list": [
+        "a",
+        "b"
+      ]
+    },
+    "frames_8": {
+      "episode": 54,
+      "end_time": 10,
+      "end_frame": 276,
+      "requested_frame_numbers": [
+        0,
+        39,
+        78,
+        117,
+        156,
+        195,
+        234,
+        273
+      ],
+      "frame_numbers": [
+        0,
+        39,
+        78,
+        117,
+        156,
+        195,
+        234,
+        273
+      ]
+    },
+    "frames_16": {
+      "episode": 54,
+      "end_time": 10,
+      "end_frame": 276,
+      "requested_frame_numbers": [
+        0,
+        18,
+        36,
+        54,
+        72,
+        90,
+        108,
+        126,
+        144,
+        162,
+        180,
+        198,
+        216,
+        234,
+        252,
+        270
+      ],
+      "frame_numbers": [
+        0,
+        0,
+        39,
+        39,
+        78,
+        78,
+        117,
+        117,
+        156,
+        156,
+        195,
+        195,
+        234,
+        234,
+        234,
+        273
+      ]
+    },
+    "media_files": [
+      "${PROJECT_ROOT}/MMToM-QA-data/required_frames/task_54/script/0/Action_0000_0_normal.png",
+      "${PROJECT_ROOT}/MMToM-QA-data/required_frames/task_54/script/0/Action_0039_0_normal.png",
+      "${PROJECT_ROOT}/MMToM-QA-data/required_frames/task_54/script/0/Action_0078_0_normal.png",
+      "${PROJECT_ROOT}/MMToM-QA-data/required_frames/task_54/script/0/Action_0117_0_normal.png",
+      "${PROJECT_ROOT}/MMToM-QA-data/required_frames/task_54/script/0/Action_0156_0_normal.png",
+      "${PROJECT_ROOT}/MMToM-QA-data/required_frames/task_54/script/0/Action_0195_0_normal.png",
+      "${PROJECT_ROOT}/MMToM-QA-data/required_frames/task_54/script/0/Action_0234_0_normal.png",
+      "${PROJECT_ROOT}/MMToM-QA-data/required_frames/task_54/script/0/Action_0273_0_normal.png"
+    ]
+  },
+  {
+    "index": 9,
+    "row": {
+      "question": "What's inside the apartment: The apartment consists of a bedroom, kitchen, living room, and bathroom. \nIn the bedroom, there is a coffee table and a desk, with a remote control placed on the coffee table. \nThe kitchen is equipped with four cabinets, a fridge, a kitchen table, a microwave, and a stove. The first and third cabinets, from left to right, are empty, while the second cabinet houses a condiment bottle. The fourth cabinet contains a water glass. Inside the fridge, there is a bottle of wine, a dish bowl, and two plates. The microwave holds a cupcake, and the stove contains a salmon, two cupcakes, and a plate. \nThe living room features a cabinet, a sofa, a coffee table, and a desk. The cabinet is filled with two plates, a bottle of wine, two wine glasses, a condiment bottle, a water glass, a bag of chips, and an apple. A wine glass and a book are situated on the coffee table. \nLastly, the bathroom contains a cabinet, which is currently empty. \nActions taken by Elizabeth: Elizabeth is situated in the bathroom. She proceeds towards the kitchen, advances towards the stove, and is on the verge of opening it. \nQuestion: If Elizabeth has been trying to get a bottle of wine, which one of the following statements is more likely to be true? (a) Elizabeth thinks that the bottle of wine is inside the stove. (b) Elizabeth thinks that the bottle of wine is not inside the stove. Please respond with either a or b.",
+      "answer": "a",
+      "question_type": 1.2,
+      "test": [
+        "init_graph",
+        "actions"
+      ],
+      "episode": 61,
+      "start_time": 0,
+      "end_time": 11,
+      "answer_list": [
+        "a",
+        "b"
+      ]
+    },
+    "frames_8": {
+      "episode": 61,
+      "end_time": 11,
+      "end_frame": 282,
+      "requested_frame_numbers": [
+        0,
+        40,
+        80,
+        120,
+        160,
+        200,
+        240,
+        280
+      ],
+      "frame_numbers": [
+        0,
+        40,
+        80,
+        120,
+        160,
+        200,
+        240,
+        280
+      ]
+    },
+    "frames_16": {
+      "episode": 61,
+      "end_time": 11,
+      "end_frame": 282,
+      "requested_frame_numbers": [
+        0,
+        18,
+        36,
+        54,
+        72,
+        90,
+        108,
+        126,
+        144,
+        162,
+        180,
+        198,
+        216,
+        234,
+        252,
+        270
+      ],
+      "frame_numbers": [
+        0,
+        0,
+        40,
+        40,
+        80,
+        80,
+        111,
+        120,
+        160,
+        160,
+        164,
+        200,
+        222,
+        240,
+        240,
+        280
+      ]
+    },
+    "media_files": [
+      "${PROJECT_ROOT}/MMToM-QA-data/required_frames/task_61/script/0/Action_0000_0_normal.png",
+      "${PROJECT_ROOT}/MMToM-QA-data/required_frames/task_61/script/0/Action_0040_0_normal.png",
+      "${PROJECT_ROOT}/MMToM-QA-data/required_frames/task_61/script/0/Action_0080_0_normal.png",
+      "${PROJECT_ROOT}/MMToM-QA-data/required_frames/task_61/script/0/Action_0111_0_normal.png",
+      "${PROJECT_ROOT}/MMToM-QA-data/required_frames/task_61/script/0/Action_0120_0_normal.png",
+      "${PROJECT_ROOT}/MMToM-QA-data/required_frames/task_61/script/0/Action_0160_0_normal.png",
+      "${PROJECT_ROOT}/MMToM-QA-data/required_frames/task_61/script/0/Action_0164_0_normal.png",
+      "${PROJECT_ROOT}/MMToM-QA-data/required_frames/task_61/script/0/Action_0200_0_normal.png",
+      "${PROJECT_ROOT}/MMToM-QA-data/required_frames/task_61/script/0/Action_0222_0_normal.png",
+      "${PROJECT_ROOT}/MMToM-QA-data/required_frames/task_61/script/0/Action_0240_0_normal.png",
+      "${PROJECT_ROOT}/MMToM-QA-data/required_frames/task_61/script/0/Action_0280_0_normal.png"
+    ]
+  }
+]

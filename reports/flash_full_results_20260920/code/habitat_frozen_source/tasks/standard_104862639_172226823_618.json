@@ -1,0 +1,346 @@
+{
+  "split": "standard",
+  "task_id": "emtom-104862639_172226823-618-cooperative-walkthrough-briefing-under-access-and-co-7854fc84",
+  "title": "Walkthrough briefing under access and comm limits",
+  "category": "cooperative",
+  "task": "You are preparing the apartment for a short walkthrough. Work together to complete ALL shared goals:\n\n1) Put the bottle onto the kitchen counter.\n2) Put the vase onto the living-room table.\n3) Leave the kitchen fridge open.\n\nSome rooms are off-limits to certain agents. Each agent can send only 1 message, and communication targets are restricted.",
+  "scene_id": "104862639_172226823",
+  "episode_id": "618",
+  "agent_spawns": {
+    "agent_0": {
+      "position": [
+        -8.313193321228027,
+        0.17659315466880798,
+        -2.9896693229675293
+      ],
+      "rotation": -1.5348068475723267
+    },
+    "agent_1": {
+      "position": [
+        -9.489087104797363,
+        0.17659315466880798,
+        -2.70766544342041
+      ],
+      "rotation": -2.0998128096209925
+    },
+    "agent_2": {
+      "position": [
+        -0.5288047194480896,
+        0.17659315466880798,
+        -2.9573960304260254
+      ],
+      "rotation": -1.536175012588501
+    }
+  },
+  "initial_states": {},
+  "active_mechanics": [
+    "room_restriction",
+    "limited_bandwidth",
+    "restricted_communication"
+  ],
+  "mechanic_bindings": [
+    {
+      "mechanic_type": "room_restriction",
+      "restricted_rooms": [
+        "kitchen_1"
+      ],
+      "for_agents": [
+        "agent_0"
+      ]
+    },
+    {
+      "mechanic_type": "room_restriction",
+      "restricted_rooms": [
+        "bedroom_2"
+      ],
+      "for_agents": [
+        "agent_2"
+      ]
+    },
+    {
+      "mechanic_type": "limited_bandwidth",
+      "message_limits": {
+        "agent_0": 1,
+        "agent_1": 2,
+        "agent_2": 1
+      }
+    },
+    {
+      "mechanic_type": "restricted_communication",
+      "allowed_targets": {
+        "agent_0": [
+          "agent_1"
+        ],
+        "agent_1": [
+          "agent_2"
+        ],
+        "agent_2": [
+          "agent_0"
+        ]
+      }
+    }
+  ],
+  "agent_secrets": {
+    "agent_0": [
+      "You are barred from kitchen_1.",
+      "Before the task starts, you saw that fridge_31 in kitchen_1 is closed."
+    ],
+    "agent_1": [
+      "Before the task starts, you saw that vase_0 is on top of chest_of_drawers_29 in bedroom_2."
+    ],
+    "agent_2": [
+      "You are barred from bedroom_2.",
+      "Before the task starts, you saw that bottle_2 is on top of chest_of_drawers_33 in bedroom_2."
+    ]
+  },
+  "agent_actions": {
+    "agent_0": [
+      "Navigate",
+      "Open",
+      "Close",
+      "Pick",
+      "Place",
+      "Communicate",
+      "Wait"
+    ],
+    "agent_1": [
+      "Navigate",
+      "Open",
+      "Close",
+      "Pick",
+      "Place",
+      "Communicate",
+      "Wait"
+    ],
+    "agent_2": [
+      "Navigate",
+      "Open",
+      "Close",
+      "Pick",
+      "Place",
+      "Communicate",
+      "Wait"
+    ]
+  },
+  "message_targets": {},
+  "pddl_domain": "enacttom",
+  "problem_pddl": "(define (problem scene_104862639_172226823_618_cooperative_tom1_walkthrough_briefing)\n  (:domain enacttom)\n  (:objects\n    agent_0 agent_1 agent_2 - agent\n    bedroom_1 bathroom_1 living_room_1 bedroom_2 kitchen_1 - room\n    vase_0 bottle_2 - object\n    table_12 chest_of_drawers_29 chest_of_drawers_33 counter_25 fridge_31 - furniture\n  )\n  (:init\n    (agent_in_room agent_0 bedroom_1)\n    (agent_in_room agent_1 bathroom_1)\n    (agent_in_room agent_2 living_room_1)\n    (is_in_room table_12 living_room_1)\n    (is_in_room chest_of_drawers_29 bedroom_2)\n    (is_in_room chest_of_drawers_33 bedroom_2)\n    (is_in_room counter_25 kitchen_1)\n    (is_in_room fridge_31 kitchen_1)\n    (is_in_room vase_0 bedroom_2)\n    (is_on_top vase_0 chest_of_drawers_29)\n    (is_in_room bottle_2 bedroom_2)\n    (is_on_top bottle_2 chest_of_drawers_33)\n  )\n  (:goal (and\n    (is_on_top bottle_2 counter_25)\n    (is_on_top vase_0 table_12)\n    (is_open fridge_31)\n    (K agent_0 (is_open fridge_31))\n  ))\n)",
+  "num_agents": 3,
+  "teams": {},
+  "team_secrets": {},
+  "tom_level": 1,
+  "tom_reasoning": "Task includes first-order knowledge goals and the strict proof succeeds at depth 1. Gaps: agent_0 cannot see rooms: ['kitchen_1']; agent_2 cannot see rooms: ['bedroom_2'].",
+  "runtime_semantics_version": "literal_tom_probe_v1",
+  "functional_goal_pddl": "(and (is_on_top bottle_2 counter_25) (is_on_top vase_0 table_12) (is_open fridge_31))",
+  "literal_tom_probes": [
+    {
+      "probe_id": "k_probe_0",
+      "agent_id": "agent_0",
+      "subject_agents": [],
+      "fact_pddl": "(is_open fridge_31)",
+      "fact_natural_language": "fridge 31 is open",
+      "source_pddl": "(K agent_0 (is_open fridge_31))",
+      "question": "Probe 0: agent_0 knows a fact about ordered entities [fridge_31]. Report which benchmark predicate applies to those entities and whether it holds. The expected argument order is fixed as listed. If unknown, return predicate \"unknown\" and holds null. JSON shape: {\"probe_id\":\"k_probe_X\",\"predicate\":\"<predicate_name>|unknown\",\"holds\":true|false|null,\"args\":[\"entity_or_target\", ...]}",
+      "expected_response": {
+        "predicate": "is_open",
+        "holds": true,
+        "args": [
+          "fridge_31"
+        ]
+      },
+      "depth": 1,
+      "owner": null,
+      "supported": true,
+      "unsupported_reason": null
+    }
+  ],
+  "epistemic_conjuncts_removed": 1,
+  "runtime_projection_valid": true,
+  "runtime_projection_errors": [],
+  "tom_level_method": "strict_fd",
+  "golden_trajectory": [
+    {
+      "actions": [
+        {
+          "agent": "agent_0",
+          "action": "Navigate[bedroom_2]"
+        },
+        {
+          "agent": "agent_1",
+          "action": "Navigate[bedroom_2]"
+        },
+        {
+          "agent": "agent_2",
+          "action": "Wait[]"
+        }
+      ]
+    },
+    {
+      "actions": [
+        {
+          "agent": "agent_0",
+          "action": "Navigate[vase_0]"
+        },
+        {
+          "agent": "agent_1",
+          "action": "Navigate[kitchen_1]"
+        },
+        {
+          "agent": "agent_2",
+          "action": "Wait[]"
+        }
+      ]
+    },
+    {
+      "actions": [
+        {
+          "agent": "agent_0",
+          "action": "Pick[vase_0]"
+        },
+        {
+          "agent": "agent_1",
+          "action": "Navigate[fridge_31]"
+        },
+        {
+          "agent": "agent_2",
+          "action": "Wait[]"
+        }
+      ]
+    },
+    {
+      "actions": [
+        {
+          "agent": "agent_0",
+          "action": "Navigate[living_room_1]"
+        },
+        {
+          "agent": "agent_1",
+          "action": "Open[fridge_31]"
+        },
+        {
+          "agent": "agent_2",
+          "action": "Wait[]"
+        }
+      ]
+    },
+    {
+      "actions": [
+        {
+          "agent": "agent_0",
+          "action": "Navigate[table_12]"
+        },
+        {
+          "agent": "agent_1",
+          "action": "Navigate[bedroom_2]"
+        },
+        {
+          "agent": "agent_2",
+          "action": "Wait[]"
+        }
+      ]
+    },
+    {
+      "actions": [
+        {
+          "agent": "agent_0",
+          "action": "Place[vase_0, on, table_12, None, None]"
+        },
+        {
+          "agent": "agent_1",
+          "action": "Navigate[bottle_2]"
+        },
+        {
+          "agent": "agent_2",
+          "action": "Wait[]"
+        }
+      ]
+    },
+    {
+      "actions": [
+        {
+          "agent": "agent_0",
+          "action": "Wait[]"
+        },
+        {
+          "agent": "agent_1",
+          "action": "Pick[bottle_2]"
+        },
+        {
+          "agent": "agent_2",
+          "action": "Wait[]"
+        }
+      ]
+    },
+    {
+      "actions": [
+        {
+          "agent": "agent_0",
+          "action": "Wait[]"
+        },
+        {
+          "agent": "agent_1",
+          "action": "Navigate[kitchen_1]"
+        },
+        {
+          "agent": "agent_2",
+          "action": "Wait[]"
+        }
+      ]
+    },
+    {
+      "actions": [
+        {
+          "agent": "agent_0",
+          "action": "Wait[]"
+        },
+        {
+          "agent": "agent_1",
+          "action": "Navigate[counter_25]"
+        },
+        {
+          "agent": "agent_2",
+          "action": "Wait[]"
+        }
+      ]
+    },
+    {
+      "actions": [
+        {
+          "agent": "agent_0",
+          "action": "Wait[]"
+        },
+        {
+          "agent": "agent_1",
+          "action": "Place[bottle_2, on, counter_25, None, None]"
+        },
+        {
+          "agent": "agent_2",
+          "action": "Wait[]"
+        }
+      ]
+    }
+  ],
+  "golden_trajectory_metadata": {
+    "planner": "strict_fd_translator",
+    "planner_version": "v7_parallel_runtime",
+    "source": "cli_verify",
+    "spec_hash": "1135fd7afd7ff4def7bbf4853967db0d217d7a1509daaa16a3e8aa180edfc6fa",
+    "trajectory_hash": "bbd4864c0095c824765ed88171545a94f76750d3c9b00ad9b0707a1643d37494",
+    "generated_at": "2026-08-27T02:09:53.440435",
+    "num_steps": 10,
+    "communication_derived": false,
+    "ignored_epistemic_steps": 0,
+    "functional_goal_pddl": "(and (is_on_top bottle_2 counter_25) (is_on_top vase_0 table_12) (is_open fridge_31))",
+    "planned_literals": [
+      "(is_on_top bottle_2 counter_25)",
+      "(is_on_top vase_0 table_12)",
+      "(is_open fridge_31)"
+    ],
+    "ignored_literals": [],
+    "planner_notes": [
+      "Deterministic golden trajectory derived from strict Fast Downward plan.",
+      "Translated 11 planner step(s) into 10 golden step(s).",
+      "Runtime golden semantics removed 1 epistemic conjunct(s)."
+    ]
+  }
+}

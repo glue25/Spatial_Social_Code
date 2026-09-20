@@ -265,3 +265,7 @@ python egomas/src/run_video_provenance_v3_jdcloud.py \
   official result.
 - The repository contains no API keys, endpoint credentials, or local-machine
   paths.
+
+## Complete Flash results and archived SSC code
+
+See [MMToM 600-item Pro/Flash comparison and Habitat 108-rollout full archive](reports/flash_full_results_20260920/README.md) for paired results, complete generated programs and state traces, frozen implementations, offline replay, and comparison limitations.
