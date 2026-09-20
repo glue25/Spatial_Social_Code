@@ -420,7 +420,7 @@
   "mmtom/run_metadata/flash_budget16384_remaining570_20260919/runs/mmtom/frozen_config.json": "2f210a026552c418e34bff9bd0e4d4db4161935c1987d0b42f44f7b6c1ea43e2",
   "mmtom/run_metadata/flash_budget16384_remaining570_20260919/runs/mmtom/inputs.json": "41031fa4300bcee3af861f14855e9da65aa515ead15f98496e1e65b01fae2219",
   "mmtom/run_metadata/flash_budget16384_remaining570_20260919/runs/mmtom/media_hashes.json": "6d1eecb5c020f645e1f873e07ffb60dcec23b617145bbed8a6adf3802e340572",
-  "mmtom/scores.csv": "3ec0ab802a1b49c5cbe401237e1aa70b46be43f3bd3e4cae218116e16d0f7b70",
+  "mmtom/scores.csv": "96ba3d2b6080ff2b9631f5eb6f0587b966ed9a47c74bde7dbb61d4d61e3d51c1",
   "provenance/source_files.json": "73fb28272cede24c12fe4be845ee6675951b072d8e9694b90e0879fda4f08e79",
   "replay_mmtom.py": "73bb330c466b2161d0ae0e78616e865095ddfdbcb80e3f78f3a13411891020f9",
   "verify.py": "97c36e05d5c108bc1ddcf37f88491d9b382cefb2faaff78564c89a7020c58158"
