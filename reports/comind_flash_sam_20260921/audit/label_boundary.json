@@ -1,0 +1,7 @@
+{
+  "gold_source_sha256": "004ec8584370ac51ac709142e16b0b80ce787d36a43d55c27f79694d8a82f602",
+  "gold_canonical_sha256": "06bf64a3c11035c6b385847a49cfbccbe816a81ba433f9ea497591b26357b878",
+  "gold_not_distributed": true,
+  "generation_reads_gold": false,
+  "scoring": "Saved boolean field scores reproduce aggregates; supply scorer-only gold JSON or use prepare_gold.py with independently obtained train annotations to verify labels."
+}

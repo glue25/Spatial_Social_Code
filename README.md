@@ -53,6 +53,17 @@ and the strict comparability boundary.
 
 ## CoMind real-world grounding track
 
+**Completed Flash + SAM development replication (2026-09-21):** all 300 paired
+examples (100/task) are archived with generated programs, traces, visible API
+responses and offline checks. Direct scores 17.21% and SSC+SAM 22.21% on an
+explicit 14-field macro-average (+5.00 pp), not an official composite score.
+The gain is concentrated in Joint Attention/localization; some SCOIA and
+Handover semantic fields regress. All 4 SSC failures remain in the primary
+denominator. A separate fresh paired, larger-budget recovery of those 4 cases
+is reported without replacing the primary result. SAM is additional detector
+compute; no equal-tool-budget Direct+SAM control was run. See the
+[full Flash/SAM archive and comparability notes](reports/comind_flash_sam_20260921/README.md).
+
 A deterministic 300-example CoMind train subset (100 examples per task) was
 also evaluated with `gpt-5.6-sol`, using matched inputs for Direct and
 Spatial-Social inference. All 300 pairs completed. Across 14 reported fields,

@@ -1,0 +1,114 @@
+{
+  "utc": "2026-09-21T07:50:45.076277+00:00",
+  "selected": 4,
+  "processed": 4,
+  "states": {
+    "complete": 4
+  },
+  "records": [
+    {
+      "index": 94,
+      "id": "e3b1c98fcf6ce606c3720b95",
+      "task": "joint_attention",
+      "state": "complete",
+      "scores": {
+        "direct": {
+          "left_iou_at_0_5": false,
+          "right_iou_at_0_5": false,
+          "cue_type": true,
+          "category_l1": false
+        },
+        "ssc_sam": {
+          "left_iou_at_0_5": false,
+          "right_iou_at_0_5": false,
+          "cue_type": true,
+          "category_l1": false
+        }
+      },
+      "direct_valid": true,
+      "ssc_valid": true,
+      "sam_view_errors": {}
+    },
+    {
+      "index": 236,
+      "id": "ca9109e68601165bd226df65",
+      "task": "handover",
+      "state": "complete",
+      "scores": {
+        "direct": {
+          "iou_at_0_5": false,
+          "delivery_flow": false,
+          "initiator": true,
+          "initiation_type": false,
+          "category_l1": false,
+          "tth_within_0_25s": false
+        },
+        "ssc_sam": {
+          "iou_at_0_5": false,
+          "delivery_flow": false,
+          "initiator": false,
+          "initiation_type": false,
+          "category_l1": false,
+          "tth_within_0_25s": true
+        }
+      },
+      "direct_valid": true,
+      "ssc_valid": true,
+      "sam_view_errors": {}
+    },
+    {
+      "index": 113,
+      "id": "dcea3fdada09bebaebc5e4be",
+      "task": "scoia",
+      "state": "complete",
+      "scores": {
+        "direct": {
+          "iou_at_0_5": false,
+          "cue_type": true,
+          "action_verb": true,
+          "action_noun_l1": true
+        },
+        "ssc_sam": {
+          "iou_at_0_5": false,
+          "cue_type": true,
+          "action_verb": true,
+          "action_noun_l1": true
+        }
+      },
+      "direct_valid": true,
+      "ssc_valid": true,
+      "sam_view_errors": {}
+    },
+    {
+      "index": 245,
+      "id": "3f1cd7e3ccd9fdb96bba595c",
+      "task": "handover",
+      "state": "complete",
+      "scores": {
+        "direct": {
+          "iou_at_0_5": false,
+          "delivery_flow": true,
+          "initiator": false,
+          "initiation_type": false,
+          "category_l1": false,
+          "tth_within_0_25s": false
+        },
+        "ssc_sam": {
+          "iou_at_0_5": false,
+          "delivery_flow": true,
+          "initiator": false,
+          "initiation_type": false,
+          "category_l1": false,
+          "tth_within_0_25s": false
+        }
+      },
+      "direct_valid": true,
+      "ssc_valid": true,
+      "sam_view_errors": {}
+    }
+  ],
+  "all_four_processed": true,
+  "uniform_output_cap": 32768,
+  "primary_300_modified": false,
+  "scope": "Single fresh paired recovery of all4 failure-selected IDs; separate from primary300, no outcome-based resampling or replacement."
+}

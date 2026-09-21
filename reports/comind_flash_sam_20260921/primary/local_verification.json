@@ -1,0 +1,18 @@
+{
+  "utc": "2026-09-21T07:30:28.197909+00:00",
+  "passed": true,
+  "unique_completed_ids": 300,
+  "upstream_snapshots_verified": 300,
+  "frozen_sources_verified": true,
+  "nonbbox_fields_preserved": true,
+  "failures_retained": {
+    "complete": 289,
+    "upstream_ssc_invalid": 4,
+    "no_detection": 7
+  },
+  "metrics_macro14": {
+    "direct": 0.17214285714285715,
+    "ssc_sam": 0.22214285714285714
+  },
+  "report_sha256": "f7f31986f8c58cd1c6125ffad695c6f5688511e93192ce3140cee9635b0e3865"
+}
