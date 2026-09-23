@@ -1,0 +1,699 @@
+{
+  "id": "ma_1337",
+  "environment": "MA-EgoQA",
+  "title": "Counterexample: same day is not simultaneous",
+  "grade": "B: actual clips/code/citations; speech and identities need human sign-off",
+  "scope": "Flash rich100; same compiled record across three arms; static audiovisual QA",
+  "panel_titles": [
+    "1  Actual question / evidence",
+    "2  Compiled links",
+    "3  Saved answers"
+  ],
+  "panels": [
+    "Which of the following happened while Jake was washing the dishes?",
+    "The full answer cites washing at11:54 and dog-walking at16:25 on DAY4. Those records do not establish concurrency.",
+    "ssc_no_attribution: D\n\nssc: E\n\nssc_no_references: E\n\nGold: D."
+  ],
+  "figure_caveat": "Static compilation, not online memory. Quotes/identities are model-generated annotations pending human audiovisual verification.",
+  "limitations": [
+    "All three arms see the same clips and derive views from one compiled record; the final answer still sees audiovisual clips.",
+    "The input row.answer is an intentional option0 dummy, not ground truth. This export uses SCORER_ONLY_gold.json.",
+    "Quotes, speaker identities and inferred beliefs have not received independent full audio/identity annotation review.",
+    "Full100 outcomes:46/46/49 correct for full/no-references/no-attribution. Individual examples do not establish linkage benefit.",
+    "Case1597 no-references is invalid, not a valid wrong answer; do not claim an evidence-link mechanism success from it."
+  ],
+  "input": {
+    "index": 1337,
+    "row": {
+      "question": "Which of the following happened while Jake was washing the dishes?",
+      "options": [
+        "Alice drove up and delivered a large package at the door.",
+        "Nicous packed his guitar into a case and left.",
+        "Tasha painted the fence near the yard while waiting for Jake.",
+        "Katrina chatted with Shure about a comedy show they had seen.",
+        "Lucia took the dog for a walk around the block."
+      ],
+      "category": "temporal_reasoning",
+      "subcategory": "concurrency",
+      "answer": "Alice drove up and delivered a large package at the door."
+    },
+    "video_clips": [
+      {
+        "id": "DAY1_A1_JAKE_14033000.mp4",
+        "score": 50.280630804688016,
+        "agent": "",
+        "query": "Which of the following happened while Jake was washing the dishes? Alice drove up and delivered a large package at the door.",
+        "retrieval_source": "option",
+        "option": "A"
+      },
+      {
+        "id": "DAY1_A1_JAKE_14030000.mp4",
+        "score": 41.04491170975524,
+        "agent": "",
+        "query": "Which of the following happened while Jake was washing the dishes? Nicous packed his guitar into a case and left.",
+        "retrieval_source": "option",
+        "option": "B"
+      },
+      {
+        "id": "DAY4_A1_JAKE_16253000.mp4",
+        "score": 45.553206530805575,
+        "agent": "",
+        "query": "Which of the following happened while Jake was washing the dishes? Tasha painted the fence near the yard while waiting for Jake.",
+        "retrieval_source": "option",
+        "option": "C"
+      },
+      {
+        "id": "DAY4_A3_TASHA_17490000.mp4",
+        "score": 38.18594604703642,
+        "agent": "",
+        "query": "Which of the following happened while Jake was washing the dishes? Katrina chatted with Shure about a comedy show they had seen.",
+        "retrieval_source": "option",
+        "option": "D"
+      },
+      {
+        "id": "DAY3_A1_JAKE_21053000.mp4",
+        "score": 47.278925905064696,
+        "agent": "",
+        "query": "Which of the following happened while Jake was washing the dishes? Lucia took the dog for a walk around the block.",
+        "retrieval_source": "option",
+        "option": "E"
+      },
+      {
+        "id": "DAY2_A1_JAKE_21083000.mp4",
+        "score": 18.347135350245946,
+        "agent": "JAKE",
+        "query": "washing the dishes",
+        "retrieval_source": "planner"
+      },
+      {
+        "id": "DAY2_A3_TASHA_21093000.mp4",
+        "score": 21.737400439036527,
+        "agent": "TASHA",
+        "query": "what happened while Jake was washing the dishes",
+        "retrieval_source": "planner"
+      },
+      {
+        "id": "DAY6_A3_TASHA_11580000.mp4",
+        "score": 48.33530763919891,
+        "agent": "",
+        "query": "Which of the following happened while Jake was washing the dishes? Alice drove up and delivered a large package at the door.",
+        "retrieval_source": "option",
+        "option": "A"
+      },
+      {
+        "id": "DAY4_A1_JAKE_11543000.mp4",
+        "score": 46.5063183598191,
+        "agent": "",
+        "query": "Which of the following happened while Jake was washing the dishes? Lucia took the dog for a walk around the block.",
+        "retrieval_source": "option",
+        "option": "E"
+      },
+      {
+        "id": "DAY1_A1_JAKE_13590000.mp4",
+        "score": 45.42958259935206,
+        "agent": "",
+        "query": "Which of the following happened while Jake was washing the dishes? Tasha painted the fence near the yard while waiting for Jake.",
+        "retrieval_source": "option",
+        "option": "C"
+      }
+    ],
+    "media_files": [
+      "/pfs/zhangxiaoyuan/project/physical_code/MA-EgoQA/data/egolife_proxy_384p/A1_JAKE/DAY1/DAY1_A1_JAKE_13590000.mp4",
+      "/pfs/zhangxiaoyuan/project/physical_code/MA-EgoQA/data/egolife_proxy_384p/A1_JAKE/DAY1/DAY1_A1_JAKE_14030000.mp4",
+      "/pfs/zhangxiaoyuan/project/physical_code/MA-EgoQA/data/egolife_proxy_384p/A1_JAKE/DAY1/DAY1_A1_JAKE_14033000.mp4",
+      "/pfs/zhangxiaoyuan/project/physical_code/MA-EgoQA/data/egolife_proxy_384p/A1_JAKE/DAY2/DAY2_A1_JAKE_21083000.mp4",
+      "/pfs/zhangxiaoyuan/project/physical_code/MA-EgoQA/data/egolife_proxy_384p/A1_JAKE/DAY3/DAY3_A1_JAKE_21053000.mp4",
+      "/pfs/zhangxiaoyuan/project/physical_code/MA-EgoQA/data/egolife_proxy_384p/A1_JAKE/DAY4/DAY4_A1_JAKE_11543000.mp4",
+      "/pfs/zhangxiaoyuan/project/physical_code/MA-EgoQA/data/egolife_proxy_384p/A1_JAKE/DAY4/DAY4_A1_JAKE_16253000.mp4",
+      "/pfs/zhangxiaoyuan/project/physical_code/MA-EgoQA/data/egolife_proxy_384p/A3_TASHA/DAY2/DAY2_A3_TASHA_21093000.mp4",
+      "/pfs/zhangxiaoyuan/project/physical_code/MA-EgoQA/data/egolife_proxy_384p/A3_TASHA/DAY4/DAY4_A3_TASHA_17490000.mp4",
+      "/pfs/zhangxiaoyuan/project/physical_code/MA-EgoQA/data/egolife_proxy_384p/A3_TASHA/DAY6/DAY6_A3_TASHA_11580000.mp4"
+    ]
+  },
+  "gold": {
+    "answer_index": 3,
+    "category": "temporal_reasoning"
+  },
+  "compiled": {
+    "valid": true,
+    "index": 1337,
+    "spatial_code": "S.fact(1, \"washing dishes\", \"Jake\", \"sink\", source=\"video\", confidence=0.9, evidence_id=\"S1\", clip_id=\"DAY1_A1_JAKE_13590000.mp4\", observer=\"Jake\", evidence_span=\"00:00-00:29\", quote=\"\")\nS.visible(1, \"Jake\", \"Lucia\", \"walking in background\", source=\"video\", confidence=0.8, evidence_id=\"S2\", clip_id=\"DAY1_A1_JAKE_13590000.mp4\", evidence_span=\"00:12-00:19\", quote=\"\")\nS.visible(2, \"Jake\", \"Katrina\", \"talking in background\", source=\"video\", confidence=0.8, evidence_id=\"S3\", clip_id=\"DAY1_A1_JAKE_13590000.mp4\", evidence_span=\"00:12-00:19\", quote=\"\")\nS.event(1, \"Lucia\", \"walk\", \"dog\", source=\"video\", confidence=0.7, evidence_id=\"S4\", clip_id=\"DAY4_A1_JAKE_16253000.mp4\", observer=\"Jake\", evidence_span=\"00:07-00:08\", quote=\"\", event_role=\"executor\", phase=\"during\")\nS.fact(2, \"washing dishes\", \"Jake\", \"sink\", source=\"video\", confidence=0.9, evidence_id=\"S5\", clip_id=\"DAY1_A1_JAKE_14033000.mp4\", observer=\"Jake\", evidence_span=\"00:00-00:29\", quote=\"\")\nS.fact(3, \"washing dishes\", \"Jake\", \"sink\", source=\"video\", confidence=0.9, evidence_id=\"S6\", clip_id=\"DAY2_A1_JAKE_21083000.mp4\", observer=\"Jake\", evidence_span=\"00:00-00:29\", quote=\"\")\nS.fact(4, \"washing dishes\", \"Jake\", \"sink\", source=\"video\", confidence=0.9, evidence_id=\"S7\", clip_id=\"DAY4_A1_JAKE_11543000.mp4\", observer=\"Jake\", evidence_span=\"00:00-00:29\", quote=\"\")\nS.visible(3, \"Tasha\", \"guitar case\", \"on table\", source=\"video\", confidence=0.8, evidence_id=\"S8\", clip_id=\"DAY6_A3_TASHA_11580000.mp4\", evidence_span=\"00:00-00:05\", quote=\"\")\nS.event(2, \"Tasha\", \"open\", \"package\", source=\"video\", confidence=0.8, evidence_id=\"S9\", clip_id=\"DAY6_A3_TASHA_11580000.mp4\", observer=\"Tasha\", evidence_span=\"00:15-00:29\", quote=\"\", event_role=\"executor\", phase=\"during\")",
+    "spatial_trace": "{\"kind\": \"spatial_fact\", \"values\": {\"clip_id\": \"DAY1_A1_JAKE_13590000.mp4\", \"confidence\": 0.9, \"evidence_id\": \"S1\", \"evidence_span\": \"00:00-00:29\", \"object\": \"sink\", \"observer\": \"Jake\", \"relation\": \"washing dishes\", \"source\": \"video\", \"subject\": \"Jake\", \"t\": 1}}\n{\"kind\": \"visibility\", \"values\": {\"clip_id\": \"DAY1_A1_JAKE_13590000.mp4\", \"confidence\": 0.8, \"evidence_id\": \"S2\", \"evidence_span\": \"00:12-00:19\", \"object\": \"Lucia\", \"observer\": \"Jake\", \"source\": \"video\", \"t\": 1, \"value\": true}}\n{\"kind\": \"visibility\", \"values\": {\"clip_id\": \"DAY1_A1_JAKE_13590000.mp4\", \"confidence\": 0.8, \"evidence_id\": \"S3\", \"evidence_span\": \"00:12-00:19\", \"object\": \"Katrina\", \"observer\": \"Jake\", \"source\": \"video\", \"t\": 2, \"value\": true}}\n{\"kind\": \"event\", \"values\": {\"action\": \"walk\", \"actor\": \"Lucia\", \"clip_id\": \"DAY4_A1_JAKE_16253000.mp4\", \"confidence\": 0.7, \"event_role\": \"executor\", \"evidence_id\": \"S4\", \"evidence_span\": \"00:07-00:08\", \"observer\": \"Jake\", \"phase\": \"during\", \"source\": \"video\", \"t\": 1, \"target\": \"dog\"}}\n{\"kind\": \"spatial_fact\", \"values\": {\"clip_id\": \"DAY1_A1_JAKE_14033000.mp4\", \"confidence\": 0.9, \"evidence_id\": \"S5\", \"evidence_span\": \"00:00-00:29\", \"object\": \"sink\", \"observer\": \"Jake\", \"relation\": \"washing dishes\", \"source\": \"video\", \"subject\": \"Jake\", \"t\": 2}}\n{\"kind\": \"spatial_fact\", \"values\": {\"clip_id\": \"DAY2_A1_JAKE_21083000.mp4\", \"confidence\": 0.9, \"evidence_id\": \"S6\", \"evidence_span\": \"00:00-00:29\", \"object\": \"sink\", \"observer\": \"Jake\", \"relation\": \"washing dishes\", \"source\": \"video\", \"subject\": \"Jake\", \"t\": 3}}\n{\"kind\": \"spatial_fact\", \"values\": {\"clip_id\": \"DAY4_A1_JAKE_11543000.mp4\", \"confidence\": 0.9, \"evidence_id\": \"S7\", \"evidence_span\": \"00:00-00:29\", \"object\": \"sink\", \"observer\": \"Jake\", \"relation\": \"washing dishes\", \"source\": \"video\", \"subject\": \"Jake\", \"t\": 4}}\n{\"kind\": \"visibility\", \"values\": {\"clip_id\": \"DAY6_A3_TASHA_11580000.mp4\", \"confidence\": 0.8, \"evidence_id\": \"S8\", \"evidence_span\": \"00:00-00:05\", \"object\": \"guitar case\", \"observer\": \"Tasha\", \"source\": \"video\", \"t\": 3, \"value\": true}}\n{\"kind\": \"event\", \"values\": {\"action\": \"open\", \"actor\": \"Tasha\", \"clip_id\": \"DAY6_A3_TASHA_11580000.mp4\", \"confidence\": 0.8, \"event_role\": \"executor\", \"evidence_id\": \"S9\", \"evidence_span\": \"00:15-00:29\", \"observer\": \"Tasha\", \"phase\": \"during\", \"source\": \"video\", \"t\": 2, \"target\": \"package\"}}",
+    "social_code": "M.observe(1, \"Jake\", \"Jake washing dishes\", source=\"spatial_trace\", confidence=0.9, evidence_ids=\"S1\")\nM.observe(4, \"Jake\", \"Jake washing dishes\", source=\"spatial_trace\", confidence=0.9, evidence_ids=\"S7\")\nM.action_evidence(1, \"Lucia\", \"walk dog\", \"Lucia is walking the dog\", confidence=0.7, evidence=\"Lucia walks dog\", evidence_ids=\"S4\")\nM.observe(2, \"Jake\", \"Katrina is visible\", source=\"spatial_trace\", confidence=0.8, evidence_ids=\"S3\")\nM.observe(2, \"Tasha\", \"Tasha opening package\", source=\"spatial_trace\", confidence=0.8, evidence_ids=\"S9\")\nM.unknown(\"Lucia\", \"intent\")\nM.unknown(\"Jake\", \"goal\")\nM.unknown(\"Tasha\", \"intent\")\nM.unknown(\"Katrina\", \"social_goal\")\nM.unknown(\"Lucia\", \"goal\")",
+    "social_trace": "{\"kind\": \"observation\", \"values\": {\"agent\": \"Jake\", \"confidence\": 0.9, \"evidence_ids\": [\"S1\"], \"fact\": \"Jake washing dishes\", \"source\": \"spatial_trace\", \"t\": 1}}\n{\"kind\": \"observation\", \"values\": {\"agent\": \"Jake\", \"confidence\": 0.9, \"evidence_ids\": [\"S7\"], \"fact\": \"Jake washing dishes\", \"source\": \"spatial_trace\", \"t\": 4}}\n{\"kind\": \"action_evidence\", \"values\": {\"action\": \"walk dog\", \"agent\": \"Lucia\", \"confidence\": 0.7, \"evidence\": \"Lucia walks dog\", \"evidence_ids\": [\"S4\"], \"hypothesis\": \"Lucia is walking the dog\", \"t\": 1}}\n{\"kind\": \"observation\", \"values\": {\"agent\": \"Jake\", \"confidence\": 0.8, \"evidence_ids\": [\"S3\"], \"fact\": \"Katrina is visible\", \"source\": \"spatial_trace\", \"t\": 2}}\n{\"kind\": \"observation\", \"values\": {\"agent\": \"Tasha\", \"confidence\": 0.8, \"evidence_ids\": [\"S9\"], \"fact\": \"Tasha opening package\", \"source\": \"spatial_trace\", \"t\": 2}}\n{\"kind\": \"social_unknown\", \"values\": {\"agent\": \"Lucia\", \"variable\": \"intent\"}}\n{\"kind\": \"social_unknown\", \"values\": {\"agent\": \"Jake\", \"variable\": \"goal\"}}\n{\"kind\": \"social_unknown\", \"values\": {\"agent\": \"Tasha\", \"variable\": \"intent\"}}\n{\"kind\": \"social_unknown\", \"values\": {\"agent\": \"Katrina\", \"variable\": \"social_goal\"}}\n{\"kind\": \"social_unknown\", \"values\": {\"agent\": \"Lucia\", \"variable\": \"goal\"}}",
+    "graph": {
+      "physical_records": [
+        {
+          "id": "physical_fbd46df6dd194c8f",
+          "kind": "visibility",
+          "content": {
+            "clip_id": "DAY1_A1_JAKE_13590000.mp4",
+            "confidence": 0.8,
+            "evidence_id": "S2",
+            "evidence_span": "00:12-00:19",
+            "object": "Lucia",
+            "source": "video",
+            "t": 1,
+            "value": true
+          }
+        },
+        {
+          "id": "physical_17332650b9d01250",
+          "kind": "visibility",
+          "content": {
+            "clip_id": "DAY6_A3_TASHA_11580000.mp4",
+            "confidence": 0.8,
+            "evidence_id": "S8",
+            "evidence_span": "00:00-00:05",
+            "object": "guitar case",
+            "source": "video",
+            "t": 3,
+            "value": true
+          }
+        },
+        {
+          "id": "physical_e52986687ff79388",
+          "kind": "event",
+          "content": {
+            "action": "walk",
+            "actor": "Lucia",
+            "clip_id": "DAY4_A1_JAKE_16253000.mp4",
+            "confidence": 0.7,
+            "event_role": "executor",
+            "evidence_id": "S4",
+            "evidence_span": "00:07-00:08",
+            "phase": "during",
+            "source": "video",
+            "t": 1,
+            "target": "dog"
+          }
+        },
+        {
+          "id": "physical_864b850a342eb627",
+          "kind": "spatial_fact",
+          "content": {
+            "clip_id": "DAY2_A1_JAKE_21083000.mp4",
+            "confidence": 0.9,
+            "evidence_id": "S6",
+            "evidence_span": "00:00-00:29",
+            "object": "sink",
+            "relation": "washing dishes",
+            "source": "video",
+            "subject": "Jake",
+            "t": 3
+          }
+        },
+        {
+          "id": "physical_bba7940fd665bdd6",
+          "kind": "spatial_fact",
+          "content": {
+            "clip_id": "DAY1_A1_JAKE_13590000.mp4",
+            "confidence": 0.9,
+            "evidence_id": "S1",
+            "evidence_span": "00:00-00:29",
+            "object": "sink",
+            "relation": "washing dishes",
+            "source": "video",
+            "subject": "Jake",
+            "t": 1
+          }
+        },
+        {
+          "id": "physical_81e47ed7f1aa85c3",
+          "kind": "event",
+          "content": {
+            "action": "open",
+            "actor": "Tasha",
+            "clip_id": "DAY6_A3_TASHA_11580000.mp4",
+            "confidence": 0.8,
+            "event_role": "executor",
+            "evidence_id": "S9",
+            "evidence_span": "00:15-00:29",
+            "phase": "during",
+            "source": "video",
+            "t": 2,
+            "target": "package"
+          }
+        },
+        {
+          "id": "physical_96e8830e28d2e736",
+          "kind": "spatial_fact",
+          "content": {
+            "clip_id": "DAY1_A1_JAKE_14033000.mp4",
+            "confidence": 0.9,
+            "evidence_id": "S5",
+            "evidence_span": "00:00-00:29",
+            "object": "sink",
+            "relation": "washing dishes",
+            "source": "video",
+            "subject": "Jake",
+            "t": 2
+          }
+        },
+        {
+          "id": "physical_6a2f38f1e37a6f03",
+          "kind": "spatial_fact",
+          "content": {
+            "clip_id": "DAY4_A1_JAKE_11543000.mp4",
+            "confidence": 0.9,
+            "evidence_id": "S7",
+            "evidence_span": "00:00-00:29",
+            "object": "sink",
+            "relation": "washing dishes",
+            "source": "video",
+            "subject": "Jake",
+            "t": 4
+          }
+        },
+        {
+          "id": "physical_5b2d450e31259400",
+          "kind": "visibility",
+          "content": {
+            "clip_id": "DAY1_A1_JAKE_13590000.mp4",
+            "confidence": 0.8,
+            "evidence_id": "S3",
+            "evidence_span": "00:12-00:19",
+            "object": "Katrina",
+            "source": "video",
+            "t": 2,
+            "value": true
+          }
+        }
+      ],
+      "observation_attributions": [
+        {
+          "record": "physical_864b850a342eb627",
+          "observer": "Jake"
+        },
+        {
+          "record": "physical_96e8830e28d2e736",
+          "observer": "Jake"
+        },
+        {
+          "record": "physical_81e47ed7f1aa85c3",
+          "observer": "Tasha"
+        },
+        {
+          "record": "physical_e52986687ff79388",
+          "observer": "Jake"
+        },
+        {
+          "record": "physical_6a2f38f1e37a6f03",
+          "observer": "Jake"
+        },
+        {
+          "record": "physical_bba7940fd665bdd6",
+          "observer": "Jake"
+        },
+        {
+          "record": "physical_17332650b9d01250",
+          "observer": "Tasha"
+        },
+        {
+          "record": "physical_5b2d450e31259400",
+          "observer": "Jake"
+        },
+        {
+          "record": "physical_fbd46df6dd194c8f",
+          "observer": "Jake"
+        }
+      ],
+      "social_records": [
+        {
+          "id": "social_9b6f44434caab46a",
+          "kind": "observation",
+          "content": {
+            "confidence": 0.9,
+            "fact": "SELF washing dishes",
+            "source": "spatial_trace",
+            "t": 4
+          }
+        },
+        {
+          "id": "social_6a80c599b297aca8",
+          "kind": "observation",
+          "content": {
+            "confidence": 0.9,
+            "fact": "SELF washing dishes",
+            "source": "spatial_trace",
+            "t": 1
+          }
+        },
+        {
+          "id": "social_618f2adbaa118886",
+          "kind": "social_unknown",
+          "content": {
+            "variable": "social_goal"
+          }
+        },
+        {
+          "id": "social_ff6082354b7bceec",
+          "kind": "social_unknown",
+          "content": {
+            "variable": "intent"
+          }
+        },
+        {
+          "id": "social_16e8c7ee92d4668e",
+          "kind": "observation",
+          "content": {
+            "confidence": 0.8,
+            "fact": "Katrina is visible",
+            "source": "spatial_trace",
+            "t": 2
+          }
+        },
+        {
+          "id": "social_3fe29766bfa7f06b",
+          "kind": "social_unknown",
+          "content": {
+            "variable": "goal"
+          }
+        },
+        {
+          "id": "social_276dc115fd32d92b",
+          "kind": "action_evidence",
+          "content": {
+            "action": "walk dog",
+            "confidence": 0.7,
+            "hypothesis": "SELF is walking the dog",
+            "t": 1
+          }
+        },
+        {
+          "id": "social_45710d9d684e30d9",
+          "kind": "social_unknown",
+          "content": {
+            "variable": "goal"
+          }
+        },
+        {
+          "id": "social_5658ceb756c3b8f8",
+          "kind": "social_unknown",
+          "content": {
+            "variable": "intent"
+          }
+        },
+        {
+          "id": "social_752ad0a7f9130643",
+          "kind": "observation",
+          "content": {
+            "confidence": 0.8,
+            "fact": "SELF opening package",
+            "source": "spatial_trace",
+            "t": 2
+          }
+        }
+      ],
+      "attributions": [
+        {
+          "record": "social_6a80c599b297aca8",
+          "agent": "Jake"
+        },
+        {
+          "record": "social_618f2adbaa118886",
+          "agent": "Katrina"
+        },
+        {
+          "record": "social_276dc115fd32d92b",
+          "agent": "Lucia"
+        },
+        {
+          "record": "social_45710d9d684e30d9",
+          "agent": "Lucia"
+        },
+        {
+          "record": "social_5658ceb756c3b8f8",
+          "agent": "Lucia"
+        },
+        {
+          "record": "social_ff6082354b7bceec",
+          "agent": "Tasha"
+        },
+        {
+          "record": "social_16e8c7ee92d4668e",
+          "agent": "Jake"
+        },
+        {
+          "record": "social_9b6f44434caab46a",
+          "agent": "Jake"
+        },
+        {
+          "record": "social_752ad0a7f9130643",
+          "agent": "Tasha"
+        },
+        {
+          "record": "social_3fe29766bfa7f06b",
+          "agent": "Jake"
+        }
+      ],
+      "evidence_links": [
+        {
+          "record": "social_276dc115fd32d92b",
+          "evidence_id": "S4"
+        },
+        {
+          "record": "social_16e8c7ee92d4668e",
+          "evidence_id": "S3"
+        },
+        {
+          "record": "social_6a80c599b297aca8",
+          "evidence_id": "S1"
+        },
+        {
+          "record": "social_9b6f44434caab46a",
+          "evidence_id": "S7"
+        },
+        {
+          "record": "social_752ad0a7f9130643",
+          "evidence_id": "S9"
+        }
+      ],
+      "support_notes": [
+        {
+          "id": "note_0b591e11630f5f93",
+          "text": "SELF walks dog",
+          "status": "compiler_generated_rationale_not_independent_observation"
+        }
+      ],
+      "rationale_links": [
+        {
+          "record": "social_276dc115fd32d92b",
+          "note": "note_0b591e11630f5f93"
+        }
+      ]
+    },
+    "valid_evidence_ids": [
+      "S1",
+      "S2",
+      "S3",
+      "S4",
+      "S5",
+      "S6",
+      "S7",
+      "S8",
+      "S9"
+    ]
+  },
+  "results": {
+    "index": 1337,
+    "category": "temporal_reasoning",
+    "conditions": {
+      "ssc_no_attribution": {
+        "index": 1337,
+        "category": "temporal_reasoning",
+        "condition": "ssc_no_attribution",
+        "valid": true,
+        "prediction_index": 3,
+        "raw": "```json\n{\"answer\":\"D\", \"evidence_ids\":[\"S1\", \"S2\", \"S3\"], \"reason\":\"In Clip 10, while Jake is washing dishes, Katrina and Lucia (Shure) are visible and chatting in the background.\"}\n```",
+        "initial_raw": "",
+        "format_retry_used": false,
+        "parsed": {
+          "answer": "D",
+          "evidence_ids": [
+            "S1",
+            "S2",
+            "S3"
+          ],
+          "reason": "In Clip 10, while Jake is washing dishes, Katrina and Lucia (Shure) are visible and chatting in the background."
+        }
+      },
+      "ssc": {
+        "index": 1337,
+        "category": "temporal_reasoning",
+        "condition": "ssc",
+        "valid": true,
+        "prediction_index": 4,
+        "raw": "```json\n{\"answer\":\"E\", \"evidence_ids\":[\"S4\", \"S7\"], \"reason\":\"Lucia took the dog for a walk on Day 4, which is the same day Jake was washing dishes in Clip 9.\"}\n```",
+        "initial_raw": "",
+        "format_retry_used": false,
+        "parsed": {
+          "answer": "E",
+          "evidence_ids": [
+            "S4",
+            "S7"
+          ],
+          "reason": "Lucia took the dog for a walk on Day 4, which is the same day Jake was washing dishes in Clip 9."
+        }
+      },
+      "ssc_no_references": {
+        "index": 1337,
+        "category": "temporal_reasoning",
+        "condition": "ssc_no_references",
+        "valid": true,
+        "prediction_index": 4,
+        "raw": "```json\n{\"answer\":\"E\", \"evidence_ids\":[\"physical_6a2f38f1e37a6f03\", \"physical_e52986687ff79388\"], \"reason\":\"Jake was washing dishes in Clip 9 (Day 4, 11:54), and Lucia was walking a dog in Clip 3 (Day 4, 16:25).\"}\n```",
+        "initial_raw": "",
+        "format_retry_used": false,
+        "parsed": {
+          "answer": "E",
+          "evidence_ids": [
+            "physical_6a2f38f1e37a6f03",
+            "physical_e52986687ff79388"
+          ],
+          "reason": "Jake was washing dishes in Clip 9 (Day 4, 11:54), and Lucia was walking a dog in Clip 3 (Day 4, 16:25)."
+        }
+      }
+    },
+    "compile_valid": true
+  },
+  "media": [
+    {
+      "path": "MA-EgoQA/data/egolife_proxy_384p/A1_JAKE/DAY1/DAY1_A1_JAKE_13590000.mp4",
+      "sha256": "79fe5f0090200bf061d21258b58ddf514c020d4e55b2e53fab539ea3931c7fc3",
+      "clip_id": "DAY1_A1_JAKE_13590000.mp4",
+      "kind": "input audiovisual clip; not redistributed"
+    },
+    {
+      "path": "MA-EgoQA/data/egolife_proxy_384p/A1_JAKE/DAY1/DAY1_A1_JAKE_14030000.mp4",
+      "sha256": "3742819c16fce3e42f5a00abde204eca94debd4f1f810de9af6c6124c8b13614",
+      "clip_id": "DAY1_A1_JAKE_14030000.mp4",
+      "kind": "input audiovisual clip; not redistributed"
+    },
+    {
+      "path": "MA-EgoQA/data/egolife_proxy_384p/A1_JAKE/DAY1/DAY1_A1_JAKE_14033000.mp4",
+      "sha256": "7d3a3b021af4f632c95773c958d584c0ccfcb990da9787a6827f7b970b228e93",
+      "clip_id": "DAY1_A1_JAKE_14033000.mp4",
+      "kind": "input audiovisual clip; not redistributed"
+    },
+    {
+      "path": "MA-EgoQA/data/egolife_proxy_384p/A1_JAKE/DAY2/DAY2_A1_JAKE_21083000.mp4",
+      "sha256": "03a93326e21a0a80de7280a343205a8a38826209557fddf865d502e26a2a0184",
+      "clip_id": "DAY2_A1_JAKE_21083000.mp4",
+      "kind": "input audiovisual clip; not redistributed"
+    },
+    {
+      "path": "MA-EgoQA/data/egolife_proxy_384p/A1_JAKE/DAY3/DAY3_A1_JAKE_21053000.mp4",
+      "sha256": "0da18f9423408508c132aa1373525df6dcd9b140260f23c99e0321d23ad86c4c",
+      "clip_id": "DAY3_A1_JAKE_21053000.mp4",
+      "kind": "input audiovisual clip; not redistributed"
+    },
+    {
+      "path": "MA-EgoQA/data/egolife_proxy_384p/A1_JAKE/DAY4/DAY4_A1_JAKE_11543000.mp4",
+      "sha256": "7fb5a9918af4e3f6ca59761e1290a9b073f215d8f14ef81cc7ede2ed6f12f377",
+      "clip_id": "DAY4_A1_JAKE_11543000.mp4",
+      "kind": "input audiovisual clip; not redistributed"
+    },
+    {
+      "path": "MA-EgoQA/data/egolife_proxy_384p/A1_JAKE/DAY4/DAY4_A1_JAKE_16253000.mp4",
+      "sha256": "89b6cc67d6d03564f6830822c38d79567bb41aa57b59807c601710ed93773ecf",
+      "clip_id": "DAY4_A1_JAKE_16253000.mp4",
+      "kind": "input audiovisual clip; not redistributed"
+    },
+    {
+      "path": "MA-EgoQA/data/egolife_proxy_384p/A3_TASHA/DAY2/DAY2_A3_TASHA_21093000.mp4",
+      "sha256": "c40f732013b2d18d6d0c1069a28277d7f0ba374823b00cd2935cb144effc9e07",
+      "clip_id": "DAY2_A3_TASHA_21093000.mp4",
+      "kind": "input audiovisual clip; not redistributed"
+    },
+    {
+      "path": "MA-EgoQA/data/egolife_proxy_384p/A3_TASHA/DAY4/DAY4_A3_TASHA_17490000.mp4",
+      "sha256": "4dbf4890fa7786bd9e30027edcea8e802a564ee31289f03f9a3c601cf379c25d",
+      "clip_id": "DAY4_A3_TASHA_17490000.mp4",
+      "kind": "input audiovisual clip; not redistributed"
+    },
+    {
+      "path": "MA-EgoQA/data/egolife_proxy_384p/A3_TASHA/DAY6/DAY6_A3_TASHA_11580000.mp4",
+      "sha256": "625d29035e792d2cc316d9255808cdb602a475fc4bc09517aa7b945778ba4ddd",
+      "clip_id": "DAY6_A3_TASHA_11580000.mp4",
+      "kind": "input audiovisual clip; not redistributed"
+    }
+  ],
+  "preview_frames": [
+    {
+      "evidence_id": "S4",
+      "clip_id": "DAY4_A1_JAKE_16253000.mp4",
+      "clip_sha256": "89b6cc67d6d03564f6830822c38d79567bb41aa57b59807c601710ed93773ecf",
+      "preview_time_seconds": 7.5,
+      "decoded_frame_number": 60,
+      "fps": 8.0,
+      "preview_file": "preview_S4.jpg",
+      "preview_sha256": "50c2d37d33d7b324386139ccf085c90c02b7d7900ef6ec8f541cc3097aa6cbfc",
+      "kind": "post-hoc preview from actual input MP4; not a logged model-sampled frame"
+    },
+    {
+      "evidence_id": "S7",
+      "clip_id": "DAY4_A1_JAKE_11543000.mp4",
+      "clip_sha256": "7fb5a9918af4e3f6ca59761e1290a9b073f215d8f14ef81cc7ede2ed6f12f377",
+      "preview_time_seconds": 14.5,
+      "decoded_frame_number": 116,
+      "fps": 8.0,
+      "preview_file": "preview_S7.jpg",
+      "preview_sha256": "80f5a85fa53adb5aa4bc496bf7fbb5b4ba3683a0ddc34a2df9e620bc9530cfce",
+      "kind": "post-hoc preview from actual input MP4; not a logged model-sampled frame"
+    }
+  ],
+  "cited_evidence": {
+    "S4": {
+      "kind": "event",
+      "values": {
+        "action": "walk",
+        "actor": "Lucia",
+        "clip_id": "DAY4_A1_JAKE_16253000.mp4",
+        "confidence": 0.7,
+        "event_role": "executor",
+        "evidence_id": "S4",
+        "evidence_span": "00:07-00:08",
+        "observer": "Jake",
+        "phase": "during",
+        "source": "video",
+        "t": 1,
+        "target": "dog"
+      }
+    },
+    "S7": {
+      "kind": "spatial_fact",
+      "values": {
+        "clip_id": "DAY4_A1_JAKE_11543000.mp4",
+        "confidence": 0.9,
+        "evidence_id": "S7",
+        "evidence_span": "00:00-00:29",
+        "object": "sink",
+        "observer": "Jake",
+        "relation": "washing dishes",
+        "source": "video",
+        "subject": "Jake",
+        "t": 4
+      }
+    }
+  },
+  "answer_media_identical": true,
+  "source_files": [
+    {
+      "path": "workdirs/ma_rich_ablation100_20260922_v1/worker0/results/1337.json",
+      "sha256": "d975055ce183c40fb5ccabe4b44341240795c11816ec5381e064eecaeabcb01b"
+    },
+    {
+      "path": "workdirs/ma_rich_ablation100_20260922_v1/worker0/compiled/1337.json",
+      "sha256": "be1bf375c9211ac7ad18c24e4e96a1a05564d9e00aae7015f59fe9c8264a3737"
+    },
+    {
+      "path": "workdirs/ma_rich_ablation100_20260922_v1/worker0/inputs.json",
+      "sha256": "b2c57d4379f8c8fea1941a8295acd6deb0fe2efd3fde21394266276c68e4675c"
+    },
+    {
+      "path": "workdirs/ma_rich_ablation100_20260922_v1/SCORER_ONLY_gold.json",
+      "sha256": "8ac2c094ad6220524672c1a669327557e24e861c921323d562bb3100667fa0d0"
+    }
+  ]
+}

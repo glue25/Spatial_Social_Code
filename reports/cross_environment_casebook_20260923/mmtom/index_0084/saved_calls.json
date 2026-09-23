@@ -1,0 +1,499 @@
+[
+  {
+    "index": 84,
+    "call": 1,
+    "files": {
+      "attempt_03_1789877617627432037.json": {
+        "http_status": 200,
+        "elapsed_seconds": 14.668418571352959,
+        "response": {
+          "candidates": [
+            {
+              "content": {
+                "role": "model",
+                "parts": [
+                  {
+                    "text": "A"
+                  }
+                ]
+              },
+              "finishReason": "STOP"
+            }
+          ],
+          "usageMetadata": {
+            "promptTokenCount": 9190,
+            "candidatesTokenCount": 1,
+            "totalTokenCount": 9864,
+            "trafficType": "ON_DEMAND",
+            "promptTokensDetails": [
+              {
+                "modality": "IMAGE",
+                "tokenCount": 8800
+              },
+              {
+                "modality": "TEXT",
+                "tokenCount": 390
+              }
+            ],
+            "candidatesTokensDetails": [
+              {
+                "modality": "TEXT",
+                "tokenCount": 1
+              }
+            ],
+            "thoughtsTokenCount": 673
+          },
+          "modelVersion": "gemini-3-flash-preview",
+          "createTime": "2026-09-20T04:13:30.095211Z",
+          "responseId": "al2vauvnBcH76tkP_N7AmAs"
+        }
+      },
+      "exception_01_1789876987428731387.json": {
+        "utc": "2026-09-20T04:03:07.428754+00:00",
+        "error_type": "ReadTimeout",
+        "chain": [
+          {
+            "error_type": "ReadTimeout",
+            "message": "HTTPSConnectionPool(host='api2.aigcbest.top', port=443): Read timed out. (read timeout=600)"
+          },
+          {
+            "error_type": "ReadTimeoutError",
+            "message": "HTTPSConnectionPool(host='api2.aigcbest.top', port=443): Read timed out. (read timeout=600)"
+          },
+          {
+            "error_type": "TimeoutError",
+            "message": "The read operation timed out"
+          }
+        ],
+        "elapsed_seconds": 600.4541872758418
+      },
+      "exception_02_1789877592939591534.json": {
+        "utc": "2026-09-20T04:13:12.939611+00:00",
+        "error_type": "ReadTimeout",
+        "chain": [
+          {
+            "error_type": "ReadTimeout",
+            "message": "HTTPSConnectionPool(host='api2.aigcbest.top', port=443): Read timed out. (read timeout=600)"
+          },
+          {
+            "error_type": "ReadTimeoutError",
+            "message": "HTTPSConnectionPool(host='api2.aigcbest.top', port=443): Read timed out. (read timeout=600)"
+          },
+          {
+            "error_type": "TimeoutError",
+            "message": "The read operation timed out"
+          }
+        ],
+        "elapsed_seconds": 600.4940050784498
+      },
+      "request.json": {
+        "parts": [
+          {
+            "mimeType": "image/png",
+            "sha256": "45a121c493552ac0ef2fc873577ed3948eb0171dd1186aa7bbde90dc10922ed8",
+            "bytes": 1169221
+          },
+          {
+            "mimeType": "image/png",
+            "sha256": "f9a1ae29b4309e9dce8ed2bf960f09b7fa43b0f6214e240ae3c5fefb17ae278f",
+            "bytes": 1161335
+          },
+          {
+            "mimeType": "image/png",
+            "sha256": "46387e244d80f97fbdb096d0cfcf24b7e47d0ee850c9238e73316a4f894291c9",
+            "bytes": 1154704
+          },
+          {
+            "mimeType": "image/png",
+            "sha256": "22cea147a8194e98ea212eb0e012719b65e0303626cec7a8d532e8db78ab50ea",
+            "bytes": 1284751
+          },
+          {
+            "mimeType": "image/png",
+            "sha256": "f6cbd7bfc44095e3c999088e355800ccc3b53cfc9916d25896864ad5b95725e0",
+            "bytes": 1257993
+          },
+          {
+            "mimeType": "image/png",
+            "sha256": "630d80f307c697c716d0150757bb756aa40a829435be5d85158a9eae09c41057",
+            "bytes": 1248125
+          },
+          {
+            "mimeType": "image/png",
+            "sha256": "d333dde509f3196bb61ef7bb3c0ec8d7184453aab07d8bc0a5bdac0b106d38a2",
+            "bytes": 1249938
+          },
+          {
+            "mimeType": "image/png",
+            "sha256": "3b52a473121af7a558fd7ffc0d1ef013a342b9891013d0b094fb7307b4fdc191",
+            "bytes": 1254980
+          },
+          {
+            "text": "Answer the MMToM multiple-choice question from the initial\nstate, action history, and ordered RGB frames. Compare both choices against the\nevidence. Return exactly one uppercase letter: A or B.\n\nMMToM problem:\nWhat's inside the apartment: The apartment consists of a bedroom, kitchen, living room, and bathroom. \nIn the bedroom, there is a coffee table and a desk, with a book, a water glass, a wine glass, and two dish bowls placed on the coffee table. \nThe kitchen is equipped with four cabinets, a fridge, a microwave, a kitchen table, and a stove. The fourth cabinet from the left houses two apples and a water glass, while the second cabinet contains a wine glass, and the third cabinet holds a condiment bottle. The first cabinet is empty. Inside the fridge, there is a cupcake, a dish bowl, a plate, a bottle of wine, and an apple. The microwave is empty, while the stove contains two salmons, a cupcake, and two plates. \nThe living room features a cabinet, a coffee table, a sofa, and a desk. The cabinet stores a dish bowl, a bag of chips, two cupcakes, and a remote control, while the coffee table holds a water glass, a plate, and a wine glass. \nLastly, the bathroom has a cabinet, which is currently empty. \nActions taken by Robert: Robert is situated in the living room. He proceeds towards the kitchen, advances towards the third kitchen cabinet, opens it, and subsequently shuts it. \nQuestion: If Robert has been trying to get a dishbowl, which one of the following statements is more likely to be true? (a) Robert thinks that the dishbowl is inside the cabinet. (b) Robert thinks that the dishbowl is not inside the cabinet. Please respond with either a or b.\n\nAnswer:"
+          }
+        ],
+        "generationConfig": {
+          "temperature": 0.0,
+          "maxOutputTokens": 16384
+        },
+        "model": "gemini-3-flash-preview",
+        "signature": "b9deab8c190eae90a33f3de531660c6efd2a0bd53ce86c4199f380fdd25a4edf",
+        "envelope_changes": [
+          "model moved to URL",
+          "inline_data renamed inlineData"
+        ],
+        "prompt_or_generation_settings_changed": true,
+        "prompts_changed": false,
+        "legacy_requested_cap": 1024,
+        "budget_adjustment": "uniform cap for Direct and SSC"
+      },
+      "response.json": {
+        "candidates": [
+          {
+            "content": {
+              "role": "model",
+              "parts": [
+                {
+                  "text": "A"
+                }
+              ]
+            },
+            "finishReason": "STOP"
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 9190,
+          "candidatesTokenCount": 1,
+          "totalTokenCount": 9864,
+          "trafficType": "ON_DEMAND",
+          "promptTokensDetails": [
+            {
+              "modality": "IMAGE",
+              "tokenCount": 8800
+            },
+            {
+              "modality": "TEXT",
+              "tokenCount": 390
+            }
+          ],
+          "candidatesTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 1
+            }
+          ],
+          "thoughtsTokenCount": 673
+        },
+        "modelVersion": "gemini-3-flash-preview",
+        "createTime": "2026-09-20T04:13:30.095211Z",
+        "responseId": "al2vauvnBcH76tkP_N7AmAs"
+      }
+    }
+  },
+  {
+    "index": 84,
+    "call": 2,
+    "files": {
+      "attempt_01_1789877639390432117.json": {
+        "http_status": 200,
+        "elapsed_seconds": 21.617770494893193,
+        "response": {
+          "candidates": [
+            {
+              "content": {
+                "role": "model",
+                "parts": [
+                  {
+                    "text": "S.fact(0, \"inside\", \"dish_bowl_1\", \"bedroom_coffee_table\", source=\"text\")\nS.fact(0, \"inside\", \"dish_bowl_2\", \"fridge\", source=\"text\")\nS.fact(0, \"inside\", \"dish_bowl_3\", \"living_room_cabinet\", source=\"text\")\nS.fact(0, \"inside\", \"condiment_bottle\", \"kitchen_cabinet_3\", source=\"text\")\nS.event(1, \"robert\", \"move\", \"kitchen\", source=\"text\")\nS.event(2, \"robert\", \"open\", \"kitchen_cabinet_3\", source=\"text\")\nS.event(3, \"robert\", \"close\", \"kitchen_cabinet_3\", source=\"text\")\nS.visible(1, \"robert\", \"living_room\", True, source=\"video\")\nS.visible(4, \"robert\", \"kitchen\", True, source=\"video\")\nS.visible(6, \"robert\", \"kitchen_cabinet_3\", True, source=\"video\")"
+                  }
+                ]
+              },
+              "finishReason": "STOP"
+            }
+          ],
+          "usageMetadata": {
+            "promptTokenCount": 9384,
+            "candidatesTokenCount": 244,
+            "totalTokenCount": 11394,
+            "trafficType": "ON_DEMAND",
+            "promptTokensDetails": [
+              {
+                "modality": "TEXT",
+                "tokenCount": 584
+              },
+              {
+                "modality": "IMAGE",
+                "tokenCount": 8800
+              }
+            ],
+            "candidatesTokensDetails": [
+              {
+                "modality": "TEXT",
+                "tokenCount": 244
+              }
+            ],
+            "thoughtsTokenCount": 1766
+          },
+          "modelVersion": "gemini-3-flash-preview",
+          "createTime": "2026-09-20T04:13:46.245780Z",
+          "responseId": "el2vapSAD7_FodAPi9mS8Qs"
+        }
+      },
+      "request.json": {
+        "parts": [
+          {
+            "mimeType": "image/png",
+            "sha256": "45a121c493552ac0ef2fc873577ed3948eb0171dd1186aa7bbde90dc10922ed8",
+            "bytes": 1169221
+          },
+          {
+            "mimeType": "image/png",
+            "sha256": "f9a1ae29b4309e9dce8ed2bf960f09b7fa43b0f6214e240ae3c5fefb17ae278f",
+            "bytes": 1161335
+          },
+          {
+            "mimeType": "image/png",
+            "sha256": "46387e244d80f97fbdb096d0cfcf24b7e47d0ee850c9238e73316a4f894291c9",
+            "bytes": 1154704
+          },
+          {
+            "mimeType": "image/png",
+            "sha256": "22cea147a8194e98ea212eb0e012719b65e0303626cec7a8d532e8db78ab50ea",
+            "bytes": 1284751
+          },
+          {
+            "mimeType": "image/png",
+            "sha256": "f6cbd7bfc44095e3c999088e355800ccc3b53cfc9916d25896864ad5b95725e0",
+            "bytes": 1257993
+          },
+          {
+            "mimeType": "image/png",
+            "sha256": "630d80f307c697c716d0150757bb756aa40a829435be5d85158a9eae09c41057",
+            "bytes": 1248125
+          },
+          {
+            "mimeType": "image/png",
+            "sha256": "d333dde509f3196bb61ef7bb3c0ec8d7184453aab07d8bc0a5bdac0b106d38a2",
+            "bytes": 1249938
+          },
+          {
+            "mimeType": "image/png",
+            "sha256": "3b52a473121af7a558fd7ffc0d1ef013a342b9891013d0b094fb7307b4fdc191",
+            "bytes": 1254980
+          },
+          {
+            "text": "You are the Spatial Code compiler in a video understanding system.\nTranscribe physically grounded facts from the initial-state text and ordered RGB frames into an executable program. Use both answer choices only to identify the concrete facts and observations that distinguish them. Seek evidence for each alternative without selecting, copying, or encoding an answer. Identify relevant objects and locations, their stated initial locations, and observed actions. Keep world state separate from visibility. Never infer beliefs, goals, intentions, or an A/B answer. Missing records mean unknown, not false.\nThe runtime object S already exists. Use ONLY literal calls in these forms:\nS.fact(t, relation, subject, object, source=\"text\", confidence=1.0)\nS.event(t, actor, action, target, source=\"text\", confidence=1.0)\nS.visible(t, observer, object, value, source=\"video\", confidence=0.8)\nS.unknown(t, relation, subject, object)\nNo assignments, variables, imports, loops, markdown, comments, or repeated calls. Output 4-12 complete calls and nothing else.\n\nMMToM problem:\nWhat's inside the apartment: The apartment consists of a bedroom, kitchen, living room, and bathroom. \nIn the bedroom, there is a coffee table and a desk, with a book, a water glass, a wine glass, and two dish bowls placed on the coffee table. \nThe kitchen is equipped with four cabinets, a fridge, a microwave, a kitchen table, and a stove. The fourth cabinet from the left houses two apples and a water glass, while the second cabinet contains a wine glass, and the third cabinet holds a condiment bottle. The first cabinet is empty. Inside the fridge, there is a cupcake, a dish bowl, a plate, a bottle of wine, and an apple. The microwave is empty, while the stove contains two salmons, a cupcake, and two plates. \nThe living room features a cabinet, a coffee table, a sofa, and a desk. The cabinet stores a dish bowl, a bag of chips, two cupcakes, and a remote control, while the coffee table holds a water glass, a plate, and a wine glass. \nLastly, the bathroom has a cabinet, which is currently empty. \nActions taken by Robert: Robert is situated in the living room. He proceeds towards the kitchen, advances towards the third kitchen cabinet, opens it, and subsequently shuts it. \nQuestion: If Robert has been trying to get a dishbowl, which one of the following statements is more likely to be true? (a) Robert thinks that the dishbowl is inside the cabinet. (b) Robert thinks that the dishbowl is not inside the cabinet. Please respond with either a or b.\n"
+          }
+        ],
+        "generationConfig": {
+          "temperature": 0.0,
+          "maxOutputTokens": 16384
+        },
+        "model": "gemini-3-flash-preview",
+        "signature": "9101cda22d48d09d4bbe734a0ef406ef89a4301553501b4b33067f5d4edc20a9",
+        "envelope_changes": [
+          "model moved to URL",
+          "inline_data renamed inlineData"
+        ],
+        "prompt_or_generation_settings_changed": true,
+        "prompts_changed": false,
+        "legacy_requested_cap": 4096,
+        "budget_adjustment": "uniform cap for Direct and SSC"
+      },
+      "response.json": {
+        "candidates": [
+          {
+            "content": {
+              "role": "model",
+              "parts": [
+                {
+                  "text": "S.fact(0, \"inside\", \"dish_bowl_1\", \"bedroom_coffee_table\", source=\"text\")\nS.fact(0, \"inside\", \"dish_bowl_2\", \"fridge\", source=\"text\")\nS.fact(0, \"inside\", \"dish_bowl_3\", \"living_room_cabinet\", source=\"text\")\nS.fact(0, \"inside\", \"condiment_bottle\", \"kitchen_cabinet_3\", source=\"text\")\nS.event(1, \"robert\", \"move\", \"kitchen\", source=\"text\")\nS.event(2, \"robert\", \"open\", \"kitchen_cabinet_3\", source=\"text\")\nS.event(3, \"robert\", \"close\", \"kitchen_cabinet_3\", source=\"text\")\nS.visible(1, \"robert\", \"living_room\", True, source=\"video\")\nS.visible(4, \"robert\", \"kitchen\", True, source=\"video\")\nS.visible(6, \"robert\", \"kitchen_cabinet_3\", True, source=\"video\")"
+                }
+              ]
+            },
+            "finishReason": "STOP"
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 9384,
+          "candidatesTokenCount": 244,
+          "totalTokenCount": 11394,
+          "trafficType": "ON_DEMAND",
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 584
+            },
+            {
+              "modality": "IMAGE",
+              "tokenCount": 8800
+            }
+          ],
+          "candidatesTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 244
+            }
+          ],
+          "thoughtsTokenCount": 1766
+        },
+        "modelVersion": "gemini-3-flash-preview",
+        "createTime": "2026-09-20T04:13:46.245780Z",
+        "responseId": "el2vapSAD7_FodAPi9mS8Qs"
+      }
+    }
+  },
+  {
+    "index": 84,
+    "call": 3,
+    "files": {
+      "attempt_01_1789877656105389418.json": {
+        "http_status": 200,
+        "elapsed_seconds": 16.56521858088672,
+        "response": {
+          "candidates": [
+            {
+              "content": {
+                "role": "model",
+                "parts": [
+                  {
+                    "text": "M.observe(1, \"Robert\", \"in_living_room\", source=\"video_or_action\")\nM.observe(2, \"Robert\", \"enters_kitchen\", source=\"video_or_action\")\nM.observe(3, \"Robert\", \"approaches_third_cabinet\", source=\"video_or_action\")\nM.observe(4, \"Robert\", \"opens_third_cabinet\", source=\"video_or_action\")\nM.goal(\"Robert\", \"get_dishbowl\", confidence=0.9, evidence=\"query context\")\nM.intent(3, \"Robert\", \"search_third_cabinet_for_dishbowl\", confidence=0.8, evidence=\"approaching the third cabinet\")\nM.belief(3, \"Robert\", \"dishbowl_inside_third_cabinet\", confidence=0.8, evidence=\"Robert approaches and opens the third cabinet while trying to find a dishbowl\")\nM.belief(4, \"Robert\", \"dishbowl_not_inside_third_cabinet\", confidence=0.8, evidence=\"Robert opens the third cabinet, observes its contents, and shuts it\")"
+                  }
+                ]
+              },
+              "finishReason": "STOP"
+            }
+          ],
+          "usageMetadata": {
+            "promptTokenCount": 9428,
+            "candidatesTokenCount": 245,
+            "totalTokenCount": 10562,
+            "trafficType": "ON_DEMAND",
+            "promptTokensDetails": [
+              {
+                "modality": "IMAGE",
+                "tokenCount": 8800
+              },
+              {
+                "modality": "TEXT",
+                "tokenCount": 628
+              }
+            ],
+            "candidatesTokensDetails": [
+              {
+                "modality": "TEXT",
+                "tokenCount": 245
+              }
+            ],
+            "thoughtsTokenCount": 889
+          },
+          "modelVersion": "gemini-3-flash-preview",
+          "createTime": "2026-09-20T04:14:10.482902Z",
+          "responseId": "kl2vata8HYfA6tkPoc-K-Q8"
+        }
+      },
+      "request.json": {
+        "parts": [
+          {
+            "mimeType": "image/png",
+            "sha256": "45a121c493552ac0ef2fc873577ed3948eb0171dd1186aa7bbde90dc10922ed8",
+            "bytes": 1169221
+          },
+          {
+            "mimeType": "image/png",
+            "sha256": "f9a1ae29b4309e9dce8ed2bf960f09b7fa43b0f6214e240ae3c5fefb17ae278f",
+            "bytes": 1161335
+          },
+          {
+            "mimeType": "image/png",
+            "sha256": "46387e244d80f97fbdb096d0cfcf24b7e47d0ee850c9238e73316a4f894291c9",
+            "bytes": 1154704
+          },
+          {
+            "mimeType": "image/png",
+            "sha256": "22cea147a8194e98ea212eb0e012719b65e0303626cec7a8d532e8db78ab50ea",
+            "bytes": 1284751
+          },
+          {
+            "mimeType": "image/png",
+            "sha256": "f6cbd7bfc44095e3c999088e355800ccc3b53cfc9916d25896864ad5b95725e0",
+            "bytes": 1257993
+          },
+          {
+            "mimeType": "image/png",
+            "sha256": "630d80f307c697c716d0150757bb756aa40a829435be5d85158a9eae09c41057",
+            "bytes": 1248125
+          },
+          {
+            "mimeType": "image/png",
+            "sha256": "d333dde509f3196bb61ef7bb3c0ec8d7184453aab07d8bc0a5bdac0b106d38a2",
+            "bytes": 1249938
+          },
+          {
+            "mimeType": "image/png",
+            "sha256": "3b52a473121af7a558fd7ffc0d1ef013a342b9891013d0b094fb7307b4fdc191",
+            "bytes": 1254980
+          },
+          {
+            "text": "You are the Social Code evidence compiler in a video understanding system.\nInfer only socially relevant mental-state evidence from the action history and ordered RGB frames. Use both answer choices only to identify the social distinctions that need evidence; never choose, rank, copy, or encode an answer. Separate observation, belief, goal, and immediate intent. A world fact is not automatically an agent belief: only attribute a belief when the agent could observe supporting evidence. Treat the question and choices as query context, not as observed facts. Missing evidence means unknown, not false.\n\nThe runtime object M already exists. Use ONLY literal calls in these forms:\nM.observe(t, agent, fact, source=\"video_or_action\", confidence=0.8)\nM.belief(t, agent, fact, confidence=0.7, evidence=\"...\")\nM.goal(agent, goal, confidence=0.7, evidence=\"...\")\nM.intent(t, agent, intent, confidence=0.7, evidence=\"...\")\nM.action_evidence(t, agent, action, hypothesis, confidence=0.7, evidence=\"...\")\nM.unknown(agent, variable)\n\nUse timestamps in action order. Emit 3-12 complete calls. No assignments, variables, imports, loops, markdown, comments, answer labels, or repeated calls.\n\nEvidence and complete query context:\nWhat's inside the apartment: The apartment consists of a bedroom, kitchen, living room, and bathroom. \nIn the bedroom, there is a coffee table and a desk, with a book, a water glass, a wine glass, and two dish bowls placed on the coffee table. \nThe kitchen is equipped with four cabinets, a fridge, a microwave, a kitchen table, and a stove. The fourth cabinet from the left houses two apples and a water glass, while the second cabinet contains a wine glass, and the third cabinet holds a condiment bottle. The first cabinet is empty. Inside the fridge, there is a cupcake, a dish bowl, a plate, a bottle of wine, and an apple. The microwave is empty, while the stove contains two salmons, a cupcake, and two plates. \nThe living room features a cabinet, a coffee table, a sofa, and a desk. The cabinet stores a dish bowl, a bag of chips, two cupcakes, and a remote control, while the coffee table holds a water glass, a plate, and a wine glass. \nLastly, the bathroom has a cabinet, which is currently empty. \nActions taken by Robert: Robert is situated in the living room. He proceeds towards the kitchen, advances towards the third kitchen cabinet, opens it, and subsequently shuts it. \nQuestion: If Robert has been trying to get a dishbowl, which one of the following statements is more likely to be true? (a) Robert thinks that the dishbowl is inside the cabinet. (b) Robert thinks that the dishbowl is not inside the cabinet. Please respond with either a or b.\n"
+          }
+        ],
+        "generationConfig": {
+          "temperature": 0.0,
+          "maxOutputTokens": 16384
+        },
+        "model": "gemini-3-flash-preview",
+        "signature": "da79732bef3a5cf1d6558d118713e87c9d3e902476702f687ef9553b151f116c",
+        "envelope_changes": [
+          "model moved to URL",
+          "inline_data renamed inlineData"
+        ],
+        "prompt_or_generation_settings_changed": true,
+        "prompts_changed": false,
+        "legacy_requested_cap": 2048,
+        "budget_adjustment": "uniform cap for Direct and SSC"
+      },
+      "response.json": {
+        "candidates": [
+          {
+            "content": {
+              "role": "model",
+              "parts": [
+                {
+                  "text": "M.observe(1, \"Robert\", \"in_living_room\", source=\"video_or_action\")\nM.observe(2, \"Robert\", \"enters_kitchen\", source=\"video_or_action\")\nM.observe(3, \"Robert\", \"approaches_third_cabinet\", source=\"video_or_action\")\nM.observe(4, \"Robert\", \"opens_third_cabinet\", source=\"video_or_action\")\nM.goal(\"Robert\", \"get_dishbowl\", confidence=0.9, evidence=\"query context\")\nM.intent(3, \"Robert\", \"search_third_cabinet_for_dishbowl\", confidence=0.8, evidence=\"approaching the third cabinet\")\nM.belief(3, \"Robert\", \"dishbowl_inside_third_cabinet\", confidence=0.8, evidence=\"Robert approaches and opens the third cabinet while trying to find a dishbowl\")\nM.belief(4, \"Robert\", \"dishbowl_not_inside_third_cabinet\", confidence=0.8, evidence=\"Robert opens the third cabinet, observes its contents, and shuts it\")"
+                }
+              ]
+            },
+            "finishReason": "STOP"
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 9428,
+          "candidatesTokenCount": 245,
+          "totalTokenCount": 10562,
+          "trafficType": "ON_DEMAND",
+          "promptTokensDetails": [
+            {
+              "modality": "IMAGE",
+              "tokenCount": 8800
+            },
+            {
+              "modality": "TEXT",
+              "tokenCount": 628
+            }
+          ],
+          "candidatesTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 245
+            }
+          ],
+          "thoughtsTokenCount": 889
+        },
+        "modelVersion": "gemini-3-flash-preview",
+        "createTime": "2026-09-20T04:14:10.482902Z",
+        "responseId": "kl2vata8HYfA6tkPoc-K-Q8"
+      }
+    }
+  }
+]

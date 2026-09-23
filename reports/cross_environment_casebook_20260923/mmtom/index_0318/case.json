@@ -1,0 +1,280 @@
+{
+  "id": "mmtom_318",
+  "environment": "MMToM",
+  "title": "Goal inference with a historical answer-conditioned scorer",
+  "grade": "B: historical pipeline; not clean option-blind evidence",
+  "scope": "Flash historical600; static frame+text compilation; no dense refinement in selected cases",
+  "panel_titles": [
+    "1  Observed task sequence",
+    "2  Actual intermediate code",
+    "3  Saved prediction"
+  ],
+  "panels": [
+    "Jessica inspects kitchen appliances; the question supplies a belief premise and asks which object she is seeking.",
+    "The neural social code favors salmon.\n\nHistorical query evidence and Bayesian fusion change the final answer toward apple.",
+    "Direct: A (wrong).\n\nSSC final: B (correct).\n\nThe successful endpoint cannot be attributed to the neural code alone."
+  ],
+  "figure_caveat": "Post-hoc historical example. Query/options, deterministic rules and answer-conditioned scoring are part of this protocol.",
+  "limitations": [
+    "Static video compilation, not an online state-store before/after trace.",
+    "Generated belief records are hypotheses, not direct proof of attention or belief.",
+    "The full historical code includes option-conditioned query evidence, rule bridges and posteriors.",
+    "Case0 was excluded: raw Direct ends in B but archived parsed prediction is A; original aggregate scores were not modified."
+  ],
+  "input": {
+    "index": 318,
+    "row": {
+      "question": "What's inside the apartment: The apartment consists of a bedroom, bathroom, living room, and kitchen. \nIn the bedroom, there is a coffee table and a desk, with a remote control, a water glass, and a plate placed on the coffee table. \nThe bathroom houses a cabinet, which is currently empty. \nThe living room is furnished with a cabinet, coffee table, desk, and a sofa. The cabinet stores a cupcake, an apple, a water glass, and two books, while the coffee table holds a plate and a dish bowl. \nThe kitchen is equipped with a stove, four cabinets, a microwave, a table, and a fridge. The stove and microwave are empty. The third cabinet, from left to right, contains a plate and a condiment bottle, while the fourth cabinet is empty. The second cabinet houses a plate and a bottle of wine, and the first cabinet is also empty. The fridge is stocked with a salmon, a plate, a bottle of wine, and a cupcake. \nActions taken by Jessica: Jessica is situated in the living room. She proceeds towards the kitchen, advances towards the microwave, opens it, then shuts it. Subsequently, she strides towards the stove, opens it, closes it, and finally, walks towards the refrigerator. \nQuestion: If Jessica think there isn't a salmon inside the fridge, which one of the following statements is more likely to be true? (a) Jessica has been trying to get a salmon. (b) Jessica has been trying to get an apple. Please respond with either a or b.",
+      "answer": "b",
+      "question_type": 2.1,
+      "test": [
+        "init_graph",
+        "actions"
+      ],
+      "episode": 96,
+      "start_time": 0,
+      "end_time": 13,
+      "answer_list": [
+        "a",
+        "b"
+      ]
+    },
+    "frames_8": {
+      "episode": 96,
+      "end_time": 13,
+      "end_frame": 530,
+      "requested_frame_numbers": [
+        0,
+        75,
+        150,
+        225,
+        300,
+        375,
+        450,
+        525
+      ],
+      "frame_numbers": [
+        0,
+        75,
+        150,
+        225,
+        300,
+        375,
+        450,
+        525
+      ]
+    },
+    "frames_16": {
+      "episode": 96,
+      "end_time": 13,
+      "end_frame": 530,
+      "requested_frame_numbers": [
+        0,
+        35,
+        70,
+        105,
+        140,
+        175,
+        210,
+        245,
+        280,
+        315,
+        350,
+        385,
+        420,
+        455,
+        490,
+        525
+      ],
+      "frame_numbers": [
+        0,
+        0,
+        75,
+        101,
+        150,
+        150,
+        202,
+        225,
+        300,
+        303,
+        375,
+        375,
+        404,
+        450,
+        505,
+        525
+      ]
+    },
+    "media_files": [
+      "${PROJECT_ROOT}/MMToM-QA-data/required_frames/task_96/script/0/Action_0000_0_normal.png",
+      "${PROJECT_ROOT}/MMToM-QA-data/required_frames/task_96/script/0/Action_0075_0_normal.png",
+      "${PROJECT_ROOT}/MMToM-QA-data/required_frames/task_96/script/0/Action_0101_0_normal.png",
+      "${PROJECT_ROOT}/MMToM-QA-data/required_frames/task_96/script/0/Action_0150_0_normal.png",
+      "${PROJECT_ROOT}/MMToM-QA-data/required_frames/task_96/script/0/Action_0202_0_normal.png",
+      "${PROJECT_ROOT}/MMToM-QA-data/required_frames/task_96/script/0/Action_0225_0_normal.png",
+      "${PROJECT_ROOT}/MMToM-QA-data/required_frames/task_96/script/0/Action_0300_0_normal.png",
+      "${PROJECT_ROOT}/MMToM-QA-data/required_frames/task_96/script/0/Action_0303_0_normal.png",
+      "${PROJECT_ROOT}/MMToM-QA-data/required_frames/task_96/script/0/Action_0375_0_normal.png",
+      "${PROJECT_ROOT}/MMToM-QA-data/required_frames/task_96/script/0/Action_0404_0_normal.png",
+      "${PROJECT_ROOT}/MMToM-QA-data/required_frames/task_96/script/0/Action_0450_0_normal.png",
+      "${PROJECT_ROOT}/MMToM-QA-data/required_frames/task_96/script/0/Action_0505_0_normal.png",
+      "${PROJECT_ROOT}/MMToM-QA-data/required_frames/task_96/script/0/Action_0525_0_normal.png"
+    ]
+  },
+  "result": {
+    "schema_version": 4,
+    "method": "Dense-authoritative uncertainty-refined Spatial-Social Code",
+    "model": "gemini-3-flash-preview",
+    "index": 318,
+    "episode": 96,
+    "question_type": "2.1",
+    "answer": "b",
+    "image_details": {
+      "episode": 96,
+      "end_time": 13,
+      "end_frame": 530,
+      "requested_frame_numbers": [
+        0,
+        75,
+        150,
+        225,
+        300,
+        375,
+        450,
+        525
+      ],
+      "frame_numbers": [
+        0,
+        75,
+        150,
+        225,
+        300,
+        375,
+        450,
+        525
+      ]
+    },
+    "direct_raw": "Based on the sequence of actions and the initial state of the environment, we can infer Jessica's likely goal:\n\n1.  **Initial State:** Jessica starts in the living room. An apple is located in the living room cabinet. A salmon is located inside the refrigerator in the kitchen.\n2.  **Actions:** Jessica leaves the living room (where the apple is) and goes to the kitchen. She systematically checks the microwave and the stove before heading toward the refrigerator.\n3.  **Reasoning:** If Jessica wanted an apple, she likely would have checked the cabinet in the living room where she started. Instead, she went to the kitchen and searched appliances typically used for storing or cooking main food items like salmon. If she believes the salmon is *not* in the fridge, it makes perfect sense for her to search the microwave and stove first. After failing to find it there, she moves toward the fridge, perhaps to double-check or look for something else. Her behavior is much more consistent with searching for a salmon than an apple.\n\nTherefore, statement (a) is more likely to be true.\n\nA",
+    "direct_retry_used": false,
+    "direct_prediction": "a",
+    "direct_correct": false,
+    "spatial_raw": "S.fact(0, \"inside\", \"salmon\", \"fridge\", source=\"text\")\nS.fact(0, \"inside\", \"apple\", \"living room cabinet\", source=\"text\")\nS.fact(0, \"at\", \"Jessica\", \"living room\", source=\"text\")\nS.event(2, \"Jessica\", \"walk to\", \"kitchen\", source=\"video\")\nS.event(4, \"Jessica\", \"open\", \"microwave\", source=\"video\")\nS.event(5, \"Jessica\", \"close\", \"microwave\", source=\"video\")\nS.event(7, \"Jessica\", \"open\", \"stove\", source=\"video\")\nS.event(8, \"Jessica\", \"close\", \"stove\", source=\"video\")\nS.event(9, \"Jessica\", \"walk to\", \"fridge\", source=\"video\")",
+    "spatial_code": "S.fact(0, \"inside\", \"salmon\", \"fridge\", source=\"text\")\nS.fact(0, \"inside\", \"apple\", \"living room cabinet\", source=\"text\")\nS.fact(0, \"at\", \"Jessica\", \"living room\", source=\"text\")\nS.event(2, \"Jessica\", \"walk to\", \"kitchen\", source=\"video\")\nS.event(4, \"Jessica\", \"open\", \"microwave\", source=\"video\")\nS.event(5, \"Jessica\", \"close\", \"microwave\", source=\"video\")\nS.event(7, \"Jessica\", \"open\", \"stove\", source=\"video\")\nS.event(8, \"Jessica\", \"close\", \"stove\", source=\"video\")\nS.event(9, \"Jessica\", \"walk to\", \"fridge\", source=\"video\")",
+    "spatial_trace": "{\"kind\": \"spatial_fact\", \"values\": {\"confidence\": 1.0, \"object\": \"fridge\", \"relation\": \"inside\", \"source\": \"text\", \"subject\": \"salmon\", \"t\": 0}}\n{\"kind\": \"spatial_fact\", \"values\": {\"confidence\": 1.0, \"object\": \"living room cabinet\", \"relation\": \"inside\", \"source\": \"text\", \"subject\": \"apple\", \"t\": 0}}\n{\"kind\": \"spatial_fact\", \"values\": {\"confidence\": 1.0, \"object\": \"living room\", \"relation\": \"at\", \"source\": \"text\", \"subject\": \"Jessica\", \"t\": 0}}\n{\"kind\": \"event\", \"values\": {\"action\": \"walk to\", \"actor\": \"Jessica\", \"confidence\": 1.0, \"source\": \"video\", \"t\": 2, \"target\": \"kitchen\"}}\n{\"kind\": \"event\", \"values\": {\"action\": \"open\", \"actor\": \"Jessica\", \"confidence\": 1.0, \"source\": \"video\", \"t\": 4, \"target\": \"microwave\"}}\n{\"kind\": \"event\", \"values\": {\"action\": \"close\", \"actor\": \"Jessica\", \"confidence\": 1.0, \"source\": \"video\", \"t\": 5, \"target\": \"microwave\"}}\n{\"kind\": \"event\", \"values\": {\"action\": \"open\", \"actor\": \"Jessica\", \"confidence\": 1.0, \"source\": \"video\", \"t\": 7, \"target\": \"stove\"}}\n{\"kind\": \"event\", \"values\": {\"action\": \"close\", \"actor\": \"Jessica\", \"confidence\": 1.0, \"source\": \"video\", \"t\": 8, \"target\": \"stove\"}}\n{\"kind\": \"event\", \"values\": {\"action\": \"walk to\", \"actor\": \"Jessica\", \"confidence\": 1.0, \"source\": \"video\", \"t\": 9, \"target\": \"fridge\"}}",
+    "social_code": "M.observe(1, 'Jessica', 'is in the living room', source='video_or_action', confidence=1.0)\nM.observe(3, 'Jessica', 'enters the kitchen', source='video_or_action', confidence=1.0)\nM.action_evidence(4, 'Jessica', 'opens the microwave', 'searching for a food item', 0.8, 'Jessica opens the microwave immediately after entering the kitchen')\nM.belief(4, 'Jessica', 'a food item might be in the microwave', 0.7, 'She opens the microwave to inspect its interior')\nM.action_evidence(6, 'Jessica', 'opens the stove', 'searching for a food item', 0.8, 'After finding the microwave empty, she checks the stove')\nM.belief(6, 'Jessica', 'a food item might be in the stove', 0.7, 'She opens the stove to inspect its interior')\nM.intent(8, 'Jessica', 'to check the refrigerator', 0.8, 'Jessica moves toward the refrigerator after checking the microwave and stove')\nM.goal('Jessica', 'to find a salmon', 0.7, 'Jessica is searching kitchen appliances where a salmon would typically be stored or prepared, whereas the apple is located in the living room cabinet')\nM.intent(1, 'Jessica', 'inspect kitchen', 0.75, 'Jessica proceeds towards the kitchen, advances towards the microwave, opens it, then shuts it.')\nM.action_evidence(1, 'Jessica', 'Jessica proceeds towards the kitchen, advances towards the microwave, opens it, then shuts it.', 'inspect kitchen', 0.75, 'deterministic action rule')\nM.intent(2, 'Jessica', 'inspect stove', 0.75, 'Subsequently, she strides towards the stove, opens it, closes it, and finally, walks towards the refrigerator.')\nM.action_evidence(2, 'Jessica', 'Subsequently, she strides towards the stove, opens it, closes it, and finally, walks towards the refrigerator.', 'inspect stove', 0.75, 'deterministic action rule')\nM.belief(0, 'Jessica', \"there isn't a salmon inside the fridge\", 1.0, 'given query premise')\nM.candidate('Jessica', 'answer_goal', 'A', 'Jessica has been trying to get a salmon', 0.5, 'MMToM answer option')\nM.candidate('Jessica', 'answer_goal', 'B', 'Jessica has been trying to get an apple', 0.5, 'MMToM answer option')\nM.query_evidence(0, 'Jessica', 'answer_goal', 'Jessica has been trying to get a salmon', 0.18, 0.8, 'visited location is believed not to contain this goal object')\nM.query_evidence(0, 'Jessica', 'answer_goal', 'Jessica has been trying to get an apple', 0.72, 0.8, 'visited location is believed not to contain this goal object')\nM.query_evidence(2, 'Jessica', 'answer_goal', 'Jessica has been trying to get a salmon', 0.34, 0.55, 'candidate compatibility with next approached location: Subsequently, she strides towards the stove, opens it, closes it, and finally, walks towards the refrigerator.')\nM.query_evidence(2, 'Jessica', 'answer_goal', 'Jessica has been trying to get an apple', 0.34, 0.55, 'candidate compatibility with next approached location: Subsequently, she strides towards the stove, opens it, closes it, and finally, walks towards the refrigerator.')\nM.posterior(-1, 'Jessica', 'answer_goal', 'Jessica has been trying to get a salmon', 0.12253425665859184, 'native Social Code Bayesian update: compiler prior + 6 action/observation evidence records', label='A')\nM.posterior(-1, 'Jessica', 'answer_goal', 'Jessica has been trying to get an apple', 0.8774657433414081, 'native Social Code Bayesian update: compiler prior + 6 action/observation evidence records', label='B')\nM.posterior(0, 'Jessica', 'belief', \"there isn't a salmon inside the fridge\", 0.99, 'native Social Code Bayesian update: compiler prior + 0 action/observation evidence records', label='')\nM.posterior(1, 'Jessica', 'belief', 'is in the living room', 0.972972972972973, 'native Social Code Bayesian update: compiler prior + 1 action/observation evidence records', label='')\nM.posterior(3, 'Jessica', 'belief', 'enters the kitchen', 0.9391304347826086, 'native Social Code Bayesian update: compiler prior + 2 action/observation evidence records', label='')\nM.posterior(4, 'Jessica', 'belief', 'a food item might be in the microwave', 0.3, 'native Social Code Bayesian update: compiler prior + 2 action/observation evidence records', label='')\nM.posterior(6, 'Jessica', 'belief', 'a food item might be in the stove', 0.3, 'native Social Code Bayesian update: compiler prior + 2 action/observation evidence records', label='')\nM.posterior(-1, 'Jessica', 'goal', 'to find a salmon', 0.7, 'native Social Code Bayesian update: compiler prior + 4 action/observation evidence records', label='')\nM.posterior(1, 'Jessica', 'intent', 'inspect kitchen', 0.9457591294277522, 'native Social Code Bayesian update: compiler prior + 1 action/observation evidence records', label='')\nM.posterior(2, 'Jessica', 'intent', 'inspect stove', 0.945048816668543, 'native Social Code Bayesian update: compiler prior + 2 action/observation evidence records', label='')\nM.posterior(4, 'Jessica', 'intent', 'searching for a food item', 0.8, 'native Social Code Bayesian update: compiler prior + 3 action/observation evidence records', label='')\nM.posterior(6, 'Jessica', 'intent', 'searching for a food item', 0.8, 'native Social Code Bayesian update: compiler prior + 4 action/observation evidence records', label='')\nM.posterior(8, 'Jessica', 'intent', 'to check the refrigerator', 0.6862574969084672, 'native Social Code Bayesian update: compiler prior + 4 action/observation evidence records', label='')\nM.belief(8, 'Jessica', 'is in the living room', 0.88, 'belief update from observation at t=1; carried to t=8 because no contradictory observation occurred')\nM.belief(8, 'Jessica', 'enters the kitchen', 0.88, 'belief update from observation at t=3; carried to t=8 because no contradictory observation occurred')",
+    "social_trace": "{\"kind\": \"observation\", \"values\": {\"agent\": \"Jessica\", \"confidence\": 1.0, \"fact\": \"is in the living room\", \"source\": \"video_or_action\", \"t\": 1}}\n{\"kind\": \"observation\", \"values\": {\"agent\": \"Jessica\", \"confidence\": 1.0, \"fact\": \"enters the kitchen\", \"source\": \"video_or_action\", \"t\": 3}}\n{\"kind\": \"action_evidence\", \"values\": {\"action\": \"opens the microwave\", \"agent\": \"Jessica\", \"confidence\": 0.8, \"evidence\": \"Jessica opens the microwave immediately after entering the kitchen\", \"hypothesis\": \"searching for a food item\", \"t\": 4}}\n{\"kind\": \"belief\", \"values\": {\"agent\": \"Jessica\", \"confidence\": 0.7, \"evidence\": \"She opens the microwave to inspect its interior\", \"fact\": \"a food item might be in the microwave\", \"t\": 4}}\n{\"kind\": \"action_evidence\", \"values\": {\"action\": \"opens the stove\", \"agent\": \"Jessica\", \"confidence\": 0.8, \"evidence\": \"After finding the microwave empty, she checks the stove\", \"hypothesis\": \"searching for a food item\", \"t\": 6}}\n{\"kind\": \"belief\", \"values\": {\"agent\": \"Jessica\", \"confidence\": 0.7, \"evidence\": \"She opens the stove to inspect its interior\", \"fact\": \"a food item might be in the stove\", \"t\": 6}}\n{\"kind\": \"intent\", \"values\": {\"agent\": \"Jessica\", \"confidence\": 0.8, \"evidence\": \"Jessica moves toward the refrigerator after checking the microwave and stove\", \"intent\": \"to check the refrigerator\", \"t\": 8}}\n{\"kind\": \"goal\", \"values\": {\"agent\": \"Jessica\", \"confidence\": 0.7, \"evidence\": \"Jessica is searching kitchen appliances where a salmon would typically be stored or prepared, whereas the apple is located in the living room cabinet\", \"goal\": \"to find a salmon\"}}\n{\"kind\": \"intent\", \"values\": {\"agent\": \"Jessica\", \"confidence\": 0.75, \"evidence\": \"Jessica proceeds towards the kitchen, advances towards the microwave, opens it, then shuts it.\", \"intent\": \"inspect kitchen\", \"t\": 1}}\n{\"kind\": \"action_evidence\", \"values\": {\"action\": \"Jessica proceeds towards the kitchen, advances towards the microwave, opens it, then shuts it.\", \"agent\": \"Jessica\", \"confidence\": 0.75, \"evidence\": \"deterministic action rule\", \"hypothesis\": \"inspect kitchen\", \"t\": 1}}\n{\"kind\": \"intent\", \"values\": {\"agent\": \"Jessica\", \"confidence\": 0.75, \"evidence\": \"Subsequently, she strides towards the stove, opens it, closes it, and finally, walks towards the refrigerator.\", \"intent\": \"inspect stove\", \"t\": 2}}\n{\"kind\": \"action_evidence\", \"values\": {\"action\": \"Subsequently, she strides towards the stove, opens it, closes it, and finally, walks towards the refrigerator.\", \"agent\": \"Jessica\", \"confidence\": 0.75, \"evidence\": \"deterministic action rule\", \"hypothesis\": \"inspect stove\", \"t\": 2}}\n{\"kind\": \"belief\", \"values\": {\"agent\": \"Jessica\", \"confidence\": 1.0, \"evidence\": \"given query premise\", \"fact\": \"there isn't a salmon inside the fridge\", \"t\": 0}}\n{\"kind\": \"query_candidate\", \"values\": {\"agent\": \"Jessica\", \"constraint\": \"ALL\", \"hypothesis\": \"Jessica has been trying to get a salmon\", \"label\": \"A\", \"prior\": 0.5, \"source\": \"MMToM answer option\", \"variable\": \"answer_goal\", \"variable_type\": \"unknown\"}}\n{\"kind\": \"query_candidate\", \"values\": {\"agent\": \"Jessica\", \"constraint\": \"ALL\", \"hypothesis\": \"Jessica has been trying to get an apple\", \"label\": \"B\", \"prior\": 0.5, \"source\": \"MMToM answer option\", \"variable\": \"answer_goal\", \"variable_type\": \"unknown\"}}\n{\"kind\": \"query_evidence\", \"values\": {\"agent\": \"Jessica\", \"confidence\": 0.8, \"evidence\": \"visited location is believed not to contain this goal object\", \"hypothesis\": \"Jessica has been trying to get a salmon\", \"likelihood\": 0.18, \"t\": 0, \"variable\": \"answer_goal\"}}\n{\"kind\": \"query_evidence\", \"values\": {\"agent\": \"Jessica\", \"confidence\": 0.8, \"evidence\": \"visited location is believed not to contain this goal object\", \"hypothesis\": \"Jessica has been trying to get an apple\", \"likelihood\": 0.72, \"t\": 0, \"variable\": \"answer_goal\"}}\n{\"kind\": \"query_evidence\", \"values\": {\"agent\": \"Jessica\", \"confidence\": 0.55, \"evidence\": \"candidate compatibility with next approached location: Subsequently, she strides towards the stove, opens it, closes it, and finally, walks towards the refrigerator.\", \"hypothesis\": \"Jessica has been trying to get a salmon\", \"likelihood\": 0.34, \"t\": 2, \"variable\": \"answer_goal\"}}\n{\"kind\": \"query_evidence\", \"values\": {\"agent\": \"Jessica\", \"confidence\": 0.55, \"evidence\": \"candidate compatibility with next approached location: Subsequently, she strides towards the stove, opens it, closes it, and finally, walks towards the refrigerator.\", \"hypothesis\": \"Jessica has been trying to get an apple\", \"likelihood\": 0.34, \"t\": 2, \"variable\": \"answer_goal\"}}\n{\"kind\": \"posterior\", \"values\": {\"agent\": \"Jessica\", \"evidence\": \"native Social Code Bayesian update: compiler prior + 6 action/observation evidence records\", \"hypothesis\": \"Jessica has been trying to get a salmon\", \"label\": \"A\", \"t\": -1, \"value\": 0.12253425665859184, \"variable\": \"answer_goal\"}}\n{\"kind\": \"posterior\", \"values\": {\"agent\": \"Jessica\", \"evidence\": \"native Social Code Bayesian update: compiler prior + 6 action/observation evidence records\", \"hypothesis\": \"Jessica has been trying to get an apple\", \"label\": \"B\", \"t\": -1, \"value\": 0.8774657433414081, \"variable\": \"answer_goal\"}}\n{\"kind\": \"posterior\", \"values\": {\"agent\": \"Jessica\", \"evidence\": \"native Social Code Bayesian update: compiler prior + 0 action/observation evidence records\", \"hypothesis\": \"there isn't a salmon inside the fridge\", \"label\": \"\", \"t\": 0, \"value\": 0.99, \"variable\": \"belief\"}}\n{\"kind\": \"posterior\", \"values\": {\"agent\": \"Jessica\", \"evidence\": \"native Social Code Bayesian update: compiler prior + 1 action/observation evidence records\", \"hypothesis\": \"is in the living room\", \"label\": \"\", \"t\": 1, \"value\": 0.972972972972973, \"variable\": \"belief\"}}\n{\"kind\": \"posterior\", \"values\": {\"agent\": \"Jessica\", \"evidence\": \"native Social Code Bayesian update: compiler prior + 2 action/observation evidence records\", \"hypothesis\": \"enters the kitchen\", \"label\": \"\", \"t\": 3, \"value\": 0.9391304347826086, \"variable\": \"belief\"}}\n{\"kind\": \"posterior\", \"values\": {\"agent\": \"Jessica\", \"evidence\": \"native Social Code Bayesian update: compiler prior + 2 action/observation evidence records\", \"hypothesis\": \"a food item might be in the microwave\", \"label\": \"\", \"t\": 4, \"value\": 0.3, \"variable\": \"belief\"}}\n{\"kind\": \"posterior\", \"values\": {\"agent\": \"Jessica\", \"evidence\": \"native Social Code Bayesian update: compiler prior + 2 action/observation evidence records\", \"hypothesis\": \"a food item might be in the stove\", \"label\": \"\", \"t\": 6, \"value\": 0.3, \"variable\": \"belief\"}}\n{\"kind\": \"posterior\", \"values\": {\"agent\": \"Jessica\", \"evidence\": \"native Social Code Bayesian update: compiler prior + 4 action/observation evidence records\", \"hypothesis\": \"to find a salmon\", \"label\": \"\", \"t\": -1, \"value\": 0.7, \"variable\": \"goal\"}}\n{\"kind\": \"posterior\", \"values\": {\"agent\": \"Jessica\", \"evidence\": \"native Social Code Bayesian update: compiler prior + 1 action/observation evidence records\", \"hypothesis\": \"inspect kitchen\", \"label\": \"\", \"t\": 1, \"value\": 0.9457591294277522, \"variable\": \"intent\"}}\n{\"kind\": \"posterior\", \"values\": {\"agent\": \"Jessica\", \"evidence\": \"native Social Code Bayesian update: compiler prior + 2 action/observation evidence records\", \"hypothesis\": \"inspect stove\", \"label\": \"\", \"t\": 2, \"value\": 0.945048816668543, \"variable\": \"intent\"}}\n{\"kind\": \"posterior\", \"values\": {\"agent\": \"Jessica\", \"evidence\": \"native Social Code Bayesian update: compiler prior + 3 action/observation evidence records\", \"hypothesis\": \"searching for a food item\", \"label\": \"\", \"t\": 4, \"value\": 0.8, \"variable\": \"intent\"}}\n{\"kind\": \"posterior\", \"values\": {\"agent\": \"Jessica\", \"evidence\": \"native Social Code Bayesian update: compiler prior + 4 action/observation evidence records\", \"hypothesis\": \"searching for a food item\", \"label\": \"\", \"t\": 6, \"value\": 0.8, \"variable\": \"intent\"}}\n{\"kind\": \"posterior\", \"values\": {\"agent\": \"Jessica\", \"evidence\": \"native Social Code Bayesian update: compiler prior + 4 action/observation evidence records\", \"hypothesis\": \"to check the refrigerator\", \"label\": \"\", \"t\": 8, \"value\": 0.6862574969084672, \"variable\": \"intent\"}}\n{\"kind\": \"belief\", \"values\": {\"agent\": \"Jessica\", \"confidence\": 0.88, \"evidence\": \"belief update from observation at t=1; carried to t=8 because no contradictory observation occurred\", \"fact\": \"is in the living room\", \"t\": 8}}\n{\"kind\": \"belief\", \"values\": {\"agent\": \"Jessica\", \"confidence\": 0.88, \"evidence\": \"belief update from observation at t=3; carried to t=8 because no contradictory observation occurred\", \"fact\": \"enters the kitchen\", \"t\": 8}}",
+    "social_components": [
+      "neural",
+      "rules",
+      "query",
+      "spatial_bridge",
+      "bayesian"
+    ],
+    "social_reasoning": {
+      "raw_records": 32,
+      "derived_beliefs": 2,
+      "carried_beliefs": 2,
+      "timeline_end": 8,
+      "fused_records": 34,
+      "contradictions": 0,
+      "component_diagnostics": {
+        "query": {
+          "variable": "answer_goal",
+          "candidates": 2
+        },
+        "spatial_bridge": {
+          "spatial_records": 9,
+          "inspections": 2,
+          "approaches": 1,
+          "bridged_observations": 0
+        },
+        "bayesian": {
+          "hypothesis_sets": 12,
+          "hypotheses": 13,
+          "evidence_records": 10,
+          "query_evidence_records": 4
+        }
+      }
+    },
+    "prediction": "b",
+    "correct": true,
+    "prob_a": 0.12253425665859184,
+    "prob_b": 0.8774657433414081,
+    "elapsed_seconds": 60.988226452842355,
+    "uncertainty_triggered": false,
+    "primary_prediction": "b",
+    "primary_correct": true
+  },
+  "media": [
+    {
+      "path": "MMToM-QA-data/required_frames/task_96/script/0/Action_0000_0_normal.png",
+      "sha256": "3df2250ceeae4c7d31abbffda4c364720706c8298ae6c911933f271e49d086df",
+      "export": "mmtom/index_0318/frames/Action_0000_0_normal.png",
+      "export_sha256": "3df2250ceeae4c7d31abbffda4c364720706c8298ae6c911933f271e49d086df",
+      "frame_number": 0
+    },
+    {
+      "path": "MMToM-QA-data/required_frames/task_96/script/0/Action_0075_0_normal.png",
+      "sha256": "bfe1b355b9085426c01de615625026cff271d0526c9ce1a51c8c74c9c5273fcf",
+      "export": "mmtom/index_0318/frames/Action_0075_0_normal.png",
+      "export_sha256": "bfe1b355b9085426c01de615625026cff271d0526c9ce1a51c8c74c9c5273fcf",
+      "frame_number": 75
+    },
+    {
+      "path": "MMToM-QA-data/required_frames/task_96/script/0/Action_0150_0_normal.png",
+      "sha256": "c58a17b7b29de0e570716bea63d4dfe69021a6749c048fb49aa72c465a603d37",
+      "export": "mmtom/index_0318/frames/Action_0150_0_normal.png",
+      "export_sha256": "c58a17b7b29de0e570716bea63d4dfe69021a6749c048fb49aa72c465a603d37",
+      "frame_number": 150
+    },
+    {
+      "path": "MMToM-QA-data/required_frames/task_96/script/0/Action_0225_0_normal.png",
+      "sha256": "8edc88271776fc87ce4fcfacee738f3aa3ede938f31395afe673c90291d69cc7",
+      "export": "mmtom/index_0318/frames/Action_0225_0_normal.png",
+      "export_sha256": "8edc88271776fc87ce4fcfacee738f3aa3ede938f31395afe673c90291d69cc7",
+      "frame_number": 225
+    },
+    {
+      "path": "MMToM-QA-data/required_frames/task_96/script/0/Action_0300_0_normal.png",
+      "sha256": "9f698812502f16d1c60b2ac2cc211432d608128cf3c28c4ebf44ae6471caf254",
+      "export": "mmtom/index_0318/frames/Action_0300_0_normal.png",
+      "export_sha256": "9f698812502f16d1c60b2ac2cc211432d608128cf3c28c4ebf44ae6471caf254",
+      "frame_number": 300
+    },
+    {
+      "path": "MMToM-QA-data/required_frames/task_96/script/0/Action_0375_0_normal.png",
+      "sha256": "6a90884d70d3910a143fa053a581e14f6d83608b202a6f3c2b547cc37923c3ee",
+      "export": "mmtom/index_0318/frames/Action_0375_0_normal.png",
+      "export_sha256": "6a90884d70d3910a143fa053a581e14f6d83608b202a6f3c2b547cc37923c3ee",
+      "frame_number": 375
+    },
+    {
+      "path": "MMToM-QA-data/required_frames/task_96/script/0/Action_0450_0_normal.png",
+      "sha256": "e1a8f86cbe7bd08c10eb072ec37b5899a8007dbda3bdd4fac88614e488a728d0",
+      "export": "mmtom/index_0318/frames/Action_0450_0_normal.png",
+      "export_sha256": "e1a8f86cbe7bd08c10eb072ec37b5899a8007dbda3bdd4fac88614e488a728d0",
+      "frame_number": 450
+    },
+    {
+      "path": "MMToM-QA-data/required_frames/task_96/script/0/Action_0525_0_normal.png",
+      "sha256": "b6a6de5194bafc91daa9c55d9fd15d80bebbb3c1db6e52f3926183deddb41436",
+      "export": "mmtom/index_0318/frames/Action_0525_0_normal.png",
+      "export_sha256": "b6a6de5194bafc91daa9c55d9fd15d80bebbb3c1db6e52f3926183deddb41436",
+      "frame_number": 525
+    }
+  ],
+  "source_files": [
+    {
+      "path": "reports/flash_full_results_20260920/mmtom/flash_results.jsonl.gz",
+      "sha256": "1476f1c8e272cd2209fcde398680b24ae6eb4173e0af9efeab9a50f9a9b12537"
+    },
+    {
+      "path": "reports/flash_full_results_20260920/mmtom/original_frozen_inputs/inputs.json",
+      "sha256": "da2cd7ce3d84e68d3532d34a893cd41eab3f536a4e57bcbe5b51d076c43eba8c"
+    },
+    {
+      "path": "reports/flash_full_results_20260920/mmtom/calls.jsonl.gz",
+      "sha256": "8e5359222cf2b0c11ebb1dbb60b0296db8be73cc8ef94317fbf4cb1505610c4f"
+    }
+  ]
+}

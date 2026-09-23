@@ -1,0 +1,626 @@
+{
+  "id": "ma_1597",
+  "environment": "MA-EgoQA",
+  "title": "Time-filtered answer; invalid ablation is not mechanism evidence",
+  "grade": "B: actual clips/code/citations; speech and identities need human sign-off",
+  "scope": "Flash rich100; same compiled record across three arms; static audiovisual QA",
+  "panel_titles": [
+    "1  Actual question / evidence",
+    "2  Compiled links",
+    "3  Saved answers"
+  ],
+  "panels": [
+    "Who was the last person to use scissors before 1PM on DAY4?",
+    "S1 records Katrina using scissors before13:00 on DAY4. Full SSC cites S1; no-attribution also answers correctly.",
+    "ssc_no_references: invalid\n\nssc_no_attribution: C\n\nssc: C\n\nGold: C."
+  ],
+  "figure_caveat": "Static compilation, not online memory. Quotes/identities are model-generated annotations pending human audiovisual verification.",
+  "limitations": [
+    "All three arms see the same clips and derive views from one compiled record; the final answer still sees audiovisual clips.",
+    "The input row.answer is an intentional option0 dummy, not ground truth. This export uses SCORER_ONLY_gold.json.",
+    "Quotes, speaker identities and inferred beliefs have not received independent full audio/identity annotation review.",
+    "Full100 outcomes:46/46/49 correct for full/no-references/no-attribution. Individual examples do not establish linkage benefit.",
+    "Case1597 no-references is invalid, not a valid wrong answer; do not claim an evidence-link mechanism success from it."
+  ],
+  "input": {
+    "index": 1597,
+    "row": {
+      "question": "Who was the last person to use scissors before 1PM on DAY4?",
+      "options": [
+        "Tasha",
+        "Lucia",
+        "Katrina",
+        "Jake",
+        "Alice"
+      ],
+      "category": "environmental_interaction",
+      "subcategory": "environmental_interaction",
+      "answer": "Tasha"
+    },
+    "video_clips": [
+      {
+        "id": "DAY6_A2_ALICE_11300000.mp4",
+        "score": 25.628196994741284,
+        "agent": "",
+        "query": "Who was the last person to use scissors before 1PM on DAY4? Tasha",
+        "retrieval_source": "option",
+        "option": "A"
+      },
+      {
+        "id": "DAY6_A2_ALICE_11050000.mp4",
+        "score": 28.151168623424457,
+        "agent": "",
+        "query": "Who was the last person to use scissors before 1PM on DAY4? Lucia",
+        "retrieval_source": "option",
+        "option": "B"
+      },
+      {
+        "id": "DAY4_A5_KATRINA_12300000.mp4",
+        "score": 25.403262026863896,
+        "agent": "",
+        "query": "Who was the last person to use scissors before 1PM on DAY4? Katrina",
+        "retrieval_source": "option",
+        "option": "C"
+      },
+      {
+        "id": "DAY4_A4_LUCIA_18000000.mp4",
+        "score": 28.857317266816892,
+        "agent": "",
+        "query": "Who was the last person to use scissors before 1PM on DAY4? Jake",
+        "retrieval_source": "option",
+        "option": "D"
+      },
+      {
+        "id": "DAY6_A6_SHURE_10530000.mp4",
+        "score": 25.250814010419763,
+        "agent": "",
+        "query": "Who was the last person to use scissors before 1PM on DAY4? Alice",
+        "retrieval_source": "option",
+        "option": "E"
+      },
+      {
+        "id": "DAY4_A5_KATRINA_15453000.mp4",
+        "score": 14.767316084363394,
+        "agent": "KATRINA",
+        "query": "cutting with scissors while making pressed-flower crafts",
+        "retrieval_source": "planner"
+      },
+      {
+        "id": "DAY1_A2_ALICE_11560000.mp4",
+        "score": 18.435686825524634,
+        "agent": "ALICE",
+        "query": "who used scissors during the pressed-flower crafts preparation",
+        "retrieval_source": "planner"
+      },
+      {
+        "id": "DAY4_A1_JAKE_21340000.mp4",
+        "score": 27.483313181944297,
+        "agent": "",
+        "query": "Who was the last person to use scissors before 1PM on DAY4? Jake",
+        "retrieval_source": "option",
+        "option": "D"
+      },
+      {
+        "id": "DAY4_A3_TASHA_17480000.mp4",
+        "score": 27.462927770226923,
+        "agent": "",
+        "query": "Who was the last person to use scissors before 1PM on DAY4? Jake",
+        "retrieval_source": "option",
+        "option": "D"
+      },
+      {
+        "id": "DAY4_A4_LUCIA_18070000.mp4",
+        "score": 27.435743968839795,
+        "agent": "",
+        "query": "Who was the last person to use scissors before 1PM on DAY4? Lucia",
+        "retrieval_source": "option",
+        "option": "B"
+      }
+    ],
+    "media_files": [
+      "/pfs/zhangxiaoyuan/project/physical_code/MA-EgoQA/data/egolife_proxy_384p/A1_JAKE/DAY4/DAY4_A1_JAKE_21340000.mp4",
+      "/pfs/zhangxiaoyuan/project/physical_code/MA-EgoQA/data/egolife_proxy_384p/A2_ALICE/DAY1/DAY1_A2_ALICE_11560000.mp4",
+      "/pfs/zhangxiaoyuan/project/physical_code/MA-EgoQA/data/egolife_proxy_384p/A2_ALICE/DAY6/DAY6_A2_ALICE_11050000.mp4",
+      "/pfs/zhangxiaoyuan/project/physical_code/MA-EgoQA/data/egolife_proxy_384p/A2_ALICE/DAY6/DAY6_A2_ALICE_11300000.mp4",
+      "/pfs/zhangxiaoyuan/project/physical_code/MA-EgoQA/data/egolife_proxy_384p/A3_TASHA/DAY4/DAY4_A3_TASHA_17480000.mp4",
+      "/pfs/zhangxiaoyuan/project/physical_code/MA-EgoQA/data/egolife_proxy_384p/A4_LUCIA/DAY4/DAY4_A4_LUCIA_18000000.mp4",
+      "/pfs/zhangxiaoyuan/project/physical_code/MA-EgoQA/data/egolife_proxy_384p/A4_LUCIA/DAY4/DAY4_A4_LUCIA_18070000.mp4",
+      "/pfs/zhangxiaoyuan/project/physical_code/MA-EgoQA/data/egolife_proxy_384p/A5_KATRINA/DAY4/DAY4_A5_KATRINA_12300000.mp4",
+      "/pfs/zhangxiaoyuan/project/physical_code/MA-EgoQA/data/egolife_proxy_384p/A5_KATRINA/DAY4/DAY4_A5_KATRINA_15453000.mp4",
+      "/pfs/zhangxiaoyuan/project/physical_code/MA-EgoQA/data/egolife_proxy_384p/A6_SHURE/DAY6/DAY6_A6_SHURE_10530000.mp4"
+    ]
+  },
+  "gold": {
+    "answer_index": 2,
+    "category": "environmental_interaction"
+  },
+  "compiled": {
+    "valid": true,
+    "index": 1597,
+    "spatial_code": "S.event(1, Katrina, \"use\", \"scissors\", source=\"video\", confidence=0.8, evidence_id=\"S1\", clip_id=\"DAY4_A5_KATRINA_12300000.mp4\", observer=\"Katrina\", evidence_span=\"00:27-00:30\", quote=\"\", event_role=\"executor\", phase=\"during\")\nS.event(2, Lucia, \"use\", \"scissors\", source=\"video\", confidence=0.8, evidence_id=\"S2\", clip_id=\"DAY4_A4_LUCIA_18000000.mp4\", observer=\"Lucia\", evidence_span=\"00:03-00:18\", quote=\"\", event_role=\"executor\", phase=\"during\")\nS.event(3, Lucia, \"use\", \"scissors\", source=\"video\", confidence=0.8, evidence_id=\"S3\", clip_id=\"DAY4_A5_KATRINA_15453000.mp4\", observer=\"Katrina\", evidence_span=\"00:18-00:25\", quote=\"\", event_role=\"executor\", phase=\"during\")\nS.event(4, Lucia, \"use\", \"scissors\", source=\"video\", confidence=0.8, evidence_id=\"S4\", clip_id=\"DAY4_A4_LUCIA_18070000.mp4\", observer=\"Lucia\", evidence_span=\"00:00-00:12\", quote=\"\", event_role=\"executor\", phase=\"during\")\nS.event(5, Alice, \"use\", \"scissors\", source=\"video\", confidence=0.8, evidence_id=\"S5\", clip_id=\"DAY1_A2_ALICE_11560000.mp4\", observer=\"Alice\", evidence_span=\"00:11-00:29\", quote=\"\", event_role=\"executor\", phase=\"during\")\nS.event(6, Alice, \"use\", \"scissors\", source=\"video\", confidence=0.8, evidence_id=\"S6\", clip_id=\"DAY6_A2_ALICE_11300000.mp4\", observer=\"Alice\", evidence_span=\"00:00-00:23\", quote=\"\", event_role=\"executor\", phase=\"during\")",
+    "spatial_trace": "{\"kind\": \"event\", \"values\": {\"action\": \"use\", \"actor\": \"Katrina\", \"clip_id\": \"DAY4_A5_KATRINA_12300000.mp4\", \"confidence\": 0.8, \"event_role\": \"executor\", \"evidence_id\": \"S1\", \"evidence_span\": \"00:27-00:30\", \"observer\": \"Katrina\", \"phase\": \"during\", \"source\": \"video\", \"t\": 1, \"target\": \"scissors\"}}\n{\"kind\": \"event\", \"values\": {\"action\": \"use\", \"actor\": \"Lucia\", \"clip_id\": \"DAY4_A4_LUCIA_18000000.mp4\", \"confidence\": 0.8, \"event_role\": \"executor\", \"evidence_id\": \"S2\", \"evidence_span\": \"00:03-00:18\", \"observer\": \"Lucia\", \"phase\": \"during\", \"source\": \"video\", \"t\": 2, \"target\": \"scissors\"}}\n{\"kind\": \"event\", \"values\": {\"action\": \"use\", \"actor\": \"Lucia\", \"clip_id\": \"DAY4_A5_KATRINA_15453000.mp4\", \"confidence\": 0.8, \"event_role\": \"executor\", \"evidence_id\": \"S3\", \"evidence_span\": \"00:18-00:25\", \"observer\": \"Katrina\", \"phase\": \"during\", \"source\": \"video\", \"t\": 3, \"target\": \"scissors\"}}\n{\"kind\": \"event\", \"values\": {\"action\": \"use\", \"actor\": \"Lucia\", \"clip_id\": \"DAY4_A4_LUCIA_18070000.mp4\", \"confidence\": 0.8, \"event_role\": \"executor\", \"evidence_id\": \"S4\", \"evidence_span\": \"00:00-00:12\", \"observer\": \"Lucia\", \"phase\": \"during\", \"source\": \"video\", \"t\": 4, \"target\": \"scissors\"}}\n{\"kind\": \"event\", \"values\": {\"action\": \"use\", \"actor\": \"Alice\", \"clip_id\": \"DAY1_A2_ALICE_11560000.mp4\", \"confidence\": 0.8, \"event_role\": \"executor\", \"evidence_id\": \"S5\", \"evidence_span\": \"00:11-00:29\", \"observer\": \"Alice\", \"phase\": \"during\", \"source\": \"video\", \"t\": 5, \"target\": \"scissors\"}}\n{\"kind\": \"event\", \"values\": {\"action\": \"use\", \"actor\": \"Alice\", \"clip_id\": \"DAY6_A2_ALICE_11300000.mp4\", \"confidence\": 0.8, \"event_role\": \"executor\", \"evidence_id\": \"S6\", \"evidence_span\": \"00:00-00:23\", \"observer\": \"Alice\", \"phase\": \"during\", \"source\": \"video\", \"t\": 6, \"target\": \"scissors\"}}",
+    "social_code": "M.observe(1, \"Katrina\", \"Katrina used scissors at 12:30:00 on DAY4\", source=\"spatial_trace\", confidence=0.8, evidence_ids=\"S1\")\nM.observe(2, \"Lucia\", \"Lucia used scissors at 18:00:00 on DAY4\", source=\"spatial_trace\", confidence=0.8, evidence_ids=\"S2\")\nM.observe(3, \"Katrina\", \"Lucia used scissors at 15:45:30 on DAY4\", source=\"spatial_trace\", confidence=0.8, evidence_ids=\"S3\")\nM.observe(4, \"Lucia\", \"Lucia used scissors at 18:07:00 on DAY4\", source=\"spatial_trace\", confidence=0.8, evidence_ids=\"S4\")\nM.observe(5, \"Alice\", \"Alice used scissors at 11:56:00 on DAY1\", source=\"spatial_trace\", confidence=0.8, evidence_ids=\"S5\")\nM.observe(6, \"Alice\", \"Alice used scissors at 11:30:00 on DAY6\", source=\"spatial_trace\", confidence=0.8, evidence_ids=\"S6\")\nM.action_evidence(1, \"Katrina\", \"use scissors\", \"Katrina is the executor\", confidence=0.8, evidence=\"Katrina is the executor\", evidence_ids=\"S1\")\nM.unknown(\"Katrina\", \"intent\")\nM.unknown(\"Lucia\", \"intent\")\nM.unknown(\"Alice\", \"intent\")",
+    "social_trace": "{\"kind\": \"observation\", \"values\": {\"agent\": \"Katrina\", \"confidence\": 0.8, \"evidence_ids\": [\"S1\"], \"fact\": \"Katrina used scissors at 12:30:00 on DAY4\", \"source\": \"spatial_trace\", \"t\": 1}}\n{\"kind\": \"observation\", \"values\": {\"agent\": \"Lucia\", \"confidence\": 0.8, \"evidence_ids\": [\"S2\"], \"fact\": \"Lucia used scissors at 18:00:00 on DAY4\", \"source\": \"spatial_trace\", \"t\": 2}}\n{\"kind\": \"observation\", \"values\": {\"agent\": \"Katrina\", \"confidence\": 0.8, \"evidence_ids\": [\"S3\"], \"fact\": \"Lucia used scissors at 15:45:30 on DAY4\", \"source\": \"spatial_trace\", \"t\": 3}}\n{\"kind\": \"observation\", \"values\": {\"agent\": \"Lucia\", \"confidence\": 0.8, \"evidence_ids\": [\"S4\"], \"fact\": \"Lucia used scissors at 18:07:00 on DAY4\", \"source\": \"spatial_trace\", \"t\": 4}}\n{\"kind\": \"observation\", \"values\": {\"agent\": \"Alice\", \"confidence\": 0.8, \"evidence_ids\": [\"S5\"], \"fact\": \"Alice used scissors at 11:56:00 on DAY1\", \"source\": \"spatial_trace\", \"t\": 5}}\n{\"kind\": \"observation\", \"values\": {\"agent\": \"Alice\", \"confidence\": 0.8, \"evidence_ids\": [\"S6\"], \"fact\": \"Alice used scissors at 11:30:00 on DAY6\", \"source\": \"spatial_trace\", \"t\": 6}}\n{\"kind\": \"action_evidence\", \"values\": {\"action\": \"use scissors\", \"agent\": \"Katrina\", \"confidence\": 0.8, \"evidence\": \"Katrina is the executor\", \"evidence_ids\": [\"S1\"], \"hypothesis\": \"Katrina is the executor\", \"t\": 1}}\n{\"kind\": \"social_unknown\", \"values\": {\"agent\": \"Katrina\", \"variable\": \"intent\"}}\n{\"kind\": \"social_unknown\", \"values\": {\"agent\": \"Lucia\", \"variable\": \"intent\"}}\n{\"kind\": \"social_unknown\", \"values\": {\"agent\": \"Alice\", \"variable\": \"intent\"}}",
+    "graph": {
+      "physical_records": [
+        {
+          "id": "physical_fab59e2bf653bf81",
+          "kind": "event",
+          "content": {
+            "action": "use",
+            "actor": "Alice",
+            "clip_id": "DAY1_A2_ALICE_11560000.mp4",
+            "confidence": 0.8,
+            "event_role": "executor",
+            "evidence_id": "S5",
+            "evidence_span": "00:11-00:29",
+            "phase": "during",
+            "source": "video",
+            "t": 5,
+            "target": "scissors"
+          }
+        },
+        {
+          "id": "physical_6ef703c23501f307",
+          "kind": "event",
+          "content": {
+            "action": "use",
+            "actor": "Alice",
+            "clip_id": "DAY6_A2_ALICE_11300000.mp4",
+            "confidence": 0.8,
+            "event_role": "executor",
+            "evidence_id": "S6",
+            "evidence_span": "00:00-00:23",
+            "phase": "during",
+            "source": "video",
+            "t": 6,
+            "target": "scissors"
+          }
+        },
+        {
+          "id": "physical_633d6d2c6340fba7",
+          "kind": "event",
+          "content": {
+            "action": "use",
+            "actor": "Katrina",
+            "clip_id": "DAY4_A5_KATRINA_12300000.mp4",
+            "confidence": 0.8,
+            "event_role": "executor",
+            "evidence_id": "S1",
+            "evidence_span": "00:27-00:30",
+            "phase": "during",
+            "source": "video",
+            "t": 1,
+            "target": "scissors"
+          }
+        },
+        {
+          "id": "physical_b53746bb1841c23e",
+          "kind": "event",
+          "content": {
+            "action": "use",
+            "actor": "Lucia",
+            "clip_id": "DAY4_A4_LUCIA_18000000.mp4",
+            "confidence": 0.8,
+            "event_role": "executor",
+            "evidence_id": "S2",
+            "evidence_span": "00:03-00:18",
+            "phase": "during",
+            "source": "video",
+            "t": 2,
+            "target": "scissors"
+          }
+        },
+        {
+          "id": "physical_4efea8d7f25790eb",
+          "kind": "event",
+          "content": {
+            "action": "use",
+            "actor": "Lucia",
+            "clip_id": "DAY4_A4_LUCIA_18070000.mp4",
+            "confidence": 0.8,
+            "event_role": "executor",
+            "evidence_id": "S4",
+            "evidence_span": "00:00-00:12",
+            "phase": "during",
+            "source": "video",
+            "t": 4,
+            "target": "scissors"
+          }
+        },
+        {
+          "id": "physical_b90cadecd25427b4",
+          "kind": "event",
+          "content": {
+            "action": "use",
+            "actor": "Lucia",
+            "clip_id": "DAY4_A5_KATRINA_15453000.mp4",
+            "confidence": 0.8,
+            "event_role": "executor",
+            "evidence_id": "S3",
+            "evidence_span": "00:18-00:25",
+            "phase": "during",
+            "source": "video",
+            "t": 3,
+            "target": "scissors"
+          }
+        }
+      ],
+      "observation_attributions": [
+        {
+          "record": "physical_b90cadecd25427b4",
+          "observer": "Katrina"
+        },
+        {
+          "record": "physical_4efea8d7f25790eb",
+          "observer": "Lucia"
+        },
+        {
+          "record": "physical_b53746bb1841c23e",
+          "observer": "Lucia"
+        },
+        {
+          "record": "physical_633d6d2c6340fba7",
+          "observer": "Katrina"
+        },
+        {
+          "record": "physical_6ef703c23501f307",
+          "observer": "Alice"
+        },
+        {
+          "record": "physical_fab59e2bf653bf81",
+          "observer": "Alice"
+        }
+      ],
+      "social_records": [
+        {
+          "id": "social_a4a54c6c12f190e6",
+          "kind": "observation",
+          "content": {
+            "confidence": 0.8,
+            "fact": "SELF used scissors at 18:00:00 on DAY4",
+            "source": "spatial_trace",
+            "t": 2
+          }
+        },
+        {
+          "id": "social_96ebfa79a1991ada",
+          "kind": "observation",
+          "content": {
+            "confidence": 0.8,
+            "fact": "SELF used scissors at 18:07:00 on DAY4",
+            "source": "spatial_trace",
+            "t": 4
+          }
+        },
+        {
+          "id": "social_47c410cf93414ed4",
+          "kind": "observation",
+          "content": {
+            "confidence": 0.8,
+            "fact": "SELF used scissors at 11:56:00 on DAY1",
+            "source": "spatial_trace",
+            "t": 5
+          }
+        },
+        {
+          "id": "social_d8a3af145c1c24df",
+          "kind": "observation",
+          "content": {
+            "confidence": 0.8,
+            "fact": "SELF used scissors at 11:30:00 on DAY6",
+            "source": "spatial_trace",
+            "t": 6
+          }
+        },
+        {
+          "id": "social_2c3d0700ead86e62",
+          "kind": "observation",
+          "content": {
+            "confidence": 0.8,
+            "fact": "Lucia used scissors at 15:45:30 on DAY4",
+            "source": "spatial_trace",
+            "t": 3
+          }
+        },
+        {
+          "id": "social_0445e64430a7538b",
+          "kind": "social_unknown",
+          "content": {
+            "variable": "intent"
+          }
+        },
+        {
+          "id": "social_490e44328fee7a65",
+          "kind": "observation",
+          "content": {
+            "confidence": 0.8,
+            "fact": "SELF used scissors at 12:30:00 on DAY4",
+            "source": "spatial_trace",
+            "t": 1
+          }
+        },
+        {
+          "id": "social_363f0d6d427ff973",
+          "kind": "action_evidence",
+          "content": {
+            "action": "use scissors",
+            "confidence": 0.8,
+            "hypothesis": "SELF is the executor",
+            "t": 1
+          }
+        },
+        {
+          "id": "social_d3bb8e32a26102f4",
+          "kind": "social_unknown",
+          "content": {
+            "variable": "intent"
+          }
+        },
+        {
+          "id": "social_9fa68ddd313194f1",
+          "kind": "social_unknown",
+          "content": {
+            "variable": "intent"
+          }
+        }
+      ],
+      "attributions": [
+        {
+          "record": "social_2c3d0700ead86e62",
+          "agent": "Katrina"
+        },
+        {
+          "record": "social_47c410cf93414ed4",
+          "agent": "Alice"
+        },
+        {
+          "record": "social_a4a54c6c12f190e6",
+          "agent": "Lucia"
+        },
+        {
+          "record": "social_d8a3af145c1c24df",
+          "agent": "Alice"
+        },
+        {
+          "record": "social_96ebfa79a1991ada",
+          "agent": "Lucia"
+        },
+        {
+          "record": "social_363f0d6d427ff973",
+          "agent": "Katrina"
+        },
+        {
+          "record": "social_d3bb8e32a26102f4",
+          "agent": "Alice"
+        },
+        {
+          "record": "social_9fa68ddd313194f1",
+          "agent": "Katrina"
+        },
+        {
+          "record": "social_0445e64430a7538b",
+          "agent": "Lucia"
+        },
+        {
+          "record": "social_490e44328fee7a65",
+          "agent": "Katrina"
+        }
+      ],
+      "evidence_links": [
+        {
+          "record": "social_96ebfa79a1991ada",
+          "evidence_id": "S4"
+        },
+        {
+          "record": "social_2c3d0700ead86e62",
+          "evidence_id": "S3"
+        },
+        {
+          "record": "social_490e44328fee7a65",
+          "evidence_id": "S1"
+        },
+        {
+          "record": "social_363f0d6d427ff973",
+          "evidence_id": "S1"
+        },
+        {
+          "record": "social_47c410cf93414ed4",
+          "evidence_id": "S5"
+        },
+        {
+          "record": "social_a4a54c6c12f190e6",
+          "evidence_id": "S2"
+        },
+        {
+          "record": "social_d8a3af145c1c24df",
+          "evidence_id": "S6"
+        }
+      ],
+      "support_notes": [
+        {
+          "id": "note_d572e6b773779525",
+          "text": "SELF is the executor",
+          "status": "compiler_generated_rationale_not_independent_observation"
+        }
+      ],
+      "rationale_links": [
+        {
+          "record": "social_363f0d6d427ff973",
+          "note": "note_d572e6b773779525"
+        }
+      ]
+    },
+    "valid_evidence_ids": [
+      "S1",
+      "S2",
+      "S3",
+      "S4",
+      "S5",
+      "S6"
+    ]
+  },
+  "results": {
+    "index": 1597,
+    "category": "environmental_interaction",
+    "conditions": {
+      "ssc_no_references": {
+        "index": 1597,
+        "category": "environmental_interaction",
+        "condition": "ssc_no_references",
+        "valid": false,
+        "prediction_index": null,
+        "failure_stage": "answer",
+        "error_type": "OutputTruncated"
+      },
+      "ssc_no_attribution": {
+        "index": 1597,
+        "category": "environmental_interaction",
+        "condition": "ssc_no_attribution",
+        "valid": true,
+        "prediction_index": 2,
+        "raw": "```json\n{\"answer\":\"C\", \"evidence_ids\":[\"S1\"], \"reason\":\"Katrina used scissors at 12:30:27 on DAY4, which is the only recorded instance of scissors being used before 1 PM on that day.\"}\n```",
+        "initial_raw": "",
+        "format_retry_used": false,
+        "parsed": {
+          "answer": "C",
+          "evidence_ids": [
+            "S1"
+          ],
+          "reason": "Katrina used scissors at 12:30:27 on DAY4, which is the only recorded instance of scissors being used before 1 PM on that day."
+        }
+      },
+      "ssc": {
+        "index": 1597,
+        "category": "environmental_interaction",
+        "condition": "ssc",
+        "valid": true,
+        "prediction_index": 2,
+        "raw": "```json\n{\"answer\":\"C\", \"evidence_ids\":[\"S1\"], \"reason\":\"Katrina used scissors at 12:30:00 on DAY4, which is the only recorded instance of scissors use before 1 PM on that day.\"}\n```",
+        "initial_raw": "",
+        "format_retry_used": false,
+        "parsed": {
+          "answer": "C",
+          "evidence_ids": [
+            "S1"
+          ],
+          "reason": "Katrina used scissors at 12:30:00 on DAY4, which is the only recorded instance of scissors use before 1 PM on that day."
+        }
+      }
+    },
+    "compile_valid": true
+  },
+  "media": [
+    {
+      "path": "MA-EgoQA/data/egolife_proxy_384p/A1_JAKE/DAY4/DAY4_A1_JAKE_21340000.mp4",
+      "sha256": "3dedad46e219c2fbe4da52a8665b0b45d252eacfd834e50d0a317a8f9728d060",
+      "clip_id": "DAY4_A1_JAKE_21340000.mp4",
+      "kind": "input audiovisual clip; not redistributed"
+    },
+    {
+      "path": "MA-EgoQA/data/egolife_proxy_384p/A2_ALICE/DAY1/DAY1_A2_ALICE_11560000.mp4",
+      "sha256": "74e12622499bd1bae2a5b1a9c0f6b3ef32e5f1b347c894cc58d95d7e8aad2d19",
+      "clip_id": "DAY1_A2_ALICE_11560000.mp4",
+      "kind": "input audiovisual clip; not redistributed"
+    },
+    {
+      "path": "MA-EgoQA/data/egolife_proxy_384p/A2_ALICE/DAY6/DAY6_A2_ALICE_11050000.mp4",
+      "sha256": "b249ef010ae3b5574383b4857fd25e88dbda0aada56b716092b0ca487201b78a",
+      "clip_id": "DAY6_A2_ALICE_11050000.mp4",
+      "kind": "input audiovisual clip; not redistributed"
+    },
+    {
+      "path": "MA-EgoQA/data/egolife_proxy_384p/A2_ALICE/DAY6/DAY6_A2_ALICE_11300000.mp4",
+      "sha256": "b74244a66df78cc1c8a247c0085922d917c9eafa134137e385bb613289fe1f1b",
+      "clip_id": "DAY6_A2_ALICE_11300000.mp4",
+      "kind": "input audiovisual clip; not redistributed"
+    },
+    {
+      "path": "MA-EgoQA/data/egolife_proxy_384p/A3_TASHA/DAY4/DAY4_A3_TASHA_17480000.mp4",
+      "sha256": "d9ae3d130cde84e8a24332e265a5a7c509b8c998e9776ff936fe3ad385825f72",
+      "clip_id": "DAY4_A3_TASHA_17480000.mp4",
+      "kind": "input audiovisual clip; not redistributed"
+    },
+    {
+      "path": "MA-EgoQA/data/egolife_proxy_384p/A4_LUCIA/DAY4/DAY4_A4_LUCIA_18000000.mp4",
+      "sha256": "9e60e1520b83d5bdb92f5d733af339fe20ab72919e7bb6fb5ab45c1937e02872",
+      "clip_id": "DAY4_A4_LUCIA_18000000.mp4",
+      "kind": "input audiovisual clip; not redistributed"
+    },
+    {
+      "path": "MA-EgoQA/data/egolife_proxy_384p/A4_LUCIA/DAY4/DAY4_A4_LUCIA_18070000.mp4",
+      "sha256": "77e20c50631c60188e464d2d5a27b846c12c92c7bd7bce365bfb15b168e618e7",
+      "clip_id": "DAY4_A4_LUCIA_18070000.mp4",
+      "kind": "input audiovisual clip; not redistributed"
+    },
+    {
+      "path": "MA-EgoQA/data/egolife_proxy_384p/A5_KATRINA/DAY4/DAY4_A5_KATRINA_12300000.mp4",
+      "sha256": "039dee0debdfab941b61a820ed779d0408fd1329a45b6699639689cb22f30a4f",
+      "clip_id": "DAY4_A5_KATRINA_12300000.mp4",
+      "kind": "input audiovisual clip; not redistributed"
+    },
+    {
+      "path": "MA-EgoQA/data/egolife_proxy_384p/A5_KATRINA/DAY4/DAY4_A5_KATRINA_15453000.mp4",
+      "sha256": "005b88b02b0f1080b81ed17ba681c6f797181d9364b38534939a3bb10d409049",
+      "clip_id": "DAY4_A5_KATRINA_15453000.mp4",
+      "kind": "input audiovisual clip; not redistributed"
+    },
+    {
+      "path": "MA-EgoQA/data/egolife_proxy_384p/A6_SHURE/DAY6/DAY6_A6_SHURE_10530000.mp4",
+      "sha256": "07e64a089d80f1260dc2b160773842b345cd687934fbc2e1d3e00ee331deee7e",
+      "clip_id": "DAY6_A6_SHURE_10530000.mp4",
+      "kind": "input audiovisual clip; not redistributed"
+    }
+  ],
+  "preview_frames": [
+    {
+      "evidence_id": "S1",
+      "clip_id": "DAY4_A5_KATRINA_12300000.mp4",
+      "clip_sha256": "039dee0debdfab941b61a820ed779d0408fd1329a45b6699639689cb22f30a4f",
+      "preview_time_seconds": 28.5,
+      "decoded_frame_number": 228,
+      "fps": 8.0,
+      "preview_file": "preview_S1.jpg",
+      "preview_sha256": "541b05a3a2516ee24837f74bad74cae54f40ffcd19c3d78eb31bdb0629011ca9",
+      "kind": "post-hoc preview from actual input MP4; not a logged model-sampled frame"
+    }
+  ],
+  "cited_evidence": {
+    "S1": {
+      "kind": "event",
+      "values": {
+        "action": "use",
+        "actor": "Katrina",
+        "clip_id": "DAY4_A5_KATRINA_12300000.mp4",
+        "confidence": 0.8,
+        "event_role": "executor",
+        "evidence_id": "S1",
+        "evidence_span": "00:27-00:30",
+        "observer": "Katrina",
+        "phase": "during",
+        "source": "video",
+        "t": 1,
+        "target": "scissors"
+      }
+    }
+  },
+  "answer_media_identical": true,
+  "source_files": [
+    {
+      "path": "workdirs/ma_rich_ablation100_20260922_v1/worker0/results/1597.json",
+      "sha256": "58f3389063ec716a5c4744e8137874215aa7b864d8e1dfd01a039543dc064a28"
+    },
+    {
+      "path": "workdirs/ma_rich_ablation100_20260922_v1/worker0/compiled/1597.json",
+      "sha256": "c2fd82ab6ba619f60f560ee894b0d94d4f613b1250b030c757fe8a385422ea68"
+    },
+    {
+      "path": "workdirs/ma_rich_ablation100_20260922_v1/worker0/inputs.json",
+      "sha256": "b2c57d4379f8c8fea1941a8295acd6deb0fe2efd3fde21394266276c68e4675c"
+    },
+    {
+      "path": "workdirs/ma_rich_ablation100_20260922_v1/SCORER_ONLY_gold.json",
+      "sha256": "8ac2c094ad6220524672c1a669327557e24e861c921323d562bb3100667fa0d0"
+    }
+  ]
+}

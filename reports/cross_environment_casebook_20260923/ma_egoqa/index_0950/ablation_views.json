@@ -1,0 +1,1000 @@
+{
+  "ssc_no_attribution": {
+    "view": {
+      "physical_records": [
+        {
+          "id": "physical_ec2f21da66ca62ab",
+          "kind": "event",
+          "content": {
+            "action": "grill",
+            "actor": "Alice",
+            "clip_id": "DAY3_A2_ALICE_22470000.mp4",
+            "confidence": 0.9,
+            "event_role": "executor",
+            "evidence_id": "S1",
+            "evidence_span": "00:00-00:10",
+            "phase": "during",
+            "source": "video",
+            "t": 1,
+            "target": "meat"
+          }
+        },
+        {
+          "id": "physical_69fc0d810e83cc29",
+          "kind": "event",
+          "content": {
+            "action": "season",
+            "actor": "Alice",
+            "clip_id": "DAY3_A2_ALICE_22273000.mp4",
+            "confidence": 0.9,
+            "event_role": "executor",
+            "evidence_id": "S5",
+            "evidence_span": "00:10-00:25",
+            "phase": "during",
+            "source": "video",
+            "t": 5,
+            "target": "meat"
+          }
+        },
+        {
+          "id": "physical_d0c23795d130294b",
+          "kind": "event",
+          "content": {
+            "action": "say",
+            "actor": "Alice",
+            "clip_id": "DAY3_A2_ALICE_22470000.mp4",
+            "confidence": 0.9,
+            "event_role": "speaker",
+            "evidence_id": "S3",
+            "evidence_span": "00:13-00:16",
+            "phase": "during",
+            "quote": "真的, 闻久了就饱了",
+            "source": "video",
+            "t": 3,
+            "target": "真的, 闻久了就饱了"
+          }
+        },
+        {
+          "id": "physical_3f0c3262740e229c",
+          "kind": "event",
+          "content": {
+            "action": "say",
+            "actor": "Alice",
+            "clip_id": "DAY3_A2_ALICE_22470000.mp4",
+            "confidence": 0.9,
+            "event_role": "speaker",
+            "evidence_id": "S2",
+            "evidence_span": "00:09-00:12",
+            "phase": "during",
+            "quote": "闻闻这个味儿我就有点饱了",
+            "source": "video",
+            "t": 2,
+            "target": "闻闻这个味儿我就有点饱了"
+          }
+        },
+        {
+          "id": "physical_c3207511f6e40090",
+          "kind": "event",
+          "content": {
+            "action": "fan",
+            "actor": "Alice",
+            "clip_id": "DAY3_A2_ALICE_22253000.mp4",
+            "confidence": 0.9,
+            "event_role": "executor",
+            "evidence_id": "S4",
+            "evidence_span": "00:05-00:20",
+            "phase": "during",
+            "source": "video",
+            "t": 4,
+            "target": "grill"
+          }
+        }
+      ],
+      "social_records": [
+        {
+          "id": "social_acbb8996345ed1f7",
+          "kind": "observation",
+          "content": {
+            "confidence": 0.9,
+            "fact": "SELF is grilling meat",
+            "source": "spatial_trace",
+            "t": 1
+          }
+        },
+        {
+          "id": "social_5ee7d3b47346e8ab",
+          "kind": "social_unknown",
+          "content": {
+            "variable": "social_goal"
+          }
+        },
+        {
+          "id": "social_af026f8c525946ca",
+          "kind": "observation",
+          "content": {
+            "confidence": 0.9,
+            "fact": "SELF says smelling the food makes her feel full",
+            "source": "spatial_trace",
+            "t": 2
+          }
+        },
+        {
+          "id": "social_c65e74b76ae818f6",
+          "kind": "social_unknown",
+          "content": {
+            "variable": "decision_maker"
+          }
+        },
+        {
+          "id": "social_e965b4551c980809",
+          "kind": "goal",
+          "content": {
+            "confidence": 0.9,
+            "goal": "cook the meat"
+          }
+        },
+        {
+          "id": "social_fa05d3148e4d18e4",
+          "kind": "action_evidence",
+          "content": {
+            "action": "grill",
+            "confidence": 0.9,
+            "hypothesis": "SELF is cooking",
+            "t": 1
+          }
+        },
+        {
+          "id": "social_bf48ec5ee25c3195",
+          "kind": "action_evidence",
+          "content": {
+            "action": "season",
+            "confidence": 0.9,
+            "hypothesis": "SELF is preparing the meat",
+            "t": 5
+          }
+        },
+        {
+          "id": "social_9ebf6db5812fb2fd",
+          "kind": "belief",
+          "content": {
+            "confidence": 0.9,
+            "fact": "Smelling the food for a long time makes her feel full",
+            "t": 3
+          }
+        },
+        {
+          "id": "social_b19b86864920ab8a",
+          "kind": "action_evidence",
+          "content": {
+            "action": "fan",
+            "confidence": 0.9,
+            "hypothesis": "SELF is managing the grill",
+            "t": 4
+          }
+        },
+        {
+          "id": "social_1a38ba4f473b7560",
+          "kind": "social_unknown",
+          "content": {
+            "variable": "initiator"
+          }
+        }
+      ],
+      "evidence_links": [
+        {
+          "record": "social_e965b4551c980809",
+          "evidence_id": "S1"
+        },
+        {
+          "record": "social_af026f8c525946ca",
+          "evidence_id": "S2"
+        },
+        {
+          "record": "social_b19b86864920ab8a",
+          "evidence_id": "S4"
+        },
+        {
+          "record": "social_bf48ec5ee25c3195",
+          "evidence_id": "S5"
+        },
+        {
+          "record": "social_9ebf6db5812fb2fd",
+          "evidence_id": "S3"
+        },
+        {
+          "record": "social_e965b4551c980809",
+          "evidence_id": "S5"
+        },
+        {
+          "record": "social_fa05d3148e4d18e4",
+          "evidence_id": "S1"
+        },
+        {
+          "record": "social_acbb8996345ed1f7",
+          "evidence_id": "S1"
+        }
+      ],
+      "support_notes": [
+        {
+          "id": "note_ca49ccde9e401d67",
+          "text": "SELF seasons the meat",
+          "status": "compiler_generated_rationale_not_independent_observation"
+        },
+        {
+          "id": "note_a7b58879fe6bb432",
+          "text": "SELF fans the grill",
+          "status": "compiler_generated_rationale_not_independent_observation"
+        },
+        {
+          "id": "note_a0fa69c881b03c5a",
+          "text": "SELF says '闻久了就饱了'",
+          "status": "compiler_generated_rationale_not_independent_observation"
+        },
+        {
+          "id": "note_30aa0cd4182b6d98",
+          "text": "SELF is grilling and seasoning meat",
+          "status": "compiler_generated_rationale_not_independent_observation"
+        },
+        {
+          "id": "note_c157630996177006",
+          "text": "SELF is grilling meat",
+          "status": "compiler_generated_rationale_not_independent_observation"
+        }
+      ],
+      "rationale_links": [
+        {
+          "record": "social_e965b4551c980809",
+          "note": "note_30aa0cd4182b6d98"
+        },
+        {
+          "record": "social_fa05d3148e4d18e4",
+          "note": "note_c157630996177006"
+        },
+        {
+          "record": "social_9ebf6db5812fb2fd",
+          "note": "note_a0fa69c881b03c5a"
+        },
+        {
+          "record": "social_bf48ec5ee25c3195",
+          "note": "note_ca49ccde9e401d67"
+        },
+        {
+          "record": "social_b19b86864920ab8a",
+          "note": "note_a7b58879fe6bb432"
+        }
+      ]
+    },
+    "removed": {
+      "attributions": [
+        {
+          "record": "social_1a38ba4f473b7560",
+          "agent": "Alice"
+        },
+        {
+          "record": "social_c65e74b76ae818f6",
+          "agent": "Alice"
+        },
+        {
+          "record": "social_af026f8c525946ca",
+          "agent": "Alice"
+        },
+        {
+          "record": "social_5ee7d3b47346e8ab",
+          "agent": "Alice"
+        },
+        {
+          "record": "social_b19b86864920ab8a",
+          "agent": "Alice"
+        },
+        {
+          "record": "social_acbb8996345ed1f7",
+          "agent": "Alice"
+        },
+        {
+          "record": "social_fa05d3148e4d18e4",
+          "agent": "Alice"
+        },
+        {
+          "record": "social_e965b4551c980809",
+          "agent": "Alice"
+        },
+        {
+          "record": "social_bf48ec5ee25c3195",
+          "agent": "Alice"
+        },
+        {
+          "record": "social_9ebf6db5812fb2fd",
+          "agent": "Alice"
+        }
+      ],
+      "observation_attributions": [
+        {
+          "record": "physical_c3207511f6e40090",
+          "observer": "Alice"
+        },
+        {
+          "record": "physical_d0c23795d130294b",
+          "observer": "Alice"
+        },
+        {
+          "record": "physical_3f0c3262740e229c",
+          "observer": "Alice"
+        },
+        {
+          "record": "physical_ec2f21da66ca62ab",
+          "observer": "Alice"
+        },
+        {
+          "record": "physical_69fc0d810e83cc29",
+          "observer": "Alice"
+        }
+      ]
+    },
+    "all_other_content_identical": true
+  },
+  "ssc": {
+    "view": {
+      "physical_records": [
+        {
+          "id": "physical_ec2f21da66ca62ab",
+          "kind": "event",
+          "content": {
+            "action": "grill",
+            "actor": "Alice",
+            "clip_id": "DAY3_A2_ALICE_22470000.mp4",
+            "confidence": 0.9,
+            "event_role": "executor",
+            "evidence_id": "S1",
+            "evidence_span": "00:00-00:10",
+            "phase": "during",
+            "source": "video",
+            "t": 1,
+            "target": "meat"
+          }
+        },
+        {
+          "id": "physical_69fc0d810e83cc29",
+          "kind": "event",
+          "content": {
+            "action": "season",
+            "actor": "Alice",
+            "clip_id": "DAY3_A2_ALICE_22273000.mp4",
+            "confidence": 0.9,
+            "event_role": "executor",
+            "evidence_id": "S5",
+            "evidence_span": "00:10-00:25",
+            "phase": "during",
+            "source": "video",
+            "t": 5,
+            "target": "meat"
+          }
+        },
+        {
+          "id": "physical_d0c23795d130294b",
+          "kind": "event",
+          "content": {
+            "action": "say",
+            "actor": "Alice",
+            "clip_id": "DAY3_A2_ALICE_22470000.mp4",
+            "confidence": 0.9,
+            "event_role": "speaker",
+            "evidence_id": "S3",
+            "evidence_span": "00:13-00:16",
+            "phase": "during",
+            "quote": "真的, 闻久了就饱了",
+            "source": "video",
+            "t": 3,
+            "target": "真的, 闻久了就饱了"
+          }
+        },
+        {
+          "id": "physical_3f0c3262740e229c",
+          "kind": "event",
+          "content": {
+            "action": "say",
+            "actor": "Alice",
+            "clip_id": "DAY3_A2_ALICE_22470000.mp4",
+            "confidence": 0.9,
+            "event_role": "speaker",
+            "evidence_id": "S2",
+            "evidence_span": "00:09-00:12",
+            "phase": "during",
+            "quote": "闻闻这个味儿我就有点饱了",
+            "source": "video",
+            "t": 2,
+            "target": "闻闻这个味儿我就有点饱了"
+          }
+        },
+        {
+          "id": "physical_c3207511f6e40090",
+          "kind": "event",
+          "content": {
+            "action": "fan",
+            "actor": "Alice",
+            "clip_id": "DAY3_A2_ALICE_22253000.mp4",
+            "confidence": 0.9,
+            "event_role": "executor",
+            "evidence_id": "S4",
+            "evidence_span": "00:05-00:20",
+            "phase": "during",
+            "source": "video",
+            "t": 4,
+            "target": "grill"
+          }
+        }
+      ],
+      "observation_attributions": [
+        {
+          "record": "physical_c3207511f6e40090",
+          "observer": "Alice"
+        },
+        {
+          "record": "physical_d0c23795d130294b",
+          "observer": "Alice"
+        },
+        {
+          "record": "physical_3f0c3262740e229c",
+          "observer": "Alice"
+        },
+        {
+          "record": "physical_ec2f21da66ca62ab",
+          "observer": "Alice"
+        },
+        {
+          "record": "physical_69fc0d810e83cc29",
+          "observer": "Alice"
+        }
+      ],
+      "social_records": [
+        {
+          "id": "social_acbb8996345ed1f7",
+          "kind": "observation",
+          "content": {
+            "confidence": 0.9,
+            "fact": "SELF is grilling meat",
+            "source": "spatial_trace",
+            "t": 1
+          }
+        },
+        {
+          "id": "social_5ee7d3b47346e8ab",
+          "kind": "social_unknown",
+          "content": {
+            "variable": "social_goal"
+          }
+        },
+        {
+          "id": "social_af026f8c525946ca",
+          "kind": "observation",
+          "content": {
+            "confidence": 0.9,
+            "fact": "SELF says smelling the food makes her feel full",
+            "source": "spatial_trace",
+            "t": 2
+          }
+        },
+        {
+          "id": "social_c65e74b76ae818f6",
+          "kind": "social_unknown",
+          "content": {
+            "variable": "decision_maker"
+          }
+        },
+        {
+          "id": "social_e965b4551c980809",
+          "kind": "goal",
+          "content": {
+            "confidence": 0.9,
+            "goal": "cook the meat"
+          }
+        },
+        {
+          "id": "social_fa05d3148e4d18e4",
+          "kind": "action_evidence",
+          "content": {
+            "action": "grill",
+            "confidence": 0.9,
+            "hypothesis": "SELF is cooking",
+            "t": 1
+          }
+        },
+        {
+          "id": "social_bf48ec5ee25c3195",
+          "kind": "action_evidence",
+          "content": {
+            "action": "season",
+            "confidence": 0.9,
+            "hypothesis": "SELF is preparing the meat",
+            "t": 5
+          }
+        },
+        {
+          "id": "social_9ebf6db5812fb2fd",
+          "kind": "belief",
+          "content": {
+            "confidence": 0.9,
+            "fact": "Smelling the food for a long time makes her feel full",
+            "t": 3
+          }
+        },
+        {
+          "id": "social_b19b86864920ab8a",
+          "kind": "action_evidence",
+          "content": {
+            "action": "fan",
+            "confidence": 0.9,
+            "hypothesis": "SELF is managing the grill",
+            "t": 4
+          }
+        },
+        {
+          "id": "social_1a38ba4f473b7560",
+          "kind": "social_unknown",
+          "content": {
+            "variable": "initiator"
+          }
+        }
+      ],
+      "attributions": [
+        {
+          "record": "social_1a38ba4f473b7560",
+          "agent": "Alice"
+        },
+        {
+          "record": "social_c65e74b76ae818f6",
+          "agent": "Alice"
+        },
+        {
+          "record": "social_af026f8c525946ca",
+          "agent": "Alice"
+        },
+        {
+          "record": "social_5ee7d3b47346e8ab",
+          "agent": "Alice"
+        },
+        {
+          "record": "social_b19b86864920ab8a",
+          "agent": "Alice"
+        },
+        {
+          "record": "social_acbb8996345ed1f7",
+          "agent": "Alice"
+        },
+        {
+          "record": "social_fa05d3148e4d18e4",
+          "agent": "Alice"
+        },
+        {
+          "record": "social_e965b4551c980809",
+          "agent": "Alice"
+        },
+        {
+          "record": "social_bf48ec5ee25c3195",
+          "agent": "Alice"
+        },
+        {
+          "record": "social_9ebf6db5812fb2fd",
+          "agent": "Alice"
+        }
+      ],
+      "evidence_links": [
+        {
+          "record": "social_e965b4551c980809",
+          "evidence_id": "S1"
+        },
+        {
+          "record": "social_af026f8c525946ca",
+          "evidence_id": "S2"
+        },
+        {
+          "record": "social_b19b86864920ab8a",
+          "evidence_id": "S4"
+        },
+        {
+          "record": "social_bf48ec5ee25c3195",
+          "evidence_id": "S5"
+        },
+        {
+          "record": "social_9ebf6db5812fb2fd",
+          "evidence_id": "S3"
+        },
+        {
+          "record": "social_e965b4551c980809",
+          "evidence_id": "S5"
+        },
+        {
+          "record": "social_fa05d3148e4d18e4",
+          "evidence_id": "S1"
+        },
+        {
+          "record": "social_acbb8996345ed1f7",
+          "evidence_id": "S1"
+        }
+      ],
+      "support_notes": [
+        {
+          "id": "note_ca49ccde9e401d67",
+          "text": "SELF seasons the meat",
+          "status": "compiler_generated_rationale_not_independent_observation"
+        },
+        {
+          "id": "note_a7b58879fe6bb432",
+          "text": "SELF fans the grill",
+          "status": "compiler_generated_rationale_not_independent_observation"
+        },
+        {
+          "id": "note_a0fa69c881b03c5a",
+          "text": "SELF says '闻久了就饱了'",
+          "status": "compiler_generated_rationale_not_independent_observation"
+        },
+        {
+          "id": "note_30aa0cd4182b6d98",
+          "text": "SELF is grilling and seasoning meat",
+          "status": "compiler_generated_rationale_not_independent_observation"
+        },
+        {
+          "id": "note_c157630996177006",
+          "text": "SELF is grilling meat",
+          "status": "compiler_generated_rationale_not_independent_observation"
+        }
+      ],
+      "rationale_links": [
+        {
+          "record": "social_e965b4551c980809",
+          "note": "note_30aa0cd4182b6d98"
+        },
+        {
+          "record": "social_fa05d3148e4d18e4",
+          "note": "note_c157630996177006"
+        },
+        {
+          "record": "social_9ebf6db5812fb2fd",
+          "note": "note_a0fa69c881b03c5a"
+        },
+        {
+          "record": "social_bf48ec5ee25c3195",
+          "note": "note_ca49ccde9e401d67"
+        },
+        {
+          "record": "social_b19b86864920ab8a",
+          "note": "note_a7b58879fe6bb432"
+        }
+      ]
+    },
+    "removed": {},
+    "all_other_content_identical": true
+  },
+  "ssc_no_references": {
+    "view": {
+      "physical_records": [
+        {
+          "id": "physical_ec2f21da66ca62ab",
+          "kind": "event",
+          "content": {
+            "action": "grill",
+            "actor": "Alice",
+            "clip_id": "DAY3_A2_ALICE_22470000.mp4",
+            "confidence": 0.9,
+            "event_role": "executor",
+            "evidence_id": "S1",
+            "evidence_span": "00:00-00:10",
+            "phase": "during",
+            "source": "video",
+            "t": 1,
+            "target": "meat"
+          }
+        },
+        {
+          "id": "physical_69fc0d810e83cc29",
+          "kind": "event",
+          "content": {
+            "action": "season",
+            "actor": "Alice",
+            "clip_id": "DAY3_A2_ALICE_22273000.mp4",
+            "confidence": 0.9,
+            "event_role": "executor",
+            "evidence_id": "S5",
+            "evidence_span": "00:10-00:25",
+            "phase": "during",
+            "source": "video",
+            "t": 5,
+            "target": "meat"
+          }
+        },
+        {
+          "id": "physical_d0c23795d130294b",
+          "kind": "event",
+          "content": {
+            "action": "say",
+            "actor": "Alice",
+            "clip_id": "DAY3_A2_ALICE_22470000.mp4",
+            "confidence": 0.9,
+            "event_role": "speaker",
+            "evidence_id": "S3",
+            "evidence_span": "00:13-00:16",
+            "phase": "during",
+            "quote": "真的, 闻久了就饱了",
+            "source": "video",
+            "t": 3,
+            "target": "真的, 闻久了就饱了"
+          }
+        },
+        {
+          "id": "physical_3f0c3262740e229c",
+          "kind": "event",
+          "content": {
+            "action": "say",
+            "actor": "Alice",
+            "clip_id": "DAY3_A2_ALICE_22470000.mp4",
+            "confidence": 0.9,
+            "event_role": "speaker",
+            "evidence_id": "S2",
+            "evidence_span": "00:09-00:12",
+            "phase": "during",
+            "quote": "闻闻这个味儿我就有点饱了",
+            "source": "video",
+            "t": 2,
+            "target": "闻闻这个味儿我就有点饱了"
+          }
+        },
+        {
+          "id": "physical_c3207511f6e40090",
+          "kind": "event",
+          "content": {
+            "action": "fan",
+            "actor": "Alice",
+            "clip_id": "DAY3_A2_ALICE_22253000.mp4",
+            "confidence": 0.9,
+            "event_role": "executor",
+            "evidence_id": "S4",
+            "evidence_span": "00:05-00:20",
+            "phase": "during",
+            "source": "video",
+            "t": 4,
+            "target": "grill"
+          }
+        }
+      ],
+      "observation_attributions": [
+        {
+          "record": "physical_c3207511f6e40090",
+          "observer": "Alice"
+        },
+        {
+          "record": "physical_d0c23795d130294b",
+          "observer": "Alice"
+        },
+        {
+          "record": "physical_3f0c3262740e229c",
+          "observer": "Alice"
+        },
+        {
+          "record": "physical_ec2f21da66ca62ab",
+          "observer": "Alice"
+        },
+        {
+          "record": "physical_69fc0d810e83cc29",
+          "observer": "Alice"
+        }
+      ],
+      "social_records": [
+        {
+          "id": "social_acbb8996345ed1f7",
+          "kind": "observation",
+          "content": {
+            "confidence": 0.9,
+            "fact": "SELF is grilling meat",
+            "source": "spatial_trace",
+            "t": 1
+          }
+        },
+        {
+          "id": "social_5ee7d3b47346e8ab",
+          "kind": "social_unknown",
+          "content": {
+            "variable": "social_goal"
+          }
+        },
+        {
+          "id": "social_af026f8c525946ca",
+          "kind": "observation",
+          "content": {
+            "confidence": 0.9,
+            "fact": "SELF says smelling the food makes her feel full",
+            "source": "spatial_trace",
+            "t": 2
+          }
+        },
+        {
+          "id": "social_c65e74b76ae818f6",
+          "kind": "social_unknown",
+          "content": {
+            "variable": "decision_maker"
+          }
+        },
+        {
+          "id": "social_e965b4551c980809",
+          "kind": "goal",
+          "content": {
+            "confidence": 0.9,
+            "goal": "cook the meat"
+          }
+        },
+        {
+          "id": "social_fa05d3148e4d18e4",
+          "kind": "action_evidence",
+          "content": {
+            "action": "grill",
+            "confidence": 0.9,
+            "hypothesis": "SELF is cooking",
+            "t": 1
+          }
+        },
+        {
+          "id": "social_bf48ec5ee25c3195",
+          "kind": "action_evidence",
+          "content": {
+            "action": "season",
+            "confidence": 0.9,
+            "hypothesis": "SELF is preparing the meat",
+            "t": 5
+          }
+        },
+        {
+          "id": "social_9ebf6db5812fb2fd",
+          "kind": "belief",
+          "content": {
+            "confidence": 0.9,
+            "fact": "Smelling the food for a long time makes her feel full",
+            "t": 3
+          }
+        },
+        {
+          "id": "social_b19b86864920ab8a",
+          "kind": "action_evidence",
+          "content": {
+            "action": "fan",
+            "confidence": 0.9,
+            "hypothesis": "SELF is managing the grill",
+            "t": 4
+          }
+        },
+        {
+          "id": "social_1a38ba4f473b7560",
+          "kind": "social_unknown",
+          "content": {
+            "variable": "initiator"
+          }
+        }
+      ],
+      "attributions": [
+        {
+          "record": "social_1a38ba4f473b7560",
+          "agent": "Alice"
+        },
+        {
+          "record": "social_c65e74b76ae818f6",
+          "agent": "Alice"
+        },
+        {
+          "record": "social_af026f8c525946ca",
+          "agent": "Alice"
+        },
+        {
+          "record": "social_5ee7d3b47346e8ab",
+          "agent": "Alice"
+        },
+        {
+          "record": "social_b19b86864920ab8a",
+          "agent": "Alice"
+        },
+        {
+          "record": "social_acbb8996345ed1f7",
+          "agent": "Alice"
+        },
+        {
+          "record": "social_fa05d3148e4d18e4",
+          "agent": "Alice"
+        },
+        {
+          "record": "social_e965b4551c980809",
+          "agent": "Alice"
+        },
+        {
+          "record": "social_bf48ec5ee25c3195",
+          "agent": "Alice"
+        },
+        {
+          "record": "social_9ebf6db5812fb2fd",
+          "agent": "Alice"
+        }
+      ],
+      "support_notes": [
+        {
+          "id": "note_ca49ccde9e401d67",
+          "text": "SELF seasons the meat",
+          "status": "compiler_generated_rationale_not_independent_observation"
+        },
+        {
+          "id": "note_a7b58879fe6bb432",
+          "text": "SELF fans the grill",
+          "status": "compiler_generated_rationale_not_independent_observation"
+        },
+        {
+          "id": "note_a0fa69c881b03c5a",
+          "text": "SELF says '闻久了就饱了'",
+          "status": "compiler_generated_rationale_not_independent_observation"
+        },
+        {
+          "id": "note_30aa0cd4182b6d98",
+          "text": "SELF is grilling and seasoning meat",
+          "status": "compiler_generated_rationale_not_independent_observation"
+        },
+        {
+          "id": "note_c157630996177006",
+          "text": "SELF is grilling meat",
+          "status": "compiler_generated_rationale_not_independent_observation"
+        }
+      ]
+    },
+    "removed": {
+      "evidence_links": [
+        {
+          "record": "social_e965b4551c980809",
+          "evidence_id": "S1"
+        },
+        {
+          "record": "social_af026f8c525946ca",
+          "evidence_id": "S2"
+        },
+        {
+          "record": "social_b19b86864920ab8a",
+          "evidence_id": "S4"
+        },
+        {
+          "record": "social_bf48ec5ee25c3195",
+          "evidence_id": "S5"
+        },
+        {
+          "record": "social_9ebf6db5812fb2fd",
+          "evidence_id": "S3"
+        },
+        {
+          "record": "social_e965b4551c980809",
+          "evidence_id": "S5"
+        },
+        {
+          "record": "social_fa05d3148e4d18e4",
+          "evidence_id": "S1"
+        },
+        {
+          "record": "social_acbb8996345ed1f7",
+          "evidence_id": "S1"
+        }
+      ],
+      "rationale_links": [
+        {
+          "record": "social_e965b4551c980809",
+          "note": "note_30aa0cd4182b6d98"
+        },
+        {
+          "record": "social_fa05d3148e4d18e4",
+          "note": "note_c157630996177006"
+        },
+        {
+          "record": "social_9ebf6db5812fb2fd",
+          "note": "note_a0fa69c881b03c5a"
+        },
+        {
+          "record": "social_bf48ec5ee25c3195",
+          "note": "note_ca49ccde9e401d67"
+        },
+        {
+          "record": "social_b19b86864920ab8a",
+          "note": "note_a7b58879fe6bb432"
+        }
+      ]
+    },
+    "all_other_content_identical": true
+  }
+}

@@ -1,0 +1,884 @@
+{
+  "id": "habitat_983",
+  "environment": "Habitat",
+  "title": "Unsuccessful search -> attributed jug report -> navigation",
+  "grade": "A: actual request/state/action chain",
+  "scope": "Online Dynamic SSC; Flash; seed891011; episode983; job37",
+  "panel_titles": [
+    "1  Before delivery",
+    "2  New attributed report",
+    "3  Next actual action"
+  ],
+  "panels": [
+    "agent_2: no agent_0-attributed report for bed_9 in the pre-update state.",
+    "Turn 5: agent_0 -> agent_2.\n\nagent_2, please get jug_3 from bed_9 and put it on table_13. I'm getting book_0.",
+    "Turn 6: Navigate[bed_9].\n\nNavigation feedback: succeeded.\n\nFinal shared goals: 2/3 (not the immediate navigation result)."
+  ],
+  "figure_caveat": "One illustrative trace; not a causal ablation. The message may also appear in the native observation channel.",
+  "limitations": [
+    "New reported claim, not verified object-location truth; do not label as a corrected false belief.",
+    "Actual next request, delta and action verified; planner causality is not isolated.",
+    "Episode983 ends at2/3; its NL pair had a service problem. Do not present as a clean superiority comparison."
+  ],
+  "evidence": {
+    "message": {
+      "path": "workdirs/habitat_memory_controls_20260922_v1/rollouts/0037/benchmark/results/emtom-104348082_171512994-983-mixed-staging-check-jug-placement-cabinet-stat-eccb2531/closed_loop_artifacts/events.jsonl",
+      "sha256": "a8df4ff5aeb823d5ef8fbdbc99944e62747c98ab752e58a5e4cf6152a262b2ec",
+      "line": 28,
+      "record": {
+        "agent_id": "agent_0",
+        "event_type": "message_delivered",
+        "message": "agent_2, please get jug_3 from bed_9 and put it on table_13. I'm getting book_0.",
+        "receivers": [
+          "agent_2"
+        ],
+        "sender": "agent_0",
+        "turn": 5
+      }
+    },
+    "update": {
+      "path": "workdirs/habitat_memory_controls_20260922_v1/rollouts/0037/benchmark/results/emtom-104348082_171512994-983-mixed-staging-check-jug-placement-cabinet-stat-eccb2531/closed_loop_artifacts/state_before_after.jsonl",
+      "sha256": "7eb382a975bbe25d6273edf71f11cd07e150331d62b4162e5e199da9bd49454b",
+      "line": 32,
+      "record": {
+        "after": {
+          "agent_id": "agent_2",
+          "history": [
+            {
+              "fact": {
+                "confidence": 1.0,
+                "evidence": "Furniture:\nliving_room_1: floor_living_room_1, shelves_7, table_13, couch_15\nbedroom_1: floor_bedroom_1, bed_17, chest_of_drawers_21, table_22\nbathroom_1: floor_bathroom_1, washer_dryer_6, shower_14\nbedroom_2: floor_bedroom_2, bed_9, chest_of_drawers_18, chest_of_drawers_19\nentryway_1: floor_entryway_1, stool_8, wardrobe_23\nkitchen_1: floor_kitchen_1, chair_10, chair_11, chair_12, counter_16, cabinet_20\n\nObjects:\n",
+                "key": "observation.latest_private_world",
+                "source_agent": "agent_2",
+                "source_type": "observation",
+                "status": "inactive",
+                "supersedes": null,
+                "turn": 1,
+                "value": "Furniture:\nliving_room_1: floor_living_room_1, shelves_7, table_13, couch_15\nbedroom_1: floor_bedroom_1, bed_17, chest_of_drawers_21, table_22\nbathroom_1: floor_bathroom_1, washer_dryer_6, shower_14\nbedroom_2: floor_bedroom_2, bed_9, chest_of_drawers_18, chest_of_drawers_19\nentryway_1: floor_entryway_1, stool_8, wardrobe_23\nkitchen_1: floor_kitchen_1, chair_10, chair_11, chair_12, counter_16, cabinet_20\n\nObjects:\n"
+              },
+              "inactive_reason": "replaced_same_key",
+              "inactive_turn": 2,
+              "key": "observation.latest_private_world",
+              "layer": "spatial"
+            },
+            {
+              "fact": {
+                "confidence": 1.0,
+                "evidence": "Furniture:\nliving_room_1: floor_living_room_1, shelves_7, table_13, couch_15\nbedroom_1: floor_bedroom_1, bed_17, chest_of_drawers_21, table_22\nbathroom_1: floor_bathroom_1, washer_dryer_6, shower_14\nbedroom_2: floor_bedroom_2, bed_9, chest_of_drawers_18, chest_of_drawers_19\nentryway_1: floor_entryway_1, stool_8, wardrobe_23\nkitchen_1: floor_kitchen_1, chair_10, chair_11, chair_12, counter_16, cabinet_20\n\nObjects:\n",
+                "key": "observation.latest_private_world",
+                "source_agent": "agent_2",
+                "source_type": "observation",
+                "status": "inactive",
+                "supersedes": "v5:spatial:observation.latest_private_world",
+                "turn": 2,
+                "value": "Furniture:\nliving_room_1: floor_living_room_1, shelves_7, table_13, couch_15\nbedroom_1: floor_bedroom_1, bed_17, chest_of_drawers_21, table_22\nbathroom_1: floor_bathroom_1, washer_dryer_6, shower_14\nbedroom_2: floor_bedroom_2, bed_9, chest_of_drawers_18, chest_of_drawers_19\nentryway_1: floor_entryway_1, stool_8, wardrobe_23\nkitchen_1: floor_kitchen_1, chair_10, chair_11, chair_12, counter_16, cabinet_20\n\nObjects:\n"
+              },
+              "inactive_reason": "replaced_same_key",
+              "inactive_turn": 3,
+              "key": "observation.latest_private_world",
+              "layer": "spatial"
+            },
+            {
+              "fact": {
+                "confidence": 1.0,
+                "evidence": "Furniture:\nliving_room_1: floor_living_room_1, shelves_7, table_13, couch_15\nbedroom_1: floor_bedroom_1, bed_17, chest_of_drawers_21, table_22\nbathroom_1: floor_bathroom_1, washer_dryer_6, shower_14\nbedroom_2: floor_bedroom_2, bed_9, chest_of_drawers_18, chest_of_drawers_19\nentryway_1: floor_entryway_1, stool_8, wardrobe_23\nkitchen_1: floor_kitchen_1, chair_10, chair_11, chair_12, counter_16, cabinet_20\n\nObjects:\nbox_4: shelves_7\n",
+                "key": "observation.latest_private_world",
+                "source_agent": "agent_2",
+                "source_type": "observation",
+                "status": "inactive",
+                "supersedes": "v8:spatial:observation.latest_private_world",
+                "turn": 3,
+                "value": "Furniture:\nliving_room_1: floor_living_room_1, shelves_7, table_13, couch_15\nbedroom_1: floor_bedroom_1, bed_17, chest_of_drawers_21, table_22\nbathroom_1: floor_bathroom_1, washer_dryer_6, shower_14\nbedroom_2: floor_bedroom_2, bed_9, chest_of_drawers_18, chest_of_drawers_19\nentryway_1: floor_entryway_1, stool_8, wardrobe_23\nkitchen_1: floor_kitchen_1, chair_10, chair_11, chair_12, counter_16, cabinet_20\n\nObjects:\nbox_4: shelves_7\n"
+              },
+              "inactive_reason": "replaced_same_key",
+              "inactive_turn": 4,
+              "key": "observation.latest_private_world",
+              "layer": "spatial"
+            },
+            {
+              "fact": {
+                "confidence": 1.0,
+                "evidence": "Furniture:\nliving_room_1: floor_living_room_1, shelves_7, table_13, couch_15\nbedroom_1: floor_bedroom_1, bed_17, chest_of_drawers_21, table_22\nbathroom_1: floor_bathroom_1, washer_dryer_6, shower_14\nbedroom_2: floor_bedroom_2, bed_9, chest_of_drawers_18, chest_of_drawers_19\nentryway_1: floor_entryway_1, stool_8, wardrobe_23\nkitchen_1: floor_kitchen_1, chair_10, chair_11, chair_12, counter_16, cabinet_20\n\nObjects:\nbox_4: shelves_7\n",
+                "key": "observation.latest_private_world",
+                "source_agent": "agent_2",
+                "source_type": "observation",
+                "status": "inactive",
+                "supersedes": "v11:spatial:observation.latest_private_world",
+                "turn": 4,
+                "value": "Furniture:\nliving_room_1: floor_living_room_1, shelves_7, table_13, couch_15\nbedroom_1: floor_bedroom_1, bed_17, chest_of_drawers_21, table_22\nbathroom_1: floor_bathroom_1, washer_dryer_6, shower_14\nbedroom_2: floor_bedroom_2, bed_9, chest_of_drawers_18, chest_of_drawers_19\nentryway_1: floor_entryway_1, stool_8, wardrobe_23\nkitchen_1: floor_kitchen_1, chair_10, chair_11, chair_12, counter_16, cabinet_20\n\nObjects:\nbox_4: shelves_7\n"
+              },
+              "inactive_reason": "replaced_same_key",
+              "inactive_turn": 5,
+              "key": "observation.latest_private_world",
+              "layer": "spatial"
+            }
+          ],
+          "social": {
+            "access.denied_rooms": {
+              "confidence": 1.0,
+              "evidence": "task mechanic visible to self",
+              "key": "access.denied_rooms",
+              "source_agent": "agent_2",
+              "source_type": "task_private",
+              "status": "task_specified",
+              "supersedes": null,
+              "turn": 0,
+              "value": []
+            },
+            "action.turn_1.status": {
+              "confidence": 1.0,
+              "evidence": "No objects are found yet, please explore the house by navigating to different rooms.\n\nagent_2_VisualSummary:\n- No notable new visual observations",
+              "key": "action.turn_1.status",
+              "source_agent": "agent_2",
+              "source_type": "action_feedback",
+              "status": "observed",
+              "supersedes": null,
+              "turn": 1,
+              "value": "succeeded"
+            },
+            "action.turn_2.status": {
+              "confidence": 1.0,
+              "evidence": "Successful execution!\n\nagent_2_VisualSummary:\n- Traversed: living_room_1 -> kitchen_1\n- Saw other agents: agent_0 nearby, agent_1 in bedroom_1, agent_0 in living_room_1",
+              "key": "action.turn_2.status",
+              "source_agent": "agent_2",
+              "source_type": "action_feedback",
+              "status": "observed",
+              "supersedes": null,
+              "turn": 2,
+              "value": "succeeded"
+            },
+            "action.turn_3.status": {
+              "confidence": 1.0,
+              "evidence": "No objects with name objects on counter_16 were found.\n\nagent_2_VisualSummary:\n- No notable new visual observations",
+              "key": "action.turn_3.status",
+              "source_agent": "agent_2",
+              "source_type": "action_feedback",
+              "status": "observed",
+              "supersedes": null,
+              "turn": 3,
+              "value": "succeeded"
+            },
+            "action.turn_4.status": {
+              "confidence": 1.0,
+              "evidence": "No objects with name jug were found.\n\nagent_2_VisualSummary:\n- No notable new visual observations",
+              "key": "action.turn_4.status",
+              "source_agent": "agent_2",
+              "source_type": "action_feedback",
+              "status": "observed",
+              "supersedes": null,
+              "turn": 4,
+              "value": "succeeded"
+            },
+            "claim.agent_0.agent_2": {
+              "confidence": 1.0,
+              "evidence": "agent_2, please get jug_3 from bed_9 and put it on table_13. I'm getting book_0.",
+              "key": "claim.agent_0.agent_2",
+              "source_agent": "agent_0",
+              "source_type": "delivered_message",
+              "status": "reported",
+              "supersedes": null,
+              "turn": 5,
+              "value": "agent_2, please get jug_3 from bed_9 and put it on table_13. I'm getting book_0."
+            },
+            "claim.agent_0.bed_9": {
+              "confidence": 1.0,
+              "evidence": "agent_2, please get jug_3 from bed_9 and put it on table_13. I'm getting book_0.",
+              "key": "claim.agent_0.bed_9",
+              "source_agent": "agent_0",
+              "source_type": "delivered_message",
+              "status": "reported",
+              "supersedes": null,
+              "turn": 5,
+              "value": "agent_2, please get jug_3 from bed_9 and put it on table_13. I'm getting book_0."
+            },
+            "claim.agent_0.book_0": {
+              "confidence": 1.0,
+              "evidence": "agent_2, please get jug_3 from bed_9 and put it on table_13. I'm getting book_0.",
+              "key": "claim.agent_0.book_0",
+              "source_agent": "agent_0",
+              "source_type": "delivered_message",
+              "status": "reported",
+              "supersedes": null,
+              "turn": 5,
+              "value": "agent_2, please get jug_3 from bed_9 and put it on table_13. I'm getting book_0."
+            },
+            "claim.agent_0.jug_3": {
+              "confidence": 1.0,
+              "evidence": "agent_2, please get jug_3 from bed_9 and put it on table_13. I'm getting book_0.",
+              "key": "claim.agent_0.jug_3",
+              "source_agent": "agent_0",
+              "source_type": "delivered_message",
+              "status": "reported",
+              "supersedes": null,
+              "turn": 5,
+              "value": "agent_2, please get jug_3 from bed_9 and put it on table_13. I'm getting book_0."
+            },
+            "claim.agent_0.table_13": {
+              "confidence": 1.0,
+              "evidence": "agent_2, please get jug_3 from bed_9 and put it on table_13. I'm getting book_0.",
+              "key": "claim.agent_0.table_13",
+              "source_agent": "agent_0",
+              "source_type": "delivered_message",
+              "status": "reported",
+              "supersedes": null,
+              "turn": 5,
+              "value": "agent_2, please get jug_3 from bed_9 and put it on table_13. I'm getting book_0."
+            },
+            "message.turn_5.from.agent_0": {
+              "confidence": 1.0,
+              "evidence": "agent_2, please get jug_3 from bed_9 and put it on table_13. I'm getting book_0.",
+              "key": "message.turn_5.from.agent_0",
+              "source_agent": "agent_0",
+              "source_type": "delivered_message",
+              "status": "observed",
+              "supersedes": null,
+              "turn": 5,
+              "value": "agent_2, please get jug_3 from bed_9 and put it on table_13. I'm getting book_0."
+            },
+            "task.private_facts": {
+              "confidence": 1.0,
+              "evidence": "own private task input",
+              "key": "task.private_facts",
+              "source_agent": "agent_2",
+              "source_type": "task_private",
+              "status": "task_specified",
+              "supersedes": null,
+              "turn": 0,
+              "value": [
+                "cabinet_20 is in kitchen_1.",
+                "Your personal objective: cabinet_20 in kitchen_1 must end closed."
+              ]
+            },
+            "task.self": {
+              "confidence": 1.0,
+              "evidence": "You are preparing the apartment for a quick staging check with extremely limited messaging. As a group, complete ALL shared objectives:\n\n1) Place the jug onto the living-room table.\n2) Place the book onto the bedroom-1 table.\n3) Leave the kitchen cabinet OPEN.\n4) By the end, agent_1 must know that agent_0 knows whether the kitchen cabinet is open.",
+              "key": "task.self",
+              "source_agent": "agent_2",
+              "source_type": "task_public",
+              "status": "task_specified",
+              "supersedes": null,
+              "turn": 0,
+              "value": "agent_2"
+            }
+          },
+          "spatial": {
+            "observation.latest_private_world": {
+              "confidence": 1.0,
+              "evidence": "Furniture:\nliving_room_1: floor_living_room_1, shelves_7, table_13, couch_15\nbedroom_1: floor_bedroom_1, bed_17, chest_of_drawers_21, table_22\nbathroom_1: floor_bathroom_1, washer_dryer_6, shower_14\nbedroom_2: floor_bedroom_2, bed_9, chest_of_drawers_18, chest_of_drawers_19\nentryway_1: floor_entryway_1, stool_8, wardrobe_23\nkitchen_1: floor_kitchen_1, chair_10, chair_11, chair_12, counter_16, cabinet_20\n\nObjects:\nbox_4: shelves_7\n",
+              "key": "observation.latest_private_world",
+              "source_agent": "agent_2",
+              "source_type": "observation",
+              "status": "observed",
+              "supersedes": "v14:spatial:observation.latest_private_world",
+              "turn": 5,
+              "value": "Furniture:\nliving_room_1: floor_living_room_1, shelves_7, table_13, couch_15\nbedroom_1: floor_bedroom_1, bed_17, chest_of_drawers_21, table_22\nbathroom_1: floor_bathroom_1, washer_dryer_6, shower_14\nbedroom_2: floor_bedroom_2, bed_9, chest_of_drawers_18, chest_of_drawers_19\nentryway_1: floor_entryway_1, stool_8, wardrobe_23\nkitchen_1: floor_kitchen_1, chair_10, chair_11, chair_12, counter_16, cabinet_20\n\nObjects:\nbox_4: shelves_7\n"
+            },
+            "self.near": {
+              "confidence": 1.0,
+              "evidence": "Successful execution!\n\nagent_2_VisualSummary:\n- Traversed: living_room_1 -> kitchen_1\n- Saw other agents: agent_0 nearby, agent_1 in bedroom_1, agent_0 in living_room_1",
+              "key": "self.near",
+              "source_agent": "agent_2",
+              "source_type": "action_feedback",
+              "status": "observed",
+              "supersedes": null,
+              "turn": 2,
+              "value": "floor_kitchen_1"
+            },
+            "task.shared_goal": {
+              "confidence": 1.0,
+              "evidence": "You are preparing the apartment for a quick staging check with extremely limited messaging. As a group, complete ALL shared objectives:\n\n1) Place the jug onto the living-room table.\n2) Place the book onto the bedroom-1 table.\n3) Leave the kitchen cabinet OPEN.\n4) By the end, agent_1 must know that agent_0 knows whether the kitchen cabinet is open.",
+              "key": "task.shared_goal",
+              "source_agent": "agent_2",
+              "source_type": "task_public",
+              "status": "task_specified",
+              "supersedes": null,
+              "turn": 0,
+              "value": "You are preparing the apartment for a quick staging check with extremely limited messaging. As a group, complete ALL shared objectives:\n\n1) Place the jug onto the living-room table.\n2) Place the book onto the bedroom-1 table.\n3) Leave the kitchen cabinet OPEN.\n4) By the end, agent_1 must know that agent_0 knows whether the kitchen cabinet is open."
+            }
+          },
+          "version": 16
+        },
+        "agent_id": "agent_2",
+        "before": {
+          "agent_id": "agent_2",
+          "history": [
+            {
+              "fact": {
+                "confidence": 1.0,
+                "evidence": "Furniture:\nliving_room_1: floor_living_room_1, shelves_7, table_13, couch_15\nbedroom_1: floor_bedroom_1, bed_17, chest_of_drawers_21, table_22\nbathroom_1: floor_bathroom_1, washer_dryer_6, shower_14\nbedroom_2: floor_bedroom_2, bed_9, chest_of_drawers_18, chest_of_drawers_19\nentryway_1: floor_entryway_1, stool_8, wardrobe_23\nkitchen_1: floor_kitchen_1, chair_10, chair_11, chair_12, counter_16, cabinet_20\n\nObjects:\n",
+                "key": "observation.latest_private_world",
+                "source_agent": "agent_2",
+                "source_type": "observation",
+                "status": "inactive",
+                "supersedes": null,
+                "turn": 1,
+                "value": "Furniture:\nliving_room_1: floor_living_room_1, shelves_7, table_13, couch_15\nbedroom_1: floor_bedroom_1, bed_17, chest_of_drawers_21, table_22\nbathroom_1: floor_bathroom_1, washer_dryer_6, shower_14\nbedroom_2: floor_bedroom_2, bed_9, chest_of_drawers_18, chest_of_drawers_19\nentryway_1: floor_entryway_1, stool_8, wardrobe_23\nkitchen_1: floor_kitchen_1, chair_10, chair_11, chair_12, counter_16, cabinet_20\n\nObjects:\n"
+              },
+              "inactive_reason": "replaced_same_key",
+              "inactive_turn": 2,
+              "key": "observation.latest_private_world",
+              "layer": "spatial"
+            },
+            {
+              "fact": {
+                "confidence": 1.0,
+                "evidence": "Furniture:\nliving_room_1: floor_living_room_1, shelves_7, table_13, couch_15\nbedroom_1: floor_bedroom_1, bed_17, chest_of_drawers_21, table_22\nbathroom_1: floor_bathroom_1, washer_dryer_6, shower_14\nbedroom_2: floor_bedroom_2, bed_9, chest_of_drawers_18, chest_of_drawers_19\nentryway_1: floor_entryway_1, stool_8, wardrobe_23\nkitchen_1: floor_kitchen_1, chair_10, chair_11, chair_12, counter_16, cabinet_20\n\nObjects:\n",
+                "key": "observation.latest_private_world",
+                "source_agent": "agent_2",
+                "source_type": "observation",
+                "status": "inactive",
+                "supersedes": "v5:spatial:observation.latest_private_world",
+                "turn": 2,
+                "value": "Furniture:\nliving_room_1: floor_living_room_1, shelves_7, table_13, couch_15\nbedroom_1: floor_bedroom_1, bed_17, chest_of_drawers_21, table_22\nbathroom_1: floor_bathroom_1, washer_dryer_6, shower_14\nbedroom_2: floor_bedroom_2, bed_9, chest_of_drawers_18, chest_of_drawers_19\nentryway_1: floor_entryway_1, stool_8, wardrobe_23\nkitchen_1: floor_kitchen_1, chair_10, chair_11, chair_12, counter_16, cabinet_20\n\nObjects:\n"
+              },
+              "inactive_reason": "replaced_same_key",
+              "inactive_turn": 3,
+              "key": "observation.latest_private_world",
+              "layer": "spatial"
+            },
+            {
+              "fact": {
+                "confidence": 1.0,
+                "evidence": "Furniture:\nliving_room_1: floor_living_room_1, shelves_7, table_13, couch_15\nbedroom_1: floor_bedroom_1, bed_17, chest_of_drawers_21, table_22\nbathroom_1: floor_bathroom_1, washer_dryer_6, shower_14\nbedroom_2: floor_bedroom_2, bed_9, chest_of_drawers_18, chest_of_drawers_19\nentryway_1: floor_entryway_1, stool_8, wardrobe_23\nkitchen_1: floor_kitchen_1, chair_10, chair_11, chair_12, counter_16, cabinet_20\n\nObjects:\nbox_4: shelves_7\n",
+                "key": "observation.latest_private_world",
+                "source_agent": "agent_2",
+                "source_type": "observation",
+                "status": "inactive",
+                "supersedes": "v8:spatial:observation.latest_private_world",
+                "turn": 3,
+                "value": "Furniture:\nliving_room_1: floor_living_room_1, shelves_7, table_13, couch_15\nbedroom_1: floor_bedroom_1, bed_17, chest_of_drawers_21, table_22\nbathroom_1: floor_bathroom_1, washer_dryer_6, shower_14\nbedroom_2: floor_bedroom_2, bed_9, chest_of_drawers_18, chest_of_drawers_19\nentryway_1: floor_entryway_1, stool_8, wardrobe_23\nkitchen_1: floor_kitchen_1, chair_10, chair_11, chair_12, counter_16, cabinet_20\n\nObjects:\nbox_4: shelves_7\n"
+              },
+              "inactive_reason": "replaced_same_key",
+              "inactive_turn": 4,
+              "key": "observation.latest_private_world",
+              "layer": "spatial"
+            },
+            {
+              "fact": {
+                "confidence": 1.0,
+                "evidence": "Furniture:\nliving_room_1: floor_living_room_1, shelves_7, table_13, couch_15\nbedroom_1: floor_bedroom_1, bed_17, chest_of_drawers_21, table_22\nbathroom_1: floor_bathroom_1, washer_dryer_6, shower_14\nbedroom_2: floor_bedroom_2, bed_9, chest_of_drawers_18, chest_of_drawers_19\nentryway_1: floor_entryway_1, stool_8, wardrobe_23\nkitchen_1: floor_kitchen_1, chair_10, chair_11, chair_12, counter_16, cabinet_20\n\nObjects:\nbox_4: shelves_7\n",
+                "key": "observation.latest_private_world",
+                "source_agent": "agent_2",
+                "source_type": "observation",
+                "status": "inactive",
+                "supersedes": "v11:spatial:observation.latest_private_world",
+                "turn": 4,
+                "value": "Furniture:\nliving_room_1: floor_living_room_1, shelves_7, table_13, couch_15\nbedroom_1: floor_bedroom_1, bed_17, chest_of_drawers_21, table_22\nbathroom_1: floor_bathroom_1, washer_dryer_6, shower_14\nbedroom_2: floor_bedroom_2, bed_9, chest_of_drawers_18, chest_of_drawers_19\nentryway_1: floor_entryway_1, stool_8, wardrobe_23\nkitchen_1: floor_kitchen_1, chair_10, chair_11, chair_12, counter_16, cabinet_20\n\nObjects:\nbox_4: shelves_7\n"
+              },
+              "inactive_reason": "replaced_same_key",
+              "inactive_turn": 5,
+              "key": "observation.latest_private_world",
+              "layer": "spatial"
+            }
+          ],
+          "social": {
+            "access.denied_rooms": {
+              "confidence": 1.0,
+              "evidence": "task mechanic visible to self",
+              "key": "access.denied_rooms",
+              "source_agent": "agent_2",
+              "source_type": "task_private",
+              "status": "task_specified",
+              "supersedes": null,
+              "turn": 0,
+              "value": []
+            },
+            "action.turn_1.status": {
+              "confidence": 1.0,
+              "evidence": "No objects are found yet, please explore the house by navigating to different rooms.\n\nagent_2_VisualSummary:\n- No notable new visual observations",
+              "key": "action.turn_1.status",
+              "source_agent": "agent_2",
+              "source_type": "action_feedback",
+              "status": "observed",
+              "supersedes": null,
+              "turn": 1,
+              "value": "succeeded"
+            },
+            "action.turn_2.status": {
+              "confidence": 1.0,
+              "evidence": "Successful execution!\n\nagent_2_VisualSummary:\n- Traversed: living_room_1 -> kitchen_1\n- Saw other agents: agent_0 nearby, agent_1 in bedroom_1, agent_0 in living_room_1",
+              "key": "action.turn_2.status",
+              "source_agent": "agent_2",
+              "source_type": "action_feedback",
+              "status": "observed",
+              "supersedes": null,
+              "turn": 2,
+              "value": "succeeded"
+            },
+            "action.turn_3.status": {
+              "confidence": 1.0,
+              "evidence": "No objects with name objects on counter_16 were found.\n\nagent_2_VisualSummary:\n- No notable new visual observations",
+              "key": "action.turn_3.status",
+              "source_agent": "agent_2",
+              "source_type": "action_feedback",
+              "status": "observed",
+              "supersedes": null,
+              "turn": 3,
+              "value": "succeeded"
+            },
+            "action.turn_4.status": {
+              "confidence": 1.0,
+              "evidence": "No objects with name jug were found.\n\nagent_2_VisualSummary:\n- No notable new visual observations",
+              "key": "action.turn_4.status",
+              "source_agent": "agent_2",
+              "source_type": "action_feedback",
+              "status": "observed",
+              "supersedes": null,
+              "turn": 4,
+              "value": "succeeded"
+            },
+            "task.private_facts": {
+              "confidence": 1.0,
+              "evidence": "own private task input",
+              "key": "task.private_facts",
+              "source_agent": "agent_2",
+              "source_type": "task_private",
+              "status": "task_specified",
+              "supersedes": null,
+              "turn": 0,
+              "value": [
+                "cabinet_20 is in kitchen_1.",
+                "Your personal objective: cabinet_20 in kitchen_1 must end closed."
+              ]
+            },
+            "task.self": {
+              "confidence": 1.0,
+              "evidence": "You are preparing the apartment for a quick staging check with extremely limited messaging. As a group, complete ALL shared objectives:\n\n1) Place the jug onto the living-room table.\n2) Place the book onto the bedroom-1 table.\n3) Leave the kitchen cabinet OPEN.\n4) By the end, agent_1 must know that agent_0 knows whether the kitchen cabinet is open.",
+              "key": "task.self",
+              "source_agent": "agent_2",
+              "source_type": "task_public",
+              "status": "task_specified",
+              "supersedes": null,
+              "turn": 0,
+              "value": "agent_2"
+            }
+          },
+          "spatial": {
+            "observation.latest_private_world": {
+              "confidence": 1.0,
+              "evidence": "Furniture:\nliving_room_1: floor_living_room_1, shelves_7, table_13, couch_15\nbedroom_1: floor_bedroom_1, bed_17, chest_of_drawers_21, table_22\nbathroom_1: floor_bathroom_1, washer_dryer_6, shower_14\nbedroom_2: floor_bedroom_2, bed_9, chest_of_drawers_18, chest_of_drawers_19\nentryway_1: floor_entryway_1, stool_8, wardrobe_23\nkitchen_1: floor_kitchen_1, chair_10, chair_11, chair_12, counter_16, cabinet_20\n\nObjects:\nbox_4: shelves_7\n",
+              "key": "observation.latest_private_world",
+              "source_agent": "agent_2",
+              "source_type": "observation",
+              "status": "observed",
+              "supersedes": "v14:spatial:observation.latest_private_world",
+              "turn": 5,
+              "value": "Furniture:\nliving_room_1: floor_living_room_1, shelves_7, table_13, couch_15\nbedroom_1: floor_bedroom_1, bed_17, chest_of_drawers_21, table_22\nbathroom_1: floor_bathroom_1, washer_dryer_6, shower_14\nbedroom_2: floor_bedroom_2, bed_9, chest_of_drawers_18, chest_of_drawers_19\nentryway_1: floor_entryway_1, stool_8, wardrobe_23\nkitchen_1: floor_kitchen_1, chair_10, chair_11, chair_12, counter_16, cabinet_20\n\nObjects:\nbox_4: shelves_7\n"
+            },
+            "self.near": {
+              "confidence": 1.0,
+              "evidence": "Successful execution!\n\nagent_2_VisualSummary:\n- Traversed: living_room_1 -> kitchen_1\n- Saw other agents: agent_0 nearby, agent_1 in bedroom_1, agent_0 in living_room_1",
+              "key": "self.near",
+              "source_agent": "agent_2",
+              "source_type": "action_feedback",
+              "status": "observed",
+              "supersedes": null,
+              "turn": 2,
+              "value": "floor_kitchen_1"
+            },
+            "task.shared_goal": {
+              "confidence": 1.0,
+              "evidence": "You are preparing the apartment for a quick staging check with extremely limited messaging. As a group, complete ALL shared objectives:\n\n1) Place the jug onto the living-room table.\n2) Place the book onto the bedroom-1 table.\n3) Leave the kitchen cabinet OPEN.\n4) By the end, agent_1 must know that agent_0 knows whether the kitchen cabinet is open.",
+              "key": "task.shared_goal",
+              "source_agent": "agent_2",
+              "source_type": "task_public",
+              "status": "task_specified",
+              "supersedes": null,
+              "turn": 0,
+              "value": "You are preparing the apartment for a quick staging check with extremely limited messaging. As a group, complete ALL shared objectives:\n\n1) Place the jug onto the living-room table.\n2) Place the book onto the bedroom-1 table.\n3) Leave the kitchen cabinet OPEN.\n4) By the end, agent_1 must know that agent_0 knows whether the kitchen cabinet is open."
+            }
+          },
+          "version": 15
+        },
+        "reason": "delivered_message",
+        "turn": 5,
+        "updates": [
+          {
+            "agent_id": "agent_2",
+            "changes": [
+              {
+                "after": {
+                  "confidence": 1.0,
+                  "evidence": "agent_2, please get jug_3 from bed_9 and put it on table_13. I'm getting book_0.",
+                  "key": "message.turn_5.from.agent_0",
+                  "source_agent": "agent_0",
+                  "source_type": "delivered_message",
+                  "status": "observed",
+                  "supersedes": null,
+                  "turn": 5,
+                  "value": "agent_2, please get jug_3 from bed_9 and put it on table_13. I'm getting book_0."
+                },
+                "before": null,
+                "key": "message.turn_5.from.agent_0",
+                "layer": "social"
+              },
+              {
+                "after": {
+                  "confidence": 1.0,
+                  "evidence": "agent_2, please get jug_3 from bed_9 and put it on table_13. I'm getting book_0.",
+                  "key": "claim.agent_0.agent_2",
+                  "source_agent": "agent_0",
+                  "source_type": "delivered_message",
+                  "status": "reported",
+                  "supersedes": null,
+                  "turn": 5,
+                  "value": "agent_2, please get jug_3 from bed_9 and put it on table_13. I'm getting book_0."
+                },
+                "before": null,
+                "key": "claim.agent_0.agent_2",
+                "layer": "social"
+              },
+              {
+                "after": {
+                  "confidence": 1.0,
+                  "evidence": "agent_2, please get jug_3 from bed_9 and put it on table_13. I'm getting book_0.",
+                  "key": "claim.agent_0.bed_9",
+                  "source_agent": "agent_0",
+                  "source_type": "delivered_message",
+                  "status": "reported",
+                  "supersedes": null,
+                  "turn": 5,
+                  "value": "agent_2, please get jug_3 from bed_9 and put it on table_13. I'm getting book_0."
+                },
+                "before": null,
+                "key": "claim.agent_0.bed_9",
+                "layer": "social"
+              },
+              {
+                "after": {
+                  "confidence": 1.0,
+                  "evidence": "agent_2, please get jug_3 from bed_9 and put it on table_13. I'm getting book_0.",
+                  "key": "claim.agent_0.book_0",
+                  "source_agent": "agent_0",
+                  "source_type": "delivered_message",
+                  "status": "reported",
+                  "supersedes": null,
+                  "turn": 5,
+                  "value": "agent_2, please get jug_3 from bed_9 and put it on table_13. I'm getting book_0."
+                },
+                "before": null,
+                "key": "claim.agent_0.book_0",
+                "layer": "social"
+              },
+              {
+                "after": {
+                  "confidence": 1.0,
+                  "evidence": "agent_2, please get jug_3 from bed_9 and put it on table_13. I'm getting book_0.",
+                  "key": "claim.agent_0.jug_3",
+                  "source_agent": "agent_0",
+                  "source_type": "delivered_message",
+                  "status": "reported",
+                  "supersedes": null,
+                  "turn": 5,
+                  "value": "agent_2, please get jug_3 from bed_9 and put it on table_13. I'm getting book_0."
+                },
+                "before": null,
+                "key": "claim.agent_0.jug_3",
+                "layer": "social"
+              },
+              {
+                "after": {
+                  "confidence": 1.0,
+                  "evidence": "agent_2, please get jug_3 from bed_9 and put it on table_13. I'm getting book_0.",
+                  "key": "claim.agent_0.table_13",
+                  "source_agent": "agent_0",
+                  "source_type": "delivered_message",
+                  "status": "reported",
+                  "supersedes": null,
+                  "turn": 5,
+                  "value": "agent_2, please get jug_3 from bed_9 and put it on table_13. I'm getting book_0."
+                },
+                "before": null,
+                "key": "claim.agent_0.table_13",
+                "layer": "social"
+              }
+            ],
+            "version": 16
+          }
+        ]
+      }
+    },
+    "next_input": {
+      "path": "workdirs/habitat_memory_controls_20260922_v1/rollouts/0037/benchmark/results/emtom-104348082_171512994-983-mixed-staging-check-jug-placement-cabinet-stat-eccb2531/closed_loop_artifacts/plans.jsonl",
+      "sha256": "44ef051f53351908784a9d74cff686068434d17ec832303da2355058c57f2516",
+      "line": 35,
+      "record": {
+        "agent_id": "agent_2",
+        "condition": "dynamic_ssc",
+        "context": "[Common execution guidance]\nUse only the task information, your own observations, successful tool feedback, and messages actually delivered to you. Do not guess entity IDs. Navigate before manipulation when needed. Do not repeat an unchanged failed action. A promise or attempted action is not task completion.\n\nSSC_RUNTIME_STATE agent=agent_2 version=19\nSPATIAL:\n- observation.latest_private_world=\"Furniture:\\nliving_room_1: floor_living_room_1, shelves_7, table_13, couch_15\\nbedroom_1: floor_bedroom_1, bed_17, chest_of_drawers_21, table_22\\nbathroom_1: floor_bathroom_1, washer_dryer_6, shower_14\\nbedroom_2: floor_bedroom_2, bed_9, chest_of_drawers_18, chest_of_drawers_19\\nentryway_1: floor_entryway_1, stool_8, wardrobe_23\\nkitchen_1: floor_kitchen_1, chair_10, chair_11, chair_12, counter_16, cabinet_20\\n\\nObjects:\\nbox_4: shelves_7\\n\"; status=observed; source=observation; source_agent=agent_2; turn=6; confidence=1.00\n- self.near=\"floor_kitchen_1\"; status=observed; source=action_feedback; source_agent=agent_2; turn=2; confidence=1.00\n- task.shared_goal=\"You are preparing the apartment for a quick staging check with extremely limited messaging. As a group, complete ALL shared objectives:\\n\\n1) Place the jug onto the living-room table.\\n2) Place the book onto the bedroom-1 table.\\n3) Leave the kitchen cabinet OPEN.\\n4) By the end, agent_1 must know that agent_0 knows whether the kitchen cabinet is open.\"; status=task_specified; source=task_public; source_agent=agent_2; turn=0; confidence=1.00\nSOCIAL:\n- access.denied_rooms=[]; status=task_specified; source=task_private; source_agent=agent_2; turn=0; confidence=1.00\n- action.turn_1.status=\"succeeded\"; status=observed; source=action_feedback; source_agent=agent_2; turn=1; confidence=1.00\n- action.turn_2.status=\"succeeded\"; status=observed; source=action_feedback; source_agent=agent_2; turn=2; confidence=1.00\n- action.turn_3.status=\"succeeded\"; status=observed; source=action_feedback; source_agent=agent_2; turn=3; confidence=1.00\n- action.turn_4.status=\"succeeded\"; status=observed; source=action_feedback; source_agent=agent_2; turn=4; confidence=1.00\n- action.turn_5.status=\"succeeded\"; status=observed; source=action_feedback; source_agent=agent_2; turn=5; confidence=1.00\n- claim.agent_0.agent_2=\"agent_2, please get jug_3 from bed_9 and put it on table_13. I'm getting book_0.\"; status=reported; source=delivered_message; source_agent=agent_0; turn=5; confidence=1.00\n- claim.agent_0.bed_9=\"agent_2, please get jug_3 from bed_9 and put it on table_13. I'm getting book_0.\"; status=reported; source=delivered_message; source_agent=agent_0; turn=5; confidence=1.00\n- claim.agent_0.book_0=\"agent_2, please get jug_3 from bed_9 and put it on table_13. I'm getting book_0.\"; status=reported; source=delivered_message; source_agent=agent_0; turn=5; confidence=1.00\n- claim.agent_0.jug_3=\"agent_2, please get jug_3 from bed_9 and put it on table_13. I'm getting book_0.\"; status=reported; source=delivered_message; source_agent=agent_0; turn=5; confidence=1.00\n- claim.agent_0.table_13=\"agent_2, please get jug_3 from bed_9 and put it on table_13. I'm getting book_0.\"; status=reported; source=delivered_message; source_agent=agent_0; turn=5; confidence=1.00\n- message.turn_5.from.agent_0=\"agent_2, please get jug_3 from bed_9 and put it on table_13. I'm getting book_0.\"; status=observed; source=delivered_message; source_agent=agent_0; turn=5; confidence=1.00\n- task.private_facts=[\"cabinet_20 is in kitchen_1.\", \"Your personal objective: cabinet_20 in kitchen_1 must end closed.\"]; status=task_specified; source=task_private; source_agent=agent_2; turn=0; confidence=1.00\n- task.self=\"agent_2\"; status=task_specified; source=task_public; source_agent=agent_2; turn=0; confidence=1.00\nEND_SSC_RUNTIME_STATE",
+        "context_sha256": "fbbdd4e3c4cf4115d10617a9d74e1dd6dd26bcc011c66065786d0dd3670649bb",
+        "phase": "planner_input",
+        "state_included": true,
+        "state_version_read": 19,
+        "turn": 6
+      }
+    },
+    "next_plan": {
+      "path": "workdirs/habitat_memory_controls_20260922_v1/rollouts/0037/benchmark/results/emtom-104348082_171512994-983-mixed-staging-check-jug-placement-cabinet-stat-eccb2531/closed_loop_artifacts/plans.jsonl",
+      "sha256": "44ef051f53351908784a9d74cff686068434d17ec832303da2355058c57f2516",
+      "line": 36,
+      "record": {
+        "action": "Navigate[bed_9]",
+        "actual_prompt_sha256": "70c109232024b343fef7da0a5e2a26c3ea3d24453480decb86bb8c5c78a08218",
+        "agent_id": "agent_2",
+        "phase": "planner_output",
+        "runtime_state_block_count": 1,
+        "state_marker_found_in_actual_prompt": true,
+        "state_version_read": 19,
+        "thought": "Thought: Agent_0 has informed me that the jug (jug_3) is on bed_9 and asked me to place it on table_13. I will navigate to bed_9 in bedroom_2 to retrieve it.",
+        "turn": 6
+      }
+    },
+    "feedback": {
+      "path": "workdirs/habitat_memory_controls_20260922_v1/rollouts/0037/benchmark/results/emtom-104348082_171512994-983-mixed-staging-check-jug-placement-cabinet-stat-eccb2531/closed_loop_artifacts/events.jsonl",
+      "sha256": "a8df4ff5aeb823d5ef8fbdbc99944e62747c98ab752e58a5e4cf6152a262b2ec",
+      "line": 38,
+      "record": {
+        "action": {
+          "arguments": [
+            "bed_9"
+          ],
+          "error": null,
+          "name": "Navigate",
+          "serialized": "Navigate[bed_9]",
+          "valid": true
+        },
+        "agent_id": "agent_2",
+        "event_type": "action_feedback",
+        "outcome": {
+          "feedback": "Successful execution!\n\nagent_2_VisualSummary:\n- Traversed: bedroom_2\n- Saw other agents: agent_0 in living_room_1, agent_1 in bedroom_1",
+          "had_physical_effect": true,
+          "status": "succeeded",
+          "success": true
+        },
+        "turn": 6
+      }
+    },
+    "actual_request": {
+      "path": "workdirs/habitat_memory_controls_20260922_v1/rollouts/0037/calls/00026/request.json",
+      "sha256": "917b000b6508cb7ebdaf13c1840e24490134bd24a8fb9c26fa47c7e5e61243af",
+      "exact_state_present": true,
+      "native_message_also_present": true
+    }
+  },
+  "result": {
+    "split": "development12",
+    "task": "/pfs/zhangxiaoyuan/project/physical_code/workdirs/habitat_memory_controls_20260922_v1/source/mechanism_tasks/development12/standard_104348082_171512994_983.json",
+    "task_id": "emtom-104348082_171512994-983-mixed-staging-check-jug-placement-cabinet-stat-eccb2531",
+    "scene_id": "104348082_171512994",
+    "episode_id": "983",
+    "condition": "dynamic_ssc",
+    "seed": 891011,
+    "runtime_condition": "dynamic_ssc",
+    "memory_view": "ssc",
+    "artifact": "/pfs/zhangxiaoyuan/project/physical_code/workdirs/habitat_memory_controls_20260922_v1/rollouts/0037/benchmark/results/emtom-104348082_171512994-983-mixed-staging-check-jug-placement-cabinet-stat-eccb2531/closed_loop_artifacts",
+    "strict_physical": {
+      "checks": [
+        {
+          "entity": "jug_3",
+          "goal_id": "is_on_top:jug_3:table_13",
+          "predicate": "is_on_top",
+          "relation_stable": true,
+          "released_stable": true,
+          "samples": [
+            {
+              "detail": {
+                "benchmark_predicate_result": {
+                  "failure_explanations": [],
+                  "percent_complete": 1.0,
+                  "proposition_status": {
+                    "prop_0": true
+                  },
+                  "success": true
+                }
+              },
+              "held_by": null,
+              "relation_ok": true
+            },
+            {
+              "detail": {
+                "benchmark_predicate_result": {
+                  "failure_explanations": [],
+                  "percent_complete": 1.0,
+                  "proposition_status": {
+                    "prop_0": true
+                  },
+                  "success": true
+                }
+              },
+              "held_by": null,
+              "relation_ok": true
+            },
+            {
+              "detail": {
+                "benchmark_predicate_result": {
+                  "failure_explanations": [],
+                  "percent_complete": 1.0,
+                  "proposition_status": {
+                    "prop_0": true
+                  },
+                  "success": true
+                }
+              },
+              "held_by": null,
+              "relation_ok": true
+            }
+          ],
+          "samples_observed": 3,
+          "samples_required": 3,
+          "satisfied": true,
+          "stable_window_measured": true,
+          "target": "table_13"
+        },
+        {
+          "entity": "book_0",
+          "goal_id": "is_on_top:book_0:table_22",
+          "predicate": "is_on_top",
+          "relation_stable": false,
+          "released_stable": true,
+          "samples": [
+            {
+              "detail": {
+                "benchmark_predicate_result": {
+                  "failure_explanations": [
+                    "book_0 is not on top of table_22"
+                  ],
+                  "percent_complete": 0.0,
+                  "proposition_status": {
+                    "prop_0": false
+                  },
+                  "success": false
+                }
+              },
+              "held_by": null,
+              "relation_ok": false
+            },
+            {
+              "detail": {
+                "benchmark_predicate_result": {
+                  "failure_explanations": [
+                    "book_0 is not on top of table_22"
+                  ],
+                  "percent_complete": 0.0,
+                  "proposition_status": {
+                    "prop_0": false
+                  },
+                  "success": false
+                }
+              },
+              "held_by": null,
+              "relation_ok": false
+            },
+            {
+              "detail": {
+                "benchmark_predicate_result": {
+                  "failure_explanations": [
+                    "book_0 is not on top of table_22"
+                  ],
+                  "percent_complete": 0.0,
+                  "proposition_status": {
+                    "prop_0": false
+                  },
+                  "success": false
+                }
+              },
+              "held_by": null,
+              "relation_ok": false
+            }
+          ],
+          "samples_observed": 3,
+          "samples_required": 3,
+          "satisfied": false,
+          "stable_window_measured": true,
+          "target": "table_22"
+        },
+        {
+          "entity": "cabinet_20",
+          "goal_id": "is_open:cabinet_20",
+          "predicate": "is_open",
+          "relation_stable": true,
+          "released_stable": true,
+          "samples": [
+            {
+              "detail": {
+                "articulated_object_found": true,
+                "default_link_found": true,
+                "joint_positions": [
+                  2.268928050994873,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "joint_threshold": 0.1,
+                "resolved_handle": "412c833d4428480466b704ce25bf06f519c8cf72_:0000"
+              },
+              "held_by": null,
+              "relation_ok": true
+            },
+            {
+              "detail": {
+                "articulated_object_found": true,
+                "default_link_found": true,
+                "joint_positions": [
+                  2.268928050994873,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "joint_threshold": 0.1,
+                "resolved_handle": "412c833d4428480466b704ce25bf06f519c8cf72_:0000"
+              },
+              "held_by": null,
+              "relation_ok": true
+            },
+            {
+              "detail": {
+                "articulated_object_found": true,
+                "default_link_found": true,
+                "joint_positions": [
+                  2.268928050994873,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "joint_threshold": 0.1,
+                "resolved_handle": "412c833d4428480466b704ce25bf06f519c8cf72_:0000"
+              },
+              "held_by": null,
+              "relation_ok": true
+            }
+          ],
+          "samples_observed": 3,
+          "samples_required": 3,
+          "satisfied": true,
+          "stable_window_measured": true,
+          "target": null
+        }
+      ],
+      "completed_goals": 2,
+      "measurement_status": "measured",
+      "measurement_valid": true,
+      "open_threshold": 0.1,
+      "physics_dt": 0.016666666666666666,
+      "physics_steps_per_sample": 10,
+      "scorer_version": "strict_physical_v2",
+      "stability_advance_ok": true,
+      "stable_samples": 3,
+      "strict_percent_complete": 0.6666666666666666,
+      "strict_success": false,
+      "total_goals": 3
+    },
+    "measurement_valid": true
+  },
+  "media": [
+    {
+      "path": "workdirs/habitat_memory_controls_20260922_v1/rollouts/0037/benchmark/results/emtom-104348082_171512994-983-mixed-staging-check-jug-placement-cabinet-stat-eccb2531/closed_loop_artifacts/frames/agent_2/turn_0006/agent_2_t0006_f0006_s0194_sim000518_turn_end.png",
+      "sha256": "dbb21b023e022cca53148a414b30f5ecea97bd620220ba59f4e3553565b8ac44",
+      "export": "habitat/episode_983/next_action_frame.png",
+      "export_sha256": "dbb21b023e022cca53148a414b30f5ecea97bd620220ba59f4e3553565b8ac44"
+    }
+  ]
+}

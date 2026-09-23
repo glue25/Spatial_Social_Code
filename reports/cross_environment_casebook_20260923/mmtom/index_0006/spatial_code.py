@@ -1,0 +1,8 @@
+S.fact(0, "inside", "wine glass", "living room cabinet", source="text")
+S.fact(0, "at", "Elizabeth", "bedroom", source="text")
+S.event(1, "Elizabeth", "move", "kitchen", source="video")
+S.event(2, "Elizabeth", "open", "stove", source="video")
+S.event(3, "Elizabeth", "open", "kitchen cabinet 3", source="video")
+S.event(4, "Elizabeth", "open", "fridge", source="video")
+S.event(5, "Elizabeth", "open", "kitchen cabinet 2", source="video")
+S.event(6, "Elizabeth", "move", "living room cabinet", source="video")

@@ -1,0 +1,859 @@
+{
+  "ssc": {
+    "view": {
+      "physical_records": [
+        {
+          "id": "physical_3690c2d1b378fb42",
+          "kind": "event",
+          "content": {
+            "action": "sit down",
+            "actor": "Katrina",
+            "clip_id": "DAY6_A3_TASHA_16250000.mp4",
+            "confidence": 0.9,
+            "event_role": "executor",
+            "evidence_id": "S1",
+            "evidence_span": "00:10-00:12",
+            "phase": "during",
+            "source": "video",
+            "t": 1,
+            "target": "chair"
+          }
+        },
+        {
+          "id": "physical_d7d2cc5e5cd38b3f",
+          "kind": "event",
+          "content": {
+            "action": "reply",
+            "actor": "Jake",
+            "clip_id": "DAY6_A3_TASHA_16250000.mp4",
+            "confidence": 0.9,
+            "event_role": "speaker",
+            "evidence_id": "S3",
+            "evidence_span": "00:13-00:14",
+            "phase": "during",
+            "quote": "不是",
+            "source": "video",
+            "t": 3,
+            "target": "Tasha"
+          }
+        },
+        {
+          "id": "physical_1392d39714f4c200",
+          "kind": "event",
+          "content": {
+            "action": "whisper",
+            "actor": "Tasha",
+            "clip_id": "DAY6_A3_TASHA_16250000.mp4",
+            "confidence": 0.9,
+            "event_role": "speaker",
+            "evidence_id": "S2",
+            "evidence_span": "00:11-00:13",
+            "phase": "during",
+            "quote": "这是她男朋友吗？",
+            "source": "video",
+            "t": 2,
+            "target": "Jake"
+          }
+        },
+        {
+          "id": "physical_e95cc1a116757761",
+          "kind": "spatial_fact",
+          "content": {
+            "clip_id": "DAY6_A3_TASHA_16250000.mp4",
+            "confidence": 0.9,
+            "evidence_id": "S4",
+            "evidence_span": "00:11-00:14",
+            "object": "Katrina has a boyfriend",
+            "relation": "mistakenly assume",
+            "source": "video",
+            "subject": "Tasha",
+            "t": 1
+          }
+        }
+      ],
+      "observation_attributions": [
+        {
+          "record": "physical_e95cc1a116757761",
+          "observer": "Tasha"
+        },
+        {
+          "record": "physical_3690c2d1b378fb42",
+          "observer": "Tasha"
+        },
+        {
+          "record": "physical_1392d39714f4c200",
+          "observer": "Tasha"
+        },
+        {
+          "record": "physical_d7d2cc5e5cd38b3f",
+          "observer": "Tasha"
+        }
+      ],
+      "social_records": [
+        {
+          "id": "social_3dacaa01c8c05b70",
+          "kind": "observation",
+          "content": {
+            "confidence": 0.9,
+            "fact": "Katrina sits down",
+            "source": "spatial_trace",
+            "t": 1
+          }
+        },
+        {
+          "id": "social_c6d608fb9a1eac39",
+          "kind": "social_unknown",
+          "content": {
+            "variable": "belief"
+          }
+        },
+        {
+          "id": "social_19f35ddf52d4ad75",
+          "kind": "social_unknown",
+          "content": {
+            "variable": "belief"
+          }
+        },
+        {
+          "id": "social_a31b5b22e19df309",
+          "kind": "belief",
+          "content": {
+            "confidence": 0.9,
+            "fact": "The person is not Katrina's boyfriend",
+            "t": 3
+          }
+        },
+        {
+          "id": "social_070a5bc7fa14ffb4",
+          "kind": "observation",
+          "content": {
+            "confidence": 0.9,
+            "fact": "Jake replies '不是'",
+            "source": "spatial_trace",
+            "t": 3
+          }
+        },
+        {
+          "id": "social_3331cfd241a2bfbd",
+          "kind": "social_unknown",
+          "content": {
+            "variable": "intent"
+          }
+        },
+        {
+          "id": "social_75165f9abbdcfad0",
+          "kind": "belief",
+          "content": {
+            "confidence": 0.9,
+            "fact": "Katrina has a boyfriend",
+            "t": 1
+          }
+        },
+        {
+          "id": "social_412da13125385a37",
+          "kind": "action_evidence",
+          "content": {
+            "action": "whisper",
+            "confidence": 0.9,
+            "hypothesis": "SELF mistakenly guessing and whispering it to her friend",
+            "t": 2
+          }
+        },
+        {
+          "id": "social_6d1167a234c1bd16",
+          "kind": "social_unknown",
+          "content": {
+            "variable": "belief"
+          }
+        },
+        {
+          "id": "social_0bb6fdb39e81ef9b",
+          "kind": "observation",
+          "content": {
+            "confidence": 0.9,
+            "fact": "SELF whispers '这是她男朋友吗？' to Jake",
+            "source": "spatial_trace",
+            "t": 2
+          }
+        }
+      ],
+      "attributions": [
+        {
+          "record": "social_75165f9abbdcfad0",
+          "agent": "Tasha"
+        },
+        {
+          "record": "social_3331cfd241a2bfbd",
+          "agent": "Tasha"
+        },
+        {
+          "record": "social_412da13125385a37",
+          "agent": "Tasha"
+        },
+        {
+          "record": "social_6d1167a234c1bd16",
+          "agent": "Lucia"
+        },
+        {
+          "record": "social_3dacaa01c8c05b70",
+          "agent": "Tasha"
+        },
+        {
+          "record": "social_19f35ddf52d4ad75",
+          "agent": "Alice"
+        },
+        {
+          "record": "social_c6d608fb9a1eac39",
+          "agent": "Shure"
+        },
+        {
+          "record": "social_a31b5b22e19df309",
+          "agent": "Jake"
+        },
+        {
+          "record": "social_0bb6fdb39e81ef9b",
+          "agent": "Tasha"
+        },
+        {
+          "record": "social_070a5bc7fa14ffb4",
+          "agent": "Tasha"
+        }
+      ],
+      "evidence_links": [
+        {
+          "record": "social_070a5bc7fa14ffb4",
+          "evidence_id": "S3"
+        },
+        {
+          "record": "social_0bb6fdb39e81ef9b",
+          "evidence_id": "S2"
+        },
+        {
+          "record": "social_412da13125385a37",
+          "evidence_id": "S2"
+        },
+        {
+          "record": "social_a31b5b22e19df309",
+          "evidence_id": "S3"
+        },
+        {
+          "record": "social_3dacaa01c8c05b70",
+          "evidence_id": "S1"
+        },
+        {
+          "record": "social_75165f9abbdcfad0",
+          "evidence_id": "S4"
+        },
+        {
+          "record": "social_412da13125385a37",
+          "evidence_id": "S4"
+        }
+      ],
+      "support_notes": [
+        {
+          "id": "note_269772893c1c3787",
+          "text": "SELF says '不是'",
+          "status": "compiler_generated_rationale_not_independent_observation"
+        },
+        {
+          "id": "note_407f7a815ed1088f",
+          "text": "SELF mistakenly assumes Katrina has a boyfriend",
+          "status": "compiler_generated_rationale_not_independent_observation"
+        },
+        {
+          "id": "note_4ae39d3abad53f67",
+          "text": "SELF whispers '这是她男朋友吗？'",
+          "status": "compiler_generated_rationale_not_independent_observation"
+        }
+      ],
+      "rationale_links": [
+        {
+          "record": "social_75165f9abbdcfad0",
+          "note": "note_407f7a815ed1088f"
+        },
+        {
+          "record": "social_412da13125385a37",
+          "note": "note_4ae39d3abad53f67"
+        },
+        {
+          "record": "social_a31b5b22e19df309",
+          "note": "note_269772893c1c3787"
+        }
+      ]
+    },
+    "removed": {},
+    "all_other_content_identical": true
+  },
+  "ssc_no_references": {
+    "view": {
+      "physical_records": [
+        {
+          "id": "physical_3690c2d1b378fb42",
+          "kind": "event",
+          "content": {
+            "action": "sit down",
+            "actor": "Katrina",
+            "clip_id": "DAY6_A3_TASHA_16250000.mp4",
+            "confidence": 0.9,
+            "event_role": "executor",
+            "evidence_id": "S1",
+            "evidence_span": "00:10-00:12",
+            "phase": "during",
+            "source": "video",
+            "t": 1,
+            "target": "chair"
+          }
+        },
+        {
+          "id": "physical_d7d2cc5e5cd38b3f",
+          "kind": "event",
+          "content": {
+            "action": "reply",
+            "actor": "Jake",
+            "clip_id": "DAY6_A3_TASHA_16250000.mp4",
+            "confidence": 0.9,
+            "event_role": "speaker",
+            "evidence_id": "S3",
+            "evidence_span": "00:13-00:14",
+            "phase": "during",
+            "quote": "不是",
+            "source": "video",
+            "t": 3,
+            "target": "Tasha"
+          }
+        },
+        {
+          "id": "physical_1392d39714f4c200",
+          "kind": "event",
+          "content": {
+            "action": "whisper",
+            "actor": "Tasha",
+            "clip_id": "DAY6_A3_TASHA_16250000.mp4",
+            "confidence": 0.9,
+            "event_role": "speaker",
+            "evidence_id": "S2",
+            "evidence_span": "00:11-00:13",
+            "phase": "during",
+            "quote": "这是她男朋友吗？",
+            "source": "video",
+            "t": 2,
+            "target": "Jake"
+          }
+        },
+        {
+          "id": "physical_e95cc1a116757761",
+          "kind": "spatial_fact",
+          "content": {
+            "clip_id": "DAY6_A3_TASHA_16250000.mp4",
+            "confidence": 0.9,
+            "evidence_id": "S4",
+            "evidence_span": "00:11-00:14",
+            "object": "Katrina has a boyfriend",
+            "relation": "mistakenly assume",
+            "source": "video",
+            "subject": "Tasha",
+            "t": 1
+          }
+        }
+      ],
+      "observation_attributions": [
+        {
+          "record": "physical_e95cc1a116757761",
+          "observer": "Tasha"
+        },
+        {
+          "record": "physical_3690c2d1b378fb42",
+          "observer": "Tasha"
+        },
+        {
+          "record": "physical_1392d39714f4c200",
+          "observer": "Tasha"
+        },
+        {
+          "record": "physical_d7d2cc5e5cd38b3f",
+          "observer": "Tasha"
+        }
+      ],
+      "social_records": [
+        {
+          "id": "social_3dacaa01c8c05b70",
+          "kind": "observation",
+          "content": {
+            "confidence": 0.9,
+            "fact": "Katrina sits down",
+            "source": "spatial_trace",
+            "t": 1
+          }
+        },
+        {
+          "id": "social_c6d608fb9a1eac39",
+          "kind": "social_unknown",
+          "content": {
+            "variable": "belief"
+          }
+        },
+        {
+          "id": "social_19f35ddf52d4ad75",
+          "kind": "social_unknown",
+          "content": {
+            "variable": "belief"
+          }
+        },
+        {
+          "id": "social_a31b5b22e19df309",
+          "kind": "belief",
+          "content": {
+            "confidence": 0.9,
+            "fact": "The person is not Katrina's boyfriend",
+            "t": 3
+          }
+        },
+        {
+          "id": "social_070a5bc7fa14ffb4",
+          "kind": "observation",
+          "content": {
+            "confidence": 0.9,
+            "fact": "Jake replies '不是'",
+            "source": "spatial_trace",
+            "t": 3
+          }
+        },
+        {
+          "id": "social_3331cfd241a2bfbd",
+          "kind": "social_unknown",
+          "content": {
+            "variable": "intent"
+          }
+        },
+        {
+          "id": "social_75165f9abbdcfad0",
+          "kind": "belief",
+          "content": {
+            "confidence": 0.9,
+            "fact": "Katrina has a boyfriend",
+            "t": 1
+          }
+        },
+        {
+          "id": "social_412da13125385a37",
+          "kind": "action_evidence",
+          "content": {
+            "action": "whisper",
+            "confidence": 0.9,
+            "hypothesis": "SELF mistakenly guessing and whispering it to her friend",
+            "t": 2
+          }
+        },
+        {
+          "id": "social_6d1167a234c1bd16",
+          "kind": "social_unknown",
+          "content": {
+            "variable": "belief"
+          }
+        },
+        {
+          "id": "social_0bb6fdb39e81ef9b",
+          "kind": "observation",
+          "content": {
+            "confidence": 0.9,
+            "fact": "SELF whispers '这是她男朋友吗？' to Jake",
+            "source": "spatial_trace",
+            "t": 2
+          }
+        }
+      ],
+      "attributions": [
+        {
+          "record": "social_75165f9abbdcfad0",
+          "agent": "Tasha"
+        },
+        {
+          "record": "social_3331cfd241a2bfbd",
+          "agent": "Tasha"
+        },
+        {
+          "record": "social_412da13125385a37",
+          "agent": "Tasha"
+        },
+        {
+          "record": "social_6d1167a234c1bd16",
+          "agent": "Lucia"
+        },
+        {
+          "record": "social_3dacaa01c8c05b70",
+          "agent": "Tasha"
+        },
+        {
+          "record": "social_19f35ddf52d4ad75",
+          "agent": "Alice"
+        },
+        {
+          "record": "social_c6d608fb9a1eac39",
+          "agent": "Shure"
+        },
+        {
+          "record": "social_a31b5b22e19df309",
+          "agent": "Jake"
+        },
+        {
+          "record": "social_0bb6fdb39e81ef9b",
+          "agent": "Tasha"
+        },
+        {
+          "record": "social_070a5bc7fa14ffb4",
+          "agent": "Tasha"
+        }
+      ],
+      "support_notes": [
+        {
+          "id": "note_269772893c1c3787",
+          "text": "SELF says '不是'",
+          "status": "compiler_generated_rationale_not_independent_observation"
+        },
+        {
+          "id": "note_407f7a815ed1088f",
+          "text": "SELF mistakenly assumes Katrina has a boyfriend",
+          "status": "compiler_generated_rationale_not_independent_observation"
+        },
+        {
+          "id": "note_4ae39d3abad53f67",
+          "text": "SELF whispers '这是她男朋友吗？'",
+          "status": "compiler_generated_rationale_not_independent_observation"
+        }
+      ]
+    },
+    "removed": {
+      "evidence_links": [
+        {
+          "record": "social_070a5bc7fa14ffb4",
+          "evidence_id": "S3"
+        },
+        {
+          "record": "social_0bb6fdb39e81ef9b",
+          "evidence_id": "S2"
+        },
+        {
+          "record": "social_412da13125385a37",
+          "evidence_id": "S2"
+        },
+        {
+          "record": "social_a31b5b22e19df309",
+          "evidence_id": "S3"
+        },
+        {
+          "record": "social_3dacaa01c8c05b70",
+          "evidence_id": "S1"
+        },
+        {
+          "record": "social_75165f9abbdcfad0",
+          "evidence_id": "S4"
+        },
+        {
+          "record": "social_412da13125385a37",
+          "evidence_id": "S4"
+        }
+      ],
+      "rationale_links": [
+        {
+          "record": "social_75165f9abbdcfad0",
+          "note": "note_407f7a815ed1088f"
+        },
+        {
+          "record": "social_412da13125385a37",
+          "note": "note_4ae39d3abad53f67"
+        },
+        {
+          "record": "social_a31b5b22e19df309",
+          "note": "note_269772893c1c3787"
+        }
+      ]
+    },
+    "all_other_content_identical": true
+  },
+  "ssc_no_attribution": {
+    "view": {
+      "physical_records": [
+        {
+          "id": "physical_3690c2d1b378fb42",
+          "kind": "event",
+          "content": {
+            "action": "sit down",
+            "actor": "Katrina",
+            "clip_id": "DAY6_A3_TASHA_16250000.mp4",
+            "confidence": 0.9,
+            "event_role": "executor",
+            "evidence_id": "S1",
+            "evidence_span": "00:10-00:12",
+            "phase": "during",
+            "source": "video",
+            "t": 1,
+            "target": "chair"
+          }
+        },
+        {
+          "id": "physical_d7d2cc5e5cd38b3f",
+          "kind": "event",
+          "content": {
+            "action": "reply",
+            "actor": "Jake",
+            "clip_id": "DAY6_A3_TASHA_16250000.mp4",
+            "confidence": 0.9,
+            "event_role": "speaker",
+            "evidence_id": "S3",
+            "evidence_span": "00:13-00:14",
+            "phase": "during",
+            "quote": "不是",
+            "source": "video",
+            "t": 3,
+            "target": "Tasha"
+          }
+        },
+        {
+          "id": "physical_1392d39714f4c200",
+          "kind": "event",
+          "content": {
+            "action": "whisper",
+            "actor": "Tasha",
+            "clip_id": "DAY6_A3_TASHA_16250000.mp4",
+            "confidence": 0.9,
+            "event_role": "speaker",
+            "evidence_id": "S2",
+            "evidence_span": "00:11-00:13",
+            "phase": "during",
+            "quote": "这是她男朋友吗？",
+            "source": "video",
+            "t": 2,
+            "target": "Jake"
+          }
+        },
+        {
+          "id": "physical_e95cc1a116757761",
+          "kind": "spatial_fact",
+          "content": {
+            "clip_id": "DAY6_A3_TASHA_16250000.mp4",
+            "confidence": 0.9,
+            "evidence_id": "S4",
+            "evidence_span": "00:11-00:14",
+            "object": "Katrina has a boyfriend",
+            "relation": "mistakenly assume",
+            "source": "video",
+            "subject": "Tasha",
+            "t": 1
+          }
+        }
+      ],
+      "social_records": [
+        {
+          "id": "social_3dacaa01c8c05b70",
+          "kind": "observation",
+          "content": {
+            "confidence": 0.9,
+            "fact": "Katrina sits down",
+            "source": "spatial_trace",
+            "t": 1
+          }
+        },
+        {
+          "id": "social_c6d608fb9a1eac39",
+          "kind": "social_unknown",
+          "content": {
+            "variable": "belief"
+          }
+        },
+        {
+          "id": "social_19f35ddf52d4ad75",
+          "kind": "social_unknown",
+          "content": {
+            "variable": "belief"
+          }
+        },
+        {
+          "id": "social_a31b5b22e19df309",
+          "kind": "belief",
+          "content": {
+            "confidence": 0.9,
+            "fact": "The person is not Katrina's boyfriend",
+            "t": 3
+          }
+        },
+        {
+          "id": "social_070a5bc7fa14ffb4",
+          "kind": "observation",
+          "content": {
+            "confidence": 0.9,
+            "fact": "Jake replies '不是'",
+            "source": "spatial_trace",
+            "t": 3
+          }
+        },
+        {
+          "id": "social_3331cfd241a2bfbd",
+          "kind": "social_unknown",
+          "content": {
+            "variable": "intent"
+          }
+        },
+        {
+          "id": "social_75165f9abbdcfad0",
+          "kind": "belief",
+          "content": {
+            "confidence": 0.9,
+            "fact": "Katrina has a boyfriend",
+            "t": 1
+          }
+        },
+        {
+          "id": "social_412da13125385a37",
+          "kind": "action_evidence",
+          "content": {
+            "action": "whisper",
+            "confidence": 0.9,
+            "hypothesis": "SELF mistakenly guessing and whispering it to her friend",
+            "t": 2
+          }
+        },
+        {
+          "id": "social_6d1167a234c1bd16",
+          "kind": "social_unknown",
+          "content": {
+            "variable": "belief"
+          }
+        },
+        {
+          "id": "social_0bb6fdb39e81ef9b",
+          "kind": "observation",
+          "content": {
+            "confidence": 0.9,
+            "fact": "SELF whispers '这是她男朋友吗？' to Jake",
+            "source": "spatial_trace",
+            "t": 2
+          }
+        }
+      ],
+      "evidence_links": [
+        {
+          "record": "social_070a5bc7fa14ffb4",
+          "evidence_id": "S3"
+        },
+        {
+          "record": "social_0bb6fdb39e81ef9b",
+          "evidence_id": "S2"
+        },
+        {
+          "record": "social_412da13125385a37",
+          "evidence_id": "S2"
+        },
+        {
+          "record": "social_a31b5b22e19df309",
+          "evidence_id": "S3"
+        },
+        {
+          "record": "social_3dacaa01c8c05b70",
+          "evidence_id": "S1"
+        },
+        {
+          "record": "social_75165f9abbdcfad0",
+          "evidence_id": "S4"
+        },
+        {
+          "record": "social_412da13125385a37",
+          "evidence_id": "S4"
+        }
+      ],
+      "support_notes": [
+        {
+          "id": "note_269772893c1c3787",
+          "text": "SELF says '不是'",
+          "status": "compiler_generated_rationale_not_independent_observation"
+        },
+        {
+          "id": "note_407f7a815ed1088f",
+          "text": "SELF mistakenly assumes Katrina has a boyfriend",
+          "status": "compiler_generated_rationale_not_independent_observation"
+        },
+        {
+          "id": "note_4ae39d3abad53f67",
+          "text": "SELF whispers '这是她男朋友吗？'",
+          "status": "compiler_generated_rationale_not_independent_observation"
+        }
+      ],
+      "rationale_links": [
+        {
+          "record": "social_75165f9abbdcfad0",
+          "note": "note_407f7a815ed1088f"
+        },
+        {
+          "record": "social_412da13125385a37",
+          "note": "note_4ae39d3abad53f67"
+        },
+        {
+          "record": "social_a31b5b22e19df309",
+          "note": "note_269772893c1c3787"
+        }
+      ]
+    },
+    "removed": {
+      "attributions": [
+        {
+          "record": "social_75165f9abbdcfad0",
+          "agent": "Tasha"
+        },
+        {
+          "record": "social_3331cfd241a2bfbd",
+          "agent": "Tasha"
+        },
+        {
+          "record": "social_412da13125385a37",
+          "agent": "Tasha"
+        },
+        {
+          "record": "social_6d1167a234c1bd16",
+          "agent": "Lucia"
+        },
+        {
+          "record": "social_3dacaa01c8c05b70",
+          "agent": "Tasha"
+        },
+        {
+          "record": "social_19f35ddf52d4ad75",
+          "agent": "Alice"
+        },
+        {
+          "record": "social_c6d608fb9a1eac39",
+          "agent": "Shure"
+        },
+        {
+          "record": "social_a31b5b22e19df309",
+          "agent": "Jake"
+        },
+        {
+          "record": "social_0bb6fdb39e81ef9b",
+          "agent": "Tasha"
+        },
+        {
+          "record": "social_070a5bc7fa14ffb4",
+          "agent": "Tasha"
+        }
+      ],
+      "observation_attributions": [
+        {
+          "record": "physical_e95cc1a116757761",
+          "observer": "Tasha"
+        },
+        {
+          "record": "physical_3690c2d1b378fb42",
+          "observer": "Tasha"
+        },
+        {
+          "record": "physical_1392d39714f4c200",
+          "observer": "Tasha"
+        },
+        {
+          "record": "physical_d7d2cc5e5cd38b3f",
+          "observer": "Tasha"
+        }
+      ]
+    },
+    "all_other_content_identical": true
+  }
+}

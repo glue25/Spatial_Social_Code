@@ -1,0 +1,5 @@
+S.event(1, Alice, "grill", "meat", source="video", confidence=0.9, evidence_id="S1", clip_id="DAY3_A2_ALICE_22470000.mp4", observer="Alice", evidence_span="00:00-00:10", quote="", event_role="executor", phase="during")
+S.event(2, Alice, "say", "闻闻这个味儿我就有点饱了", source="video", confidence=0.9, evidence_id="S2", clip_id="DAY3_A2_ALICE_22470000.mp4", observer="Alice", evidence_span="00:09-00:12", quote="闻闻这个味儿我就有点饱了", event_role="speaker", phase="during")
+S.event(3, Alice, "say", "真的, 闻久了就饱了", source="video", confidence=0.9, evidence_id="S3", clip_id="DAY3_A2_ALICE_22470000.mp4", observer="Alice", evidence_span="00:13-00:16", quote="真的, 闻久了就饱了", event_role="speaker", phase="during")
+S.event(4, Alice, "fan", "grill", source="video", confidence=0.9, evidence_id="S4", clip_id="DAY3_A2_ALICE_22253000.mp4", observer="Alice", evidence_span="00:05-00:20", quote="", event_role="executor", phase="during")
+S.event(5, Alice, "season", "meat", source="video", confidence=0.9, evidence_id="S5", clip_id="DAY3_A2_ALICE_22273000.mp4", observer="Alice", evidence_span="00:10-00:25", quote="", event_role="executor", phase="during")

@@ -1,0 +1,10 @@
+S.fact(1242, "near", "leader", "stove", source="video", confidence=0.9);
+S.fact(1242, "near", "helper", "sink", source="video", confidence=0.9);
+S.fact(1244, "holds", "leader", "pasta_server", source="video", confidence=0.9);
+S.fact(1246, "near", "leader", "bowl", source="video", confidence=0.9);
+S.event(1248, "leader", "gesture", "stove", source="video", confidence=0.8);
+S.event(1250, "leader", "gesture", "stove", source="video", confidence=0.8);
+S.event(1252, "helper", "open", "drawer", source="video", confidence=0.9);
+S.fact(1252, "near", "helper", "spoon", source="video", confidence=0.8);
+S.visible(1252, "helper", "spoon", "true", source="video", confidence=0.9);
+S.event(1252, "helper", "reach", "spoon", source="video", confidence=0.7);
