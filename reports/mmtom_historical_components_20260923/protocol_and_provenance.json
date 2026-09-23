@@ -1,0 +1,31 @@
+{
+  "created_utc": "2026-09-23T03:46:23.492495+00:00",
+  "scope": "Historical component diagnostics, not current option-blind relation ablations. No new inference performed for this release.",
+  "qwen70": {
+    "model": "Qwen3-VL-32B-Instruct",
+    "samples": 70,
+    "selection": "Existing frozen70, 10 per question type; all70 unique rows complete, no error rows in saved file. Prior failed/retried history is not reconstructible from overwritten final JSONL alone.",
+    "visual_inputs": "Stored image metadata matches primary records for all70; original historical frame byte hashes are not certified by this metadata check.",
+    "protocol": "Spatial-only: VLM over frames plus full-run Spatial trace. Social-only: separately compiled from frames/question without Spatial trace, prediction from answer posterior. Joint: saved primary runtime prediction. Not a shared-compilation/shared-final-answerer intervention.",
+    "candidate_conditioning": "query_evidence exists in40/70 Social-only and66/70 joint saved codes; Social-only includes posterior in70/70. Historical candidate-conditioned answer scoring is not current option-blind SSC. This alone is not evidence of gold-label access.",
+    "cost": "Unequal generation/scoring pipelines; matched compute is not claimed."
+  },
+  "gemini600": {
+    "backbone_archive_label": "Gemini 3-Pro-Preview",
+    "samples": 600,
+    "protocol": "Offline recomputation of historical frozen evidence. Bare-evidence and shared-scaffold matrices have different common information and must not be pooled.",
+    "cleanup": "The historical recomputation separated neural evidence from cached fused programs to avoid importing a full-method posterior as Social-only evidence.",
+    "limitation": "A deterministic historical candidate/posterior scoring path, not a fresh600 current-model or option-blind endpoint run. The original600 were inspected in development.",
+    "shared_scaffold_counterexample": "Spatial452/600 exceeds joint450/600; retained in this release. Labeled OOF routing is not relabeled plain SSC and not included in the main component rows."
+  },
+  "conclusion": "Joint point estimates exceed both single components in Qwen70 and Gemini bare-evidence600, but gains over the strongest single component are not significant by the reported exact paired tests. Neither comparison isolates evidence links or agent attribution.",
+  "artifact_sha256": {
+    "workdirs/iclr_ablations_v1/mmtom_qwen32b_components.jsonl": "27b6a1ad4cc71ca28e4f06fe824c4a3fced777e484605c7603c4de78e392eaf4",
+    "workdirs/iclr_ablations_v1/mmtom_qwen32b_paired.jsonl": "f6ced5aa0f2c95ca8af2539e516136703d48fc2ba2c1c9a8962fb36915c3ee45",
+    "workdirs/iclr_ablations_v1/mmtom_qwen32b_components_summary.json": "0ebb55130f7b95239928da0440d4b14461b6248d57fb5ffbdf666cc12ab0202f",
+    "workdirs/iclr_ablations_v1/mmtom_offline_predictions.jsonl": "f81da748252f140d8720a464595440252d12921a11261d91c0a58525934a0582",
+    "reports/mmtom_iclr_ablation_results_zh.md": "3b69f4063a08a61b18c5b983570feb0d424da95c912b5e118cf703f2ac6ec1f7",
+    "reports/mmtom_iclr_ablation_summary.json": "c603091ba267d3e04fba24d63c637b78b1acd9d271eba7119b1e10d81b8ccb28"
+  },
+  "publication_boundary": "Export contains per-question labels and predictions plus audit metadata, not full questions, videos, model weights, credentials or raw model reasoning. Offline verifier checks arithmetic/coverage only, not model reruns or semantic correctness of generated code."
+}
