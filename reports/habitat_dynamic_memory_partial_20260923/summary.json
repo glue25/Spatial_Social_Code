@@ -1,0 +1,63 @@
+{
+  "release": "habitat_dynamic_memory_partial_20260923",
+  "snapshot_utc": "2026-09-23T03:06:16.705837+00:00",
+  "status": "PARTIAL; scheduler blocked on empty response in second seed",
+  "planned_rollouts": 72,
+  "completed_rollouts": 24,
+  "aborted_rollouts": 1,
+  "not_started_rollouts": 47,
+  "paired_tasks": 12,
+  "reported_seeds": [
+    891011
+  ],
+  "results": {
+    "nl_dynamic_v2": {
+      "n": 12,
+      "successes": 7,
+      "success_rate": 0.5833333333333334,
+      "mean_completion": 0.8402777777777778,
+      "service_affected": 1,
+      "request_count": 654,
+      "responses_received": 653,
+      "transport_attempts": 661,
+      "failed_transport_attempts": 8,
+      "prompt_tokens": 2628282,
+      "completion_tokens": 124006,
+      "total_tokens": 2752288
+    },
+    "dynamic_ssc": {
+      "n": 12,
+      "successes": 8,
+      "success_rate": 0.6666666666666666,
+      "mean_completion": 0.8958333333333334,
+      "service_affected": 0,
+      "request_count": 682,
+      "responses_received": 682,
+      "transport_attempts": 685,
+      "failed_transport_attempts": 3,
+      "prompt_tokens": 2769872,
+      "completion_tokens": 113735,
+      "total_tokens": 2883607
+    }
+  },
+  "paired_success_outcomes": {
+    "ssc_only_success": 3,
+    "both_fail": 2,
+    "nl_only_success": 2,
+    "both_success": 5
+  },
+  "delta_ssc_minus_nl": {
+    "success_rate": 0.08333333333333326,
+    "mean_completion": 0.05555555555555558
+  },
+  "interpretation": "Descriptive single-seed development result: net one additional task success for SSC. Not established multi-seed evidence, not proof of statistical significance or general superiority to NL memory.",
+  "sha256": {
+    "rollouts.csv": "479e1392e603e2ab0deec758a2ec21d7e0636a85b99f0b9711e174a4e0720cb0",
+    "schedule.csv": "f32ae2a201a66c87d08af19d129433baf1c76f09384a5b650d7ddb03b1d4a2af",
+    "interrupted_rollout.json": "331f0ac1cabd32573b79ccd8a7fa7760e2a153b80792a5a8a5b19b5d610b3a13",
+    "protocol.json": "b5fbf4843015f056a84597b64f8a59f5c311a2b4f0b91a8d4c975f1217312d9d",
+    "frozen_memory_views.py": "5e7429e49c5781a2a79db33abd15b4145f3d4a4cb2c35a8c0c98037e3d07130f",
+    "README.md": "3239c16b85119b365ad87eb5d9f6e45f2c3257d74f628953c920138e1d5b8e57",
+    "verify.py": "808c212c0bdd38cc4f64cea88c52262325d9883a4087f01480b7a4eb270d1132"
+  }
+}
