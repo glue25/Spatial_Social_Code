@@ -1,0 +1,15 @@
+{
+  "protocol": "Historical candidate-conditioned Flash600; NOT option-blind",
+  "archive_sha256": "1476f1c8e272cd2209fcde398680b24ae6eb4173e0af9efeab9a50f9a9b12537",
+  "inputs_sha256": "da2cd7ce3d84e68d3532d34a893cd41eab3f536a4e57bcbe5b51d076c43eba8c",
+  "rows": 600,
+  "historical_belief_regressions": 48,
+  "groups": {
+    "undetermined_requires_semantic_and_rule_audit": 48
+  },
+  "terminal_failure_rows": 1,
+  "terminal_parser_inconsistencies_all600": 166,
+  "old_scores_rewritten": false,
+  "new_model_calls": 0,
+  "limitations": "Grouping is conservative mechanical triage, not completed human semantic error attribution. Review packet includes every historical Direct-correct/SSC-wrong belief row, with failures retained."
+}

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1008pt" height="360pt" viewBox="0 0 1008 360" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-09-23T20:58:02.222454</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.8, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 360 
+L 1008 360 
+L 1008 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="text_1">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'" transform="translate(17.955 107.396837)">World: bed_20</text>
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'" transform="translate(17.955 121.91215)">Gold target: bed_20</text>
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'" transform="translate(17.955 136.427462)">Gold unrelated: stool_26</text>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #206b47" x="17.955" y="174.8512" transform="rotate(-0 17.955 174.8512)">Linked SSC: bed_20</text>
+   </g>
+   <g id="text_3">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #206b47" x="17.955" y="199.8688" transform="rotate(-0 17.955 199.8688)">Lossless prose: bed_20</text>
+   </g>
+   <g id="text_4">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #206b47" x="17.955" y="224.8864" transform="rotate(-0 17.955 224.8864)">No links: bed_20</text>
+   </g>
+   <g id="text_5">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #a43c3c" x="17.955" y="249.904" transform="rotate(-0 17.955 249.904)">No attribution: unknown</text>
+   </g>
+   <g id="text_6">
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; fill: #59616c" transform="translate(17.955 276.38735)">Exact target physical evidence:</text>
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; fill: #59616c" transform="translate(17.955 285.3456)">pd1cac515223d</text>
+   </g>
+   <g id="text_7">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle" x="130.05" y="69.12" transform="rotate(-0 130.05 69.12)">Witnessed move</text>
+   </g>
+  </g>
+  <g id="axes_2">
+   <g id="text_8">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'" transform="translate(267.255 107.396837)">World: bed_20</text>
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'" transform="translate(267.255 121.91215)">Gold target: stool_26</text>
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'" transform="translate(267.255 136.427462)">Gold unrelated: stool_26</text>
+   </g>
+   <g id="text_9">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #206b47" x="267.255" y="174.8512" transform="rotate(-0 267.255 174.8512)">Linked SSC: stool_26</text>
+   </g>
+   <g id="text_10">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #206b47" x="267.255" y="199.8688" transform="rotate(-0 267.255 199.8688)">Lossless prose: stool_26</text>
+   </g>
+   <g id="text_11">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #a43c3c" x="267.255" y="224.8864" transform="rotate(-0 267.255 224.8864)">No links: bed_20</text>
+   </g>
+   <g id="text_12">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #a43c3c" x="267.255" y="249.904" transform="rotate(-0 267.255 249.904)">No attribution: unknown</text>
+   </g>
+   <g id="text_13">
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; fill: #59616c" transform="translate(267.255 276.38735)">Exact target physical evidence:</text>
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; fill: #59616c" transform="translate(267.255 285.3456)">p5799451571fa</text>
+   </g>
+   <g id="text_14">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle" x="379.35" y="69.12" transform="rotate(-0 379.35 69.12)">Unseen / no relevant report</text>
+   </g>
+  </g>
+  <g id="axes_3">
+   <g id="text_15">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'" transform="translate(516.555 107.396837)">World: bed_20</text>
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'" transform="translate(516.555 121.91215)">Gold target: bed_20</text>
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'" transform="translate(516.555 136.427462)">Gold unrelated: stool_26</text>
+   </g>
+   <g id="text_16">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #206b47" x="516.555" y="174.8512" transform="rotate(-0 516.555 174.8512)">Linked SSC: bed_20</text>
+   </g>
+   <g id="text_17">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #206b47" x="516.555" y="199.8688" transform="rotate(-0 516.555 199.8688)">Lossless prose: bed_20</text>
+   </g>
+   <g id="text_18">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #206b47" x="516.555" y="224.8864" transform="rotate(-0 516.555 224.8864)">No links: bed_20</text>
+   </g>
+   <g id="text_19">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #a43c3c" x="516.555" y="249.904" transform="rotate(-0 516.555 249.904)">No attribution: unknown</text>
+   </g>
+   <g id="text_20">
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; fill: #59616c" transform="translate(516.555 276.38735)">Exact target physical evidence:</text>
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; fill: #59616c" transform="translate(516.555 285.3456)">p713083ce4623</text>
+   </g>
+   <g id="text_21">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle" x="628.65" y="69.12" transform="rotate(-0 628.65 69.12)">Relevant report delivered</text>
+   </g>
+  </g>
+  <g id="axes_4">
+   <g id="text_22">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'" transform="translate(765.855 107.396837)">World: bed_20</text>
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'" transform="translate(765.855 121.91215)">Gold target: stool_26</text>
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'" transform="translate(765.855 136.427462)">Gold unrelated: stool_26</text>
+   </g>
+   <g id="text_23">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #206b47" x="765.855" y="174.8512" transform="rotate(-0 765.855 174.8512)">Linked SSC: stool_26</text>
+   </g>
+   <g id="text_24">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #206b47" x="765.855" y="199.8688" transform="rotate(-0 765.855 199.8688)">Lossless prose: stool_26</text>
+   </g>
+   <g id="text_25">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #a43c3c" x="765.855" y="224.8864" transform="rotate(-0 765.855 224.8864)">No links: unknown</text>
+   </g>
+   <g id="text_26">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #a43c3c" x="765.855" y="249.904" transform="rotate(-0 765.855 249.904)">No attribution: unknown</text>
+   </g>
+   <g id="text_27">
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; fill: #59616c" transform="translate(765.855 276.38735)">Exact target physical evidence:</text>
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; fill: #59616c" transform="translate(765.855 285.3456)">p5799451571fa</text>
+   </g>
+   <g id="text_28">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle" x="877.95" y="69.12" transform="rotate(-0 877.95 69.12)">Relevant report NOT delivered</text>
+   </g>
+  </g>
+  <g id="text_29">
+   <text style="font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: middle" x="504" y="17.899063" transform="rotate(-0 504 17.899063)">formal_003: candle_4 | target=agent_1, unrelated=agent_0</text>
+  </g>
+  <g id="text_30">
+   <text style="font-size: 9px; font-family: 'DejaVu Sans'" transform="translate(233.178047 321.121969)">Constructed symbolic history, NOT a physical rollout/video. Values are saved model outputs, not a recreated simulation.</text>
+   <text style="font-size: 9px; font-family: 'DejaVu Sans'" transform="translate(222.742266 331.2)">Post-hoc illustration; full four-arm records included. Green/red mark target-state correctness only; see case.json for all fields.</text>
+  </g>
+ </g>
+</svg>

@@ -1,0 +1,282 @@
+{
+  "utc": "2026-09-23T11:44:46.674205+00:00",
+  "examples": 300,
+  "localization_fields": 400,
+  "recording_clusters": 55,
+  "four_arm_pairing_verified": true,
+  "sam_selection_and_coordinate_replay": "300/300 passed",
+  "all_official_fields": {
+    "joint_attention/left_iou_at_0_5": {
+      "direct": {
+        "n": 100,
+        "correct": 1
+      },
+      "direct_sam": {
+        "n": 100,
+        "correct": 18
+      },
+      "ssc": {
+        "n": 100,
+        "correct": 0
+      },
+      "ssc_sam": {
+        "n": 100,
+        "correct": 22
+      }
+    },
+    "joint_attention/right_iou_at_0_5": {
+      "direct": {
+        "n": 100,
+        "correct": 1
+      },
+      "direct_sam": {
+        "n": 100,
+        "correct": 16
+      },
+      "ssc": {
+        "n": 100,
+        "correct": 0
+      },
+      "ssc_sam": {
+        "n": 100,
+        "correct": 23
+      }
+    },
+    "joint_attention/cue_type": {
+      "direct": {
+        "n": 100,
+        "correct": 35
+      },
+      "direct_sam": {
+        "n": 100,
+        "correct": 35
+      },
+      "ssc": {
+        "n": 100,
+        "correct": 41
+      },
+      "ssc_sam": {
+        "n": 100,
+        "correct": 41
+      }
+    },
+    "joint_attention/category_l1": {
+      "direct": {
+        "n": 100,
+        "correct": 0
+      },
+      "direct_sam": {
+        "n": 100,
+        "correct": 0
+      },
+      "ssc": {
+        "n": 100,
+        "correct": 13
+      },
+      "ssc_sam": {
+        "n": 100,
+        "correct": 13
+      }
+    },
+    "scoia/iou_at_0_5": {
+      "direct": {
+        "n": 100,
+        "correct": 1
+      },
+      "direct_sam": {
+        "n": 100,
+        "correct": 10
+      },
+      "ssc": {
+        "n": 100,
+        "correct": 1
+      },
+      "ssc_sam": {
+        "n": 100,
+        "correct": 9
+      }
+    },
+    "scoia/cue_type": {
+      "direct": {
+        "n": 100,
+        "correct": 30
+      },
+      "direct_sam": {
+        "n": 100,
+        "correct": 30
+      },
+      "ssc": {
+        "n": 100,
+        "correct": 21
+      },
+      "ssc_sam": {
+        "n": 100,
+        "correct": 21
+      }
+    },
+    "scoia/action_verb": {
+      "direct": {
+        "n": 100,
+        "correct": 8
+      },
+      "direct_sam": {
+        "n": 100,
+        "correct": 8
+      },
+      "ssc": {
+        "n": 100,
+        "correct": 8
+      },
+      "ssc_sam": {
+        "n": 100,
+        "correct": 8
+      }
+    },
+    "scoia/action_noun_l1": {
+      "direct": {
+        "n": 100,
+        "correct": 29
+      },
+      "direct_sam": {
+        "n": 100,
+        "correct": 29
+      },
+      "ssc": {
+        "n": 100,
+        "correct": 27
+      },
+      "ssc_sam": {
+        "n": 100,
+        "correct": 27
+      }
+    },
+    "handover/iou_at_0_5": {
+      "direct": {
+        "n": 100,
+        "correct": 0
+      },
+      "direct_sam": {
+        "n": 100,
+        "correct": 11
+      },
+      "ssc": {
+        "n": 100,
+        "correct": 0
+      },
+      "ssc_sam": {
+        "n": 100,
+        "correct": 10
+      }
+    },
+    "handover/delivery_flow": {
+      "direct": {
+        "n": 100,
+        "correct": 54
+      },
+      "direct_sam": {
+        "n": 100,
+        "correct": 54
+      },
+      "ssc": {
+        "n": 100,
+        "correct": 48
+      },
+      "ssc_sam": {
+        "n": 100,
+        "correct": 48
+      }
+    },
+    "handover/initiator": {
+      "direct": {
+        "n": 100,
+        "correct": 52
+      },
+      "direct_sam": {
+        "n": 100,
+        "correct": 52
+      },
+      "ssc": {
+        "n": 100,
+        "correct": 48
+      },
+      "ssc_sam": {
+        "n": 100,
+        "correct": 48
+      }
+    },
+    "handover/initiation_type": {
+      "direct": {
+        "n": 100,
+        "correct": 25
+      },
+      "direct_sam": {
+        "n": 100,
+        "correct": 25
+      },
+      "ssc": {
+        "n": 100,
+        "correct": 26
+      },
+      "ssc_sam": {
+        "n": 100,
+        "correct": 26
+      }
+    },
+    "handover/category_l1": {
+      "direct": {
+        "n": 100,
+        "correct": 0
+      },
+      "direct_sam": {
+        "n": 100,
+        "correct": 0
+      },
+      "ssc": {
+        "n": 100,
+        "correct": 0
+      },
+      "ssc_sam": {
+        "n": 100,
+        "correct": 0
+      }
+    },
+    "handover/tth_within_0_25s": {
+      "direct": {
+        "n": 100,
+        "correct": 5
+      },
+      "direct_sam": {
+        "n": 100,
+        "correct": 5
+      },
+      "ssc": {
+        "n": 100,
+        "correct": 7
+      },
+      "ssc_sam": {
+        "n": 100,
+        "correct": 7
+      }
+    }
+  },
+  "localization_macro": {
+    "direct": 0.0075,
+    "direct_sam": 0.13749999999999998,
+    "ssc": 0.0025,
+    "ssc_sam": 0.16
+  },
+  "ssc_sam_minus_direct_sam": {
+    "difference": 0.02250000000000002,
+    "recording_cluster_bootstrap_ci95": [
+      -0.024803125892347237,
+      0.06990399923350996
+    ],
+    "replicates": 10000,
+    "seed": 20260923
+  },
+  "threshold": "Frozen scorer uses IoU > 0.5",
+  "scope": "Previously inspected300 train development cases; NOT independent validation. Existing VLM predictions frozen including failures. Both SAM arms regenerated symmetrically.",
+  "new_model_calls": 0,
+  "new_sam_calls": 0,
+  "interpretation": "Exploratory development300 macro localization difference, not overall social understanding or a confirmatory mechanism result. No cross-batch arm stitching."
+}

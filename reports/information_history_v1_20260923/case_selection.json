@@ -1,0 +1,893 @@
+{
+  "post_hoc": true,
+  "selection_used_for_aggregate": false,
+  "selected_cases": {
+    "formal_000": "Main: both SSC and prose track all four histories correctly.",
+    "formal_003": "Alternative: unobserved intermediate move; both complete representations succeed.",
+    "formal_007": "Post-hoc favorable contrast: prose selects an unobserved intermediate location after nondelivery.",
+    "formal_019": "Counterexample: SSC makes state errors while prose answers all four histories correctly."
+  },
+  "all40": [
+    {
+      "base_id": "formal_000",
+      "selected": true,
+      "per_condition": {
+        "ssc": {
+          "joint_correct": 4,
+          "supported_target": 4
+        },
+        "prose": {
+          "joint_correct": 4,
+          "supported_target": 4
+        },
+        "no_links": {
+          "joint_correct": 0,
+          "supported_target": 0
+        },
+        "no_attribution": {
+          "joint_correct": 0,
+          "supported_target": 0
+        }
+      }
+    },
+    {
+      "base_id": "formal_001",
+      "selected": false,
+      "per_condition": {
+        "ssc": {
+          "joint_correct": 4,
+          "supported_target": 3
+        },
+        "prose": {
+          "joint_correct": 4,
+          "supported_target": 4
+        },
+        "no_links": {
+          "joint_correct": 0,
+          "supported_target": 1
+        },
+        "no_attribution": {
+          "joint_correct": 0,
+          "supported_target": 0
+        }
+      }
+    },
+    {
+      "base_id": "formal_002",
+      "selected": false,
+      "per_condition": {
+        "ssc": {
+          "joint_correct": 4,
+          "supported_target": 2
+        },
+        "prose": {
+          "joint_correct": 4,
+          "supported_target": 4
+        },
+        "no_links": {
+          "joint_correct": 0,
+          "supported_target": 0
+        },
+        "no_attribution": {
+          "joint_correct": 0,
+          "supported_target": 0
+        }
+      }
+    },
+    {
+      "base_id": "formal_003",
+      "selected": true,
+      "per_condition": {
+        "ssc": {
+          "joint_correct": 4,
+          "supported_target": 4
+        },
+        "prose": {
+          "joint_correct": 4,
+          "supported_target": 4
+        },
+        "no_links": {
+          "joint_correct": 0,
+          "supported_target": 0
+        },
+        "no_attribution": {
+          "joint_correct": 0,
+          "supported_target": 0
+        }
+      }
+    },
+    {
+      "base_id": "formal_004",
+      "selected": false,
+      "per_condition": {
+        "ssc": {
+          "joint_correct": 4,
+          "supported_target": 3
+        },
+        "prose": {
+          "joint_correct": 4,
+          "supported_target": 4
+        },
+        "no_links": {
+          "joint_correct": 0,
+          "supported_target": 0
+        },
+        "no_attribution": {
+          "joint_correct": 0,
+          "supported_target": 0
+        }
+      }
+    },
+    {
+      "base_id": "formal_005",
+      "selected": false,
+      "per_condition": {
+        "ssc": {
+          "joint_correct": 4,
+          "supported_target": 2
+        },
+        "prose": {
+          "joint_correct": 4,
+          "supported_target": 3
+        },
+        "no_links": {
+          "joint_correct": 0,
+          "supported_target": 0
+        },
+        "no_attribution": {
+          "joint_correct": 0,
+          "supported_target": 0
+        }
+      }
+    },
+    {
+      "base_id": "formal_006",
+      "selected": false,
+      "per_condition": {
+        "ssc": {
+          "joint_correct": 4,
+          "supported_target": 3
+        },
+        "prose": {
+          "joint_correct": 3,
+          "supported_target": 3
+        },
+        "no_links": {
+          "joint_correct": 0,
+          "supported_target": 1
+        },
+        "no_attribution": {
+          "joint_correct": 0,
+          "supported_target": 0
+        }
+      }
+    },
+    {
+      "base_id": "formal_007",
+      "selected": true,
+      "per_condition": {
+        "ssc": {
+          "joint_correct": 4,
+          "supported_target": 4
+        },
+        "prose": {
+          "joint_correct": 3,
+          "supported_target": 3
+        },
+        "no_links": {
+          "joint_correct": 2,
+          "supported_target": 1
+        },
+        "no_attribution": {
+          "joint_correct": 0,
+          "supported_target": 0
+        }
+      }
+    },
+    {
+      "base_id": "formal_008",
+      "selected": false,
+      "per_condition": {
+        "ssc": {
+          "joint_correct": 4,
+          "supported_target": 4
+        },
+        "prose": {
+          "joint_correct": 4,
+          "supported_target": 3
+        },
+        "no_links": {
+          "joint_correct": 0,
+          "supported_target": 0
+        },
+        "no_attribution": {
+          "joint_correct": 0,
+          "supported_target": 0
+        }
+      }
+    },
+    {
+      "base_id": "formal_009",
+      "selected": false,
+      "per_condition": {
+        "ssc": {
+          "joint_correct": 4,
+          "supported_target": 4
+        },
+        "prose": {
+          "joint_correct": 4,
+          "supported_target": 3
+        },
+        "no_links": {
+          "joint_correct": 0,
+          "supported_target": 1
+        },
+        "no_attribution": {
+          "joint_correct": 0,
+          "supported_target": 0
+        }
+      }
+    },
+    {
+      "base_id": "formal_010",
+      "selected": false,
+      "per_condition": {
+        "ssc": {
+          "joint_correct": 4,
+          "supported_target": 4
+        },
+        "prose": {
+          "joint_correct": 4,
+          "supported_target": 4
+        },
+        "no_links": {
+          "joint_correct": 0,
+          "supported_target": 1
+        },
+        "no_attribution": {
+          "joint_correct": 0,
+          "supported_target": 1
+        }
+      }
+    },
+    {
+      "base_id": "formal_011",
+      "selected": false,
+      "per_condition": {
+        "ssc": {
+          "joint_correct": 4,
+          "supported_target": 3
+        },
+        "prose": {
+          "joint_correct": 4,
+          "supported_target": 3
+        },
+        "no_links": {
+          "joint_correct": 1,
+          "supported_target": 1
+        },
+        "no_attribution": {
+          "joint_correct": 0,
+          "supported_target": 0
+        }
+      }
+    },
+    {
+      "base_id": "formal_012",
+      "selected": false,
+      "per_condition": {
+        "ssc": {
+          "joint_correct": 4,
+          "supported_target": 3
+        },
+        "prose": {
+          "joint_correct": 4,
+          "supported_target": 3
+        },
+        "no_links": {
+          "joint_correct": 0,
+          "supported_target": 0
+        },
+        "no_attribution": {
+          "joint_correct": 0,
+          "supported_target": 0
+        }
+      }
+    },
+    {
+      "base_id": "formal_013",
+      "selected": false,
+      "per_condition": {
+        "ssc": {
+          "joint_correct": 4,
+          "supported_target": 3
+        },
+        "prose": {
+          "joint_correct": 3,
+          "supported_target": 4
+        },
+        "no_links": {
+          "joint_correct": 1,
+          "supported_target": 1
+        },
+        "no_attribution": {
+          "joint_correct": 0,
+          "supported_target": 0
+        }
+      }
+    },
+    {
+      "base_id": "formal_014",
+      "selected": false,
+      "per_condition": {
+        "ssc": {
+          "joint_correct": 4,
+          "supported_target": 3
+        },
+        "prose": {
+          "joint_correct": 4,
+          "supported_target": 4
+        },
+        "no_links": {
+          "joint_correct": 0,
+          "supported_target": 0
+        },
+        "no_attribution": {
+          "joint_correct": 1,
+          "supported_target": 1
+        }
+      }
+    },
+    {
+      "base_id": "formal_015",
+      "selected": false,
+      "per_condition": {
+        "ssc": {
+          "joint_correct": 4,
+          "supported_target": 3
+        },
+        "prose": {
+          "joint_correct": 4,
+          "supported_target": 3
+        },
+        "no_links": {
+          "joint_correct": 0,
+          "supported_target": 1
+        },
+        "no_attribution": {
+          "joint_correct": 0,
+          "supported_target": 0
+        }
+      }
+    },
+    {
+      "base_id": "formal_016",
+      "selected": false,
+      "per_condition": {
+        "ssc": {
+          "joint_correct": 4,
+          "supported_target": 4
+        },
+        "prose": {
+          "joint_correct": 4,
+          "supported_target": 4
+        },
+        "no_links": {
+          "joint_correct": 1,
+          "supported_target": 1
+        },
+        "no_attribution": {
+          "joint_correct": 0,
+          "supported_target": 0
+        }
+      }
+    },
+    {
+      "base_id": "formal_017",
+      "selected": false,
+      "per_condition": {
+        "ssc": {
+          "joint_correct": 4,
+          "supported_target": 4
+        },
+        "prose": {
+          "joint_correct": 4,
+          "supported_target": 4
+        },
+        "no_links": {
+          "joint_correct": 0,
+          "supported_target": 1
+        },
+        "no_attribution": {
+          "joint_correct": 0,
+          "supported_target": 1
+        }
+      }
+    },
+    {
+      "base_id": "formal_018",
+      "selected": false,
+      "per_condition": {
+        "ssc": {
+          "joint_correct": 4,
+          "supported_target": 4
+        },
+        "prose": {
+          "joint_correct": 4,
+          "supported_target": 4
+        },
+        "no_links": {
+          "joint_correct": 0,
+          "supported_target": 0
+        },
+        "no_attribution": {
+          "joint_correct": 0,
+          "supported_target": 0
+        }
+      }
+    },
+    {
+      "base_id": "formal_019",
+      "selected": true,
+      "per_condition": {
+        "ssc": {
+          "joint_correct": 2,
+          "supported_target": 2
+        },
+        "prose": {
+          "joint_correct": 4,
+          "supported_target": 4
+        },
+        "no_links": {
+          "joint_correct": 0,
+          "supported_target": 0
+        },
+        "no_attribution": {
+          "joint_correct": 0,
+          "supported_target": 0
+        }
+      }
+    },
+    {
+      "base_id": "formal_020",
+      "selected": false,
+      "per_condition": {
+        "ssc": {
+          "joint_correct": 4,
+          "supported_target": 4
+        },
+        "prose": {
+          "joint_correct": 4,
+          "supported_target": 4
+        },
+        "no_links": {
+          "joint_correct": 0,
+          "supported_target": 1
+        },
+        "no_attribution": {
+          "joint_correct": 0,
+          "supported_target": 0
+        }
+      }
+    },
+    {
+      "base_id": "formal_021",
+      "selected": false,
+      "per_condition": {
+        "ssc": {
+          "joint_correct": 4,
+          "supported_target": 4
+        },
+        "prose": {
+          "joint_correct": 4,
+          "supported_target": 3
+        },
+        "no_links": {
+          "joint_correct": 2,
+          "supported_target": 1
+        },
+        "no_attribution": {
+          "joint_correct": 0,
+          "supported_target": 0
+        }
+      }
+    },
+    {
+      "base_id": "formal_022",
+      "selected": false,
+      "per_condition": {
+        "ssc": {
+          "joint_correct": 4,
+          "supported_target": 3
+        },
+        "prose": {
+          "joint_correct": 4,
+          "supported_target": 4
+        },
+        "no_links": {
+          "joint_correct": 0,
+          "supported_target": 1
+        },
+        "no_attribution": {
+          "joint_correct": 0,
+          "supported_target": 0
+        }
+      }
+    },
+    {
+      "base_id": "formal_023",
+      "selected": false,
+      "per_condition": {
+        "ssc": {
+          "joint_correct": 4,
+          "supported_target": 3
+        },
+        "prose": {
+          "joint_correct": 4,
+          "supported_target": 2
+        },
+        "no_links": {
+          "joint_correct": 0,
+          "supported_target": 2
+        },
+        "no_attribution": {
+          "joint_correct": 0,
+          "supported_target": 0
+        }
+      }
+    },
+    {
+      "base_id": "formal_024",
+      "selected": false,
+      "per_condition": {
+        "ssc": {
+          "joint_correct": 4,
+          "supported_target": 4
+        },
+        "prose": {
+          "joint_correct": 4,
+          "supported_target": 4
+        },
+        "no_links": {
+          "joint_correct": 0,
+          "supported_target": 1
+        },
+        "no_attribution": {
+          "joint_correct": 0,
+          "supported_target": 0
+        }
+      }
+    },
+    {
+      "base_id": "formal_025",
+      "selected": false,
+      "per_condition": {
+        "ssc": {
+          "joint_correct": 4,
+          "supported_target": 3
+        },
+        "prose": {
+          "joint_correct": 4,
+          "supported_target": 4
+        },
+        "no_links": {
+          "joint_correct": 0,
+          "supported_target": 1
+        },
+        "no_attribution": {
+          "joint_correct": 0,
+          "supported_target": 0
+        }
+      }
+    },
+    {
+      "base_id": "formal_026",
+      "selected": false,
+      "per_condition": {
+        "ssc": {
+          "joint_correct": 4,
+          "supported_target": 1
+        },
+        "prose": {
+          "joint_correct": 4,
+          "supported_target": 3
+        },
+        "no_links": {
+          "joint_correct": 0,
+          "supported_target": 1
+        },
+        "no_attribution": {
+          "joint_correct": 0,
+          "supported_target": 0
+        }
+      }
+    },
+    {
+      "base_id": "formal_027",
+      "selected": false,
+      "per_condition": {
+        "ssc": {
+          "joint_correct": 3,
+          "supported_target": 3
+        },
+        "prose": {
+          "joint_correct": 3,
+          "supported_target": 3
+        },
+        "no_links": {
+          "joint_correct": 0,
+          "supported_target": 1
+        },
+        "no_attribution": {
+          "joint_correct": 0,
+          "supported_target": 0
+        }
+      }
+    },
+    {
+      "base_id": "formal_028",
+      "selected": false,
+      "per_condition": {
+        "ssc": {
+          "joint_correct": 4,
+          "supported_target": 3
+        },
+        "prose": {
+          "joint_correct": 4,
+          "supported_target": 4
+        },
+        "no_links": {
+          "joint_correct": 0,
+          "supported_target": 1
+        },
+        "no_attribution": {
+          "joint_correct": 0,
+          "supported_target": 0
+        }
+      }
+    },
+    {
+      "base_id": "formal_029",
+      "selected": false,
+      "per_condition": {
+        "ssc": {
+          "joint_correct": 4,
+          "supported_target": 3
+        },
+        "prose": {
+          "joint_correct": 4,
+          "supported_target": 4
+        },
+        "no_links": {
+          "joint_correct": 0,
+          "supported_target": 1
+        },
+        "no_attribution": {
+          "joint_correct": 0,
+          "supported_target": 1
+        }
+      }
+    },
+    {
+      "base_id": "formal_030",
+      "selected": false,
+      "per_condition": {
+        "ssc": {
+          "joint_correct": 2,
+          "supported_target": 4
+        },
+        "prose": {
+          "joint_correct": 4,
+          "supported_target": 4
+        },
+        "no_links": {
+          "joint_correct": 0,
+          "supported_target": 1
+        },
+        "no_attribution": {
+          "joint_correct": 0,
+          "supported_target": 1
+        }
+      }
+    },
+    {
+      "base_id": "formal_031",
+      "selected": false,
+      "per_condition": {
+        "ssc": {
+          "joint_correct": 4,
+          "supported_target": 4
+        },
+        "prose": {
+          "joint_correct": 4,
+          "supported_target": 4
+        },
+        "no_links": {
+          "joint_correct": 0,
+          "supported_target": 2
+        },
+        "no_attribution": {
+          "joint_correct": 0,
+          "supported_target": 0
+        }
+      }
+    },
+    {
+      "base_id": "formal_032",
+      "selected": false,
+      "per_condition": {
+        "ssc": {
+          "joint_correct": 4,
+          "supported_target": 3
+        },
+        "prose": {
+          "joint_correct": 4,
+          "supported_target": 4
+        },
+        "no_links": {
+          "joint_correct": 0,
+          "supported_target": 1
+        },
+        "no_attribution": {
+          "joint_correct": 0,
+          "supported_target": 0
+        }
+      }
+    },
+    {
+      "base_id": "formal_033",
+      "selected": false,
+      "per_condition": {
+        "ssc": {
+          "joint_correct": 4,
+          "supported_target": 4
+        },
+        "prose": {
+          "joint_correct": 4,
+          "supported_target": 4
+        },
+        "no_links": {
+          "joint_correct": 0,
+          "supported_target": 1
+        },
+        "no_attribution": {
+          "joint_correct": 0,
+          "supported_target": 0
+        }
+      }
+    },
+    {
+      "base_id": "formal_034",
+      "selected": false,
+      "per_condition": {
+        "ssc": {
+          "joint_correct": 4,
+          "supported_target": 4
+        },
+        "prose": {
+          "joint_correct": 4,
+          "supported_target": 4
+        },
+        "no_links": {
+          "joint_correct": 0,
+          "supported_target": 1
+        },
+        "no_attribution": {
+          "joint_correct": 0,
+          "supported_target": 0
+        }
+      }
+    },
+    {
+      "base_id": "formal_035",
+      "selected": false,
+      "per_condition": {
+        "ssc": {
+          "joint_correct": 4,
+          "supported_target": 4
+        },
+        "prose": {
+          "joint_correct": 4,
+          "supported_target": 4
+        },
+        "no_links": {
+          "joint_correct": 0,
+          "supported_target": 2
+        },
+        "no_attribution": {
+          "joint_correct": 0,
+          "supported_target": 0
+        }
+      }
+    },
+    {
+      "base_id": "formal_036",
+      "selected": false,
+      "per_condition": {
+        "ssc": {
+          "joint_correct": 4,
+          "supported_target": 4
+        },
+        "prose": {
+          "joint_correct": 4,
+          "supported_target": 4
+        },
+        "no_links": {
+          "joint_correct": 1,
+          "supported_target": 0
+        },
+        "no_attribution": {
+          "joint_correct": 0,
+          "supported_target": 0
+        }
+      }
+    },
+    {
+      "base_id": "formal_037",
+      "selected": false,
+      "per_condition": {
+        "ssc": {
+          "joint_correct": 4,
+          "supported_target": 3
+        },
+        "prose": {
+          "joint_correct": 3,
+          "supported_target": 3
+        },
+        "no_links": {
+          "joint_correct": 0,
+          "supported_target": 0
+        },
+        "no_attribution": {
+          "joint_correct": 0,
+          "supported_target": 0
+        }
+      }
+    },
+    {
+      "base_id": "formal_038",
+      "selected": false,
+      "per_condition": {
+        "ssc": {
+          "joint_correct": 4,
+          "supported_target": 3
+        },
+        "prose": {
+          "joint_correct": 4,
+          "supported_target": 3
+        },
+        "no_links": {
+          "joint_correct": 0,
+          "supported_target": 1
+        },
+        "no_attribution": {
+          "joint_correct": 0,
+          "supported_target": 0
+        }
+      }
+    },
+    {
+      "base_id": "formal_039",
+      "selected": false,
+      "per_condition": {
+        "ssc": {
+          "joint_correct": 4,
+          "supported_target": 3
+        },
+        "prose": {
+          "joint_correct": 3,
+          "supported_target": 3
+        },
+        "no_links": {
+          "joint_correct": 0,
+          "supported_target": 0
+        },
+        "no_attribution": {
+          "joint_correct": 0,
+          "supported_target": 0
+        }
+      }
+    }
+  ],
+  "rule": "Editorial selection after completed evaluation: two readable full-history successes, one favorable SSC/prose contrast and one reverse contrast. Not a new evaluation subset."
+}

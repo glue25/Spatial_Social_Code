@@ -1,0 +1,10 @@
+{
+  "utc": "2026-09-23T11:49:49.443051+00:00",
+  "output": "/pfs/zhangxiaoyuan/project/physical_code/workdirs/information_history_v1_20260923_scoring2",
+  "tmux_session": "ssc-info-history-20260923-s2",
+  "config_sha256": "c527d3260d4df29f5f52498aeb761f93172601e35f0cfbb2adcb2ac3093e9205",
+  "protocol": "experiments/information_history_v1/README.md",
+  "guide": "reports/minimal_mechanism_package_20260923/README_zh.md",
+  "automatic_formal_calls_after_technical_gate": 640,
+  "formal_inference_has_not_informed_protocol": true
+}

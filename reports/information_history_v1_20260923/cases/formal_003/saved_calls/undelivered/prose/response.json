@@ -1,0 +1,63 @@
+{
+  "id": "chatcmpl-202609231154535543150798268d9d6NfuA5elO",
+  "model": "gemini-3-flash-preview",
+  "object": "chat.completion",
+  "created": 1790164507,
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\"world_location\": \"bed_20\", \"target_location\": \"stool_26\", \"unrelated_location\": \"stool_26\", \"target_evidence\": \"p5799451571fa\"}"
+      },
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2060,
+    "completion_tokens": 2017,
+    "total_tokens": 4077,
+    "billing_usage": {
+      "source": "gemini_chat",
+      "semantic": "gemini",
+      "gemini_usage_metadata": {
+        "promptTokenCount": 2060,
+        "toolUsePromptTokenCount": 0,
+        "candidatesTokenCount": 53,
+        "totalTokenCount": 4077,
+        "thoughtsTokenCount": 1964,
+        "cachedContentTokenCount": 0,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 2060
+          }
+        ],
+        "toolUsePromptTokensDetails": [],
+        "candidatesTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 53
+          }
+        ]
+      }
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "text_tokens": 2060,
+      "audio_tokens": 0,
+      "image_tokens": 0
+    },
+    "completion_tokens_details": {
+      "text_tokens": 53,
+      "audio_tokens": 0,
+      "image_tokens": 0,
+      "reasoning_tokens": 1964
+    },
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "input_tokens_details": null,
+    "claude_cache_creation_5_m_tokens": 0,
+    "claude_cache_creation_1_h_tokens": 0
+  }
+}

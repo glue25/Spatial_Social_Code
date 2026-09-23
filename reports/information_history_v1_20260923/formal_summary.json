@@ -1,0 +1,2713 @@
+{
+  "planned_base_episodes": 40,
+  "planned_final_calls": 640,
+  "completed_final_calls": 640,
+  "valid_final_calls": 629,
+  "pending_final_calls": 0,
+  "conditions": {
+    "ssc": {
+      "world_accuracy": {
+        "mean": 1.0,
+        "ci95": [
+          1.0,
+          1.0
+        ]
+      },
+      "target_accuracy": {
+        "mean": 0.9875,
+        "ci95": [
+          0.96875,
+          1.0
+        ]
+      },
+      "unrelated_accuracy": {
+        "mean": 0.975,
+        "ci95": [
+          0.9375,
+          1.0
+        ]
+      },
+      "joint_accuracy": {
+        "mean": 0.96875,
+        "ci95": [
+          0.93125,
+          1.0
+        ]
+      },
+      "supported_target_accuracy": {
+        "mean": 0.83125,
+        "ci95": [
+          0.775,
+          0.88125
+        ]
+      },
+      "world_pair_invariance": {
+        "mean": 1.0,
+        "ci95": [
+          1.0,
+          1.0
+        ]
+      },
+      "world_pair_invariant_correct": {
+        "mean": 1.0,
+        "ci95": [
+          1.0,
+          1.0
+        ]
+      },
+      "target_correct_change": {
+        "mean": 0.975,
+        "ci95": [
+          0.9375,
+          1.0
+        ]
+      },
+      "unrelated_pair_invariance": {
+        "mean": 0.9625,
+        "ci95": [
+          0.9041666666666666,
+          1.0
+        ]
+      },
+      "unrelated_pair_invariant_correct": {
+        "mean": 0.9583333333333333,
+        "ci95": [
+          0.8958333333333333,
+          1.0
+        ]
+      },
+      "paired_joint_correct": {
+        "mean": 0.95,
+        "ci95": [
+          0.8875,
+          1.0
+        ]
+      },
+      "all_four_joint_correct": {
+        "mean": 0.925,
+        "ci95": [
+          0.825,
+          1.0
+        ]
+      }
+    },
+    "prose": {
+      "world_accuracy": {
+        "mean": 0.99375,
+        "ci95": [
+          0.98125,
+          1.0
+        ]
+      },
+      "target_accuracy": {
+        "mean": 0.96875,
+        "ci95": [
+          0.94375,
+          0.99375
+        ]
+      },
+      "unrelated_accuracy": {
+        "mean": 0.9875,
+        "ci95": [
+          0.96875,
+          1.0
+        ]
+      },
+      "joint_accuracy": {
+        "mean": 0.9625,
+        "ci95": [
+          0.93125,
+          0.9875
+        ]
+      },
+      "supported_target_accuracy": {
+        "mean": 0.9,
+        "ci95": [
+          0.85625,
+          0.9375
+        ]
+      },
+      "world_pair_invariance": {
+        "mean": 0.9875,
+        "ci95": [
+          0.9625,
+          1.0
+        ]
+      },
+      "world_pair_invariant_correct": {
+        "mean": 0.9875,
+        "ci95": [
+          0.9625,
+          1.0
+        ]
+      },
+      "target_correct_change": {
+        "mean": 0.9375,
+        "ci95": [
+          0.8875,
+          0.9875
+        ]
+      },
+      "unrelated_pair_invariance": {
+        "mean": 0.975,
+        "ci95": [
+          0.9375,
+          1.0
+        ]
+      },
+      "unrelated_pair_invariant_correct": {
+        "mean": 0.975,
+        "ci95": [
+          0.9375,
+          1.0
+        ]
+      },
+      "paired_joint_correct": {
+        "mean": 0.925,
+        "ci95": [
+          0.8625,
+          0.975
+        ]
+      },
+      "all_four_joint_correct": {
+        "mean": 0.85,
+        "ci95": [
+          0.725,
+          0.95
+        ]
+      }
+    },
+    "no_links": {
+      "world_accuracy": {
+        "mean": 0.94375,
+        "ci95": [
+          0.89375,
+          0.9875
+        ]
+      },
+      "target_accuracy": {
+        "mean": 0.3875,
+        "ci95": [
+          0.33125,
+          0.44375
+        ]
+      },
+      "unrelated_accuracy": {
+        "mean": 0.10625,
+        "ci95": [
+          0.04375,
+          0.18125
+        ]
+      },
+      "joint_accuracy": {
+        "mean": 0.05,
+        "ci95": [
+          0.0125,
+          0.09375
+        ]
+      },
+      "supported_target_accuracy": {
+        "mean": 0.1875,
+        "ci95": [
+          0.14375,
+          0.23125
+        ]
+      },
+      "world_pair_invariance": {
+        "mean": 0.9041666666666666,
+        "ci95": [
+          0.8208333333333332,
+          0.9791666666666666
+        ]
+      },
+      "world_pair_invariant_correct": {
+        "mean": 0.9041666666666666,
+        "ci95": [
+          0.8208333333333332,
+          0.9791666666666666
+        ]
+      },
+      "target_correct_change": {
+        "mean": 0.01875,
+        "ci95": [
+          0.0,
+          0.05
+        ]
+      },
+      "unrelated_pair_invariance": {
+        "mean": 0.5833333333333333,
+        "ci95": [
+          0.47916666666666663,
+          0.6875
+        ]
+      },
+      "unrelated_pair_invariant_correct": {
+        "mean": 0.05,
+        "ci95": [
+          0.008333333333333333,
+          0.1125
+        ]
+      },
+      "paired_joint_correct": {
+        "mean": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ]
+      },
+      "all_four_joint_correct": {
+        "mean": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "no_attribution": {
+      "world_accuracy": {
+        "mean": 0.9875,
+        "ci95": [
+          0.96875,
+          1.0
+        ]
+      },
+      "target_accuracy": {
+        "mean": 0.03125,
+        "ci95": [
+          0.00625,
+          0.05625
+        ]
+      },
+      "unrelated_accuracy": {
+        "mean": 0.00625,
+        "ci95": [
+          0.0,
+          0.01875
+        ]
+      },
+      "joint_accuracy": {
+        "mean": 0.00625,
+        "ci95": [
+          0.0,
+          0.01875
+        ]
+      },
+      "supported_target_accuracy": {
+        "mean": 0.03125,
+        "ci95": [
+          0.00625,
+          0.05625
+        ]
+      },
+      "world_pair_invariance": {
+        "mean": 0.975,
+        "ci95": [
+          0.9375,
+          1.0
+        ]
+      },
+      "world_pair_invariant_correct": {
+        "mean": 0.975,
+        "ci95": [
+          0.9375,
+          1.0
+        ]
+      },
+      "target_correct_change": {
+        "mean": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ]
+      },
+      "unrelated_pair_invariance": {
+        "mean": 0.8791666666666667,
+        "ci95": [
+          0.8041666666666668,
+          0.95
+        ]
+      },
+      "unrelated_pair_invariant_correct": {
+        "mean": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ]
+      },
+      "paired_joint_correct": {
+        "mean": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ]
+      },
+      "all_four_joint_correct": {
+        "mean": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ]
+      }
+    }
+  },
+  "paired_differences": {
+    "ssc_minus_no_links": {
+      "metric": "paired_joint_correct",
+      "mean": 0.95,
+      "ci": [
+        0.875,
+        1.0
+      ],
+      "confidence": 0.975,
+      "co_primary": true
+    },
+    "ssc_minus_no_attribution": {
+      "metric": "paired_joint_correct",
+      "mean": 0.95,
+      "ci": [
+        0.875,
+        1.0
+      ],
+      "confidence": 0.975,
+      "co_primary": true
+    },
+    "ssc_minus_prose": {
+      "metric": "paired_joint_correct",
+      "mean": 0.025,
+      "ci": [
+        -0.05,
+        0.1
+      ],
+      "confidence": 0.95,
+      "co_primary": false
+    }
+  },
+  "bootstrap": {
+    "unit": "base_episode",
+    "draws": 10000,
+    "seed": 20260923
+  },
+  "per_base": {
+    "formal_000": {
+      "ssc": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 1.0,
+        "unrelated_accuracy": 1.0,
+        "joint_accuracy": 1.0,
+        "supported_target_accuracy": 1.0,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 1.0,
+        "unrelated_pair_invariance": 1.0,
+        "unrelated_pair_invariant_correct": 1.0,
+        "paired_joint_correct": 1.0,
+        "all_four_joint_correct": 1.0
+      },
+      "prose": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 1.0,
+        "unrelated_accuracy": 1.0,
+        "joint_accuracy": 1.0,
+        "supported_target_accuracy": 1.0,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 1.0,
+        "unrelated_pair_invariance": 1.0,
+        "unrelated_pair_invariant_correct": 1.0,
+        "paired_joint_correct": 1.0,
+        "all_four_joint_correct": 1.0
+      },
+      "no_links": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 0.5,
+        "unrelated_accuracy": 0.0,
+        "joint_accuracy": 0.0,
+        "supported_target_accuracy": 0.0,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 0.0,
+        "unrelated_pair_invariance": 1.0,
+        "unrelated_pair_invariant_correct": 0.0,
+        "paired_joint_correct": 0.0,
+        "all_four_joint_correct": 0.0
+      },
+      "no_attribution": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 0.0,
+        "unrelated_accuracy": 0.0,
+        "joint_accuracy": 0.0,
+        "supported_target_accuracy": 0.0,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 0.0,
+        "unrelated_pair_invariance": 1.0,
+        "unrelated_pair_invariant_correct": 0.0,
+        "paired_joint_correct": 0.0,
+        "all_four_joint_correct": 0.0
+      }
+    },
+    "formal_001": {
+      "ssc": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 1.0,
+        "unrelated_accuracy": 1.0,
+        "joint_accuracy": 1.0,
+        "supported_target_accuracy": 0.75,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 1.0,
+        "unrelated_pair_invariance": 1.0,
+        "unrelated_pair_invariant_correct": 1.0,
+        "paired_joint_correct": 1.0,
+        "all_four_joint_correct": 1.0
+      },
+      "prose": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 1.0,
+        "unrelated_accuracy": 1.0,
+        "joint_accuracy": 1.0,
+        "supported_target_accuracy": 1.0,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 1.0,
+        "unrelated_pair_invariance": 1.0,
+        "unrelated_pair_invariant_correct": 1.0,
+        "paired_joint_correct": 1.0,
+        "all_four_joint_correct": 1.0
+      },
+      "no_links": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 0.25,
+        "unrelated_accuracy": 0.0,
+        "joint_accuracy": 0.0,
+        "supported_target_accuracy": 0.25,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 0.0,
+        "unrelated_pair_invariance": 0.5,
+        "unrelated_pair_invariant_correct": 0.0,
+        "paired_joint_correct": 0.0,
+        "all_four_joint_correct": 0.0
+      },
+      "no_attribution": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 0.0,
+        "unrelated_accuracy": 0.0,
+        "joint_accuracy": 0.0,
+        "supported_target_accuracy": 0.0,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 0.0,
+        "unrelated_pair_invariance": 1.0,
+        "unrelated_pair_invariant_correct": 0.0,
+        "paired_joint_correct": 0.0,
+        "all_four_joint_correct": 0.0
+      }
+    },
+    "formal_002": {
+      "ssc": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 1.0,
+        "unrelated_accuracy": 1.0,
+        "joint_accuracy": 1.0,
+        "supported_target_accuracy": 0.5,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 1.0,
+        "unrelated_pair_invariance": 1.0,
+        "unrelated_pair_invariant_correct": 1.0,
+        "paired_joint_correct": 1.0,
+        "all_four_joint_correct": 1.0
+      },
+      "prose": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 1.0,
+        "unrelated_accuracy": 1.0,
+        "joint_accuracy": 1.0,
+        "supported_target_accuracy": 1.0,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 1.0,
+        "unrelated_pair_invariance": 1.0,
+        "unrelated_pair_invariant_correct": 1.0,
+        "paired_joint_correct": 1.0,
+        "all_four_joint_correct": 1.0
+      },
+      "no_links": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 0.5,
+        "unrelated_accuracy": 0.0,
+        "joint_accuracy": 0.0,
+        "supported_target_accuracy": 0.0,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 0.0,
+        "unrelated_pair_invariance": 0.5,
+        "unrelated_pair_invariant_correct": 0.0,
+        "paired_joint_correct": 0.0,
+        "all_four_joint_correct": 0.0
+      },
+      "no_attribution": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 0.0,
+        "unrelated_accuracy": 0.0,
+        "joint_accuracy": 0.0,
+        "supported_target_accuracy": 0.0,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 0.0,
+        "unrelated_pair_invariance": 1.0,
+        "unrelated_pair_invariant_correct": 0.0,
+        "paired_joint_correct": 0.0,
+        "all_four_joint_correct": 0.0
+      }
+    },
+    "formal_003": {
+      "ssc": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 1.0,
+        "unrelated_accuracy": 1.0,
+        "joint_accuracy": 1.0,
+        "supported_target_accuracy": 1.0,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 1.0,
+        "unrelated_pair_invariance": 1.0,
+        "unrelated_pair_invariant_correct": 1.0,
+        "paired_joint_correct": 1.0,
+        "all_four_joint_correct": 1.0
+      },
+      "prose": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 1.0,
+        "unrelated_accuracy": 1.0,
+        "joint_accuracy": 1.0,
+        "supported_target_accuracy": 1.0,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 1.0,
+        "unrelated_pair_invariance": 1.0,
+        "unrelated_pair_invariant_correct": 1.0,
+        "paired_joint_correct": 1.0,
+        "all_four_joint_correct": 1.0
+      },
+      "no_links": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 0.5,
+        "unrelated_accuracy": 0.0,
+        "joint_accuracy": 0.0,
+        "supported_target_accuracy": 0.0,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 0.0,
+        "unrelated_pair_invariance": 0.5,
+        "unrelated_pair_invariant_correct": 0.0,
+        "paired_joint_correct": 0.0,
+        "all_four_joint_correct": 0.0
+      },
+      "no_attribution": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 0.0,
+        "unrelated_accuracy": 0.0,
+        "joint_accuracy": 0.0,
+        "supported_target_accuracy": 0.0,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 0.0,
+        "unrelated_pair_invariance": 1.0,
+        "unrelated_pair_invariant_correct": 0.0,
+        "paired_joint_correct": 0.0,
+        "all_four_joint_correct": 0.0
+      }
+    },
+    "formal_004": {
+      "ssc": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 1.0,
+        "unrelated_accuracy": 1.0,
+        "joint_accuracy": 1.0,
+        "supported_target_accuracy": 0.75,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 1.0,
+        "unrelated_pair_invariance": 1.0,
+        "unrelated_pair_invariant_correct": 1.0,
+        "paired_joint_correct": 1.0,
+        "all_four_joint_correct": 1.0
+      },
+      "prose": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 1.0,
+        "unrelated_accuracy": 1.0,
+        "joint_accuracy": 1.0,
+        "supported_target_accuracy": 1.0,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 1.0,
+        "unrelated_pair_invariance": 1.0,
+        "unrelated_pair_invariant_correct": 1.0,
+        "paired_joint_correct": 1.0,
+        "all_four_joint_correct": 1.0
+      },
+      "no_links": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 0.5,
+        "unrelated_accuracy": 0.25,
+        "joint_accuracy": 0.0,
+        "supported_target_accuracy": 0.0,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 0.0,
+        "unrelated_pair_invariance": 0.5,
+        "unrelated_pair_invariant_correct": 0.0,
+        "paired_joint_correct": 0.0,
+        "all_four_joint_correct": 0.0
+      },
+      "no_attribution": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 0.0,
+        "unrelated_accuracy": 0.0,
+        "joint_accuracy": 0.0,
+        "supported_target_accuracy": 0.0,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 0.0,
+        "unrelated_pair_invariance": 1.0,
+        "unrelated_pair_invariant_correct": 0.0,
+        "paired_joint_correct": 0.0,
+        "all_four_joint_correct": 0.0
+      }
+    },
+    "formal_005": {
+      "ssc": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 1.0,
+        "unrelated_accuracy": 1.0,
+        "joint_accuracy": 1.0,
+        "supported_target_accuracy": 0.5,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 1.0,
+        "unrelated_pair_invariance": 1.0,
+        "unrelated_pair_invariant_correct": 1.0,
+        "paired_joint_correct": 1.0,
+        "all_four_joint_correct": 1.0
+      },
+      "prose": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 1.0,
+        "unrelated_accuracy": 1.0,
+        "joint_accuracy": 1.0,
+        "supported_target_accuracy": 0.75,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 1.0,
+        "unrelated_pair_invariance": 1.0,
+        "unrelated_pair_invariant_correct": 1.0,
+        "paired_joint_correct": 1.0,
+        "all_four_joint_correct": 1.0
+      },
+      "no_links": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 0.0,
+        "unrelated_accuracy": 0.0,
+        "joint_accuracy": 0.0,
+        "supported_target_accuracy": 0.0,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 0.0,
+        "unrelated_pair_invariance": 0.5,
+        "unrelated_pair_invariant_correct": 0.0,
+        "paired_joint_correct": 0.0,
+        "all_four_joint_correct": 0.0
+      },
+      "no_attribution": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 0.0,
+        "unrelated_accuracy": 0.0,
+        "joint_accuracy": 0.0,
+        "supported_target_accuracy": 0.0,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 0.0,
+        "unrelated_pair_invariance": 0.5,
+        "unrelated_pair_invariant_correct": 0.0,
+        "paired_joint_correct": 0.0,
+        "all_four_joint_correct": 0.0
+      }
+    },
+    "formal_006": {
+      "ssc": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 1.0,
+        "unrelated_accuracy": 1.0,
+        "joint_accuracy": 1.0,
+        "supported_target_accuracy": 0.75,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 1.0,
+        "unrelated_pair_invariance": 1.0,
+        "unrelated_pair_invariant_correct": 1.0,
+        "paired_joint_correct": 1.0,
+        "all_four_joint_correct": 1.0
+      },
+      "prose": {
+        "world_accuracy": 0.75,
+        "target_accuracy": 0.75,
+        "unrelated_accuracy": 0.75,
+        "joint_accuracy": 0.75,
+        "supported_target_accuracy": 0.75,
+        "world_pair_invariance": 0.5,
+        "world_pair_invariant_correct": 0.5,
+        "target_correct_change": 0.5,
+        "unrelated_pair_invariance": 0.5,
+        "unrelated_pair_invariant_correct": 0.5,
+        "paired_joint_correct": 0.5,
+        "all_four_joint_correct": 0.0
+      },
+      "no_links": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 0.5,
+        "unrelated_accuracy": 0.0,
+        "joint_accuracy": 0.0,
+        "supported_target_accuracy": 0.25,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 0.0,
+        "unrelated_pair_invariance": 1.0,
+        "unrelated_pair_invariant_correct": 0.0,
+        "paired_joint_correct": 0.0,
+        "all_four_joint_correct": 0.0
+      },
+      "no_attribution": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 0.0,
+        "unrelated_accuracy": 0.0,
+        "joint_accuracy": 0.0,
+        "supported_target_accuracy": 0.0,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 0.0,
+        "unrelated_pair_invariance": 1.0,
+        "unrelated_pair_invariant_correct": 0.0,
+        "paired_joint_correct": 0.0,
+        "all_four_joint_correct": 0.0
+      }
+    },
+    "formal_007": {
+      "ssc": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 1.0,
+        "unrelated_accuracy": 1.0,
+        "joint_accuracy": 1.0,
+        "supported_target_accuracy": 1.0,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 1.0,
+        "unrelated_pair_invariance": 1.0,
+        "unrelated_pair_invariant_correct": 1.0,
+        "paired_joint_correct": 1.0,
+        "all_four_joint_correct": 1.0
+      },
+      "prose": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 0.75,
+        "unrelated_accuracy": 1.0,
+        "joint_accuracy": 0.75,
+        "supported_target_accuracy": 0.75,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 0.5,
+        "unrelated_pair_invariance": 1.0,
+        "unrelated_pair_invariant_correct": 1.0,
+        "paired_joint_correct": 0.5,
+        "all_four_joint_correct": 0.0
+      },
+      "no_links": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 0.5,
+        "unrelated_accuracy": 0.5,
+        "joint_accuracy": 0.5,
+        "supported_target_accuracy": 0.25,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 0.0,
+        "unrelated_pair_invariance": 0.3333333333333333,
+        "unrelated_pair_invariant_correct": 0.16666666666666666,
+        "paired_joint_correct": 0.0,
+        "all_four_joint_correct": 0.0
+      },
+      "no_attribution": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 0.0,
+        "unrelated_accuracy": 0.0,
+        "joint_accuracy": 0.0,
+        "supported_target_accuracy": 0.0,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 0.0,
+        "unrelated_pair_invariance": 1.0,
+        "unrelated_pair_invariant_correct": 0.0,
+        "paired_joint_correct": 0.0,
+        "all_four_joint_correct": 0.0
+      }
+    },
+    "formal_008": {
+      "ssc": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 1.0,
+        "unrelated_accuracy": 1.0,
+        "joint_accuracy": 1.0,
+        "supported_target_accuracy": 1.0,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 1.0,
+        "unrelated_pair_invariance": 1.0,
+        "unrelated_pair_invariant_correct": 1.0,
+        "paired_joint_correct": 1.0,
+        "all_four_joint_correct": 1.0
+      },
+      "prose": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 1.0,
+        "unrelated_accuracy": 1.0,
+        "joint_accuracy": 1.0,
+        "supported_target_accuracy": 0.75,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 1.0,
+        "unrelated_pair_invariance": 1.0,
+        "unrelated_pair_invariant_correct": 1.0,
+        "paired_joint_correct": 1.0,
+        "all_four_joint_correct": 1.0
+      },
+      "no_links": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 0.0,
+        "unrelated_accuracy": 0.0,
+        "joint_accuracy": 0.0,
+        "supported_target_accuracy": 0.0,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 0.0,
+        "unrelated_pair_invariance": 0.3333333333333333,
+        "unrelated_pair_invariant_correct": 0.0,
+        "paired_joint_correct": 0.0,
+        "all_four_joint_correct": 0.0
+      },
+      "no_attribution": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 0.0,
+        "unrelated_accuracy": 0.0,
+        "joint_accuracy": 0.0,
+        "supported_target_accuracy": 0.0,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 0.0,
+        "unrelated_pair_invariance": 1.0,
+        "unrelated_pair_invariant_correct": 0.0,
+        "paired_joint_correct": 0.0,
+        "all_four_joint_correct": 0.0
+      }
+    },
+    "formal_009": {
+      "ssc": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 1.0,
+        "unrelated_accuracy": 1.0,
+        "joint_accuracy": 1.0,
+        "supported_target_accuracy": 1.0,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 1.0,
+        "unrelated_pair_invariance": 1.0,
+        "unrelated_pair_invariant_correct": 1.0,
+        "paired_joint_correct": 1.0,
+        "all_four_joint_correct": 1.0
+      },
+      "prose": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 1.0,
+        "unrelated_accuracy": 1.0,
+        "joint_accuracy": 1.0,
+        "supported_target_accuracy": 0.75,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 1.0,
+        "unrelated_pair_invariance": 1.0,
+        "unrelated_pair_invariant_correct": 1.0,
+        "paired_joint_correct": 1.0,
+        "all_four_joint_correct": 1.0
+      },
+      "no_links": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 0.5,
+        "unrelated_accuracy": 0.0,
+        "joint_accuracy": 0.0,
+        "supported_target_accuracy": 0.25,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 0.0,
+        "unrelated_pair_invariance": 0.5,
+        "unrelated_pair_invariant_correct": 0.0,
+        "paired_joint_correct": 0.0,
+        "all_four_joint_correct": 0.0
+      },
+      "no_attribution": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 0.0,
+        "unrelated_accuracy": 0.0,
+        "joint_accuracy": 0.0,
+        "supported_target_accuracy": 0.0,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 0.0,
+        "unrelated_pair_invariance": 1.0,
+        "unrelated_pair_invariant_correct": 0.0,
+        "paired_joint_correct": 0.0,
+        "all_four_joint_correct": 0.0
+      }
+    },
+    "formal_010": {
+      "ssc": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 1.0,
+        "unrelated_accuracy": 1.0,
+        "joint_accuracy": 1.0,
+        "supported_target_accuracy": 1.0,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 1.0,
+        "unrelated_pair_invariance": 1.0,
+        "unrelated_pair_invariant_correct": 1.0,
+        "paired_joint_correct": 1.0,
+        "all_four_joint_correct": 1.0
+      },
+      "prose": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 1.0,
+        "unrelated_accuracy": 1.0,
+        "joint_accuracy": 1.0,
+        "supported_target_accuracy": 1.0,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 1.0,
+        "unrelated_pair_invariance": 1.0,
+        "unrelated_pair_invariant_correct": 1.0,
+        "paired_joint_correct": 1.0,
+        "all_four_joint_correct": 1.0
+      },
+      "no_links": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 0.5,
+        "unrelated_accuracy": 0.0,
+        "joint_accuracy": 0.0,
+        "supported_target_accuracy": 0.25,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 0.0,
+        "unrelated_pair_invariance": 1.0,
+        "unrelated_pair_invariant_correct": 0.0,
+        "paired_joint_correct": 0.0,
+        "all_four_joint_correct": 0.0
+      },
+      "no_attribution": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 0.25,
+        "unrelated_accuracy": 0.0,
+        "joint_accuracy": 0.0,
+        "supported_target_accuracy": 0.25,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 0.0,
+        "unrelated_pair_invariance": 1.0,
+        "unrelated_pair_invariant_correct": 0.0,
+        "paired_joint_correct": 0.0,
+        "all_four_joint_correct": 0.0
+      }
+    },
+    "formal_011": {
+      "ssc": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 1.0,
+        "unrelated_accuracy": 1.0,
+        "joint_accuracy": 1.0,
+        "supported_target_accuracy": 0.75,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 1.0,
+        "unrelated_pair_invariance": 1.0,
+        "unrelated_pair_invariant_correct": 1.0,
+        "paired_joint_correct": 1.0,
+        "all_four_joint_correct": 1.0
+      },
+      "prose": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 1.0,
+        "unrelated_accuracy": 1.0,
+        "joint_accuracy": 1.0,
+        "supported_target_accuracy": 0.75,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 1.0,
+        "unrelated_pair_invariance": 1.0,
+        "unrelated_pair_invariant_correct": 1.0,
+        "paired_joint_correct": 1.0,
+        "all_four_joint_correct": 1.0
+      },
+      "no_links": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 0.5,
+        "unrelated_accuracy": 0.75,
+        "joint_accuracy": 0.25,
+        "supported_target_accuracy": 0.25,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 0.0,
+        "unrelated_pair_invariance": 0.5,
+        "unrelated_pair_invariant_correct": 0.5,
+        "paired_joint_correct": 0.0,
+        "all_four_joint_correct": 0.0
+      },
+      "no_attribution": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 0.0,
+        "unrelated_accuracy": 0.0,
+        "joint_accuracy": 0.0,
+        "supported_target_accuracy": 0.0,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 0.0,
+        "unrelated_pair_invariance": 1.0,
+        "unrelated_pair_invariant_correct": 0.0,
+        "paired_joint_correct": 0.0,
+        "all_four_joint_correct": 0.0
+      }
+    },
+    "formal_012": {
+      "ssc": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 1.0,
+        "unrelated_accuracy": 1.0,
+        "joint_accuracy": 1.0,
+        "supported_target_accuracy": 0.75,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 1.0,
+        "unrelated_pair_invariance": 1.0,
+        "unrelated_pair_invariant_correct": 1.0,
+        "paired_joint_correct": 1.0,
+        "all_four_joint_correct": 1.0
+      },
+      "prose": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 1.0,
+        "unrelated_accuracy": 1.0,
+        "joint_accuracy": 1.0,
+        "supported_target_accuracy": 0.75,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 1.0,
+        "unrelated_pair_invariance": 1.0,
+        "unrelated_pair_invariant_correct": 1.0,
+        "paired_joint_correct": 1.0,
+        "all_four_joint_correct": 1.0
+      },
+      "no_links": {
+        "world_accuracy": 0.5,
+        "target_accuracy": 0.0,
+        "unrelated_accuracy": 0.25,
+        "joint_accuracy": 0.0,
+        "supported_target_accuracy": 0.0,
+        "world_pair_invariance": 0.16666666666666666,
+        "world_pair_invariant_correct": 0.16666666666666666,
+        "target_correct_change": 0.0,
+        "unrelated_pair_invariance": 0.0,
+        "unrelated_pair_invariant_correct": 0.0,
+        "paired_joint_correct": 0.0,
+        "all_four_joint_correct": 0.0
+      },
+      "no_attribution": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 0.0,
+        "unrelated_accuracy": 0.0,
+        "joint_accuracy": 0.0,
+        "supported_target_accuracy": 0.0,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 0.0,
+        "unrelated_pair_invariance": 1.0,
+        "unrelated_pair_invariant_correct": 0.0,
+        "paired_joint_correct": 0.0,
+        "all_four_joint_correct": 0.0
+      }
+    },
+    "formal_013": {
+      "ssc": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 1.0,
+        "unrelated_accuracy": 1.0,
+        "joint_accuracy": 1.0,
+        "supported_target_accuracy": 0.75,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 1.0,
+        "unrelated_pair_invariance": 1.0,
+        "unrelated_pair_invariant_correct": 1.0,
+        "paired_joint_correct": 1.0,
+        "all_four_joint_correct": 1.0
+      },
+      "prose": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 1.0,
+        "unrelated_accuracy": 0.75,
+        "joint_accuracy": 0.75,
+        "supported_target_accuracy": 1.0,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 1.0,
+        "unrelated_pair_invariance": 0.5,
+        "unrelated_pair_invariant_correct": 0.5,
+        "paired_joint_correct": 0.5,
+        "all_four_joint_correct": 0.0
+      },
+      "no_links": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 0.5,
+        "unrelated_accuracy": 0.5,
+        "joint_accuracy": 0.25,
+        "supported_target_accuracy": 0.25,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 0.0,
+        "unrelated_pair_invariance": 0.16666666666666666,
+        "unrelated_pair_invariant_correct": 0.16666666666666666,
+        "paired_joint_correct": 0.0,
+        "all_four_joint_correct": 0.0
+      },
+      "no_attribution": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 0.0,
+        "unrelated_accuracy": 0.0,
+        "joint_accuracy": 0.0,
+        "supported_target_accuracy": 0.0,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 0.0,
+        "unrelated_pair_invariance": 1.0,
+        "unrelated_pair_invariant_correct": 0.0,
+        "paired_joint_correct": 0.0,
+        "all_four_joint_correct": 0.0
+      }
+    },
+    "formal_014": {
+      "ssc": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 1.0,
+        "unrelated_accuracy": 1.0,
+        "joint_accuracy": 1.0,
+        "supported_target_accuracy": 0.75,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 1.0,
+        "unrelated_pair_invariance": 1.0,
+        "unrelated_pair_invariant_correct": 1.0,
+        "paired_joint_correct": 1.0,
+        "all_four_joint_correct": 1.0
+      },
+      "prose": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 1.0,
+        "unrelated_accuracy": 1.0,
+        "joint_accuracy": 1.0,
+        "supported_target_accuracy": 1.0,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 1.0,
+        "unrelated_pair_invariance": 1.0,
+        "unrelated_pair_invariant_correct": 1.0,
+        "paired_joint_correct": 1.0,
+        "all_four_joint_correct": 1.0
+      },
+      "no_links": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 0.25,
+        "unrelated_accuracy": 0.0,
+        "joint_accuracy": 0.0,
+        "supported_target_accuracy": 0.0,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 0.0,
+        "unrelated_pair_invariance": 0.3333333333333333,
+        "unrelated_pair_invariant_correct": 0.0,
+        "paired_joint_correct": 0.0,
+        "all_four_joint_correct": 0.0
+      },
+      "no_attribution": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 0.25,
+        "unrelated_accuracy": 0.25,
+        "joint_accuracy": 0.25,
+        "supported_target_accuracy": 0.25,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 0.0,
+        "unrelated_pair_invariance": 0.5,
+        "unrelated_pair_invariant_correct": 0.0,
+        "paired_joint_correct": 0.0,
+        "all_four_joint_correct": 0.0
+      }
+    },
+    "formal_015": {
+      "ssc": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 1.0,
+        "unrelated_accuracy": 1.0,
+        "joint_accuracy": 1.0,
+        "supported_target_accuracy": 0.75,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 1.0,
+        "unrelated_pair_invariance": 1.0,
+        "unrelated_pair_invariant_correct": 1.0,
+        "paired_joint_correct": 1.0,
+        "all_four_joint_correct": 1.0
+      },
+      "prose": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 1.0,
+        "unrelated_accuracy": 1.0,
+        "joint_accuracy": 1.0,
+        "supported_target_accuracy": 0.75,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 1.0,
+        "unrelated_pair_invariance": 1.0,
+        "unrelated_pair_invariant_correct": 1.0,
+        "paired_joint_correct": 1.0,
+        "all_four_joint_correct": 1.0
+      },
+      "no_links": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 0.5,
+        "unrelated_accuracy": 0.0,
+        "joint_accuracy": 0.0,
+        "supported_target_accuracy": 0.25,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 0.0,
+        "unrelated_pair_invariance": 1.0,
+        "unrelated_pair_invariant_correct": 0.0,
+        "paired_joint_correct": 0.0,
+        "all_four_joint_correct": 0.0
+      },
+      "no_attribution": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 0.0,
+        "unrelated_accuracy": 0.0,
+        "joint_accuracy": 0.0,
+        "supported_target_accuracy": 0.0,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 0.0,
+        "unrelated_pair_invariance": 1.0,
+        "unrelated_pair_invariant_correct": 0.0,
+        "paired_joint_correct": 0.0,
+        "all_four_joint_correct": 0.0
+      }
+    },
+    "formal_016": {
+      "ssc": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 1.0,
+        "unrelated_accuracy": 1.0,
+        "joint_accuracy": 1.0,
+        "supported_target_accuracy": 1.0,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 1.0,
+        "unrelated_pair_invariance": 1.0,
+        "unrelated_pair_invariant_correct": 1.0,
+        "paired_joint_correct": 1.0,
+        "all_four_joint_correct": 1.0
+      },
+      "prose": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 1.0,
+        "unrelated_accuracy": 1.0,
+        "joint_accuracy": 1.0,
+        "supported_target_accuracy": 1.0,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 1.0,
+        "unrelated_pair_invariance": 1.0,
+        "unrelated_pair_invariant_correct": 1.0,
+        "paired_joint_correct": 1.0,
+        "all_four_joint_correct": 1.0
+      },
+      "no_links": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 0.5,
+        "unrelated_accuracy": 0.5,
+        "joint_accuracy": 0.25,
+        "supported_target_accuracy": 0.25,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 0.0,
+        "unrelated_pair_invariance": 0.3333333333333333,
+        "unrelated_pair_invariant_correct": 0.16666666666666666,
+        "paired_joint_correct": 0.0,
+        "all_four_joint_correct": 0.0
+      },
+      "no_attribution": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 0.0,
+        "unrelated_accuracy": 0.0,
+        "joint_accuracy": 0.0,
+        "supported_target_accuracy": 0.0,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 0.0,
+        "unrelated_pair_invariance": 1.0,
+        "unrelated_pair_invariant_correct": 0.0,
+        "paired_joint_correct": 0.0,
+        "all_four_joint_correct": 0.0
+      }
+    },
+    "formal_017": {
+      "ssc": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 1.0,
+        "unrelated_accuracy": 1.0,
+        "joint_accuracy": 1.0,
+        "supported_target_accuracy": 1.0,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 1.0,
+        "unrelated_pair_invariance": 1.0,
+        "unrelated_pair_invariant_correct": 1.0,
+        "paired_joint_correct": 1.0,
+        "all_four_joint_correct": 1.0
+      },
+      "prose": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 1.0,
+        "unrelated_accuracy": 1.0,
+        "joint_accuracy": 1.0,
+        "supported_target_accuracy": 1.0,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 1.0,
+        "unrelated_pair_invariance": 1.0,
+        "unrelated_pair_invariant_correct": 1.0,
+        "paired_joint_correct": 1.0,
+        "all_four_joint_correct": 1.0
+      },
+      "no_links": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 0.5,
+        "unrelated_accuracy": 0.0,
+        "joint_accuracy": 0.0,
+        "supported_target_accuracy": 0.25,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 0.25,
+        "unrelated_pair_invariance": 0.16666666666666666,
+        "unrelated_pair_invariant_correct": 0.0,
+        "paired_joint_correct": 0.0,
+        "all_four_joint_correct": 0.0
+      },
+      "no_attribution": {
+        "world_accuracy": 0.75,
+        "target_accuracy": 0.25,
+        "unrelated_accuracy": 0.0,
+        "joint_accuracy": 0.0,
+        "supported_target_accuracy": 0.25,
+        "world_pair_invariance": 0.5,
+        "world_pair_invariant_correct": 0.5,
+        "target_correct_change": 0.0,
+        "unrelated_pair_invariance": 0.16666666666666666,
+        "unrelated_pair_invariant_correct": 0.0,
+        "paired_joint_correct": 0.0,
+        "all_four_joint_correct": 0.0
+      }
+    },
+    "formal_018": {
+      "ssc": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 1.0,
+        "unrelated_accuracy": 1.0,
+        "joint_accuracy": 1.0,
+        "supported_target_accuracy": 1.0,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 1.0,
+        "unrelated_pair_invariance": 1.0,
+        "unrelated_pair_invariant_correct": 1.0,
+        "paired_joint_correct": 1.0,
+        "all_four_joint_correct": 1.0
+      },
+      "prose": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 1.0,
+        "unrelated_accuracy": 1.0,
+        "joint_accuracy": 1.0,
+        "supported_target_accuracy": 1.0,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 1.0,
+        "unrelated_pair_invariance": 1.0,
+        "unrelated_pair_invariant_correct": 1.0,
+        "paired_joint_correct": 1.0,
+        "all_four_joint_correct": 1.0
+      },
+      "no_links": {
+        "world_accuracy": 0.5,
+        "target_accuracy": 0.25,
+        "unrelated_accuracy": 0.0,
+        "joint_accuracy": 0.0,
+        "supported_target_accuracy": 0.0,
+        "world_pair_invariance": 0.16666666666666666,
+        "world_pair_invariant_correct": 0.16666666666666666,
+        "target_correct_change": 0.0,
+        "unrelated_pair_invariance": 0.0,
+        "unrelated_pair_invariant_correct": 0.0,
+        "paired_joint_correct": 0.0,
+        "all_four_joint_correct": 0.0
+      },
+      "no_attribution": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 0.0,
+        "unrelated_accuracy": 0.0,
+        "joint_accuracy": 0.0,
+        "supported_target_accuracy": 0.0,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 0.0,
+        "unrelated_pair_invariance": 1.0,
+        "unrelated_pair_invariant_correct": 0.0,
+        "paired_joint_correct": 0.0,
+        "all_four_joint_correct": 0.0
+      }
+    },
+    "formal_019": {
+      "ssc": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 0.75,
+        "unrelated_accuracy": 0.5,
+        "joint_accuracy": 0.5,
+        "supported_target_accuracy": 0.5,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 0.5,
+        "unrelated_pair_invariance": 0.16666666666666666,
+        "unrelated_pair_invariant_correct": 0.16666666666666666,
+        "paired_joint_correct": 0.25,
+        "all_four_joint_correct": 0.0
+      },
+      "prose": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 1.0,
+        "unrelated_accuracy": 1.0,
+        "joint_accuracy": 1.0,
+        "supported_target_accuracy": 1.0,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 1.0,
+        "unrelated_pair_invariance": 1.0,
+        "unrelated_pair_invariant_correct": 1.0,
+        "paired_joint_correct": 1.0,
+        "all_four_joint_correct": 1.0
+      },
+      "no_links": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 0.0,
+        "unrelated_accuracy": 0.0,
+        "joint_accuracy": 0.0,
+        "supported_target_accuracy": 0.0,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 0.0,
+        "unrelated_pair_invariance": 1.0,
+        "unrelated_pair_invariant_correct": 0.0,
+        "paired_joint_correct": 0.0,
+        "all_four_joint_correct": 0.0
+      },
+      "no_attribution": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 0.0,
+        "unrelated_accuracy": 0.0,
+        "joint_accuracy": 0.0,
+        "supported_target_accuracy": 0.0,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 0.0,
+        "unrelated_pair_invariance": 1.0,
+        "unrelated_pair_invariant_correct": 0.0,
+        "paired_joint_correct": 0.0,
+        "all_four_joint_correct": 0.0
+      }
+    },
+    "formal_020": {
+      "ssc": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 1.0,
+        "unrelated_accuracy": 1.0,
+        "joint_accuracy": 1.0,
+        "supported_target_accuracy": 1.0,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 1.0,
+        "unrelated_pair_invariance": 1.0,
+        "unrelated_pair_invariant_correct": 1.0,
+        "paired_joint_correct": 1.0,
+        "all_four_joint_correct": 1.0
+      },
+      "prose": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 1.0,
+        "unrelated_accuracy": 1.0,
+        "joint_accuracy": 1.0,
+        "supported_target_accuracy": 1.0,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 1.0,
+        "unrelated_pair_invariance": 1.0,
+        "unrelated_pair_invariant_correct": 1.0,
+        "paired_joint_correct": 1.0,
+        "all_four_joint_correct": 1.0
+      },
+      "no_links": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 0.5,
+        "unrelated_accuracy": 0.0,
+        "joint_accuracy": 0.0,
+        "supported_target_accuracy": 0.25,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 0.0,
+        "unrelated_pair_invariance": 1.0,
+        "unrelated_pair_invariant_correct": 0.0,
+        "paired_joint_correct": 0.0,
+        "all_four_joint_correct": 0.0
+      },
+      "no_attribution": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 0.0,
+        "unrelated_accuracy": 0.0,
+        "joint_accuracy": 0.0,
+        "supported_target_accuracy": 0.0,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 0.0,
+        "unrelated_pair_invariance": 1.0,
+        "unrelated_pair_invariant_correct": 0.0,
+        "paired_joint_correct": 0.0,
+        "all_four_joint_correct": 0.0
+      }
+    },
+    "formal_021": {
+      "ssc": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 1.0,
+        "unrelated_accuracy": 1.0,
+        "joint_accuracy": 1.0,
+        "supported_target_accuracy": 1.0,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 1.0,
+        "unrelated_pair_invariance": 1.0,
+        "unrelated_pair_invariant_correct": 1.0,
+        "paired_joint_correct": 1.0,
+        "all_four_joint_correct": 1.0
+      },
+      "prose": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 1.0,
+        "unrelated_accuracy": 1.0,
+        "joint_accuracy": 1.0,
+        "supported_target_accuracy": 0.75,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 1.0,
+        "unrelated_pair_invariance": 1.0,
+        "unrelated_pair_invariant_correct": 1.0,
+        "paired_joint_correct": 1.0,
+        "all_four_joint_correct": 1.0
+      },
+      "no_links": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 0.5,
+        "unrelated_accuracy": 1.0,
+        "joint_accuracy": 0.5,
+        "supported_target_accuracy": 0.25,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 0.0,
+        "unrelated_pair_invariance": 1.0,
+        "unrelated_pair_invariant_correct": 1.0,
+        "paired_joint_correct": 0.0,
+        "all_four_joint_correct": 0.0
+      },
+      "no_attribution": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 0.0,
+        "unrelated_accuracy": 0.0,
+        "joint_accuracy": 0.0,
+        "supported_target_accuracy": 0.0,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 0.0,
+        "unrelated_pair_invariance": 1.0,
+        "unrelated_pair_invariant_correct": 0.0,
+        "paired_joint_correct": 0.0,
+        "all_four_joint_correct": 0.0
+      }
+    },
+    "formal_022": {
+      "ssc": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 1.0,
+        "unrelated_accuracy": 1.0,
+        "joint_accuracy": 1.0,
+        "supported_target_accuracy": 0.75,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 1.0,
+        "unrelated_pair_invariance": 1.0,
+        "unrelated_pair_invariant_correct": 1.0,
+        "paired_joint_correct": 1.0,
+        "all_four_joint_correct": 1.0
+      },
+      "prose": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 1.0,
+        "unrelated_accuracy": 1.0,
+        "joint_accuracy": 1.0,
+        "supported_target_accuracy": 1.0,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 1.0,
+        "unrelated_pair_invariance": 1.0,
+        "unrelated_pair_invariant_correct": 1.0,
+        "paired_joint_correct": 1.0,
+        "all_four_joint_correct": 1.0
+      },
+      "no_links": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 0.5,
+        "unrelated_accuracy": 0.0,
+        "joint_accuracy": 0.0,
+        "supported_target_accuracy": 0.25,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 0.0,
+        "unrelated_pair_invariance": 1.0,
+        "unrelated_pair_invariant_correct": 0.0,
+        "paired_joint_correct": 0.0,
+        "all_four_joint_correct": 0.0
+      },
+      "no_attribution": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 0.0,
+        "unrelated_accuracy": 0.0,
+        "joint_accuracy": 0.0,
+        "supported_target_accuracy": 0.0,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 0.0,
+        "unrelated_pair_invariance": 1.0,
+        "unrelated_pair_invariant_correct": 0.0,
+        "paired_joint_correct": 0.0,
+        "all_four_joint_correct": 0.0
+      }
+    },
+    "formal_023": {
+      "ssc": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 1.0,
+        "unrelated_accuracy": 1.0,
+        "joint_accuracy": 1.0,
+        "supported_target_accuracy": 0.75,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 1.0,
+        "unrelated_pair_invariance": 1.0,
+        "unrelated_pair_invariant_correct": 1.0,
+        "paired_joint_correct": 1.0,
+        "all_four_joint_correct": 1.0
+      },
+      "prose": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 1.0,
+        "unrelated_accuracy": 1.0,
+        "joint_accuracy": 1.0,
+        "supported_target_accuracy": 0.5,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 1.0,
+        "unrelated_pair_invariance": 1.0,
+        "unrelated_pair_invariant_correct": 1.0,
+        "paired_joint_correct": 1.0,
+        "all_four_joint_correct": 1.0
+      },
+      "no_links": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 0.5,
+        "unrelated_accuracy": 0.0,
+        "joint_accuracy": 0.0,
+        "supported_target_accuracy": 0.5,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 0.0,
+        "unrelated_pair_invariance": 0.5,
+        "unrelated_pair_invariant_correct": 0.0,
+        "paired_joint_correct": 0.0,
+        "all_four_joint_correct": 0.0
+      },
+      "no_attribution": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 0.0,
+        "unrelated_accuracy": 0.0,
+        "joint_accuracy": 0.0,
+        "supported_target_accuracy": 0.0,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 0.0,
+        "unrelated_pair_invariance": 1.0,
+        "unrelated_pair_invariant_correct": 0.0,
+        "paired_joint_correct": 0.0,
+        "all_four_joint_correct": 0.0
+      }
+    },
+    "formal_024": {
+      "ssc": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 1.0,
+        "unrelated_accuracy": 1.0,
+        "joint_accuracy": 1.0,
+        "supported_target_accuracy": 1.0,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 1.0,
+        "unrelated_pair_invariance": 1.0,
+        "unrelated_pair_invariant_correct": 1.0,
+        "paired_joint_correct": 1.0,
+        "all_four_joint_correct": 1.0
+      },
+      "prose": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 1.0,
+        "unrelated_accuracy": 1.0,
+        "joint_accuracy": 1.0,
+        "supported_target_accuracy": 1.0,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 1.0,
+        "unrelated_pair_invariance": 1.0,
+        "unrelated_pair_invariant_correct": 1.0,
+        "paired_joint_correct": 1.0,
+        "all_four_joint_correct": 1.0
+      },
+      "no_links": {
+        "world_accuracy": 0.75,
+        "target_accuracy": 0.25,
+        "unrelated_accuracy": 0.0,
+        "joint_accuracy": 0.0,
+        "supported_target_accuracy": 0.25,
+        "world_pair_invariance": 0.5,
+        "world_pair_invariant_correct": 0.5,
+        "target_correct_change": 0.0,
+        "unrelated_pair_invariance": 0.16666666666666666,
+        "unrelated_pair_invariant_correct": 0.0,
+        "paired_joint_correct": 0.0,
+        "all_four_joint_correct": 0.0
+      },
+      "no_attribution": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 0.0,
+        "unrelated_accuracy": 0.0,
+        "joint_accuracy": 0.0,
+        "supported_target_accuracy": 0.0,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 0.0,
+        "unrelated_pair_invariance": 1.0,
+        "unrelated_pair_invariant_correct": 0.0,
+        "paired_joint_correct": 0.0,
+        "all_four_joint_correct": 0.0
+      }
+    },
+    "formal_025": {
+      "ssc": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 1.0,
+        "unrelated_accuracy": 1.0,
+        "joint_accuracy": 1.0,
+        "supported_target_accuracy": 0.75,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 1.0,
+        "unrelated_pair_invariance": 1.0,
+        "unrelated_pair_invariant_correct": 1.0,
+        "paired_joint_correct": 1.0,
+        "all_four_joint_correct": 1.0
+      },
+      "prose": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 1.0,
+        "unrelated_accuracy": 1.0,
+        "joint_accuracy": 1.0,
+        "supported_target_accuracy": 1.0,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 1.0,
+        "unrelated_pair_invariance": 1.0,
+        "unrelated_pair_invariant_correct": 1.0,
+        "paired_joint_correct": 1.0,
+        "all_four_joint_correct": 1.0
+      },
+      "no_links": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 0.5,
+        "unrelated_accuracy": 0.0,
+        "joint_accuracy": 0.0,
+        "supported_target_accuracy": 0.25,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 0.0,
+        "unrelated_pair_invariance": 0.5,
+        "unrelated_pair_invariant_correct": 0.0,
+        "paired_joint_correct": 0.0,
+        "all_four_joint_correct": 0.0
+      },
+      "no_attribution": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 0.0,
+        "unrelated_accuracy": 0.0,
+        "joint_accuracy": 0.0,
+        "supported_target_accuracy": 0.0,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 0.0,
+        "unrelated_pair_invariance": 0.5,
+        "unrelated_pair_invariant_correct": 0.0,
+        "paired_joint_correct": 0.0,
+        "all_four_joint_correct": 0.0
+      }
+    },
+    "formal_026": {
+      "ssc": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 1.0,
+        "unrelated_accuracy": 1.0,
+        "joint_accuracy": 1.0,
+        "supported_target_accuracy": 0.25,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 1.0,
+        "unrelated_pair_invariance": 1.0,
+        "unrelated_pair_invariant_correct": 1.0,
+        "paired_joint_correct": 1.0,
+        "all_four_joint_correct": 1.0
+      },
+      "prose": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 1.0,
+        "unrelated_accuracy": 1.0,
+        "joint_accuracy": 1.0,
+        "supported_target_accuracy": 0.75,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 1.0,
+        "unrelated_pair_invariance": 1.0,
+        "unrelated_pair_invariant_correct": 1.0,
+        "paired_joint_correct": 1.0,
+        "all_four_joint_correct": 1.0
+      },
+      "no_links": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 0.25,
+        "unrelated_accuracy": 0.0,
+        "joint_accuracy": 0.0,
+        "supported_target_accuracy": 0.25,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 0.0,
+        "unrelated_pair_invariance": 0.3333333333333333,
+        "unrelated_pair_invariant_correct": 0.0,
+        "paired_joint_correct": 0.0,
+        "all_four_joint_correct": 0.0
+      },
+      "no_attribution": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 0.0,
+        "unrelated_accuracy": 0.0,
+        "joint_accuracy": 0.0,
+        "supported_target_accuracy": 0.0,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 0.0,
+        "unrelated_pair_invariance": 1.0,
+        "unrelated_pair_invariant_correct": 0.0,
+        "paired_joint_correct": 0.0,
+        "all_four_joint_correct": 0.0
+      }
+    },
+    "formal_027": {
+      "ssc": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 0.75,
+        "unrelated_accuracy": 1.0,
+        "joint_accuracy": 0.75,
+        "supported_target_accuracy": 0.75,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 0.5,
+        "unrelated_pair_invariance": 1.0,
+        "unrelated_pair_invariant_correct": 1.0,
+        "paired_joint_correct": 0.5,
+        "all_four_joint_correct": 0.0
+      },
+      "prose": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 0.75,
+        "unrelated_accuracy": 1.0,
+        "joint_accuracy": 0.75,
+        "supported_target_accuracy": 0.75,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 0.5,
+        "unrelated_pair_invariance": 1.0,
+        "unrelated_pair_invariant_correct": 1.0,
+        "paired_joint_correct": 0.5,
+        "all_four_joint_correct": 0.0
+      },
+      "no_links": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 0.5,
+        "unrelated_accuracy": 0.25,
+        "joint_accuracy": 0.0,
+        "supported_target_accuracy": 0.25,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 0.0,
+        "unrelated_pair_invariance": 0.5,
+        "unrelated_pair_invariant_correct": 0.0,
+        "paired_joint_correct": 0.0,
+        "all_four_joint_correct": 0.0
+      },
+      "no_attribution": {
+        "world_accuracy": 0.75,
+        "target_accuracy": 0.0,
+        "unrelated_accuracy": 0.0,
+        "joint_accuracy": 0.0,
+        "supported_target_accuracy": 0.0,
+        "world_pair_invariance": 0.5,
+        "world_pair_invariant_correct": 0.5,
+        "target_correct_change": 0.0,
+        "unrelated_pair_invariance": 1.0,
+        "unrelated_pair_invariant_correct": 0.0,
+        "paired_joint_correct": 0.0,
+        "all_four_joint_correct": 0.0
+      }
+    },
+    "formal_028": {
+      "ssc": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 1.0,
+        "unrelated_accuracy": 1.0,
+        "joint_accuracy": 1.0,
+        "supported_target_accuracy": 0.75,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 1.0,
+        "unrelated_pair_invariance": 1.0,
+        "unrelated_pair_invariant_correct": 1.0,
+        "paired_joint_correct": 1.0,
+        "all_four_joint_correct": 1.0
+      },
+      "prose": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 1.0,
+        "unrelated_accuracy": 1.0,
+        "joint_accuracy": 1.0,
+        "supported_target_accuracy": 1.0,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 1.0,
+        "unrelated_pair_invariance": 1.0,
+        "unrelated_pair_invariant_correct": 1.0,
+        "paired_joint_correct": 1.0,
+        "all_four_joint_correct": 1.0
+      },
+      "no_links": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 0.75,
+        "unrelated_accuracy": 0.0,
+        "joint_accuracy": 0.0,
+        "supported_target_accuracy": 0.25,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 0.5,
+        "unrelated_pair_invariance": 1.0,
+        "unrelated_pair_invariant_correct": 0.0,
+        "paired_joint_correct": 0.0,
+        "all_four_joint_correct": 0.0
+      },
+      "no_attribution": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 0.0,
+        "unrelated_accuracy": 0.0,
+        "joint_accuracy": 0.0,
+        "supported_target_accuracy": 0.0,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 0.0,
+        "unrelated_pair_invariance": 1.0,
+        "unrelated_pair_invariant_correct": 0.0,
+        "paired_joint_correct": 0.0,
+        "all_four_joint_correct": 0.0
+      }
+    },
+    "formal_029": {
+      "ssc": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 1.0,
+        "unrelated_accuracy": 1.0,
+        "joint_accuracy": 1.0,
+        "supported_target_accuracy": 0.75,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 1.0,
+        "unrelated_pair_invariance": 1.0,
+        "unrelated_pair_invariant_correct": 1.0,
+        "paired_joint_correct": 1.0,
+        "all_four_joint_correct": 1.0
+      },
+      "prose": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 1.0,
+        "unrelated_accuracy": 1.0,
+        "joint_accuracy": 1.0,
+        "supported_target_accuracy": 1.0,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 1.0,
+        "unrelated_pair_invariance": 1.0,
+        "unrelated_pair_invariant_correct": 1.0,
+        "paired_joint_correct": 1.0,
+        "all_four_joint_correct": 1.0
+      },
+      "no_links": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 0.5,
+        "unrelated_accuracy": 0.0,
+        "joint_accuracy": 0.0,
+        "supported_target_accuracy": 0.25,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 0.0,
+        "unrelated_pair_invariance": 1.0,
+        "unrelated_pair_invariant_correct": 0.0,
+        "paired_joint_correct": 0.0,
+        "all_four_joint_correct": 0.0
+      },
+      "no_attribution": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 0.25,
+        "unrelated_accuracy": 0.0,
+        "joint_accuracy": 0.0,
+        "supported_target_accuracy": 0.25,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 0.0,
+        "unrelated_pair_invariance": 0.5,
+        "unrelated_pair_invariant_correct": 0.0,
+        "paired_joint_correct": 0.0,
+        "all_four_joint_correct": 0.0
+      }
+    },
+    "formal_030": {
+      "ssc": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 1.0,
+        "unrelated_accuracy": 0.5,
+        "joint_accuracy": 0.5,
+        "supported_target_accuracy": 1.0,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 1.0,
+        "unrelated_pair_invariance": 0.3333333333333333,
+        "unrelated_pair_invariant_correct": 0.16666666666666666,
+        "paired_joint_correct": 0.25,
+        "all_four_joint_correct": 0.0
+      },
+      "prose": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 1.0,
+        "unrelated_accuracy": 1.0,
+        "joint_accuracy": 1.0,
+        "supported_target_accuracy": 1.0,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 1.0,
+        "unrelated_pair_invariance": 1.0,
+        "unrelated_pair_invariant_correct": 1.0,
+        "paired_joint_correct": 1.0,
+        "all_four_joint_correct": 1.0
+      },
+      "no_links": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 0.25,
+        "unrelated_accuracy": 0.0,
+        "joint_accuracy": 0.0,
+        "supported_target_accuracy": 0.25,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 0.0,
+        "unrelated_pair_invariance": 0.5,
+        "unrelated_pair_invariant_correct": 0.0,
+        "paired_joint_correct": 0.0,
+        "all_four_joint_correct": 0.0
+      },
+      "no_attribution": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 0.25,
+        "unrelated_accuracy": 0.0,
+        "joint_accuracy": 0.0,
+        "supported_target_accuracy": 0.25,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 0.0,
+        "unrelated_pair_invariance": 0.5,
+        "unrelated_pair_invariant_correct": 0.0,
+        "paired_joint_correct": 0.0,
+        "all_four_joint_correct": 0.0
+      }
+    },
+    "formal_031": {
+      "ssc": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 1.0,
+        "unrelated_accuracy": 1.0,
+        "joint_accuracy": 1.0,
+        "supported_target_accuracy": 1.0,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 1.0,
+        "unrelated_pair_invariance": 1.0,
+        "unrelated_pair_invariant_correct": 1.0,
+        "paired_joint_correct": 1.0,
+        "all_four_joint_correct": 1.0
+      },
+      "prose": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 1.0,
+        "unrelated_accuracy": 1.0,
+        "joint_accuracy": 1.0,
+        "supported_target_accuracy": 1.0,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 1.0,
+        "unrelated_pair_invariance": 1.0,
+        "unrelated_pair_invariant_correct": 1.0,
+        "paired_joint_correct": 1.0,
+        "all_four_joint_correct": 1.0
+      },
+      "no_links": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 0.5,
+        "unrelated_accuracy": 0.0,
+        "joint_accuracy": 0.0,
+        "supported_target_accuracy": 0.5,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 0.0,
+        "unrelated_pair_invariance": 1.0,
+        "unrelated_pair_invariant_correct": 0.0,
+        "paired_joint_correct": 0.0,
+        "all_four_joint_correct": 0.0
+      },
+      "no_attribution": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 0.0,
+        "unrelated_accuracy": 0.0,
+        "joint_accuracy": 0.0,
+        "supported_target_accuracy": 0.0,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 0.0,
+        "unrelated_pair_invariance": 1.0,
+        "unrelated_pair_invariant_correct": 0.0,
+        "paired_joint_correct": 0.0,
+        "all_four_joint_correct": 0.0
+      }
+    },
+    "formal_032": {
+      "ssc": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 1.0,
+        "unrelated_accuracy": 1.0,
+        "joint_accuracy": 1.0,
+        "supported_target_accuracy": 0.75,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 1.0,
+        "unrelated_pair_invariance": 1.0,
+        "unrelated_pair_invariant_correct": 1.0,
+        "paired_joint_correct": 1.0,
+        "all_four_joint_correct": 1.0
+      },
+      "prose": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 1.0,
+        "unrelated_accuracy": 1.0,
+        "joint_accuracy": 1.0,
+        "supported_target_accuracy": 1.0,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 1.0,
+        "unrelated_pair_invariance": 1.0,
+        "unrelated_pair_invariant_correct": 1.0,
+        "paired_joint_correct": 1.0,
+        "all_four_joint_correct": 1.0
+      },
+      "no_links": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 0.5,
+        "unrelated_accuracy": 0.0,
+        "joint_accuracy": 0.0,
+        "supported_target_accuracy": 0.25,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 0.0,
+        "unrelated_pair_invariance": 1.0,
+        "unrelated_pair_invariant_correct": 0.0,
+        "paired_joint_correct": 0.0,
+        "all_four_joint_correct": 0.0
+      },
+      "no_attribution": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 0.0,
+        "unrelated_accuracy": 0.0,
+        "joint_accuracy": 0.0,
+        "supported_target_accuracy": 0.0,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 0.0,
+        "unrelated_pair_invariance": 0.5,
+        "unrelated_pair_invariant_correct": 0.0,
+        "paired_joint_correct": 0.0,
+        "all_four_joint_correct": 0.0
+      }
+    },
+    "formal_033": {
+      "ssc": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 1.0,
+        "unrelated_accuracy": 1.0,
+        "joint_accuracy": 1.0,
+        "supported_target_accuracy": 1.0,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 1.0,
+        "unrelated_pair_invariance": 1.0,
+        "unrelated_pair_invariant_correct": 1.0,
+        "paired_joint_correct": 1.0,
+        "all_four_joint_correct": 1.0
+      },
+      "prose": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 1.0,
+        "unrelated_accuracy": 1.0,
+        "joint_accuracy": 1.0,
+        "supported_target_accuracy": 1.0,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 1.0,
+        "unrelated_pair_invariance": 1.0,
+        "unrelated_pair_invariant_correct": 1.0,
+        "paired_joint_correct": 1.0,
+        "all_four_joint_correct": 1.0
+      },
+      "no_links": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 0.5,
+        "unrelated_accuracy": 0.0,
+        "joint_accuracy": 0.0,
+        "supported_target_accuracy": 0.25,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 0.0,
+        "unrelated_pair_invariance": 1.0,
+        "unrelated_pair_invariant_correct": 0.0,
+        "paired_joint_correct": 0.0,
+        "all_four_joint_correct": 0.0
+      },
+      "no_attribution": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 0.0,
+        "unrelated_accuracy": 0.0,
+        "joint_accuracy": 0.0,
+        "supported_target_accuracy": 0.0,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 0.0,
+        "unrelated_pair_invariance": 1.0,
+        "unrelated_pair_invariant_correct": 0.0,
+        "paired_joint_correct": 0.0,
+        "all_four_joint_correct": 0.0
+      }
+    },
+    "formal_034": {
+      "ssc": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 1.0,
+        "unrelated_accuracy": 1.0,
+        "joint_accuracy": 1.0,
+        "supported_target_accuracy": 1.0,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 1.0,
+        "unrelated_pair_invariance": 1.0,
+        "unrelated_pair_invariant_correct": 1.0,
+        "paired_joint_correct": 1.0,
+        "all_four_joint_correct": 1.0
+      },
+      "prose": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 1.0,
+        "unrelated_accuracy": 1.0,
+        "joint_accuracy": 1.0,
+        "supported_target_accuracy": 1.0,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 1.0,
+        "unrelated_pair_invariance": 1.0,
+        "unrelated_pair_invariant_correct": 1.0,
+        "paired_joint_correct": 1.0,
+        "all_four_joint_correct": 1.0
+      },
+      "no_links": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 0.25,
+        "unrelated_accuracy": 0.0,
+        "joint_accuracy": 0.0,
+        "supported_target_accuracy": 0.25,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 0.0,
+        "unrelated_pair_invariance": 0.5,
+        "unrelated_pair_invariant_correct": 0.0,
+        "paired_joint_correct": 0.0,
+        "all_four_joint_correct": 0.0
+      },
+      "no_attribution": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 0.0,
+        "unrelated_accuracy": 0.0,
+        "joint_accuracy": 0.0,
+        "supported_target_accuracy": 0.0,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 0.0,
+        "unrelated_pair_invariance": 1.0,
+        "unrelated_pair_invariant_correct": 0.0,
+        "paired_joint_correct": 0.0,
+        "all_four_joint_correct": 0.0
+      }
+    },
+    "formal_035": {
+      "ssc": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 1.0,
+        "unrelated_accuracy": 1.0,
+        "joint_accuracy": 1.0,
+        "supported_target_accuracy": 1.0,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 1.0,
+        "unrelated_pair_invariance": 1.0,
+        "unrelated_pair_invariant_correct": 1.0,
+        "paired_joint_correct": 1.0,
+        "all_four_joint_correct": 1.0
+      },
+      "prose": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 1.0,
+        "unrelated_accuracy": 1.0,
+        "joint_accuracy": 1.0,
+        "supported_target_accuracy": 1.0,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 1.0,
+        "unrelated_pair_invariance": 1.0,
+        "unrelated_pair_invariant_correct": 1.0,
+        "paired_joint_correct": 1.0,
+        "all_four_joint_correct": 1.0
+      },
+      "no_links": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 0.5,
+        "unrelated_accuracy": 0.0,
+        "joint_accuracy": 0.0,
+        "supported_target_accuracy": 0.5,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 0.0,
+        "unrelated_pair_invariance": 1.0,
+        "unrelated_pair_invariant_correct": 0.0,
+        "paired_joint_correct": 0.0,
+        "all_four_joint_correct": 0.0
+      },
+      "no_attribution": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 0.0,
+        "unrelated_accuracy": 0.0,
+        "joint_accuracy": 0.0,
+        "supported_target_accuracy": 0.0,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 0.0,
+        "unrelated_pair_invariance": 1.0,
+        "unrelated_pair_invariant_correct": 0.0,
+        "paired_joint_correct": 0.0,
+        "all_four_joint_correct": 0.0
+      }
+    },
+    "formal_036": {
+      "ssc": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 1.0,
+        "unrelated_accuracy": 1.0,
+        "joint_accuracy": 1.0,
+        "supported_target_accuracy": 1.0,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 1.0,
+        "unrelated_pair_invariance": 1.0,
+        "unrelated_pair_invariant_correct": 1.0,
+        "paired_joint_correct": 1.0,
+        "all_four_joint_correct": 1.0
+      },
+      "prose": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 1.0,
+        "unrelated_accuracy": 1.0,
+        "joint_accuracy": 1.0,
+        "supported_target_accuracy": 1.0,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 1.0,
+        "unrelated_pair_invariance": 1.0,
+        "unrelated_pair_invariant_correct": 1.0,
+        "paired_joint_correct": 1.0,
+        "all_four_joint_correct": 1.0
+      },
+      "no_links": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 0.25,
+        "unrelated_accuracy": 0.25,
+        "joint_accuracy": 0.25,
+        "supported_target_accuracy": 0.0,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 0.0,
+        "unrelated_pair_invariance": 0.5,
+        "unrelated_pair_invariant_correct": 0.0,
+        "paired_joint_correct": 0.0,
+        "all_four_joint_correct": 0.0
+      },
+      "no_attribution": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 0.0,
+        "unrelated_accuracy": 0.0,
+        "joint_accuracy": 0.0,
+        "supported_target_accuracy": 0.0,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 0.0,
+        "unrelated_pair_invariance": 0.5,
+        "unrelated_pair_invariant_correct": 0.0,
+        "paired_joint_correct": 0.0,
+        "all_four_joint_correct": 0.0
+      }
+    },
+    "formal_037": {
+      "ssc": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 1.0,
+        "unrelated_accuracy": 1.0,
+        "joint_accuracy": 1.0,
+        "supported_target_accuracy": 0.75,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 1.0,
+        "unrelated_pair_invariance": 1.0,
+        "unrelated_pair_invariant_correct": 1.0,
+        "paired_joint_correct": 1.0,
+        "all_four_joint_correct": 1.0
+      },
+      "prose": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 0.75,
+        "unrelated_accuracy": 1.0,
+        "joint_accuracy": 0.75,
+        "supported_target_accuracy": 0.75,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 0.5,
+        "unrelated_pair_invariance": 1.0,
+        "unrelated_pair_invariant_correct": 1.0,
+        "paired_joint_correct": 0.5,
+        "all_four_joint_correct": 0.0
+      },
+      "no_links": {
+        "world_accuracy": 0.5,
+        "target_accuracy": 0.0,
+        "unrelated_accuracy": 0.0,
+        "joint_accuracy": 0.0,
+        "supported_target_accuracy": 0.0,
+        "world_pair_invariance": 0.16666666666666666,
+        "world_pair_invariant_correct": 0.16666666666666666,
+        "target_correct_change": 0.0,
+        "unrelated_pair_invariance": 0.0,
+        "unrelated_pair_invariant_correct": 0.0,
+        "paired_joint_correct": 0.0,
+        "all_four_joint_correct": 0.0
+      },
+      "no_attribution": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 0.0,
+        "unrelated_accuracy": 0.0,
+        "joint_accuracy": 0.0,
+        "supported_target_accuracy": 0.0,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 0.0,
+        "unrelated_pair_invariance": 1.0,
+        "unrelated_pair_invariant_correct": 0.0,
+        "paired_joint_correct": 0.0,
+        "all_four_joint_correct": 0.0
+      }
+    },
+    "formal_038": {
+      "ssc": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 1.0,
+        "unrelated_accuracy": 1.0,
+        "joint_accuracy": 1.0,
+        "supported_target_accuracy": 0.75,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 1.0,
+        "unrelated_pair_invariance": 1.0,
+        "unrelated_pair_invariant_correct": 1.0,
+        "paired_joint_correct": 1.0,
+        "all_four_joint_correct": 1.0
+      },
+      "prose": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 1.0,
+        "unrelated_accuracy": 1.0,
+        "joint_accuracy": 1.0,
+        "supported_target_accuracy": 0.75,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 1.0,
+        "unrelated_pair_invariance": 1.0,
+        "unrelated_pair_invariant_correct": 1.0,
+        "paired_joint_correct": 1.0,
+        "all_four_joint_correct": 1.0
+      },
+      "no_links": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 0.5,
+        "unrelated_accuracy": 0.0,
+        "joint_accuracy": 0.0,
+        "supported_target_accuracy": 0.25,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 0.0,
+        "unrelated_pair_invariance": 0.5,
+        "unrelated_pair_invariant_correct": 0.0,
+        "paired_joint_correct": 0.0,
+        "all_four_joint_correct": 0.0
+      },
+      "no_attribution": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 0.0,
+        "unrelated_accuracy": 0.0,
+        "joint_accuracy": 0.0,
+        "supported_target_accuracy": 0.0,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 0.0,
+        "unrelated_pair_invariance": 1.0,
+        "unrelated_pair_invariant_correct": 0.0,
+        "paired_joint_correct": 0.0,
+        "all_four_joint_correct": 0.0
+      }
+    },
+    "formal_039": {
+      "ssc": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 1.0,
+        "unrelated_accuracy": 1.0,
+        "joint_accuracy": 1.0,
+        "supported_target_accuracy": 0.75,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 1.0,
+        "unrelated_pair_invariance": 1.0,
+        "unrelated_pair_invariant_correct": 1.0,
+        "paired_joint_correct": 1.0,
+        "all_four_joint_correct": 1.0
+      },
+      "prose": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 0.75,
+        "unrelated_accuracy": 1.0,
+        "joint_accuracy": 0.75,
+        "supported_target_accuracy": 0.75,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 0.5,
+        "unrelated_pair_invariance": 1.0,
+        "unrelated_pair_invariant_correct": 1.0,
+        "paired_joint_correct": 0.5,
+        "all_four_joint_correct": 0.0
+      },
+      "no_links": {
+        "world_accuracy": 0.5,
+        "target_accuracy": 0.25,
+        "unrelated_accuracy": 0.0,
+        "joint_accuracy": 0.0,
+        "supported_target_accuracy": 0.0,
+        "world_pair_invariance": 0.16666666666666666,
+        "world_pair_invariant_correct": 0.16666666666666666,
+        "target_correct_change": 0.0,
+        "unrelated_pair_invariance": 0.16666666666666666,
+        "unrelated_pair_invariant_correct": 0.0,
+        "paired_joint_correct": 0.0,
+        "all_four_joint_correct": 0.0
+      },
+      "no_attribution": {
+        "world_accuracy": 1.0,
+        "target_accuracy": 0.0,
+        "unrelated_accuracy": 0.0,
+        "joint_accuracy": 0.0,
+        "supported_target_accuracy": 0.0,
+        "world_pair_invariance": 1.0,
+        "world_pair_invariant_correct": 1.0,
+        "target_correct_change": 0.0,
+        "unrelated_pair_invariance": 0.5,
+        "unrelated_pair_invariant_correct": 0.0,
+        "paired_joint_correct": 0.0,
+        "all_four_joint_correct": 0.0
+      }
+    }
+  },
+  "interpretation": "Constructed text-state diagnostic; not visual compilation or Habitat physics. Link/attribution deletion removes information. Prose is lossless serialization, not independently updated natural-language memory."
+}
