@@ -1,0 +1,204 @@
+[
+  {
+    "split": "hard",
+    "category": "cooperative",
+    "tom_level": 3,
+    "num_agents": 3,
+    "task_id": "emtom-104348082_171512994-1781-cooperative-tea-reset-with-a-relayed-bedroom-table-c-5e9e0b5c",
+    "title": "Tea reset with a relayed bedroom table choice",
+    "episode_id": "1781",
+    "active_mechanics": [
+      "room_restriction",
+      "limited_bandwidth",
+      "restricted_communication"
+    ],
+    "tom_level_method": "syntactic_fallback",
+    "task_source": "workdirs/habitat_memory_controls_20260922_v1/source/mechanism_tasks/development12/hard_104348082_171512994_1781.json",
+    "task_sha256": "4270dbea74ea8985ea31813e1af7545b814a2549cdd9eca5b8a035ed109dbfd4"
+  },
+  {
+    "split": "hard",
+    "category": "mixed",
+    "tom_level": 3,
+    "num_agents": 3,
+    "task_id": "emtom-104862639_172226823-1013-mixed-quiet-museum-reset-with-a-relayed-drawer-5f2c5fa7",
+    "title": "Quiet museum reset with a relayed drawer check",
+    "episode_id": "1013",
+    "active_mechanics": [
+      "room_restriction",
+      "limited_bandwidth",
+      "restricted_communication"
+    ],
+    "tom_level_method": "strict_fd",
+    "task_source": "workdirs/habitat_memory_controls_20260922_v1/source/mechanism_tasks/development12/hard_104862639_172226823_1013.json",
+    "task_sha256": "dbf383a4ee5fcaf6a49a43ea4a576ba89239846ff9c8bf6d1d71601d2f070a07"
+  },
+  {
+    "split": "hard",
+    "category": "mixed",
+    "tom_level": 3,
+    "num_agents": 3,
+    "task_id": "emtom-104862639_172226823-623-mixed-laundry-to-kitchen-reset-with-relayed-fr-38041058",
+    "title": "Laundry-to-kitchen reset with relayed fridge confirmation",
+    "episode_id": "623",
+    "active_mechanics": [
+      "room_restriction",
+      "limited_bandwidth",
+      "restricted_communication"
+    ],
+    "tom_level_method": "strict_fd",
+    "task_source": "workdirs/habitat_memory_controls_20260922_v1/source/mechanism_tasks/development12/hard_104862639_172226823_623.json",
+    "task_sha256": "88869e8d0032a1110c04786c530d4c47da80aa8c6188a7c25cb4fa08016402a1"
+  },
+  {
+    "split": "hard",
+    "category": "mixed",
+    "tom_level": 3,
+    "num_agents": 3,
+    "task_id": "emtom-107734479_176000442-744-mixed-relay-the-correct-family-room-table-for--d901a915",
+    "title": "Relay the correct family-room table for the staging check",
+    "episode_id": "744",
+    "active_mechanics": [
+      "room_restriction",
+      "limited_bandwidth",
+      "restricted_communication"
+    ],
+    "tom_level_method": "syntactic_fallback",
+    "task_source": "workdirs/habitat_memory_controls_20260922_v1/source/mechanism_tasks/development12/hard_107734479_176000442_744.json",
+    "task_sha256": "949d5abd7099feea195f56390fae50038d0a7986ca6feb3c1f62f38f989898e4"
+  },
+  {
+    "split": "hard",
+    "category": "mixed",
+    "tom_level": 3,
+    "num_agents": 3,
+    "task_id": "emtom-108294897_176710602-1166-mixed-guest-reset-with-a-hidden-bedroom-box-an-96b292f9",
+    "title": "Guest reset with a hidden bedroom box and fridge confirmation",
+    "episode_id": "1166",
+    "active_mechanics": [
+      "room_restriction",
+      "limited_bandwidth",
+      "restricted_communication"
+    ],
+    "tom_level_method": "strict_fd",
+    "task_source": "workdirs/habitat_memory_controls_20260922_v1/source/mechanism_tasks/development12/hard_108294897_176710602_1166.json",
+    "task_sha256": "bf6c7674117402d3f20cb431679818d601a91ec84be166269749720a60b72261"
+  },
+  {
+    "split": "hard",
+    "category": "cooperative",
+    "tom_level": 3,
+    "num_agents": 3,
+    "task_id": "emtom-108294897_176710602-772-cooperative-exhibit-reset-with-split-object-target-k-41a5f8ab",
+    "title": "Exhibit reset with split object-target knowledge",
+    "episode_id": "772",
+    "active_mechanics": [
+      "room_restriction",
+      "limited_bandwidth",
+      "restricted_communication"
+    ],
+    "tom_level_method": "syntactic_fallback",
+    "task_source": "workdirs/habitat_memory_controls_20260922_v1/source/mechanism_tasks/development12/hard_108294897_176710602_772.json",
+    "task_sha256": "78a2d8593e25cd40e2926c74802b28826ebb3962af40a1688cda5b693b3ba7d4"
+  },
+  {
+    "split": "standard",
+    "category": "cooperative",
+    "tom_level": 2,
+    "num_agents": 2,
+    "task_id": "emtom-104348082_171512994-588-cooperative-inspection-staging-with-a-hidden-correct-8487f942",
+    "title": "Inspection staging with a hidden correct surface",
+    "episode_id": "588",
+    "active_mechanics": [
+      "room_restriction",
+      "limited_bandwidth",
+      "remote_control"
+    ],
+    "tom_level_method": "strict_fd",
+    "task_source": "workdirs/habitat_memory_controls_20260922_v1/source/mechanism_tasks/development12/standard_104348082_171512994_588.json",
+    "task_sha256": "a9162841b01c5d85b7e0bea2eab3b65aff6f6aff4bbdd9a06586272af8e382d9"
+  },
+  {
+    "split": "standard",
+    "category": "mixed",
+    "tom_level": 2,
+    "num_agents": 3,
+    "task_id": "emtom-104348082_171512994-983-mixed-staging-check-jug-placement-cabinet-stat-eccb2531",
+    "title": "Staging check: jug placement, cabinet state, and second-order confirmation",
+    "episode_id": "983",
+    "active_mechanics": [
+      "room_restriction",
+      "limited_bandwidth",
+      "restricted_communication"
+    ],
+    "tom_level_method": "syntactic_fallback",
+    "task_source": "workdirs/habitat_memory_controls_20260922_v1/source/mechanism_tasks/development12/standard_104348082_171512994_983.json",
+    "task_sha256": "f11437d2d00d0f6da7c80bb4aa39e3c0f03a57bba8ad22e41288d29700ead795"
+  },
+  {
+    "split": "standard",
+    "category": "cooperative",
+    "tom_level": 1,
+    "num_agents": 3,
+    "task_id": "emtom-104862639_172226823-618-cooperative-walkthrough-briefing-under-access-and-co-7854fc84",
+    "title": "Walkthrough briefing under access and comm limits",
+    "episode_id": "618",
+    "active_mechanics": [
+      "room_restriction",
+      "limited_bandwidth",
+      "restricted_communication"
+    ],
+    "tom_level_method": "strict_fd",
+    "task_source": "workdirs/habitat_memory_controls_20260922_v1/source/mechanism_tasks/development12/standard_104862639_172226823_618.json",
+    "task_sha256": "9d4a431336583559e25886df6c225f694321094d8c32d8d3c14d628d720e3088"
+  },
+  {
+    "split": "standard",
+    "category": "cooperative",
+    "tom_level": 2,
+    "num_agents": 3,
+    "task_id": "emtom-104862639_172226823-619-cooperative-gallery-reset-with-a-relay-only-reveal-d649a9e6",
+    "title": "Gallery reset with a relay-only reveal",
+    "episode_id": "619",
+    "active_mechanics": [
+      "room_restriction",
+      "limited_bandwidth",
+      "restricted_communication"
+    ],
+    "tom_level_method": "syntactic_fallback",
+    "task_source": "workdirs/habitat_memory_controls_20260922_v1/source/mechanism_tasks/development12/standard_104862639_172226823_619.json",
+    "task_sha256": "0eea8620e5e232db1d1d9da9d1b568a950591eb65f7d6916e338cc2a12cc1385"
+  },
+  {
+    "split": "standard",
+    "category": "mixed",
+    "tom_level": 2,
+    "num_agents": 3,
+    "task_id": "emtom-107734479_176000442-1526-mixed-courier-prep-with-a-hidden-cabinet-choic-74e271e4",
+    "title": "Courier prep with a hidden cabinet choice",
+    "episode_id": "1526",
+    "active_mechanics": [
+      "room_restriction",
+      "limited_bandwidth"
+    ],
+    "tom_level_method": "strict_fd",
+    "task_source": "workdirs/habitat_memory_controls_20260922_v1/source/mechanism_tasks/development12/standard_107734479_176000442_1526.json",
+    "task_sha256": "57b2a48b71db669452425a63cee308858eef80c445767264943e5e01a41b063a"
+  },
+  {
+    "split": "standard",
+    "category": "mixed",
+    "tom_level": 1,
+    "num_agents": 2,
+    "task_id": "emtom-108294897_176710602-1566-mixed-safety-prep-with-a-private-checklist-ite-2016757d",
+    "title": "Safety prep with a private checklist item",
+    "episode_id": "1566",
+    "active_mechanics": [
+      "room_restriction",
+      "limited_bandwidth"
+    ],
+    "tom_level_method": "strict_fd",
+    "task_source": "workdirs/habitat_memory_controls_20260922_v1/source/mechanism_tasks/development12/standard_108294897_176710602_1566.json",
+    "task_sha256": "18ed09ac245bcbae18472287401894319973a74d898401af283f2a33599d40d2"
+  }
+]

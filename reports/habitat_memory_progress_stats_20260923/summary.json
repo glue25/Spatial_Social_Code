@@ -1,0 +1,47 @@
+{
+  "seed": 891011,
+  "tasks_per_condition": 12,
+  "rollouts": 24,
+  "variance_estimator": "Sample variance across the12 task fractions at each round, ddof=1.",
+  "band": "Mean +/-1 between-task sample SD. Not SE, confidence interval or variability across seeds.",
+  "band_display": "Axes restricted to0–100%; portions outside are visually clipped, not truncated in CSV.",
+  "paired_difference": "Statistics of within-task SSC minus NL differences; covariance preserved, not independent-arm variance sum.",
+  "final_round": {
+    "nl_dynamic_v2": {
+      "turn": 20,
+      "condition": "nl_dynamic_v2",
+      "n_tasks": 12,
+      "mean_percent": 84.02777777777779,
+      "sample_variance_fraction_squared": 0.04855850168350169,
+      "sample_variance_pp_squared": 485.5850168350169,
+      "sample_sd_pp": 22.035993665705593,
+      "mean_minus_sd_percent": 61.99178411207219,
+      "mean_plus_sd_percent": 106.06377144348338
+    },
+    "dynamic_ssc": {
+      "turn": 20,
+      "condition": "dynamic_ssc",
+      "n_tasks": 12,
+      "mean_percent": 89.58333333333334,
+      "sample_variance_fraction_squared": 0.02414772727272728,
+      "sample_variance_pp_squared": 241.47727272727278,
+      "sample_sd_pp": 15.539539012701528,
+      "mean_minus_sd_percent": 74.0437943206318,
+      "mean_plus_sd_percent": 105.12287234603485
+    }
+  },
+  "sample_policy": "Exactly the same complete first-seed12-task cohort as the original curve, including failures and service-affected NL job35; no additional outcomes selected.",
+  "scope": "Matched dynamic natural-language state readout, not general memory systems. Same updater/access rules/per-call caps; actual compute may differ. Later paused/incomplete seeds not pooled.",
+  "interpretation": "Curves still cross; uncertainty display does not turn the result into a monotonic/earlier-completion advantage. One seed cannot estimate between-seed variability.",
+  "source_sha256": "023eb94eb44b65ca8991e9dca7757071efe5dd2c15277e772b98436d132e7e71",
+  "script_sha256": "cec6ac92a178ab696c77fab4da2bff74157c89629e4b747a2176118370c6db3d",
+  "exports_sha256": {
+    "mean_variance_by_turn.csv": "ed854bb2264aef519b59dd7ed8a7046283e13498554088963c26174d1d7c3a16",
+    "per_rollout_measurements.json": "023eb94eb44b65ca8991e9dca7757071efe5dd2c15277e772b98436d132e7e71",
+    "panel_d_mean_sd.pdf": "4001af21bbc88486675f4f706eb250b64f357bfad3dbf572ffcc1322407522de",
+    "paired_difference_stats_by_turn.csv": "3d9f5a7b840d722ce199ceaebb20de248e9806aea70a006f675251b3a27fddbb",
+    "README.md": "79bbcf641fac74edd4f2eee989ae36cfa7eb913416a2ca6be199da586a335dea",
+    "panel_d_mean_sd.png": "7f52cf07c35b2a9827cbf06d274bd19703f9fdccb6db2f7ae54f4d0f39255b7a",
+    "panel_d_mean_sd.svg": "8123273176e3450ac339b3ce45966b2164f38135233e4ba909410f038cad3ac9"
+  }
+}

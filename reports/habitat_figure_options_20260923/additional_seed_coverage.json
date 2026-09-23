@@ -1,0 +1,341 @@
+[
+  {
+    "seed": 891012,
+    "task_id": "emtom-104348082_171512994-1781-cooperative-tea-reset-with-a-relayed-bedroom-table-c-5e9e0b5c",
+    "condition": "nl_dynamic_v2",
+    "job_index": 60,
+    "status": "started_without_result",
+    "last_observed_turn": 8,
+    "physical_checks_sha256": "bd01992255ef5ef7821b3e0deb90d454622f0bea8d8ffa52b7e69c03e3639fa4",
+    "handling": "No final score imputed; not a terminal trajectory or substitute seed."
+  },
+  {
+    "seed": 891012,
+    "task_id": "emtom-104348082_171512994-1781-cooperative-tea-reset-with-a-relayed-bedroom-table-c-5e9e0b5c",
+    "condition": "dynamic_ssc",
+    "job_index": 62,
+    "status": "not_started"
+  },
+  {
+    "seed": 891012,
+    "task_id": "emtom-104862639_172226823-1013-mixed-quiet-museum-reset-with-a-relayed-drawer-5f2c5fa7",
+    "condition": "nl_dynamic_v2",
+    "job_index": 65,
+    "status": "not_started"
+  },
+  {
+    "seed": 891012,
+    "task_id": "emtom-104862639_172226823-1013-mixed-quiet-museum-reset-with-a-relayed-drawer-5f2c5fa7",
+    "condition": "dynamic_ssc",
+    "job_index": 67,
+    "status": "not_started"
+  },
+  {
+    "seed": 891012,
+    "task_id": "emtom-104862639_172226823-623-mixed-laundry-to-kitchen-reset-with-relayed-fr-38041058",
+    "condition": "nl_dynamic_v2",
+    "job_index": 70,
+    "status": "not_started"
+  },
+  {
+    "seed": 891012,
+    "task_id": "emtom-104862639_172226823-623-mixed-laundry-to-kitchen-reset-with-relayed-fr-38041058",
+    "condition": "dynamic_ssc",
+    "job_index": 72,
+    "status": "not_started"
+  },
+  {
+    "seed": 891012,
+    "task_id": "emtom-107734479_176000442-744-mixed-relay-the-correct-family-room-table-for--d901a915",
+    "condition": "nl_dynamic_v2",
+    "job_index": 75,
+    "status": "not_started"
+  },
+  {
+    "seed": 891012,
+    "task_id": "emtom-107734479_176000442-744-mixed-relay-the-correct-family-room-table-for--d901a915",
+    "condition": "dynamic_ssc",
+    "job_index": 77,
+    "status": "not_started"
+  },
+  {
+    "seed": 891012,
+    "task_id": "emtom-108294897_176710602-1166-mixed-guest-reset-with-a-hidden-bedroom-box-an-96b292f9",
+    "condition": "nl_dynamic_v2",
+    "job_index": 80,
+    "status": "not_started"
+  },
+  {
+    "seed": 891012,
+    "task_id": "emtom-108294897_176710602-1166-mixed-guest-reset-with-a-hidden-bedroom-box-an-96b292f9",
+    "condition": "dynamic_ssc",
+    "job_index": 82,
+    "status": "not_started"
+  },
+  {
+    "seed": 891012,
+    "task_id": "emtom-108294897_176710602-772-cooperative-exhibit-reset-with-split-object-target-k-41a5f8ab",
+    "condition": "nl_dynamic_v2",
+    "job_index": 85,
+    "status": "not_started"
+  },
+  {
+    "seed": 891012,
+    "task_id": "emtom-108294897_176710602-772-cooperative-exhibit-reset-with-split-object-target-k-41a5f8ab",
+    "condition": "dynamic_ssc",
+    "job_index": 87,
+    "status": "not_started"
+  },
+  {
+    "seed": 891012,
+    "task_id": "emtom-104348082_171512994-588-cooperative-inspection-staging-with-a-hidden-correct-8487f942",
+    "condition": "nl_dynamic_v2",
+    "job_index": 90,
+    "status": "not_started"
+  },
+  {
+    "seed": 891012,
+    "task_id": "emtom-104348082_171512994-588-cooperative-inspection-staging-with-a-hidden-correct-8487f942",
+    "condition": "dynamic_ssc",
+    "job_index": 92,
+    "status": "not_started"
+  },
+  {
+    "seed": 891012,
+    "task_id": "emtom-104348082_171512994-983-mixed-staging-check-jug-placement-cabinet-stat-eccb2531",
+    "condition": "nl_dynamic_v2",
+    "job_index": 95,
+    "status": "not_started"
+  },
+  {
+    "seed": 891012,
+    "task_id": "emtom-104348082_171512994-983-mixed-staging-check-jug-placement-cabinet-stat-eccb2531",
+    "condition": "dynamic_ssc",
+    "job_index": 97,
+    "status": "not_started"
+  },
+  {
+    "seed": 891012,
+    "task_id": "emtom-104862639_172226823-618-cooperative-walkthrough-briefing-under-access-and-co-7854fc84",
+    "condition": "nl_dynamic_v2",
+    "job_index": 100,
+    "status": "not_started"
+  },
+  {
+    "seed": 891012,
+    "task_id": "emtom-104862639_172226823-618-cooperative-walkthrough-briefing-under-access-and-co-7854fc84",
+    "condition": "dynamic_ssc",
+    "job_index": 102,
+    "status": "not_started"
+  },
+  {
+    "seed": 891012,
+    "task_id": "emtom-104862639_172226823-619-cooperative-gallery-reset-with-a-relay-only-reveal-d649a9e6",
+    "condition": "nl_dynamic_v2",
+    "job_index": 105,
+    "status": "not_started"
+  },
+  {
+    "seed": 891012,
+    "task_id": "emtom-104862639_172226823-619-cooperative-gallery-reset-with-a-relay-only-reveal-d649a9e6",
+    "condition": "dynamic_ssc",
+    "job_index": 107,
+    "status": "not_started"
+  },
+  {
+    "seed": 891012,
+    "task_id": "emtom-107734479_176000442-1526-mixed-courier-prep-with-a-hidden-cabinet-choic-74e271e4",
+    "condition": "nl_dynamic_v2",
+    "job_index": 110,
+    "status": "not_started"
+  },
+  {
+    "seed": 891012,
+    "task_id": "emtom-107734479_176000442-1526-mixed-courier-prep-with-a-hidden-cabinet-choic-74e271e4",
+    "condition": "dynamic_ssc",
+    "job_index": 112,
+    "status": "not_started"
+  },
+  {
+    "seed": 891012,
+    "task_id": "emtom-108294897_176710602-1566-mixed-safety-prep-with-a-private-checklist-ite-2016757d",
+    "condition": "nl_dynamic_v2",
+    "job_index": 115,
+    "status": "not_started"
+  },
+  {
+    "seed": 891012,
+    "task_id": "emtom-108294897_176710602-1566-mixed-safety-prep-with-a-private-checklist-ite-2016757d",
+    "condition": "dynamic_ssc",
+    "job_index": 117,
+    "status": "not_started"
+  },
+  {
+    "seed": 891013,
+    "task_id": "emtom-104348082_171512994-1781-cooperative-tea-reset-with-a-relayed-bedroom-table-c-5e9e0b5c",
+    "condition": "nl_dynamic_v2",
+    "job_index": 120,
+    "status": "completed"
+  },
+  {
+    "seed": 891013,
+    "task_id": "emtom-104348082_171512994-1781-cooperative-tea-reset-with-a-relayed-bedroom-table-c-5e9e0b5c",
+    "condition": "dynamic_ssc",
+    "job_index": 122,
+    "status": "completed"
+  },
+  {
+    "seed": 891013,
+    "task_id": "emtom-104862639_172226823-1013-mixed-quiet-museum-reset-with-a-relayed-drawer-5f2c5fa7",
+    "condition": "nl_dynamic_v2",
+    "job_index": 125,
+    "status": "completed"
+  },
+  {
+    "seed": 891013,
+    "task_id": "emtom-104862639_172226823-1013-mixed-quiet-museum-reset-with-a-relayed-drawer-5f2c5fa7",
+    "condition": "dynamic_ssc",
+    "job_index": 127,
+    "status": "completed"
+  },
+  {
+    "seed": 891013,
+    "task_id": "emtom-104862639_172226823-623-mixed-laundry-to-kitchen-reset-with-relayed-fr-38041058",
+    "condition": "nl_dynamic_v2",
+    "job_index": 130,
+    "status": "completed"
+  },
+  {
+    "seed": 891013,
+    "task_id": "emtom-104862639_172226823-623-mixed-laundry-to-kitchen-reset-with-relayed-fr-38041058",
+    "condition": "dynamic_ssc",
+    "job_index": 132,
+    "status": "completed"
+  },
+  {
+    "seed": 891013,
+    "task_id": "emtom-107734479_176000442-744-mixed-relay-the-correct-family-room-table-for--d901a915",
+    "condition": "nl_dynamic_v2",
+    "job_index": 135,
+    "status": "completed"
+  },
+  {
+    "seed": 891013,
+    "task_id": "emtom-107734479_176000442-744-mixed-relay-the-correct-family-room-table-for--d901a915",
+    "condition": "dynamic_ssc",
+    "job_index": 137,
+    "status": "completed"
+  },
+  {
+    "seed": 891013,
+    "task_id": "emtom-108294897_176710602-1166-mixed-guest-reset-with-a-hidden-bedroom-box-an-96b292f9",
+    "condition": "nl_dynamic_v2",
+    "job_index": 140,
+    "status": "not_started"
+  },
+  {
+    "seed": 891013,
+    "task_id": "emtom-108294897_176710602-1166-mixed-guest-reset-with-a-hidden-bedroom-box-an-96b292f9",
+    "condition": "dynamic_ssc",
+    "job_index": 142,
+    "status": "not_started"
+  },
+  {
+    "seed": 891013,
+    "task_id": "emtom-108294897_176710602-772-cooperative-exhibit-reset-with-split-object-target-k-41a5f8ab",
+    "condition": "nl_dynamic_v2",
+    "job_index": 145,
+    "status": "not_started"
+  },
+  {
+    "seed": 891013,
+    "task_id": "emtom-108294897_176710602-772-cooperative-exhibit-reset-with-split-object-target-k-41a5f8ab",
+    "condition": "dynamic_ssc",
+    "job_index": 147,
+    "status": "not_started"
+  },
+  {
+    "seed": 891013,
+    "task_id": "emtom-104348082_171512994-588-cooperative-inspection-staging-with-a-hidden-correct-8487f942",
+    "condition": "nl_dynamic_v2",
+    "job_index": 150,
+    "status": "not_started"
+  },
+  {
+    "seed": 891013,
+    "task_id": "emtom-104348082_171512994-588-cooperative-inspection-staging-with-a-hidden-correct-8487f942",
+    "condition": "dynamic_ssc",
+    "job_index": 152,
+    "status": "not_started"
+  },
+  {
+    "seed": 891013,
+    "task_id": "emtom-104348082_171512994-983-mixed-staging-check-jug-placement-cabinet-stat-eccb2531",
+    "condition": "nl_dynamic_v2",
+    "job_index": 155,
+    "status": "not_started"
+  },
+  {
+    "seed": 891013,
+    "task_id": "emtom-104348082_171512994-983-mixed-staging-check-jug-placement-cabinet-stat-eccb2531",
+    "condition": "dynamic_ssc",
+    "job_index": 157,
+    "status": "not_started"
+  },
+  {
+    "seed": 891013,
+    "task_id": "emtom-104862639_172226823-618-cooperative-walkthrough-briefing-under-access-and-co-7854fc84",
+    "condition": "nl_dynamic_v2",
+    "job_index": 160,
+    "status": "not_started"
+  },
+  {
+    "seed": 891013,
+    "task_id": "emtom-104862639_172226823-618-cooperative-walkthrough-briefing-under-access-and-co-7854fc84",
+    "condition": "dynamic_ssc",
+    "job_index": 162,
+    "status": "not_started"
+  },
+  {
+    "seed": 891013,
+    "task_id": "emtom-104862639_172226823-619-cooperative-gallery-reset-with-a-relay-only-reveal-d649a9e6",
+    "condition": "nl_dynamic_v2",
+    "job_index": 165,
+    "status": "not_started"
+  },
+  {
+    "seed": 891013,
+    "task_id": "emtom-104862639_172226823-619-cooperative-gallery-reset-with-a-relay-only-reveal-d649a9e6",
+    "condition": "dynamic_ssc",
+    "job_index": 167,
+    "status": "not_started"
+  },
+  {
+    "seed": 891013,
+    "task_id": "emtom-107734479_176000442-1526-mixed-courier-prep-with-a-hidden-cabinet-choic-74e271e4",
+    "condition": "nl_dynamic_v2",
+    "job_index": 170,
+    "status": "not_started"
+  },
+  {
+    "seed": 891013,
+    "task_id": "emtom-107734479_176000442-1526-mixed-courier-prep-with-a-hidden-cabinet-choic-74e271e4",
+    "condition": "dynamic_ssc",
+    "job_index": 172,
+    "status": "not_started"
+  },
+  {
+    "seed": 891013,
+    "task_id": "emtom-108294897_176710602-1566-mixed-safety-prep-with-a-private-checklist-ite-2016757d",
+    "condition": "nl_dynamic_v2",
+    "job_index": 175,
+    "status": "not_started"
+  },
+  {
+    "seed": 891013,
+    "task_id": "emtom-108294897_176710602-1566-mixed-safety-prep-with-a-private-checklist-ite-2016757d",
+    "condition": "dynamic_ssc",
+    "job_index": 177,
+    "status": "not_started"
+  }
+]

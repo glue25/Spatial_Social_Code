@@ -1,0 +1,50 @@
+[
+  {
+    "seed": 891011,
+    "condition": "nl_dynamic_v2",
+    "n_tasks": 4,
+    "successes": 1,
+    "mean_percent": 68.75,
+    "sample_variance_fraction_squared": 0.07581018518518519,
+    "sample_variance_pp_squared": 758.1018518518518,
+    "sample_sd_pp": 27.533649446665294,
+    "mean_minus_sd_percent": 41.216350553334706,
+    "mean_plus_sd_percent": 96.2836494466653
+  },
+  {
+    "seed": 891011,
+    "condition": "dynamic_ssc",
+    "n_tasks": 4,
+    "successes": 2,
+    "mean_percent": 85.41666666666666,
+    "sample_variance_fraction_squared": 0.029513888888888895,
+    "sample_variance_pp_squared": 295.13888888888897,
+    "sample_sd_pp": 17.17960677340692,
+    "mean_minus_sd_percent": 68.23705989325974,
+    "mean_plus_sd_percent": 102.59627344007359
+  },
+  {
+    "seed": 891013,
+    "condition": "nl_dynamic_v2",
+    "n_tasks": 4,
+    "successes": 1,
+    "mean_percent": 58.33333333333333,
+    "sample_variance_fraction_squared": 0.10185185185185186,
+    "sample_variance_pp_squared": 1018.5185185185186,
+    "sample_sd_pp": 31.91423692521127,
+    "mean_minus_sd_percent": 26.419096408122055,
+    "mean_plus_sd_percent": 90.2475702585446
+  },
+  {
+    "seed": 891013,
+    "condition": "dynamic_ssc",
+    "n_tasks": 4,
+    "successes": 2,
+    "mean_percent": 58.333333333333336,
+    "sample_variance_fraction_squared": 0.25,
+    "sample_variance_pp_squared": 2500.0,
+    "sample_sd_pp": 50.0,
+    "mean_minus_sd_percent": 8.333333333333337,
+    "mean_plus_sd_percent": 108.33333333333334
+  }
+]
