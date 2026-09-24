@@ -1,0 +1,22 @@
+{
+  "category": "theory_of_mind",
+  "subcategory": "theory_of_mind",
+  "question": "What was Lucia's misunderstanding about the sesame sauce?",
+  "options": [
+    "She assumed it had been left in the kitchen downstairs.",
+    "She believed it was actually baking ingredients.",
+    "She thought it wasn’t prepared or available.",
+    "She believed Shure had thrown it away by mistake.",
+    "She thought it had already been used during cooking."
+  ],
+  "answer": "She believed it was actually baking ingredients.",
+  "contexts": {
+    "DAY2_18200000_18250000": [
+      "JAKE",
+      "ALICE",
+      "TASHA",
+      "LUCIA",
+      "SHURE"
+    ]
+  }
+}

@@ -1,0 +1,130 @@
+{
+  "schema_version": 9,
+  "method": "Evidence-audited standalone Spatial-Social Video",
+  "model": "Gemini 3-Pro-Preview",
+  "index": 886,
+  "category": "theory_of_mind",
+  "subcategory": "theory_of_mind",
+  "answer_index": 1,
+  "video_clips": [
+    {
+      "id": "DAY2_A6_SHURE_17110000.mp4",
+      "score": 38.00569681786114,
+      "agent": "",
+      "query": "What was Lucia's misunderstanding about the sesame sauce? She assumed it had been left in the kitchen downstairs.",
+      "retrieval_source": "option",
+      "option": "A"
+    },
+    {
+      "id": "DAY2_A3_TASHA_18210000.mp4",
+      "score": 34.438985590209505,
+      "agent": "",
+      "query": "What was Lucia's misunderstanding about the sesame sauce? She believed it was actually baking ingredients.",
+      "retrieval_source": "option",
+      "option": "B"
+    },
+    {
+      "id": "DAY1_A6_SHURE_17523000.mp4",
+      "score": 34.57210082364006,
+      "agent": "",
+      "query": "What was Lucia's misunderstanding about the sesame sauce? She thought it wasn’t prepared or available.",
+      "retrieval_source": "option",
+      "option": "C"
+    },
+    {
+      "id": "DAY1_A3_TASHA_17523000.mp4",
+      "score": 31.017593958499138,
+      "agent": "",
+      "query": "What was Lucia's misunderstanding about the sesame sauce? She believed Shure had thrown it away by mistake.",
+      "retrieval_source": "option",
+      "option": "D"
+    },
+    {
+      "id": "DAY5_A6_SHURE_20590000.mp4",
+      "score": 34.15990881348233,
+      "agent": "",
+      "query": "What was Lucia's misunderstanding about the sesame sauce? She thought it had already been used during cooking.",
+      "retrieval_source": "option",
+      "option": "E"
+    },
+    {
+      "id": "DAY1_A4_LUCIA_17523000.mp4",
+      "score": 22.677225100820607,
+      "agent": "LUCIA",
+      "query": "misunderstanding about the sesame sauce",
+      "retrieval_source": "planner"
+    },
+    {
+      "id": "DAY2_A6_SHURE_17210000.mp4",
+      "score": 22.035582400659514,
+      "agent": "SHURE",
+      "query": "Lucia's misunderstanding about the sesame sauce",
+      "retrieval_source": "planner"
+    },
+    {
+      "id": "DAY2_A3_TASHA_18190000.mp4",
+      "score": 36.725543198981704,
+      "agent": "",
+      "query": "What was Lucia's misunderstanding about the sesame sauce? She assumed it had been left in the kitchen downstairs.",
+      "retrieval_source": "option",
+      "option": "A"
+    },
+    {
+      "id": "DAY3_A1_JAKE_20170000.mp4",
+      "score": 32.852768539123026,
+      "agent": "",
+      "query": "What was Lucia's misunderstanding about the sesame sauce? She thought it had already been used during cooking.",
+      "retrieval_source": "option",
+      "option": "E"
+    },
+    {
+      "id": "DAY2_A6_SHURE_18210000.mp4",
+      "score": 31.234755972390396,
+      "agent": "",
+      "query": "What was Lucia's misunderstanding about the sesame sauce? She believed it was actually baking ingredients.",
+      "retrieval_source": "option",
+      "option": "B"
+    }
+  ],
+  "baseline_prediction_index": 2,
+  "baseline_correct": false,
+  "claim_plan_raw": "",
+  "claim_plan": [],
+  "covered_claim_ids_before_repair": [],
+  "covered_claim_ids": [],
+  "repair_triggered": false,
+  "claim_coverage": null,
+  "spatial_raw": "S.event(1, \"Lucia\", \"speak\", \"Shure\", source=\"video\", confidence=0.9, evidence_id=\"S1\", clip_id=\"DAY2_A6_SHURE_18210000.mp4\", observer=\"Shure\", evidence_span=\"00:03-00:06\", quote=\"确定没有,我感觉那一块儿就是一些烘焙原料\", event_role=\"speaker\", phase=\"during\")\nS.event(2, \"Shure\", \"speak\", \"Lucia\", source=\"video\", confidence=0.9, evidence_id=\"S2\", clip_id=\"DAY2_A6_SHURE_18210000.mp4\", observer=\"Shure\", evidence_span=\"00:06-00:08\", quote=\"不,它那一小碗就是麻酱\", event_role=\"speaker\", phase=\"during\")\nS.event(3, \"Lucia\", \"speak\", \"Shure\", source=\"video\", confidence=0.9, evidence_id=\"S3\", clip_id=\"DAY2_A6_SHURE_18210000.mp4\", observer=\"Shure\", evidence_span=\"00:08-00:09\", quote=\"啊?\", event_role=\"speaker\", phase=\"during\")\nS.event(4, \"Shure\", \"speak\", \"Lucia\", source=\"video\", confidence=0.9, evidence_id=\"S4\", clip_id=\"DAY2_A6_SHURE_18210000.mp4\", observer=\"Shure\", evidence_span=\"00:09-00:12\", quote=\"对,那个碗是我卸好的麻酱\", event_role=\"speaker\", phase=\"during\")",
+  "spatial_repair_raw": "",
+  "spatial_repair_code": "",
+  "spatial_code": "S.event(1, \"Lucia\", \"speak\", \"Shure\", source=\"video\", confidence=0.9, evidence_id=\"S1\", clip_id=\"DAY2_A6_SHURE_18210000.mp4\", observer=\"Shure\", evidence_span=\"00:03-00:06\", quote=\"确定没有,我感觉那一块儿就是一些烘焙原料\", event_role=\"speaker\", phase=\"during\")\nS.event(2, \"Shure\", \"speak\", \"Lucia\", source=\"video\", confidence=0.9, evidence_id=\"S2\", clip_id=\"DAY2_A6_SHURE_18210000.mp4\", observer=\"Shure\", evidence_span=\"00:06-00:08\", quote=\"不,它那一小碗就是麻酱\", event_role=\"speaker\", phase=\"during\")\nS.event(3, \"Lucia\", \"speak\", \"Shure\", source=\"video\", confidence=0.9, evidence_id=\"S3\", clip_id=\"DAY2_A6_SHURE_18210000.mp4\", observer=\"Shure\", evidence_span=\"00:08-00:09\", quote=\"啊?\", event_role=\"speaker\", phase=\"during\")\nS.event(4, \"Shure\", \"speak\", \"Lucia\", source=\"video\", confidence=0.9, evidence_id=\"S4\", clip_id=\"DAY2_A6_SHURE_18210000.mp4\", observer=\"Shure\", evidence_span=\"00:09-00:12\", quote=\"对,那个碗是我卸好的麻酱\", event_role=\"speaker\", phase=\"during\")",
+  "spatial_trace": "{\"kind\": \"event\", \"values\": {\"action\": \"speak\", \"actor\": \"Lucia\", \"clip_id\": \"DAY2_A6_SHURE_18210000.mp4\", \"confidence\": 0.9, \"event_role\": \"speaker\", \"evidence_id\": \"S1\", \"evidence_span\": \"00:03-00:06\", \"observer\": \"Shure\", \"phase\": \"during\", \"quote\": \"确定没有,我感觉那一块儿就是一些烘焙原料\", \"source\": \"video\", \"t\": 1, \"target\": \"Shure\"}}\n{\"kind\": \"event\", \"values\": {\"action\": \"speak\", \"actor\": \"Shure\", \"clip_id\": \"DAY2_A6_SHURE_18210000.mp4\", \"confidence\": 0.9, \"event_role\": \"speaker\", \"evidence_id\": \"S2\", \"evidence_span\": \"00:06-00:08\", \"observer\": \"Shure\", \"phase\": \"during\", \"quote\": \"不,它那一小碗就是麻酱\", \"source\": \"video\", \"t\": 2, \"target\": \"Lucia\"}}\n{\"kind\": \"event\", \"values\": {\"action\": \"speak\", \"actor\": \"Lucia\", \"clip_id\": \"DAY2_A6_SHURE_18210000.mp4\", \"confidence\": 0.9, \"event_role\": \"speaker\", \"evidence_id\": \"S3\", \"evidence_span\": \"00:08-00:09\", \"observer\": \"Shure\", \"phase\": \"during\", \"quote\": \"啊?\", \"source\": \"video\", \"t\": 3, \"target\": \"Shure\"}}\n{\"kind\": \"event\", \"values\": {\"action\": \"speak\", \"actor\": \"Shure\", \"clip_id\": \"DAY2_A6_SHURE_18210000.mp4\", \"confidence\": 0.9, \"event_role\": \"speaker\", \"evidence_id\": \"S4\", \"evidence_span\": \"00:09-00:12\", \"observer\": \"Shure\", \"phase\": \"during\", \"quote\": \"对,那个碗是我卸好的麻酱\", \"source\": \"video\", \"t\": 4, \"target\": \"Lucia\"}}",
+  "valid_evidence_ids": [
+    "S1",
+    "S2",
+    "S3",
+    "S4"
+  ],
+  "social_raw": "M.observe(1, \"Shure\", \"Lucia says '确定没有,我感觉那一块儿就是一些烘焙原料'\", source=\"spatial_trace\", confidence=0.9, evidence_ids=\"S1\")\nM.belief(1, \"Lucia\", \"the items in that area are baking ingredients\", confidence=0.9, evidence=\"Lucia states she feels that area is just baking ingredients\", evidence_ids=\"S1\")\nM.observe(2, \"Shure\", \"Shure says '不,它那一小碗就是麻酱'\", source=\"spatial_trace\", confidence=0.9, evidence_ids=\"S2\")\nM.observe(4, \"Shure\", \"Shure says '对,那个碗是我卸好的麻酱'\", source=\"spatial_trace\", confidence=0.9, evidence_ids=\"S4\")",
+  "social_code": "M.observe(1, \"Shure\", \"Lucia says '确定没有,我感觉那一块儿就是一些烘焙原料'\", source=\"spatial_trace\", confidence=0.9, evidence_ids=\"S1\")\nM.belief(1, \"Lucia\", \"the items in that area are baking ingredients\", confidence=0.9, evidence=\"Lucia states she feels that area is just baking ingredients\", evidence_ids=\"S1\")\nM.observe(2, \"Shure\", \"Shure says '不,它那一小碗就是麻酱'\", source=\"spatial_trace\", confidence=0.9, evidence_ids=\"S2\")\nM.observe(4, \"Shure\", \"Shure says '对,那个碗是我卸好的麻酱'\", source=\"spatial_trace\", confidence=0.9, evidence_ids=\"S4\")",
+  "social_trace": "{\"kind\": \"observation\", \"values\": {\"agent\": \"Shure\", \"confidence\": 0.9, \"evidence_ids\": [\"S1\"], \"fact\": \"Lucia says '确定没有,我感觉那一块儿就是一些烘焙原料'\", \"source\": \"spatial_trace\", \"t\": 1}}\n{\"kind\": \"belief\", \"values\": {\"agent\": \"Lucia\", \"confidence\": 0.9, \"evidence\": \"Lucia states she feels that area is just baking ingredients\", \"evidence_ids\": [\"S1\"], \"fact\": \"the items in that area are baking ingredients\", \"t\": 1}}\n{\"kind\": \"observation\", \"values\": {\"agent\": \"Shure\", \"confidence\": 0.9, \"evidence_ids\": [\"S2\"], \"fact\": \"Shure says '不,它那一小碗就是麻酱'\", \"source\": \"spatial_trace\", \"t\": 2}}\n{\"kind\": \"observation\", \"values\": {\"agent\": \"Shure\", \"confidence\": 0.9, \"evidence_ids\": [\"S4\"], \"fact\": \"Shure says '对,那个碗是我卸好的麻酱'\", \"source\": \"spatial_trace\", \"t\": 4}}",
+  "structured_raw": "```json\n{\"answer\": \"B\", \"evidence_ids\": [\"S1\"], \"reason\": \"Lucia explicitly stated that she thought the items in that area were just baking ingredients, not realizing one of the bowls contained sesame sauce.\"}\n```",
+  "structured_initial_raw": "",
+  "answer_retry_used": false,
+  "structured_data": {
+    "answer": "B",
+    "evidence_ids": [
+      "S1"
+    ],
+    "reason": "Lucia explicitly stated that she thought the items in that area were just baking ingredients, not realizing one of the bowls contained sesame sauce."
+  },
+  "structured_prediction_index": 1,
+  "structured_correct": true,
+  "structured_citation_valid": true,
+  "prediction_index": 1,
+  "correct": true,
+  "elapsed_seconds": 53.3003512788564,
+  "audit_triggered": false,
+  "primary_prediction_index": 1,
+  "primary_correct": true
+}

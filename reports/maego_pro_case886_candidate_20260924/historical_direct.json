@@ -1,0 +1,103 @@
+{
+  "schema_version": 1,
+  "method": "Answer-symmetric raw-video retrieval baseline",
+  "model": "Gemini 3-Pro-Preview",
+  "index": 886,
+  "category": "theory_of_mind",
+  "subcategory": "theory_of_mind",
+  "answer_index": 1,
+  "selection": [
+    {
+      "name": "Lucia",
+      "query": "misunderstanding about the sesame sauce"
+    },
+    {
+      "name": "Shure",
+      "query": "Lucia's misunderstanding about the sesame sauce"
+    }
+  ],
+  "video_clips": [
+    {
+      "id": "DAY2_A6_SHURE_17110000.mp4",
+      "score": 38.00569681786114,
+      "agent": "",
+      "query": "What was Lucia's misunderstanding about the sesame sauce? She assumed it had been left in the kitchen downstairs.",
+      "retrieval_source": "option",
+      "option": "A"
+    },
+    {
+      "id": "DAY2_A3_TASHA_18210000.mp4",
+      "score": 34.438985590209505,
+      "agent": "",
+      "query": "What was Lucia's misunderstanding about the sesame sauce? She believed it was actually baking ingredients.",
+      "retrieval_source": "option",
+      "option": "B"
+    },
+    {
+      "id": "DAY1_A6_SHURE_17523000.mp4",
+      "score": 34.57210082364006,
+      "agent": "",
+      "query": "What was Lucia's misunderstanding about the sesame sauce? She thought it wasn’t prepared or available.",
+      "retrieval_source": "option",
+      "option": "C"
+    },
+    {
+      "id": "DAY1_A3_TASHA_17523000.mp4",
+      "score": 31.017593958499138,
+      "agent": "",
+      "query": "What was Lucia's misunderstanding about the sesame sauce? She believed Shure had thrown it away by mistake.",
+      "retrieval_source": "option",
+      "option": "D"
+    },
+    {
+      "id": "DAY5_A6_SHURE_20590000.mp4",
+      "score": 34.15990881348233,
+      "agent": "",
+      "query": "What was Lucia's misunderstanding about the sesame sauce? She thought it had already been used during cooking.",
+      "retrieval_source": "option",
+      "option": "E"
+    },
+    {
+      "id": "DAY1_A4_LUCIA_17523000.mp4",
+      "score": 22.677225100820607,
+      "agent": "LUCIA",
+      "query": "misunderstanding about the sesame sauce",
+      "retrieval_source": "planner"
+    },
+    {
+      "id": "DAY2_A6_SHURE_17210000.mp4",
+      "score": 22.035582400659514,
+      "agent": "SHURE",
+      "query": "Lucia's misunderstanding about the sesame sauce",
+      "retrieval_source": "planner"
+    },
+    {
+      "id": "DAY2_A3_TASHA_18190000.mp4",
+      "score": 36.725543198981704,
+      "agent": "",
+      "query": "What was Lucia's misunderstanding about the sesame sauce? She assumed it had been left in the kitchen downstairs.",
+      "retrieval_source": "option",
+      "option": "A"
+    },
+    {
+      "id": "DAY3_A1_JAKE_20170000.mp4",
+      "score": 32.852768539123026,
+      "agent": "",
+      "query": "What was Lucia's misunderstanding about the sesame sauce? She thought it had already been used during cooking.",
+      "retrieval_source": "option",
+      "option": "E"
+    },
+    {
+      "id": "DAY2_A6_SHURE_18210000.mp4",
+      "score": 31.234755972390396,
+      "agent": "",
+      "query": "What was Lucia's misunderstanding about the sesame sauce? She believed it was actually baking ingredients.",
+      "retrieval_source": "option",
+      "option": "B"
+    }
+  ],
+  "baseline_prediction_raw": "C",
+  "baseline_prediction_index": 2,
+  "baseline_correct": false,
+  "elapsed_seconds": 15.808507282286882
+}

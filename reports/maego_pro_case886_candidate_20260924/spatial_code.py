@@ -1,0 +1,4 @@
+S.event(1, "Lucia", "speak", "Shure", source="video", confidence=0.9, evidence_id="S1", clip_id="DAY2_A6_SHURE_18210000.mp4", observer="Shure", evidence_span="00:03-00:06", quote="确定没有,我感觉那一块儿就是一些烘焙原料", event_role="speaker", phase="during")
+S.event(2, "Shure", "speak", "Lucia", source="video", confidence=0.9, evidence_id="S2", clip_id="DAY2_A6_SHURE_18210000.mp4", observer="Shure", evidence_span="00:06-00:08", quote="不,它那一小碗就是麻酱", event_role="speaker", phase="during")
+S.event(3, "Lucia", "speak", "Shure", source="video", confidence=0.9, evidence_id="S3", clip_id="DAY2_A6_SHURE_18210000.mp4", observer="Shure", evidence_span="00:08-00:09", quote="啊?", event_role="speaker", phase="during")
+S.event(4, "Shure", "speak", "Lucia", source="video", confidence=0.9, evidence_id="S4", clip_id="DAY2_A6_SHURE_18210000.mp4", observer="Shure", evidence_span="00:09-00:12", quote="对,那个碗是我卸好的麻酱", event_role="speaker", phase="during")

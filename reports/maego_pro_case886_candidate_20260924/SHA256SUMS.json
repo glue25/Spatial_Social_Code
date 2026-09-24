@@ -1,0 +1,21 @@
+{
+  "A4_LUCIA_0060.jpg": "77302c086998481271dafcd3bce755df25878f61028d0f6a9e4800b6966875af",
+  "A4_LUCIA_0120.jpg": "2ead1b79b9cb5c7dee889c918ef271f391d8041e855e327de41874a04556b3d5",
+  "A4_LUCIA_0180.jpg": "12dc708da5d7baf4b749360e0e28e85ba4f8158b8a43bd763214e70f0fc41f6f",
+  "A4_LUCIA_0240.jpg": "e3596df5f31952f9fe50142c922d55ac36dda8d3fdfbc3ba5b47251da3ce86be",
+  "A4_LUCIA_contact_sheet.jpg": "37e70e5927f774940507632c03b601c98eb6f5168e6d71befb821401dcfd4a75",
+  "A6_SHURE_0060.jpg": "d0f75a9505a3d121eefd94d08e4d79f76e4f8aaa4f5ce940f842bab976bc0ea6",
+  "A6_SHURE_0120.jpg": "1d45bcd037a2c7c02d5fa77ce9526aa4774408a0cc78eb6d40a2e0cd9285f5e1",
+  "A6_SHURE_0180.jpg": "6ee69810bacfac1763deb2dfeaecde1bbe854c5e2526556540cb9d1866b18904",
+  "A6_SHURE_0240.jpg": "a6c2a6ea36bff0fac01608205a0bdcf44d594830b8c6a074e19b0ea9ec8c59d1",
+  "A6_SHURE_contact_sheet.jpg": "041e7a83c1892c2fd904b2511dfeaa8c2395b7d683e15d02ea28314b953a4a9f",
+  "README_zh.md": "c54900f6ec823091cf5e723d3f54ea8c1762b891f859312eb079d1b54f7a26b7",
+  "candidate_status.json": "cd2d74f9a797ffc91723ea568e96314ee13f36dd4ab820c22db0966c069ac13b",
+  "historical_direct.json": "413bbf565d6dedb230f71336c915c9553e33ab1312632e6927ad59bb21cfa0cd",
+  "historical_ssc.json": "45d941a0145ccdefba3e31fd10b4b97f715dc56b4e3d597770df752b5f4c360a",
+  "media_manifest.json": "cb0e7011862610e866e6882f6c2bf258069a57970a48406c4ec42bff895c0eda",
+  "question.json": "ad0d6b87d601ea3476a1a86fcaf468aee44ae6c21de938010ebfd3f2502aedd4",
+  "same_time_captions.json": "b938885b98c785e6f598a829e09b20984e1ab7043a661ebd2a8188fc8434d45d",
+  "social_code.py": "ac77d9abc3e81f4521a65c761e6964c588f83a7ea8b482640acea14aae9f1d18",
+  "spatial_code.py": "4cb225a61befc87c487a63b7342ca4b3abe4a83112ddd858e6160de6b8f78a9a"
+}

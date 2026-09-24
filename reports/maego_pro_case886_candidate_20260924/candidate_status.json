@@ -1,0 +1,23 @@
+{
+  "index": 886,
+  "direct": "C",
+  "ssc": "B",
+  "gold": "B",
+  "source_model_label": "Historical Gemini 3-Pro-Preview, no new calls",
+  "selection": "Posthoc illustrative candidate among historical ToM Direct-wrong/SSC-correct records; not evaluation evidence",
+  "speaker_ground_truth_verified": false,
+  "utterance_timing_verified": false,
+  "prose_captions_limit": "Shure/Lucia/Alice captions agree on central baking-ingredients belief/correction, while Tasha caption has inconsistent first-person attribution; exact Chinese quote and small/big bowl wording are not certified",
+  "social_record_limit": "Archived Social code contains Lucia initial belief and Shure observations; does not explicitly encode a post-correction revised Lucia belief",
+  "additional_view_limit": "Lucia view is corroborating review material, not a model input in this archived prediction",
+  "other_candidates_not_selected": {
+    "863": "Warning speaker attribution conflict",
+    "980": "Generated support usesDAY5 but gold contextDAY4; final rationale admits lack of evidence",
+    "971": "Not paying attention is encoded as observed physical event, conflating interpretation with observation"
+  },
+  "source_hashes": {
+    "MA-EgoQA/data/baselines/video_balanced_paired_full.jsonl": "3cdc2f71d769dedf7148a779789ad988c5d1bfe3f1b5a6357958c932ce1f0bae",
+    "MA-EgoQA/data/baselines/video_evidence_audit_full.jsonl": "b541a7fb72c17072c1a0c4519b4c35354334600383de2163d5082eaac1d2b566",
+    "MA-EgoQA/data/MA-EgoQA.json": "d339a1213f3fc87b3d13f6ae9c4b0bc9d450b1b8769c3448c9ebbca7fe9bc599"
+  }
+}
