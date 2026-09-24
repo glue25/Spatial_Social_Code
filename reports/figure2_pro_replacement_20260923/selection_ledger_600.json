@@ -1,0 +1,6002 @@
+[
+  {
+    "index": 0,
+    "question_type": "1.3",
+    "explicit_direct": null,
+    "stored_direct": "a",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 1,
+    "question_type": "1.3",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 2,
+    "question_type": "1.1",
+    "explicit_direct": null,
+    "stored_direct": "a",
+    "gold": "b",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 3,
+    "question_type": "1.2",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 4,
+    "question_type": "1.1",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 5,
+    "question_type": "1.2",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 6,
+    "question_type": "1.1",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 7,
+    "question_type": "1.3",
+    "explicit_direct": null,
+    "stored_direct": "a",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 8,
+    "question_type": "1.1",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 9,
+    "question_type": "1.2",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 10,
+    "question_type": "1.2",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 11,
+    "question_type": "1.1",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 12,
+    "question_type": "1.1",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 13,
+    "question_type": "1.2",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 14,
+    "question_type": "1.2",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 15,
+    "question_type": "1.2",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 16,
+    "question_type": "1.1",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 17,
+    "question_type": "1.1",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 18,
+    "question_type": "1.2",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 19,
+    "question_type": "1.2",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 20,
+    "question_type": "1.1",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 21,
+    "question_type": "1.2",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 22,
+    "question_type": "1.3",
+    "explicit_direct": null,
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 23,
+    "question_type": "1.1",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 24,
+    "question_type": "1.1",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 25,
+    "question_type": "1.1",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 26,
+    "question_type": "1.3",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 27,
+    "question_type": "1.2",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 28,
+    "question_type": "1.1",
+    "explicit_direct": null,
+    "stored_direct": "a",
+    "gold": "b",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 29,
+    "question_type": "1.2",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 30,
+    "question_type": "1.2",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 31,
+    "question_type": "1.1",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 32,
+    "question_type": "1.1",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 33,
+    "question_type": "1.3",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 34,
+    "question_type": "1.2",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 35,
+    "question_type": "1.1",
+    "explicit_direct": null,
+    "stored_direct": "a",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 36,
+    "question_type": "1.2",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 37,
+    "question_type": "1.3",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 38,
+    "question_type": "1.3",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "b",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 39,
+    "question_type": "1.3",
+    "explicit_direct": null,
+    "stored_direct": "a",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 40,
+    "question_type": "1.2",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 41,
+    "question_type": "1.2",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 42,
+    "question_type": "1.1",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 43,
+    "question_type": "1.1",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 44,
+    "question_type": "1.2",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 45,
+    "question_type": "1.2",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 46,
+    "question_type": "1.2",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 47,
+    "question_type": "1.3",
+    "explicit_direct": null,
+    "stored_direct": "a",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 48,
+    "question_type": "1.2",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 49,
+    "question_type": "1.3",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "b",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 50,
+    "question_type": "1.1",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 51,
+    "question_type": "1.1",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 52,
+    "question_type": "1.1",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 53,
+    "question_type": "1.2",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 54,
+    "question_type": "1.3",
+    "explicit_direct": null,
+    "stored_direct": "a",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 55,
+    "question_type": "1.2",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 56,
+    "question_type": "1.3",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 57,
+    "question_type": "1.2",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 58,
+    "question_type": "1.3",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 59,
+    "question_type": "1.1",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 60,
+    "question_type": "1.2",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 61,
+    "question_type": "1.1",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 62,
+    "question_type": "1.1",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 63,
+    "question_type": "1.1",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 64,
+    "question_type": "1.1",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 65,
+    "question_type": "1.2",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 66,
+    "question_type": "1.3",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 67,
+    "question_type": "1.3",
+    "explicit_direct": null,
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 68,
+    "question_type": "1.1",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 69,
+    "question_type": "1.3",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 70,
+    "question_type": "1.2",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 71,
+    "question_type": "1.3",
+    "explicit_direct": null,
+    "stored_direct": "a",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 72,
+    "question_type": "1.2",
+    "explicit_direct": "b",
+    "stored_direct": "a",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 73,
+    "question_type": "1.1",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 74,
+    "question_type": "1.2",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 75,
+    "question_type": "1.2",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 76,
+    "question_type": "1.1",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 77,
+    "question_type": "1.3",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 78,
+    "question_type": "1.3",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 79,
+    "question_type": "1.1",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 80,
+    "question_type": "1.3",
+    "explicit_direct": null,
+    "stored_direct": "a",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 81,
+    "question_type": "1.2",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 82,
+    "question_type": "1.2",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 83,
+    "question_type": "1.2",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 84,
+    "question_type": "1.3",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "b",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 85,
+    "question_type": "1.2",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 86,
+    "question_type": "1.3",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 87,
+    "question_type": "1.1",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 88,
+    "question_type": "1.1",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 89,
+    "question_type": "1.3",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 90,
+    "question_type": "1.3",
+    "explicit_direct": null,
+    "stored_direct": "a",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 91,
+    "question_type": "1.2",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 92,
+    "question_type": "1.2",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 93,
+    "question_type": "1.2",
+    "explicit_direct": null,
+    "stored_direct": "a",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 94,
+    "question_type": "1.1",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 95,
+    "question_type": "1.1",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 96,
+    "question_type": "1.1",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 97,
+    "question_type": "1.2",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 98,
+    "question_type": "1.1",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 99,
+    "question_type": "1.3",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 100,
+    "question_type": "1.3",
+    "explicit_direct": null,
+    "stored_direct": "a",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 101,
+    "question_type": "1.2",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 102,
+    "question_type": "1.3",
+    "explicit_direct": null,
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 103,
+    "question_type": "1.3",
+    "explicit_direct": null,
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 104,
+    "question_type": "1.2",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 105,
+    "question_type": "1.1",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 106,
+    "question_type": "1.2",
+    "explicit_direct": "b",
+    "stored_direct": "a",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 107,
+    "question_type": "1.3",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 108,
+    "question_type": "1.3",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 109,
+    "question_type": "1.2",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 110,
+    "question_type": "1.3",
+    "explicit_direct": null,
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 111,
+    "question_type": "1.3",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 112,
+    "question_type": "1.3",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 113,
+    "question_type": "1.3",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 114,
+    "question_type": "1.3",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 115,
+    "question_type": "1.3",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 116,
+    "question_type": "1.1",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 117,
+    "question_type": "1.3",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 118,
+    "question_type": "1.2",
+    "explicit_direct": "b",
+    "stored_direct": "a",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 119,
+    "question_type": "1.2",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 120,
+    "question_type": "1.3",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 121,
+    "question_type": "1.1",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 122,
+    "question_type": "1.1",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 123,
+    "question_type": "1.1",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 124,
+    "question_type": "1.1",
+    "explicit_direct": null,
+    "stored_direct": "a",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 125,
+    "question_type": "1.2",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 126,
+    "question_type": "1.3",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 127,
+    "question_type": "1.3",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 128,
+    "question_type": "1.3",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 129,
+    "question_type": "1.3",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 130,
+    "question_type": "1.2",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 131,
+    "question_type": "1.1",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 132,
+    "question_type": "1.1",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 133,
+    "question_type": "1.3",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 134,
+    "question_type": "1.1",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 135,
+    "question_type": "1.3",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 136,
+    "question_type": "1.3",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 137,
+    "question_type": "1.3",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 138,
+    "question_type": "1.2",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 139,
+    "question_type": "1.3",
+    "explicit_direct": null,
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 140,
+    "question_type": "1.3",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 141,
+    "question_type": "1.1",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 142,
+    "question_type": "1.1",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 143,
+    "question_type": "1.3",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 144,
+    "question_type": "1.3",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 145,
+    "question_type": "1.2",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 146,
+    "question_type": "1.2",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 147,
+    "question_type": "1.3",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 148,
+    "question_type": "1.1",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 149,
+    "question_type": "1.1",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 150,
+    "question_type": "1.2",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 151,
+    "question_type": "1.1",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 152,
+    "question_type": "1.3",
+    "explicit_direct": null,
+    "stored_direct": "a",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 153,
+    "question_type": "1.1",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 154,
+    "question_type": "1.2",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 155,
+    "question_type": "1.2",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 156,
+    "question_type": "1.3",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 157,
+    "question_type": "1.1",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 158,
+    "question_type": "1.3",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 159,
+    "question_type": "1.1",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 160,
+    "question_type": "1.3",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 161,
+    "question_type": "1.2",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 162,
+    "question_type": "1.2",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 163,
+    "question_type": "1.2",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 164,
+    "question_type": "1.3",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 165,
+    "question_type": "1.3",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 166,
+    "question_type": "1.3",
+    "explicit_direct": null,
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 167,
+    "question_type": "1.3",
+    "explicit_direct": null,
+    "stored_direct": "a",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 168,
+    "question_type": "1.1",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 169,
+    "question_type": "1.1",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 170,
+    "question_type": "1.1",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 171,
+    "question_type": "1.1",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 172,
+    "question_type": "1.3",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 173,
+    "question_type": "1.3",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 174,
+    "question_type": "1.2",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 175,
+    "question_type": "1.3",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 176,
+    "question_type": "1.2",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 177,
+    "question_type": "1.3",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 178,
+    "question_type": "1.3",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 179,
+    "question_type": "1.3",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 180,
+    "question_type": "1.3",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 181,
+    "question_type": "1.1",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 182,
+    "question_type": "1.2",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 183,
+    "question_type": "1.2",
+    "explicit_direct": null,
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 184,
+    "question_type": "1.3",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 185,
+    "question_type": "1.2",
+    "explicit_direct": null,
+    "stored_direct": "a",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 186,
+    "question_type": "1.3",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 187,
+    "question_type": "1.1",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 188,
+    "question_type": "1.3",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 189,
+    "question_type": "1.1",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 190,
+    "question_type": "1.2",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 191,
+    "question_type": "1.3",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 192,
+    "question_type": "1.3",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 193,
+    "question_type": "1.3",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 194,
+    "question_type": "1.2",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 195,
+    "question_type": "1.3",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 196,
+    "question_type": "1.3",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 197,
+    "question_type": "1.1",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 198,
+    "question_type": "1.3",
+    "explicit_direct": null,
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 199,
+    "question_type": "1.3",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 200,
+    "question_type": "1.3",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 201,
+    "question_type": "1.1",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 202,
+    "question_type": "1.3",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 203,
+    "question_type": "1.3",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 204,
+    "question_type": "1.1",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 205,
+    "question_type": "1.3",
+    "explicit_direct": null,
+    "stored_direct": "a",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 206,
+    "question_type": "1.1",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 207,
+    "question_type": "1.2",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 208,
+    "question_type": "1.3",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 209,
+    "question_type": "1.2",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 210,
+    "question_type": "1.3",
+    "explicit_direct": null,
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 211,
+    "question_type": "1.3",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 212,
+    "question_type": "1.2",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 213,
+    "question_type": "1.2",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 214,
+    "question_type": "1.2",
+    "explicit_direct": null,
+    "stored_direct": "a",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 215,
+    "question_type": "1.1",
+    "explicit_direct": null,
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 216,
+    "question_type": "1.1",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 217,
+    "question_type": "1.1",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 218,
+    "question_type": "1.1",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 219,
+    "question_type": "1.1",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 220,
+    "question_type": "1.2",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 221,
+    "question_type": "1.2",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 222,
+    "question_type": "1.1",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 223,
+    "question_type": "1.2",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 224,
+    "question_type": "1.1",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 225,
+    "question_type": "1.2",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 226,
+    "question_type": "1.3",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 227,
+    "question_type": "1.3",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 228,
+    "question_type": "1.3",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 229,
+    "question_type": "1.1",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 230,
+    "question_type": "1.3",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 231,
+    "question_type": "1.3",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 232,
+    "question_type": "1.2",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 233,
+    "question_type": "1.3",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 234,
+    "question_type": "1.1",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 235,
+    "question_type": "1.2",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 236,
+    "question_type": "1.1",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 237,
+    "question_type": "1.2",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 238,
+    "question_type": "1.1",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 239,
+    "question_type": "1.1",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 240,
+    "question_type": "1.2",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 241,
+    "question_type": "1.3",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 242,
+    "question_type": "1.3",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 243,
+    "question_type": "1.3",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 244,
+    "question_type": "1.1",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 245,
+    "question_type": "1.3",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 246,
+    "question_type": "1.2",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 247,
+    "question_type": "1.2",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 248,
+    "question_type": "1.3",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 249,
+    "question_type": "1.1",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 250,
+    "question_type": "1.2",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 251,
+    "question_type": "1.3",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 252,
+    "question_type": "1.1",
+    "explicit_direct": null,
+    "stored_direct": "a",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 253,
+    "question_type": "1.1",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 254,
+    "question_type": "1.1",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 255,
+    "question_type": "1.2",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 256,
+    "question_type": "1.2",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 257,
+    "question_type": "1.3",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 258,
+    "question_type": "1.2",
+    "explicit_direct": null,
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 259,
+    "question_type": "1.1",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 260,
+    "question_type": "1.1",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 261,
+    "question_type": "1.2",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 262,
+    "question_type": "1.2",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 263,
+    "question_type": "1.3",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 264,
+    "question_type": "1.1",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 265,
+    "question_type": "1.2",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 266,
+    "question_type": "1.1",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 267,
+    "question_type": "1.2",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 268,
+    "question_type": "1.1",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 269,
+    "question_type": "1.2",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 270,
+    "question_type": "1.2",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 271,
+    "question_type": "1.1",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 272,
+    "question_type": "1.1",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 273,
+    "question_type": "1.2",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 274,
+    "question_type": "1.2",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 275,
+    "question_type": "1.1",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 276,
+    "question_type": "1.1",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 277,
+    "question_type": "1.2",
+    "explicit_direct": null,
+    "stored_direct": "a",
+    "gold": "b",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 278,
+    "question_type": "1.2",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 279,
+    "question_type": "1.1",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 280,
+    "question_type": "1.3",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 281,
+    "question_type": "1.3",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 282,
+    "question_type": "1.1",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 283,
+    "question_type": "1.1",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 284,
+    "question_type": "1.2",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 285,
+    "question_type": "1.1",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 286,
+    "question_type": "1.2",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 287,
+    "question_type": "1.2",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 288,
+    "question_type": "1.2",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 289,
+    "question_type": "1.1",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 290,
+    "question_type": "1.2",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 291,
+    "question_type": "1.1",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 292,
+    "question_type": "1.1",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 293,
+    "question_type": "1.1",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 294,
+    "question_type": "1.2",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 295,
+    "question_type": "1.1",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 296,
+    "question_type": "1.1",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 297,
+    "question_type": "1.2",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 298,
+    "question_type": "1.2",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 299,
+    "question_type": "1.2",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 300,
+    "question_type": "2.2",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": true
+  },
+  {
+    "index": 301,
+    "question_type": "2.1",
+    "explicit_direct": null,
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 302,
+    "question_type": "2.1",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": true,
+    "dense": false
+  },
+  {
+    "index": 303,
+    "question_type": "2.1",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": true,
+    "dense": false
+  },
+  {
+    "index": 304,
+    "question_type": "2.3",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": true,
+    "dense": true
+  },
+  {
+    "index": 305,
+    "question_type": "2.1",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": true,
+    "dense": false
+  },
+  {
+    "index": 306,
+    "question_type": "2.3",
+    "explicit_direct": null,
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 307,
+    "question_type": "2.3",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": true,
+    "dense": true
+  },
+  {
+    "index": 308,
+    "question_type": "2.2",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": true
+  },
+  {
+    "index": 309,
+    "question_type": "2.4",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": true
+  },
+  {
+    "index": 310,
+    "question_type": "2.4",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": true,
+    "dense": true
+  },
+  {
+    "index": 311,
+    "question_type": "2.2",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": true
+  },
+  {
+    "index": 312,
+    "question_type": "2.3",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": true,
+    "dense": true
+  },
+  {
+    "index": 313,
+    "question_type": "2.3",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": true,
+    "dense": true
+  },
+  {
+    "index": 314,
+    "question_type": "2.1",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 315,
+    "question_type": "2.3",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": true,
+    "dense": false
+  },
+  {
+    "index": 316,
+    "question_type": "2.2",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": true
+  },
+  {
+    "index": 317,
+    "question_type": "2.2",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 318,
+    "question_type": "2.1",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": true,
+    "dense": false
+  },
+  {
+    "index": 319,
+    "question_type": "2.3",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": true,
+    "dense": true
+  },
+  {
+    "index": 320,
+    "question_type": "2.3",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "b",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": true
+  },
+  {
+    "index": 321,
+    "question_type": "2.2",
+    "explicit_direct": null,
+    "stored_direct": "a",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": true
+  },
+  {
+    "index": 322,
+    "question_type": "2.2",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": true
+  },
+  {
+    "index": 323,
+    "question_type": "2.1",
+    "explicit_direct": null,
+    "stored_direct": "a",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 324,
+    "question_type": "2.1",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": true,
+    "dense": false
+  },
+  {
+    "index": 325,
+    "question_type": "2.3",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": true,
+    "dense": false
+  },
+  {
+    "index": 326,
+    "question_type": "2.3",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": true,
+    "dense": true
+  },
+  {
+    "index": 327,
+    "question_type": "2.4",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": true
+  },
+  {
+    "index": 328,
+    "question_type": "2.1",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": true,
+    "dense": false
+  },
+  {
+    "index": 329,
+    "question_type": "2.3",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "a",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": true
+  },
+  {
+    "index": 330,
+    "question_type": "2.3",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": true,
+    "dense": false
+  },
+  {
+    "index": 331,
+    "question_type": "2.3",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": true,
+    "dense": false
+  },
+  {
+    "index": 332,
+    "question_type": "2.3",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": true,
+    "dense": true
+  },
+  {
+    "index": 333,
+    "question_type": "2.4",
+    "explicit_direct": null,
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": true
+  },
+  {
+    "index": 334,
+    "question_type": "2.1",
+    "explicit_direct": null,
+    "stored_direct": "a",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 335,
+    "question_type": "2.3",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": true,
+    "dense": false
+  },
+  {
+    "index": 336,
+    "question_type": "2.4",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": true,
+    "dense": true
+  },
+  {
+    "index": 337,
+    "question_type": "2.3",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": true,
+    "dense": true
+  },
+  {
+    "index": 338,
+    "question_type": "2.4",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": true
+  },
+  {
+    "index": 339,
+    "question_type": "2.4",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 340,
+    "question_type": "2.2",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 341,
+    "question_type": "2.2",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": true
+  },
+  {
+    "index": 342,
+    "question_type": "2.1",
+    "explicit_direct": null,
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 343,
+    "question_type": "2.2",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 344,
+    "question_type": "2.1",
+    "explicit_direct": null,
+    "stored_direct": "a",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 345,
+    "question_type": "2.1",
+    "explicit_direct": null,
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 346,
+    "question_type": "2.3",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": true,
+    "dense": false
+  },
+  {
+    "index": 347,
+    "question_type": "2.3",
+    "explicit_direct": null,
+    "stored_direct": "a",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": true
+  },
+  {
+    "index": 348,
+    "question_type": "2.1",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": true,
+    "dense": false
+  },
+  {
+    "index": 349,
+    "question_type": "2.3",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": true,
+    "dense": true
+  },
+  {
+    "index": 350,
+    "question_type": "2.4",
+    "explicit_direct": null,
+    "stored_direct": "a",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 351,
+    "question_type": "2.4",
+    "explicit_direct": null,
+    "stored_direct": "a",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": true
+  },
+  {
+    "index": 352,
+    "question_type": "2.4",
+    "explicit_direct": null,
+    "stored_direct": "a",
+    "gold": "b",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": true
+  },
+  {
+    "index": 353,
+    "question_type": "2.4",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": true
+  },
+  {
+    "index": 354,
+    "question_type": "2.4",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": true,
+    "dense": true
+  },
+  {
+    "index": 355,
+    "question_type": "2.4",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "b",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": true
+  },
+  {
+    "index": 356,
+    "question_type": "2.4",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": true
+  },
+  {
+    "index": 357,
+    "question_type": "2.1",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": true,
+    "dense": false
+  },
+  {
+    "index": 358,
+    "question_type": "2.3",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": true,
+    "dense": false
+  },
+  {
+    "index": 359,
+    "question_type": "2.2",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": true
+  },
+  {
+    "index": 360,
+    "question_type": "2.2",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 361,
+    "question_type": "2.4",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": true
+  },
+  {
+    "index": 362,
+    "question_type": "2.2",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": true
+  },
+  {
+    "index": 363,
+    "question_type": "2.2",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 364,
+    "question_type": "2.2",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": true
+  },
+  {
+    "index": 365,
+    "question_type": "2.1",
+    "explicit_direct": null,
+    "stored_direct": "a",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 366,
+    "question_type": "2.1",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": true,
+    "dense": true
+  },
+  {
+    "index": 367,
+    "question_type": "2.3",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": true,
+    "dense": true
+  },
+  {
+    "index": 368,
+    "question_type": "2.4",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": true
+  },
+  {
+    "index": 369,
+    "question_type": "2.4",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": true
+  },
+  {
+    "index": 370,
+    "question_type": "2.4",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 371,
+    "question_type": "2.4",
+    "explicit_direct": null,
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": true
+  },
+  {
+    "index": 372,
+    "question_type": "2.2",
+    "explicit_direct": null,
+    "stored_direct": "a",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 373,
+    "question_type": "2.4",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": true
+  },
+  {
+    "index": 374,
+    "question_type": "2.4",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": true
+  },
+  {
+    "index": 375,
+    "question_type": "2.4",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": true,
+    "dense": true
+  },
+  {
+    "index": 376,
+    "question_type": "2.3",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": true,
+    "dense": true
+  },
+  {
+    "index": 377,
+    "question_type": "2.1",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": true,
+    "dense": false
+  },
+  {
+    "index": 378,
+    "question_type": "2.1",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": true,
+    "dense": false
+  },
+  {
+    "index": 379,
+    "question_type": "2.3",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": true,
+    "dense": true
+  },
+  {
+    "index": 380,
+    "question_type": "2.4",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": true
+  },
+  {
+    "index": 381,
+    "question_type": "2.4",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "b",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": true
+  },
+  {
+    "index": 382,
+    "question_type": "2.4",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "b",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": true
+  },
+  {
+    "index": 383,
+    "question_type": "2.4",
+    "explicit_direct": null,
+    "stored_direct": "a",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": true
+  },
+  {
+    "index": 384,
+    "question_type": "2.4",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "b",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": true
+  },
+  {
+    "index": 385,
+    "question_type": "2.4",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": true
+  },
+  {
+    "index": 386,
+    "question_type": "2.4",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": true
+  },
+  {
+    "index": 387,
+    "question_type": "2.4",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": true
+  },
+  {
+    "index": 388,
+    "question_type": "2.2",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 389,
+    "question_type": "2.2",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": true
+  },
+  {
+    "index": 390,
+    "question_type": "2.2",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 391,
+    "question_type": "2.4",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": true
+  },
+  {
+    "index": 392,
+    "question_type": "2.4",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": true
+  },
+  {
+    "index": 393,
+    "question_type": "2.2",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 394,
+    "question_type": "2.2",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": true
+  },
+  {
+    "index": 395,
+    "question_type": "2.4",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": true
+  },
+  {
+    "index": 396,
+    "question_type": "2.4",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": true
+  },
+  {
+    "index": 397,
+    "question_type": "2.4",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": true,
+    "dense": true
+  },
+  {
+    "index": 398,
+    "question_type": "2.4",
+    "explicit_direct": null,
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": true
+  },
+  {
+    "index": 399,
+    "question_type": "2.1",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": true,
+    "dense": false
+  },
+  {
+    "index": 400,
+    "question_type": "2.1",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": true,
+    "dense": false
+  },
+  {
+    "index": 401,
+    "question_type": "2.3",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "b",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": true
+  },
+  {
+    "index": 402,
+    "question_type": "2.3",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "b",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": true
+  },
+  {
+    "index": 403,
+    "question_type": "2.2",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": true
+  },
+  {
+    "index": 404,
+    "question_type": "2.2",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": true
+  },
+  {
+    "index": 405,
+    "question_type": "2.2",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": true
+  },
+  {
+    "index": 406,
+    "question_type": "2.4",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": true,
+    "dense": true
+  },
+  {
+    "index": 407,
+    "question_type": "2.4",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "a",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": true
+  },
+  {
+    "index": 408,
+    "question_type": "2.2",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": true
+  },
+  {
+    "index": 409,
+    "question_type": "2.2",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "b",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": true
+  },
+  {
+    "index": 410,
+    "question_type": "2.2",
+    "explicit_direct": null,
+    "stored_direct": "a",
+    "gold": "b",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": true
+  },
+  {
+    "index": 411,
+    "question_type": "2.2",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": true
+  },
+  {
+    "index": 412,
+    "question_type": "2.2",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": true
+  },
+  {
+    "index": 413,
+    "question_type": "2.2",
+    "explicit_direct": null,
+    "stored_direct": "a",
+    "gold": "b",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": true
+  },
+  {
+    "index": 414,
+    "question_type": "2.2",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": true
+  },
+  {
+    "index": 415,
+    "question_type": "2.1",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": true,
+    "dense": false
+  },
+  {
+    "index": 416,
+    "question_type": "2.1",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": true,
+    "dense": false
+  },
+  {
+    "index": 417,
+    "question_type": "2.1",
+    "explicit_direct": null,
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 418,
+    "question_type": "2.3",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": true,
+    "dense": false
+  },
+  {
+    "index": 419,
+    "question_type": "2.4",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": true
+  },
+  {
+    "index": 420,
+    "question_type": "2.4",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": true,
+    "dense": false
+  },
+  {
+    "index": 421,
+    "question_type": "2.1",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "b",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": true
+  },
+  {
+    "index": 422,
+    "question_type": "2.1",
+    "explicit_direct": null,
+    "stored_direct": "a",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 423,
+    "question_type": "2.3",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": true,
+    "dense": true
+  },
+  {
+    "index": 424,
+    "question_type": "2.4",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": true
+  },
+  {
+    "index": 425,
+    "question_type": "2.1",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": true,
+    "dense": true
+  },
+  {
+    "index": 426,
+    "question_type": "2.1",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": true,
+    "dense": true
+  },
+  {
+    "index": 427,
+    "question_type": "2.1",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": true,
+    "dense": false
+  },
+  {
+    "index": 428,
+    "question_type": "2.1",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": true,
+    "dense": false
+  },
+  {
+    "index": 429,
+    "question_type": "2.1",
+    "explicit_direct": null,
+    "stored_direct": "a",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 430,
+    "question_type": "2.3",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": true,
+    "dense": true
+  },
+  {
+    "index": 431,
+    "question_type": "2.4",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "a",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": true
+  },
+  {
+    "index": 432,
+    "question_type": "2.4",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": true,
+    "dense": false
+  },
+  {
+    "index": 433,
+    "question_type": "2.1",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": true,
+    "dense": false
+  },
+  {
+    "index": 434,
+    "question_type": "2.1",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": true,
+    "dense": false
+  },
+  {
+    "index": 435,
+    "question_type": "2.3",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": true,
+    "dense": true
+  },
+  {
+    "index": 436,
+    "question_type": "2.1",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": true,
+    "dense": false
+  },
+  {
+    "index": 437,
+    "question_type": "2.3",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": true,
+    "dense": true
+  },
+  {
+    "index": 438,
+    "question_type": "2.3",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": true,
+    "dense": false
+  },
+  {
+    "index": 439,
+    "question_type": "2.2",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": true
+  },
+  {
+    "index": 440,
+    "question_type": "2.2",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 441,
+    "question_type": "2.2",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": true
+  },
+  {
+    "index": 442,
+    "question_type": "2.2",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": true
+  },
+  {
+    "index": 443,
+    "question_type": "2.1",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 444,
+    "question_type": "2.1",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": true,
+    "dense": false
+  },
+  {
+    "index": 445,
+    "question_type": "2.3",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": true,
+    "dense": false
+  },
+  {
+    "index": 446,
+    "question_type": "2.4",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "b",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": true
+  },
+  {
+    "index": 447,
+    "question_type": "2.4",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": true,
+    "dense": true
+  },
+  {
+    "index": 448,
+    "question_type": "2.4",
+    "explicit_direct": null,
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": true
+  },
+  {
+    "index": 449,
+    "question_type": "2.4",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "b",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": true
+  },
+  {
+    "index": 450,
+    "question_type": "2.2",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 451,
+    "question_type": "2.2",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 452,
+    "question_type": "2.2",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": true
+  },
+  {
+    "index": 453,
+    "question_type": "2.2",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": true,
+    "dense": false
+  },
+  {
+    "index": 454,
+    "question_type": "2.1",
+    "explicit_direct": null,
+    "stored_direct": "a",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 455,
+    "question_type": "2.4",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": true
+  },
+  {
+    "index": 456,
+    "question_type": "2.4",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": true
+  },
+  {
+    "index": 457,
+    "question_type": "2.4",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "b",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": true
+  },
+  {
+    "index": 458,
+    "question_type": "2.4",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": true
+  },
+  {
+    "index": 459,
+    "question_type": "2.4",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": true
+  },
+  {
+    "index": 460,
+    "question_type": "2.3",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": true,
+    "dense": false
+  },
+  {
+    "index": 461,
+    "question_type": "2.3",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "a",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": true
+  },
+  {
+    "index": 462,
+    "question_type": "2.1",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": true,
+    "dense": false
+  },
+  {
+    "index": 463,
+    "question_type": "2.3",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "a",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": true
+  },
+  {
+    "index": 464,
+    "question_type": "2.1",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "b",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": true
+  },
+  {
+    "index": 465,
+    "question_type": "2.1",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "b",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": true
+  },
+  {
+    "index": 466,
+    "question_type": "2.3",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "a",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": true
+  },
+  {
+    "index": 467,
+    "question_type": "2.3",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": true,
+    "dense": false
+  },
+  {
+    "index": 468,
+    "question_type": "2.1",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": true,
+    "dense": true
+  },
+  {
+    "index": 469,
+    "question_type": "2.1",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": true,
+    "dense": false
+  },
+  {
+    "index": 470,
+    "question_type": "2.1",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": true,
+    "dense": false
+  },
+  {
+    "index": 471,
+    "question_type": "2.1",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": true,
+    "dense": false
+  },
+  {
+    "index": 472,
+    "question_type": "2.1",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": true,
+    "dense": false
+  },
+  {
+    "index": 473,
+    "question_type": "2.3",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "a",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": true
+  },
+  {
+    "index": 474,
+    "question_type": "2.4",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": true,
+    "dense": true
+  },
+  {
+    "index": 475,
+    "question_type": "2.2",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 476,
+    "question_type": "2.2",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 477,
+    "question_type": "2.2",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": true
+  },
+  {
+    "index": 478,
+    "question_type": "2.4",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": true
+  },
+  {
+    "index": 479,
+    "question_type": "2.4",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": true,
+    "dense": true
+  },
+  {
+    "index": 480,
+    "question_type": "2.2",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 481,
+    "question_type": "2.2",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": true
+  },
+  {
+    "index": 482,
+    "question_type": "2.2",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 483,
+    "question_type": "2.4",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": true
+  },
+  {
+    "index": 484,
+    "question_type": "2.4",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "b",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": true
+  },
+  {
+    "index": 485,
+    "question_type": "2.2",
+    "explicit_direct": null,
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 486,
+    "question_type": "2.2",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": true
+  },
+  {
+    "index": 487,
+    "question_type": "2.1",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": true,
+    "dense": false
+  },
+  {
+    "index": 488,
+    "question_type": "2.3",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": true,
+    "dense": true
+  },
+  {
+    "index": 489,
+    "question_type": "2.4",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": true
+  },
+  {
+    "index": 490,
+    "question_type": "2.2",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": true
+  },
+  {
+    "index": 491,
+    "question_type": "2.4",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": true
+  },
+  {
+    "index": 492,
+    "question_type": "2.3",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": true,
+    "dense": true
+  },
+  {
+    "index": 493,
+    "question_type": "2.2",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": true
+  },
+  {
+    "index": 494,
+    "question_type": "2.2",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 495,
+    "question_type": "2.4",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "a",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": true
+  },
+  {
+    "index": 496,
+    "question_type": "2.4",
+    "explicit_direct": null,
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": true
+  },
+  {
+    "index": 497,
+    "question_type": "2.4",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": true
+  },
+  {
+    "index": 498,
+    "question_type": "2.1",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": true,
+    "dense": false
+  },
+  {
+    "index": 499,
+    "question_type": "2.1",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": true,
+    "dense": false
+  },
+  {
+    "index": 500,
+    "question_type": "2.3",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": true,
+    "dense": false
+  },
+  {
+    "index": 501,
+    "question_type": "2.1",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": true,
+    "dense": false
+  },
+  {
+    "index": 502,
+    "question_type": "2.3",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": true,
+    "dense": true
+  },
+  {
+    "index": 503,
+    "question_type": "2.4",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 504,
+    "question_type": "2.3",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "a",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": true
+  },
+  {
+    "index": 505,
+    "question_type": "2.1",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": true,
+    "dense": false
+  },
+  {
+    "index": 506,
+    "question_type": "2.3",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": true,
+    "dense": false
+  },
+  {
+    "index": 507,
+    "question_type": "2.2",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 508,
+    "question_type": "2.1",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": true,
+    "dense": false
+  },
+  {
+    "index": 509,
+    "question_type": "2.1",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": true,
+    "dense": false
+  },
+  {
+    "index": 510,
+    "question_type": "2.1",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": true,
+    "dense": false
+  },
+  {
+    "index": 511,
+    "question_type": "2.3",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": true,
+    "dense": false
+  },
+  {
+    "index": 512,
+    "question_type": "2.4",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": true
+  },
+  {
+    "index": 513,
+    "question_type": "2.1",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": true,
+    "dense": true
+  },
+  {
+    "index": 514,
+    "question_type": "2.1",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": true,
+    "dense": false
+  },
+  {
+    "index": 515,
+    "question_type": "2.3",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": true,
+    "dense": false
+  },
+  {
+    "index": 516,
+    "question_type": "2.1",
+    "explicit_direct": null,
+    "stored_direct": "a",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 517,
+    "question_type": "2.3",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": true,
+    "dense": true
+  },
+  {
+    "index": 518,
+    "question_type": "2.4",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 519,
+    "question_type": "2.3",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "b",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": true
+  },
+  {
+    "index": 520,
+    "question_type": "2.1",
+    "explicit_direct": null,
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 521,
+    "question_type": "2.3",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "b",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": true
+  },
+  {
+    "index": 522,
+    "question_type": "2.2",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 523,
+    "question_type": "2.2",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 524,
+    "question_type": "2.2",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 525,
+    "question_type": "2.3",
+    "explicit_direct": null,
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 526,
+    "question_type": "2.3",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "b",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": true
+  },
+  {
+    "index": 527,
+    "question_type": "2.3",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": true,
+    "dense": false
+  },
+  {
+    "index": 528,
+    "question_type": "2.2",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 529,
+    "question_type": "2.2",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": true
+  },
+  {
+    "index": 530,
+    "question_type": "2.2",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": true
+  },
+  {
+    "index": 531,
+    "question_type": "2.2",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 532,
+    "question_type": "2.2",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": true
+  },
+  {
+    "index": 533,
+    "question_type": "2.2",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": true
+  },
+  {
+    "index": 534,
+    "question_type": "2.4",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": true
+  },
+  {
+    "index": 535,
+    "question_type": "2.4",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": true
+  },
+  {
+    "index": 536,
+    "question_type": "2.4",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": true
+  },
+  {
+    "index": 537,
+    "question_type": "2.2",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 538,
+    "question_type": "2.2",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 539,
+    "question_type": "2.1",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": true,
+    "dense": false
+  },
+  {
+    "index": 540,
+    "question_type": "2.1",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": true,
+    "dense": false
+  },
+  {
+    "index": 541,
+    "question_type": "2.3",
+    "explicit_direct": null,
+    "stored_direct": "a",
+    "gold": "b",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": true
+  },
+  {
+    "index": 542,
+    "question_type": "2.3",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "b",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": true
+  },
+  {
+    "index": 543,
+    "question_type": "2.3",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "a",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": true
+  },
+  {
+    "index": 544,
+    "question_type": "2.2",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": true
+  },
+  {
+    "index": 545,
+    "question_type": "2.1",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": true,
+    "dense": false
+  },
+  {
+    "index": 546,
+    "question_type": "2.1",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": true,
+    "dense": false
+  },
+  {
+    "index": 547,
+    "question_type": "2.4",
+    "explicit_direct": null,
+    "stored_direct": "a",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": true
+  },
+  {
+    "index": 548,
+    "question_type": "2.1",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": true,
+    "dense": false
+  },
+  {
+    "index": 549,
+    "question_type": "2.3",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": true,
+    "dense": true
+  },
+  {
+    "index": 550,
+    "question_type": "2.1",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": true,
+    "dense": false
+  },
+  {
+    "index": 551,
+    "question_type": "2.1",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": true,
+    "dense": false
+  },
+  {
+    "index": 552,
+    "question_type": "2.3",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "b",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": true
+  },
+  {
+    "index": 553,
+    "question_type": "2.3",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": true,
+    "dense": false
+  },
+  {
+    "index": 554,
+    "question_type": "2.3",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": true,
+    "dense": true
+  },
+  {
+    "index": 555,
+    "question_type": "2.1",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 556,
+    "question_type": "2.1",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 557,
+    "question_type": "2.1",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 558,
+    "question_type": "2.4",
+    "explicit_direct": "b",
+    "stored_direct": "a",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": true
+  },
+  {
+    "index": 559,
+    "question_type": "2.3",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "b",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": true
+  },
+  {
+    "index": 560,
+    "question_type": "2.3",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": true,
+    "dense": true
+  },
+  {
+    "index": 561,
+    "question_type": "2.1",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": true,
+    "dense": true
+  },
+  {
+    "index": 562,
+    "question_type": "2.1",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "b",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": true
+  },
+  {
+    "index": 563,
+    "question_type": "2.3",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": true,
+    "dense": true
+  },
+  {
+    "index": 564,
+    "question_type": "2.2",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": true
+  },
+  {
+    "index": 565,
+    "question_type": "2.2",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": true
+  },
+  {
+    "index": 566,
+    "question_type": "2.2",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 567,
+    "question_type": "2.3",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": true,
+    "dense": false
+  },
+  {
+    "index": 568,
+    "question_type": "2.3",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": true,
+    "dense": true
+  },
+  {
+    "index": 569,
+    "question_type": "2.1",
+    "explicit_direct": null,
+    "stored_direct": "a",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 570,
+    "question_type": "2.4",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": true
+  },
+  {
+    "index": 571,
+    "question_type": "2.4",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": true
+  },
+  {
+    "index": 572,
+    "question_type": "2.3",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": true,
+    "dense": true
+  },
+  {
+    "index": 573,
+    "question_type": "2.4",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": true
+  },
+  {
+    "index": 574,
+    "question_type": "2.3",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "a",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": true
+  },
+  {
+    "index": 575,
+    "question_type": "2.3",
+    "explicit_direct": "b",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": true
+  },
+  {
+    "index": 576,
+    "question_type": "2.3",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "b",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": true
+  },
+  {
+    "index": 577,
+    "question_type": "2.2",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": true
+  },
+  {
+    "index": 578,
+    "question_type": "2.2",
+    "explicit_direct": null,
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": true
+  },
+  {
+    "index": 579,
+    "question_type": "2.2",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": true
+  },
+  {
+    "index": 580,
+    "question_type": "2.1",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 581,
+    "question_type": "2.1",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 582,
+    "question_type": "2.3",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": true,
+    "dense": true
+  },
+  {
+    "index": 583,
+    "question_type": "2.1",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 584,
+    "question_type": "2.3",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "b",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": true
+  },
+  {
+    "index": 585,
+    "question_type": "2.1",
+    "explicit_direct": null,
+    "stored_direct": "a",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 586,
+    "question_type": "2.3",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": true,
+    "dense": true
+  },
+  {
+    "index": 587,
+    "question_type": "2.2",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": true
+  },
+  {
+    "index": 588,
+    "question_type": "2.2",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": true
+  },
+  {
+    "index": 589,
+    "question_type": "2.2",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 590,
+    "question_type": "2.4",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": true
+  },
+  {
+    "index": 591,
+    "question_type": "2.4",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": true
+  },
+  {
+    "index": 592,
+    "question_type": "2.3",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": true,
+    "dense": true
+  },
+  {
+    "index": 593,
+    "question_type": "2.2",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 594,
+    "question_type": "2.2",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": true
+  },
+  {
+    "index": 595,
+    "question_type": "2.2",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": false,
+    "dense": true
+  },
+  {
+    "index": 596,
+    "question_type": "2.1",
+    "explicit_direct": null,
+    "stored_direct": "a",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": false
+  },
+  {
+    "index": 597,
+    "question_type": "2.3",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "b",
+    "ssc_prediction": "b",
+    "candidate": true,
+    "dense": false
+  },
+  {
+    "index": 598,
+    "question_type": "2.3",
+    "explicit_direct": "b",
+    "stored_direct": "b",
+    "gold": "a",
+    "ssc_prediction": "a",
+    "candidate": true,
+    "dense": false
+  },
+  {
+    "index": 599,
+    "question_type": "2.3",
+    "explicit_direct": "a",
+    "stored_direct": "a",
+    "gold": "b",
+    "ssc_prediction": "a",
+    "candidate": false,
+    "dense": true
+  }
+]

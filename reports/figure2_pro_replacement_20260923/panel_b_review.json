@@ -1,0 +1,18 @@
+{
+  "candidate_checked": "MA-EgoQA1038 from existing casebook, NOT confirmed to be the actual manuscript panel(b)",
+  "model_scope": "Flash rich100; same compiled record across three arms; static audiovisual QA",
+  "source_case_sha256": "cef0678485ed64b527c41b5034c020f52ed189d11b0fc01dfab935c3b785109f",
+  "input_clip_hashes_checked": 10,
+  "preview_hashes_checked": 3,
+  "social_references_resolve": true,
+  "reported_speaker_attribution": "Generated S2 assigns a question to Tasha; S3 assigns a reply to Jake.",
+  "independent_speaker_or_transcript_verification": false,
+  "all_three_saved_answers": "C",
+  "gold": "C",
+  "cannot_infer": [
+    "speaker identity from camera wearer name",
+    "quoted speech from an image",
+    "causal evidence-link benefit from correct final answer"
+  ],
+  "action": "Do not use speech balloons or person-grounded correction narrative as verified fact. This candidate is Flash, so do not substitute it into a Pro-only figure. Need actual panel(b) source to finish that audit."
+}

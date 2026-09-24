@@ -1,0 +1,27 @@
+{
+  "social_byte_exact": false,
+  "all_original_fields_equal": true,
+  "known_default_field_additions": [
+    {
+      "row": 5,
+      "field": "constraint",
+      "added_default": "ALL"
+    },
+    {
+      "row": 5,
+      "field": "variable_type",
+      "added_default": "unknown"
+    },
+    {
+      "row": 6,
+      "field": "constraint",
+      "added_default": "ALL"
+    },
+    {
+      "row": 6,
+      "field": "variable_type",
+      "added_default": "unknown"
+    }
+  ],
+  "caveat": "Available Flash-frozen runtime adds two defaults to each query_candidate relative to older Pro trace. This is not per-run Pro source-commit verification."
+}
