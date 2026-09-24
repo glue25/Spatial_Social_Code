@@ -1,17 +1,24 @@
 # Spatial-Social Code
 
-## MMToM historical Pro score update — 2026-09-24
+## MMToM historical Pro partial correction — 2026-09-24
 
-The [saved-response readback report](reports/pro_direct_semantic_readback_20260924/README_zh.md)
-reports **Direct 387/600 (64.50%)**, counting 63 unrecoverable answers as failures,
-and **SSC 470/600 (78.33%)**, the historical saved SSC score, not independently
-re-audited in this readback. This retrospective scoring replaces the old saved
-Direct number for this presentation, not the archived raw predictions. It uses
-no Flash/3.1 Pro substitutions or new inference. The report includes all 600
-scores, the 69 semantic-review records, and reproducible verification code.
-Original Pro request option mapping remains unverified, and semantic review
-was not fully blinded. The difference includes output completeness and does
-not establish an isolated SSC-mechanism effect; see the report for protocol limits.
+The [six-response partial correction](reports/pro_direct_six_response_patch_20260924/README_zh.md)
+reports **Direct 410/600 (68.33%)** and **historical SSC 470/600 (78.33%)**.
+It applies all six recorded semantic choices (including one wrong answer),
+changing four predictions, while retaining the other 594 historical predictions.
+This is a user-selected **partial correction, not a fully audited score**:
+63 responses remain semantically unresolved, and five known explicit final-answer
+discrepancies remain unpatched. Correcting those five as well would give Direct
+413/600 (68.83%). Original Pro request option mapping remains unverified;
+semantic review was not fully blinded. SSC was not independently re-audited here.
+No new inference or Flash/3.1 Pro substitutions were used. The descriptive
+difference does not establish an isolated SSC-mechanism effect.
+
+The earlier [failure-inclusive readback](reports/pro_direct_semantic_readback_20260924/README_zh.md)
+(Direct387/600, counting 63 unresolved answers as failures) is preserved as a
+separate scoring policy, not mixed into the current partial-correction table.
+Raw historical archives are unchanged; both reports include full score ledgers
+and offline verification scripts.
 
 Spatial-Social Code studies whether models reason more reliably from an
 explicit, executable representation of a multi-agent world. It separates
