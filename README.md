@@ -1,24 +1,27 @@
 # Spatial-Social Code
 
-## MMToM historical Pro partial correction — 2026-09-24
+## MMToM mixed-version sensitivity analysis — 2026-09-24
 
-The [six-response partial correction](reports/pro_direct_six_response_patch_20260924/README_zh.md)
-reports **Direct 410/600 (68.33%)** and **historical SSC 470/600 (78.33%)**.
-It applies all six recorded semantic choices (including one wrong answer),
-changing four predictions, while retaining the other 594 historical predictions.
-This is a user-selected **partial correction, not a fully audited score**:
-63 responses remain semantically unresolved, and five known explicit final-answer
-discrepancies remain unpatched. Correcting those five as well would give Direct
-413/600 (68.83%). Original Pro request option mapping remains unverified;
-semantic review was not fully blinded. SSC was not independently re-audited here.
-No new inference or Flash/3.1 Pro substitutions were used. The descriptive
-difference does not establish an isolated SSC-mechanism effect.
+The [63-item Direct replacement analysis](reports/pro_direct_mixed63_sensitivity_20260924/README_zh.md)
+reports **mixed Direct 440/600 (73.33%)** versus **historical SSC 470/600 (78.33%)**.
+Direct retains 531 historical saved predictions and six historical-response
+semantic readbacks; only the remaining 63 unresolved responses are replaced
+with existing JDCloud Gemini3.1Pro predictions. SSC is unchanged.
+**This is a retrospective mixed-version sensitivity analysis, NOT a same-model
+benchmark or an independent SSC-mechanism result.** Model/condition changes and
+replacement are asymmetric, and the subset was selected by historical response
+recoverability. Five known historical extraction discrepancies remain unpatched.
+Original Pro request mapping/version remains unverified, and SSC was not
+independently re-audited here.
 
-The earlier [failure-inclusive readback](reports/pro_direct_semantic_readback_20260924/README_zh.md)
-(Direct387/600, counting 63 unresolved answers as failures) is preserved as a
-separate scoring policy, not mixed into the current partial-correction table.
-Raw historical archives are unchanged; both reports include full score ledgers
-and offline verification scripts.
+For context, on these same 63 items the new3.1Pro results are **Direct56/63 vs
+SSC55/63**: they do not show an SSC advantage. The report includes all 600 scores,
+63 saved Direct responses and request descriptors, explicit source labels,
+limitations, and an offline verifier. No new inference was run for this report.
+
+The earlier [six-response partial correction (410/600)](reports/pro_direct_six_response_patch_20260924/README_zh.md)
+and [failure-inclusive readback (387/600)](reports/pro_direct_semantic_readback_20260924/README_zh.md)
+remain separate scoring policies; raw historical archives are unchanged.
 
 Spatial-Social Code studies whether models reason more reliably from an
 explicit, executable representation of a multi-agent world. It separates
