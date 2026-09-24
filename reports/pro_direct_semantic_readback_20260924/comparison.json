@@ -1,0 +1,28 @@
+{
+  "scope": "Historical Pro saved-response readback; retrospective, not a new benchmark run",
+  "n": 600,
+  "direct": {
+    "correct": 387,
+    "accuracy": 0.645,
+    "recoverable": 537,
+    "unresolved_counted_incorrect": 63,
+    "status": "Re-extracted explicit answers plus recorded assistant semantic judgments"
+  },
+  "ssc": {
+    "correct": 470,
+    "accuracy": 0.7833333333333333,
+    "status": "Historical saved score; SSC not independently re-audited in this readback"
+  },
+  "ssc_minus_direct_correct": 83,
+  "ssc_minus_direct_percentage_points": 13.833333333333334,
+  "limitations": [
+    "Retrospective assistant semantic review, not independent fully blinded annotation; previous conversation contained some labels.",
+    "Original Pro wire request label mapping not independently verified.",
+    "63 records remain without a recoverable choice; counted failed only for this response-readback scoring policy, not inferred model intention.",
+    "No new model calls; no substitution with Flash or 3.1Pro; no historical result mutation.",
+    "Historical candidate-conditioned SSC with conditional dense refinement; not equal total compute.",
+    "Difference includes answer recoverability and cannot isolate the effect of evidence links or code syntax.",
+    "Cause of missing answers (generation, output cap, transport or archival loss) is not established."
+  ],
+  "no_new_inference_or_model_substitution": true
+}

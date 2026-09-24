@@ -1,0 +1,696 @@
+[
+  {
+    "index": 0,
+    "prediction": null,
+    "category": "no_recoverable_option",
+    "evidence_quotes": [
+      "Based on the scenario provided, Jennifer's goal is to get a plate. We know there is a plate in the fridge and another in the second cabinet in the kitchen. However, Jennifer goes"
+    ],
+    "reason_zh": "只陈述目标及真实物体位置，However后动作都未写完；没有Jennifer的信念判断。",
+    "is_semantic_readback_not_new_answer": true
+  },
+  {
+    "index": 2,
+    "prediction": "b",
+    "category": "explicit_target_belief",
+    "evidence_quotes": [
+      "it is highly likely that he thinks the salmon could be located there."
+    ],
+    "reason_zh": "原文已明确将Mark的信念归属到刚提及的微波炉；末尾If he believed不影响已经表达的判断。",
+    "is_semantic_readback_not_new_answer": true
+  },
+  {
+    "index": 7,
+    "prediction": null,
+    "category": "no_recoverable_option",
+    "evidence_quotes": [
+      "Based on the provided text and images, Emily is looking for a cupcake. The cupcakes are actually located in the fridge and the microwave. \n\nEmily's actions show her searching the"
+    ],
+    "reason_zh": "只陈述寻找目标与真实位置，动作分析未完成；不把物理位置当信念。",
+    "is_semantic_readback_not_new_answer": true
+  },
+  {
+    "index": 22,
+    "prediction": null,
+    "category": "no_recoverable_option",
+    "evidence_quotes": [
+      "Based on the scenario, Thomas is looking for a dishbowl and chooses to go to the fourth kitchen cabinet. While there is a dishbowl in the fridge, his action of going to"
+    ],
+    "reason_zh": "提到去第四厨柜及冰箱中有碗，但比较/信念判断尚未完成。",
+    "is_semantic_readback_not_new_answer": true
+  },
+  {
+    "index": 28,
+    "prediction": null,
+    "category": "no_recoverable_option",
+    "evidence_quotes": [
+      " is actively searching for a condiment bottle. He has already checked the refrigerator and the second kitchen cabinet without success. He is now in the living room and is \"on the verge of opening a cabinet.\" \n\nIf Mark is"
+    ],
+    "reason_zh": "陈述检查动作，If Mark is条件句尚未完成，没有说出在/不在的信念。",
+    "is_semantic_readback_not_new_answer": true
+  },
+  {
+    "index": 35,
+    "prediction": null,
+    "category": "no_recoverable_option",
+    "evidence_quotes": [
+      "r a salmon. She has already checked the microwave and two of the kitchen cabinets. Her final action is advancing towards the fridge and preparing to open it. In the context of searching for an item, a person will look in"
+    ],
+    "reason_zh": "动作陈述之后一般搜索原则也未完成；未表达Karen的目标信念命题。",
+    "is_semantic_readback_not_new_answer": true
+  },
+  {
+    "index": 39,
+    "prediction": null,
+    "category": "suggestive_but_unfinished",
+    "evidence_quotes": [
+      " to open the third kitchen cabinet. In the context of searching for an object, a person opens a container because they believe the object might be inside. Therefore, if David is preparing to open the third cabinet, it is"
+    ],
+    "reason_zh": "一般原则暗示inside方向，但针对David的Therefore结论尚未完成；保守主口径不把一般搜索规则当作明确个体答案。",
+    "is_semantic_readback_not_new_answer": true
+  },
+  {
+    "index": 47,
+    "prediction": null,
+    "category": "no_recoverable_option",
+    "evidence_quotes": [
+      "Based on the provided scenario and actions, Mary is actively searching for a plate. She first checks the first kitchen cabinet and then proceeds to check the bathroom cabinet. If she believed the"
+    ],
+    "reason_zh": "只陈述动作，If she believed the后没有命题。",
+    "is_semantic_readback_not_new_answer": true
+  },
+  {
+    "index": 54,
+    "prediction": null,
+    "category": "no_recoverable_option",
+    "evidence_quotes": [
+      "Based on the provided text and images, we know the actual location of the bottle of wine is inside the cabinet in the living room. Michael's goal is to get a bottle of wine. However,"
+    ],
+    "reason_zh": "只陈述物理位置和目标；However之后为空，没有Michael的信念。",
+    "is_semantic_readback_not_new_answer": true
+  },
+  {
+    "index": 67,
+    "prediction": null,
+    "category": "no_recoverable_option",
+    "evidence_quotes": [
+      "Based on the provided text, Mark's goal is to get a wine glass. He is currently in the kitchen and is seen searching the stove and then proceeding to the fridge."
+    ],
+    "reason_zh": "只陈述目标及动作地点，没有cabinet相关信念结论。",
+    "is_semantic_readback_not_new_answer": true
+  },
+  {
+    "index": 71,
+    "prediction": null,
+    "category": "no_recoverable_option",
+    "evidence_quotes": [
+      "ased on the provided scenario and action history, Mark is systematically searching various locations in the kitchen (stove, refrigerator, fourth cabinet, microwave, third cabinet, and finally the first cabinet) to find a"
+    ],
+    "reason_zh": "只有寻找动作列表，目标句尚未完成；无cabinet信念。",
+    "is_semantic_readback_not_new_answer": true
+  },
+  {
+    "index": 80,
+    "prediction": null,
+    "category": "no_recoverable_option",
+    "evidence_quotes": [
+      "Based on the provided scenario and William's actions, we can deduce his beliefs about the location of the cupcake. \n\nWilliam's goal is to find a cupcake. To achieve this"
+    ],
+    "reason_zh": "说明将分析信念，但只写到目标及To achieve this。",
+    "is_semantic_readback_not_new_answer": true
+  },
+  {
+    "index": 90,
+    "prediction": null,
+    "category": "no_recoverable_option",
+    "evidence_quotes": [
+      "sed on the provided text and images, Susan is actively searching for a cupcake in various kitchen cabinets and the dishwasher. The text states that the cupcake is actually located inside the fridge. If Susan believed the"
+    ],
+    "reason_zh": "只有世界位置和不完整条件句，未判断Susan相信在/不在冰箱。",
+    "is_semantic_readback_not_new_answer": true
+  },
+  {
+    "index": 93,
+    "prediction": null,
+    "category": "no_recoverable_option",
+    "evidence_quotes": [
+      "Based on the provided text and images, Susan is actively searching the kitchen for a wine glass. She has already checked numerous locations, including several cabinets, the dishwasher, and the microwave, without"
+    ],
+    "reason_zh": "动作列表和without片段；无目标信念命题。",
+    "is_semantic_readback_not_new_answer": true
+  },
+  {
+    "index": 100,
+    "prediction": null,
+    "category": "no_recoverable_option",
+    "evidence_quotes": [
+      "Based on the provided scenario and Susan's actions, we can deduce her belief about the location of the plate. \n\nSusan's goal is to find a plate. To"
+    ],
+    "reason_zh": "只有引言和找盘子目标；未分析微波炉信念。",
+    "is_semantic_readback_not_new_answer": true
+  },
+  {
+    "index": 102,
+    "prediction": null,
+    "category": "no_recoverable_option",
+    "evidence_quotes": [
+      "Based on the provided scenario and Susan's actions, we can deduce her belief state. \n\n1.  **Goal:** Susan is trying to find a condiment bottle.\n2"
+    ],
+    "reason_zh": "只写出了Goal条目，后续未出现信念判断。",
+    "is_semantic_readback_not_new_answer": true
+  },
+  {
+    "index": 103,
+    "prediction": null,
+    "category": "no_recoverable_option",
+    "evidence_quotes": [
+      "Based on the provided text and actions, Susan is actively searching for a plate in the kitchen. She checks numerous locations, including the fridge, several cabinets, the stove, and the dishwasher. However, she"
+    ],
+    "reason_zh": "动作列表后However she未完成；未形成选项判断。",
+    "is_semantic_readback_not_new_answer": true
+  },
+  {
+    "index": 110,
+    "prediction": null,
+    "category": "no_recoverable_option",
+    "evidence_quotes": [
+      "Based on the provided text and images, David is actively searching for a bottle of wine by checking various locations such as multiple kitchen cabinets, the dishwasher, the stove, and a bedroom cabinet. Despite the"
+    ],
+    "reason_zh": "检查地点列表后Despite the未完成；没有冰箱信念。",
+    "is_semantic_readback_not_new_answer": true
+  },
+  {
+    "index": 124,
+    "prediction": null,
+    "category": "no_recoverable_option",
+    "evidence_quotes": [
+      "Based on the action history and the images, John is actively searching for a dishbowl. He has already checked the 7th kitchen cabinet, the stove, and the 6th kitchen cabinet without finding"
+    ],
+    "reason_zh": "检查列表到without finding未完成；没有冰箱信念。",
+    "is_semantic_readback_not_new_answer": true
+  },
+  {
+    "index": 139,
+    "prediction": null,
+    "category": "no_recoverable_option",
+    "evidence_quotes": [
+      "Based on the provided scenario and Karen's actions, we can deduce her beliefs about the location of the salmon. \n\nKaren's goal is to find a salmon. The actual locations of the"
+    ],
+    "reason_zh": "只说明目标，物体位置描述也未完成。",
+    "is_semantic_readback_not_new_answer": true
+  },
+  {
+    "index": 152,
+    "prediction": null,
+    "category": "no_recoverable_option",
+    "evidence_quotes": [
+      "Based on the provided text and images, David's goal is to get a plate. The text states that there is a plate inside the microwave. However, the action history and the images show"
+    ],
+    "reason_zh": "微波炉里有盘子是物理事实；动作分析未写完，不能替换为主体信念。",
+    "is_semantic_readback_not_new_answer": true
+  },
+  {
+    "index": 166,
+    "prediction": null,
+    "category": "no_recoverable_option",
+    "evidence_quotes": [
+      "Based on the provided scenario, James is trying to find a salmon. The true location of the salmon is inside the fridge. However, James's actions show him searching through various"
+    ],
+    "reason_zh": "陈述物理位置及未完搜索动作，没有主体相信在/不在的命题。",
+    "is_semantic_readback_not_new_answer": true
+  },
+  {
+    "index": 167,
+    "prediction": null,
+    "category": "no_recoverable_option",
+    "evidence_quotes": [
+      "Based on the provided scenario and James's actions, we can deduce his belief about the location of the salmon. \n\n1.  **Goal:** James is trying to find a salmon."
+    ],
+    "reason_zh": "只有Goal条目，没有冰箱信念判断。",
+    "is_semantic_readback_not_new_answer": true
+  },
+  {
+    "index": 183,
+    "prediction": null,
+    "category": "no_recoverable_option",
+    "evidence_quotes": [
+      "Based on the provided scenario, Robert is actively searching for a remote control. He has already checked several locations in the kitchen, including the third, sixth, fifth, and first cabinets"
+    ],
+    "reason_zh": "搜索地点列表，没有浴室柜内外信念判断。",
+    "is_semantic_readback_not_new_answer": true
+  },
+  {
+    "index": 185,
+    "prediction": null,
+    "category": "no_recoverable_option",
+    "evidence_quotes": [
+      "Based on the provided scenario and action history, Robert is actively searching for a remote control. He has already checked several locations, including various kitchen cabinets, the stove, and the bathroom cabinet. His"
+    ],
+    "reason_zh": "搜索地点列表后His未完成，没有dishwasher信念判断。",
+    "is_semantic_readback_not_new_answer": true
+  },
+  {
+    "index": 198,
+    "prediction": "a",
+    "category": "completed_counterfactual_exclusion",
+    "evidence_quotes": [
+      "Based on Mark's actions, he is systematically searching the kitchen cabinets and the dishwasher for a plate.",
+      "If he believed the plate was inside the fridge, he would likely have checked there instead of continuing"
+    ],
+    "reason_zh": "原文把实际搜索与相信盘子在冰箱时应有的搜索进行对比，表达不相信在冰箱的方向；接受已写出的反事实排除，不补写后文。",
+    "is_semantic_readback_not_new_answer": true
+  },
+  {
+    "index": 205,
+    "prediction": null,
+    "category": "no_recoverable_option",
+    "evidence_quotes": [
+      "Based on the provided scenario and Thomas's actions, we can deduce his beliefs about the location of the plate. \n\n1.  **Thomas's Goal:** He is trying to get a plate"
+    ],
+    "reason_zh": "只有目标条目，未表达dishwasher信念。",
+    "is_semantic_readback_not_new_answer": true
+  },
+  {
+    "index": 210,
+    "prediction": null,
+    "category": "no_recoverable_option",
+    "evidence_quotes": [
+      "Based on the provided text and images, Thomas is searching for a plate in the kitchen. He checks several locations, including the 5th cabinet, the microwave, the 1st cabinet, the"
+    ],
+    "reason_zh": "只列搜索地点且列表未完，未表达dishwasher信念。",
+    "is_semantic_readback_not_new_answer": true
+  },
+  {
+    "index": 214,
+    "prediction": null,
+    "category": "no_recoverable_option",
+    "evidence_quotes": [
+      "the provided action history, Thomas is actively searching for a wine glass. He has checked various locations in the kitchen and bathroom without success. His final action is moving towards the dishwasher and preparing to"
+    ],
+    "reason_zh": "只描述向dishwasher移动和未完成动作，没有信念命题。",
+    "is_semantic_readback_not_new_answer": true
+  },
+  {
+    "index": 215,
+    "prediction": null,
+    "category": "no_recoverable_option",
+    "evidence_quotes": [
+      "Based on the provided text and images, Thomas is on a quest to find a wine glass. He has systematically searched through various locations in the kitchen (multiple cabinets, microwave, fridge, stove"
+    ],
+    "reason_zh": "搜索地点列表未完成，无cabinet信念命题。",
+    "is_semantic_readback_not_new_answer": true
+  },
+  {
+    "index": 252,
+    "prediction": null,
+    "category": "no_recoverable_option",
+    "evidence_quotes": [
+      "Based on the narrative, Elizabeth is actively searching for a salmon in the kitchen. She has systematically checked several locations, including various cabinets, the dishwasher, and the microwave, without success. Her"
+    ],
+    "reason_zh": "检查地点之后Her未完成，没有stove信念判断。",
+    "is_semantic_readback_not_new_answer": true
+  },
+  {
+    "index": 258,
+    "prediction": null,
+    "category": "no_recoverable_option",
+    "evidence_quotes": [
+      "Based on the provided scenario, Robert's goal is to find a salmon. He has been searching for it by opening different containers in the apartment, such as the living room cabinet and"
+    ],
+    "reason_zh": "只说明打开不同容器的动作，未判断bathroom cabinet信念。",
+    "is_semantic_readback_not_new_answer": true
+  },
+  {
+    "index": 277,
+    "prediction": null,
+    "category": "suggestive_but_unfinished",
+    "evidence_quotes": [
+      "systematically searching the kitchen for it. She has already checked the stove and the fridge without success. The fact that she is now preparing to open the microwave indicates that she believes the bottle of wine might"
+    ],
+    "reason_zh": "已写indicates that she believes，但停在the bottle of wine might，缺少信念内容的谓语/位置；保守主口径不补写。",
+    "is_semantic_readback_not_new_answer": true
+  },
+  {
+    "index": 301,
+    "prediction": null,
+    "category": "no_recoverable_option",
+    "evidence_quotes": [
+      "Based on the initial state, the 3rd kitchen cabinet contains a bottle of wine and an apple. The refrigerator contains a dish bowl, a cupcake, and an apple. \n\nSarah first goes to"
+    ],
+    "reason_zh": "只有物体位置和未完成动作，无目标选择。",
+    "is_semantic_readback_not_new_answer": true
+  },
+  {
+    "index": 306,
+    "prediction": null,
+    "category": "no_recoverable_option",
+    "evidence_quotes": [
+      "Based on the provided text and images, we can deduce John's goal by analyzing his search pattern. \n\n1. **Initial State:** We know the locations of various items. A **dish"
+    ],
+    "reason_zh": "刚开始介绍初始状态，连dishbowl都未写完。",
+    "is_semantic_readback_not_new_answer": true
+  },
+  {
+    "index": 321,
+    "prediction": null,
+    "category": "no_recoverable_option",
+    "evidence_quotes": [
+      " Nancy goes to the kitchen and checks the fourth cabinet (contains a dish bowl), then the third cabinet (contains an apple and a wine glass).\n    *   She then opens the **stove**, which contains a **plate** and a salmon."
+    ],
+    "reason_zh": "列出候选位置和检查stove动作，没有对plate与condiment bottle作目标判断；不从动作另解题。",
+    "is_semantic_readback_not_new_answer": true
+  },
+  {
+    "index": 323,
+    "prediction": null,
+    "category": "no_recoverable_option",
+    "evidence_quotes": [
+      "Based on the provided information, we know the following:\n1.  **Reality:** There is a salmon inside the microwave.\n2.  **Action:** Nancy proceeds towards the microwave"
+    ],
+    "reason_zh": "只给出真实位置和动作，未判断目标salmon还是chips。",
+    "is_semantic_readback_not_new_answer": true
+  },
+  {
+    "index": 333,
+    "prediction": null,
+    "category": "no_recoverable_option",
+    "evidence_quotes": [
+      "This is a trick question or I'm missing a subtle detail.\n*   Let's re-read the prompt again.\n    *   \"The third kitchen cabinet from the left holds a"
+    ],
+    "reason_zh": "表示困惑并开始重读题目，未给出选择。",
+    "is_semantic_readback_not_new_answer": true
+  },
+  {
+    "index": 334,
+    "prediction": null,
+    "category": "no_recoverable_option",
+    "evidence_quotes": [
+      "sed on the provided narrative, James is searching for an item by checking various cabinets. He checks the second and first kitchen cabinets, then a cabinet in the living room, and finally walks towards the fourth kitchen"
+    ],
+    "reason_zh": "搜索动作叙述未完成，未选择dishbowl或condiment bottle。",
+    "is_semantic_readback_not_new_answer": true
+  },
+  {
+    "index": 342,
+    "prediction": null,
+    "category": "no_recoverable_option",
+    "evidence_quotes": [
+      "Based on the provided information, the fourth kitchen cabinet contains a water glass. Jennifer is observed proceeding towards this fourth kitchen cabinet. \n\nIf Jennifer's goal was to get a water"
+    ],
+    "reason_zh": "只完成物理位置/动作，目标条件句停在water。",
+    "is_semantic_readback_not_new_answer": true
+  },
+  {
+    "index": 344,
+    "prediction": null,
+    "category": "no_recoverable_option",
+    "evidence_quotes": [
+      "Based on the provided information, we know that Linda is walking towards the microwave. The question asks us to consider a scenario where Linda believes there is *no* condiment bottle inside the microwave."
+    ],
+    "reason_zh": "重述已给定信念和动作，不等于判断所追求目标。",
+    "is_semantic_readback_not_new_answer": true
+  },
+  {
+    "index": 345,
+    "prediction": null,
+    "category": "no_recoverable_option",
+    "evidence_quotes": [
+      "Based on the provided information, Linda is walking towards the microwave. In goal-directed behavior, a person moves towards a location because they believe the object they are seeking is there. \n\nIf Linda"
+    ],
+    "reason_zh": "只有一般搜索原则和未完成If Linda；没有完成两候选的目标比较。",
+    "is_semantic_readback_not_new_answer": true
+  },
+  {
+    "index": 347,
+    "prediction": null,
+    "category": "no_recoverable_option",
+    "evidence_quotes": [
+      "Based on the scenario provided, we can deduce Linda's likely goal by observing her search pattern. \n\n1.  **Analyze the locations checked:** Linda first checks the microwave, which contains a"
+    ],
+    "reason_zh": "只开始列检查地点，未选择chips或plate。",
+    "is_semantic_readback_not_new_answer": true
+  },
+  {
+    "index": 350,
+    "prediction": "b",
+    "category": "explicit_option_rejection",
+    "evidence_quotes": [
+      "This action indicates that she is not looking for a condiment bottle"
+    ],
+    "reason_zh": "原文明确排除选项A的调味瓶目标；二选一对应B的dishbowl。",
+    "is_semantic_readback_not_new_answer": true
+  },
+  {
+    "index": 351,
+    "prediction": null,
+    "category": "off_option_goal",
+    "evidence_quotes": [
+      "Based on the initial state, the third kitchen cabinet contains a plate. Thomas's action of advancing towards the third kitchen cabinet suggests he is trying to get a plate. Getting a plate is a logical"
+    ],
+    "reason_zh": "明确提出get a plate，但plate不在该题water glass/salmon两个选项内；不能硬映射。",
+    "is_semantic_readback_not_new_answer": true
+  },
+  {
+    "index": 352,
+    "prediction": null,
+    "category": "no_recoverable_option",
+    "evidence_quotes": [
+      "Based on the provided text, Thomas is in the kitchen and heading towards the third kitchen cabinet, which contains a plate. People typically get a plate when they intend to eat something that might be messy or"
+    ],
+    "reason_zh": "提出找盘子可能为了吃东西的一般解释，未选择apple或cupcake。",
+    "is_semantic_readback_not_new_answer": true
+  },
+  {
+    "index": 365,
+    "prediction": null,
+    "category": "no_recoverable_option",
+    "evidence_quotes": [
+      "Based on the provided information and Jessica's actions, we can deduce her likely goal. \n\n1.  **Analyze the environment:** The 4th kitchen cabinet actually contains a"
+    ],
+    "reason_zh": "环境描述未完成，未选择water glass或plate。",
+    "is_semantic_readback_not_new_answer": true
+  },
+  {
+    "index": 371,
+    "prediction": null,
+    "category": "no_recoverable_option",
+    "evidence_quotes": [
+      "Based on the action history, Jessica opens the bedroom cabinet, which contains a bottle of wine, but she continues her search by moving to the kitchen and checking other cabinets and the microwave. If her goal"
+    ],
+    "reason_zh": "搜索动作后If her goal未完成，尚未排除wine或选择plate。",
+    "is_semantic_readback_not_new_answer": true
+  },
+  {
+    "index": 372,
+    "prediction": null,
+    "category": "no_recoverable_option",
+    "evidence_quotes": [
+      "Based on the initial state and Jessica's actions, we can deduce her goal by observing where she searches. \n\n1.  **Locations of a book:** A book is"
+    ],
+    "reason_zh": "只开始列book的位置，未表达目标。",
+    "is_semantic_readback_not_new_answer": true
+  },
+  {
+    "index": 383,
+    "prediction": null,
+    "category": "no_recoverable_option",
+    "evidence_quotes": [
+      "lmon** is located in both the **stove** and the **fridge**. A **water glass** is located in the **dishwasher**.\n2.  **Analyze Emily's actions:** Emily's action history shows she opened the stove and then closed it. Later"
+    ],
+    "reason_zh": "已列位置/开关stove动作，但Later之后未完成，未评价两个目标。",
+    "is_semantic_readback_not_new_answer": true
+  },
+  {
+    "index": 398,
+    "prediction": null,
+    "category": "no_recoverable_option",
+    "evidence_quotes": [
+      "Based on the provided scenario, Jessica starts in the bedroom where a bag of chips is openly placed on the sofa. If she were looking for a bag of chips, it is highly probable she would have"
+    ],
+    "reason_zh": "有chips相关条件句，但would have之后没有结果；不能补成已明确排除chips。",
+    "is_semantic_readback_not_new_answer": true
+  },
+  {
+    "index": 410,
+    "prediction": null,
+    "category": "no_recoverable_option",
+    "evidence_quotes": [
+      "Based on the initial state, there is a water glass on the kitchen table and two water glasses in the dishwasher. There is also a wine glass in the sixth kitchen cabinet and two wine glasses in the"
+    ],
+    "reason_zh": "只有两种杯子的位置列表，未形成目标判断。",
+    "is_semantic_readback_not_new_answer": true
+  },
+  {
+    "index": 413,
+    "prediction": null,
+    "category": "no_recoverable_option",
+    "evidence_quotes": [
+      "Based on the initial state, there is a water glass on the kitchen table and two water glasses in the dishwasher. There are also two wine glasses in the dishwasher and one in the sixth kitchen cabinet"
+    ],
+    "reason_zh": "只有两种杯子的物理位置，未判断目标。",
+    "is_semantic_readback_not_new_answer": true
+  },
+  {
+    "index": 417,
+    "prediction": null,
+    "category": "no_recoverable_option",
+    "evidence_quotes": [
+      "Based on the initial state, the dishwasher contains a dish bowl, a wine glass, and a plate. William's action is to advance towards the dishwasher. \n\nIf William"
+    ],
+    "reason_zh": "只有dishwasher物体及动作，If William未完成。",
+    "is_semantic_readback_not_new_answer": true
+  },
+  {
+    "index": 422,
+    "prediction": null,
+    "category": "no_recoverable_option",
+    "evidence_quotes": [
+      "Based on the initial state and William's actions, let's analyze his behavior:\n\n1.  **William's Goal:** We need to determine if he is looking for a salmon or"
+    ],
+    "reason_zh": "重述待判定目标并停在or，未给出判断。",
+    "is_semantic_readback_not_new_answer": true
+  },
+  {
+    "index": 429,
+    "prediction": null,
+    "category": "no_recoverable_option",
+    "evidence_quotes": [
+      "Based on the initial state, the fridge contains a dish bowl, a plate, and a bottle of wine. Mark is observed walking towards the fridge. \n\nIf Mark were trying to get"
+    ],
+    "reason_zh": "物理位置和动作后If Mark were trying to get未完成。",
+    "is_semantic_readback_not_new_answer": true
+  },
+  {
+    "index": 448,
+    "prediction": null,
+    "category": "no_recoverable_option",
+    "evidence_quotes": [
+      "Based on the initial state, Charles starts in the living room where a bottle of wine is clearly visible on the coffee table. If his goal was to get a bottle of wine,"
+    ],
+    "reason_zh": "wine位置及条件句的前件，没有后件或选项结论。",
+    "is_semantic_readback_not_new_answer": true
+  },
+  {
+    "index": 454,
+    "prediction": "b",
+    "category": "completed_counterfactual_exclusion",
+    "evidence_quotes": [
+      "Susan is walking towards the second kitchen cabinet.",
+      "If she were looking for a plate and believed there wasn't one in the second cabinet, she would not be heading there."
+    ],
+    "reason_zh": "原文自己完成了目标A与给定信念/实际动作不相容的论证，对应另一选项B。末尾However没有进一步完成的反转判断。",
+    "is_semantic_readback_not_new_answer": true
+  },
+  {
+    "index": 485,
+    "prediction": null,
+    "category": "no_recoverable_option",
+    "evidence_quotes": [
+      "Based on the initial state and the actions taken by John, we can deduce his likely goal. \n\nJohn spends a significant amount of time in the kitchen, systematically opening and closing almost all of the"
+    ],
+    "reason_zh": "只开始列搜索动作，未选择book或plate。",
+    "is_semantic_readback_not_new_answer": true
+  },
+  {
+    "index": 496,
+    "prediction": null,
+    "category": "no_recoverable_option",
+    "evidence_quotes": [
+      "Based on the provided information, Thomas is in the kitchen and advancing towards the fifth kitchen cabinet. \n\nLet's evaluate the likelihood of each goal:\n*   **(a) Thomas has been trying"
+    ],
+    "reason_zh": "开始逐选项分析，列(a)不等于选择(a)，句子也未完成。",
+    "is_semantic_readback_not_new_answer": true
+  },
+  {
+    "index": 516,
+    "prediction": null,
+    "category": "no_recoverable_option",
+    "evidence_quotes": [
+      "Based on the initial state, the remote controls are located in the bedroom cabinet, while there is a bottle of wine in the fridge (as well as in the bedroom and dishwasher). William is currently searching"
+    ],
+    "reason_zh": "只有物体位置和未完成搜索描述，未判断wine或remote目标。",
+    "is_semantic_readback_not_new_answer": true
+  },
+  {
+    "index": 520,
+    "prediction": null,
+    "category": "no_recoverable_option",
+    "evidence_quotes": [
+      "Based on the provided information, William searches almost every container in the kitchen (cabinets, microwave, fridge) and finally heads towards the dishwasher. \n\nIf William were looking for a dishbowl and believed"
+    ],
+    "reason_zh": "搜索动作后假设句未完成，没有明确排除dishbowl。",
+    "is_semantic_readback_not_new_answer": true
+  },
+  {
+    "index": 525,
+    "prediction": null,
+    "category": "no_recoverable_option",
+    "evidence_quotes": [
+      "Based on the provided text and images, we can deduce Jennifer's goal by analyzing her search pattern. \n\n1.  **Analyze the locations of the items:**\n    *   A **plate"
+    ],
+    "reason_zh": "只开始列plate位置，未表达目标。",
+    "is_semantic_readback_not_new_answer": true
+  },
+  {
+    "index": 541,
+    "prediction": "a",
+    "category": "completed_option_comparison",
+    "evidence_quotes": [
+      "If she were looking for a **remote control**, checking the kitchen fridge would be highly illogical",
+      "If she were looking for an **apple**, checking the kitchen fridge makes perfect sense"
+    ],
+    "reason_zh": "虽然结尾Therefore未完成，前面的两项比较已明确偏向apple而非remote control。",
+    "is_semantic_readback_not_new_answer": true
+  },
+  {
+    "index": 547,
+    "prediction": null,
+    "category": "no_recoverable_option",
+    "evidence_quotes": [
+      "Based on the initial state, the bottle of wine is located in the bedroom, while there is a cupcake in the kitchen (inside the microwave) and another in the living room."
+    ],
+    "reason_zh": "完整句仅陈述wine/cupcake物理位置，不是Elizabeth的目标判断。",
+    "is_semantic_readback_not_new_answer": true
+  },
+  {
+    "index": 569,
+    "prediction": "b",
+    "category": "completed_counterfactual_exclusion",
+    "evidence_quotes": [
+      "Sarah proceeds to the microwave.",
+      "If she were trying to get a cupcake but believed there wasn't one in the microwave, she would not have gone there."
+    ],
+    "reason_zh": "原文完成了对选项A cupcake的反事实排除，故二选一对应B wine glass；不需要重解情节。",
+    "is_semantic_readback_not_new_answer": true
+  },
+  {
+    "index": 578,
+    "prediction": null,
+    "category": "no_recoverable_option",
+    "evidence_quotes": [
+      "Based on the action history, James searches the stove, fridge, and microwave in the kitchen before heading to the living room cabinet. If he were looking for a wine glass, it is highly unlikely he would"
+    ],
+    "reason_zh": "写出wine glass条件句，但is highly unlikely he would之后未给出不可能动作；不补全。",
+    "is_semantic_readback_not_new_answer": true
+  },
+  {
+    "index": 585,
+    "prediction": null,
+    "category": "no_recoverable_option",
+    "evidence_quotes": [
+      "Based on the scenario provided:\n\n1.  **John's Actions:** John starts in the bathroom, goes to the kitchen, checks the microwave (which contains salmon and a condiment bottle),"
+    ],
+    "reason_zh": "动作和物品列表未完成，无water glass/wine目标选择。",
+    "is_semantic_readback_not_new_answer": true
+  },
+  {
+    "index": 596,
+    "prediction": null,
+    "category": "no_recoverable_option",
+    "evidence_quotes": [
+      "Based on the provided information, Daniel is currently in the kitchen and is walking towards the refrigerator. \n\nThe question asks us to consider a scenario where Daniel has a false belief: he thinks"
+    ],
+    "reason_zh": "开始复述给定belief，未完成也没有选择目标。",
+    "is_semantic_readback_not_new_answer": true
+  }
+]

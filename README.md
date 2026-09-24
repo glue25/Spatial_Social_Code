@@ -1,5 +1,18 @@
 # Spatial-Social Code
 
+## MMToM historical Pro score update — 2026-09-24
+
+The [saved-response readback report](reports/pro_direct_semantic_readback_20260924/README_zh.md)
+reports **Direct 387/600 (64.50%)**, counting 63 unrecoverable answers as failures,
+and **SSC 470/600 (78.33%)**, the historical saved SSC score, not independently
+re-audited in this readback. This retrospective scoring replaces the old saved
+Direct number for this presentation, not the archived raw predictions. It uses
+no Flash/3.1 Pro substitutions or new inference. The report includes all 600
+scores, the 69 semantic-review records, and reproducible verification code.
+Original Pro request option mapping remains unverified, and semantic review
+was not fully blinded. The difference includes output completeness and does
+not establish an isolated SSC-mechanism effect; see the report for protocol limits.
+
 Spatial-Social Code studies whether models reason more reliably from an
 explicit, executable representation of a multi-agent world. It separates
 grounded physical evidence from social and mental-state inference:

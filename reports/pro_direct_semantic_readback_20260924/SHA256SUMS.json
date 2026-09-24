@@ -1,0 +1,10 @@
+{
+  "protocol.json": "d45b2d2c1e60eef5a4a04511fb92823291b9e2017872f1598ff77e2432b7d639",
+  "semantic_decisions_without_gold.json": "380e599e0db9bbf3bd85759b4b4b53896a2211a72b4e4babed6e6094c33faa2a",
+  "scores_readback_600.json": "86152b41eb3282c23aa89b56298f8c80f9ea6aaa97847b6e9477a7f495a65b45",
+  "scores_readback_600.csv": "da4cd58e79f543dacd488c21369d25e54bd25cf2972926dbabd80c87992b58e6",
+  "README_zh.md": "ede949af8cba919689a1b16de42c26b07edf6c546589bebeb8612da6649d7702",
+  "summary.json": "a1a1676951efac0719a62584573e1df7f29bd55c9ddc32452ecd1bc5a9a56f39",
+  "review_packet_without_gold.json": "55db11d398ac08d5edf402073adb83ec6410584e2b71ec3df04e364193126798",
+  "comparison.json": "409ed3fdad17819083793ee66fcccd3f2fbb778d2e6548803ea5e4feab207e1e"
+}
