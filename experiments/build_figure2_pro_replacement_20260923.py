@@ -206,7 +206,10 @@ def render(folder, frames, posterior):
     ax.text(.71,.205,"Saved labels shown without win/loss badges.",fontsize=9,color="#526070")
     ax.text(.025,.055,"Record-level illustration, not a link ablation or online update. Frame indices are not seconds; actor name and hidden contents come from text.",fontsize=9,color="#526070")
     for suffix in ("svg","pdf","png"):
-        fig.savefig(folder/f"panel_a_input_state_readout.{suffix}",dpi=180)
+        path = folder/f"panel_a_input_state_readout.{suffix}"
+        fig.savefig(path,dpi=180)
+        if suffix == "svg":
+            path.write_text("\n".join(line.rstrip() for line in path.read_text().splitlines())+"\n")
     plt.close(fig)
 
 
