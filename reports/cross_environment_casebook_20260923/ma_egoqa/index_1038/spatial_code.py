@@ -1,4 +1,0 @@
-S.event(1, Katrina, "sit down", "chair", source="video", confidence=0.9, evidence_id="S1", clip_id="DAY6_A3_TASHA_16250000.mp4", observer="Tasha", evidence_span="00:10-00:12", quote="", event_role="executor", phase="during")
-S.event(2, Tasha, "whisper", "Jake", source="video", confidence=0.9, evidence_id="S2", clip_id="DAY6_A3_TASHA_16250000.mp4", observer="Tasha", evidence_span="00:11-00:13", quote="这是她男朋友吗？", event_role="speaker", phase="during")
-S.event(3, Jake, "reply", "Tasha", source="video", confidence=0.9, evidence_id="S3", clip_id="DAY6_A3_TASHA_16250000.mp4", observer="Tasha", evidence_span="00:13-00:14", quote="不是", event_role="speaker", phase="during")
-S.fact(1, "mistakenly assume", "Tasha", "Katrina has a boyfriend", source="video", confidence=0.9, evidence_id="S4", clip_id="DAY6_A3_TASHA_16250000.mp4", observer="Tasha", evidence_span="00:11-00:14", quote="")

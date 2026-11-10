@@ -1,8 +1,0 @@
-S.fact(0, "in", "cupcake", "microwave", source="text", confidence=1.0)
-S.fact(0, "in", "dish bowl", "fridge", source="text", confidence=1.0)
-S.fact(0, "in", "cupcake", "living room cabinet", source="text", confidence=1.0)
-S.fact(0, "in", "dish bowl", "living room cabinet", source="text", confidence=1.0)
-S.event(1, "John", "walk to", "kitchen cabinet 4", source="text", confidence=1.0)
-S.event(2, "John", "open", "kitchen cabinet 4", source="text", confidence=1.0)
-S.event(3, "John", "close", "kitchen cabinet 4", source="text", confidence=1.0)
-S.event(4, "John", "walk to", "microwave", source="text", confidence=1.0)

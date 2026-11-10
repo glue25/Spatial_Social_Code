@@ -1,8 +1,0 @@
-S.fact(6, 'jointly_attended', 'pan', 'leader')
-S.visible(6, 'leader', 'pan', '[114, 468, 240, 212]')
-S.fact(12, 'jointly_attended', 'pan', 'helper')
-S.visible(12, 'helper', 'pan', '[381, 490, 191, 182]')
-S.fact(6, 'cue', 'pan', 'gaze')
-S.fact(6, 'cue', 'pan', 'action')
-S.fact(6, 'cue', 'pan', 'verbal')
-S.fact(6, 'category', 'pan', 'pan')

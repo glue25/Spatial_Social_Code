@@ -18,27 +18,27 @@ environments:
       - instructor_performer_interaction
       - mistake_and_intervention_analysis
     status: ready_metadata
-    project_url: https://holoassist.github.io/
+    project_url: ""
     license: CDLA-Permissive-2.0
     code:
       annotation_tools:
         path: external/holoassist-release
-        source: https://github.com/Ember-HoloAssist/holoassist-release
+        source: ""
         revision: f53ad2b5c3889784ef068e11fea10ba4ecf99970
       hand_eye_projection:
         path: external/PyHoloAssist
-        source: https://github.com/taeinkwon/PyHoloAssist
+        source: ""
         revision: 9d0dfe238ff6ac99c510f8ce8a8c0e125317dbae
     data:
       annotations:
         path: external_datasets/holoassist/annotations/data-annotation-trainval-v1_1.json
-        source: https://hl2data.z5.web.core.windows.net/holoassist-data-release/data-annotation-trainval-v1_1.json
+        source: ""
         sha256: cc7898b49958a62fe021ae2ffa53a709c3fd6f45fd3f893960b8aac6d13dfe9c
         records: 1758
         labeled_events: 195945
       splits:
         archive: external_datasets/holoassist/splits/data-splits-v1_2.zip
-        source: https://holoassist.github.io/label_files/data-splits-v1_2.zip
+        source: ""
         sha256: e10674e7ac32957386d5e88afa60acf3335251b92ba2f8cfb97a736dc85e1621
         train: external_datasets/holoassist/splits/train-v1_2.txt
         validation: external_datasets/holoassist/splits/val-v1_2.txt
@@ -57,15 +57,15 @@ environments:
       - distributed_evidence_and_memory
       - belief_and_task_coordination
     status: ready_metadata
-    project_url: https://ma-egoqa.github.io/
+    project_url: ""
     license: Apache-2.0
     code:
       path: external/MA-EgoQA
-      source: https://github.com/KangsanKim07/MA-EgoQA
+      source: ""
       revision: 67ae23ccfed90994aa532a65d4a0545c436f27be
     data:
       path: external_datasets/ma_egoqa
-      source: https://huggingface.co/datasets/KangsanKim71/MA-EgoQA
+      source: ""
       revision: eaae32138dee6ce21127a5148b97962f9c62fa2e
       questions: 1741
       captions_json_files: 127
@@ -82,15 +82,15 @@ environments:
       - executable_multi_agent_tasks
       - counterfactual_and_intervention_evaluation
     status: ready_text_env
-    project_url: https://enact-tom.github.io/
+    project_url: ""
     license: MIT
     code:
       path: external/EnactTom
-      source: https://github.com/UCSB-AI/EnactTom
+      source: ""
       revision: 093c4a11b622c8f0b50070e51ae9461b2b1db2f8
     data:
       path: external_datasets/enacttom
-      source: https://huggingface.co/datasets/ucsbai/enact_tom_300_public
+      source: ""
       revision: d3c61ab96cfa46e2c2fd88ed9b3da34b9c3a2c36
       standard_tasks: 150
       hard_tasks: 150
@@ -104,11 +104,11 @@ environments:
       - physical_causal_chain
       - task_state_and_counterfactual_qa
     status: access_required
-    project_url: https://sites.google.com/view/egotaskqa/
-    request_url: https://sites.google.com/view/egotaskqa/download
+    project_url: ""
+    request_url: ""
     code:
       path: external/EgoTaskQA
-      source: https://github.com/Buzz-Beater/EgoTaskQA
+      source: ""
       revision: 807a34d77dd6dc1286a2d77b29036e948741bc82
     data:
       status: pending_license_agreement
@@ -119,12 +119,12 @@ environments:
       - multi_view_collaboration
       - shared_physical_field
     status: ready_transcript_pilot
-    project_url: https://comind.ethz.ch/
-    alternative_url: https://comind-data.org/
+    project_url: ""
+    alternative_url: ""
     license: CC-BY-4.0
     downloader:
       path: external/CoMind/comind_download.py
-      source: https://comind.ethz.ch/scripts/comind_download.py
+      source: ""
       version: 20260626-01
       sha256: ef9fa39c5f0b39c47b8790278df211e6e354b1cf8026bdbd5e1f442a06f1ea49
     data:

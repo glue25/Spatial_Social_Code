@@ -24,8 +24,8 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[2]
-AUTOTOM_MODEL = ROOT / "AutoToM" / "model"
-MA_EGOQA = ROOT / "MA-EgoQA"
+AUTOTOM_MODEL = ROOT / "third_party/autotom" / "model"
+MA_EGOQA = ROOT / "benchmarks/ma_egoqa"
 for import_path in (AUTOTOM_MODEL, MA_EGOQA, ROOT / "spatial_social_code"):
     if str(import_path) not in sys.path:
         sys.path.insert(0, str(import_path))

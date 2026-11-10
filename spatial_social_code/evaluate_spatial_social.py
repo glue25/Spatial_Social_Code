@@ -16,7 +16,7 @@ from pathlib import Path
 from typing import Iterable
 
 ROOT = Path(__file__).resolve().parents[1]
-SHARED_MODEL_CODE = ROOT / "AutoToM" / "model"
+SHARED_MODEL_CODE = ROOT / "third_party/autotom" / "model"
 if str(SHARED_MODEL_CODE) not in sys.path:
     sys.path.insert(0, str(SHARED_MODEL_CODE))
 

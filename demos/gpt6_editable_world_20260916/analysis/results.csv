@@ -1,5 +1,0 @@
-case,statements,generation_accepted,geometry_all_passed,preview_nonblank,failed_checks
-base,18,True,True,True,
-intervention_move_bowl,18,True,True,True,
-intervention_toggle_drawer,18,True,True,True,
-intervention_remove_bowl,16,True,True,True,

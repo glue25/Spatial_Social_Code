@@ -396,7 +396,7 @@ def call_local_qwen(
 
     os.environ["SPATIAL_SOCIAL_MODEL_PATH"] = str(model_path)
     os.environ["SPATIAL_SOCIAL_LOCAL_FILES_ONLY"] = "1"
-    shared_model = Path(__file__).resolve().parents[1] / "AutoToM" / "model"
+    shared_model = Path(__file__).resolve().parents[1] / "third_party/autotom" / "model"
     if str(shared_model) not in sys.path:
         sys.path.insert(0, str(shared_model))
     from local_backend import generate, set_image_context

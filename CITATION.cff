@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "Please cite this repository if you use Spatial-Social Code. The preprint identifier will be added after announcement."
+type: software
+title: "Thinking with Spatial-Social Code for Social Reasoning in Videos"
+authors:
+  - family-names: Zhang
+    given-names: Xiaoyuan
+    affiliation: Johns Hopkins University
+  - family-names: Zhang
+    given-names: Zhaowei
+    affiliation: Johns Hopkins University
+  - family-names: Li
+    given-names: Wenbo
+    affiliation: The Chinese University of Hong Kong
+  - family-names: Yuille
+    given-names: Alan
+    affiliation: Johns Hopkins University
+  - family-names: Shu
+    given-names: Tianmin
+    affiliation: Johns Hopkins University
+  - family-names: Chen
+    given-names: Jieneng
+    affiliation: Johns Hopkins University
+repository-code: "https://github.com/glue25/Spatial_Social_Code"
+url: "https://github.com/glue25/Spatial_Social_Code"
+license: MIT

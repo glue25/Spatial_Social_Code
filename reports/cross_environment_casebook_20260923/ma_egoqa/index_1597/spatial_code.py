@@ -1,6 +1,0 @@
-S.event(1, Katrina, "use", "scissors", source="video", confidence=0.8, evidence_id="S1", clip_id="DAY4_A5_KATRINA_12300000.mp4", observer="Katrina", evidence_span="00:27-00:30", quote="", event_role="executor", phase="during")
-S.event(2, Lucia, "use", "scissors", source="video", confidence=0.8, evidence_id="S2", clip_id="DAY4_A4_LUCIA_18000000.mp4", observer="Lucia", evidence_span="00:03-00:18", quote="", event_role="executor", phase="during")
-S.event(3, Lucia, "use", "scissors", source="video", confidence=0.8, evidence_id="S3", clip_id="DAY4_A5_KATRINA_15453000.mp4", observer="Katrina", evidence_span="00:18-00:25", quote="", event_role="executor", phase="during")
-S.event(4, Lucia, "use", "scissors", source="video", confidence=0.8, evidence_id="S4", clip_id="DAY4_A4_LUCIA_18070000.mp4", observer="Lucia", evidence_span="00:00-00:12", quote="", event_role="executor", phase="during")
-S.event(5, Alice, "use", "scissors", source="video", confidence=0.8, evidence_id="S5", clip_id="DAY1_A2_ALICE_11560000.mp4", observer="Alice", evidence_span="00:11-00:29", quote="", event_role="executor", phase="during")
-S.event(6, Alice, "use", "scissors", source="video", confidence=0.8, evidence_id="S6", clip_id="DAY6_A2_ALICE_11300000.mp4", observer="Alice", evidence_span="00:00-00:23", quote="", event_role="executor", phase="during")

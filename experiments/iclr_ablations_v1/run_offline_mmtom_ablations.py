@@ -20,7 +20,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 SOCIAL_CODE_DIR = ROOT / "spatial_social_code"
-AUTOTOM_MODEL = ROOT / "AutoToM" / "model"
+AUTOTOM_MODEL = ROOT / "third_party/autotom" / "model"
 for import_path in (SOCIAL_CODE_DIR, AUTOTOM_MODEL):
     if str(import_path) not in sys.path:
         sys.path.insert(0, str(import_path))

@@ -1,56 +1,50 @@
-# Credentials and local configuration
+# Secrets and machine-specific configuration
 .env
 .env.*
 credentials.env
-*credentials*
 *.pem
 *.key
-.github_ssh/
+# The placeholder template is safe to distribute.
+!credentials.env.example
 
-# Python and tooling
+# Python environments, build artifacts and editors
+.venv*/
+venv/
+.pptvenv/
 __pycache__/
 *.py[cod]
+*.egg-info/
+build/
+dist/
 .pytest_cache/
 .mypy_cache/
 .ruff_cache/
-.venv*/
-venv/
-*.egg-info/
-node_modules/
-.spatial_social_public_git/
+.DS_Store
+__MACOSX/
+.vscode/
+.idea/
 
-# Data, media, checkpoints, and generated outputs
+# Downloaded inputs, model weights and generated experiment outputs
+/data/
+/external/
+/external_datasets/
+/output/
+/outputs/
+/tmp/
+/workdirs/
+**/workdirs/
+**/runs/
+**/cache/
+*.jsonl
+*.jsonl.gz
+*.log
 *.mp4
 *.avi
 *.mov
-*.pkl
 *.pt
 *.pth
 *.ckpt
+*.safetensors
+*.gguf
 *.zip
-*.jsonl
-*.log
-*.status
-external/
-external_datasets/
-data/
-output/
-workdirs/
-tmp/
-MMToM-QA-data/
-
-# Independently versioned or vendored research repositories
-AutoToM/
-MA-EgoQA/
-MMToM-QA/
-cap-x/
-
-# Concise Markdown and selected aggregate JSON summaries may be tracked.
-reports/*.json
-!reports/comind_grounding_oof_summary.json
-!reports/submission_results_summary.json
-
-# Editors and OS
-.DS_Store
-.vscode/
-.idea/
+*.tar.gz

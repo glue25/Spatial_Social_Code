@@ -1,9 +1,0 @@
-{
-  "selection": "Post-hoc qualitative example: first index with explicit consistent Direct answer, Direct wrong under archived labels, SSC correct, no dense refinement.",
-  "selected": 302,
-  "eligible_all": 109,
-  "eligible_without_dense": 65,
-  "not_an_evaluation_sample": true,
-  "rejected_old_index0": "Pro raw text has no explicit final choice; remove Direct incorrect badge.",
-  "actual_pro_request_mapping_not_independently_verified": true
-}

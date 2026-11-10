@@ -227,6 +227,8 @@ def test_restricted_recipient_feedback_is_a_no_effect_failure():
 def test_1566_and_772_historical_audits_are_not_promoted_to_stable(tmp_path):
     root = Path(__file__).resolve().parents[2]
     case_dir = root / "reports" / "cases"
+    if not case_dir.exists():
+        pytest.skip("historical result fixtures omitted from source-only release")
     goals_1566 = parse_functional_goals("(and (is_on_top spray_bottle_3 couch_13) (is_on_top box_5 counter_25) (is_open fridge_34))")
     direct = {g.entity: json.loads((case_dir / f"habitat_ep1566_direct_final_{g.entity}_state.json").read_text()) for g in goals_1566}
     ssc = {g.entity: json.loads((case_dir / f"habitat_ep1566_ssc_final_{g.entity}_state.json").read_text()) for g in goals_1566}

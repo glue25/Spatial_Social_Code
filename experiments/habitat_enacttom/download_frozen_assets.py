@@ -99,7 +99,6 @@ def main() -> None:
     parser.add_argument("--status", type=Path, default=Path("workdirs/habitat_enacttom/frozen12/asset_download_status.json"))
     args = parser.parse_args()
 
-    os.environ.setdefault("HF_ENDPOINT", "https://hf-mirror.com")
     os.environ.setdefault("HF_HUB_DISABLE_XET", "1")
     frozen = json.loads(args.frozen_manifest.read_text())
     api = HfApi(endpoint=os.environ["HF_ENDPOINT"])

@@ -19,7 +19,7 @@ from typing import Any, Iterable
 
 
 ROOT = Path(__file__).resolve().parents[2]
-MA_ROOT = ROOT / "MA-EgoQA"
+MA_ROOT = ROOT / "benchmarks/ma_egoqa"
 if str(MA_ROOT) not in sys.path:
     sys.path.insert(0, str(MA_ROOT))
 

@@ -28,7 +28,7 @@ from experiments.reevaluation_v3.service_gate import service_gate
 
 ROOT = Path(__file__).resolve().parents[2]
 MODEL = 'gemini-3-flash-preview'
-ENDPOINT = 'https://api2.aigcbest.top/v1/chat/completions'
+ENDPOINT = os.environ.get("SSC_CHAT_ENDPOINT", "")
 SOURCES = ['experiments/information_history_v1/'+n for n in
            ('__init__.py','protocol.py','metrics.py','run.py','README.md')]+[
     'experiments/habitat_closed_loop/state_store.py',

@@ -1,2 +1,0 @@
-# CoMind scored pilot: compact train recording with labels for all three tasks.
-222861ac-b5d7-4f92-b682-d6c639ede7eb

@@ -1,5 +1,0 @@
-S.visible(541, 'leader', 'dough', '[288, 528, 295, 355]')
-S.visible(541, 'helper', 'dough', '[388, 508, 245, 245]')
-S.fact(541, 'cues', 'dough', 'gaze, action')
-S.fact(541, 'category', 'dough', 'dough')
-S.fact(541, 'joint_attention', 'dough', 'leader, helper')

@@ -12,7 +12,7 @@ from typing import Any
 
 
 ROOT = Path(__file__).resolve().parents[1]
-for import_path in (ROOT / "spatial_social_code", ROOT / "AutoToM" / "model"):
+for import_path in (ROOT / "spatial_social_code", ROOT / "third_party/autotom" / "model"):
     if str(import_path) not in sys.path:
         sys.path.insert(0, str(import_path))
 
@@ -85,7 +85,7 @@ def main() -> None:
     parser.add_argument("--source", type=Path, required=True)
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--manifest", type=Path)
-    parser.add_argument("--ma-questions", type=Path, default=ROOT / "MA-EgoQA" / "data" / "MA-EgoQA.json")
+    parser.add_argument("--ma-questions", type=Path, default=ROOT / "benchmarks/ma_egoqa" / "data" / "MA-EgoQA.json")
     parser.add_argument("--mmtom-questions", type=Path, default=ROOT / "MMToM-QA" / "Benchmark" / "questions.json")
     args = parser.parse_args()
 

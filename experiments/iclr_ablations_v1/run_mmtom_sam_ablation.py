@@ -23,7 +23,7 @@ from PIL import Image, ImageDraw
 
 
 ROOT = Path(__file__).resolve().parents[2]
-for path in (ROOT / "AutoToM/model", ROOT / "MA-EgoQA", ROOT / "spatial_social_code"):
+for path in (ROOT / "third_party/autotom/model", ROOT / "benchmarks/ma_egoqa", ROOT / "spatial_social_code"):
     if str(path) not in sys.path:
         sys.path.insert(0, str(path))
 

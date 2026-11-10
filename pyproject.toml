@@ -5,7 +5,17 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "spatial-social-code"
 version = "0.1.0"
-description = "Explicit spatial and agent-indexed state for multi-agent reasoning"
+description = "Spatial-Social Code for social reasoning in videos"
+readme = "README.md"
+license = {file = "LICENSE"}
+authors = [
+  {name = "Xiaoyuan Zhang"},
+  {name = "Zhaowei Zhang"},
+  {name = "Wenbo Li"},
+  {name = "Alan Yuille"},
+  {name = "Tianmin Shu"},
+  {name = "Jieneng Chen"},
+]
 requires-python = ">=3.10"
 dependencies = [
   "requests>=2.31",
@@ -31,7 +41,17 @@ local-model = [
 ]
 test = [
   "pytest>=7",
+  "numpy>=1.24",
+  "pandas>=2.0",
+  "Pillow>=10.0",
+  "rank-bm25>=0.2.2",
+  "tqdm>=4.66",
 ]
+
+[project.urls]
+Repository = "https://github.com/glue25/Spatial_Social_Code"
+Issues = "https://github.com/glue25/Spatial_Social_Code/issues"
+Documentation = "https://github.com/glue25/Spatial_Social_Code/tree/main/docs"
 
 [tool.setuptools.packages.find]
 include = ["spatial_social_code*"]

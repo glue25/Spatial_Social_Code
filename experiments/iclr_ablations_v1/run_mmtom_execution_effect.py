@@ -20,7 +20,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[2]
-AUTOTOM_MODEL = ROOT / "AutoToM" / "model"
+AUTOTOM_MODEL = ROOT / "third_party/autotom" / "model"
 if str(AUTOTOM_MODEL) not in sys.path:
     sys.path.insert(0, str(AUTOTOM_MODEL))
 

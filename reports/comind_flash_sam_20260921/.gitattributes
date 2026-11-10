@@ -1,2 +1,0 @@
-# Preserve exact SHA-pinned historical source bytes, including its blank EOF line.
-code/workdirs/flash_model_only_legacy_20260918/legacy_loader.py whitespace=-blank-at-eof

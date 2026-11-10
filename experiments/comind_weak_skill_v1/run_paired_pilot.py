@@ -178,7 +178,7 @@ def main() -> None:
 
     os.environ["SPATIAL_SOCIAL_MODEL_PATH"] = args.model_path
     os.environ["SPATIAL_SOCIAL_LOCAL_FILES_ONLY"] = "1"
-    sys.path.insert(0, str(ROOT / "AutoToM/model"))
+    sys.path.insert(0, str(ROOT / "third_party/autotom/model"))
     from local_backend import generate, set_image_context
 
     full_rows = [json.loads(line) for line in args.manifest.read_text().splitlines() if line.strip()]

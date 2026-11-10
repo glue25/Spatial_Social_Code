@@ -1,9 +1,0 @@
-{
-  "fixture_status": "developer-authored from visual audit; never a model result",
-  "social_code": [
-    "M.observe(6, 'helper', 'An unidentified speaker says they need another big bowl for garbage.', source='spatial_trace', confidence=1.0, evidence_ids='T1_UTTERANCE');",
-    "M.belief(6, 'helper', 'The unidentified speaker needs a large bowl for garbage.', 0.98, 'This is a close paraphrase of the explicit utterance, without assigning a speaker identity.', evidence_ids='T1_UTTERANCE,T1_SPEAKER_UNKNOWN');",
-    "M.goal('unknown_speaker', 'Obtain another big bowl to hold garbage.', 0.95, 'The utterance explicitly states the desired object and purpose.', evidence_ids='T1_UTTERANCE');",
-    "M.unknown('helper', 'identity of transcript speaker');"
-  ]
-}

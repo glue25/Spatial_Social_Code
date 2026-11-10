@@ -1,5 +1,0 @@
-{
-  "utc": "2026-09-20T19:27:08.977983+00:00",
-  "passed": true,
-  "stdout": "PASS: exact native schema/body, no schema text suffix, original schema validation, credential-safe media descriptors, schema-aware cache, truncation/model/permanent guards, bounded and persistent retries\n"
-}
