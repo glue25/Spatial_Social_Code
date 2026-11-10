@@ -11,7 +11,7 @@ Johns Hopkins University · <sup>◦</sup>The Chinese University of Hong Kong
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Tests](https://github.com/glue25/Spatial_Social_Code/actions/workflows/tests.yml/badge.svg)](https://github.com/glue25/Spatial_Social_Code/actions/workflows/tests.yml)
 
-[Quick start](#quick-start) · [Benchmarks](#benchmarks) · [TODO](#todo) · [Citation](#citation)
+**[Paper (alphaXiv)](https://www.alphaxiv.org/abs/2611.spatial-social-code-video-reasoning)** · [Quick start](#quick-start) · [Benchmarks](#benchmarks) · [TODO](#todo) · [Citation](#citation)
 
 </div>
 
