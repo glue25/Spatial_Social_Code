@@ -35,5 +35,10 @@
   "authored_documentation_local_links": "passed",
   "source_secret_pattern_scan": "No matches for the tested private-key/token/local-home-path patterns in original source text; not a full Git history audit.",
   "model_calls_made": 0,
-  "simulation_runs_made": 0
+  "simulation_runs_made": 0,
+  "github_ci": {
+    "status": "success",
+    "commit": "ce06a1bde0b676d85058e9d8141e0cc2dc04c049",
+    "run_url": "https://github.com/glue25/Spatial_Social_Code/actions/runs/42770646829"
+  }
 }

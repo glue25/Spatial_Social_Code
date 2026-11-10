@@ -12,7 +12,7 @@ work. An unchecked item is not a completed result or a commitment to a date.
 - [x] Document installation, test commands, benchmark entry points and prerequisites.
 - [x] Add CI configuration for offline checks and tests.
 - [x] Add MIT terms for original SSC code and keep existing upstream notices.
-- [ ] Confirm the CI run passes on GitHub after pushing.
+- [x] Confirm the CI run passes on GitHub after pushing (Python 3.10 and 3.12).
 
 ## Before public release
 
