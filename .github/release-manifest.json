@@ -4,10 +4,9 @@
   "source_routes": {
     "README.md": "README.md",
     "LICENSE": "LICENSE",
-    "CITATION.cff": "CITATION.cff",
-    "TODO.md": "TODO.md",
+    "CITATION.cff": ".github/CITATION.cff",
     "pyproject.toml": "pyproject.toml",
-    "credentials.env.example": "credentials.env.example",
+    "credentials.env.example": "benchmarks/credentials.env.example",
     ".gitignore": ".gitignore",
     ".github/workflows/tests.yml": ".github/workflows/tests.yml",
     "spatial_social_code/enacttom.py": "spatial_social_code/enacttom.py",
@@ -108,7 +107,8 @@
     "tests/test_comind_optimization.py": "tests/test_comind_optimization.py",
     "tests/test_comind.py": "tests/test_comind.py",
     "benchmarks/habitat/experiments/habitat_closed_loop/test_closed_loop.py": "tests/test_habitat.py",
-    "benchmarks/habitat/tests/test_qdd_habitat.py": "tests/test_habitat_guard.py"
+    "benchmarks/habitat/tests/test_qdd_habitat.py": "tests/test_habitat_guard.py",
+    "TODO.md": "README.md"
   },
   "enacttom": {
     "revision": "093c4a11b622c8f0b50070e51ae9461b2b1db2f8",
@@ -354,14 +354,11 @@
     ]
   },
   "files": {
-    ".github/workflows/tests.yml": "4cb8244cf26b084cccf4633a2a9ba2c2f6165f6cad2b1523db78d8d44cebcb71",
+    ".github/CITATION.cff": "ad746bb36decd1762a82048318e0eacc8012b2e1578ba0be1adc4c42a9f378e2",
+    ".github/workflows/tests.yml": "28218e11d2e95b07783d07e3501a44daaf10096311ad222d1ae49b6565a8b770",
     ".gitignore": "6a5a06d72eaec8cbdfb941d9357a1d5fe2bc4d58265c29c46147e3aa5c15f0ff",
-    "CITATION.cff": "ad746bb36decd1762a82048318e0eacc8012b2e1578ba0be1adc4c42a9f378e2",
-    "GUIDE.md": "e411cbf71fa5c2a04bdfbdda5cf581296624818abd19ddce5403df32eaecc254",
     "LICENSE": "5d655bc05c89fe2ad853a846970828556dc53030454299fdaa04b5ce32820dff",
-    "NOTICE": "211b18c964cb1ac5000f8e34febeda1f164084231efad5586fba0adaa01e7ebb",
-    "README.md": "e9add5f3ba7a9e77ccef7e646eda75ae231a362dcdebbc80a564e107517c9732",
-    "TODO.md": "37dbaa0efb88e66a425a78addc894a936a4181390f0c8813429a1532a167f5b7",
+    "README.md": "3c4bdcfd5ffcbbc217065d455a24b20c26970407c0f7433d509da31418568e7b",
     "benchmarks/comind/pipelines/compiler/budget_transport.py": "fb7c23ee3d1712b0ea1b4ccca6887d993b9d63951f76d4da1bfeae0b0601b50b",
     "benchmarks/comind/pipelines/compiler/canary.py": "3b7a6e44bb0cbd038f7085eaa0c49dafa2cde970ddd17436763b809dcdd4e522",
     "benchmarks/comind/pipelines/compiler/comind_adapter.py": "141e5c99b187205c1ac02de849e14ec3a12046cc350bd5cb55d0a763d36ce8f0",
@@ -377,6 +374,7 @@
     "benchmarks/comind/pipelines/sam/run.py": "c02de5703aa9ce599c5c9c64d3f65e777f9506815f571ac3b68115222eca58ce",
     "benchmarks/comind/pipelines/sam/test_sidecar.py": "1111efc54ac24f3e0db0e01c38089e8721718874b668d3eed83c18ba023e7cd3",
     "benchmarks/comind/sam_server.py": "e356498c0db8dab8d9995442f8d8c23afce27d9822d5131d225624615bb6b623",
+    "benchmarks/credentials.env.example": "1d7ebf99ef89558821f32bb02ce455bdc9caf643e76f27d7b1eeaaa6c8873dd2",
     "benchmarks/habitat/__init__.py": "1ab2cb411b6517dbebe7cd23949e7b8911e31eaa8aadb8ff06f394a8155d6775",
     "benchmarks/habitat/action_interface.py": "ef59bb307a910a4b42660c83e7fdd41060993a1be0ad07d830b33b80af619e80",
     "benchmarks/habitat/analyze_multiseed.py": "551757062e7c96dae343e551525fa268064e765370694430346879a4012b5c67",
@@ -433,10 +431,9 @@
     "benchmarks/mmtom/matched_runner.py": "4ea99a93dd05100f989b3544e1c471f6b3514298a8b3cfca0736f982f1ed7ff9",
     "benchmarks/mmtom/native_transport.py": "a579fce7bde412f6d9aeb976be135b110378e63d61a9d99e8a9b5047a89983b3",
     "benchmarks/mmtom/offline_checks.py": "eff7abc9f7ee84ef48353ffd250fab43cb9de3c73a03624331041a555c7251aa",
-    "credentials.env.example": "1d7ebf99ef89558821f32bb02ce455bdc9caf643e76f27d7b1eeaaa6c8873dd2",
-    "manage.py": "cb927e61c65e52ed898d1a2740daa07d0da39f639a24bcd438ea38fcf918b3ba",
-    "pyproject.toml": "102297dc467a76fab0c06e8c0b9d191136c03776715200c24f904f7e4e596635",
+    "pyproject.toml": "52e59516b27b3f84ea1db17cc393b280dc710205d409b8bf87df441d483672ec",
     "spatial_social_code/__init__.py": "e83048ca6b0e84dfce90a34d3d0f65aa373fbf76bc6ffba38fd1c6f2264c8fa5",
+    "spatial_social_code/__main__.py": "c9dd22aadd2bd31b1debfa10d7ba4dcb7ddf2e203320f923e410a8d39aae841b",
     "spatial_social_code/analyze_spatial_social.py": "0827ff27c0b2f98739e089a2e7a61b3240efc543befd8012b81ba5aa00d30826",
     "spatial_social_code/comind.py": "c83d4048022da65c40ad7adefb41e0149b328211e16d53a2fc8696a60129391f",
     "spatial_social_code/comind_optimization.py": "f43e7ad6f66dd9dd01b884cf9219a20117420f3c42b2665bb71217c389ce29bc",
@@ -464,8 +461,9 @@
     "tests/test_habitat.py": "e6ea89154331f0afa99823eea05cbb6e9593dbce2bda5f8b99d5a3ff46a016dc",
     "tests/test_habitat_guard.py": "326807039b71cfa7d1cd95f898e73d870bcc742e4e4cef22017f0e7a15489a5e",
     "tests/test_information_history_v1.py": "48ee0082a60e05c22a4335a6bda790b4a80bde0d4bd870a4461265060697733c",
-    "tests/test_release.py": "48f63a3c58a634d31f7bc9b00c1a0a2488a5c788dfc39a62447ecf1580009a24",
+    "tests/test_release.py": "b3195848f07e72905decd44a10376f4b05f773cace6ea37f6fab611546efaa38",
     "tests/test_runtime.py": "dcc810ac53a9b9d422301b3fbbe12192e57b054c2582b879a469c28c09cc7d2f",
+    "third_party/NOTICE": "211b18c964cb1ac5000f8e34febeda1f164084231efad5586fba0adaa01e7ebb",
     "third_party/autotom/model/local_backend.py": "421d6302fad88328920a1b0aa97b235ce31a67a683dbaf0fe690bb77713c8fdd",
     "third_party/autotom/model/mmtom_visual.py": "c5361d2412e6a8135f692cd21e4e551579095e0f62dcc79f9b8cae4ee41f6108"
   }

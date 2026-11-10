@@ -51,7 +51,7 @@ test = [
 [project.urls]
 Repository = "https://github.com/glue25/Spatial_Social_Code"
 Issues = "https://github.com/glue25/Spatial_Social_Code/issues"
-Documentation = "https://github.com/glue25/Spatial_Social_Code/blob/main/GUIDE.md"
+Documentation = "https://github.com/glue25/Spatial_Social_Code/blob/main/README.md"
 
 [tool.setuptools.packages.find]
 include = ["spatial_social_code*"]

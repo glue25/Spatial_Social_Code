@@ -22,8 +22,8 @@ jobs:
       - name: Install CPU test dependencies
         run: python -m pip install -e '.[test]'
       - name: Verify release files
-        run: python manage.py check
+        run: python -m spatial_social_code check
       - name: Run minimal example
-        run: python manage.py demo
+        run: python -m spatial_social_code demo
       - name: Run offline test suites
-        run: python manage.py test
+        run: python -m spatial_social_code test

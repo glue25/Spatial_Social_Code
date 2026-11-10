@@ -50,7 +50,7 @@ assert set(adapter.PROMPTS) == {'direct', 'spatial', 'social', 'answer'}
 
 @pytest.mark.parametrize('benchmark', ['mmtom', 'ma-egoqa', 'comind', 'habitat', 'information-history'])
 def test_benchmark_help_without_data_or_service(benchmark):
-    result = subprocess.run([sys.executable, 'manage.py', 'run', benchmark, '--help'],
+    result = subprocess.run([sys.executable, '-m', 'spatial_social_code', 'run', benchmark, '--help'],
                             cwd=ROOT, capture_output=True, text=True)
     assert result.returncode == 0, result.stderr
     assert 'usage:' in result.stdout.lower()

@@ -1,19 +1,18 @@
-"""Repository commands; run `python manage.py --help` from any directory."""
+"""Repository commands; run `python -m spatial_social_code --help` from the checkout."""
 from pathlib import Path
 import argparse
 import ast
 import hashlib
 import json
 import os
-import shutil
 import subprocess
 import sys
 import tarfile
 import tempfile
 import urllib.request
 
-ROOT = Path(__file__).resolve().parent
-MANIFEST = ROOT / 'MANIFEST.json'
+ROOT = Path(__file__).resolve().parents[1]
+MANIFEST = ROOT / '.github/release-manifest.json'
 ENTRYPOINTS = {
     'mmtom': 'benchmarks/mmtom/matched_runner.py',
     'ma-egoqa': 'benchmarks/ma_egoqa/egomas/src/run_video_provenance_v3_jdcloud.py',
@@ -36,7 +35,7 @@ def release_files():
     result = subprocess.check_output(
         ['git', 'ls-files', '-z', '--cached', '--others', '--exclude-standard'], cwd=ROOT)
     return sorted({s for s in result.decode().split('\0')
-                   if s and s != 'MANIFEST.json' and (ROOT / s).is_file()})
+                   if s and s != MANIFEST.relative_to(ROOT).as_posix() and (ROOT / s).is_file()})
 
 
 def manifest():
