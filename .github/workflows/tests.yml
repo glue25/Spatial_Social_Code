@@ -22,8 +22,8 @@ jobs:
       - name: Install CPU test dependencies
         run: python -m pip install -e '.[test]'
       - name: Verify release files
-        run: python check_code.py
+        run: python manage.py check
       - name: Run minimal example
-        run: python -m examples.minimal
+        run: python manage.py demo
       - name: Run offline test suites
-        run: python run_tests.py
+        run: python manage.py test

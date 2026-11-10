@@ -5,10 +5,10 @@ import tempfile
 import unittest
 from unittest.mock import patch
 
-from experiments.information_history_v1.protocol import (
+from benchmarks.information_history.protocol import (
     CONDITIONS,HISTORIES,make_base,build,audit,transform,prose,unprose,prompt,score,canonical,oracle)
-from experiments.information_history_v1.metrics import per_base,summarize
-from experiments.information_history_v1.run import Transport,parse,MODEL,FIELDS,costs,write
+from benchmarks.information_history.metrics import per_base,summarize
+from benchmarks.information_history.run import Transport,parse,MODEL,FIELDS,costs,write
 
 
 def fixture():

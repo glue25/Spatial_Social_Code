@@ -1,8 +1,0 @@
-# Tested offline review environment (Python 3.12).
-numpy==2.3.5
-pandas==2.2.3
-Pillow==12.3.0
-requests==2.34.2
-rank-bm25==0.2.2
-tqdm==4.70.1
-pytest==9.1.1

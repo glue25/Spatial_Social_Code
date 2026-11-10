@@ -1,3 +1,0 @@
-type: gt_graph
-partial_obs: True
-update_mode: gt  # can be "gt" or "obs"

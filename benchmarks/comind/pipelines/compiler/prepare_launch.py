@@ -6,7 +6,7 @@ import shlex
 import shutil
 import subprocess
 import sys
-from run import HERE,ROOT,OLD,read,sha,utc,write
+from run import HERE,ROOT,read,sha,utc,write
 
 PREVIOUS=HERE.parent/'ma_comind_flash16384_20260920'
 NAMES=['comind_0','comind_1']
@@ -16,8 +16,8 @@ def prepare():
     test=subprocess.run([sys.executable,str(HERE/'test_native_schema.py')],capture_output=True,text=True)
     assert test.returncode==0,test.stdout+test.stderr
     write(HERE/'TESTS.json',{'utc':utc(),'passed':True,'stdout':test.stdout})
-    sources=list(HERE.glob('*.py'))+list((HERE/'comind_source').rglob('*.py'))
-    sources += [OLD/'legacy_loader.py',OLD/'service_gate.py']+list((OLD/'historical_source').rglob('*.py'))
+    sources = list(HERE.glob('*.py')) + list((ROOT/'spatial_social_code').glob('*.py'))
+    sources += list((ROOT/'benchmarks/ma_egoqa').rglob('*.py'))
     hashes={str(p.relative_to(ROOT)):sha(p) for p in sources}
     assignment=[];indices=[]
     for name in NAMES:

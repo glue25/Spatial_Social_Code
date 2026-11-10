@@ -28,9 +28,7 @@ import evaluate_mmtom_jdcloud as mm
 import refine_mmtom_uncertain_jdcloud as dense
 from mmtom_visual import load_questions, sample_rgb_frames
 
-SPEC = importlib.util.spec_from_file_location('model_only_service_gate', HOME / 'service_gate.py')
-GATE = importlib.util.module_from_spec(SPEC)
-SPEC.loader.exec_module(GATE)
+from spatial_social_code import service_gate as GATE
 
 REFERENCES = {
     'mmtom': ROOT / 'spatial_social_code/mmtom_dense_authoritative_gemini3pro.jsonl',
@@ -51,10 +49,10 @@ def sha(path):
 
 
 def source_hashes():
-    result = {str(p.relative_to(HOME)): sha(p) for p in (HOME / 'historical_source').rglob('*.py')}
-    for name in ('matched_runner.py', 'native_transport.py', 'legacy_loader.py', 'service_gate.py'):
-        result[name] = sha(HOME / name)
-    return result
+    folders = ('benchmarks/mmtom', 'benchmarks/ma_egoqa',
+               'spatial_social_code', 'third_party/autotom/model')
+    return {str(p.relative_to(ROOT)): sha(p) for folder in folders
+            for p in (ROOT / folder).rglob('*.py')}
 
 
 def prepare(dataset):
@@ -122,7 +120,7 @@ def verify(out, cfg):
     assert sha(out / 'inputs.json') == cfg['input_hash']
     assert sha(out / 'media_hashes.json') == cfg['media_hash']
     for rel, value in cfg['source_hashes'].items():
-        assert sha(HOME / rel) == value, rel
+        assert sha(ROOT / rel) == value, rel
 
 
 def process_mm(item, client):

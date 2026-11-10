@@ -9,12 +9,9 @@ from pathlib import Path
 import sys
 
 HERE = Path(__file__).resolve().parent
-ROOT = HERE.parents[1]
-OLD = HERE.parent/'transport'
-sys.path.insert(0,str(OLD))
-from legacy_loader import load
-load()
-from service_gate import service_gate
+ROOT = HERE.parents[3]
+sys.path[:0] = [str(ROOT), str(ROOT/'benchmarks/ma_egoqa')]
+from spatial_social_code.service_gate import service_gate
 sys.path.insert(0,str(HERE))
 from budget_transport import Client, Paused, ModelIdentityError, PermanentServiceError, write
 

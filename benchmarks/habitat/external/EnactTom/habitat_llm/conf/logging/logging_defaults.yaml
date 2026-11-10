@@ -1,5 +1,0 @@
-trajectory:
-  save: True
-  agent_names: ['agent_0']
-  save_path: '~/traj5'
-  save_options: ["rgb", "depth", "pose"]

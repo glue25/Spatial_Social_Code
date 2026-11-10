@@ -17,7 +17,7 @@ from PIL import Image
 import frozen_v2 as V2
 
 HERE = Path(__file__).resolve().parent
-ROOT = HERE.parents[1]
+ROOT = HERE.parents[3]
 
 def utc(): return datetime.now(timezone.utc).isoformat()
 def read(p): return json.loads(Path(p).read_text())

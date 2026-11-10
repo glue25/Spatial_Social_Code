@@ -7,44 +7,22 @@
 
 Johns Hopkins University · <sup>◦</sup>The Chinese University of Hong Kong
 
-[![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white)](docs/installation.md)
+[![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white)](GUIDE.md)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Tests](https://github.com/glue25/Spatial_Social_Code/actions/workflows/tests.yml/badge.svg)](https://github.com/glue25/Spatial_Social_Code/actions/workflows/tests.yml)
 
-[Quick start](#quick-start) · [Benchmarks](#benchmarks) · [Documentation](docs/README.md) · [TODO](TODO.md) · [Citation](#citation)
+[Quick start](#quick-start) · [Benchmarks](#benchmarks) · [Guide](GUIDE.md) · [TODO](TODO.md) · [Citation](#citation)
 
 </div>
 
 **Spatial–Social Code (SSC)** represents physical situations and participant-specific
-information as linked, executable records. Spatial Code organizes objects,
-relations, events and perceptual evidence. Social Code records observations,
-beliefs, goals and intentions, with explicit references to supporting evidence.
+information as linked, executable records: Spatial Code records objects, events
+and perceptual evidence; Social Code records observations, beliefs, goals and
+intentions with references to supporting evidence.
 
-This repository is based on the **code snapshot prepared for our ICLR submission**.
-It contains the shared runtime and five benchmark implementations, with an offline
-test suite. The open-source preparation adds documentation, authorship, a runnable
-example and release checks. It does not add new experimental results.
-
-## Overview
-
-```mermaid
-flowchart LR
-    A[Video / task evidence] --> B[Spatial Code]
-    B --> C[Social Code]
-    B --> D[Validated records]
-    C --> D
-    D --> E[Question answering / grounding / action]
-```
-
-- **Explicit state:** distinguish physical facts from a participant's observations and beliefs.
-- **Evidence links:** validate the structure of generated calls and references between records.
-- **Multiple tasks:** video question answering, collaborative grounding, embodied interaction and an information-history diagnostic.
-- **Offline entry point:** inspect and test the code without API keys, model weights or benchmark media.
-
-Execution validates record structure and evidence-ID membership; it does not prove
-that a generated belief or visual interpretation is true. Historical benchmark
-pipelines have different information access and budgets; see the
-[reproducibility guide](docs/reproducibility.md).
+This compact release is based on our **ICLR submission code**. Shared code lives
+in one place, five benchmarks have distinct entry points, and Habitat's upstream
+source is downloaded only when needed. This cleanup adds no experimental results.
 
 ## Quick start
 
@@ -54,76 +32,59 @@ cd Spatial_Social_Code
 python3 -m venv .venv
 source .venv/bin/activate
 python -m pip install -e '.[test]'
-
-python -m examples.minimal
-python check_code.py
-python run_tests.py
+python manage.py demo
+python manage.py check
+python manage.py test
 ```
 
-On Windows, activate with `.venv\Scripts\activate`. The shared runtime and example
-are portable; live experiment launchers that use Unix locking or Habitat require
-a suitable Linux environment.
+The demo executes a hand-written scene without data, a GPU or an API key.
+Tests cover the shared runtime, benchmark helpers, structured API transport and
+SAM sidecar. Tests requiring omitted datasets or historical records skip explicitly.
+Live experiment launchers need their datasets, frozen run inputs and services;
+offline tests do not reproduce the paper's results.
 
-The example uses a small, hand-written scene and produces linked Spatial/Social
-JSON records. It makes no model calls. The test runner executes benchmark
-snapshots in separate processes so their local imports do not conflict. Tests
-requiring omitted datasets or historical result fixtures report explicit skips.
-
-For video dependencies, model-service configuration and simulator prerequisites,
-see [installation](docs/installation.md).
-
-## Benchmarks
-
-| Benchmark | Task | Code and protocol |
-| --- | --- | --- |
-| MMToM-QA | Belief and goal inference | [MMToM guide](benchmarks/mmtom/README.md) |
-| MA-EgoQA | Multi-agent egocentric video QA | [MA-EgoQA guide](benchmarks/ma_egoqa/README.md) |
-| CoMind | Collaborative visual grounding | [CoMind guide](benchmarks/comind/README.md) |
-| Habitat / EnactToM | Embodied interaction and state updates | [Habitat guide](benchmarks/habitat/README.md) |
-| Information history | Controlled symbolic information-use diagnostic | [Diagnostic guide](benchmarks/information_history/README.md) |
-
-The source-only snapshot does not include full datasets, model weights, API
-credentials or complete result archives. The benchmark launchers require their
-original inputs and services; passing offline tests is not a rerun of the paper's
-experiments. Availability and remaining work are listed in [TODO.md](TODO.md).
-
-## Repository layout
+## Code layout
 
 ```text
-spatial_social_code/    Shared record language, runtime and reasoning utilities
-benchmarks/            Five benchmark-specific implementations and snapshots
-experiments/           Shared controls, adapters and analysis utilities
-examples/              Minimal example without external data or model services
-tests/                 Shared tests (benchmark-local tests live with their code)
-docs/                  Installation, reproducibility, architecture and provenance
-scripts/               Setup helpers and release-manifest maintenance
-third_party/           Retained upstream code and license notices
-check_code.py          Offline integrity and Python syntax checks
-run_tests.py           Offline shared and benchmark-local test runner
+spatial_social_code/   Shared language, runtime, reasoning and scoring
+benchmarks/           mmtom / ma_egoqa / comind / habitat / information_history
+tests/                Shared and integration tests
+third_party/          Two retained AutoToM helper modules
+manage.py             Demo, tests, integrity checks, dependency setup and runners
+GUIDE.md              Installation, benchmark commands and protocol notes
+TODO.md               Release and research work still to complete
+NOTICE                Consolidated third-party license notices
+MANIFEST.json         File hashes, source mapping and pinned Habitat dependency
 ```
 
-Benchmark snapshots intentionally retain separate module trees to preserve the
-submitted implementations. See [architecture](docs/architecture.md) before
-consolidating duplicate modules. The previous research archive remains accessible
-in the [previous research snapshot](https://github.com/glue25/Spatial_Social_Code/tree/d3b8a5c)
-and Git history.
+| Benchmark | Task | Entry point |
+| --- | --- | --- |
+| MMToM-QA | Belief and goal inference | `python manage.py run mmtom --help` |
+| MA-EgoQA | Multi-agent egocentric video QA | `python manage.py run ma-egoqa --help` |
+| CoMind | Collaborative visual grounding | `python manage.py run comind --help` |
+| Habitat / EnactToM | Embodied interaction and state updates | `python manage.py run habitat --help` |
+| Information history | Controlled symbolic information-use diagnostic | `python manage.py run information-history --help` |
 
-## Release roadmap
+See [GUIDE.md](GUIDE.md) for required inputs and the limits of each protocol.
+Materially different historical MMToM prompts remain in `benchmarks/mmtom/legacy`;
+shared helpers and duplicate source trees have been merged. The complete earlier
+submission-based release, including development scripts, remains in
+[Git history](https://github.com/glue25/Spatial_Social_Code/tree/24fd07f0f2de96ddf8e9ba3eff32302262157466).
 
-- [x] Restore the organized ICLR submission code and verify its file hashes.
-- [x] Add author information, citation metadata and a minimal example.
-- [x] Document installation, benchmark entry points and offline verification.
-- [x] Add CI configuration and preserve third-party notices.
-- [ ] Add the public arXiv identifier after announcement.
-- [ ] Publish a versioned mapping from paper tables to protocols and result artifacts.
-- [ ] Provide portable live-run configs and small end-to-end benchmark walkthroughs.
-- [ ] Complete the third-party provenance checklist before public release.
+## Roadmap
 
-See [TODO.md](TODO.md) for concrete completion criteria and known gaps.
+- [x] Consolidate duplicate modules and documentation; unify local commands.
+- [x] Preserve original authors, citation metadata and upstream notices.
+- [x] Pin Habitat's upstream source and verify the SSC patch against the submission.
+- [ ] Resolve remaining third-party provenance before public release.
+- [ ] Add the announced arXiv link and paper-table-to-result mapping.
+- [ ] Publish portable live-run configs and end-to-end reproduction walkthroughs.
+
+Completion criteria and research follow-up are listed in [TODO.md](TODO.md).
 
 ## Citation
 
-Until an arXiv identifier is available, cite the repository:
+Until the arXiv identifier is announced, cite the repository:
 
 ```bibtex
 @misc{zhang2026spatialsocialcode,
@@ -136,14 +97,17 @@ Until an arXiv identifier is available, cite the repository:
 }
 ```
 
-Author order and affiliations are recorded in [AUTHORS.md](AUTHORS.md).
-GitHub-readable citation metadata is provided in [CITATION.cff](CITATION.cff).
+Author order and affiliations appear above; machine-readable citation metadata is
+in [CITATION.cff](CITATION.cff). Wenbo Li is affiliated with CUHK; the other five
+authors are affiliated with JHU.
 
 ## Contributing and license
 
-Bug reports, documentation fixes and reproducibility improvements are welcome.
-See [CONTRIBUTING.md](CONTRIBUTING.md) for the local checks and issue templates.
+Please describe the failing command, environment and a minimal example in an
+issue or pull request. Run `python manage.py test`, review your diff, then refresh
+and verify file hashes with `python manage.py manifest` and `python manage.py check`.
+Keep dataset files, model weights, credentials and generated runs out of commits.
 
-Original SSC code and documentation are released under the [MIT License](LICENSE).
-Retained third-party code, dataset assets and benchmark annotations are **not
-relicensed** by that file; see [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
+Original SSC code and documentation use the [MIT License](LICENSE). Third-party
+code and assets retain their own terms; see [NOTICE](NOTICE) and the unresolved
+provenance items in [TODO.md](TODO.md).

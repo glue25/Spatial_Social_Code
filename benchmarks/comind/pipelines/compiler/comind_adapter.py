@@ -12,10 +12,11 @@ from pathlib import Path
 import sys
 
 HERE = Path(__file__).resolve().parent
-sys.path.insert(0, str(HERE/'comind_source'))
+ROOT = HERE.parents[3]
+sys.path.insert(0, str(ROOT))
 from spatial_social_code import run_comind_codex_pilot as original
-from spatial_social_code.runtime import execute_spatial, execute_social
-assert Path(original.__file__).resolve().is_relative_to(HERE/'comind_source')
+from spatial_social_code.runtime import execute_spatial, execute_social_legacy as execute_social
+assert Path(original.__file__).resolve() == ROOT/'spatial_social_code/run_comind_codex_pilot.py'
 source = Path(original.__file__).read_text()
 main_ast = next(n for n in ast.parse(source).body if isinstance(n, ast.FunctionDef) and n.name == 'main')
 invocations = sorted([n for n in ast.walk(main_ast) if isinstance(n, ast.Call) and isinstance(n.func, ast.Name) and n.func.id == 'invoke'], key=lambda n:n.lineno)

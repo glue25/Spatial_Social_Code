@@ -6,13 +6,16 @@ work. An unchecked item is not a completed result or a commitment to a date.
 ## Repository preparation
 
 - [x] Recover the organized ICLR submission snapshot and verify all 530 manifest entries.
-- [x] Retain the five benchmark directories and their original implementation versions.
+- [x] Keep five benchmark entry points and preserve materially different historical protocols.
 - [x] Add the six authors, affiliations, BibTeX and `CITATION.cff`.
 - [x] Add a data-free, model-free Spatial/Social example.
 - [x] Document installation, test commands, benchmark entry points and prerequisites.
 - [x] Add CI configuration for offline checks and tests.
 - [x] Add MIT terms for original SSC code and keep existing upstream notices.
 - [x] Confirm the CI run passes on GitHub after pushing (Python 3.10 and 3.12).
+
+- [x] Merge duplicate snapshots, move old analysis scripts to Git history and consolidate docs.
+- [x] Replace vendored EnactToM source with a pinned download and verified SSC patch.
 
 ## Before public release
 
@@ -21,7 +24,7 @@ work. An unchecked item is not a completed result or a commitment to a date.
   package has no separate license notice for those two components. Preserve or add
   the applicable upstream notice; do not infer permission from a dependency name.
 - [ ] **Paper link:** replace the pending-preprint note with the announced arXiv URL
-  and identifier; keep author order consistent in README, AUTHORS and CITATION.
+  and identifier; keep author order consistent in README and CITATION.
 - [ ] **Result map:** publish a compact table-to-artifact index with model, protocol,
   sample counts, split, seed, scorer version and input hashes. Keep historical
   and later corrected scoring policies separate.
@@ -42,8 +45,8 @@ work. An unchecked item is not a completed result or a commitment to a date.
   launchers. Their source code alone does not include every original run input.
 - [ ] Validate a pinned Linux/CUDA/Habitat environment with a small licensed task;
   retain logs and distinguish an environment smoke test from a full evaluation.
-- [ ] Add a package-level CLI once all benchmark paths and optional imports have
-  been tested outside the source checkout.
+- [x] Add one source-checkout command for demo, tests, integrity, dependency setup and runners.
+- [ ] Support benchmark execution from an installed distribution without a source checkout.
 
 ## Research follow-up
 

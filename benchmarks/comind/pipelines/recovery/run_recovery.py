@@ -7,7 +7,7 @@ from pathlib import Path
 import sys
 
 HERE=Path(__file__).resolve().parent
-ROOT=HERE.parents[1]
+ROOT=HERE.parents[3]
 BASE=HERE.parent/'compiler'
 SAM=HERE.parent/'sam'
 sys.path.insert(0,str(BASE))
